@@ -1,0 +1,94 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31004.235
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leagueoflegends", "Leagueoflegends\Leagueoflegends.csproj", "{0B42A7EE-BF06-4930-88C5-E1879615F804}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01. Based", "01. Based", "{56621D41-07D0-471B-8C67-9F3BA8AA443D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leagueoflegends.Data", "Leagueoflegends.Data\Leagueoflegends.Data.csproj", "{52490C7B-F212-4A04-AF8F-62472F9C0F2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leagueoflegends.Windowbase", "Leagueoflegends.Windowbase\Leagueoflegends.Windowbase.csproj", "{ADB11D1C-3D76-451C-A6AC-8FC43D9B3C14}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02. Core", "02. Core", "{B1E92410-CD1D-4421-B5F3-8FBA5DF2B57C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leagueoflegends.Controls", "Leagueoflegends.Controls\Leagueoflegends.Controls.csproj", "{10296A85-F32F-4199-91F1-E607193841D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leagueoflegends.Converter", "Leagueoflegends.Converter\Leagueoflegends.Converter.csproj", "{56475B0A-7F0A-4B99-BE5D-5AA05A5B19B3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03. Implements", "03. Implements", "{C0F08FEB-74D4-4C60-AFBE-39E1C5BD9FA2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04. Presentation", "04. Presentation", "{350928E0-82CF-420A-B768-C03390BE8F80}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05. Application", "05. Application", "{8444F372-1C4B-442B-B9E9-BC5FF5CF70C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leagueoflegends.Main", "Leagueoflegends.Main\Leagueoflegends.Main.csproj", "{C6C67978-FDD0-4DB7-9123-59D3AB900845}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leagueoflegends.PresentationSupport", "Leagueoflegends.PresentationSupport\Leagueoflegends.PresentationSupport.csproj", "{3B589765-B092-45BA-9796-99AC415FFC39}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leagueoflegends.Resources", "Leagueoflegends.Resources\Leagueoflegends.Resources.csproj", "{C88CA8D8-34E3-4DB0-BA1B-16A33A7B3DF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leagueoflegends.Login", "Leagueoflegends.Login\Leagueoflegends.Login.csproj", "{AD2370C9-42DD-48DF-99C2-F15769645026}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0B42A7EE-BF06-4930-88C5-E1879615F804}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B42A7EE-BF06-4930-88C5-E1879615F804}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B42A7EE-BF06-4930-88C5-E1879615F804}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B42A7EE-BF06-4930-88C5-E1879615F804}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52490C7B-F212-4A04-AF8F-62472F9C0F2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52490C7B-F212-4A04-AF8F-62472F9C0F2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52490C7B-F212-4A04-AF8F-62472F9C0F2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52490C7B-F212-4A04-AF8F-62472F9C0F2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADB11D1C-3D76-451C-A6AC-8FC43D9B3C14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADB11D1C-3D76-451C-A6AC-8FC43D9B3C14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADB11D1C-3D76-451C-A6AC-8FC43D9B3C14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADB11D1C-3D76-451C-A6AC-8FC43D9B3C14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{10296A85-F32F-4199-91F1-E607193841D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{10296A85-F32F-4199-91F1-E607193841D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{10296A85-F32F-4199-91F1-E607193841D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{10296A85-F32F-4199-91F1-E607193841D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56475B0A-7F0A-4B99-BE5D-5AA05A5B19B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56475B0A-7F0A-4B99-BE5D-5AA05A5B19B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56475B0A-7F0A-4B99-BE5D-5AA05A5B19B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56475B0A-7F0A-4B99-BE5D-5AA05A5B19B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C6C67978-FDD0-4DB7-9123-59D3AB900845}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C6C67978-FDD0-4DB7-9123-59D3AB900845}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C6C67978-FDD0-4DB7-9123-59D3AB900845}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C6C67978-FDD0-4DB7-9123-59D3AB900845}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B589765-B092-45BA-9796-99AC415FFC39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B589765-B092-45BA-9796-99AC415FFC39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B589765-B092-45BA-9796-99AC415FFC39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B589765-B092-45BA-9796-99AC415FFC39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C88CA8D8-34E3-4DB0-BA1B-16A33A7B3DF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C88CA8D8-34E3-4DB0-BA1B-16A33A7B3DF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C88CA8D8-34E3-4DB0-BA1B-16A33A7B3DF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C88CA8D8-34E3-4DB0-BA1B-16A33A7B3DF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD2370C9-42DD-48DF-99C2-F15769645026}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD2370C9-42DD-48DF-99C2-F15769645026}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD2370C9-42DD-48DF-99C2-F15769645026}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD2370C9-42DD-48DF-99C2-F15769645026}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{0B42A7EE-BF06-4930-88C5-E1879615F804} = {8444F372-1C4B-442B-B9E9-BC5FF5CF70C1}
+		{52490C7B-F212-4A04-AF8F-62472F9C0F2C} = {56621D41-07D0-471B-8C67-9F3BA8AA443D}
+		{ADB11D1C-3D76-451C-A6AC-8FC43D9B3C14} = {56621D41-07D0-471B-8C67-9F3BA8AA443D}
+		{10296A85-F32F-4199-91F1-E607193841D5} = {B1E92410-CD1D-4421-B5F3-8FBA5DF2B57C}
+		{56475B0A-7F0A-4B99-BE5D-5AA05A5B19B3} = {B1E92410-CD1D-4421-B5F3-8FBA5DF2B57C}
+		{C6C67978-FDD0-4DB7-9123-59D3AB900845} = {350928E0-82CF-420A-B768-C03390BE8F80}
+		{3B589765-B092-45BA-9796-99AC415FFC39} = {C0F08FEB-74D4-4C60-AFBE-39E1C5BD9FA2}
+		{C88CA8D8-34E3-4DB0-BA1B-16A33A7B3DF6} = {C0F08FEB-74D4-4C60-AFBE-39E1C5BD9FA2}
+		{AD2370C9-42DD-48DF-99C2-F15769645026} = {350928E0-82CF-420A-B768-C03390BE8F80}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EB8A4E83-8ABD-40CF-B56A-559A49B51254}
+	EndGlobalSection
+EndGlobal
