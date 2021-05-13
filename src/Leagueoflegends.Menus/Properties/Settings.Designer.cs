@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Leagueoflegends.Main.Properties
+namespace Leagueoflegends.Menus.Properties
 {
     
     

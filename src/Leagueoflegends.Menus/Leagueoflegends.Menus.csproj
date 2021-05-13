@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F94791F2-2CD1-4354-817E-609AEF901794}</ProjectGuid>
+    <ProjectGuid>{EF8F6871-EDC0-4DBD-A0D1-11D9F9762562}</ProjectGuid>
     <OutputType>library</OutputType>
-    <RootNamespace>Leagueoflegends.Main</RootNamespace>
-    <AssemblyName>Leagueoflegends.Main</AssemblyName>
+    <RootNamespace>Leagueoflegends.Menus</RootNamespace>
+    <AssemblyName>Leagueoflegends.Menus</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -68,8 +68,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="ViewModels\MainViewModel.cs" />
-    <Compile Include="Views\MainView.cs" />
+    <Compile Include="ViewModels\MenuBoxViewModel.cs" />
+    <Compile Include="Views\MenuBox.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -83,14 +83,6 @@
     <ProjectReference Include="..\Leagueoflegends.Data\Leagueoflegends.Data.csproj">
       <Project>{3E01F5FB-69AD-415D-8114-5D7E4D3CBB74}</Project>
       <Name>Leagueoflegends.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Leagueoflegends.LayoutSupport\Leagueoflegends.LayoutSupport.csproj">
-      <Project>{F5A52C93-FBAA-4EB8-A7BC-41E810637000}</Project>
-      <Name>Leagueoflegends.LayoutSupport</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Leagueoflegends.Menus\Leagueoflegends.Menus.csproj">
-      <Project>{ef8f6871-edc0-4dbd-a0d1-11d9f9762562}</Project>
-      <Name>Leagueoflegends.Menus</Name>
     </ProjectReference>
     <ProjectReference Include="..\Leagueoflegends.Windowbase\Leagueoflegends.Windowbase.csproj">
       <Project>{B0E72967-60F7-4796-8940-36D3822131A7}</Project>
