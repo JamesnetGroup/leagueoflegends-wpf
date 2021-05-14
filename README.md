@@ -20,27 +20,3 @@ You can always share information with us and we are looking forward to it.
 
 ## Reference
 
-### `/default`, `/1`, `/2`, `/3`
-[![Black Widow](https://img.youtube.com/vi/Fp9pNPdNwjI/default.jpg)](https://www.youtube.com/watch?v=Fp9pNPdNwjI)  
-[![Black Widow](https://img.youtube.com/vi/Fp9pNPdNwjI/1.jpg)](https://www.youtube.com/watch?v=Fp9pNPdNwjI)  
-[![Black Widow](https://img.youtube.com/vi/Fp9pNPdNwjI/2.jpg)](https://www.youtube.com/watch?v=Fp9pNPdNwjI)  
-[![Black Widow](https://img.youtube.com/vi/Fp9pNPdNwjI/3.jpg)](https://www.youtube.com/watch?v=Fp9pNPdNwjI)  
-
-### `/mqdefault`
-[![Black Widow](https://img.youtube.com/vi/Fp9pNPdNwjI/mqdefault.jpg)](https://www.youtube.com/watch?v=Fp9pNPdNwjI)  
-
-### `/hqdefault`
-[![Black Widow](https://img.youtube.com/vi/Fp9pNPdNwjI/hqdefault.jpg)](https://www.youtube.com/watch?v=Fp9pNPdNwjI)  
-
-### `/sddefault`
-[![Black Widow](https://img.youtube.com/vi/Fp9pNPdNwjI/sddefault.jpg)](https://www.youtube.com/watch?v=Fp9pNPdNwjI)
-
-### `/maxresdefault`
-[![Black Widow](https://img.youtube.com/vi/Fp9pNPdNwjI/maxresdefault.jpg)](https://www.youtube.com/watch?v=Fp9pNPdNwjI)
-
-
-[![Black Widow](https://img.youtube.com/vi/Fp9pNPdNwjI/mqdefault.jpg)](https://youtu.be/Fp9pNPdNwjI?t=29)  
-[![Black Widow](https://img.youtube.com/vi/Fp9pNPdNwjI/mqdefault.jpg)](https://youtu.be/Fp9pNPdNwjI?t=50)  
-[![Black Widow](https://img.youtube.com/vi/Fp9pNPdNwjI/mqdefault.jpg)](https://youtu.be/Fp9pNPdNwjI?t=1m24s)
-
-[![Black Widow](https://img.youtube.com/vi/gQa8bAtZkiY/mqdefault.jpg)](https://youtu.be/gQa8bAtZkiY?t=1h5m10s)
