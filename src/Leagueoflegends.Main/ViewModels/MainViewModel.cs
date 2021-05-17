@@ -1,5 +1,6 @@
 ﻿using Leagueoflegends.Data.Menu;
 using Leagueoflegends.Menus.ViewModels;
+using Leagueoflegends.Windowbase.Mvvm;
 
 namespace Leagueoflegends.Main.ViewModels
 {
@@ -9,7 +10,8 @@ namespace Leagueoflegends.Main.ViewModels
 
         public MainViewModel()
         {
-            MenuBoxViewModel = new MenuBoxViewModel(MenuSelected);
+            var command = new RelayCommand<MenuBoxModel>(MenuSelected);
+            MenuBoxViewModel = new MenuBoxViewModel(command);
         }
 
         private void MenuSelected(MenuBoxModel menu)

@@ -12,13 +12,12 @@ namespace Leagueoflegends.Menus.ViewModels
 {
     public class MenuBoxViewModel : ObservableObject
     {
-        public Action<MenuBoxModel, MenuBox> MenuSelected { get; }
         public List<MenuBoxModel> Menus { get; }
 
-        public MenuBoxViewModel(Action<MenuBoxModel> menuSelected)
+        public MenuBoxViewModel(RelayCommand<MenuBoxModel> menuCommand)
         {
             Menus = GetMenus();
-            Menus.ForEach(x => x.MenuSelectCommand = new RelayCommand<MenuBoxModel>(menuSelected));
+            Menus.ForEach(x => x.MenuSelectCommand = menuCommand);
         }
 
         #region GetMenus
