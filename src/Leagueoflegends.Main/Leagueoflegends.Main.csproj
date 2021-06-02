@@ -85,12 +85,16 @@
       <Name>Leagueoflegends.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\Leagueoflegends.LayoutSupport\Leagueoflegends.LayoutSupport.csproj">
-      <Project>{F5A52C93-FBAA-4EB8-A7BC-41E810637000}</Project>
+      <Project>{418FBB6A-08E6-4EAE-A304-913F232491A6}</Project>
       <Name>Leagueoflegends.LayoutSupport</Name>
     </ProjectReference>
     <ProjectReference Include="..\Leagueoflegends.Menus\Leagueoflegends.Menus.csproj">
       <Project>{ef8f6871-edc0-4dbd-a0d1-11d9f9762562}</Project>
       <Name>Leagueoflegends.Menus</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Leagueoflegends.Resources\Leagueoflegends.Resources.csproj">
+      <Project>{1afee701-95ed-4977-95b3-249a9821de5b}</Project>
+      <Name>Leagueoflegends.Resources</Name>
     </ProjectReference>
     <ProjectReference Include="..\Leagueoflegends.Windowbase\Leagueoflegends.Windowbase.csproj">
       <Project>{B0E72967-60F7-4796-8940-36D3822131A7}</Project>

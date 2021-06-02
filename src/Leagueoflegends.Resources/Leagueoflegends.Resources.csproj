@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{EF8F6871-EDC0-4DBD-A0D1-11D9F9762562}</ProjectGuid>
+    <ProjectGuid>{1AFEE701-95ED-4977-95B3-249A9821DE5B}</ProjectGuid>
     <OutputType>library</OutputType>
-    <RootNamespace>Leagueoflegends.Menus</RootNamespace>
-    <AssemblyName>Leagueoflegends.Menus</AssemblyName>
+    <RootNamespace>Leagueoflegends.Resources</RootNamespace>
+    <AssemblyName>Leagueoflegends.Resources</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <Deterministic>true</Deterministic>
-    <LangVersion>9.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -53,10 +52,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Styles\MainMenu.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -72,8 +67,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="ViewModels\MenuBoxViewModel.cs" />
-    <Compile Include="Views\MainMenu.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -84,14 +77,19 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Leagueoflegends.Data\Leagueoflegends.Data.csproj">
-      <Project>{3E01F5FB-69AD-415D-8114-5D7E4D3CBB74}</Project>
-      <Name>Leagueoflegends.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Leagueoflegends.Windowbase\Leagueoflegends.Windowbase.csproj">
-      <Project>{B0E72967-60F7-4796-8940-36D3822131A7}</Project>
-      <Name>Leagueoflegends.Windowbase</Name>
-    </ProjectReference>
+    <Resource Include="Images\lol-logo-03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bg-main-01.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bg-main-02.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bg-main-03.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\bg-main-04.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
