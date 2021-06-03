@@ -2,7 +2,7 @@
 
 namespace Leagueoflegends.LayoutSupport.Controls
 {
-    public class MainWindow : RiotWindow
-    {
-    }
+	public class MainWindow : RiotWindow
+	{
+	}
 }

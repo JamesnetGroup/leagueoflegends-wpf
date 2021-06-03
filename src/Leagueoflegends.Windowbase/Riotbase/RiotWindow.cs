@@ -2,7 +2,7 @@
 
 namespace Leagueoflegends.Windowbase.Riotbase
 {
-    public class RiotWindow : Window
-    {
-    }
+	public class RiotWindow : Window
+	{
+	}
 }
