@@ -2,7 +2,7 @@
 
 namespace Leagueoflegends.Windowbase.Riotbase
 {
-    public class RiotView : UserControl
-    {
-    }
+	public class RiotView : UserControl
+	{
+	}
 }

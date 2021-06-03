@@ -2,7 +2,7 @@
 
 namespace Leagueoflegends.LayoutSupport.Controls
 {
-    public class Unit : RiotView
-    {
-    }
+	public class Unit : RiotView
+	{
+	}
 }
