@@ -3,57 +3,111 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:views="clr-namespace:Leagueoflegends.Menus.Views">
 
-    <Style TargetType="{x:Type RadioButton}" x:Key="RDO">
-        <Setter Property="Command" Value="{Binding MenuSelectCommand}"/>
-        <Setter Property="CommandParameter" Value="{Binding}"/>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type RadioButton}">
-                    <Border>
-                        <TextBlock Text="{Binding Name}" Foreground="#FFFFFF"/>
-                    </Border>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-    
-    <Style TargetType="{x:Type ListBoxItem}" x:Key="LBXI">
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type ListBoxItem}">
-                    <RadioButton Style="{StaticResource RDO}"/>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
+	<Style TargetType="{x:Type RadioButton}" x:Key="IN.MENU.01">
+		<Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+		<Setter Property="GroupName" Value="GROUP.MENU"/>
+		<Setter Property="Background" Value="Transparent"/>
+		<Setter Property="Margin" Value="0 0 0 0"/>
+		<Setter Property="Padding" Value="15 27 15 28"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type RadioButton}">
+					<ControlTemplate.Resources>
+						<Style TargetType="{x:Type Image}" x:Key="IN.IMG">
+							<Setter Property="Source" Value="/Leagueoflegends.Resources;component/Images/icon-menu-selected.png"/>
+							<Setter Property="Visibility" Value="Collapsed"/>
+							<Setter Property="VerticalAlignment" Value="Top"/>
+							<Setter Property="UseLayoutRounding" Value="True"/>
+							<Setter Property="Width" Value="28"/>
+							<Setter Property="Height" Value="15"/>
+							<Setter Property="Margin" Value="0 2 0 0"/>
+						</Style>
+						<Style TargetType="{x:Type TextBlock}" x:Key="IN.CONTENT">
+							<Setter Property="Text" Value="{Binding Name}"/>
+							<Setter Property="Foreground" Value="#CDBE91"/>
+							<Setter Property="VerticalAlignment" Value="Bottom"/>
+							<Setter Property="Padding" Value="15 27 15 28"/>
+							<Setter Property="FontFamily" Value="Friz Quadrata Std"/>
+							<Setter Property="FontSize" Value="15"/>
+							<Setter Property="FontWeight" Value="Bold"/>
+						</Style>
+						<Style TargetType="{x:Type Border}" x:Key="IN.BORDER">
+							<Setter Property="Visibility" Value="Collapsed"/>
+							<Setter Property="Background" Value="{StaticResource LGB.RDO.BG}"/>
+						</Style>
+					</ControlTemplate.Resources>
+					<Grid>
+						<Image x:Name="image" Style="{StaticResource IN.IMG}"/>
+						<TextBlock x:Name="text" Style="{StaticResource IN.CONTENT}"/>
+						<Border x:Name="border" Style="{StaticResource IN.BORDER}"/>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter TargetName="text" Property="Foreground" Value="#FFFFFF"/>
+							<Setter TargetName="border" Property="Visibility" Value="Visible"/>
+							<Setter Property="Cursor" Value="Hand"/>
+						</Trigger>
+						<Trigger Property="IsChecked" Value="True">
+							<Setter TargetName="text" Property="Foreground" Value="#FFFFFF"/>
+							<Setter TargetName="border" Property="Visibility" Value="Visible"/>
+							<Setter TargetName="image" Property="Visibility" Value="Visible"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
 
-    <Style TargetType="{x:Type ListBox}" x:Key="LBX">
-        <Setter Property="ItemContainerStyle" Value="{StaticResource LBXI}"/>
-        <Setter Property="ItemsSource" Value="{Binding Menus}"/>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type ListBox}">
-                    <ItemsPresenter/>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-        <Setter Property="ItemsPanel">
-            <Setter.Value>
-                <ItemsPanelTemplate>
-                    <StackPanel Orientation="Horizontal"/>
-                </ItemsPanelTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-    
-    <Style TargetType="{x:Type views:MainMenu}">
+	<Style TargetType="{x:Type ListBoxItem}" x:Key="LBXI.TEXTMENU">
+		<Setter Property="Visibility" Value="Collapsed"/>
+		<Setter Property="Background" Value="Transparent"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type ListBoxItem}">
+					<RadioButton Style="{StaticResource IN.MENU.01}"
+                                 IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsSelected}"/>
+					<ControlTemplate.Triggers>
+						<DataTrigger Binding="{Binding MenuType}" Value="Text">
+							<Setter Property="Visibility" Value="Visible"/>
+						</DataTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style TargetType="{x:Type ListBox}" x:Key="IN.LBX">
+		<Setter Property="ItemsSource" Value="{Binding Menus}"/>
+		<Setter Property="SelectedItem" Value="{Binding CurrentMenu}"/>
+		<Setter Property="Background" Value="Transparent"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type ListBox}">
+					<ItemsPresenter/>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="ItemsPanel">
+			<Setter.Value>
+				<ItemsPanelTemplate>
+					<StackPanel Orientation="Horizontal"/>
+				</ItemsPanelTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style TargetType="{x:Type ListBox}" x:Key="LBX.TEXT" BasedOn="{StaticResource IN.LBX}">
+		<Setter Property="ItemContainerStyle" Value="{StaticResource LBXI.TEXTMENU}"/>
+	</Style>
+
+	<Style TargetType="{x:Type views:MainMenu}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type views:MainMenu}">
                     <Border Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}">
-                            <ListBox Style="{StaticResource LBX}"/>
+						<ListBox Style="{StaticResource LBX.TEXT}"/>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
