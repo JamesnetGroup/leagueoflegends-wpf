@@ -52,6 +52,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Themes\Styles\NoticeButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Styles\Icon.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Themes\Styles\PlayButton.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -59,7 +67,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controls\MainWindow.cs" />
+    <Compile Include="Controls\NoticeButton.cs" />
     <Compile Include="Controls\PlayButton.cs" />
+    <Compile Include="Controls\Icon.cs" />
     <Compile Include="Controls\Unit.cs" />
     <Compile Include="Controls\View.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">

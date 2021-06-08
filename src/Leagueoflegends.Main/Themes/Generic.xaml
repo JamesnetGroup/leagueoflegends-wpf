@@ -3,7 +3,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:views="clr-namespace:Leagueoflegends.Main.Views"
 	xmlns:ctrls="clr-namespace:Leagueoflegends.LayoutSupport.Controls;assembly=Leagueoflegends.LayoutSupport"
-    xmlns:menus="clr-namespace:Leagueoflegends.Menus.Views;assembly=Leagueoflegends.Menus">
+    xmlns:menus="clr-namespace:Leagueoflegends.Menus.Views;assembly=Leagueoflegends.Menus"
+	xmlns:titles="clr-namespace:Leagueoflegends.TitleBar.Views;assembly=Leagueoflegends.TitleBar">
 
     <Style TargetType="{x:Type views:MainView}">
         <Setter Property="BorderThickness" Value="0"/>
@@ -25,17 +26,21 @@
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="225"/>
                             </Grid.ColumnDefinitions>
-							<Image Grid.RowSpan="2" Grid.ColumnSpan="2" Source="/Leagueoflegends.Resources;component/Images/bg-main-04.png" Stretch="Fill"/>
+							<!--<Image Grid.RowSpan="2" Grid.ColumnSpan="2" Source="/Leagueoflegends.Resources;component/Images/bg-main-04.png" Stretch="Fill"/>-->
 							<Border Grid.RowSpan="2" Grid.ColumnSpan="2" Background="#DA000000"/>
 							
 							
 							<Border BorderBrush="#553D4143" BorderThickness="0 0 0 1">
 								<StackPanel Orientation="Horizontal">
 									<ctrls:PlayButton Margin="20"/>
-									<menus:MainMenu DataContext="{Binding MenuBoxViewModel}"/>
+									<ctrls:NoticeButton/>
+									<menus:MainMenu DataContext="{Binding MenuBox}"/>
 								</StackPanel>
 							</Border>
-							<Border Grid.RowSpan="2" Grid.Column="1" Background="#FF010A13"/>
+							
+							<Grid Grid.RowSpan="2" Grid.Column="1" Background="#FF010A13">
+								<titles:TitleBar DataContext="{Binding TitleBar}"/>
+							</Grid>
 
 							<Border Grid.Column="1" BorderBrush="#CC3D4143" BorderThickness="0 0 0 1"/>
                     
