@@ -1,4 +1,5 @@
-﻿using Leagueoflegends.Windowbase.Riotbase;
+﻿using Leagueoflegends.Windowbase;
+using Leagueoflegends.Windowbase.Riotbase;
 
 namespace Leagueoflegends.LayoutSupport.Controls
 {

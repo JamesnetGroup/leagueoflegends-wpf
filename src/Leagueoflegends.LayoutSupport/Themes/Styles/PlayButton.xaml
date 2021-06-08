@@ -3,24 +3,24 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 	xmlns:ctrls="clr-namespace:Leagueoflegends.LayoutSupport.Controls">
 
-	<LinearGradientBrush x:Key="LGB.BTN.GEO.BDR" EndPoint="0.5,1" StartPoint="0.5,0">
-		<GradientStop Color="#CC3FE7FF" Offset="0"/>
-		<GradientStop Color="#CC006D7D" Offset="0.5"/>
-		<GradientStop Color="#CC0493A7" Offset="1"/>
-	</LinearGradientBrush>
-	<LinearGradientBrush x:Key="LGB.BTN.GEO.OVER" EndPoint="0.5,1" StartPoint="0.5,0">
+	<LinearGradientBrush x:Key="LGB.GEO.OVER" EndPoint="0.5,1" StartPoint="0.5,0">
 		<GradientStop Color="#FF1D3B4A" Offset="0"/>
 		<GradientStop Color="#FF082734" Offset="1"/>
 	</LinearGradientBrush>
 
-	<LinearGradientBrush x:Key="LGB.BTN.GEO.BDR.OVER" EndPoint="0.5,1" StartPoint="0.5,0">
+	<LinearGradientBrush x:Key="LGB.GEO.BDR" EndPoint="0.5,1" StartPoint="0.5,0">
+		<GradientStop Color="#CC3FE7FF" Offset="0"/>
+		<GradientStop Color="#CC006D7D" Offset="0.5"/>
+		<GradientStop Color="#CC0493A7" Offset="1"/>
+	</LinearGradientBrush>
+	
+	<LinearGradientBrush x:Key="LGB.GEO.BDR.OVER" EndPoint="0.5,1" StartPoint="0.5,0">
 		<GradientStop Color="#FFAFF5FF" Offset="0"/>
 		<GradientStop Color="#FF46E6FF" Offset="0.5"/>
 		<GradientStop Color="#FF00ADD4" Offset="1"/>
 	</LinearGradientBrush>
 	
 	<Geometry x:Key="PATH.LOL.PLAY">M26.209747,0.50054082 L29.419775,3.7105691 26.211681,6.918663 0.56522596,6.9227533 0.57565898,6.9094772 C1.2333483,6.0300493 1.6228278,4.938385 1.6228276,3.7557535 1.6228278,2.573122 1.2333483,1.4814577 0.57565898,0.60203022 L0.5,0.50575346 z</Geometry>
-
 
 	<Style TargetType="{x:Type ctrls:PlayButton}">
 		<Setter Property="Grid.Column" Value="0"/>
@@ -71,7 +71,7 @@
 							<Setter Property="Data" Value="{StaticResource PATH.LOL.PLAY}"/>
 							<Setter Property="Fill" Value="#1E2328"/>
 							<Setter Property="Stretch" Value="Fill"/>
-							<Setter Property="Stroke" Value="{StaticResource LGB.BTN.GEO.BDR}"/>
+							<Setter Property="Stroke" Value="{StaticResource LGB.GEO.BDR}"/>
 							<Setter Property="StrokeThickness" Value="2"/>
 							<Setter Property="Margin" Value="0 4 4 4"/>
 							<Setter Property="Effect">
@@ -96,8 +96,8 @@
 					<ControlTemplate.Triggers>
 						<Trigger Property="IsMouseOver" Value="True">
 							<Setter Property="Cursor" Value="Hand"/>
-							<Setter TargetName="path" Property="Fill" Value="{StaticResource LGB.BTN.GEO.OVER}"/>
-							<Setter TargetName="path" Property="Stroke" Value="{StaticResource LGB.BTN.GEO.BDR.OVER}"/>
+							<Setter TargetName="path" Property="Fill" Value="{StaticResource LGB.GEO.OVER}"/>
+							<Setter TargetName="path" Property="Stroke" Value="{StaticResource LGB.GEO.BDR.OVER}"/>
 							<Setter Property="Foreground" Value="#FFFCF1DC"/>
 						</Trigger>
 					</ControlTemplate.Triggers>
