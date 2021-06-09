@@ -34,7 +34,7 @@
 								<StackPanel Orientation="Horizontal">
 									<ctrls:PlayButton Margin="20"/>
 									<ctrls:NoticeButton/>
-									<menus:MainMenu DataContext="{Binding MenuBox}"/>
+									<menus:MainMenu DataContext="{Binding MainMenu}"/>
 								</StackPanel>
 							</Border>
 							
