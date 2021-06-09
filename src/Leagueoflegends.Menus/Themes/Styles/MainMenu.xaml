@@ -3,7 +3,16 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:views="clr-namespace:Leagueoflegends.Menus.Views">
 
-	<Style TargetType="{x:Type RadioButton}" x:Key="IN.MENU.01">
+	<LinearGradientBrush x:Key="LGB.RDO.BG" EndPoint="0.5,1" StartPoint="0.5,0">
+		<GradientStop Color="Transparent" Offset="0"/>
+		<GradientStop Color="#008B6811" Offset="0.5"/>
+		<GradientStop Color="#228B6811" Offset="0.75"/>
+		<GradientStop Color="#448B6811" Offset="1"/>
+	</LinearGradientBrush>
+
+	<Style TargetType="{x:Type RadioButton}" x:Key="MENU.TEXT">
+		<Setter Property="Command" Value="{Binding MenuSelectCommand}"/>
+		<Setter Property="CommandParameter" Value="{Binding}"/>
 		<Setter Property="FocusVisualStyle" Value="{x:Null}"/>
 		<Setter Property="GroupName" Value="GROUP.MENU"/>
 		<Setter Property="Background" Value="Transparent"/>
@@ -59,18 +68,12 @@
 	</Style>
 
 	<Style TargetType="{x:Type ListBoxItem}" x:Key="LBXI.TEXTMENU">
-		<Setter Property="Visibility" Value="Collapsed"/>
 		<Setter Property="Background" Value="Transparent"/>
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type ListBoxItem}">
-					<RadioButton Style="{StaticResource IN.MENU.01}"
+					<RadioButton Style="{StaticResource MENU.TEXT}"
                                  IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsSelected}"/>
-					<ControlTemplate.Triggers>
-						<DataTrigger Binding="{Binding MenuType}" Value="Text">
-							<Setter Property="Visibility" Value="Visible"/>
-						</DataTrigger>
-					</ControlTemplate.Triggers>
 				</ControlTemplate>
 			</Setter.Value>
 		</Setter>
@@ -78,7 +81,6 @@
 
 	<Style TargetType="{x:Type ListBox}" x:Key="IN.LBX">
 		<Setter Property="ItemsSource" Value="{Binding Menus}"/>
-		<Setter Property="SelectedItem" Value="{Binding CurrentMenu}"/>
 		<Setter Property="Background" Value="Transparent"/>
 		<Setter Property="Template">
 			<Setter.Value>

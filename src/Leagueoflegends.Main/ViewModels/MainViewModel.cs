@@ -10,20 +10,20 @@ namespace Leagueoflegends.Main.ViewModels
 {
 	public class MainViewModel : ObservableObject
 	{
-		public MenuBoxViewModel MenuBox { get; }
+		public MainMenuViewModel MainMenu { get; }
 		public TitleBarViewModel TitleBar { get; }
 
 		public MainViewModel()
 		{
-			MenuBox = new MenuBoxViewModel(new RelayCommand<MenuBoxModel>(MenuSelected));
-			TitleBar = new TitleBarViewModel(new RelayCommand<object>(TitlebarButtonClick));
+			MainMenu = new MainMenuViewModel(new RelayCommand<MenuBoxModel>(MenuSelected));
+			TitleBar = new TitleBarViewModel(new RelayCommand<object>(TitlebarSelected));
 		}
 
 		private void MenuSelected(MenuBoxModel menu)
 		{
 		}
 
-		private void TitlebarButtonClick(object obj)
+		private void TitlebarSelected(object obj)
 		{
 			switch(obj.ToString())
 			{

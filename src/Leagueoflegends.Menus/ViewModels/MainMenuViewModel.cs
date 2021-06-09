@@ -4,11 +4,11 @@ using System.Collections.Generic;
 
 namespace Leagueoflegends.Menus.ViewModels
 {
-	public class MenuBoxViewModel : ObservableObject
+	public class MainMenuViewModel : ObservableObject
 	{
 		public List<MenuBoxModel> Menus { get; }
 
-		public MenuBoxViewModel(RelayCommand<MenuBoxModel> menuCommand)
+		public MainMenuViewModel(RelayCommand<MenuBoxModel> menuCommand)
 		{
 			Menus = GetMenus();
 			Menus.ForEach(x => x.MenuSelectCommand = menuCommand);
