@@ -17,5 +17,6 @@ namespace Leagueoflegends.Windowbase.Riotbase
 				vm.InitRegistUI(this);
 			}
 		}
+
 	}
 }

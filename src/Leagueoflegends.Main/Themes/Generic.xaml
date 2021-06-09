@@ -26,25 +26,31 @@
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="225"/>
                             </Grid.ColumnDefinitions>
-							<!--<Image Grid.RowSpan="2" Grid.ColumnSpan="2" Source="/Leagueoflegends.Resources;component/Images/bg-main-04.png" Stretch="Fill"/>-->
+                            
+                            <Image Grid.RowSpan="2" Grid.ColumnSpan="2" Source="/Leagueoflegends.Resources;component/Images/bg-main-04.png" Stretch="Fill"/>
 							<Border Grid.RowSpan="2" Grid.ColumnSpan="2" Background="#DA000000"/>
-							
+                            
+                            <Grid Grid.Row="0" Grid.ColumnSpan="2" VerticalAlignment="Top" Background="Transparent" Height="81">
+                                <ctrls:DragBorder x:Name="PART_DragBar" Background="Transparent"/>
+                            </Grid>
 							
 							<Border BorderBrush="#553D4143" BorderThickness="0 0 0 1">
 								<StackPanel Orientation="Horizontal">
-									<ctrls:PlayButton Margin="20"/>
+                                    <ctrls:PlayButton Margin="25 20 20 20"/>
 									<ctrls:NoticeButton/>
 									<menus:MainMenu DataContext="{Binding MainMenu}"/>
 								</StackPanel>
 							</Border>
-							
-							<Grid Grid.RowSpan="2" Grid.Column="1" Background="#FF010A13">
-								<titles:TitleBar DataContext="{Binding TitleBar}"/>
+
+                            <Grid Grid.RowSpan="2" Grid.Column="1">
+                                <Border Background="#FF010A13" IsHitTestVisible="False"/>
+                                <titles:TitleBar DataContext="{Binding TitleBar}"/>
 							</Grid>
 
-							<Border Grid.Column="1" BorderBrush="#CC3D4143" BorderThickness="0 0 0 1"/>
-                    
-						</Grid>
+                            <Border VerticalAlignment="Top" Background="#785a28" Height="2" Grid.ColumnSpan="2"/>
+                            <Border Grid.Column="1" BorderBrush="#CC3D4143" BorderThickness="0 0 0 1"/>
+
+                        </Grid>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>

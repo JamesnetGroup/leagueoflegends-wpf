@@ -66,6 +66,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controls\DragBorder.cs" />
     <Compile Include="Controls\MainWindow.cs" />
     <Compile Include="Controls\NoticeButton.cs" />
     <Compile Include="Controls\PlayButton.cs" />

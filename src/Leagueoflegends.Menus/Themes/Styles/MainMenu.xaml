@@ -81,7 +81,8 @@
 
 	<Style TargetType="{x:Type ListBox}" x:Key="IN.LBX">
 		<Setter Property="ItemsSource" Value="{Binding Menus}"/>
-		<Setter Property="Background" Value="Transparent"/>
+        <Setter Property="SelectedItem" Value="{Binding CurrentMenu}"/>
+        <Setter Property="Background" Value="Transparent"/>
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type ListBox}">

@@ -54,10 +54,9 @@
 	<Geometry x:Key="PATH.LOL.NOTICE">M10 3H14V14H10V3M10 21V17H14V21H10Z</Geometry>
 
 	<Style TargetType="{x:Type ctrls:NoticeButton}">
-		<Setter Property="Grid.Column" Value="1"/>
 		<Setter Property="Background" Value="Transparent"/>
 		<Setter Property="VerticalAlignment" Value="Center"/>
-		<Setter Property="Margin" Value="16 1 16 0"/>
+		<Setter Property="Margin" Value="0 1 16 0"/>
 		<Setter Property="Width" Value="30"/>
 		<Setter Property="Height" Value="30"/>
 		<Setter Property="Template">
