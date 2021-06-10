@@ -15,7 +15,7 @@ namespace Leagueoflegends.Main.ViewModels
 
 		public MainViewModel()
 		{
-			MainMenu = new MainMenuViewModel(new RelayCommand<MenuBoxModel>(MenuSelected));
+			MainMenu = new MainMenuViewModel(MenuSelected);
 			TitleBar = new TitleBarViewModel(new RelayCommand<object>(TitlebarSelected));
 		}
 

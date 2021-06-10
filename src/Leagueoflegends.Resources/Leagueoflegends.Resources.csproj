@@ -94,5 +94,9 @@
   <ItemGroup>
     <Resource Include="Images\icon-menu-selected.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\lol-blue-essence.png" />
+    <Resource Include="Images\lol-rp-icon.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

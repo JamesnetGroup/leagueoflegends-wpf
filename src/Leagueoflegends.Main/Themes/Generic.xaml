@@ -6,7 +6,118 @@
     xmlns:menus="clr-namespace:Leagueoflegends.Menus.Views;assembly=Leagueoflegends.Menus"
 	xmlns:titles="clr-namespace:Leagueoflegends.TitleBar.Views;assembly=Leagueoflegends.TitleBar">
 
-    <Style TargetType="{x:Type views:MainView}">
+	<LinearGradientBrush x:Key="LGB.BDR.SEC" StartPoint="0.5,1" EndPoint="0.5,0">
+		<GradientStop Color="Transparent" Offset="0"/>
+		<GradientStop Color="#33C8BA8E" Offset="0.1"/>
+		<GradientStop Color="#C8BA8E" Offset="0.5"/>
+		<GradientStop Color="#33C8BA8E" Offset="0.9"/>
+		<GradientStop Color="Transparent" Offset="1"/>
+	</LinearGradientBrush>
+
+	<Style TargetType="{x:Type ToolTip}" x:Key="MAIN.TOOL">
+		<Setter Property="Placement" Value="Bottom"/>
+		<Setter Property="VerticalOffset" Value="5"/>
+		<Setter Property="HorizontalOffset" Value="5"/>
+		<Setter Property="Foreground" Value="#A09B8C"/>
+		<Setter Property="FontSize" Value="11"/>
+		<Setter Property="FontWeight" Value="Bold"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate>
+					<Border Background="#010A13" BorderThickness="2">
+						<Border.BorderBrush>
+							<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+								<GradientStop Color="#614a1f" Offset="0"/>
+								<GradientStop Color="#463714" Offset="1"/>
+							</LinearGradientBrush>
+						</Border.BorderBrush>
+						<ContentPresenter Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center">
+							<ContentPresenter.Content>
+								<TextBlock Text="{TemplateBinding ToolTip}" Padding="2 2 2 2"/>
+							</ContentPresenter.Content>
+						</ContentPresenter>
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style TargetType="{x:Type Button}" x:Key="IN.CURRENCY">
+		<Style.Resources>
+			<Style TargetType="ToolTip" BasedOn="{StaticResource MAIN.TOOL}">
+				<Setter Property="Placement" Value="Bottom"/>
+				<Setter Property="VerticalOffset" Value="2"/>
+				<Setter Property="HorizontalOffset" Value="-5"/>
+			</Style>
+		</Style.Resources>
+		<Setter Property="Background" Value="Transparent"/>
+		<Setter Property="Foreground" Value="#FFFFFF"/>
+		<Setter Property="FontFamily" Value="Friz Quadrata Std"/>
+		<Setter Property="FontWeight" Value="Bold"/>
+		<Setter Property="FontSize" Value="14"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+		<Setter Property="Margin" Value="4 4 4 4"/>
+		<Setter Property="Padding" Value="0 0 0 0"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<ControlTemplate.Resources>
+						<Style TargetType="{x:Type Image}" x:Key="IN.IMG">
+							<Setter Property="Source" Value="/Leagueoflegends.Resources;component/Images/lol-rp-icon.png"/>
+							<Setter Property="Width" Value="16"/>
+							<Setter Property="Height" Value="16"/>
+							<Setter Property="RenderOptions.BitmapScalingMode" Value="Fant"/>
+							<Setter Property="VerticalAlignment" Value="Center"/>
+						</Style>
+						<Style TargetType="{x:Type ContentPresenter}" x:Key="IN.CONTENT">
+							<Setter Property="Grid.Column" Value="1"/>
+							<Setter Property="ContentSource" Value="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Content}"/>
+							<Setter Property="VerticalAlignment" Value="Center"/>
+							<Setter Property="Margin" Value="8 0 0 0"/>
+						</Style>
+						<Style TargetType="{x:Type Border}" x:Key="IN.BORDER">
+							<Setter Property="Background" Value="Transparent"/>
+							<Setter Property="ToolTip">
+								<Setter.Value>
+									<ToolTip ToolTip="{Binding RelativeSource={RelativeSource AncestorType=Border}, Path=ToolTip}" PlacementTarget="{Binding ElementName=image}"/>
+								</Setter.Value>
+							</Setter>
+						</Style>
+					</ControlTemplate.Resources>
+					<Border x:Name="border" Style="{StaticResource IN.BORDER}">
+						<Grid>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="Auto"/>
+								<ColumnDefinition Width="*"/>
+							</Grid.ColumnDefinitions>
+							<Image x:Name="image" Style="{StaticResource IN.IMG}"/>
+							<ContentPresenter Style="{StaticResource IN.CONTENT}"/>
+						</Grid>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="Tag" Value="01">
+							<Setter TargetName="image" Property="Source" Value="/Leagueoflegends.Resources;component/Images/lol-rp-icon.png"/>
+							<Setter TargetName="border" Property="ToolTip">
+								<Setter.Value>
+									<ToolTip ToolTip="RP"/>
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+						<Trigger Property="Tag" Value="02">
+							<Setter TargetName="image" Property="Source" Value="/Leagueoflegends.Resources;component/Images/lol-blue-essence.png"/>
+							<Setter TargetName="border" Property="ToolTip">
+								<Setter.Value>
+									<ToolTip ToolTip="Blue Essence"/>
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style TargetType="{x:Type views:MainView}">
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="WindowStyle" Value="None"/>
         <Setter Property="WindowState" Value="Normal"/>
@@ -27,7 +138,7 @@
                                 <ColumnDefinition Width="225"/>
                             </Grid.ColumnDefinitions>
                             
-                            <Image Grid.RowSpan="2" Grid.ColumnSpan="2" Source="/Leagueoflegends.Resources;component/Images/bg-main-04.png" Stretch="Fill"/>
+                            <!--<Image Grid.RowSpan="2" Grid.ColumnSpan="2" Source="/Leagueoflegends.Resources;component/Images/bg-main-04.png" Stretch="Fill"/>-->
 							<Border Grid.RowSpan="2" Grid.ColumnSpan="2" Background="#DA000000"/>
                             
                             <Grid Grid.Row="0" Grid.ColumnSpan="2" VerticalAlignment="Top" Background="Transparent" Height="81">
@@ -35,11 +146,23 @@
                             </Grid>
 							
 							<Border BorderBrush="#553D4143" BorderThickness="0 0 0 1">
-								<StackPanel Orientation="Horizontal">
-                                    <ctrls:PlayButton Margin="25 20 20 20"/>
-									<ctrls:NoticeButton/>
-									<menus:MainMenu DataContext="{Binding MainMenu}"/>
-								</StackPanel>
+								<Grid>
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition Width="Auto"/>
+										<ColumnDefinition Width="*"/>
+										<ColumnDefinition Width="115"/>
+									</Grid.ColumnDefinitions>
+									<StackPanel Grid.Column="0" Orientation="Horizontal">
+										<ctrls:PlayButton Margin="25 20 20 20"/>
+										<ctrls:NoticeButton/>
+									</StackPanel>
+									<menus:MainMenu Grid.Column="1" DataContext="{Binding MainMenu}"/>
+									<Border Grid.Column="2" Height="60" Background="Transparent" BorderBrush="{StaticResource LGB.BDR.SEC}" BorderThickness="1 0 0 0" Margin="10 0 0 0"/>
+									<StackPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="25 0 0 0">
+										<Button Style="{StaticResource IN.CURRENCY}" Tag="01" Content="55"/>
+										<Button Style="{StaticResource IN.CURRENCY}" Tag="02" Content="2109"/>
+									</StackPanel>
+								</Grid>
 							</Border>
 
                             <Grid Grid.RowSpan="2" Grid.Column="1">
