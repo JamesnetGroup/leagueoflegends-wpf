@@ -2,14 +2,14 @@
 
 namespace Leagueoflegends.Data.Menu
 {
-	public class MenuBoxModel
+	public class MainMenuModel
 	{
 		public int Seq { get; set; }
 		public string Name { get; set; }
 		public string MenuType { get; set; }
 		public ICommand MenuSelectCommand { get; set; }
 
-		public MenuBoxModel(int seq, string name, string type)
+		public MainMenuModel(int seq, string name, string type)
 		{
 			Seq = seq;
 			Name = name;
