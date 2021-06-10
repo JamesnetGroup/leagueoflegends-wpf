@@ -19,7 +19,7 @@ namespace Leagueoflegends.Main.ViewModels
 			TitleBar = new TitleBarViewModel(new RelayCommand<object>(TitlebarSelected));
 		}
 
-		private void MenuSelected(MenuBoxModel menu)
+		private void MenuSelected(MainMenuModel menu)
 		{
 		}
 
