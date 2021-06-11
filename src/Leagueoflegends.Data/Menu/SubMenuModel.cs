@@ -7,7 +7,6 @@ namespace Leagueoflegends.Data.Menu
 		public int Seq { get; set; }
 		public int MainSeq { get; set; }
 		public string Name { get; set; }
-		public ICommand MenuSelectCommand { get; set; }
 
 		public SubMenuModel(int seq, int mainSeq, string name)
 		{

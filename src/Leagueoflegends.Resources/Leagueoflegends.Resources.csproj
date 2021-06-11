@@ -98,5 +98,15 @@
     <Resource Include="Images\lol-blue-essence.png" />
     <Resource Include="Images\lol-rp-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\lol-runeterra.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\lol-thumb-01.png" />
+    <Resource Include="Images\lol-thumb-02.png" />
+    <Resource Include="Images\lol-thumb-03.png" />
+    <Resource Include="Images\lol-thumb-04.png" />
+    <Resource Include="Images\lol-thumb-05.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

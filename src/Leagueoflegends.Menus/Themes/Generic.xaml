@@ -4,6 +4,6 @@
     xmlns:views="clr-namespace:Leagueoflegends.Menus.Views">
 	<ResourceDictionary.MergedDictionaries>
 		<ResourceDictionary Source="Leagueoflegends.Menus;component/Themes/Styles/MainMenu.xaml"/>
-		<ResourceDictionary Source="Leagueoflegends.TitleBar;component/Themes/Styles/TitleBar.xaml"/>
+		<ResourceDictionary Source="Leagueoflegends.Menus;component/Themes/Styles/SubMenu.xaml"/>
 	</ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

@@ -141,10 +141,12 @@
                             <!--<Image Grid.RowSpan="2" Grid.ColumnSpan="2" Source="/Leagueoflegends.Resources;component/Images/bg-main-04.png" Stretch="Fill"/>-->
 							<Border Grid.RowSpan="2" Grid.ColumnSpan="2" Background="#DA000000"/>
                             
+							<!--Top Drag-->
                             <Grid Grid.Row="0" Grid.ColumnSpan="2" VerticalAlignment="Top" Background="Transparent" Height="81">
                                 <ctrls:DragBorder x:Name="PART_DragBar" Background="Transparent"/>
                             </Grid>
 							
+							<!--Main Menu-->
 							<Border BorderBrush="#553D4143" BorderThickness="0 0 0 1">
 								<Grid>
 									<Grid.ColumnDefinitions>
@@ -165,11 +167,18 @@
 								</Grid>
 							</Border>
 
+							<!--User info & Bar Menu-->
                             <Grid Grid.RowSpan="2" Grid.Column="1">
                                 <Border Background="#FF010A13" IsHitTestVisible="False"/>
                                 <titles:TitleBar DataContext="{Binding TitleBar}"/>
 							</Grid>
 
+							<!--Main page-->
+							<Grid Grid.Row="1" Grid.Column="0">
+								<ContentControl Content="{Binding CurrentUI}"/>
+								<menus:SubMenu HorizontalAlignment="Left" VerticalAlignment="Top"/>
+							</Grid>
+							
                             <Border VerticalAlignment="Top" Background="#785a28" Height="2" Grid.ColumnSpan="2"/>
                             <Border Grid.Column="1" BorderBrush="#CC3D4143" BorderThickness="0 0 0 1"/>
 
@@ -180,6 +189,20 @@
         </Setter>
     </Style>
 
+
+    <Style TargetType="{x:Type views:EmptyContent}">
+        <Setter Property="Template">
+            <Setter.Value>
+				<ControlTemplate TargetType="{x:Type views:EmptyContent}">
+                    <Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+						<TextBlock Text="Empty Content" Foreground="#aaaaaa"/>
+					</Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>
 
 

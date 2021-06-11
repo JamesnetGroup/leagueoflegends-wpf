@@ -35,6 +35,7 @@
     <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,8 +48,16 @@
     <Compile Include="Mvvm\ObservableObject.cs" />
     <Compile Include="Mvvm\RelayCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Riotbase\RiotApp.cs" />
     <Compile Include="Riotbase\RiotView.cs" />
     <Compile Include="Riotbase\RiotWindow.cs" />
+    <Compile Include="Riotcore\IRiotUIElement.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Leagueoflegends.Data\Leagueoflegends.Data.csproj">
+      <Project>{3E01F5FB-69AD-415D-8114-5D7E4D3CBB74}</Project>
+      <Name>Leagueoflegends.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
