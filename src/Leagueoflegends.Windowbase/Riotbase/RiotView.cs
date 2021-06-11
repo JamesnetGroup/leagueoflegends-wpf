@@ -1,10 +1,12 @@
-﻿using Leagueoflegends.Windowbase.Mvvm;
+﻿using Leagueoflegends.Data.Menu;
+using Leagueoflegends.Windowbase.Mvvm;
+using Leagueoflegends.Windowbase.Riotcore;
 using System.Windows;
 using System.Windows.Controls;
 
 namespace Leagueoflegends.Windowbase.Riotbase
 {
-	public class RiotView : UserControl
+	public class RiotView : UserControl, IRiotUIElement
 	{
 		public RiotView()
 		{
@@ -18,5 +20,16 @@ namespace Leagueoflegends.Windowbase.Riotbase
 				vm.InitRegistUI(this);
 			}
 		}
+
+		public void Show(SubMenuModel menu)
+		{
+		}
+
+		public IRiotUIElement UseViewModel(ObservableObject vm)
+		{
+			DataContext = vm;
+			return this;
+		}
+
 	}
 }

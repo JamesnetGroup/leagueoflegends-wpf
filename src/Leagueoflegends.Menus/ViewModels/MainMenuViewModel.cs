@@ -8,6 +8,8 @@ namespace Leagueoflegends.Menus.ViewModels
 {
 	public class MainMenuViewModel : ObservableObject
 	{
+		private Action<MainMenuModel, List<SubMenuModel>> _menuCommand;
+
 		#region Menus
 
 		private MainMenuModel _currentMenu;
@@ -21,29 +23,26 @@ namespace Leagueoflegends.Menus.ViewModels
 
 		#endregion
 
-		#region SubMenus
-
-		private SubMenuModel _currentSubMenu;
-		public SubMenuModel CurrentSubMenu
-		{
-			get => _currentSubMenu;
-			set { _currentSubMenu = value; OnPropertyChanged(); }
-		}
-
-		public List<SubMenuModel> SubMenus { get; }
-
-		#endregion
+		public List<SubMenuModel> TotalSubMenus { get; }
 
 		#region Constructor
 
-		public MainMenuViewModel(Action<MainMenuModel> menuCommand)
+		public MainMenuViewModel(Action<MainMenuModel, List<SubMenuModel>> menuCommand)
 		{
-			Menus = GetMenus();
-			CurrentMenu = Menus.First();
-			Menus.ForEach(x => x.MenuSelectCommand = new RelayCommand<MainMenuModel>(menuCommand));
+			_menuCommand = menuCommand;
 
-			SubMenus = GetSubMenus();
-			CurrentSubMenu = SubMenus.FirstOrDefault(x => x.MainSeq == CurrentMenu.Seq);
+			Menus = GetMenus();
+			Menus.ForEach(x => x.MenuSelectCommand = new RelayCommand<MainMenuModel>(MenuChanged));
+			TotalSubMenus = GetSubMenus();
+
+			CurrentMenu = Menus.First();
+			MenuChanged(CurrentMenu);
+		}
+
+		private void MenuChanged(MainMenuModel obj)
+		{
+			List<SubMenuModel> subMenus = TotalSubMenus.Where(x => x.MainSeq == obj.Seq).ToList();
+			_menuCommand.Invoke(obj, subMenus);
 		}
 		#endregion
 

@@ -1,11 +1,12 @@
 ﻿using Leagueoflegends.Main.ViewModels;
 using Leagueoflegends.Main.Views;
+using Leagueoflegends.Windowbase.Riotbase;
 using System;
 using System.Windows;
 
 namespace Leagueoflegends
 {
-	public class App : Application
+	public class App : RiotApp
 	{
 		public App()
 		{
