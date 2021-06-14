@@ -222,7 +222,7 @@
 								</Border>
 							</Border>
 						</Border>
-						<Control Style="{StaticResource IN.LABEL}"/>
+						<Control Style="{StaticResource CTL.LABEL}"/>
 					</Grid>
 					<ControlTemplate.Triggers>
 						<Trigger Property="IsMouseOver" Value="True">
@@ -264,11 +264,14 @@
 	</Style>
 
 	<Style TargetType="{x:Type ToggleButton}" x:Key="TGL.CONTENT">
+		<Setter Property="Content" Value="Online"/>
+		<Setter Property="Foreground" Value="#099441"/>
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type ToggleButton}">
 					<Grid>
-						<TextBlock Margin="6 0 0 0" FontSize="11" FontWeight="Bold" Foreground="#099441" Text="Online"/>
+						<TextBlock Margin="6 0 0 0" FontSize="11" FontWeight="Bold"
+								   Text="{Binding RelativeSource={RelativeSource AncestorType=ToggleButton}, Path=Content}"/>
 						<Popup Placement="Bottom" StaysOpen="False"
 							   IsOpen="{Binding RelativeSource={RelativeSource AncestorType=ToggleButton}, Path=IsChecked}">
 							<TextBox Text="Input Message"/>
@@ -279,7 +282,7 @@
 		</Setter>
 	</Style>
 
-	<Style TargetType="{x:Type Control}" x:Key="IN.STATUS">
+	<Style TargetType="{x:Type Control}" x:Key="CTL.STATUS">
 		<Setter Property="Margin" Value="77 0 0 0"/>
 		<Setter Property="HorizontalAlignment" Value="Left"/>
 		<Setter Property="VerticalAlignment" Value="Top"/>
@@ -488,7 +491,7 @@
 							</Border>
 
 							<!--User info & Bar Menu-->
-                            <Grid Grid.RowSpan="2" Grid.Column="1">
+                            <Grid Grid.RowSpan="2" Grid.Column="1" Width="225" Height="81" VerticalAlignment="Top">
                                 <Border Background="#FF010A13" IsHitTestVisible="False"/>
                                 <titles:TitleBar DataContext="{Binding TitleBar}"/>
 

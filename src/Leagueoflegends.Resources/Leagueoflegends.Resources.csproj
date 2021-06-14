@@ -108,5 +108,8 @@
     <Resource Include="Images\lol-thumb-04.png" />
     <Resource Include="Images\lol-thumb-05.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\profile-01.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
