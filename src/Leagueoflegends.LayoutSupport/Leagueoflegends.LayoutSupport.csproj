@@ -56,7 +56,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Styles\Icon.xaml">
+    <Page Include="Themes\Styles\RiotIcon.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -70,7 +70,7 @@
     <Compile Include="Controls\MainWindow.cs" />
     <Compile Include="Controls\NoticeButton.cs" />
     <Compile Include="Controls\PlayButton.cs" />
-    <Compile Include="Controls\Icon.cs" />
+    <Compile Include="Controls\RiotIcon.cs" />
     <Compile Include="Controls\Unit.cs" />
     <Compile Include="Controls\View.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -96,6 +96,14 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Leagueoflegends.Controls\Leagueoflegends.Controls.csproj">
+      <Project>{F6309CBA-5A01-4E4E-AE66-02841968C02D}</Project>
+      <Name>Leagueoflegends.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Leagueoflegends.Data\Leagueoflegends.Data.csproj">
+      <Project>{3e01f5fb-69ad-415d-8114-5d7e4d3cbb74}</Project>
+      <Name>Leagueoflegends.Data</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Leagueoflegends.Windowbase\Leagueoflegends.Windowbase.csproj">
       <Project>{B0E72967-60F7-4796-8940-36D3822131A7}</Project>
       <Name>Leagueoflegends.Windowbase</Name>

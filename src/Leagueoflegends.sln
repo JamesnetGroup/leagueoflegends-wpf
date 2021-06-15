@@ -35,6 +35,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01. Home", "01. Home", "{A6
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leagueoflegends.Home.General", "Leagueoflegends.Home.General\Leagueoflegends.Home.General.csproj", "{C1FD24B7-5EBB-49C2-881C-8F23CA6C7C63}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leagueoflegends.Controls", "Leagueoflegends.Controls\Leagueoflegends.Controls.csproj", "{F6309CBA-5A01-4E4E-AE66-02841968C02D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,10 @@ Global
 		{C1FD24B7-5EBB-49C2-881C-8F23CA6C7C63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1FD24B7-5EBB-49C2-881C-8F23CA6C7C63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C1FD24B7-5EBB-49C2-881C-8F23CA6C7C63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6309CBA-5A01-4E4E-AE66-02841968C02D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6309CBA-5A01-4E4E-AE66-02841968C02D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6309CBA-5A01-4E4E-AE66-02841968C02D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6309CBA-5A01-4E4E-AE66-02841968C02D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -92,6 +98,7 @@ Global
 		{0B50B667-42CC-43A9-8F28-8EF1427A22CD} = {61035FC2-41A9-4488-B12C-6F12ED1B2829}
 		{A620630B-0A29-4B6E-9D30-AB00D080EC24} = {61035FC2-41A9-4488-B12C-6F12ED1B2829}
 		{C1FD24B7-5EBB-49C2-881C-8F23CA6C7C63} = {A620630B-0A29-4B6E-9D30-AB00D080EC24}
+		{F6309CBA-5A01-4E4E-AE66-02841968C02D} = {B1E92410-CD1D-4421-B5F3-8FBA5DF2B57C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EB8A4E83-8ABD-40CF-B56A-559A49B51254}
