@@ -1,0 +1,29 @@
+﻿namespace Leagueoflegends.Data.Enums
+{
+	public enum GeoIcon
+	{
+		None,
+		Label,
+		Alarm,
+		AddFriends,
+		AddFolder,
+		Option,
+		Magnify,
+		Expand,
+		Unexpand,
+		Chat,
+		Script,
+		Mic,
+		Bug,
+		Notice,
+		AccountCircle,
+		Bag,
+		Arc,
+		Card,
+		Coin,
+		Setting,
+		Minimize,
+		Close,
+		Help
+	}
+}

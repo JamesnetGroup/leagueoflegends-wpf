@@ -85,6 +85,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Leagueoflegends.Controls\Leagueoflegends.Controls.csproj">
+      <Project>{f6309cba-5a01-4e4e-ae66-02841968c02d}</Project>
+      <Name>Leagueoflegends.Controls</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Leagueoflegends.Data\Leagueoflegends.Data.csproj">
       <Project>{3e01f5fb-69ad-415d-8114-5d7e4d3cbb74}</Project>
       <Name>Leagueoflegends.Data</Name>
