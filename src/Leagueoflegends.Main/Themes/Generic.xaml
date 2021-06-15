@@ -654,7 +654,12 @@
                             
                             <Image Grid.RowSpan="2" Grid.ColumnSpan="2" Source="/Leagueoflegends.Resources;component/Images/bg-main-04.png" Stretch="Fill"/>
 							<Border Grid.RowSpan="2" Grid.ColumnSpan="2" Background="#DA000000"/>
-                            
+
+							<!--Top Drag-->
+							<Grid Grid.Row="0" Grid.ColumnSpan="2" VerticalAlignment="Top" Background="Transparent" Height="81">
+								<ctrls:DragBorder x:Name="PART_DragBar" Background="Transparent"/>
+							</Grid>
+
 							<!--Main Menu-->
 							<Border BorderBrush="#553D4143" BorderThickness="0 0 0 1">
 								<Grid>
@@ -675,11 +680,6 @@
 									</StackPanel>
 								</Grid>
 							</Border>
-
-							<!--Top Drag-->
-							<Grid Grid.Row="0" Grid.ColumnSpan="2" VerticalAlignment="Top" Background="Transparent" Height="81">
-								<ctrls:DragBorder x:Name="PART_DragBar" Background="Transparent"/>
-							</Grid>
 
 							<!--User info & Bar Menu-->
                             <Grid Grid.RowSpan="2" Grid.Column="1" Width="225" Height="81" VerticalAlignment="Top">
