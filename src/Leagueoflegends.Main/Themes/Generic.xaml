@@ -12,7 +12,9 @@
 	<Geometry x:Key="GEO.ADD.FOLDER">M10,4L12,6H20A2,2 0 0,1 22,8V18A2,2 0 0,1 20,20H4C2.89,20 2,19.1 2,18V6C2,4.89 2.89,4 4,4H10M15,9V12H12V14H15V17H17V14H20V12H17V9H15Z</Geometry>
 	<Geometry x:Key="GEO.OPTION">M3,4H7V8H3V4M9,5V7H21V5H9M3,10H7V14H3V10M9,11V13H21V11H9M3,16H7V20H3V16M9,17V19H21V17H9</Geometry>
 	<Geometry x:Key="GEO.MAGNIFY">M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z</Geometry>
-
+	<Geometry x:Key="GEO.UNEXPAND">M10,17L15,12L10,7V17Z</Geometry>
+	<Geometry x:Key="GEO.EXPAND">M7,10L12,15L17,10H7Z</Geometry>
+	
 	<LinearGradientBrush x:Key="BDR.SEC" StartPoint="0.5,1" EndPoint="0.5,0">
 		<GradientStop Color="Transparent" Offset="0"/>
 		<GradientStop Color="#33C8BA8E" Offset="0.1"/>
@@ -45,7 +47,38 @@
 		<GradientStop Color="#E1AC48" Offset="0.5"/>
 		<GradientStop Color="#94723A" Offset="1"/>
 	</LinearGradientBrush>
-	
+
+	<LinearGradientBrush x:Key="IMG.BDR2" EndPoint="0.5,1" StartPoint="0.5,0">
+		<GradientStop Color="#B79349" Offset="0"/>
+		<GradientStop Color="#957230" Offset="0.5"/>
+		<GradientStop Color="#6C5228" Offset="1"/>
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="IMG.BDR2.OVER" EndPoint="0.5,1" StartPoint="0.5,0">
+		<GradientStop Color="#E9DFCB" Offset="0"/>
+		<GradientStop Color="#D9BD81" Offset="0.5"/>
+		<GradientStop Color="#C99D3F" Offset="1"/>
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="IMG.BDR3" EndPoint="0.5,1" StartPoint="0.5,0">
+		<GradientStop Color="#5F5336" Offset="0"/>
+		<GradientStop Color="#4B3E22" Offset="0.5"/>
+		<GradientStop Color="#362E1E" Offset="1"/>
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="IMG.BDR3.OVER" EndPoint="0.5,1" StartPoint="0.5,0">
+		<GradientStop Color="#83817B" Offset="0"/>
+		<GradientStop Color="#786D53" Offset="0.5"/>
+		<GradientStop Color="#715E34" Offset="1"/>
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="BG.BTM" EndPoint="0.5,1" StartPoint="0.5,0">
+		<GradientStop Color="#33010A13" Offset="0"/>
+		<GradientStop Color="#AB010A13" Offset="0.3"/>
+		<GradientStop Color="#DD010A13" Offset="0.7"/>
+		<GradientStop Color="#010A13" Offset="1"/>
+	</LinearGradientBrush>
+
 	<Style TargetType="{x:Type ctrls:Icon}" x:Key="ICON.LABEL">
 		<Setter Property="Data" Value="{StaticResource GEO.LABEL}"/>
 		<Setter Property="HorizontalAlignment" Value="Center"/>
@@ -77,6 +110,15 @@
 		<Setter Property="Fill" Value="#C8AA6E"/>
 		<Setter Property="Width" Value="17"/>
 		<Setter Property="Height" Value="17"/>
+	</Style>
+
+	<Style TargetType="{x:Type ctrls:Icon}" x:Key="ICON.UNEXPAND">
+		<Setter Property="Data" Value="{StaticResource GEO.UNEXPAND}"/>
+		<Setter Property="HorizontalAlignment" Value="Center"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+		<Setter Property="Fill" Value="#A09B8C"/>
+		<Setter Property="Width" Value="20"/>
+		<Setter Property="Height" Value="20"/>
 	</Style>
 	
 	<Style TargetType="{x:Type ToolTip}" x:Key="MAIN.TOOL">
@@ -439,6 +481,155 @@
 			</Style>
 		</Style.Resources>
 	</Style>
+	
+	<Style TargetType="{x:Type TextBlock}" x:Key="TXB.FRIENDS">
+		<Setter Property="FontFamily" Value="Friz Quadrata Std"/>
+		<Setter Property="Foreground" Value="#A09B8C"/>
+		<Setter Property="FontSize" Value="12"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+	</Style>
+	
+	<Style TargetType="{x:Type ToggleButton}" x:Key="TGL.HEADER">
+		<Setter Property="IsChecked" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsExpanded}"/>
+		<Setter Property="Padding" Value="5 2 0 2"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate>
+					<Border x:Name="border" Background="Transparent" BorderBrush="Transparent">
+						<Grid Margin="5 2 0 2">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="Auto"/>
+								<ColumnDefinition/>
+							</Grid.ColumnDefinitions>
+							<ctrls:Icon x:Name="path" Style="{StaticResource ICON.UNEXPAND}"/>
+							<StackPanel Grid.Column="1" Orientation="Horizontal">
+								<TextBlock x:Name="text" Style="{StaticResource TXB.FRIENDS}" Text="{Binding Header}"/>
+								<TextBlock x:Name="text2" Style="{StaticResource TXB.FRIENDS}" Visibility="Collapsed" Margin="5 0 0 0">
+									<TextBlock.Text>
+										<MultiBinding StringFormat="{}({0}/{1})">
+											<Binding Path="GeneralFriendsCount"/>
+											<Binding Path="TotalFriendsCount" />
+										</MultiBinding>
+									</TextBlock.Text>
+								</TextBlock>
+								<TextBlock x:Name="text3" Style="{StaticResource TXB.FRIENDS}" Visibility="Collapsed" Margin="5 0 0 0">
+									<TextBlock.Text>
+										<MultiBinding StringFormat="{}({0}/{1})">
+											<Binding Path="OfflineFriendsCount"/>
+											<Binding Path="TotalFriendsCount" />
+										</MultiBinding>
+									</TextBlock.Text>
+								</TextBlock>
+							</StackPanel>
+						</Grid>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter TargetName="path" Property="Fill" Value="#F0E6D2"/>
+							<Setter TargetName="text" Property="Foreground" Value="#F0E6D2"/>
+							<Setter TargetName="border" Property="Background" Value="#11FFFFFF"/>
+						</Trigger>
+						<DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=TreeViewItem}, Path=IsExpanded}" Value="True">
+							<Setter TargetName="path" Property="Data" Value="{StaticResource GEO.EXPAND}"/>
+						</DataTrigger>
+						<DataTrigger Binding="{Binding Children.Count}" Value="0">
+							<Setter TargetName="path" Property="Visibility" Value="Collapsed"/>
+						</DataTrigger>
+						<DataTrigger Binding="{Binding Name}" Value="GENERAL">
+							<Setter TargetName="text2" Property="Visibility" Value="Visible"/>
+						</DataTrigger>
+						<DataTrigger Binding="{Binding Name}" Value="OFFLINE">
+							<Setter TargetName="text3" Property="Visibility" Value="Visible"/>
+						</DataTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style TargetType="{x:Type TreeViewItem}" x:Key="TRVI.FRIENDS">
+		<Setter Property="ItemsSource" Value="{Binding Children}"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type TreeViewItem}">
+					<StackPanel>
+						<Grid x:Name="directory" Visibility="Collapsed">
+							<ToggleButton x:Name="toggle" Style="{StaticResource TGL.HEADER}"/>
+						</Grid>
+						<Border x:Name="user" Visibility="Collapsed" Background="Transparent" BorderBrush="Transparent" Margin="0 0 10 0">
+							<Grid Margin="10 5 0 5">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition Width="Auto"/>
+									<ColumnDefinition/>
+								</Grid.ColumnDefinitions>
+								<Border x:Name="border" Grid.Column="0" Width="30" Height="30" CornerRadius="20" BorderBrush="{StaticResource IMG.BDR2}" BorderThickness="2">
+									<Border.Background>
+										<ImageBrush ImageSource="{Binding Avatar}" Stretch="UniformToFill"/>
+									</Border.Background>
+								</Border>
+								<StackPanel Grid.Column="1" Margin="5 0 0 0">
+									<TextBlock x:Name="text1" Text="{Binding Header}" Foreground="#A09B8C" FontSize="13" FontWeight="Bold"/>
+									<TextBlock x:Name="text2" Text="{Binding Status}" Foreground="#A09B8C" FontSize="12" FontWeight="Normal"/>
+								</StackPanel>
+							</Grid>
+						</Border>
+						<ItemsPresenter x:Name="items" Visibility="Collapsed"/>
+					</StackPanel>
+					<ControlTemplate.Triggers>
+						<DataTrigger Binding="{Binding IsUser}" Value="True">
+							<Setter TargetName="user" Property="Visibility" Value="Visible"/>
+						</DataTrigger>
+						<DataTrigger Binding="{Binding IsUser}" Value="False">
+							<Setter TargetName="directory" Property="Visibility" Value="Visible"/>
+						</DataTrigger>
+						<DataTrigger Binding="{Binding Status}" Value="온라인">
+							<Setter TargetName="text2" Property="Foreground" Value="#09A646"/>
+						</DataTrigger>
+						<DataTrigger Binding="{Binding Status}" Value="게임 중">
+							<Setter TargetName="text2" Property="Foreground" Value="#0ACBE6"/>
+						</DataTrigger>
+						<DataTrigger Binding="{Binding IsGeneral}" Value="false">
+							<Setter TargetName="text1" Property="Foreground" Value="#4E514F"/>
+							<Setter TargetName="text2" Property="Foreground" Value="#4E514F"/>
+							<Setter TargetName="border" Property="BorderBrush" Value="{StaticResource IMG.BDR3}"/>
+						</DataTrigger>
+						<Trigger Property="IsExpanded" Value="True">
+							<Setter TargetName="items" Property="Visibility" Value="Visible"/>
+						</Trigger>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter TargetName="text1" Property="Foreground" Value="#F0E6D2"/>
+							<Setter TargetName="user" Property="Background" Value="#11FFFFFF"/>
+							<Setter TargetName="border" Property="BorderBrush" Value="{StaticResource IMG.BDR2.OVER}"/>
+						</Trigger>
+						<MultiDataTrigger>
+							<MultiDataTrigger.Conditions>
+								<Condition Binding="{Binding IsGeneral}" Value="false"/>
+								<Condition Binding="{Binding ElementName=user, Path=IsMouseOver}" Value="True"/>
+							</MultiDataTrigger.Conditions>
+							<Setter TargetName="text1" Property="Foreground" Value="#9E998B"/>
+							<Setter TargetName="text2" Property="Foreground" Value="#9E998B"/>
+							<Setter TargetName="border" Property="BorderBrush" Value="{StaticResource IMG.BDR3.OVER}"/>
+						</MultiDataTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style TargetType="{x:Type TreeView}" x:Key="TRV.FRIENDS">
+		<Setter Property="ItemContainerStyle" Value="{StaticResource TRVI.FRIENDS}"/>
+		<Setter Property="ItemsSource" Value="{Binding Friends}"/>
+		<Setter Property="Margin" Value="0 5 0 5"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type TreeView}">
+					<ScrollViewer HorizontalScrollBarVisibility="Disabled">
+						<ItemsPresenter/>
+					</ScrollViewer>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
 
 	<Style TargetType="{x:Type views:MainView}">
         <Setter Property="BorderThickness" Value="0"/>
@@ -461,14 +652,9 @@
                                 <ColumnDefinition Width="225"/>
                             </Grid.ColumnDefinitions>
                             
-                            <!--<Image Grid.RowSpan="2" Grid.ColumnSpan="2" Source="/Leagueoflegends.Resources;component/Images/bg-main-04.png" Stretch="Fill"/>-->
+                            <Image Grid.RowSpan="2" Grid.ColumnSpan="2" Source="/Leagueoflegends.Resources;component/Images/bg-main-04.png" Stretch="Fill"/>
 							<Border Grid.RowSpan="2" Grid.ColumnSpan="2" Background="#DA000000"/>
                             
-							<!--Top Drag-->
-                            <Grid Grid.Row="0" Grid.ColumnSpan="2" VerticalAlignment="Top" Background="Transparent" Height="81">
-                                <ctrls:DragBorder x:Name="PART_DragBar" Background="Transparent"/>
-                            </Grid>
-							
 							<!--Main Menu-->
 							<Border BorderBrush="#553D4143" BorderThickness="0 0 0 1">
 								<Grid>
@@ -490,6 +676,11 @@
 								</Grid>
 							</Border>
 
+							<!--Top Drag-->
+							<Grid Grid.Row="0" Grid.ColumnSpan="2" VerticalAlignment="Top" Background="Transparent" Height="81">
+								<ctrls:DragBorder x:Name="PART_DragBar" Background="Transparent"/>
+							</Grid>
+
 							<!--User info & Bar Menu-->
                             <Grid Grid.RowSpan="2" Grid.Column="1" Width="225" Height="81" VerticalAlignment="Top">
                                 <Border Background="#FF010A13" IsHitTestVisible="False"/>
@@ -510,7 +701,7 @@
 							</Grid>
 
 							<!--Friends List-->
-							<Grid Grid.Row="1" Grid.Column="1">
+							<Grid Grid.Row="1" Grid.Column="1" Background="#FF010A13">
 								<Grid.RowDefinitions>
 									<RowDefinition Height="Auto"/>
 									<RowDefinition Height="*"/>
@@ -524,10 +715,10 @@
 									<Button Style="{StaticResource BTN.FILTER}"/>
 								</StackPanel>
 								
-								<!--<TreeView Grid.Row="1" Style="{StaticResource TRV.FRIENDS}"/>
-								<Border Grid.Row="1" Style="{StaticResource BDR.BOTTOM}"/>
+								<TreeView Grid.Row="1" Style="{StaticResource TRV.FRIENDS}"/>
+								<Border Grid.Row="1" Background="{StaticResource BG.BTM}" BorderBrush="Transparent" Height="10" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"/>
 
-								<Border Grid.Row="2" Style="{StaticResource BDR.MID}"/>
+								<!--<Border Grid.Row="2" Style="{StaticResource BDR.MID}"/>
 								<StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0 1 0 0">
 									<Button Style="{StaticResource BTN.CHAT}"/>
 									<Button Style="{StaticResource BTN.SCRIPT}"/>
