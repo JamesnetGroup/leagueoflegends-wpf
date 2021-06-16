@@ -37,6 +37,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leagueoflegends.Home.Genera
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leagueoflegends.Controls", "Leagueoflegends.Controls\Leagueoflegends.Controls.csproj", "{F6309CBA-5A01-4E4E-AE66-02841968C02D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02. TeamFight", "02. TeamFight", "{7D3F96DA-99B2-422D-BF7A-CE56A84468DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leagueoflegends.TeamFight", "Leagueoflegends.TeamFight\Leagueoflegends.TeamFight.csproj", "{F7AA3593-BF16-4EEA-915D-906B30BBF74B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -83,6 +87,10 @@ Global
 		{F6309CBA-5A01-4E4E-AE66-02841968C02D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F6309CBA-5A01-4E4E-AE66-02841968C02D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F6309CBA-5A01-4E4E-AE66-02841968C02D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7AA3593-BF16-4EEA-915D-906B30BBF74B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7AA3593-BF16-4EEA-915D-906B30BBF74B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7AA3593-BF16-4EEA-915D-906B30BBF74B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7AA3593-BF16-4EEA-915D-906B30BBF74B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -99,6 +107,8 @@ Global
 		{A620630B-0A29-4B6E-9D30-AB00D080EC24} = {61035FC2-41A9-4488-B12C-6F12ED1B2829}
 		{C1FD24B7-5EBB-49C2-881C-8F23CA6C7C63} = {A620630B-0A29-4B6E-9D30-AB00D080EC24}
 		{F6309CBA-5A01-4E4E-AE66-02841968C02D} = {B1E92410-CD1D-4421-B5F3-8FBA5DF2B57C}
+		{7D3F96DA-99B2-422D-BF7A-CE56A84468DC} = {61035FC2-41A9-4488-B12C-6F12ED1B2829}
+		{F7AA3593-BF16-4EEA-915D-906B30BBF74B} = {7D3F96DA-99B2-422D-BF7A-CE56A84468DC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EB8A4E83-8ABD-40CF-B56A-559A49B51254}
