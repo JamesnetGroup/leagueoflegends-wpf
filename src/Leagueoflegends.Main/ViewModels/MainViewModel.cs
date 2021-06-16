@@ -22,8 +22,9 @@ namespace Leagueoflegends.Main.ViewModels
 		private IRiotUIElement _currentUI;
 		private List<SubMenuModel> _subMenus;
 		private SubMenuModel _currentSubMenu;
+		private MainMenuModel _mainMenu;
 		private List<CommunityModel> _friends;
-		private Dictionary<int, IRiotUIElement> UIs { get; set; }
+		private Dictionary<string, IRiotUIElement> UIs { get; set; }
 
 		public MainMenuViewModel MainMenu { get; }
 		public TitleBarViewModel TitleBar { get; }
@@ -48,7 +49,7 @@ namespace Leagueoflegends.Main.ViewModels
 
 		public List<SubMenuModel> SubMenus
 		{
-			get { return _subMenus; }
+			get => _subMenus;
 			set { _subMenus = value; OnPropertyChanged(); }
 		}
 
@@ -82,6 +83,7 @@ namespace Leagueoflegends.Main.ViewModels
 
 		private void MenuSelected(MainMenuModel menu, List<SubMenuModel> subMenus)
 		{
+			_mainMenu = menu;
 			SubMenus = subMenus;
 			CurrentSubMenu = SubMenus.FirstOrDefault();
 		}
@@ -91,21 +93,33 @@ namespace Leagueoflegends.Main.ViewModels
 
 		private void SubMenuChanged(SubMenuModel value)
 		{
+			IRiotUIElement content;
+			string key;
+
 			if (value != null)
 			{
-				IRiotUIElement content = value.Seq switch
+				key = value.Name;
+				content = value.Seq switch
 				{
 					0 => new GeneralView().UseViewModel(new GeneralViewModel()),
-					_ => new EmptyContent(),
+					_ => new EmptyContent()
 				};
-
-				if (!UIs.ContainsKey(value.Seq))
-				{
-					UIs.Add(value.Seq, content);
-				}
-
-				CurrentUI = UIs[value.Seq];
 			}
+			else
+			{
+				key = _mainMenu.Name;
+				content = _mainMenu.Seq switch
+				{
+					_ => new EmptyContent()
+				};
+			}
+
+			if (!UIs.ContainsKey(key))
+			{
+				UIs.Add(key, content);
+			}
+
+			CurrentUI = UIs[key];
 		}
 		#endregion
 
@@ -120,7 +134,6 @@ namespace Leagueoflegends.Main.ViewModels
 			}
 		}
 		#endregion
-
 
 		#region InitFriends
 
