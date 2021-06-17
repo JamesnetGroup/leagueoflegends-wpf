@@ -115,6 +115,10 @@
       <Project>{ef8f6871-edc0-4dbd-a0d1-11d9f9762562}</Project>
       <Name>Leagueoflegends.Menus</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Leagueoflegends.MyShop\Leagueoflegends.MyShop.csproj">
+      <Project>{0273aba2-31c6-4273-85a4-c90e99b18926}</Project>
+      <Name>Leagueoflegends.MyShop</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Leagueoflegends.Resources\Leagueoflegends.Resources.csproj">
       <Project>{1afee701-95ed-4977-95b3-249a9821de5b}</Project>
       <Name>Leagueoflegends.Resources</Name>
