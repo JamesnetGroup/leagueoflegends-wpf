@@ -124,5 +124,17 @@
     <Resource Include="Images\Square\8.png" />
     <Resource Include="Images\Square\9.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\lol-teamfight-background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\lol-star-piece.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\lol-teamfight-thumb01.jpg" />
+    <Resource Include="Images\lol-teamfight-thumb02.jpg" />
+    <Resource Include="Images\lol-teamfight-thumb03.jpg" />
+    <Resource Include="Images\lol-teamfight-thumb04.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

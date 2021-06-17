@@ -52,7 +52,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Styles\NoticeButton.xaml">
+    <Page Include="Themes\Styles\RiotTooltip.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -60,18 +60,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Styles\PlayButton.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controls\DragBorder.cs" />
-    <Compile Include="Controls\MainWindow.cs" />
-    <Compile Include="Controls\NoticeButton.cs" />
-    <Compile Include="Controls\PlayButton.cs" />
+    <Compile Include="Controls\RiotTooltip.cs" />
     <Compile Include="Controls\RiotIcon.cs" />
-    <Compile Include="Controls\Unit.cs" />
+    <Compile Include="Controls\TooltipB.cs" />
+    <Compile Include="Controls\TooltipA.cs" />
+    <Compile Include="Controls\BasicScroll.cs" />
     <Compile Include="Controls\View.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

@@ -1,0 +1,871 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:views="clr-namespace:Leagueoflegends.Main.Views"
+					xmlns:ctrls="clr-namespace:Leagueoflegends.LayoutSupport.Controls;assembly=Leagueoflegends.LayoutSupport"
+					xmlns:menus="clr-namespace:Leagueoflegends.Menus.Views;assembly=Leagueoflegends.Menus"
+					xmlns:titles="clr-namespace:Leagueoflegends.TitleBar.Views;assembly=Leagueoflegends.TitleBar"
+					xmlns:prims="clr-namespace:Leagueoflegends.Controls.Primitives;assembly=Leagueoflegends.Controls">
+	
+	<LinearGradientBrush x:Key="BDR.SEC" StartPoint="0.5,1" EndPoint="0.5,0">
+		<GradientStop Color="Transparent" Offset="0"/>
+		<GradientStop Color="#33C8BA8E" Offset="0.1"/>
+		<GradientStop Color="#C8BA8E" Offset="0.5"/>
+		<GradientStop Color="#33C8BA8E" Offset="0.9"/>
+		<GradientStop Color="Transparent" Offset="1"/>
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="LBL.GEO.BDR" StartPoint="0.5, 0" EndPoint="0.5, 1">
+		<GradientStop Color="#BDA166" Offset="0"/>
+		<GradientStop Color="#987430" Offset="0.5"/>
+		<GradientStop Color="#6d5228" Offset="1"/>
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="LBL.GEO.FILL" StartPoint="0.5, 0" EndPoint="0.5, 1">
+		<GradientStop Color="#191d22" Offset="0"/>
+		<GradientStop Color="#1e2328" Offset="0.5"/>
+		<GradientStop Color="#0c131a" Offset="1"/>
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="IMG.BDR" StartPoint="0.5, 0" EndPoint="0.5, 1">
+		<GradientStop Color="#C5A668" Offset="0"/>
+		<GradientStop Color="#A47D30" Offset="0.25"/>
+		<GradientStop Color="#8D6D32" Offset="0.75"/>
+		<GradientStop Color="#614b24" Offset="1"/>
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="IMG.BDR.OVER" StartPoint="0.5, 0" EndPoint="0.5, 1">
+		<GradientStop Color="#FFE57B" Offset="0"/>
+		<GradientStop Color="#E1AC48" Offset="0.5"/>
+		<GradientStop Color="#94723A" Offset="1"/>
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="IMG.BDR2" EndPoint="0.5,1" StartPoint="0.5,0">
+		<GradientStop Color="#B79349" Offset="0"/>
+		<GradientStop Color="#957230" Offset="0.5"/>
+		<GradientStop Color="#6C5228" Offset="1"/>
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="IMG.BDR2.OVER" EndPoint="0.5,1" StartPoint="0.5,0">
+		<GradientStop Color="#E9DFCB" Offset="0"/>
+		<GradientStop Color="#D9BD81" Offset="0.5"/>
+		<GradientStop Color="#C99D3F" Offset="1"/>
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="IMG.BDR3" EndPoint="0.5,1" StartPoint="0.5,0">
+		<GradientStop Color="#5F5336" Offset="0"/>
+		<GradientStop Color="#4B3E22" Offset="0.5"/>
+		<GradientStop Color="#362E1E" Offset="1"/>
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="IMG.BDR3.OVER" EndPoint="0.5,1" StartPoint="0.5,0">
+		<GradientStop Color="#83817B" Offset="0"/>
+		<GradientStop Color="#786D53" Offset="0.5"/>
+		<GradientStop Color="#715E34" Offset="1"/>
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="BG.BTM" EndPoint="0.5,1" StartPoint="0.5,0">
+		<GradientStop Color="#33010A13" Offset="0"/>
+		<GradientStop Color="#AB010A13" Offset="0.3"/>
+		<GradientStop Color="#DD010A13" Offset="0.7"/>
+		<GradientStop Color="#010A13" Offset="1"/>
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="BTN.BDR" EndPoint="0.5,1" StartPoint="0.5,0">
+		<GradientStop Color="#C8AA6E" Offset="0"/>
+		<GradientStop Color="#795c28" Offset="1"/>
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="BTN.BDR.OVER" EndPoint="0.5,1" StartPoint="0.5,0">
+		<GradientStop Color="#f0e6d7" Offset="0"/>
+		<GradientStop Color="#c99d3d" Offset="1"/>
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="BTN.BG.OVER" EndPoint="0.5,1" StartPoint="0.5,0">
+		<GradientStop Color="#1e232a" Offset="0"/>
+		<GradientStop Color="#443e2e" Offset="1"/>
+	</LinearGradientBrush>
+
+	<Style TargetType="{x:Type ctrls:RiotIcon}" x:Key="ICON.LABEL">
+		<Setter Property="IconType" Value="Label"/>
+		<Setter Property="HorizontalAlignment" Value="Center"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+		<Setter Property="Fill" Value="{StaticResource LBL.GEO.FILL}"/>
+		<Setter Property="Stroke" Value="{StaticResource LBL.GEO.BDR}"/>
+		<Setter Property="StrokeThickness" Value="1"/>
+		<Setter Property="StrokeLineJoin" Value="Round"/>
+		<Setter Property="StrokeDashCap" Value="Flat"/>
+		<Setter Property="StrokeDashArray" Value="1 0"/>
+		<Setter Property="StrokeMiterLimit" Value="10"/>
+		<Setter Property="Stretch" Value="Fill"/>
+		<Setter Property="Width" Value="40"/>
+		<Setter Property="Height" Value="20"/>
+		<Setter Property="GeometryWidth" Value="20"/>
+		<Setter Property="GeometryHeight" Value="10"/>
+	</Style>
+
+	<Style TargetType="{x:Type ctrls:RiotIcon}" x:Key="ICON.ALARM">
+		<Setter Property="IconType" Value="Alarm"/>
+		<Setter Property="HorizontalAlignment" Value="Center"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+		<Setter Property="Fill" Value="#C8AA6E"/>
+	</Style>
+
+	<Style TargetType="{x:Type ctrls:RiotIcon}" x:Key="ICON.COMM">
+		<Setter Property="HorizontalAlignment" Value="Center"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+		<Setter Property="Fill" Value="#C8AA6E"/>
+		<Setter Property="Width" Value="17"/>
+		<Setter Property="Height" Value="17"/>
+	</Style>
+
+	<Style TargetType="{x:Type ctrls:RiotIcon}" x:Key="ICON.UNEXPAND">
+		<Setter Property="IconType" Value="Unexpand"/>
+		<Setter Property="HorizontalAlignment" Value="Center"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+		<Setter Property="Fill" Value="#A09B8C"/>
+		<Setter Property="Width" Value="20"/>
+		<Setter Property="Height" Value="20"/>
+	</Style>
+
+	<Style TargetType="{x:Type ctrls:RiotIcon}" x:Key="ICON.MENUS">
+		<Setter Property="HorizontalAlignment" Value="Center"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+		<Setter Property="Fill" Value="#CDBE91"/>
+		<Setter Property="Width" Value="18"/>
+		<Setter Property="Height" Value="18"/>
+		<Setter Property="IconType" Value="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Tag}"/>
+	</Style>
+
+	<Style TargetType="{x:Type ToolTip}" x:Key="MAIN.TOOL">
+		<Setter Property="Placement" Value="Bottom"/>
+		<Setter Property="VerticalOffset" Value="5"/>
+		<Setter Property="HorizontalOffset" Value="5"/>
+		<Setter Property="Foreground" Value="#A09B8C"/>
+		<Setter Property="FontSize" Value="11"/>
+		<Setter Property="FontWeight" Value="Bold"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate>
+					<Border Background="#010A13" BorderThickness="2">
+						<Border.BorderBrush>
+							<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+								<GradientStop Color="#614a1f" Offset="0"/>
+								<GradientStop Color="#463714" Offset="1"/>
+							</LinearGradientBrush>
+						</Border.BorderBrush>
+						<ContentPresenter Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center">
+							<ContentPresenter.Content>
+								<TextBlock Text="{TemplateBinding ToolTip}" Padding="2 2 2 2"/>
+							</ContentPresenter.Content>
+						</ContentPresenter>
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style TargetType="{x:Type Button}" x:Key="BTN.CURRENCY">
+		<Style.Resources>
+			<Style TargetType="ToolTip" BasedOn="{StaticResource MAIN.TOOL}">
+				<Setter Property="Placement" Value="Bottom"/>
+				<Setter Property="VerticalOffset" Value="2"/>
+				<Setter Property="HorizontalOffset" Value="-5"/>
+			</Style>
+		</Style.Resources>
+		<Setter Property="Background" Value="Transparent"/>
+		<Setter Property="Foreground" Value="#FFFFFF"/>
+		<Setter Property="FontFamily" Value="Friz Quadrata Std"/>
+		<Setter Property="FontWeight" Value="Bold"/>
+		<Setter Property="FontSize" Value="14"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+		<Setter Property="Margin" Value="4 4 4 4"/>
+		<Setter Property="Padding" Value="0 0 0 0"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<ControlTemplate.Resources>
+						<Style TargetType="{x:Type Image}" x:Key="IN.IMG">
+							<Setter Property="Source" Value="/Leagueoflegends.Resources;component/Images/lol-rp-icon.png"/>
+							<Setter Property="Width" Value="16"/>
+							<Setter Property="Height" Value="16"/>
+							<Setter Property="RenderOptions.BitmapScalingMode" Value="Fant"/>
+							<Setter Property="VerticalAlignment" Value="Center"/>
+						</Style>
+						<Style TargetType="{x:Type ContentPresenter}" x:Key="IN.CONTENT">
+							<Setter Property="Grid.Column" Value="1"/>
+							<Setter Property="ContentSource" Value="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Content}"/>
+							<Setter Property="VerticalAlignment" Value="Center"/>
+							<Setter Property="Margin" Value="8 0 0 0"/>
+						</Style>
+						<Style TargetType="{x:Type Border}" x:Key="IN.BORDER">
+							<Setter Property="Background" Value="Transparent"/>
+							<Setter Property="ToolTip">
+								<Setter.Value>
+									<ToolTip ToolTip="{Binding RelativeSource={RelativeSource AncestorType=Border}, Path=ToolTip}" PlacementTarget="{Binding ElementName=image}"/>
+								</Setter.Value>
+							</Setter>
+						</Style>
+					</ControlTemplate.Resources>
+					<Border x:Name="border" Style="{StaticResource IN.BORDER}">
+						<Grid>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="Auto"/>
+								<ColumnDefinition Width="*"/>
+							</Grid.ColumnDefinitions>
+							<Image x:Name="image" Style="{StaticResource IN.IMG}"/>
+							<ContentPresenter Style="{StaticResource IN.CONTENT}"/>
+						</Grid>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="Tag" Value="01">
+							<Setter TargetName="image" Property="Source" Value="/Leagueoflegends.Resources;component/Images/lol-rp-icon.png"/>
+							<Setter TargetName="border" Property="ToolTip">
+								<Setter.Value>
+									<ToolTip ToolTip="RP"/>
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+						<Trigger Property="Tag" Value="02">
+							<Setter TargetName="image" Property="Source" Value="/Leagueoflegends.Resources;component/Images/lol-blue-essence.png"/>
+							<Setter TargetName="border" Property="ToolTip">
+								<Setter.Value>
+									<ToolTip ToolTip="Blue Essence"/>
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style TargetType="{x:Type Control}" x:Key="CTL.LABEL">
+		<Setter Property="VerticalAlignment" Value="Bottom"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Control}">
+					<Grid>
+						<ctrls:RiotIcon x:Name="path" Style="{StaticResource ICON.LABEL}"/>
+						<TextBlock Text="123" Foreground="#A09B8C" FontWeight="Bold" Panel.ZIndex="1" Margin="0 0 0 1.5" 
+								   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=IsMouseOver}" Value="True">
+							<Setter TargetName="path" Property="Stroke" Value="{StaticResource IMG.BDR.OVER}"/>
+						</DataTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style TargetType="{x:Type Button}" x:Key="BTN.PROFILE">
+		<Setter Property="HorizontalAlignment" Value="Left"/>
+		<Setter Property="Margin" Value="5"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Grid Width="60" Height="65">
+						<Border x:Name="border1" HorizontalAlignment="Center" VerticalAlignment="Top" BorderThickness="1"
+								BorderBrush="#010A13" Background="{StaticResource IMG.BDR}" Width="60" Height="60" CornerRadius="60">
+							<Border x:Name="border2" Margin="2" Background="#0A323C" CornerRadius="60">
+								<Border x:Name="border3" Margin="4" BorderThickness="2" BorderBrush="{StaticResource IMG.BDR}" Background="#01070D" CornerRadius="50">
+									<Ellipse Margin="2 2 1 1">
+										<Ellipse.Fill>
+											<ImageBrush ImageSource="/Leagueoflegends.Resources;component/Images/profile-01.png"
+														RenderOptions.BitmapScalingMode="Fant"/>
+										</Ellipse.Fill>
+									</Ellipse>
+								</Border>
+							</Border>
+						</Border>
+						<Control Style="{StaticResource CTL.LABEL}"/>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter TargetName="border1" Property="Background" Value="{StaticResource IMG.BDR.OVER}"/>
+							<Setter TargetName="border3" Property="BorderBrush" Value="{StaticResource IMG.BDR.OVER}"/>
+							<Setter Property="Cursor" Value="Hand"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style TargetType="{x:Type TextBlock}" x:Key="TXB.NAME">
+		<Setter Property="Text" Value="Elena"/>
+		<Setter Property="FontSize" Value="15"/>
+		<Setter Property="FontFamily" Value="Friz Quadrata Std"/>
+		<Setter Property="FontWeight" Value="Bold"/>
+		<Setter Property="Foreground" Value="#F0E6D2"/>
+		<Setter Property="Margin" Value="75 30 0 0"/>
+		<Setter Property="HorizontalAlignment" Value="Left"/>
+		<Setter Property="VerticalAlignment" Value="Bottom"/>
+	</Style>
+
+	<Style TargetType="{x:Type ToggleButton}" x:Key="TGL.CIRCLE">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type ToggleButton}">
+					<Border x:Name="border" Background="#09A646" BorderBrush="#66F8A0" BorderThickness="2" Width="11" Height="11" CornerRadius="20"/>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsChecked" Value="True">
+							<Setter TargetName="border" Property="Background" Value="Transparent"/>
+							<Setter TargetName="border" Property="BorderBrush" Value="#9C3213"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style TargetType="{x:Type ToggleButton}" x:Key="TGL.CONTENT">
+		<Setter Property="Content" Value="Online"/>
+		<Setter Property="Foreground" Value="#099441"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type ToggleButton}">
+					<Grid>
+						<TextBlock Margin="6 0 0 0" FontSize="11" FontWeight="Bold"
+								   Text="{Binding RelativeSource={RelativeSource AncestorType=ToggleButton}, Path=Content}"/>
+						<Popup Placement="Bottom" StaysOpen="False"
+							   IsOpen="{Binding RelativeSource={RelativeSource AncestorType=ToggleButton}, Path=IsChecked}">
+							<TextBox Text="Input Message"/>
+						</Popup>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style TargetType="{x:Type Control}" x:Key="CTL.STATUS">
+		<Setter Property="Margin" Value="77 0 0 0"/>
+		<Setter Property="HorizontalAlignment" Value="Left"/>
+		<Setter Property="VerticalAlignment" Value="Top"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Control}">
+					<StackPanel Orientation="Horizontal">
+						<ToggleButton x:Name="circle" Style="{StaticResource TGL.CIRCLE}"/>
+						<ToggleButton x:Name="content" Style="{StaticResource TGL.CONTENT}"/>
+					</StackPanel>
+					<ControlTemplate.Triggers>
+						<DataTrigger Binding="{Binding ElementName=circle, Path=IsChecked}" Value="True">
+							<Setter TargetName="content" Property="Content" Value="자리 비움"/>
+							<Setter TargetName="content" Property="Foreground" Value="#A09B8C"/>
+						</DataTrigger>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="Cursor" Value="Hand"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style TargetType="{x:Type Button}"  x:Key="BTN.ALARM">
+		<Style.Resources>
+			<Style TargetType="ToolTip" BasedOn="{StaticResource MAIN.TOOL}">
+				<Setter Property="Placement" Value="Left"/>
+				<Setter Property="VerticalOffset" Value="-4"/>
+				<Setter Property="HorizontalOffset" Value="-4"/>
+			</Style>
+		</Style.Resources>
+		<Setter Property="Foreground" Value="#FFFFFF"/>
+		<Setter Property="VerticalAlignment" Value="Bottom"/>
+		<Setter Property="HorizontalAlignment" Value="Right"/>
+		<Setter Property="Margin" Value="0 0 10 10"/>
+		<Setter Property="Padding" Value="0 0 0 0"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Border Background="Transparent">
+						<Border.ToolTip>
+							<ToolTip ToolTip="Notifications" VerticalOffset="-8"/>
+						</Border.ToolTip>
+						<ctrls:RiotIcon x:Name="path" Style="{StaticResource ICON.ALARM}"/>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter TargetName="path" Property="Fill" Value="#F0E6D2"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style TargetType="{x:Type Button}" x:Key="BTN.01">
+		<Style.Resources>
+			<Style TargetType="ToolTip" BasedOn="{StaticResource MAIN.TOOL}"/>
+		</Style.Resources>
+		<Setter Property="Foreground" Value="#FFFFFF"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+		<Setter Property="Margin" Value="6 4 6 4"/>
+		<Setter Property="Padding" Value="0 0 0 0"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Border x:Name="border" Background="Transparent">
+						<Border.ToolTip>
+							<ToolTip ToolTip="Value"/>
+						</Border.ToolTip>
+						<ctrls:RiotIcon x:Name="path" Style="{StaticResource ICON.COMM}"/>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="Tag" Value="01">
+							<Setter TargetName="path" Property="IconType" Value="AddFriends"/>
+							<Setter TargetName="border" Property="ToolTip">
+								<Setter.Value>
+									<ToolTip ToolTip="Add Friends"/>
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+						<Trigger Property="Tag" Value="02">
+							<Setter TargetName="path" Property="IconType" Value="AddFolder"/>
+							<Setter TargetName="border" Property="ToolTip">
+								<Setter.Value>
+									<ToolTip ToolTip="Add Folder"/>
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+						<Trigger Property="Tag" Value="03">
+							<Setter TargetName="path" Property="IconType" Value="Option"/>
+							<Setter TargetName="border" Property="ToolTip">
+								<Setter.Value>
+									<ToolTip ToolTip="Options" HorizontalOffset="-20"/>
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+						<Trigger Property="Tag" Value="04">
+							<Setter TargetName="path" Property="IconType" Value="Magnify"/>
+							<Setter TargetName="border" Property="ToolTip">
+								<Setter.Value>
+									<ToolTip ToolTip="Filter" Placement="Left" VerticalOffset="-5"/>
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter TargetName="path" Property="Fill" Value="#F0E6D2"/>
+							<Setter Property="Cursor" Value="Hand"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style TargetType="{x:Type Button}" x:Key="BTN.FRIENDS" BasedOn="{StaticResource BTN.01}">
+		<Setter Property="Tag" Value="01"/>
+		<!--<Setter Property="Command" Value="{Binding ShowPopupCommand}"/>
+		<Setter Property="CommandParameter" Value="ADD FRIENDS"/>-->
+		<Style.Resources>
+			<Style TargetType="ToolTip" BasedOn="{StaticResource MAIN.TOOL}">
+				<Setter Property="HorizontalOffset" Value="-15"/>
+			</Style>
+		</Style.Resources>
+	</Style>
+
+	<Style TargetType="{x:Type Button}" x:Key="BTN.FOLDER" BasedOn="{StaticResource BTN.01}">
+		<Setter Property="Tag" Value="02"/>
+		<Style.Resources>
+			<Style TargetType="ToolTip" BasedOn="{StaticResource MAIN.TOOL}">
+				<Setter Property="HorizontalOffset" Value="-20"/>
+			</Style>
+		</Style.Resources>
+	</Style>
+
+	<Style TargetType="{x:Type Button}" x:Key="BTN.OPTION" BasedOn="{StaticResource BTN.01}">
+		<Setter Property="Tag" Value="03"/>
+		<!--<Setter Property="Command" Value="{Binding ShowPopupCommand}"/>
+		<Setter Property="CommandParameter" Value="OPTIONS"/>-->
+		<Style.Resources>
+			<Style TargetType="ToolTip" BasedOn="{StaticResource MAIN.TOOL}">
+				<Setter Property="HorizontalOffset" Value="-10"/>
+			</Style>
+		</Style.Resources>
+	</Style>
+
+	<Style TargetType="{x:Type Button}" x:Key="BTN.FILTER" BasedOn="{StaticResource BTN.01}">
+		<Setter Property="Tag" Value="04"/>
+		<Setter Property="Margin" Value="6 4 3 4"/>
+		<Style.Resources>
+			<Style TargetType="ToolTip" BasedOn="{StaticResource MAIN.TOOL}">
+				<Setter Property="HorizontalOffset" Value="-10"/>
+			</Style>
+		</Style.Resources>
+	</Style>
+
+	<Style TargetType="{x:Type Button}" x:Key="BTN.02">
+		<Setter Property="Width" Value="35"/>
+		<Setter Property="Height" Value="30"/>
+		<Setter Property="Foreground" Value="#CDBE91"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Grid>
+						<Border x:Name="border" Background="#1E2328" BorderThickness="1" BorderBrush="{StaticResource BTN.BDR}" SnapsToDevicePixels="True" ClipToBounds="True">
+							<Border.ToolTip>
+								<ToolTip Visibility="Collapsed" ToolTip="Value"/>
+							</Border.ToolTip>
+							<Grid Margin="0 0 0 0">
+								<Border Background="Transparent" BorderThickness="1" BorderBrush="#CC091119" Margin="0">
+									<ctrls:RiotIcon x:Name="path" Style="{StaticResource ICON.MENUS}"/>
+								</Border>
+							</Grid>
+						</Border>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="Cursor" Value="Hand"/>
+							<Setter TargetName="path" Property="Fill" Value="#F0E6D2"/>
+							<Setter TargetName="border" Property="BorderBrush" Value="{StaticResource BTN.BDR.OVER}"/>
+							<Setter TargetName="border" Property="Background" Value="{StaticResource BTN.BG.OVER}"/>
+						</Trigger>
+						<DataTrigger Binding="{Binding ElementName=path, Path=IconType}" Value="Bug">
+							<Setter TargetName="border" Property="ToolTip">
+								<Setter.Value>
+									<ToolTip Visibility="Visible" ToolTip="버그 신고"/>
+								</Setter.Value>
+							</Setter>
+						</DataTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style TargetType="{x:Type Button}" x:Key="BTN.CHAT" BasedOn="{StaticResource BTN.02}">
+		<Setter Property="HorizontalAlignment" Value="Center"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+		<Setter Property="Margin" Value="0 0 2 0"/>
+		<Setter Property="Tag" Value="Chat"/>
+	</Style>
+
+	<Style TargetType="{x:Type Button}" x:Key="BTN.SCRIPT" BasedOn="{StaticResource BTN.02}">
+		<Setter Property="HorizontalAlignment" Value="Center"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+		<Setter Property="Margin" Value="2 0 2 0"/>
+		<Setter Property="Tag" Value="Script"/>
+	</Style>
+
+	<Style TargetType="{x:Type Button}" x:Key="BTN.MIC" BasedOn="{StaticResource BTN.02}">
+		<Setter Property="HorizontalAlignment" Value="Center"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+		<Setter Property="Margin" Value="2 0 0 0"/>
+		<Setter Property="Tag" Value="Mic"/>
+	</Style>
+
+	<Style TargetType="{x:Type Button}" x:Key="BTN.BUG" BasedOn="{StaticResource BTN.02}">
+		<Style.Resources>
+			<Style TargetType="ToolTip" BasedOn="{StaticResource MAIN.TOOL}">
+				<Setter Property="Placement" Value="Left"/>
+				<Setter Property="FontWeight" Value="Normal"/>
+				<Setter Property="VerticalOffset" Value="-4"/>
+				<Setter Property="HorizontalOffset" Value="-5"/>
+			</Style>
+		</Style.Resources>
+		<Setter Property="Width" Value="27"/>
+		<Setter Property="Height" Value="27"/>
+		<Setter Property="HorizontalAlignment" Value="Right"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+		<Setter Property="Margin" Value="0 0 0 0"/>
+		<Setter Property="Tag" Value="Bug"/>
+	</Style>
+
+	<Style TargetType="{x:Type TextBlock}" x:Key="TXB.FRIENDS">
+		<Setter Property="FontFamily" Value="Friz Quadrata Std"/>
+		<Setter Property="Foreground" Value="#A09B8C"/>
+		<Setter Property="FontSize" Value="12"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+	</Style>
+
+	<Style TargetType="{x:Type ToggleButton}" x:Key="TGL.HEADER">
+		<Setter Property="IsChecked" Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsExpanded}"/>
+		<Setter Property="Padding" Value="5 2 0 2"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate>
+					<Border x:Name="border" Background="Transparent" BorderBrush="Transparent">
+						<Grid Margin="5 2 0 2">
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="Auto"/>
+								<ColumnDefinition/>
+							</Grid.ColumnDefinitions>
+							<ctrls:RiotIcon x:Name="path" Style="{StaticResource ICON.UNEXPAND}"/>
+							<StackPanel Grid.Column="1" Orientation="Horizontal">
+								<TextBlock x:Name="text" Style="{StaticResource TXB.FRIENDS}" Text="{Binding Header}"/>
+								<TextBlock x:Name="text2" Style="{StaticResource TXB.FRIENDS}" Visibility="Collapsed" Margin="5 0 0 0">
+									<TextBlock.Text>
+										<MultiBinding StringFormat="{}({0}/{1})">
+											<Binding RelativeSource="{RelativeSource AncestorType=views:MainView}" Path="DataContext.GeneralFriendsCount"/>
+											<Binding RelativeSource="{RelativeSource AncestorType=views:MainView}" Path="DataContext.TotalFriendsCount" />
+										</MultiBinding>
+									</TextBlock.Text>
+								</TextBlock>
+								<TextBlock x:Name="text3" Style="{StaticResource TXB.FRIENDS}" Visibility="Collapsed" Margin="5 0 0 0">
+									<TextBlock.Text>
+										<MultiBinding StringFormat="{}({0}/{1})">
+											<Binding RelativeSource="{RelativeSource AncestorType=views:MainView}" Path="DataContext.OfflineFriendsCount"/>
+											<Binding RelativeSource="{RelativeSource AncestorType=views:MainView}" Path="DataContext.TotalFriendsCount" />
+										</MultiBinding>
+									</TextBlock.Text>
+								</TextBlock>
+							</StackPanel>
+						</Grid>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter TargetName="path" Property="Fill" Value="#F0E6D2"/>
+							<Setter TargetName="text" Property="Foreground" Value="#F0E6D2"/>
+							<Setter TargetName="border" Property="Background" Value="#11FFFFFF"/>
+						</Trigger>
+						<DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=TreeViewItem}, Path=IsExpanded}" Value="True">
+							<Setter TargetName="path" Property="IconType" Value="Expand"/>
+						</DataTrigger>
+						<DataTrigger Binding="{Binding Children.Count}" Value="0">
+							<Setter TargetName="path" Property="Visibility" Value="Collapsed"/>
+						</DataTrigger>
+						<DataTrigger Binding="{Binding Name}" Value="GENERAL">
+							<Setter TargetName="text2" Property="Visibility" Value="Visible"/>
+						</DataTrigger>
+						<DataTrigger Binding="{Binding Name}" Value="OFFLINE">
+							<Setter TargetName="text3" Property="Visibility" Value="Visible"/>
+						</DataTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style TargetType="{x:Type TreeViewItem}" x:Key="TRVI.FRIENDS">
+		<Setter Property="ItemsSource" Value="{Binding Children}"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type TreeViewItem}">
+					<StackPanel>
+						<Grid x:Name="directory" Visibility="Collapsed">
+							<ToggleButton x:Name="toggle" Style="{StaticResource TGL.HEADER}"/>
+						</Grid>
+						<Border x:Name="user" Visibility="Collapsed" Background="Transparent" BorderBrush="Transparent" Margin="0 0 10 0">
+							<Grid Margin="10 5 0 5">
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition Width="Auto"/>
+									<ColumnDefinition/>
+								</Grid.ColumnDefinitions>
+								<Border x:Name="border" Grid.Column="0" Width="30" Height="30" CornerRadius="20" BorderBrush="{StaticResource IMG.BDR2}" BorderThickness="2">
+									<Border.Background>
+										<ImageBrush ImageSource="{Binding Avatar}" Stretch="UniformToFill"/>
+									</Border.Background>
+								</Border>
+								<StackPanel Grid.Column="1" Margin="5 0 0 0">
+									<TextBlock x:Name="text1" Text="{Binding Header}" Foreground="#A09B8C" FontSize="13" FontWeight="Bold"/>
+									<TextBlock x:Name="text2" Text="{Binding Status}" Foreground="#A09B8C" FontSize="12" FontWeight="Normal"/>
+								</StackPanel>
+							</Grid>
+						</Border>
+						<ItemsPresenter x:Name="items" Visibility="Collapsed"/>
+					</StackPanel>
+					<ControlTemplate.Triggers>
+						<DataTrigger Binding="{Binding IsUser}" Value="True">
+							<Setter TargetName="user" Property="Visibility" Value="Visible"/>
+						</DataTrigger>
+						<DataTrigger Binding="{Binding IsUser}" Value="False">
+							<Setter TargetName="directory" Property="Visibility" Value="Visible"/>
+						</DataTrigger>
+						<DataTrigger Binding="{Binding Status}" Value="온라인">
+							<Setter TargetName="text2" Property="Foreground" Value="#09A646"/>
+						</DataTrigger>
+						<DataTrigger Binding="{Binding Status}" Value="게임 중">
+							<Setter TargetName="text2" Property="Foreground" Value="#0ACBE6"/>
+						</DataTrigger>
+						<DataTrigger Binding="{Binding IsGeneral}" Value="false">
+							<Setter TargetName="text1" Property="Foreground" Value="#4E514F"/>
+							<Setter TargetName="text2" Property="Foreground" Value="#4E514F"/>
+							<Setter TargetName="border" Property="BorderBrush" Value="{StaticResource IMG.BDR3}"/>
+						</DataTrigger>
+						<Trigger Property="IsExpanded" Value="True">
+							<Setter TargetName="items" Property="Visibility" Value="Visible"/>
+						</Trigger>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter TargetName="text1" Property="Foreground" Value="#F0E6D2"/>
+							<Setter TargetName="user" Property="Background" Value="#11FFFFFF"/>
+							<Setter TargetName="border" Property="BorderBrush" Value="{StaticResource IMG.BDR2.OVER}"/>
+						</Trigger>
+						<MultiDataTrigger>
+							<MultiDataTrigger.Conditions>
+								<Condition Binding="{Binding IsGeneral}" Value="false"/>
+								<Condition Binding="{Binding ElementName=user, Path=IsMouseOver}" Value="True"/>
+							</MultiDataTrigger.Conditions>
+							<Setter TargetName="text1" Property="Foreground" Value="#9E998B"/>
+							<Setter TargetName="text2" Property="Foreground" Value="#9E998B"/>
+							<Setter TargetName="border" Property="BorderBrush" Value="{StaticResource IMG.BDR3.OVER}"/>
+						</MultiDataTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style TargetType="{x:Type TreeView}" x:Key="TRV.FRIENDS">
+		<Setter Property="ItemContainerStyle" Value="{StaticResource TRVI.FRIENDS}"/>
+		<Setter Property="ItemsSource" Value="{Binding Friends}"/>
+		<Setter Property="Margin" Value="0 5 0 5"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type TreeView}">
+					<ScrollViewer HorizontalScrollBarVisibility="Disabled">
+						<ItemsPresenter/>
+					</ScrollViewer>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style TargetType="{x:Type Control}" x:Key="CTL.VERSION">
+		<Style.Resources>
+			<Style TargetType="ToolTip" BasedOn="{StaticResource MAIN.TOOL}">
+				<Setter Property="Placement" Value="Top"/>
+				<Setter Property="FontWeight" Value="Normal"/>
+				<Setter Property="VerticalOffset" Value="-5"/>
+				<Setter Property="HorizontalOffset" Value="-5"/>
+			</Style>
+		</Style.Resources>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Control}">
+					<Border>
+						<TextBlock Background="Transparent" Text="V11.1" FontSize="13" Foreground="#3C3C41" HorizontalAlignment="Stretch"
+								   VerticalAlignment="Stretch" TextAlignment="Center" Padding="25 5 25 5"/>
+						<Border.ToolTip>
+							<ToolTip x:Name="tooltip" ToolTip="V11.1.351.8352"/>
+						</Border.ToolTip>
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style TargetType="{x:Type views:MainView}">
+		<Setter Property="BorderThickness" Value="0"/>
+		<Setter Property="WindowStyle" Value="None"/>
+		<Setter Property="WindowState" Value="Normal"/>
+		<Setter Property="SizeToContent" Value="WidthAndHeight"/>
+		<Setter Property="ResizeMode" Value="NoResize"/>
+		<Setter Property="Background" Value="White"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type views:MainView}">
+					<Border Width="1280" Height="720">
+						<Grid>
+							<Grid.RowDefinitions>
+								<RowDefinition Height="Auto"/>
+								<RowDefinition Height="*"/>
+							</Grid.RowDefinitions>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="*"/>
+								<ColumnDefinition Width="225"/>
+							</Grid.ColumnDefinitions>
+
+							<Image Grid.RowSpan="2" Grid.ColumnSpan="2" Source="/Leagueoflegends.Resources;component/Images/bg-main-04.png" Stretch="Fill"/>
+							<Border Grid.RowSpan="2" Grid.ColumnSpan="2" Background="#DA000000"/>
+
+							<!--Top Drag-->
+							<Grid Grid.Row="0" Grid.ColumnSpan="2" VerticalAlignment="Top" Background="Transparent" Height="81">
+								<prims:DragBorder x:Name="PART_DragBar" Background="Transparent"/>
+							</Grid>
+
+							<!--Main Menu-->
+							<Border BorderBrush="#553D4143" BorderThickness="0 0 0 1">
+								<Grid>
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition Width="Auto"/>
+										<ColumnDefinition Width="*"/>
+										<ColumnDefinition Width="115"/>
+									</Grid.ColumnDefinitions>
+									<StackPanel Grid.Column="0" Orientation="Horizontal">
+										<views:PlayButton Margin="25 20 20 20"/>
+										<views:NoticeButton/>
+									</StackPanel>
+									<menus:MainMenu Grid.Column="1" DataContext="{Binding MainMenu}"/>
+									<Border Grid.Column="2" Height="60" Background="Transparent" BorderBrush="{StaticResource BDR.SEC}" BorderThickness="1 0 0 0" Margin="10 0 0 0"/>
+									<StackPanel Grid.Column="2" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="25 0 0 0">
+										<Button Style="{StaticResource BTN.CURRENCY}" Tag="01" Content="55"/>
+										<Button Style="{StaticResource BTN.CURRENCY}" Tag="02" Content="2109"/>
+									</StackPanel>
+								</Grid>
+							</Border>
+
+							<!--User info & Bar Menu-->
+							<Grid Grid.RowSpan="2" Grid.Column="1" Width="225" Height="81" VerticalAlignment="Top">
+								<Border Background="#FF010A13" IsHitTestVisible="False"/>
+								<titles:TitleBar DataContext="{Binding TitleBar}"/>
+
+								<Button Style="{StaticResource BTN.PROFILE}"/>
+								<StackPanel>
+									<TextBlock Style="{StaticResource TXB.NAME}"/>
+									<Control Style="{StaticResource CTL.STATUS}"/>
+								</StackPanel>
+								<Button Style="{StaticResource BTN.ALARM}"/>
+							</Grid>
+
+							<!--Main UI-->
+							<Grid Grid.Row="1" Grid.Column="0">
+								<ContentControl Content="{Binding CurrentUI}"/>
+								<menus:SubMenu HorizontalAlignment="Left" VerticalAlignment="Top"/>
+							</Grid>
+
+							<!--Friends List-->
+							<Grid Grid.Row="1" Grid.Column="1" Background="#FF010A13">
+								<Grid.RowDefinitions>
+									<RowDefinition Height="Auto"/>
+									<RowDefinition Height="*"/>
+									<RowDefinition Height="Auto"/>
+								</Grid.RowDefinitions>
+								<TextBlock Text="SOCIAL" FontFamily="Friz Quadrata Std" FontWeight="Bold" Foreground="#A09B8C" Margin="10 6 0 0"/>
+								<StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="4 0 4 0">
+									<Button Style="{StaticResource BTN.FRIENDS}"/>
+									<Button Style="{StaticResource BTN.FOLDER}"/>
+									<Button Style="{StaticResource BTN.OPTION}"/>
+									<Button Style="{StaticResource BTN.FILTER}"/>
+								</StackPanel>
+
+								<TreeView Grid.Row="1" Style="{StaticResource TRV.FRIENDS}"/>
+								<Border Grid.Row="1" Background="{StaticResource BG.BTM}" BorderBrush="Transparent" Height="10" HorizontalAlignment="Stretch" VerticalAlignment="Bottom"/>
+
+								<Border Grid.Row="2" Background="Transparent" BorderBrush="#1E282D" BorderThickness="0 1 0 0"/>
+								<StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0 1 0 0">
+									<Button Style="{StaticResource BTN.CHAT}"/>
+									<Button Style="{StaticResource BTN.SCRIPT}"/>
+									<Button Style="{StaticResource BTN.MIC}"/>
+									<Control Style="{StaticResource CTL.VERSION}"/>
+								</StackPanel>
+								<Button Grid.Row="2" Style="{StaticResource BTN.BUG}"/>
+							</Grid>
+
+							<Border VerticalAlignment="Top" Background="#785a28" Height="2" Grid.ColumnSpan="2"/>
+							<Border Grid.Column="1" BorderBrush="#CC3D4143" BorderThickness="0 0 0 1"/>
+
+						</Grid>
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+
+	<Style TargetType="{x:Type views:EmptyContent}">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type views:EmptyContent}">
+					<Border Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+						<TextBlock Text="Empty Content" Foreground="#aaaaaa"/>
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+</ResourceDictionary>

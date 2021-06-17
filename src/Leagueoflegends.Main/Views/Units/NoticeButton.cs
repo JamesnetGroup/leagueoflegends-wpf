@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-namespace Leagueoflegends.LayoutSupport.Controls
+namespace Leagueoflegends.Main.Views
 {
 	public class NoticeButton : Button
 	{

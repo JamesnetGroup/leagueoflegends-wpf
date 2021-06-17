@@ -1,7 +1,4 @@
-﻿using Leagueoflegends.Data.Menu;
-using Leagueoflegends.Windowbase.Mvvm;
-using System;
-using System.Collections.Generic;
+﻿using Leagueoflegends.Windowbase.Mvvm;
 using System.Windows.Input;
 
 namespace Leagueoflegends.TitleBar.ViewModels

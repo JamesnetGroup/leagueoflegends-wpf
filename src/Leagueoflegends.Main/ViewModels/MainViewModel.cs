@@ -1,19 +1,17 @@
 ﻿using Leagueoflegends.Data.Menu;
 using Leagueoflegends.Home.General.ViewModels;
 using Leagueoflegends.Home.General.Views;
-using Leagueoflegends.LayoutSupport.Controls;
 using Leagueoflegends.Main.Views;
 using Leagueoflegends.Menus.ViewModels;
+using Leagueoflegends.TeamFight.ViewModels;
+using Leagueoflegends.TeamFight.Views;
 using Leagueoflegends.TitleBar.ViewModels;
 using Leagueoflegends.Windowbase.Mvvm;
 using Leagueoflegends.Windowbase.Riotcore;
 using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Documents;
 
 namespace Leagueoflegends.Main.ViewModels
 {
@@ -110,6 +108,7 @@ namespace Leagueoflegends.Main.ViewModels
 				key = _mainMenu.Name;
 				content = _mainMenu.Seq switch
 				{
+					1 => new TeamFightView().UseViewModel(new TeamFightViewModel()),
 					_ => new EmptyContent()
 				};
 			}

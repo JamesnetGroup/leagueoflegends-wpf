@@ -24,6 +24,10 @@
 		Setting,
 		Minimize,
 		Close,
-		Help
+		Help,
+		Ticket,
+		Clock,
+		Task,
+		Lock
 	}
 }
