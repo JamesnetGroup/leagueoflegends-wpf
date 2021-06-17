@@ -1,5 +1,4 @@
-﻿using Leagueoflegends.Data.Menu;
-using System.Windows;
+﻿using System.Windows;
 
 namespace Leagueoflegends.Windowbase.Riotbase
 {

@@ -2,7 +2,7 @@
 
 namespace Leagueoflegends.LayoutSupport.Controls
 {
-    public class DragBorder : Border
-    {
-    }
+	public class BasicScroll : ScrollViewer
+	{
+	}
 }

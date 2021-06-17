@@ -1,6 +1,4 @@
-﻿using System.Windows.Input;
-
-namespace Leagueoflegends.Data.Menu
+﻿namespace Leagueoflegends.Data.Menu
 {
 	public class SubMenuModel
 	{

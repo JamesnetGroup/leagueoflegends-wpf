@@ -3,13 +3,13 @@
 namespace Leagueoflegends.Home.General.ViewModels
 {
 	public class GeneralViewModel : ObservableObject
-	{
-		#region Constructor
+    {
+        #region Constructor
 
-		public GeneralViewModel()
+        public GeneralViewModel()
 		{
+        }
 
-		}
-		#endregion
-	}
+        #endregion
+    }
 }
