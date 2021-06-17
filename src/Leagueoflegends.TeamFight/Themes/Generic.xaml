@@ -538,6 +538,15 @@
 		<Setter Property="BorderBrush" Value="Transparent"/>
 		<Setter Property="VerticalAlignment" Value="Top"/>
 		<Setter Property="Margin" Value="20 0 20 0"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type ListBox}">
+					<ctrls:BasicScroll>
+						<ItemsPresenter/>
+					</ctrls:BasicScroll>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
 		<Setter Property="ItemsPanel">
 			<Setter.Value>
 				<ItemsPanelTemplate>
