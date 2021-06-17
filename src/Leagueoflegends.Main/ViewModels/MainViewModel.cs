@@ -3,6 +3,8 @@ using Leagueoflegends.Home.General.ViewModels;
 using Leagueoflegends.Home.General.Views;
 using Leagueoflegends.Main.Views;
 using Leagueoflegends.Menus.ViewModels;
+using Leagueoflegends.MyShop.ViewModels;
+using Leagueoflegends.MyShop.Views;
 using Leagueoflegends.TeamFight.ViewModels;
 using Leagueoflegends.TeamFight.Views;
 using Leagueoflegends.TitleBar.ViewModels;
@@ -109,6 +111,7 @@ namespace Leagueoflegends.Main.ViewModels
 				content = _mainMenu.Seq switch
 				{
 					1 => new TeamFightView().UseViewModel(new TeamFightViewModel()),
+					6 => new MyShopView().UseViewModel(new MyShopViewModel()),
 					_ => new EmptyContent()
 				};
 			}
