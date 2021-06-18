@@ -479,8 +479,8 @@
 
 	<Style TargetType="{x:Type Button}" x:Key="BTN.OPTION" BasedOn="{StaticResource BTN.01}">
 		<Setter Property="Tag" Value="03"/>
-		<!--<Setter Property="Command" Value="{Binding ShowPopupCommand}"/>
-		<Setter Property="CommandParameter" Value="OPTIONS"/>-->
+		<Setter Property="Command" Value="{Binding ShowPopupCommand}"/>
+		<Setter Property="CommandParameter" Value="OPTIONS"/>
 		<Style.Resources>
 			<Style TargetType="ToolTip" BasedOn="{StaticResource MAIN.TOOL}">
 				<Setter Property="HorizontalOffset" Value="-10"/>
@@ -842,7 +842,7 @@
 								<StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="4 0 4 0">
 									<Button Style="{StaticResource BTN.FRIENDS}"/>
 									<Button Style="{StaticResource BTN.FOLDER}"/>
-									<Button Style="{StaticResource BTN.OPTION}"/>
+									<Button Style="{StaticResource BTN.OPTION}" x:Name="btnOption"/>
 									<Button Style="{StaticResource BTN.FILTER}"/>
 								</StackPanel>
 
@@ -862,10 +862,15 @@
 							<Border VerticalAlignment="Top" Background="#785a28" Height="2" Grid.ColumnSpan="2"/>
 							<Border Grid.Column="1" BorderBrush="#CC3D4143" BorderThickness="0 0 0 1"/>
 
+							<!--Modal-->
 							<ctrls:DarkBackground Style="{StaticResource DARK.MAIN}" Grid.RowSpan="2" Grid.ColumnSpan="2">
 								<ContentControl Content="{Binding ModalContent}"/>
 							</ctrls:DarkBackground>
-
+							
+							<!--PopUp-->
+							<Popup IsOpen="{Binding IsPopupVisible}" PlacementTarget="{Binding ElementName=btnOption}" StaysOpen="False" HorizontalOffset="-170" VerticalOffset="10">
+								<views:OptionsView DataContext="{Binding Options}"/>
+							</Popup>
 						</Grid>
 					</Border>
 				</ControlTemplate>

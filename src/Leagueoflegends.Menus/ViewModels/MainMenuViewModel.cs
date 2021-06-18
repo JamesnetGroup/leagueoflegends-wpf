@@ -1,4 +1,4 @@
-﻿using Leagueoflegends.Data.Menu;
+﻿using Leagueoflegends.Data.Main;
 using Leagueoflegends.Windowbase.Mvvm;
 using System;
 using System.Collections.Generic;

@@ -1,4 +1,4 @@
-﻿using Leagueoflegends.Data.Menu;
+﻿using Leagueoflegends.Data.Main;
 using Leagueoflegends.Windowbase.Mvvm;
 using Leagueoflegends.Windowbase.Riotcore;
 using System.Windows;
@@ -21,15 +21,14 @@ namespace Leagueoflegends.Windowbase.Riotbase
 			}
 		}
 
-		public void Show(SubMenuModel menu)
-		{
-		}
-
 		public IRiotUIElement UseViewModel(ObservableObject vm)
 		{
 			DataContext = vm;
 			return this;
 		}
 
+		public void Show(SubMenuModel menu)
+		{
+		}
 	}
 }

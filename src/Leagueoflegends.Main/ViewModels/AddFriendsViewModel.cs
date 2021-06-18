@@ -1,4 +1,4 @@
-﻿using Leagueoflegends.Data.Friends;
+﻿using Leagueoflegends.Data.Main;
 using Leagueoflegends.LayoutSupport.Controls;
 using Leagueoflegends.Windowbase.Mvvm;
 using System.Collections.Generic;

@@ -58,6 +58,10 @@ namespace Leagueoflegends.Controls.Primitives
 				case GeoIcon.Clock: icon.Data = IconData.CLOCK.ToGeometry(); break;
 				case GeoIcon.Task: icon.Data = IconData.TASK.ToGeometry(); break;
 				case GeoIcon.Lock: icon.Data = IconData.LOCK.ToGeometry(); break;
+				case GeoIcon.DiaEmpty: icon.Data = IconData.DIA_EMPTY.ToGeometry(); break;
+				case GeoIcon.DiaFill: icon.Data = IconData.DIA_FILL.ToGeometry(); break;
+				case GeoIcon.Check: icon.Data = IconData.CHECK.ToGeometry(); break;
+				case GeoIcon.CheckBold: icon.Data = IconData.CHECK_BOLD.ToGeometry(); break;
 
 				case GeoIcon.None:
 					break;

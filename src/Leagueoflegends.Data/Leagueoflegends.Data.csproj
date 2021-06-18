@@ -42,11 +42,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enums\GeoIcon.cs" />
-    <Compile Include="Friends\AddFriendsModel.cs" />
-    <Compile Include="Menu\CommunityModel.cs" />
-    <Compile Include="Menu\SubMenuModel.cs" />
-    <Compile Include="Menu\MainMenuModel.cs" />
-    <Compile Include="Menu\UserModel.cs" />
+    <Compile Include="Main\AddFriendsModel.cs" />
+    <Compile Include="Main\CommunityModel.cs" />
+    <Compile Include="Main\OptionModel.cs" />
+    <Compile Include="Main\SubMenuModel.cs" />
+    <Compile Include="Main\MainMenuModel.cs" />
+    <Compile Include="Main\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TeamFight\TeamFightModel.cs" />
   </ItemGroup>
