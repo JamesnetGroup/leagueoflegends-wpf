@@ -57,6 +57,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Themes\Styles\AddFriendsViewResource.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Themes\Styles\PlayButton.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -80,9 +84,11 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="ViewModels\AddFriendsViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="Views\EmptyContent.cs" />
     <Compile Include="Views\MainView.cs" />
+    <Compile Include="Views\Units\AddFriendsView.cs" />
     <Compile Include="Views\Units\PlayButton.cs" />
     <Compile Include="Views\Units\NoticeButton.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -98,6 +104,10 @@
     <ProjectReference Include="..\Leagueoflegends.Controls\Leagueoflegends.Controls.csproj">
       <Project>{f6309cba-5a01-4e4e-ae66-02841968c02d}</Project>
       <Name>Leagueoflegends.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Leagueoflegends.Converter\Leagueoflegends.Converter.csproj">
+      <Project>{50779308-a9bc-4d0d-862f-4394e3418a1f}</Project>
+      <Name>Leagueoflegends.Converter</Name>
     </ProjectReference>
     <ProjectReference Include="..\Leagueoflegends.Data\Leagueoflegends.Data.csproj">
       <Project>{3E01F5FB-69AD-415D-8114-5D7E4D3CBB74}</Project>
