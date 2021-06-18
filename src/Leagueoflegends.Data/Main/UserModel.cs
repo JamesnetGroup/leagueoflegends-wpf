@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Leagueoflegends.Data.Menu
+namespace Leagueoflegends.Data.Main
 {
 	public class UserModel
     {

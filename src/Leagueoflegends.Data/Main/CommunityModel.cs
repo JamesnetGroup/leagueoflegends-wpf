@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Leagueoflegends.Data.Menu
+namespace Leagueoflegends.Data.Main
 {
 	public class CommunityModel : UserModel
 	{

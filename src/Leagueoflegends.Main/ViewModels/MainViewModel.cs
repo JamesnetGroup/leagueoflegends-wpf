@@ -1,4 +1,4 @@
-﻿using Leagueoflegends.Data.Menu;
+﻿using Leagueoflegends.Data.Main;
 using Leagueoflegends.Home.General.ViewModels;
 using Leagueoflegends.Home.General.Views;
 using Leagueoflegends.LayoutSupport.Common.UIObject;
@@ -33,6 +33,7 @@ namespace Leagueoflegends.Main.ViewModels
 
 		public MainMenuViewModel MainMenu { get; }
 		public TitleBarViewModel TitleBar { get; }
+		public OptionsViewModel Options { get; }
 
 		public ICommand ShowPopupCommand { get; set; }
 
@@ -110,6 +111,7 @@ namespace Leagueoflegends.Main.ViewModels
 			ShowPopupCommand = new RelayCommand<string>(ShowModal);
 			TitleBar = new(new RelayCommand<object>(TitlebarSelected));
 			MainMenu = new(MenuSelected);
+			Options = new();
 			InitFriends();
 		}
 		#endregion

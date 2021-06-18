@@ -28,6 +28,10 @@
 		Ticket,
 		Clock,
 		Task,
-		Lock
+		Lock,
+		DiaEmpty,
+		DiaFill,
+		Check,
+		CheckBold
 	}
 }

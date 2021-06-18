@@ -1,4 +1,4 @@
-﻿namespace Leagueoflegends.Data.Friends
+﻿namespace Leagueoflegends.Data.Main
 {
 	public class AddFriendsModel
     {

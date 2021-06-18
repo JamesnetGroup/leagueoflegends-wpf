@@ -61,6 +61,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Themes\Styles\OptionsViewResource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Themes\Styles\PlayButton.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -86,8 +90,10 @@
     </Compile>
     <Compile Include="ViewModels\AddFriendsViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="ViewModels\OptionsViewModel.cs" />
     <Compile Include="Views\EmptyContent.cs" />
     <Compile Include="Views\MainView.cs" />
+    <Compile Include="Views\Units\OptionsView.cs" />
     <Compile Include="Views\Units\AddFriendsView.cs" />
     <Compile Include="Views\Units\PlayButton.cs" />
     <Compile Include="Views\Units\NoticeButton.cs" />

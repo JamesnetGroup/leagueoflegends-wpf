@@ -1,6 +1,6 @@
 ﻿using System.Windows.Input;
 
-namespace Leagueoflegends.Data.Menu
+namespace Leagueoflegends.Data.Main
 {
 	public class MainMenuModel
 	{
