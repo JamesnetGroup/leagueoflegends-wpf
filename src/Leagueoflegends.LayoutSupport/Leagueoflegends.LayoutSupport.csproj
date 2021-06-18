@@ -66,6 +66,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\UIObject\IModalUIObject.cs" />
+    <Compile Include="Controls\DarkBackground.cs" />
+    <Compile Include="Controls\RiotTextBox.cs" />
     <Compile Include="Controls\RiotTooltip.cs" />
     <Compile Include="Controls\RiotIcon.cs" />
     <Compile Include="Controls\TooltipB.cs" />

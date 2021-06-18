@@ -1,6 +1,7 @@
 ﻿using Leagueoflegends.Data.Menu;
 using Leagueoflegends.Home.General.ViewModels;
 using Leagueoflegends.Home.General.Views;
+using Leagueoflegends.LayoutSupport.Common.UIObject;
 using Leagueoflegends.Main.Views;
 using Leagueoflegends.Menus.ViewModels;
 using Leagueoflegends.MyShop.ViewModels;
@@ -14,11 +15,15 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows;
+using System.Windows.Input;
 
 namespace Leagueoflegends.Main.ViewModels
 {
-	public class MainViewModel : ObservableObject
+	public class MainViewModel : ObservableObject, IModalUIObject
 	{
+		private bool _isModalVisible;
+		private bool _isPopupVisible;
+		private object _modalContent;
 		private IRiotUIElement _currentUI;
 		private List<SubMenuModel> _subMenus;
 		private SubMenuModel _currentSubMenu;
@@ -28,6 +33,35 @@ namespace Leagueoflegends.Main.ViewModels
 
 		public MainMenuViewModel MainMenu { get; }
 		public TitleBarViewModel TitleBar { get; }
+
+		public ICommand ShowPopupCommand { get; set; }
+
+		#region ModalContent
+
+		public object ModalContent
+		{
+			get { return _modalContent; }
+			set { _modalContent = value; OnPropertyChanged(); }
+		}
+		#endregion
+
+		#region IsModalVisible
+
+		public bool IsModalVisible
+		{
+			get { return _isModalVisible; }
+			set { _isModalVisible = value; OnPropertyChanged(); }
+		}
+		#endregion
+
+		#region IsPopupVisible
+
+		public bool IsPopupVisible
+		{
+			get { return _isPopupVisible; }
+			set { _isPopupVisible = value; OnPropertyChanged(); }
+		}
+		#endregion
 
 		#region CurrentUI
 
@@ -73,9 +107,37 @@ namespace Leagueoflegends.Main.ViewModels
 		public MainViewModel()
 		{
 			UIs = new();
+			ShowPopupCommand = new RelayCommand<string>(ShowModal);
 			TitleBar = new(new RelayCommand<object>(TitlebarSelected));
 			MainMenu = new(MenuSelected);
 			InitFriends();
+		}
+		#endregion
+
+		#region ShowModal
+
+		public void ShowModal(string obj)
+		{
+			switch (obj.ToString())
+			{
+				case "ADD FRIENDS":
+					ModalContent = new AddFriendsView().UseViewModel(new AddFriendsViewModel());
+					IsModalVisible = true;
+					break;
+				case "OPTIONS":
+					IsPopupVisible = !IsPopupVisible;
+					break;
+				default:
+					break;
+					//case "SETTING":
+					//	ModalContent = new SettingView();
+					//	IsModalVisible = true;
+					//	break;
+					//case "ADD CHAMPION":
+					//	ModalContent = new AddChampionView();
+					//	IsModalVisible = true;
+					//	break;
+			}
 		}
 		#endregion
 

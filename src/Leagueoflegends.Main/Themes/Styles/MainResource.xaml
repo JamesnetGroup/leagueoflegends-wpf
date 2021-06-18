@@ -4,7 +4,8 @@
 					xmlns:ctrls="clr-namespace:Leagueoflegends.LayoutSupport.Controls;assembly=Leagueoflegends.LayoutSupport"
 					xmlns:menus="clr-namespace:Leagueoflegends.Menus.Views;assembly=Leagueoflegends.Menus"
 					xmlns:titles="clr-namespace:Leagueoflegends.TitleBar.Views;assembly=Leagueoflegends.TitleBar"
-					xmlns:prims="clr-namespace:Leagueoflegends.Controls.Primitives;assembly=Leagueoflegends.Controls">
+					xmlns:prims="clr-namespace:Leagueoflegends.Controls.Primitives;assembly=Leagueoflegends.Controls"
+					xmlns:cnvt="clr-namespace:Leagueoflegends.Converter;assembly=Leagueoflegends.Converter">
 	
 	<LinearGradientBrush x:Key="BDR.SEC" StartPoint="0.5,1" EndPoint="0.5,0">
 		<GradientStop Color="Transparent" Offset="0"/>
@@ -458,8 +459,8 @@
 
 	<Style TargetType="{x:Type Button}" x:Key="BTN.FRIENDS" BasedOn="{StaticResource BTN.01}">
 		<Setter Property="Tag" Value="01"/>
-		<!--<Setter Property="Command" Value="{Binding ShowPopupCommand}"/>
-		<Setter Property="CommandParameter" Value="ADD FRIENDS"/>-->
+		<Setter Property="Command" Value="{Binding ShowPopupCommand}"/>
+		<Setter Property="CommandParameter" Value="ADD FRIENDS"/>
 		<Style.Resources>
 			<Style TargetType="ToolTip" BasedOn="{StaticResource MAIN.TOOL}">
 				<Setter Property="HorizontalOffset" Value="-15"/>
@@ -722,7 +723,21 @@
 			</Setter.Value>
 		</Setter>
 	</Style>
-
+	
+	<Style TargetType="{x:Type ctrls:DarkBackground}" x:Key="DARK.MAIN">
+		<Setter Property="Visibility" Value="{Binding IsModalVisible, Converter={cnvt:BooleanToVisibilityConverter}}"/>
+		<Setter Property="Background" Value="Transparent"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type ctrls:DarkBackground}">
+					<Border Background="#AA000000">
+						<ContentPresenter ContentSource="Content" x:Name="b"/>
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	
 	<Style TargetType="{x:Type Control}" x:Key="CTL.VERSION">
 		<Style.Resources>
 			<Style TargetType="ToolTip" BasedOn="{StaticResource MAIN.TOOL}">
@@ -846,6 +861,10 @@
 
 							<Border VerticalAlignment="Top" Background="#785a28" Height="2" Grid.ColumnSpan="2"/>
 							<Border Grid.Column="1" BorderBrush="#CC3D4143" BorderThickness="0 0 0 1"/>
+
+							<ctrls:DarkBackground Style="{StaticResource DARK.MAIN}" Grid.RowSpan="2" Grid.ColumnSpan="2">
+								<ContentControl Content="{Binding ModalContent}"/>
+							</ctrls:DarkBackground>
 
 						</Grid>
 					</Border>
