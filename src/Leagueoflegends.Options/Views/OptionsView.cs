@@ -1,7 +1,7 @@
 ﻿using Leagueoflegends.LayoutSupport.Controls;
 using System.Windows;
 
-namespace Leagueoflegends.Main.Views
+namespace Leagueoflegends.Options.Views
 {
 	public class OptionsView : View
 	{

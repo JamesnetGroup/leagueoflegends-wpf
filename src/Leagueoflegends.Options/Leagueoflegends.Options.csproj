@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F94791F2-2CD1-4354-817E-609AEF901794}</ProjectGuid>
+    <ProjectGuid>{C62293C7-C592-4A62-8347-FB4CD0CBE3CB}</ProjectGuid>
     <OutputType>library</OutputType>
-    <RootNamespace>Leagueoflegends.Main</RootNamespace>
-    <AssemblyName>Leagueoflegends.Main</AssemblyName>
+    <RootNamespace>Leagueoflegends.Options</RootNamespace>
+    <AssemblyName>Leagueoflegends.Options</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <Deterministic>true</Deterministic>
-    <LangVersion>9.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -53,17 +52,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Styles\MainResource.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Themes\Styles\PlayButton.xaml">
+    <Page Include="Themes\Styles\OptionsView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Styles\NoticeButton.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -80,11 +71,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="ViewModels\MainViewModel.cs" />
-    <Compile Include="Views\Units\EmptyContent.cs" />
-    <Compile Include="Views\MainView.cs" />
-    <Compile Include="Views\Units\PlayButton.cs" />
-    <Compile Include="Views\Units\NoticeButton.cs" />
+    <Compile Include="ViewModels\OptionsViewModel.cs" />
+    <Compile Include="Views\OptionsView.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -104,44 +92,16 @@
       <Name>Leagueoflegends.Converter</Name>
     </ProjectReference>
     <ProjectReference Include="..\Leagueoflegends.Data\Leagueoflegends.Data.csproj">
-      <Project>{3E01F5FB-69AD-415D-8114-5D7E4D3CBB74}</Project>
+      <Project>{3e01f5fb-69ad-415d-8114-5d7e4d3cbb74}</Project>
       <Name>Leagueoflegends.Data</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Leagueoflegends.Friends\Leagueoflegends.Friends.csproj">
-      <Project>{5df303d7-92fc-4eb2-a58d-8b3169dbd20d}</Project>
-      <Name>Leagueoflegends.Friends</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Leagueoflegends.Home.General\Leagueoflegends.Home.General.csproj">
-      <Project>{c1fd24b7-5ebb-49c2-881c-8f23ca6c7c63}</Project>
-      <Name>Leagueoflegends.Home.General</Name>
     </ProjectReference>
     <ProjectReference Include="..\Leagueoflegends.LayoutSupport\Leagueoflegends.LayoutSupport.csproj">
       <Project>{418FBB6A-08E6-4EAE-A304-913F232491A6}</Project>
       <Name>Leagueoflegends.LayoutSupport</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Leagueoflegends.Menus\Leagueoflegends.Menus.csproj">
-      <Project>{ef8f6871-edc0-4dbd-a0d1-11d9f9762562}</Project>
-      <Name>Leagueoflegends.Menus</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Leagueoflegends.MyShop\Leagueoflegends.MyShop.csproj">
-      <Project>{0273aba2-31c6-4273-85a4-c90e99b18926}</Project>
-      <Name>Leagueoflegends.MyShop</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Leagueoflegends.Options\Leagueoflegends.Options.csproj">
-      <Project>{C62293C7-C592-4A62-8347-FB4CD0CBE3CB}</Project>
-      <Name>Leagueoflegends.Options</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Leagueoflegends.Resources\Leagueoflegends.Resources.csproj">
       <Project>{1afee701-95ed-4977-95b3-249a9821de5b}</Project>
       <Name>Leagueoflegends.Resources</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Leagueoflegends.TeamFight\Leagueoflegends.TeamFight.csproj">
-      <Project>{f7aa3593-bf16-4eea-915d-906b30bbf74b}</Project>
-      <Name>Leagueoflegends.TeamFight</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Leagueoflegends.TitleBar\Leagueoflegends.TitleBar.csproj">
-      <Project>{0B50B667-42CC-43A9-8F28-8EF1427A22CD}</Project>
-      <Name>Leagueoflegends.TitleBar</Name>
     </ProjectReference>
     <ProjectReference Include="..\Leagueoflegends.Windowbase\Leagueoflegends.Windowbase.csproj">
       <Project>{B0E72967-60F7-4796-8940-36D3822131A7}</Project>

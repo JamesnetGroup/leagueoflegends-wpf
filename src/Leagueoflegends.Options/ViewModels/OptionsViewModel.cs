@@ -3,7 +3,7 @@ using Leagueoflegends.Windowbase.Mvvm;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Leagueoflegends.Main.ViewModels
+namespace Leagueoflegends.Options.ViewModels
 {
 	public class OptionsViewModel : ObservableObject
     {
@@ -34,7 +34,7 @@ namespace Leagueoflegends.Main.ViewModels
 
         private List<OptionModel> GetSortTypes()
         {
-            List<OptionModel> source = new()
+            List<OptionModel> source = new List<OptionModel>
 			{
                 new OptionModel { DisplayName = "Sort Alphabetically" },
                 new OptionModel { DisplayName = "Sort by Status" }

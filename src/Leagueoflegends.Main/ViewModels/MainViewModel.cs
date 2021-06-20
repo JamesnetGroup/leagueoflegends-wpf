@@ -1,4 +1,6 @@
 ﻿using Leagueoflegends.Data.Main;
+using Leagueoflegends.Friends.ViewModels;
+using Leagueoflegends.Friends.Views;
 using Leagueoflegends.Home.General.ViewModels;
 using Leagueoflegends.Home.General.Views;
 using Leagueoflegends.LayoutSupport.Common.UIObject;
@@ -6,6 +8,7 @@ using Leagueoflegends.Main.Views;
 using Leagueoflegends.Menus.ViewModels;
 using Leagueoflegends.MyShop.ViewModels;
 using Leagueoflegends.MyShop.Views;
+using Leagueoflegends.Options.ViewModels;
 using Leagueoflegends.TeamFight.ViewModels;
 using Leagueoflegends.TeamFight.Views;
 using Leagueoflegends.TitleBar.ViewModels;
@@ -123,7 +126,7 @@ namespace Leagueoflegends.Main.ViewModels
 			switch (obj.ToString())
 			{
 				case "ADD FRIENDS":
-					ModalContent = new AddFriendsView().UseViewModel(new AddFriendsViewModel());
+					ModalContent = new AddFriendsView().UseViewModel(new AddFriendsViewModel(AddFriendsViewClosed));
 					IsModalVisible = true;
 					break;
 				case "OPTIONS":
@@ -233,5 +236,10 @@ namespace Leagueoflegends.Main.ViewModels
 			TotalFriendsCount = GeneralFriendsCount + OfflineFriendsCount;
 		}
 		#endregion
+
+		private void AddFriendsViewClosed(object obj)
+		{
+			IsModalVisible = false;
+		}
 	}
 }

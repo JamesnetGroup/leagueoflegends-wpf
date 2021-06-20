@@ -1,15 +1,18 @@
 ﻿using Leagueoflegends.Data.Main;
 using Leagueoflegends.LayoutSupport.Controls;
 using Leagueoflegends.Windowbase.Mvvm;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Input;
 
-namespace Leagueoflegends.Main.ViewModels
+namespace Leagueoflegends.Friends.ViewModels
 {
 	public class AddFriendsViewModel : ObservableObject
 	{
+        Action<object> ViewClosed;
+
         #region Command
         public ICommand CompleteCommand { get; set; }
         public ICommand KeywordCommand { get; private set; }
@@ -48,8 +51,10 @@ namespace Leagueoflegends.Main.ViewModels
 
         #region Constructor
 
-        public AddFriendsViewModel()
+        public AddFriendsViewModel(Action<object> _viewClosed)
         {
+            ViewClosed = _viewClosed;
+
             Keyword = "";
             KeywordCommand = new RelayCommand<object>(KeywordChanged);
             CloseKeywordCommand = new RelayCommand<object>(CloseKeyword);
@@ -123,10 +128,7 @@ namespace Leagueoflegends.Main.ViewModels
 
         private void CompleteClick(DarkBackground obj)
         {
-            if (obj.DataContext is MainViewModel vm)
-            {
-                vm.IsModalVisible = false;
-            }
+            ViewClosed.Invoke(this);
         }
 		#endregion
 
