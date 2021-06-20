@@ -1,4 +1,5 @@
 ﻿using Leagueoflegends.Data.Main;
+using Leagueoflegends.ExampleData.Friends;
 using Leagueoflegends.Friends.ViewModels;
 using Leagueoflegends.Friends.Views;
 using Leagueoflegends.Home.General.ViewModels;
@@ -14,16 +15,16 @@ using Leagueoflegends.TeamFight.Views;
 using Leagueoflegends.TitleBar.ViewModels;
 using Leagueoflegends.Windowbase.Mvvm;
 using Leagueoflegends.Windowbase.Riotcore;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Windows;
 using System.Windows.Input;
 
 namespace Leagueoflegends.Main.ViewModels
 {
 	public class MainViewModel : ObservableObject, IModalUIObject
 	{
+		#region Variables
+
 		private bool _isModalVisible;
 		private bool _isPopupVisible;
 		private object _modalContent;
@@ -33,12 +34,19 @@ namespace Leagueoflegends.Main.ViewModels
 		private MainMenuModel _mainMenu;
 		private List<CommunityModel> _friends;
 		private Dictionary<string, IRiotUIElement> UIs { get; set; }
+		#endregion
+
+		#region ViewModels
 
 		public MainMenuViewModel MainMenu { get; }
 		public TitleBarViewModel TitleBar { get; }
 		public OptionsViewModel Options { get; }
+		#endregion
+
+		#region ICommands
 
 		public ICommand ShowPopupCommand { get; set; }
+		#endregion
 
 		#region ModalContent
 
@@ -112,12 +120,18 @@ namespace Leagueoflegends.Main.ViewModels
 		{
 			UIs = new();
 			ShowPopupCommand = new RelayCommand<string>(ShowModal);
-			TitleBar = new(new RelayCommand<object>(TitlebarSelected));
+			TitleBar = new();
 			MainMenu = new(MenuSelected);
 			Options = new();
-			InitFriends();
+
+			Friends = ExamFriends.GetFriendsList();
+			GeneralFriendsCount = Friends[0].Children.Count();
+			OfflineFriendsCount = Friends[1].Children.Count();
+			TotalFriendsCount = GeneralFriendsCount + OfflineFriendsCount;
 		}
 		#endregion
+
+		// public..♥
 
 		#region ShowModal
 
@@ -145,6 +159,8 @@ namespace Leagueoflegends.Main.ViewModels
 			}
 		}
 		#endregion
+
+		// Private..♥
 
 		#region MenuSelected
 
@@ -192,54 +208,14 @@ namespace Leagueoflegends.Main.ViewModels
 		}
 		#endregion
 
-		#region TitlebarSelected
+		// Callback..♥
 
-		private void TitlebarSelected(object obj)
-		{
-			switch (obj.ToString())
-			{
-				case "MIN": Window.GetWindow(View).WindowState = WindowState.Minimized; break;
-				case "CLOSE": Environment.Exit(0); break;
-			}
-		}
-		#endregion
-
-		#region InitFriends
-
-		private void InitFriends()
-		{
-			List<CommunityModel> friends = new()
-			{
-				new CommunityModel { IsUser = false, Name = "GENERAL" },
-				new CommunityModel { IsUser = false, Name = "OFFLINE" }
-			};
-
-			friends[0].Children = new List<CommunityModel>();
-			friends[1].Children = new List<CommunityModel>();
-
-			friends[0].Children.Add(new CommunityModel { IsUser = true, Name = "elenakim", Status = "안녕", IsGeneral = true, MD5 = "/Leagueoflegends.Resources;component/Images/Square/0.png", Children = new List<CommunityModel>() });
-			friends[0].Children.Add(new CommunityModel { IsUser = true, Name = "jameslee", Status = "굿굿", IsGeneral = true, MD5 = "/Leagueoflegends.Resources;component/Images/Square/1.png", Children = new List<CommunityModel>() });
-
-			friends[1].Children.Add(new CommunityModel { IsUser = true, Name = "joolo", Status = "왈왈", IsGeneral = false, MD5 = "/Leagueoflegends.Resources;component/Images/Square/2.png", Children = new List<CommunityModel>() });
-			friends[1].Children.Add(new CommunityModel { IsUser = true, Name = "CokePlay", Status = "콜라가 먹고싶다", IsGeneral = false, MD5 = "/Leagueoflegends.Resources;component/Images/Square/3.png", Children = new List<CommunityModel>() });
-			friends[1].Children.Add(new CommunityModel { IsUser = true, Name = "권율장군", Status = "장군쓰", IsGeneral = false, MD5 = "/Leagueoflegends.Resources;component/Images/Square/4.png", Children = new List<CommunityModel>() });
-			friends[1].Children.Add(new CommunityModel { IsUser = true, Name = "잠시만할게여", Status = "진짜로", IsGeneral = false, MD5 = "/Leagueoflegends.Resources;component/Images/Square/5.png", Children = new List<CommunityModel>() });
-			friends[1].Children.Add(new CommunityModel { IsUser = true, Name = "주방행님들", Status = "배고퓨", IsGeneral = false, MD5 = "/Leagueoflegends.Resources;component/Images/Square/6.png", Children = new List<CommunityModel>() });
-			friends[1].Children.Add(new CommunityModel { IsUser = true, Name = "펭수오리", Status = "펭펭", IsGeneral = false, MD5 = "/Leagueoflegends.Resources;component/Images/Square/7.png", Children = new List<CommunityModel>() });
-			friends[1].Children.Add(new CommunityModel { IsUser = true, Name = "3초돌고래", Status = "끼룩끼룩", IsGeneral = false, MD5 = "/Leagueoflegends.Resources;component/Images/Square/8.png", Children = new List<CommunityModel>() });
-			friends[1].Children.Add(new CommunityModel { IsUser = true, Name = "jongzzong", Status = "jongzzong", IsGeneral = false, MD5 = "/Leagueoflegends.Resources;component/Images/Square/9.png", Children = new List<CommunityModel>() });
-			friends[1].Children.Add(new CommunityModel { IsUser = true, Name = "YJ2901", Status = "안녕", IsGeneral = false, MD5 = "/Leagueoflegends.Resources;component/Images/Square/10.png", Children = new List<CommunityModel>() });
-
-			Friends = friends;
-			GeneralFriendsCount = friends[0].Children.Count();
-			OfflineFriendsCount = friends[1].Children.Count();
-			TotalFriendsCount = GeneralFriendsCount + OfflineFriendsCount;
-		}
-		#endregion
+		#region AddFriendsViewClosed
 
 		private void AddFriendsViewClosed(object obj)
 		{
 			IsModalVisible = false;
 		}
+		#endregion
 	}
 }
