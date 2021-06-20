@@ -3,10 +3,11 @@
 					xmlns:views="clr-namespace:Leagueoflegends.Main.Views"
 					xmlns:ctrls="clr-namespace:Leagueoflegends.LayoutSupport.Controls;assembly=Leagueoflegends.LayoutSupport"
 					xmlns:menus="clr-namespace:Leagueoflegends.Menus.Views;assembly=Leagueoflegends.Menus"
-					xmlns:titles="clr-namespace:Leagueoflegends.TitleBar.Views;assembly=Leagueoflegends.TitleBar"
+					xmlns:title="clr-namespace:Leagueoflegends.TitleBar.Views;assembly=Leagueoflegends.TitleBar"
 					xmlns:prims="clr-namespace:Leagueoflegends.Controls.Primitives;assembly=Leagueoflegends.Controls"
-					xmlns:cnvt="clr-namespace:Leagueoflegends.Converter;assembly=Leagueoflegends.Converter">
-	
+					xmlns:convt="clr-namespace:Leagueoflegends.Converter;assembly=Leagueoflegends.Converter"
+					xmlns:optns="clr-namespace:Leagueoflegends.Options.Views;assembly=Leagueoflegends.Options">
+
 	<LinearGradientBrush x:Key="BDR.SEC" StartPoint="0.5,1" EndPoint="0.5,0">
 		<GradientStop Color="Transparent" Offset="0"/>
 		<GradientStop Color="#33C8BA8E" Offset="0.1"/>
@@ -725,7 +726,7 @@
 	</Style>
 	
 	<Style TargetType="{x:Type ctrls:DarkBackground}" x:Key="DARK.MAIN">
-		<Setter Property="Visibility" Value="{Binding IsModalVisible, Converter={cnvt:BooleanToVisibilityConverter}}"/>
+		<Setter Property="Visibility" Value="{Binding IsModalVisible, Converter={convt:BooleanToVisibilityConverter}}"/>
 		<Setter Property="Background" Value="Transparent"/>
 		<Setter Property="Template">
 			<Setter.Value>
@@ -815,7 +816,7 @@
 							<!--User info & Bar Menu-->
 							<Grid Grid.RowSpan="2" Grid.Column="1" Width="225" Height="81" VerticalAlignment="Top">
 								<Border Background="#FF010A13" IsHitTestVisible="False"/>
-								<titles:TitleBar DataContext="{Binding TitleBar}"/>
+								<title:TitleBar DataContext="{Binding TitleBar}"/>
 
 								<Button Style="{StaticResource BTN.PROFILE}"/>
 								<StackPanel>
@@ -869,7 +870,7 @@
 							
 							<!--PopUp-->
 							<Popup IsOpen="{Binding IsPopupVisible}" PlacementTarget="{Binding ElementName=btnOption}" StaysOpen="False" HorizontalOffset="-170" VerticalOffset="10">
-								<views:OptionsView DataContext="{Binding Options}"/>
+								<optns:OptionsView DataContext="{Binding Options}"/>
 							</Popup>
 						</Grid>
 					</Border>

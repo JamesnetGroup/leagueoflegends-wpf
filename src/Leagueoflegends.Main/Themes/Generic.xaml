@@ -5,8 +5,6 @@
 		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Styles/MainResource.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Styles/NoticeButton.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Styles/PlayButton.xaml"/>
-		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Styles/AddFriendsViewResource.xaml"/>
-		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Styles/OptionsViewResource.xaml"/>
 	</ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
 
