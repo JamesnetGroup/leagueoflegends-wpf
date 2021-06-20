@@ -2,7 +2,11 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 	<ResourceDictionary.MergedDictionaries>
-		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Styles/MainResource.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Styles/ChatTool.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Styles/SocialTool.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Styles/FriendsList.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Styles/EmptyContent.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Styles/MainView.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Styles/NoticeButton.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Styles/PlayButton.xaml"/>
 	</ResourceDictionary.MergedDictionaries>

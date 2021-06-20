@@ -1,6 +1,4 @@
-﻿using System.Windows.Media;
-
-namespace Leagueoflegends.Controls.Utils
+﻿namespace Leagueoflegends.Controls.Utils
 {
 	internal static class IconData
 	{
