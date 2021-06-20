@@ -56,6 +56,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Themes\Styles\ContentsWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Themes\Styles\RiotTooltip.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -68,6 +72,7 @@
   <ItemGroup>
     <Compile Include="Common\UIObject\IModalUIObject.cs" />
     <Compile Include="Controls\DarkBackground.cs" />
+    <Compile Include="Controls\ContentsWindow.cs" />
     <Compile Include="Controls\RiotTextBox.cs" />
     <Compile Include="Controls\RiotTooltip.cs" />
     <Compile Include="Controls\RiotIcon.cs" />
@@ -101,6 +106,10 @@
     <ProjectReference Include="..\Leagueoflegends.Controls\Leagueoflegends.Controls.csproj">
       <Project>{F6309CBA-5A01-4E4E-AE66-02841968C02D}</Project>
       <Name>Leagueoflegends.Controls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Leagueoflegends.Converter\Leagueoflegends.Converter.csproj">
+      <Project>{50779308-a9bc-4d0d-862f-4394e3418a1f}</Project>
+      <Name>Leagueoflegends.Converter</Name>
     </ProjectReference>
     <ProjectReference Include="..\Leagueoflegends.Data\Leagueoflegends.Data.csproj">
       <Project>{3e01f5fb-69ad-415d-8114-5d7e4d3cbb74}</Project>

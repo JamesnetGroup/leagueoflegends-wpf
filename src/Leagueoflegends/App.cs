@@ -20,7 +20,7 @@ namespace Leagueoflegends
 			while (dialogResult)
 			{
 				ShutdownMode = ShutdownMode.OnExplicitShutdown;
-				MainView main = new()
+				Main.Views.MainView main = new()
 				{
 					DataContext = new MainViewModel()
 				};
