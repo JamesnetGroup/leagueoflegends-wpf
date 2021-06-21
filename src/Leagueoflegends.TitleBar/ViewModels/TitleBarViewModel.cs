@@ -1,6 +1,7 @@
 ﻿using Leagueoflegends.Windowbase.Mvvm;
 using System;
 using System.Windows;
+using System.Windows.Controls;
 using System.Windows.Input;
 
 namespace Leagueoflegends.TitleBar.ViewModels
@@ -16,18 +17,27 @@ namespace Leagueoflegends.TitleBar.ViewModels
 
 		public TitleBarViewModel()
 		{
-			TitleBarSelectCommand = new RelayCommand<string>(ButtonClick);
+			TitleBarSelectCommand = new RelayCommand<object>(ButtonClick);
 		}
 		#endregion
 
 		#region ButtonClick
 
-		private void ButtonClick(string tag)
+		private void ButtonClick(object obj)
 		{
-			switch (tag)
+			Button btn = (Button)obj;
+
+			switch (btn.Tag)
 			{
-				case "MIN": Window.GetWindow(View).WindowState = WindowState.Minimized; break;
-				case "CLOSE": Environment.Exit(0); break;
+				case "MIN":
+					Window window = Window.GetWindow(obj as DependencyObject);
+					window.WindowState = WindowState.Minimized;
+					break;
+				case "CLOSE":
+					Environment.Exit(0);
+					break;
+				default:
+					break;
 			}
 		}
 		#endregion

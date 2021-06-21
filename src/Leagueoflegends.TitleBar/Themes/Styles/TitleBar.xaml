@@ -14,7 +14,8 @@
 
 	<Style TargetType="{x:Type Button}"  x:Key="IN.WIN.HELP" >
 		<Setter Property="Command" Value="{Binding TitleBarSelectCommand}"/>
-		<Setter Property="CommandParameter" Value="HELP"/>
+		<Setter Property="CommandParameter" Value="{Binding RelativeSource={RelativeSource Self}}"/>
+		<Setter Property="Tag" Value="HELP"/>
 		<Setter Property="Grid.Column" Value="1"/>
 		<Setter Property="Margin" Value="10 5 5 5"/>
 		<Setter Property="Template">
@@ -36,7 +37,8 @@
 
 	<Style TargetType="{x:Type Button}" x:Key="IN.WIN.MINIMIZE">
 		<Setter Property="Command" Value="{Binding TitleBarSelectCommand}"/>
-		<Setter Property="CommandParameter" Value="MIN"/>
+		<Setter Property="CommandParameter" Value="{Binding RelativeSource={RelativeSource Self}}"/>
+		<Setter Property="Tag" Value="MIN"/>
 		<Setter Property="Grid.Column" Value="2"/>
 		<Setter Property="Margin" Value="10 5 5 5"/>
 		<Setter Property="Template">
@@ -58,7 +60,8 @@
 
 	<Style TargetType="{x:Type ToggleButton}"  x:Key="IN.WIN.SETTINGS" >
 		<Setter Property="Command" Value="{Binding TitleBarSelectCommand}"/>
-		<Setter Property="CommandParameter" Value="SET"/>
+		<Setter Property="CommandParameter" Value="{Binding RelativeSource={RelativeSource Self}}"/>
+		<Setter Property="Tag" Value="SET"/>
 		<Setter Property="Grid.Column" Value="3"/>
 		<Setter Property="Margin" Value="10 5 5 5"/>
 		<Setter Property="Template">
@@ -80,7 +83,8 @@
 
 	<Style TargetType="{x:Type Button}"  x:Key="IN.WIN.CLOSE" >
 		<Setter Property="Command" Value="{Binding TitleBarSelectCommand}"/>
-		<Setter Property="CommandParameter" Value="CLOSE"/>
+		<Setter Property="CommandParameter" Value="{Binding RelativeSource={RelativeSource Self}}"/>
+		<Setter Property="Tag" Value="CLOSE"/>
 		<Setter Property="Grid.Column" Value="4"/>
 		<Setter Property="Margin" Value="10 5 5 5"/>
 		<Setter Property="Template">

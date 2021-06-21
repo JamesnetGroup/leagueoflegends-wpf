@@ -56,9 +56,9 @@
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type ListBox}">
-					<ctrls:BasicScroll>
+					<ScrollViewer>
 						<ItemsPresenter/>
-					</ctrls:BasicScroll>
+					</ScrollViewer>
 				</ControlTemplate>
 			</Setter.Value>
 		</Setter>
