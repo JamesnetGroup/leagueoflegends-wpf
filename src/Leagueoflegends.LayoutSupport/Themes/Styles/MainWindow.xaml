@@ -18,7 +18,7 @@
 		</Setter>
 	</Style>
 
-	<Style TargetType="{x:Type ctrls:ContentsWindow}">
+	<Style TargetType="{x:Type ctrls:MainWindow}">
 		<Setter Property="BorderThickness" Value="0"/>
 		<Setter Property="WindowStyle" Value="None"/>
 		<Setter Property="WindowState" Value="Normal"/>
@@ -27,7 +27,7 @@
 		<Setter Property="Background" Value="White"/>
 		<Setter Property="Template">
 			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type ctrls:ContentsWindow}">
+				<ControlTemplate TargetType="{x:Type ctrls:MainWindow}">
 					<Border Width="1280" Height="720">
 						<Grid>
 							<Grid.RowDefinitions>

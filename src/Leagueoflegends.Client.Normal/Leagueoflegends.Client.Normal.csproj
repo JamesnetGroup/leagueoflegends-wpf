@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{418FBB6A-08E6-4EAE-A304-913F232491A6}</ProjectGuid>
+    <ProjectGuid>{A0BA31FA-2B99-4879-8FD3-0CB7DE52FC85}</ProjectGuid>
     <OutputType>library</OutputType>
-    <RootNamespace>Leagueoflegends.LayoutSupport</RootNamespace>
-    <AssemblyName>Leagueoflegends.LayoutSupport</AssemblyName>
+    <RootNamespace>Leagueoflegends.Client.Normal</RootNamespace>
+    <AssemblyName>Leagueoflegends.Client.Normal</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -52,34 +52,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Styles\BasicScroll.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Themes\Styles\MainWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Styles\RiotTooltip.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Styles\RiotIcon.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
+    <Compile Include="ViewModels\ClientNormalViewModel.cs" />
+    <Compile Include="Views\ClientNormalView.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Common\UIObject\IModalUIObject.cs" />
-    <Compile Include="Controls\DarkBackground.cs" />
-    <Compile Include="Controls\MainWindow.cs" />
-    <Compile Include="Controls\RiotTextBox.cs" />
-    <Compile Include="Controls\RiotTooltip.cs" />
-    <Compile Include="Controls\RiotIcon.cs" />
-    <Compile Include="Controls\TooltipB.cs" />
-    <Compile Include="Controls\TooltipA.cs" />
-    <Compile Include="Controls\BasicScroll.cs" />
-    <Compile Include="Controls\View.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -104,7 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Leagueoflegends.Controls\Leagueoflegends.Controls.csproj">
-      <Project>{F6309CBA-5A01-4E4E-AE66-02841968C02D}</Project>
+      <Project>{f6309cba-5a01-4e4e-ae66-02841968c02d}</Project>
       <Name>Leagueoflegends.Controls</Name>
     </ProjectReference>
     <ProjectReference Include="..\Leagueoflegends.Converter\Leagueoflegends.Converter.csproj">
@@ -115,10 +93,19 @@
       <Project>{3e01f5fb-69ad-415d-8114-5d7e4d3cbb74}</Project>
       <Name>Leagueoflegends.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Leagueoflegends.LayoutSupport\Leagueoflegends.LayoutSupport.csproj">
+      <Project>{418FBB6A-08E6-4EAE-A304-913F232491A6}</Project>
+      <Name>Leagueoflegends.LayoutSupport</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Leagueoflegends.Resources\Leagueoflegends.Resources.csproj">
+      <Project>{1afee701-95ed-4977-95b3-249a9821de5b}</Project>
+      <Name>Leagueoflegends.Resources</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Leagueoflegends.Windowbase\Leagueoflegends.Windowbase.csproj">
       <Project>{B0E72967-60F7-4796-8940-36D3822131A7}</Project>
       <Name>Leagueoflegends.Windowbase</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

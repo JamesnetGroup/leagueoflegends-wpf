@@ -1,5 +1,4 @@
 ﻿using Leagueoflegends.Main.ViewModels;
-using Leagueoflegends.Main.Views;
 using Leagueoflegends.Windowbase.Riotbase;
 using System;
 using System.Windows;
