@@ -3,9 +3,9 @@ using Leagueoflegends.Windowbase.Mvvm;
 
 namespace Leagueoflegends.Windowbase.Riotcore
 {
-	public interface IRiotUIElement
+	public interface IRiotUI
 	{
-		IRiotUIElement UseViewModel(ObservableObject vm);
+		IRiotUI UseViewModel(ObservableObject vm);
 		void Show(SubMenuModel menu);
 	}
 }

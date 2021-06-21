@@ -6,7 +6,7 @@ using System.Windows.Controls;
 
 namespace Leagueoflegends.Windowbase.Riotbase
 {
-	public class RiotView : UserControl, IRiotUIElement
+	public class RiotView : UserControl, IRiotUI
 	{
 		public RiotView()
 		{
@@ -21,7 +21,7 @@ namespace Leagueoflegends.Windowbase.Riotbase
 			}
 		}
 
-		public IRiotUIElement UseViewModel(ObservableObject vm)
+		public IRiotUI UseViewModel(ObservableObject vm)
 		{
 			DataContext = vm;
 			return this;

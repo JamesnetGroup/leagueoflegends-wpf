@@ -4,20 +4,6 @@
 					xmlns:prims="clr-namespace:Leagueoflegends.Controls.Primitives;assembly=Leagueoflegends.Controls"
 					xmlns:convt="clr-namespace:Leagueoflegends.Converter;assembly=Leagueoflegends.Converter">
 
-	<Style TargetType="{x:Type ctrls:DarkBackground}" x:Key="DARK.MAIN">
-		<Setter Property="Visibility" Value="{Binding IsModalVisible, Converter={convt:BooleanToVisibilityConverter}}"/>
-		<Setter Property="Background" Value="Transparent"/>
-		<Setter Property="Template">
-			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type ctrls:DarkBackground}">
-					<Border Background="#AA000000">
-						<ContentPresenter ContentSource="Content" x:Name="b"/>
-					</Border>
-				</ControlTemplate>
-			</Setter.Value>
-		</Setter>
-	</Style>
-
 	<Style TargetType="{x:Type ctrls:MainWindow}">
 		<Setter Property="BorderThickness" Value="0"/>
 		<Setter Property="WindowStyle" Value="None"/>
@@ -48,7 +34,6 @@
 									Grid.ColumnSpan="2" 
 									Background="#DA000000"/>
 
-							<!--Top Drag-->
 							<Grid Grid.Row="0" 
 								  Grid.ColumnSpan="2" 
 								  VerticalAlignment="Top" 
@@ -86,13 +71,9 @@
 									BorderBrush="#CC3D4143" 
 									BorderThickness="0 0 0 1"/>
 
-							<!--Modal-->
-							<ctrls:DarkBackground Style="{StaticResource DARK.MAIN}"
-												  Grid.RowSpan="2" 
-												  Grid.ColumnSpan="2">
-								<ContentPresenter ContentSource="DataContext"
-												  ContentTemplate="{TemplateBinding ModalTemplate}"/>
-							</ctrls:DarkBackground>
+							<ContentPresenter Grid.RowSpan="2" Grid.ColumnSpan="2"
+											  ContentSource="DataContext"
+											  ContentTemplate="{TemplateBinding ModalTemplate}"/>
 						</Grid>
 					</Border>
 				</ControlTemplate>

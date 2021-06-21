@@ -5,6 +5,7 @@ using Leagueoflegends.Friends.Views;
 using Leagueoflegends.Home.General.ViewModels;
 using Leagueoflegends.Home.General.Views;
 using Leagueoflegends.LayoutSupport.Common.UIObject;
+using Leagueoflegends.Main.Local.Works;
 using Leagueoflegends.Main.Views;
 using Leagueoflegends.Menus.ViewModels;
 using Leagueoflegends.MyShop.ViewModels;
@@ -14,11 +15,12 @@ using Leagueoflegends.Settings.ViewModels;
 using Leagueoflegends.Settings.Views;
 using Leagueoflegends.TeamFight.ViewModels;
 using Leagueoflegends.TeamFight.Views;
-using Leagueoflegends.TitleBar.ViewModels;
 using Leagueoflegends.Windowbase.Mvvm;
 using Leagueoflegends.Windowbase.Riotcore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Windows;
 using System.Windows.Input;
 
 namespace Leagueoflegends.Main.ViewModels
@@ -27,26 +29,33 @@ namespace Leagueoflegends.Main.ViewModels
 	{
 		#region Variables
 
+		private readonly WindowWork _winWork;
+		private readonly ContentWork _viewWork;
+
 		private bool _isModalVisible;
 		private object _modalContent;
-		private IRiotUIElement _currentUI;
+		private IRiotUI _currentUI;
 		private List<SubMenuModel> _subMenus;
 		private SubMenuModel _currentSubMenu;
 		private MainMenuModel _mainMenu;
 		private List<CommunityModel> _friends;
-		private Dictionary<string, IRiotUIElement> UIs { get; set; }
+		private Dictionary<string, IRiotUI> UIs { get; set; }
 		#endregion
+
+		
 
 		#region ViewModels
 
 		public MainMenuViewModel MainMenu { get; }
-		public TitleBarViewModel TitleBar { get; }
 		public OptionsViewModel Options { get; }
 		#endregion
 
 		#region ICommands
 
-		public ICommand ShowPopupCommand { get; set; }
+		public ICommand ShowPopupCommand { get; }
+		public ICommand ModalCommand { get; }
+		public ICommand CloseCommand { get; }
+		public ICommand MinimizeCommand { get; }
 		#endregion
 
 		#region ModalContent
@@ -69,7 +78,7 @@ namespace Leagueoflegends.Main.ViewModels
 
 		#region CurrentUI
 
-		public IRiotUIElement CurrentUI
+		public IRiotUI CurrentUI
 		{
 			get => _currentUI;
 			set { _currentUI = value; OnPropertyChanged(); }
@@ -108,9 +117,16 @@ namespace Leagueoflegends.Main.ViewModels
 
 		public MainViewModel()
 		{
+			_winWork = new(this);
+			_viewWork = new(this);
 			UIs = new();
-			ShowPopupCommand = new RelayCommand<string>(ShowModal);
-			TitleBar = new TitleBarViewModel(new RelayCommand<object>(SettingSelected));
+
+			CloseCommand = new RelayCommand<object>(_winWork.DoClosing);
+			MinimizeCommand = new RelayCommand<object>(_winWork.DoMinizing);
+			ModalCommand = new RelayCommand<Type>(_viewWork.SwitchModal);
+
+			//ShowPopupCommand = new RelayCommand<string>(ShowModal);
+			//SwitchViewCommand = new RelayCommand<string>(SwitchView);
 			MainMenu = new(MenuSelected);
 			Options = new();
 
@@ -151,20 +167,11 @@ namespace Leagueoflegends.Main.ViewModels
 		}
 		#endregion
 
-		#region SettingSelected
-
-		private void SettingSelected(object obj)
-		{
-			ModalContent = new SettingView().UseViewModel(new SettingViewModel(SettingViewClosed));
-			IsModalVisible = true;
-		}
-		#endregion
-
 		#region SubMenuChanged
 
 		private void SubMenuChanged(SubMenuModel value)
 		{
-			IRiotUIElement content;
+			IRiotUI content;
 			string key;
 
 			if (value != null)
@@ -211,6 +218,14 @@ namespace Leagueoflegends.Main.ViewModels
 		private void SettingViewClosed(object obj)
 		{
 			IsModalVisible = false;
+		}
+		#endregion
+
+		#region ViewClose
+
+		private void ViewClose(object obj)
+		{
+			Window.GetWindow((UIElement)View).Close();
 		}
 		#endregion
 	}

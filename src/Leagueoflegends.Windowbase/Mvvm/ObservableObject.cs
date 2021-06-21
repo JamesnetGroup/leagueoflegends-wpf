@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+﻿using Leagueoflegends.Windowbase.Riotcore;
+using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows;
 
@@ -6,7 +7,7 @@ namespace Leagueoflegends.Windowbase.Mvvm
 {
 	public class ObservableObject : INotifyPropertyChanged
 	{
-		protected UIElement View;
+		protected IRiotUI View;
 
 		public event PropertyChangedEventHandler PropertyChanged;
 		protected void OnPropertyChanged([CallerMemberName] string name = null)
@@ -14,7 +15,7 @@ namespace Leagueoflegends.Windowbase.Mvvm
 			PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
 		}
 
-		internal void InitRegistUI(UIElement _view)
+		internal void InitRegistUI(IRiotUI _view)
 		{
 			View = _view;
 		}

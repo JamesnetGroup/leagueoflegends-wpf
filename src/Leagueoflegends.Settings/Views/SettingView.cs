@@ -5,9 +5,12 @@ namespace Leagueoflegends.Settings.Views
 {
 	public class SettingView : View
     {
-        static SettingView()
+		#region Constructor
+
+		static SettingView()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(SettingView), new FrameworkPropertyMetadata(typeof(SettingView)));
         }
-    }
+		#endregion
+	}
 }

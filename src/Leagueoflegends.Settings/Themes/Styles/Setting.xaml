@@ -62,7 +62,7 @@
 
 	<Style TargetType="{x:Type Button}" x:Key="BTN.DONE" BasedOn="{StaticResource BTN.01}">
 		<Setter Property="Command" Value="{Binding CompleteCommand}"/>
-		<Setter Property="CommandParameter" Value="{Binding RelativeSource={RelativeSource AncestorType=ctrls:DarkBackground}}"/>
+		<Setter Property="CommandParameter" Value="{Binding RelativeSource={RelativeSource AncestorType=ctrls:Modal}}"/>
 		<Setter Property="Grid.Row" Value="2"/>
 		<Setter Property="Grid.ColumnSpan" Value="2"/>
 		<Setter Property="BorderThickness" Value="2 2 2 2"/>
