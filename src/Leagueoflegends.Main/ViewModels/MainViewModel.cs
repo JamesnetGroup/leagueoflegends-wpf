@@ -25,24 +25,22 @@ using System.Windows.Input;
 
 namespace Leagueoflegends.Main.ViewModels
 {
-	public class MainViewModel : ObservableObject, IModalUIObject
+	public class MainViewModel : ObservableObject
 	{
 		#region Variables
 
 		private readonly WindowWork _winWork;
-		private readonly ContentWork _viewWork;
+		private readonly ModalWork _modalWork;
 
-		private bool _isModalVisible;
 		private object _modalContent;
 		private IRiotUI _currentUI;
 		private List<SubMenuModel> _subMenus;
 		private SubMenuModel _currentSubMenu;
 		private MainMenuModel _mainMenu;
 		private List<CommunityModel> _friends;
+
 		private Dictionary<string, IRiotUI> UIs { get; set; }
 		#endregion
-
-		
 
 		#region ViewModels
 
@@ -64,15 +62,6 @@ namespace Leagueoflegends.Main.ViewModels
 		{
 			get { return _modalContent; }
 			set { _modalContent = value; OnPropertyChanged(); }
-		}
-		#endregion
-
-		#region IsModalVisible
-
-		public bool IsModalVisible
-		{
-			get { return _isModalVisible; }
-			set { _isModalVisible = value; OnPropertyChanged(); }
 		}
 		#endregion
 
@@ -118,15 +107,14 @@ namespace Leagueoflegends.Main.ViewModels
 		public MainViewModel()
 		{
 			_winWork = new(this);
-			_viewWork = new(this);
+			_modalWork = new(this);
+
 			UIs = new();
 
 			CloseCommand = new RelayCommand<object>(_winWork.DoClosing);
 			MinimizeCommand = new RelayCommand<object>(_winWork.DoMinizing);
-			ModalCommand = new RelayCommand<Type>(_viewWork.SwitchModal);
+			ModalCommand = new RelayCommand<Type>(_modalWork.SwitchModal);
 
-			//ShowPopupCommand = new RelayCommand<string>(ShowModal);
-			//SwitchViewCommand = new RelayCommand<string>(SwitchView);
 			MainMenu = new(MenuSelected);
 			Options = new();
 
@@ -134,24 +122,6 @@ namespace Leagueoflegends.Main.ViewModels
 			GeneralFriendsCount = Friends[0].Children.Count();
 			OfflineFriendsCount = Friends[1].Children.Count();
 			TotalFriendsCount = GeneralFriendsCount + OfflineFriendsCount;
-		}
-		#endregion
-
-		// Public
-
-		#region ShowModal
-
-		public void ShowModal(string obj)
-		{
-			switch (obj)
-			{
-				case "ADD FRIENDS":
-					ModalContent = new AddFriendsView().UseViewModel(new AddFriendsViewModel(AddFriendsViewClosed));
-					IsModalVisible = true;
-					break;
-				default:
-					break;
-			}
 		}
 		#endregion
 
@@ -179,7 +149,7 @@ namespace Leagueoflegends.Main.ViewModels
 				key = value.Name;
 				content = value.Seq switch
 				{
-					0 => new GeneralView().UseViewModel(new GeneralViewModel()),
+					0 => new GeneralView().SetVM(new GeneralViewModel()),
 					_ => new EmptyContent()
 				};
 			}
@@ -188,8 +158,8 @@ namespace Leagueoflegends.Main.ViewModels
 				key = _mainMenu.Name;
 				content = _mainMenu.Seq switch
 				{
-					1 => new TeamFightView().UseViewModel(new TeamFightViewModel()),
-					6 => new MyShopView().UseViewModel(new MyShopViewModel()),
+					1 => new TeamFightView().SetVM(new TeamFightViewModel()),
+					6 => new MyShopView().SetVM(new MyShopViewModel()),
 					_ => new EmptyContent()
 				};
 			}
@@ -200,32 +170,6 @@ namespace Leagueoflegends.Main.ViewModels
 			}
 
 			CurrentUI = UIs[key];
-		}
-		#endregion
-
-		// Callback
-
-		#region AddFriendsViewClosed
-
-		private void AddFriendsViewClosed(object obj)
-		{
-			IsModalVisible = false;
-		}
-		#endregion
-
-		#region SettingViewClosed
-
-		private void SettingViewClosed(object obj)
-		{
-			IsModalVisible = false;
-		}
-		#endregion
-
-		#region ViewClose
-
-		private void ViewClose(object obj)
-		{
-			Window.GetWindow((UIElement)View).Close();
 		}
 		#endregion
 	}

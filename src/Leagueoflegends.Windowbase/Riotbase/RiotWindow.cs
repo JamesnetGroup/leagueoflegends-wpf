@@ -16,7 +16,7 @@ namespace Leagueoflegends.Windowbase.Riotbase
 		{
 		}
 
-		public IRiotUI UseViewModel(ObservableObject vm)
+		public IRiotUI SetVM(ObservableObject vm)
 		{
 			DataContext = vm;
 			return this;
