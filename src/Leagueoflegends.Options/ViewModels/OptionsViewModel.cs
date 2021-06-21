@@ -23,6 +23,7 @@ namespace Leagueoflegends.Options.ViewModels
         #endregion
 
         #region Constructor
+
         public OptionsViewModel()
         {
             SortTypes = GetSortTypes();
@@ -34,7 +35,7 @@ namespace Leagueoflegends.Options.ViewModels
 
         private List<OptionModel> GetSortTypes()
         {
-            List<OptionModel> source = new List<OptionModel>
+            List<OptionModel> source = new()
 			{
                 new OptionModel { DisplayName = "Sort Alphabetically" },
                 new OptionModel { DisplayName = "Sort by Status" }

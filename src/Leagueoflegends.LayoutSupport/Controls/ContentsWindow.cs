@@ -49,7 +49,7 @@ namespace Leagueoflegends.LayoutSupport.Controls
 		}
 		#endregion
 
-		#region FriendsTemplate
+		#region ModalTemplate
 
 		public DataTemplate ModalTemplate
 		{

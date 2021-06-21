@@ -4,9 +4,7 @@
 					xmlns:ctrls="clr-namespace:Leagueoflegends.LayoutSupport.Controls;assembly=Leagueoflegends.LayoutSupport"
 					xmlns:menus="clr-namespace:Leagueoflegends.Menus.Views;assembly=Leagueoflegends.Menus"
 					xmlns:title="clr-namespace:Leagueoflegends.TitleBar.Views;assembly=Leagueoflegends.TitleBar"
-					xmlns:prims="clr-namespace:Leagueoflegends.Controls.Primitives;assembly=Leagueoflegends.Controls"
-					xmlns:convt="clr-namespace:Leagueoflegends.Converter;assembly=Leagueoflegends.Converter"
-					xmlns:optns="clr-namespace:Leagueoflegends.Options.Views;assembly=Leagueoflegends.Options">
+					xmlns:convt="clr-namespace:Leagueoflegends.Converter;assembly=Leagueoflegends.Converter">
 
 	<LinearGradientBrush x:Key="BDR.SEC" StartPoint="0.5,1" EndPoint="0.5,0">
 		<GradientStop Color="Transparent" Offset="0"/>
@@ -64,13 +62,6 @@
 		<Setter Property="Height" Value="20"/>
 		<Setter Property="GeometryWidth" Value="20"/>
 		<Setter Property="GeometryHeight" Value="10"/>
-	</Style>
-
-	<Style TargetType="{x:Type ctrls:RiotIcon}" x:Key="ICON.ALARM">
-		<Setter Property="IconType" Value="Alarm"/>
-		<Setter Property="HorizontalAlignment" Value="Center"/>
-		<Setter Property="VerticalAlignment" Value="Center"/>
-		<Setter Property="Fill" Value="#C8AA6E"/>
 	</Style>
 
 	<Style TargetType="{x:Type ToolTip}" x:Key="MAIN.TOOL">
@@ -321,7 +312,7 @@
 						<Border.ToolTip>
 							<ToolTip ToolTip="Notifications" VerticalOffset="-8"/>
 						</Border.ToolTip>
-						<ctrls:RiotIcon x:Name="path" Style="{StaticResource ICON.ALARM}"/>
+						<ctrls:RiotIcon x:Name="path" IconType="Alarm" HorizontalAlignment="Center" VerticalAlignment="Center" Fill="#C8AA6E"/>
 					</Border>
 					<ControlTemplate.Triggers>
 						<Trigger Property="IsMouseOver" Value="True">
@@ -348,12 +339,6 @@
 	</Style>
 
 	<Style TargetType="{x:Type views:MainView}" BasedOn="{StaticResource {x:Type ctrls:ContentsWindow}}">
-		<Setter Property="BorderThickness" Value="0"/>
-		<Setter Property="WindowStyle" Value="None"/>
-		<Setter Property="WindowState" Value="Normal"/>
-		<Setter Property="SizeToContent" Value="WidthAndHeight"/>
-		<Setter Property="ResizeMode" Value="NoResize"/>
-		<Setter Property="Background" Value="White"/>
 		<Setter Property="TopMenuTemplate">
 			<Setter.Value>
 				<DataTemplate>
@@ -366,7 +351,7 @@
 								<ColumnDefinition Width="115"/>
 							</Grid.ColumnDefinitions>
 							<StackPanel Grid.Column="0" Orientation="Horizontal">
-								<views:PlayButton Margin="25 20 20 20" ToolTip="{Binding MainMenu}"/>
+								<views:PlayButton Margin="25 20 20 20"/>
 								<views:NoticeButton/>
 							</StackPanel>
 							<menus:MainMenu Grid.Column="1" DataContext="{Binding MainMenu}"/>
@@ -423,12 +408,12 @@
 						<views:FriendsList Grid.Row="1"/>
 						<views:ChatTool Grid.Row="2"/>
 
-						<!--<Border Grid.Row="1" 
+						<Border Grid.Row="1" 
 								Background="{StaticResource BG.BTM}" 
 								BorderBrush="Transparent" 
 								Height="10" 
 								HorizontalAlignment="Stretch" 
-								VerticalAlignment="Bottom"/>-->
+								VerticalAlignment="Bottom"/>
 					</Grid>
 				</DataTemplate>
 			</Setter.Value>
@@ -441,4 +426,5 @@
 			</Setter.Value>
 		</Setter>
 	</Style>
+	
 </ResourceDictionary>

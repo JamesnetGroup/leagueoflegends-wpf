@@ -26,7 +26,6 @@ namespace Leagueoflegends.Main.ViewModels
 		#region Variables
 
 		private bool _isModalVisible;
-		private bool _isPopupVisible;
 		private object _modalContent;
 		private IRiotUIElement _currentUI;
 		private List<SubMenuModel> _subMenus;
@@ -66,15 +65,6 @@ namespace Leagueoflegends.Main.ViewModels
 		}
 		#endregion
 
-		#region IsPopupVisible
-
-		public bool IsPopupVisible
-		{
-			get { return _isPopupVisible; }
-			set { _isPopupVisible = value; OnPropertyChanged(); }
-		}
-		#endregion
-
 		#region CurrentUI
 
 		public IRiotUIElement CurrentUI
@@ -92,13 +82,11 @@ namespace Leagueoflegends.Main.ViewModels
 			set { _currentSubMenu = value; OnPropertyChanged(); SubMenuChanged(value); }
 		}
 
-
 		public List<SubMenuModel> SubMenus
 		{
 			get => _subMenus;
 			set { _subMenus = value; OnPropertyChanged(); }
 		}
-
 		#endregion
 
 		#region Friends
@@ -120,8 +108,8 @@ namespace Leagueoflegends.Main.ViewModels
 		{
 			UIs = new();
 			ShowPopupCommand = new RelayCommand<string>(ShowModal);
-			TitleBar = new();
 			MainMenu = new(MenuSelected);
+			TitleBar = new();
 			Options = new();
 
 			Friends = ExamFriends.GetFriendsList();
@@ -131,20 +119,17 @@ namespace Leagueoflegends.Main.ViewModels
 		}
 		#endregion
 
-		// public..♥
+		// Public
 
 		#region ShowModal
 
 		public void ShowModal(string obj)
 		{
-			switch (obj.ToString())
+			switch (obj)
 			{
 				case "ADD FRIENDS":
 					ModalContent = new AddFriendsView().UseViewModel(new AddFriendsViewModel(AddFriendsViewClosed));
 					IsModalVisible = true;
-					break;
-				case "OPTIONS":
-					IsPopupVisible = !IsPopupVisible;
 					break;
 				default:
 					break;
@@ -160,7 +145,7 @@ namespace Leagueoflegends.Main.ViewModels
 		}
 		#endregion
 
-		// Private..♥
+		// Private
 
 		#region MenuSelected
 
@@ -208,7 +193,7 @@ namespace Leagueoflegends.Main.ViewModels
 		}
 		#endregion
 
-		// Callback..♥
+		// Callback
 
 		#region AddFriendsViewClosed
 

@@ -16,9 +16,11 @@ namespace Leagueoflegends.Friends.ViewModels
 		private Action<object> ViewClosed;
         private string _keyword;
         private ObservableCollection<AddFriendsModel> _friends1;
+        private ObservableCollection<AddFriendsModel> _friends2;
         #endregion
 
         #region ICommands
+
         public ICommand CompleteCommand { get; set; }
         public ICommand KeywordCommand { get; private set; }
         public ICommand CloseKeywordCommand { get; private set; }
@@ -43,7 +45,6 @@ namespace Leagueoflegends.Friends.ViewModels
             set { _friends1 = value; OnPropertyChanged(); }
         }
 
-        private ObservableCollection<AddFriendsModel> _friends2;
         public ObservableCollection<AddFriendsModel> Friends2
         {
             get { return _friends2; }
@@ -66,7 +67,7 @@ namespace Leagueoflegends.Friends.ViewModels
             RequestCommand = new RelayCommand<object>(RequestClick);
 
             var friends = ExamFriends.GetAddFriendsList();
-            Friends1 = new(friends.Where(x => x.IsSent == true));
+            Friends1 = new(friends.Where(x => x.IsSent));
             Friends2 = new(friends.Where(x => x.IsSent == false));
         }
         #endregion

@@ -1,5 +1,4 @@
-﻿using Leagueoflegends.Controls.Primitives;
-using Leagueoflegends.LayoutSupport.Controls;
+﻿using Leagueoflegends.LayoutSupport.Controls;
 using System.Windows;
 
 namespace Leagueoflegends.Main.Views
