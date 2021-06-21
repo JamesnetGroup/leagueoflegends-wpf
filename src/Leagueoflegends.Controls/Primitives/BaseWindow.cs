@@ -1,10 +1,9 @@
 ﻿using Leagueoflegends.Windowbase.Riotbase;
-using System.Windows;
 using System.Windows.Input;
 
 namespace Leagueoflegends.Controls.Primitives
 {
-	public class MainWindow : RiotWindow
+	public class BaseWindow : RiotWindow
 	{
 		public override void OnApplyTemplate()
 		{
@@ -20,7 +19,7 @@ namespace Leagueoflegends.Controls.Primitives
 		{
 			if (e.LeftButton == MouseButtonState.Pressed)
 			{
-				Window.GetWindow(this).DragMove();
+				GetWindow(this).DragMove();
 			}
 		}
 	}

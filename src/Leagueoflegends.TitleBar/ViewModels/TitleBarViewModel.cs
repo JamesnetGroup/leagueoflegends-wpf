@@ -10,13 +10,15 @@ namespace Leagueoflegends.TitleBar.ViewModels
 	{
 		#region Commands
 
+		public ICommand SettingCommand { get; }
 		public ICommand TitleBarSelectCommand { get; }
 		#endregion
 
 		#region Constructor
 
-		public TitleBarViewModel()
+		public TitleBarViewModel(RelayCommand<object> settingCommand)
 		{
+			SettingCommand = settingCommand;
 			TitleBarSelectCommand = new RelayCommand<object>(ButtonClick);
 		}
 		#endregion
@@ -25,7 +27,7 @@ namespace Leagueoflegends.TitleBar.ViewModels
 
 		private void ButtonClick(object obj)
 		{
-			Button btn = (Button)obj;
+			ContentControl btn = (ContentControl)obj;
 
 			switch (btn.Tag)
 			{

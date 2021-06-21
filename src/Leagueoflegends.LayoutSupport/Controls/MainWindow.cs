@@ -1,24 +1,23 @@
 ﻿using Leagueoflegends.Controls.Primitives;
 using System.Windows;
-using System.Windows.Controls;
 
 namespace Leagueoflegends.LayoutSupport.Controls
 {
-	public class ContentsWindow : MainWindow
+	public class MainWindow : BaseWindow
 	{
 		#region DependencyProperties
 
-		public static readonly DependencyProperty TopMenuTemplateProperty = DependencyProperty.Register("TopMenuTemplate", typeof(DataTemplate), typeof(ContentsWindow), new PropertyMetadata(null));
-		public static readonly DependencyProperty ProfileTemplateProperty = DependencyProperty.Register("ProfileTemplate", typeof(DataTemplate), typeof(ContentsWindow), new PropertyMetadata(null));
-		public static readonly DependencyProperty FriendsTemplateProperty = DependencyProperty.Register("FriendsTemplate", typeof(DataTemplate), typeof(ContentsWindow), new PropertyMetadata(null));
-		public static readonly DependencyProperty ModalTemplateProperty = DependencyProperty.Register("ModalTemplate", typeof(DataTemplate), typeof(ContentsWindow), new PropertyMetadata(null));
+		public static readonly DependencyProperty TopMenuTemplateProperty = DependencyProperty.Register("TopMenuTemplate", typeof(DataTemplate), typeof(MainWindow), new PropertyMetadata(null));
+		public static readonly DependencyProperty ProfileTemplateProperty = DependencyProperty.Register("ProfileTemplate", typeof(DataTemplate), typeof(MainWindow), new PropertyMetadata(null));
+		public static readonly DependencyProperty FriendsTemplateProperty = DependencyProperty.Register("FriendsTemplate", typeof(DataTemplate), typeof(MainWindow), new PropertyMetadata(null));
+		public static readonly DependencyProperty ModalTemplateProperty = DependencyProperty.Register("ModalTemplate", typeof(DataTemplate), typeof(MainWindow), new PropertyMetadata(null));
 		#endregion
 
 		#region DefaultStyleKey
 
-		static ContentsWindow()
+		static MainWindow()
         {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(ContentsWindow), new FrameworkPropertyMetadata(typeof(ContentsWindow)));
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(MainWindow), new FrameworkPropertyMetadata(typeof(MainWindow)));
 		}
 		#endregion
 

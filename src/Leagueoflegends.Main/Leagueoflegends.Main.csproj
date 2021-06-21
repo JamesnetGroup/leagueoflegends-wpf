@@ -114,6 +114,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Leagueoflegends.Client.Normal\Leagueoflegends.Client.Normal.csproj">
+      <Project>{a0ba31fa-2b99-4879-8fd3-0cb7de52fc85}</Project>
+      <Name>Leagueoflegends.Client.Normal</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Leagueoflegends.Controls\Leagueoflegends.Controls.csproj">
       <Project>{f6309cba-5a01-4e4e-ae66-02841968c02d}</Project>
       <Name>Leagueoflegends.Controls</Name>
@@ -157,6 +161,10 @@
     <ProjectReference Include="..\Leagueoflegends.Resources\Leagueoflegends.Resources.csproj">
       <Project>{1afee701-95ed-4977-95b3-249a9821de5b}</Project>
       <Name>Leagueoflegends.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Leagueoflegends.Settings\Leagueoflegends.Settings.csproj">
+      <Project>{2F65A578-13D0-43B9-AFE1-1695F6C9DC5E}</Project>
+      <Name>Leagueoflegends.Settings</Name>
     </ProjectReference>
     <ProjectReference Include="..\Leagueoflegends.TeamFight\Leagueoflegends.TeamFight.csproj">
       <Project>{f7aa3593-bf16-4eea-915d-906b30bbf74b}</Project>

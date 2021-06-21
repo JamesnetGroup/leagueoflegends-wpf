@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.31410.414
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31306.274
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01. Based", "01. Based", "{56621D41-07D0-471B-8C67-9F3BA8AA443D}"
 EndProject
@@ -60,6 +60,14 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "00. Data", "00. Data", "{F6DB4F19-115A-45A3-864D-C7C52C87E001}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leagueoflegends.ExampleData", "Leagueoflegends.ExampleData\Leagueoflegends.ExampleData.csproj", "{AD7CAAEF-1792-4CC7-A0B3-56F67EA44B03}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05. Settings", "05. Settings", "{65D57D18-E304-40CA-A1D2-49119AF00EB6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01. Client", "01. Client", "{21A9A245-D5E5-4A84-A0F5-0FB1F6237830}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leagueoflegends.Client.Normal", "Leagueoflegends.Client.Normal\Leagueoflegends.Client.Normal.csproj", "{A0BA31FA-2B99-4879-8FD3-0CB7DE52FC85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leagueoflegends.Settings", "Leagueoflegends.Settings\Leagueoflegends.Settings.csproj", "{2F65A578-13D0-43B9-AFE1-1695F6C9DC5E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -131,6 +139,14 @@ Global
 		{AD7CAAEF-1792-4CC7-A0B3-56F67EA44B03}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD7CAAEF-1792-4CC7-A0B3-56F67EA44B03}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD7CAAEF-1792-4CC7-A0B3-56F67EA44B03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0BA31FA-2B99-4879-8FD3-0CB7DE52FC85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0BA31FA-2B99-4879-8FD3-0CB7DE52FC85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0BA31FA-2B99-4879-8FD3-0CB7DE52FC85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0BA31FA-2B99-4879-8FD3-0CB7DE52FC85}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F65A578-13D0-43B9-AFE1-1695F6C9DC5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F65A578-13D0-43B9-AFE1-1695F6C9DC5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F65A578-13D0-43B9-AFE1-1695F6C9DC5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F65A578-13D0-43B9-AFE1-1695F6C9DC5E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -158,6 +174,10 @@ Global
 		{5B4825EB-1CA7-4AE2-8615-1CE02DA4353E} = {61035FC2-41A9-4488-B12C-6F12ED1B2829}
 		{C62293C7-C592-4A62-8347-FB4CD0CBE3CB} = {5B4825EB-1CA7-4AE2-8615-1CE02DA4353E}
 		{AD7CAAEF-1792-4CC7-A0B3-56F67EA44B03} = {F6DB4F19-115A-45A3-864D-C7C52C87E001}
+		{65D57D18-E304-40CA-A1D2-49119AF00EB6} = {61035FC2-41A9-4488-B12C-6F12ED1B2829}
+		{21A9A245-D5E5-4A84-A0F5-0FB1F6237830} = {65D57D18-E304-40CA-A1D2-49119AF00EB6}
+		{A0BA31FA-2B99-4879-8FD3-0CB7DE52FC85} = {21A9A245-D5E5-4A84-A0F5-0FB1F6237830}
+		{2F65A578-13D0-43B9-AFE1-1695F6C9DC5E} = {65D57D18-E304-40CA-A1D2-49119AF00EB6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EB8A4E83-8ABD-40CF-B56A-559A49B51254}

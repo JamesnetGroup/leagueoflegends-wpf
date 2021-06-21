@@ -12,7 +12,7 @@
 		<Setter Property="Height" Value="14"/>
 	</Style>
 
-	<Style TargetType="{x:Type Button}"  x:Key="IN.WIN.HELP" >
+	<Style TargetType="{x:Type Button}"  x:Key="WIN.HELP" >
 		<Setter Property="Command" Value="{Binding TitleBarSelectCommand}"/>
 		<Setter Property="CommandParameter" Value="{Binding RelativeSource={RelativeSource Self}}"/>
 		<Setter Property="Tag" Value="HELP"/>
@@ -35,7 +35,7 @@
 		</Setter>
 	</Style>
 
-	<Style TargetType="{x:Type Button}" x:Key="IN.WIN.MINIMIZE">
+	<Style TargetType="{x:Type Button}" x:Key="WIN.MINIMIZE">
 		<Setter Property="Command" Value="{Binding TitleBarSelectCommand}"/>
 		<Setter Property="CommandParameter" Value="{Binding RelativeSource={RelativeSource Self}}"/>
 		<Setter Property="Tag" Value="MIN"/>
@@ -58,10 +58,9 @@
 		</Setter>
 	</Style>
 
-	<Style TargetType="{x:Type ToggleButton}"  x:Key="IN.WIN.SETTINGS" >
-		<Setter Property="Command" Value="{Binding TitleBarSelectCommand}"/>
+	<Style TargetType="{x:Type ToggleButton}"  x:Key="WIN.SETTINGS" >
+		<Setter Property="Command" Value="{Binding SettingCommand}"/>
 		<Setter Property="CommandParameter" Value="{Binding RelativeSource={RelativeSource Self}}"/>
-		<Setter Property="Tag" Value="SET"/>
 		<Setter Property="Grid.Column" Value="3"/>
 		<Setter Property="Margin" Value="10 5 5 5"/>
 		<Setter Property="Template">
@@ -81,7 +80,7 @@
 		</Setter>
 	</Style>
 
-	<Style TargetType="{x:Type Button}"  x:Key="IN.WIN.CLOSE" >
+	<Style TargetType="{x:Type Button}"  x:Key="WIN.CLOSE" >
 		<Setter Property="Command" Value="{Binding TitleBarSelectCommand}"/>
 		<Setter Property="CommandParameter" Value="{Binding RelativeSource={RelativeSource Self}}"/>
 		<Setter Property="Tag" Value="CLOSE"/>
@@ -116,10 +115,10 @@
 							<ColumnDefinition Width="Auto"/>
 							<ColumnDefinition Width="Auto"/>
 						</Grid.ColumnDefinitions>
-						<Button Style="{StaticResource IN.WIN.HELP}"/>
-						<Button Style="{StaticResource IN.WIN.MINIMIZE}"/>
-						<ToggleButton Style="{StaticResource IN.WIN.SETTINGS}"/>
-						<Button Style="{StaticResource IN.WIN.CLOSE}"/>
+						<Button Style="{StaticResource WIN.HELP}"/>
+						<Button Style="{StaticResource WIN.MINIMIZE}"/>
+						<ToggleButton Style="{StaticResource WIN.SETTINGS}"/>
+						<Button Style="{StaticResource WIN.CLOSE}"/>
 					</Grid>
 				</ControlTemplate>
 			</Setter.Value>

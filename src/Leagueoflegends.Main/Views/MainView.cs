@@ -3,7 +3,7 @@ using System.Windows;
 
 namespace Leagueoflegends.Main.Views
 {
-	public class MainView : ContentsWindow
+	public class MainView : MainWindow
 	{
 		#region DefaultStyleKey
 

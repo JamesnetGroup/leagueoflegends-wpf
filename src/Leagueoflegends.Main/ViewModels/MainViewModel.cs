@@ -10,6 +10,8 @@ using Leagueoflegends.Menus.ViewModels;
 using Leagueoflegends.MyShop.ViewModels;
 using Leagueoflegends.MyShop.Views;
 using Leagueoflegends.Options.ViewModels;
+using Leagueoflegends.Settings.ViewModels;
+using Leagueoflegends.Settings.Views;
 using Leagueoflegends.TeamFight.ViewModels;
 using Leagueoflegends.TeamFight.Views;
 using Leagueoflegends.TitleBar.ViewModels;
@@ -108,8 +110,8 @@ namespace Leagueoflegends.Main.ViewModels
 		{
 			UIs = new();
 			ShowPopupCommand = new RelayCommand<string>(ShowModal);
+			TitleBar = new TitleBarViewModel(new RelayCommand<object>(SettingSelected));
 			MainMenu = new(MenuSelected);
-			TitleBar = new();
 			Options = new();
 
 			Friends = ExamFriends.GetFriendsList();
@@ -133,14 +135,6 @@ namespace Leagueoflegends.Main.ViewModels
 					break;
 				default:
 					break;
-					//case "SETTING":
-					//	ModalContent = new SettingView();
-					//	IsModalVisible = true;
-					//	break;
-					//case "ADD CHAMPION":
-					//	ModalContent = new AddChampionView();
-					//	IsModalVisible = true;
-					//	break;
 			}
 		}
 		#endregion
@@ -154,6 +148,15 @@ namespace Leagueoflegends.Main.ViewModels
 			_mainMenu = menu;
 			SubMenus = subMenus;
 			CurrentSubMenu = SubMenus.FirstOrDefault();
+		}
+		#endregion
+
+		#region SettingSelected
+
+		private void SettingSelected(object obj)
+		{
+			ModalContent = new SettingView().UseViewModel(new SettingViewModel(SettingViewClosed));
+			IsModalVisible = true;
 		}
 		#endregion
 
@@ -198,6 +201,14 @@ namespace Leagueoflegends.Main.ViewModels
 		#region AddFriendsViewClosed
 
 		private void AddFriendsViewClosed(object obj)
+		{
+			IsModalVisible = false;
+		}
+		#endregion
+
+		#region SettingViewClosed
+
+		private void SettingViewClosed(object obj)
 		{
 			IsModalVisible = false;
 		}

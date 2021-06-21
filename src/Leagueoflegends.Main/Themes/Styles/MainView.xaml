@@ -338,7 +338,7 @@
 		</Setter>
 	</Style>
 
-	<Style TargetType="{x:Type views:MainView}" BasedOn="{StaticResource {x:Type ctrls:ContentsWindow}}">
+	<Style TargetType="{x:Type views:MainView}" BasedOn="{StaticResource {x:Type ctrls:MainWindow}}">
 		<Setter Property="TopMenuTemplate">
 			<Setter.Value>
 				<DataTemplate>

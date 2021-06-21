@@ -5,6 +5,6 @@
 		<ResourceDictionary Source="/Leagueoflegends.LayoutSupport;component/Themes/Styles/BasicScroll.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.LayoutSupport;component/Themes/Styles/RiotIcon.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.LayoutSupport;component/Themes/Styles/RiotTooltip.xaml"/>
-		<ResourceDictionary Source="/Leagueoflegends.LayoutSupport;component/Themes/Styles/ContentsWindow.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.LayoutSupport;component/Themes/Styles/MainWindow.xaml"/>
 	</ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
