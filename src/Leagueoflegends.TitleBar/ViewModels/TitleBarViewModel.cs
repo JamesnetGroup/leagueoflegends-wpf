@@ -16,9 +16,9 @@ namespace Leagueoflegends.TitleBar.ViewModels
 
 		#region Constructor
 
-		public TitleBarViewModel(RelayCommand<object> settingCommand)
+		public TitleBarViewModel(Action<object> settingCommand)
 		{
-			SettingCommand = settingCommand;
+			SettingCommand = new RelayCommand<object>(settingCommand);
 			TitleBarSelectCommand = new RelayCommand<object>(ButtonClick);
 		}
 		#endregion

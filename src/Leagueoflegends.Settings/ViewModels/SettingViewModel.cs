@@ -8,17 +8,18 @@ using Leagueoflegends.Windowbase.Mvvm;
 using Leagueoflegends.Windowbase.Riotcore;
 using System;
 using System.Collections.Generic;
+using System.Windows;
 using System.Windows.Input;
 
 namespace Leagueoflegends.Settings.ViewModels
 {
 	public class SettingViewModel : ObservableObject
 	{
-		private Action<object> ViewClosed;
-		private IRiotUIElement _currentView;
+		private Action<IRiotUI> ViewClosed;
+		private IRiotUI _currentView;
 		private List<SettingMenuModel> _settingMenus;
 		private SettingMenuModel _currentSettingMenu;
-		private Dictionary<int, IRiotUIElement> UIs { get; set; }
+		private Dictionary<int, IRiotUI> UIs { get; set; }
 
 		#region Command
 
@@ -42,7 +43,7 @@ namespace Leagueoflegends.Settings.ViewModels
 
 		#region CurrentView
 
-		public IRiotUIElement CurrentView
+		public IRiotUI CurrentView
 		{
 			get => _currentView;
 			set { _currentView = value; OnPropertyChanged(); }
@@ -51,13 +52,12 @@ namespace Leagueoflegends.Settings.ViewModels
 
 		#region Constructor
 
-		public SettingViewModel(Action<object> _viewClosed)
+		public SettingViewModel(Action<IRiotUI> modalClose)
 		{
-			ViewClosed = _viewClosed;
-
-			UIs = new();
+			ViewClosed = modalClose;
+			   UIs = new();
 			SettingMenus = ExamSettings.GetSettingList();
-			CompleteCommand = new RelayCommand<DarkBackground>(CompleteClick);
+			CompleteCommand = new RelayCommand<Modal>(CompleteClick);
 		}
 		#endregion
 
@@ -65,7 +65,7 @@ namespace Leagueoflegends.Settings.ViewModels
 
 		private void SettingMenuChanged(SettingMenuModel value)
 		{
-			IRiotUIElement content;
+			IRiotUI content;
 			int key;
 
 			if (value != null)
@@ -89,9 +89,9 @@ namespace Leagueoflegends.Settings.ViewModels
 
 		#region CompleteClick
 
-		private void CompleteClick(DarkBackground obj)
+		private void CompleteClick(Modal obj)
 		{
-			ViewClosed.Invoke(this);
+			ViewClosed.Invoke(View);
 		}
 		#endregion
 	}

@@ -56,6 +56,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Themes\Styles\Modal.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Themes\Styles\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -71,7 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\UIObject\IModalUIObject.cs" />
-    <Compile Include="Controls\DarkBackground.cs" />
+    <Compile Include="Controls\Modal.cs" />
     <Compile Include="Controls\MainWindow.cs" />
     <Compile Include="Controls\RiotTextBox.cs" />
     <Compile Include="Controls\RiotTooltip.cs" />

@@ -370,7 +370,7 @@
 		<Setter Property="Height" Value="35"/>
 		<Setter Property="Grid.Row" Value="3"/>
 		<Setter Property="Command" Value="{Binding CompleteCommand}"/>
-		<Setter Property="CommandParameter" Value="{Binding RelativeSource={RelativeSource AncestorType=ctrls:DarkBackground}}"/>
+		<Setter Property="CommandParameter" Value="{Binding RelativeSource={RelativeSource AncestorType=ctrls:Modal}}"/>
 		<Setter Property="FontFamily" Value="Friz Quadrata Std"/>
 		<Setter Property="FontWeight" Value="Normal"/>
 		<Setter Property="FontSize" Value="14"/>

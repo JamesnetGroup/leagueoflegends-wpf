@@ -53,13 +53,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Compile Include="ViewModels\TitleBarViewModel.cs" />
-    <Compile Include="Views\TitleBarView.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Page Include="Themes\Styles\TitleBar.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -105,6 +98,10 @@
       <Project>{b0e72967-60f7-4796-8940-36d3822131a7}</Project>
       <Name>Leagueoflegends.Windowbase</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Themes\Styles\" />
+    <Folder Include="Views\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

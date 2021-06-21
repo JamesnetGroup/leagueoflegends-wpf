@@ -2,9 +2,11 @@
 using Leagueoflegends.ExampleData.Friends;
 using Leagueoflegends.LayoutSupport.Controls;
 using Leagueoflegends.Windowbase.Mvvm;
+using Leagueoflegends.Windowbase.Riotcore;
 using System;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Windows;
 using System.Windows.Input;
 
 namespace Leagueoflegends.Friends.ViewModels
@@ -13,7 +15,7 @@ namespace Leagueoflegends.Friends.ViewModels
 	{
 		#region Variables
 
-		private Action<object> ViewClosed;
+		private Action<IRiotUI> ViewClosed;
         private string _keyword;
         private ObservableCollection<AddFriendsModel> _friends1;
         private ObservableCollection<AddFriendsModel> _friends2;
@@ -55,14 +57,14 @@ namespace Leagueoflegends.Friends.ViewModels
 
         #region Constructor
 
-        public AddFriendsViewModel(Action<object> _viewClosed)
+        public AddFriendsViewModel(Action<IRiotUI> _viewClosed)
         {
             ViewClosed = _viewClosed;
 
             Keyword = "";
             KeywordCommand = new RelayCommand<object>(KeywordChanged);
             CloseKeywordCommand = new RelayCommand<object>(CloseKeyword);
-            CompleteCommand = new RelayCommand<DarkBackground>(CompleteClick);
+            CompleteCommand = new RelayCommand<Modal>(CompleteClick);
             DeleteCommand = new RelayCommand<object>(DeleteClick);
             RequestCommand = new RelayCommand<object>(RequestClick);
 
@@ -90,9 +92,9 @@ namespace Leagueoflegends.Friends.ViewModels
 
         #region CompleteClick
 
-        private void CompleteClick(DarkBackground obj)
+        private void CompleteClick(Modal obj)
         {
-            ViewClosed.Invoke(this);
+            ViewClosed.Invoke(View);
         }
 		#endregion
 
