@@ -10,7 +10,7 @@ using System.Windows;
 
 namespace Leagueoflegends.Main.Local.Works
 {
-	public class ContentWork
+	public class ModalWork
 	{
 		#region Variables 
 
@@ -20,50 +20,58 @@ namespace Leagueoflegends.Main.Local.Works
 
 		#region Constructor
 
-		public ContentWork(MainViewModel view)
+		public ModalWork(MainViewModel view)
 		{
 			_view = view;
 			_modals = new();
 		}
 		#endregion
 
+		#region SwitchModal
+
 		internal void SwitchModal(Type type)
 		{
 			IRiotUI content = null;
 
-			if (typeof(SettingView) == type) content = ShowSettingView(type);
-			if (typeof(AddFriendsView) == type) content = ShowAddFreidns(type);
+			if (typeof(SettingView) == type) content = SwitchSettingView(type);
+			if (typeof(AddFriendsView) == type) content = SwitchAddFriendsView(type);
 
 			_view.ModalContent = content;
 		}
+		#endregion
 
-		private IRiotUI ShowSettingView(Type type)
+		#region SwitchSettingView
+
+		private IRiotUI SwitchSettingView(Type type)
 		{
 			if (!_modals.ContainsKey(type))
 			{
-				var vm = new SettingViewModel(ModalClose);
-				var view = new SettingView().UseViewModel(vm);
-				_modals.Add(type, view);
+				_modals.Add(type, new SettingView().SetVM(new SettingViewModel(CloseModal)));
 			}
 
 			return _modals[type];
 		}
+		#endregion
 
-		private IRiotUI ShowAddFreidns(Type type)
+		#region SwitchAddFriendsView
+
+		private IRiotUI SwitchAddFriendsView(Type type)
 		{
 			if (!_modals.ContainsKey(type))
 			{
-				var vm = new AddFriendsViewModel(ModalClose);
-				var view = new AddFriendsView();
-				_modals.Add(type, view);
+				_modals.Add(type, new AddFriendsView().SetVM(new AddFriendsViewModel(CloseModal)));
 			}
 
 			return _modals[type];
 		}
+		#endregion
 
-		private void ModalClose(IRiotUI ui)
+		#region CloseModal
+
+		private void CloseModal(IRiotUI ui)
 		{
 			_view.ModalContent = null;
 		}
+		#endregion
 	}
 }

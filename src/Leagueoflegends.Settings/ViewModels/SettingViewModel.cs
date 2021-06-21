@@ -15,11 +15,14 @@ namespace Leagueoflegends.Settings.ViewModels
 {
 	public class SettingViewModel : ObservableObject
 	{
+		#region Variables
+
 		private Action<IRiotUI> ViewClosed;
 		private IRiotUI _currentView;
 		private List<SettingMenuModel> _settingMenus;
 		private SettingMenuModel _currentSettingMenu;
 		private Dictionary<int, IRiotUI> UIs { get; set; }
+		#endregion 
 
 		#region Command
 
@@ -73,7 +76,7 @@ namespace Leagueoflegends.Settings.ViewModels
 				key = value.Seq;
 				content = value.Seq switch
 				{
-					1 => new ClientNormalView().UseViewModel(new ClientNormalViewModel()),
+					1 => new ClientNormalView().SetVM(new ClientNormalViewModel()),
 					_ => new EmptyView()
 				};
 

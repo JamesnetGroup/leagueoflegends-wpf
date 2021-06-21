@@ -87,7 +87,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Local\Works\ContentWork.cs" />
+    <Compile Include="Local\Works\ModalWork.cs" />
     <Compile Include="Local\Works\WindowWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

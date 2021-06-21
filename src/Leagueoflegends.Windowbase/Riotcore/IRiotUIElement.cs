@@ -5,7 +5,7 @@ namespace Leagueoflegends.Windowbase.Riotcore
 {
 	public interface IRiotUI
 	{
-		IRiotUI UseViewModel(ObservableObject vm);
+		IRiotUI SetVM(ObservableObject vm);
 		void Show(SubMenuModel menu);
 	}
 }
