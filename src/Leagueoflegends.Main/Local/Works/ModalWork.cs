@@ -14,15 +14,15 @@ namespace Leagueoflegends.Main.Local.Works
 	{
 		#region Variables 
 
-		private MainViewModel _view;
+		private MainViewModel _vm;
 		private Dictionary<Type, IRiotUI> _modals;
 		#endregion
 
 		#region Constructor
 
-		public ModalWork(MainViewModel view)
+		public ModalWork(MainViewModel vm)
 		{
-			_view = view;
+			_vm = vm;
 			_modals = new();
 		}
 		#endregion
@@ -36,7 +36,7 @@ namespace Leagueoflegends.Main.Local.Works
 			if (typeof(SettingView) == type) content = SwitchSettingView(type);
 			if (typeof(AddFriendsView) == type) content = SwitchAddFriendsView(type);
 
-			_view.ModalContent = content;
+			_vm.ModalContent = content;
 		}
 		#endregion
 
@@ -70,7 +70,7 @@ namespace Leagueoflegends.Main.Local.Works
 
 		private void CloseModal(IRiotUI ui)
 		{
-			_view.ModalContent = null;
+			_vm.ModalContent = null;
 		}
 		#endregion
 	}

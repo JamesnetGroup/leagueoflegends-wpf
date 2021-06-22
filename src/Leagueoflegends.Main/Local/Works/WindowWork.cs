@@ -12,7 +12,7 @@ namespace Leagueoflegends.Main.Local.Works
 			_view = view;
 		}
 
-		public void DoClosing(object ui)
+		internal void DoClosing(object ui)
 		{
 			Window.GetWindow((UIElement)ui).Close();
 		}
