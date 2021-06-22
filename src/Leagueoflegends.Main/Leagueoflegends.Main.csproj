@@ -95,6 +95,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Local\Collection\FriendsCollection.cs" />
     <Compile Include="Local\Works\ModalWork.cs" />
     <Compile Include="Local\Works\WindowWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -192,5 +193,6 @@
       <Name>Leagueoflegends.Windowbase</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

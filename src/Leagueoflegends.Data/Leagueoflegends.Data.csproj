@@ -12,6 +12,7 @@
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <LangVersion>9.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -47,7 +48,7 @@
     <Compile Include="Enums\GeoIcon.cs" />
     <Compile Include="Enums\SettingMenuType.cs" />
     <Compile Include="Main\AddFriendsModel.cs" />
-    <Compile Include="Main\CommunityModel.cs" />
+    <Compile Include="Main\FriendsModel.cs" />
     <Compile Include="Main\OptionModel.cs" />
     <Compile Include="Main\SubMenuModel.cs" />
     <Compile Include="Main\MainMenuModel.cs" />
