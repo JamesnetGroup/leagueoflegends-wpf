@@ -4,17 +4,22 @@ namespace Leagueoflegends.Data.Main
 {
 	public class FriendsModel
 	{
-        public string Header { get; set; }
+        public string Name { get; set; }
         public bool IsExpanded { get; set; }
         public bool IsUser { get; set; }
         public int Connect { get; set; }
         public int Status { get; set; }
         public string Avatar { get; set; }
         public List<FriendsModel> Children { get; set; }
+        
+        public FriendsModel()
+        { 
+            
+        }
 
         public FriendsModel(string header)
         {
-            Header = header;
+            Name = header;
             IsUser = false;
             IsExpanded = true;
             Children = new();
@@ -26,7 +31,7 @@ namespace Leagueoflegends.Data.Main
 			Status = status;
             Connect = online;
             Avatar = $"/Leagueoflegends.Resources;component/Images/Square/{avatar}.png";
-            Header = header;
+            Name = header;
         }
     }
 }
