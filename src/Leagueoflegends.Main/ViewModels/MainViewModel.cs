@@ -2,6 +2,7 @@
 using Leagueoflegends.ExampleData.Friends;
 using Leagueoflegends.Home.General.ViewModels;
 using Leagueoflegends.Home.General.Views;
+using Leagueoflegends.Main.Local.Collection;
 using Leagueoflegends.Main.Local.Works;
 using Leagueoflegends.Main.Views;
 using Leagueoflegends.Menus.ViewModels;
@@ -31,7 +32,7 @@ namespace Leagueoflegends.Main.ViewModels
 		private List<SubMenuModel> _subMenus;
 		private SubMenuModel _currentSubMenu;
 		private MainMenuModel _mainMenu;
-		private List<CommunityModel> _friends;
+		private FriendsCollection _friends;
 
 		private Dictionary<string, IRiotUI> UIs { get; set; }
 		#endregion
@@ -84,15 +85,11 @@ namespace Leagueoflegends.Main.ViewModels
 
 		#region Friends
 
-		public List<CommunityModel> Friends
+		public FriendsCollection Friends
 		{
 			get => _friends;
 			set { _friends = value; OnPropertyChanged(); }
 		}
-
-		public int TotalFriendsCount { get; set; }
-		public int GeneralFriendsCount { get; set; }
-		public int OfflineFriendsCount { get; set; }
 		#endregion
 
 		#region Constructor
@@ -110,11 +107,7 @@ namespace Leagueoflegends.Main.ViewModels
 
 			MainMenu = new(MenuSelected);
 			Options = new();
-
-			Friends = ExamFriends.GetFriendsList();
-			GeneralFriendsCount = Friends[0].Children.Count();
-			OfflineFriendsCount = Friends[1].Children.Count();
-			TotalFriendsCount = GeneralFriendsCount + OfflineFriendsCount;
+			Friends = new(ExamFriends.GetFriendsList());
 		}
 		#endregion
 

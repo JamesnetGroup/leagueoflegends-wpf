@@ -61,16 +61,15 @@
 								<TextBlock x:Name="text2" Style="{StaticResource TXB.FRIENDS}" Visibility="Collapsed" Margin="5 0 0 0">
 									<TextBlock.Text>
 										<MultiBinding StringFormat="{}({0}/{1})">
-											<Binding RelativeSource="{RelativeSource AncestorType=views:MainView}" Path="DataContext.GeneralFriendsCount"/>
-											<Binding RelativeSource="{RelativeSource AncestorType=views:MainView}" Path="DataContext.TotalFriendsCount" />
+											<Binding RelativeSource="{RelativeSource AncestorType=views:MainView}" Path="DataContext.Friends.GeneralFriendsCount"/>
+											<Binding RelativeSource="{RelativeSource AncestorType=views:MainView}" Path="DataContext.Friends.TotalFriendsCount" />
 										</MultiBinding>
 									</TextBlock.Text>
 								</TextBlock>
 								<TextBlock x:Name="text3" Style="{StaticResource TXB.FRIENDS}" Visibility="Collapsed" Margin="5 0 0 0">
 									<TextBlock.Text>
-										<MultiBinding StringFormat="{}({0}/{1})">
-											<Binding RelativeSource="{RelativeSource AncestorType=views:MainView}" Path="DataContext.OfflineFriendsCount"/>
-											<Binding RelativeSource="{RelativeSource AncestorType=views:MainView}" Path="DataContext.TotalFriendsCount" />
+										<MultiBinding StringFormat="{}({0})">
+											<Binding RelativeSource="{RelativeSource AncestorType=views:MainView}" Path="DataContext.Friends.OfflineFriendsCount"/>
 										</MultiBinding>
 									</TextBlock.Text>
 								</TextBlock>
@@ -103,6 +102,7 @@
 		
 	<Style TargetType="{x:Type TreeViewItem}" x:Key="TRVI.FRIENDS">
 		<Setter Property="ItemsSource" Value="{Binding Children}"/>
+		<Setter Property="IsExpanded" Value="{Binding IsExpanded, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type TreeViewItem}">
