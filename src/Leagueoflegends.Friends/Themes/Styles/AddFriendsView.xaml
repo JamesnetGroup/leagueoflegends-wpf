@@ -3,17 +3,6 @@
 					xmlns:views="clr-namespace:Leagueoflegends.Friends.Views"
 					xmlns:ctrls="clr-namespace:Leagueoflegends.LayoutSupport.Controls;assembly=Leagueoflegends.LayoutSupport">
 
-	<LinearGradientBrush x:Key="TXB.BG.OVER" StartPoint="0.5, 0" EndPoint="0.5, 1">
-		<GradientStop Color="#06101A" Offset="0.0" />
-		<GradientStop Color="#141D24" Offset="1.0" />
-	</LinearGradientBrush>
-
-	<LinearGradientBrush x:Key="TXB.BDR.OVER"  StartPoint="0.5 0" EndPoint="0.5 1">
-		<GradientStop Color="#795B29" Offset="0" />
-		<GradientStop Color="#9E8049" Offset="0.5" />
-		<GradientStop Color="#C7A96E" Offset="1" />
-	</LinearGradientBrush>
-
 	<LinearGradientBrush x:Key="BTN.BDR" EndPoint="0.5,1" StartPoint="0.5,0">
 		<GradientStop Color="#C8AA6E" Offset="0"/>
 		<GradientStop Color="#795c28" Offset="1"/>
@@ -27,18 +16,6 @@
 	<LinearGradientBrush x:Key="BTN.BG.OVER" EndPoint="0.5,1" StartPoint="0.5,0">
 		<GradientStop Color="#1e232a" Offset="0"/>
 		<GradientStop Color="#443e2e" Offset="1"/>
-	</LinearGradientBrush>
-
-	<LinearGradientBrush x:Key="IMG.BDR" EndPoint="0.5,1" StartPoint="0.5,0">
-		<GradientStop Color="#B79349" Offset="0"/>
-		<GradientStop Color="#957230" Offset="0.5"/>
-		<GradientStop Color="#6C5228" Offset="1"/>
-	</LinearGradientBrush>
-
-	<LinearGradientBrush x:Key="IMG.BDR.OVER" EndPoint="0.5,1" StartPoint="0.5,0">
-		<GradientStop Color="#E9DFCB" Offset="0"/>
-		<GradientStop Color="#D9BD81" Offset="0.5"/>
-		<GradientStop Color="#C99D3F" Offset="1"/>
 	</LinearGradientBrush>
 
 	<LinearGradientBrush x:Key="BTN.DONE.BG" EndPoint="0.5,1" StartPoint="0.5,0">
@@ -63,92 +40,6 @@
 		<GradientStop Color="#C89D3E" Offset="1"/>
 	</LinearGradientBrush>
 
-	<LinearGradientBrush x:Key="BDR.BLUR" EndPoint="0.5,1" StartPoint="0.5,0">
-		<GradientStop Color="#00010A13" Offset="0"/>
-		<GradientStop Color="#010A13" Offset="0.5"/>
-		<GradientStop Color="#010A13" Offset="1"/>
-	</LinearGradientBrush>
-	
-	<Style TargetType="{x:Type Button}" x:Key="BTN.CLOSE">
-		<Setter Property="Command" Value="{Binding CloseKeywordCommand}"/>
-		<Setter Property="Cursor" Value="Hand"/>
-		<Setter Property="Visibility" Value="Collapsed"/>
-		<Setter Property="HorizontalAlignment" Value="Right"/>
-		<Setter Property="Margin" Value="0 0 10 0"/>
-		<Setter Property="Template">
-			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type Button}">
-					<ControlTemplate.Resources>
-						<Style TargetType="{x:Type Border}" x:Key="IN.BORDER">
-							<Setter Property="Background" Value="Transparent"/>
-						</Style>
-					</ControlTemplate.Resources>
-					<Border Style="{StaticResource IN.BORDER}">
-						<ctrls:RiotIcon x:Name="icon" IconType="Close" HorizontalAlignment="Left" Fill="#CDBE91" Width="15" Height="15" Margin="10 0 0 0"/>
-					</Border>
-					<ControlTemplate.Triggers>
-						<Trigger Property="IsMouseOver" Value="True">
-							<Setter TargetName="icon" Property="Fill" Value="#F0E6D2"/>
-						</Trigger>
-						<Trigger Property="IsPressed" Value="True">
-							<Setter TargetName="icon" Property="Fill" Value="#999999"/>
-						</Trigger>
-					</ControlTemplate.Triggers>
-				</ControlTemplate>
-			</Setter.Value>
-		</Setter>
-	</Style>
-
-	<Style TargetType="{x:Type ctrls:RiotTextBox}" x:Key="TXT.SEARCH">
-		<Setter Property="Command" Value="{Binding KeywordCommand}"/>
-		<Setter Property="Text" Value="{Binding Keyword, UpdateSourceTrigger=PropertyChanged}"/>
-		<Setter Property="HorizontalAlignment" Value="Left"/>
-		<Setter Property="VerticalContentAlignment" Value="Center"/>
-		<Setter Property="CaretBrush" Value="#DDDDDD"/>
-		<Setter Property="Foreground" Value="#F1F1F1"/>
-		<Setter Property="FontSize" Value="13"/>
-		<Setter Property="FocusVisualStyle" Value="{x:Null}"/>
-		<Setter Property="MinWidth" Value="500"/>
-		<Setter Property="Height" Value="35"/>
-		<Setter Property="Margin" Value="0 12 0 0"/>
-		<Setter Property="Padding" Value="0 5 0 5"/>
-		<Setter Property="Template">
-			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type ctrls:RiotTextBox}">
-					<Grid>
-						<Border x:Name="border" Background="#000407" BorderBrush="#785A28" BorderThickness="1"/>
-						<ctrls:RiotIcon IconType="Magnify" HorizontalAlignment="Left" Fill="#F0E6D2" Width="15" Height="15" Margin="10 0 0 0"/>
-						<ScrollViewer x:Name="PART_ContentHost" Margin="30 0 30 0" VerticalAlignment="Center"/>
-						<TextBlock x:Name="placeholder" Margin="32 0 10 0" VerticalAlignment="Center" Foreground="#757575" Text="Player Name" Visibility="Collapsed"/>
-						<Button x:Name="close" Style="{StaticResource BTN.CLOSE}"/>
-					</Grid>
-					<ControlTemplate.Triggers>
-						<Trigger Property="IsMouseOver" Value="True">
-							<Setter Property="Cursor" Value="IBeam"/>
-						</Trigger>
-						<DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Text}" Value="">
-							<Setter TargetName="placeholder" Property="Visibility" Value="Visible"/>
-							<Setter TargetName="close" Property="Visibility" Value="Collapsed"/>
-						</DataTrigger>
-						<DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=IsKeyboardFocusWithin}" Value="True">
-							<Setter TargetName="placeholder" Property="Foreground" Value="#66757575"/>
-							<Setter TargetName="border" Property="Background" Value="{StaticResource TXB.BG.OVER}"/>
-							<Setter TargetName="border" Property="BorderBrush" Value="{StaticResource TXB.BDR.OVER}"/>
-							<Setter TargetName="close" Property="Visibility" Value="Visible"/>
-						</DataTrigger>
-						<MultiDataTrigger>
-							<MultiDataTrigger.Conditions>
-								<Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Text}" Value=""/>
-								<Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=IsKeyboardFocusWithin}" Value="True"/>
-							</MultiDataTrigger.Conditions>
-							<Setter TargetName="close" Property="Visibility" Value="Collapsed"/>
-						</MultiDataTrigger>
-					</ControlTemplate.Triggers>
-				</ControlTemplate>
-			</Setter.Value>
-		</Setter>
-	</Style>
-
 	<Style TargetType="{x:Type Button}" x:Key="BTN.ADD">
 		<Setter Property="Width" Value="95"/>
 		<Setter Property="Height" Value="35"/>
@@ -163,10 +54,19 @@
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type Button}">
 					<Grid>
-						<Border x:Name="border" BorderBrush="{StaticResource BTN.BDR}" BorderThickness="1" Background="#1E2328" SnapsToDevicePixels="True" ClipToBounds="True">
+						<Border x:Name="border"
+								BorderBrush="{StaticResource BTN.BDR}"
+								BorderThickness="1" 
+								Background="#1E2328"
+								SnapsToDevicePixels="True" 
+								ClipToBounds="True">
 							<Grid Margin="0 0 0 0">
-								<ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-								<Border Background="Transparent" BorderBrush="#CC091119" BorderThickness="1" Margin="0">
+								<ContentPresenter HorizontalAlignment="Center"
+												  VerticalAlignment="Center"/>
+								<Border Background="Transparent" 
+										BorderBrush="#CC091119" 
+										BorderThickness="1" 
+										Margin="0">
 								</Border>
 							</Grid>
 						</Border>
@@ -195,172 +95,16 @@
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type Button}">
 					<Border Background="Transparent">
-						<ctrls:RiotIcon IconType="Close" HorizontalAlignment="Left" Fill="#CDBE91" Width="17" Height="17"
-										Stroke="#CDBE91" StrokeThickness="1" Margin="0 0 15 0"/>
+						<ctrls:RiotIcon IconType="Close" 
+										HorizontalAlignment="Left"
+										Fill="#CDBE91"
+										Width="17" 
+										Height="17"
+										Stroke="#CDBE91" 
+										StrokeThickness="1" 
+										Margin="0 0 15 0"/>
 					</Border>
 				</ControlTemplate>
-			</Setter.Value>
-		</Setter>
-	</Style>
-
-	<Style TargetType="{x:Type Button}" x:Key="BTN.REQUEST">
-		<Setter Property="Command" Value="{Binding RelativeSource={RelativeSource AncestorType=views:AddFriendsView}, Path=DataContext.RequestCommand}"/>
-		<Setter Property="CommandParameter" Value="{Binding RelativeSource={RelativeSource AncestorType=ListBoxItem}, Path=Content}"/>
-		<Setter Property="HorizontalAlignment" Value="Left"/>
-		<Setter Property="Visibility" Value="Hidden"/>
-		<Setter Property="Grid.Column" Value="2"/>
-		<Setter Property="Template">
-			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type Button}">
-					<Border Background="Transparent">
-						<ctrls:RiotIcon x:Name="icon" IconType="AddFriends" Width="18" Height="18" Fill="#CDBE91" Margin="0 0 15 1"/>
-					</Border>
-				</ControlTemplate>
-			</Setter.Value>
-		</Setter>
-	</Style>
-
-	<Style TargetType="{x:Type ListBoxItem}" x:Key="LBXI.SENT">
-		<Setter Property="Template">
-			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type ListBoxItem}">
-					<Border x:Name="user" Background="Transparent" BorderBrush="Transparent" Margin="0 0 10 0">
-						<Grid Margin="10 5 0 13">
-							<Grid.ColumnDefinitions>
-								<ColumnDefinition Width="Auto"/>
-								<ColumnDefinition Width="*"/>
-								<ColumnDefinition Width="Auto"/>
-							</Grid.ColumnDefinitions>
-							<Border x:Name="border" Grid.Column="0" Width="32" Height="32" CornerRadius="20"
-									BorderBrush="{StaticResource IMG.BDR}" BorderThickness="2" Margin="0 0 10 0">
-								<Border.Background>
-									<ImageBrush ImageSource="{Binding Avatar}" Stretch="UniformToFill"/>
-								</Border.Background>
-							</Border>
-							<StackPanel Grid.Column="1" Margin="0">
-								<TextBlock x:Name="text1" Text="{Binding Name}" Foreground="#A09B8C" FontSize="12" FontWeight="Normal"/>
-								<TextBlock x:Name="text2" Foreground="#FF464646" FontSize="12" FontWeight="Normal" TextTrimming="CharacterEllipsis">
-									<TextBlock.Text>
-										<MultiBinding StringFormat="{}{0}  #{1}{2}">
-											<Binding Path="Name"/>
-											<Binding Path="Nation"/>
-											<Binding Path="Level"/>
-										</MultiBinding>
-									</TextBlock.Text>
-								</TextBlock>
-							</StackPanel>
-							<Button x:Name="icon" Style="{StaticResource BTN.DELETE}"/>
-						</Grid>
-					</Border>
-					<ControlTemplate.Triggers>
-						<Trigger Property="IsMouseOver" Value="True">
-							<Setter TargetName="text1" Property="Foreground" Value="#F0E6D2"/>
-							<Setter TargetName="icon" Property="Visibility" Value="Visible"/>
-							<Setter TargetName="icon" Property="Cursor" Value="Hand"/>
-							<Setter TargetName="border" Property="BorderBrush" Value="{StaticResource IMG.BDR.OVER}"/>
-						</Trigger>
-					</ControlTemplate.Triggers>
-				</ControlTemplate>
-			</Setter.Value>
-		</Setter>
-	</Style>
-
-	<Style TargetType="{x:Type ListBox}" x:Key="LBX.SENT">
-		<Setter Property="Grid.Row" Value="1"/>
-		<Setter Property="ItemContainerStyle" Value="{StaticResource LBXI.SENT}"/>
-		<Setter Property="ItemsSource" Value="{Binding Friends1}"/>
-		<Setter Property="Margin" Value="-5 5 0 0"/>
-		<Setter Property="Template">
-			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type ListBox}">
-					<Grid>
-						<Grid.RowDefinitions>
-							<RowDefinition Height="Auto"/>
-							<RowDefinition Height="*"/>
-						</Grid.RowDefinitions>
-						<TextBlock FontFamily="Friz Quadrata Std" FontWeight="Normal" FontSize="13" Foreground="#A09B8C" 
-								   HorizontalAlignment="Left" VerticalAlignment="Top" Text="SENT FRIEND REQUESTS" Margin="0 30 0 10"/>
-						<ctrls:BasicScroll Grid.Row="1" ScrollViewer.VerticalScrollBarVisibility="Auto" 
-										   ScrollViewer.HorizontalScrollBarVisibility="Disabled" Margin="0" MaxHeight="150">
-							<ItemsPresenter VerticalAlignment="Top"/>
-						</ctrls:BasicScroll>
-					</Grid>
-				</ControlTemplate>
-			</Setter.Value>
-		</Setter>
-		<Setter Property="ItemsPanel">
-			<Setter.Value>
-				<ItemsPanelTemplate>
-					<UniformGrid Columns="3"/>
-				</ItemsPanelTemplate>
-			</Setter.Value>
-		</Setter>
-	</Style>
-
-	<Style TargetType="{x:Type ListBoxItem}" x:Key="LBXI.RECENT">
-		<Setter Property="Template">
-			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type ListBoxItem}">
-					<Border x:Name="user" Background="Transparent" BorderBrush="Transparent" Margin="0 0 10 0">
-						<Grid Margin="10 5 0 13">
-							<Grid.ColumnDefinitions>
-								<ColumnDefinition Width="Auto"/>
-								<ColumnDefinition Width="*"/>
-								<ColumnDefinition Width="Auto"/>
-							</Grid.ColumnDefinitions>
-							<Border x:Name="border" Grid.Column="0" Width="32" Height="32" CornerRadius="20"
-									BorderBrush="{StaticResource IMG.BDR}" BorderThickness="2" Margin="0 0 10 0">
-								<Border.Background>
-									<ImageBrush ImageSource="{Binding Avatar}" Stretch="UniformToFill"/>
-								</Border.Background>
-							</Border>
-							<TextBlock x:Name="text1" Grid.Column="1" Text="{Binding Name}" Foreground="#A09B8C" FontSize="13"
-									   FontWeight="Normal" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0 0 0 1"/>
-							<Button x:Name="icon" Style="{StaticResource BTN.REQUEST}"/>
-						</Grid>
-					</Border>
-					<ControlTemplate.Triggers>
-						<Trigger Property="IsMouseOver" Value="True">
-							<Setter TargetName="text1" Property="Foreground" Value="#F0E6D2"/>
-							<Setter TargetName="icon" Property="Visibility" Value="Visible"/>
-							<Setter TargetName="icon" Property="Cursor" Value="Hand"/>
-							<Setter TargetName="border" Property="BorderBrush" Value="{StaticResource IMG.BDR.OVER}"/>
-						</Trigger>
-					</ControlTemplate.Triggers>
-				</ControlTemplate>
-			</Setter.Value>
-		</Setter>
-	</Style>
-
-	<Style TargetType="{x:Type ListBox}" x:Key="LBX.RECENT" BasedOn="{StaticResource LBX.SENT}">
-		<Setter Property="Grid.Row" Value="2"/>
-		<Setter Property="ItemContainerStyle" Value="{StaticResource LBXI.RECENT}"/>
-		<Setter Property="ItemsSource" Value="{Binding Friends2}"/>
-		<Setter Property="Margin" Value="-5 5 0 0"/>
-		<Setter Property="MinHeight" Value="100"/>
-		<Setter Property="Template">
-			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type ListBox}">
-					<Grid>
-						<Grid.RowDefinitions>
-							<RowDefinition Height="Auto"/>
-							<RowDefinition Height="*"/>
-						</Grid.RowDefinitions>
-						<TextBlock FontFamily="Friz Quadrata Std" FontWeight="Normal" FontSize="13" Foreground="#A09B8C" 
-								   HorizontalAlignment="Left" VerticalAlignment="Top" Text="RECENTLY PLAYED WITH" Margin="0 20 0 10"/>
-						<ctrls:BasicScroll Grid.Row="1" Margin="0" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Disabled">
-							<ItemsPresenter/>
-						</ctrls:BasicScroll>
-						<Border Grid.Row="1" Grid.RowSpan="2" Background="{StaticResource BDR.BLUR}" Height="40" VerticalAlignment="Bottom" Margin="0 0 30 -18"/>
-					</Grid>
-				</ControlTemplate>
-			</Setter.Value>
-		</Setter>
-		<Setter Property="ItemsPanel">
-			<Setter.Value>
-				<ItemsPanelTemplate>
-					<UniformGrid Columns="3"/>
-				</ItemsPanelTemplate>
 			</Setter.Value>
 		</Setter>
 	</Style>
@@ -382,12 +126,24 @@
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type Button}">
 					<Grid>
-						<Border x:Name="border" Background="Transparent" BorderBrush="#CC091119" BorderThickness="1">
-							<Border x:Name="border2" Background="{StaticResource BTN.DONE.BG}" BorderBrush="{StaticResource BTN.DONE.BDR}"
-									BorderThickness="2" SnapsToDevicePixels="True" ClipToBounds="True">
+						<Border x:Name="border" 
+								Background="Transparent" 
+								BorderBrush="#CC091119"
+								BorderThickness="1">
+							<Border x:Name="border2" 
+									Background="{StaticResource BTN.DONE.BG}" 
+									BorderBrush="{StaticResource BTN.DONE.BDR}"
+									BorderThickness="2" 
+									SnapsToDevicePixels="True" 
+									ClipToBounds="True">
 								<Grid Margin="0 0 0 0">
-									<ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
-									<Border x:Name="border3" Background="Transparent" BorderBrush="#CC091119" BorderThickness="1.5" Margin="0"/>
+									<ContentPresenter HorizontalAlignment="Center" 
+													  VerticalAlignment="Center"/>
+									<Border x:Name="border3" 
+											Background="Transparent"
+											BorderBrush="#CC091119" 
+											BorderThickness="1.5"
+											Margin="0"/>
 								</Grid>
 							</Border>
 						</Border>
@@ -410,8 +166,13 @@
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type views:AddFriendsView}">
-					<Border Background="#010A13" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="#463714"
-							BorderThickness="2" Width="650" Height="570">
+					<Border Background="#010A13" 
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center" 
+							BorderBrush="#463714"
+							BorderThickness="2" 
+							Width="650" 
+							Height="570">
 						<Grid Margin="20 15 20 0">
 							<Grid.RowDefinitions>
 								<RowDefinition Height="Auto"/>
@@ -421,18 +182,28 @@
 							</Grid.RowDefinitions>
 							
 							<StackPanel Grid.Row="0">
-								<TextBlock FontFamily="Friz Quadrata Std" FontWeight="Bold" FontSize="20" Foreground="#F0E6D2" 
-										   HorizontalAlignment="Center" VerticalAlignment="Top" Text="ADD FRIENDS"/>
-								<TextBlock FontWeight="Normal" FontSize="13" Foreground="#A09B8C" HorizontalAlignment="Left" VerticalAlignment="Top"
-										   Text="Already know your friend's Summoner Name or Riot ID? Send them a friend request!" Margin="0 15 0 0"/>
+								<TextBlock FontFamily="Friz Quadrata Std" 
+										   FontWeight="Bold" 
+										   FontSize="20" 
+										   Foreground="#F0E6D2" 
+										   HorizontalAlignment="Center" 
+										   VerticalAlignment="Top" 
+										   Text="ADD FRIENDS"/>
+								<TextBlock FontWeight="Normal" 
+										   FontSize="13" 
+										   Foreground="#A09B8C" 
+										   HorizontalAlignment="Left" 
+										   VerticalAlignment="Top"
+										   Text="Already know your friend's Summoner Name or Riot ID? Send them a friend request!" 
+										   Margin="0 15 0 0"/>
 								<StackPanel Orientation="Horizontal">
-									<ctrls:RiotTextBox  Style="{StaticResource TXT.SEARCH}"/>
+									<views:UserSearchTextBox/>
 									<Button Style="{StaticResource BTN.ADD}"/>
 								</StackPanel>
 							</StackPanel>
 
-							<ListBox x:Name="sent" Style="{StaticResource LBX.SENT}"/>
-							<ListBox Style="{StaticResource LBX.RECENT}"/>
+							<views:RequestUserBox/>
+							<views:RecentUserBox/>
 							<Button Style="{StaticResource BTN.DONE}"/>
 						</Grid>
 					</Border>
