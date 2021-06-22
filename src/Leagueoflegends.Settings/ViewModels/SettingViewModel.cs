@@ -8,7 +8,6 @@ using Leagueoflegends.Windowbase.Mvvm;
 using Leagueoflegends.Windowbase.Riotcore;
 using System;
 using System.Collections.Generic;
-using System.Windows;
 using System.Windows.Input;
 
 namespace Leagueoflegends.Settings.ViewModels
@@ -58,7 +57,7 @@ namespace Leagueoflegends.Settings.ViewModels
 		public SettingViewModel(Action<IRiotUI> modalClose)
 		{
 			ViewClosed = modalClose;
-			   UIs = new();
+			UIs = new();
 			SettingMenus = ExamSettings.GetSettingList();
 			CompleteCommand = new RelayCommand<Modal>(CompleteClick);
 		}

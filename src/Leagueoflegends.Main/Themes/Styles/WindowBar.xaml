@@ -14,9 +14,8 @@
 	</Style>
 
 	<Style TargetType="{x:Type Button}"  x:Key="WIN.HELP" >
-		<Setter Property="Command" Value="{Binding TitleBarSelectCommand}"/>
-		<Setter Property="CommandParameter" Value="{Binding RelativeSource={RelativeSource Self}}"/>
-		<Setter Property="Tag" Value="HELP"/>
+		<!--<Setter Property="Command" Value="{Binding TitleBarSelectCommand}"/>
+		<Setter Property="CommandParameter" Value="{Binding RelativeSource={RelativeSource Self}}"/>-->
 		<Setter Property="Grid.Column" Value="1"/>
 		<Setter Property="Margin" Value="10 5 5 5"/>
 		<Setter Property="Template">
@@ -37,9 +36,8 @@
 	</Style>
 
 	<Style TargetType="{x:Type Button}" x:Key="WIN.MINIMIZE">
-		<Setter Property="Command" Value="{Binding TitleBarSelectCommand}"/>
+		<Setter Property="Command" Value="{Binding MinimizeCommand}"/>
 		<Setter Property="CommandParameter" Value="{Binding RelativeSource={RelativeSource Self}}"/>
-		<Setter Property="Tag" Value="MIN"/>
 		<Setter Property="Grid.Column" Value="2"/>
 		<Setter Property="Margin" Value="10 5 5 5"/>
 		<Setter Property="Template">
@@ -84,7 +82,6 @@
 	<Style TargetType="{x:Type Button}"  x:Key="WIN.CLOSE" >
 		<Setter Property="Command" Value="{Binding CloseCommand}"/>
 		<Setter Property="CommandParameter" Value="{Binding RelativeSource={RelativeSource Self}}"/>
-		<Setter Property="Tag" Value="CLOSE"/>
 		<Setter Property="Grid.Column" Value="4"/>
 		<Setter Property="Margin" Value="10 5 5 5"/>
 		<Setter Property="Template">

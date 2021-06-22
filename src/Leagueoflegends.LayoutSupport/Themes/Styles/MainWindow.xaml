@@ -1,8 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 					xmlns:ctrls="clr-namespace:Leagueoflegends.LayoutSupport.Controls"
-					xmlns:prims="clr-namespace:Leagueoflegends.Controls.Primitives;assembly=Leagueoflegends.Controls"
-					xmlns:convt="clr-namespace:Leagueoflegends.Converter;assembly=Leagueoflegends.Converter">
+					xmlns:prims="clr-namespace:Leagueoflegends.Controls.Primitives;assembly=Leagueoflegends.Controls">
 
 	<Style TargetType="{x:Type ctrls:MainWindow}">
 		<Setter Property="BorderThickness" Value="0"/>

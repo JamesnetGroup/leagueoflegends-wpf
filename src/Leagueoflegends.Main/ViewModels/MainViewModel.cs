@@ -1,18 +1,13 @@
 ﻿using Leagueoflegends.Data.Main;
 using Leagueoflegends.ExampleData.Friends;
-using Leagueoflegends.Friends.ViewModels;
-using Leagueoflegends.Friends.Views;
 using Leagueoflegends.Home.General.ViewModels;
 using Leagueoflegends.Home.General.Views;
-using Leagueoflegends.LayoutSupport.Common.UIObject;
 using Leagueoflegends.Main.Local.Works;
 using Leagueoflegends.Main.Views;
 using Leagueoflegends.Menus.ViewModels;
 using Leagueoflegends.MyShop.ViewModels;
 using Leagueoflegends.MyShop.Views;
 using Leagueoflegends.Options.ViewModels;
-using Leagueoflegends.Settings.ViewModels;
-using Leagueoflegends.Settings.Views;
 using Leagueoflegends.TeamFight.ViewModels;
 using Leagueoflegends.TeamFight.Views;
 using Leagueoflegends.Windowbase.Mvvm;
@@ -20,7 +15,6 @@ using Leagueoflegends.Windowbase.Riotcore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Windows;
 using System.Windows.Input;
 
 namespace Leagueoflegends.Main.ViewModels
@@ -50,7 +44,6 @@ namespace Leagueoflegends.Main.ViewModels
 
 		#region ICommands
 
-		public ICommand ShowPopupCommand { get; }
 		public ICommand ModalCommand { get; }
 		public ICommand CloseCommand { get; }
 		public ICommand MinimizeCommand { get; }
@@ -60,7 +53,7 @@ namespace Leagueoflegends.Main.ViewModels
 
 		public object ModalContent
 		{
-			get { return _modalContent; }
+			get => _modalContent;
 			set { _modalContent = value; OnPropertyChanged(); }
 		}
 		#endregion

@@ -6,7 +6,6 @@ using Leagueoflegends.Settings.Views;
 using Leagueoflegends.Windowbase.Riotcore;
 using System;
 using System.Collections.Generic;
-using System.Windows;
 
 namespace Leagueoflegends.Main.Local.Works
 {

@@ -10,6 +10,8 @@
 		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Styles/MainView.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Styles/NoticeButton.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Styles/PlayButton.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Styles/Currency.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Styles/Profile.xaml"/>
 	</ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
 
