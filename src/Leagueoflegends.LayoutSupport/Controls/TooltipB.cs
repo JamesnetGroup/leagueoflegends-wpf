@@ -1,4 +1,5 @@
-﻿using System.Windows;
+﻿using Leagueoflegends.Controls;
+using System.Windows;
 
 namespace Leagueoflegends.LayoutSupport.Controls
 {
