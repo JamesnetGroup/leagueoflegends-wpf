@@ -53,6 +53,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Themes\Styles\AddButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Styles\DoneButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Styles\DeleteButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Themes\Styles\RequestUserBox.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -86,6 +98,9 @@
     </Compile>
     <Compile Include="ViewModels\AddFriendsViewModel.cs" />
     <Compile Include="Views\AddFriendsView.cs" />
+    <Compile Include="Views\Units\AddButton.cs" />
+    <Compile Include="Views\Units\DoneButton.cs" />
+    <Compile Include="Views\Units\DeleteButton.cs" />
     <Compile Include="Views\Units\RequestUserBox.cs" />
     <Compile Include="Views\Units\RecentUserBox.cs" />
     <Compile Include="Views\Units\UserSearchTextBox.cs" />
