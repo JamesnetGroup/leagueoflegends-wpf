@@ -13,8 +13,8 @@ namespace Leagueoflegends.Main.Local.Works
 	{
 		#region Variables 
 
-		private MainViewModel _vm;
-		private Dictionary<Type, IRiotUI> _modals;
+		private readonly MainViewModel _vm;
+		private readonly Dictionary<Type, IRiotUI> _modals;
 		#endregion
 
 		#region Constructor

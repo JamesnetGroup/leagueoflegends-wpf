@@ -57,7 +57,7 @@
 							</Grid.ColumnDefinitions>
 							<ctrls:RiotIcon x:Name="path" Style="{StaticResource ICON.UNEXPAND}"/>
 							<StackPanel Grid.Column="1" Orientation="Horizontal">
-								<TextBlock x:Name="text" Style="{StaticResource TXB.FRIENDS}" Text="{Binding Header}"/>
+								<TextBlock x:Name="text" Style="{StaticResource TXB.FRIENDS}" Text="{Binding Name}"/>
 								<TextBlock x:Name="text2" Style="{StaticResource TXB.FRIENDS}" Visibility="Collapsed" Margin="5 0 0 0">
 									<TextBlock.Text>
 										<MultiBinding StringFormat="{}({0}/{1})">
@@ -122,7 +122,7 @@
 									</Border.Background>
 								</Border>
 								<StackPanel Grid.Column="1" Margin="5 0 0 0">
-									<TextBlock x:Name="text1" Text="{Binding Header}" Foreground="#A09B8C" FontSize="13" FontWeight="Bold"/>
+									<TextBlock x:Name="text1" Text="{Binding Name}" Foreground="#A09B8C" FontSize="13" FontWeight="Bold"/>
 									<TextBlock x:Name="text2" Text="{Binding Status}" Foreground="#A09B8C" FontSize="12" FontWeight="Normal"/>
 								</StackPanel>
 							</Grid>

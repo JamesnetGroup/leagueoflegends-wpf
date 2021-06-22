@@ -1,8 +1,4 @@
-﻿using Leagueoflegends.Data.Codes;
-using System.Collections.Generic;
-using System.Diagnostics;
-
-namespace Leagueoflegends.Data.Setting.Clients
+﻿namespace Leagueoflegends.Data.Setting.Clients
 {
 	public class ClientNormalModel
 	{

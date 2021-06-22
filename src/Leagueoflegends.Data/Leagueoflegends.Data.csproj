@@ -47,6 +47,7 @@
     <Compile Include="Config\ConfigModel.cs" />
     <Compile Include="Enums\GeoIcon.cs" />
     <Compile Include="Enums\SettingMenuType.cs" />
+    <Compile Include="Local\RandomHelper.cs" />
     <Compile Include="Main\AddFriendsModel.cs" />
     <Compile Include="Main\FriendsModel.cs" />
     <Compile Include="Main\OptionModel.cs" />

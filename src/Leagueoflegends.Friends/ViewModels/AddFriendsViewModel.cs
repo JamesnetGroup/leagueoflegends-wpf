@@ -14,10 +14,10 @@ namespace Leagueoflegends.Friends.ViewModels
 	{
 		#region Variables
 
-		private Action<IRiotUI> ViewClosed;
+		private readonly Action<IRiotUI> ViewClosed;
         private string _keyword;
-        private ObservableCollection<AddFriendsModel> _friends1;
-        private ObservableCollection<AddFriendsModel> _friends2;
+        private ObservableCollection<AddUserModel> _friends1;
+        private ObservableCollection<AddUserModel> _friends2;
         #endregion
 
         #region ICommands
@@ -40,13 +40,13 @@ namespace Leagueoflegends.Friends.ViewModels
 
         #region Friends
 
-        public ObservableCollection<AddFriendsModel> Friends1
+        public ObservableCollection<AddUserModel> Friends1
         {
             get { return _friends1; }
             set { _friends1 = value; OnPropertyChanged(); }
         }
 
-        public ObservableCollection<AddFriendsModel> Friends2
+        public ObservableCollection<AddUserModel> Friends2
         {
             get { return _friends2; }
             set { _friends2 = value; OnPropertyChanged(); }
@@ -101,7 +101,7 @@ namespace Leagueoflegends.Friends.ViewModels
 
 		private void DeleteClick(object obj)
         {
-            if (obj is AddFriendsModel model)
+            if (obj is AddUserModel model)
             {
                 Friends1.Remove(model);
             }
@@ -112,7 +112,7 @@ namespace Leagueoflegends.Friends.ViewModels
 
 		private void RequestClick(object obj)
         {
-            if (obj is AddFriendsModel model)
+            if (obj is AddUserModel model)
             {
                 Friends2.Remove(model);
                 model.IsSent = true;

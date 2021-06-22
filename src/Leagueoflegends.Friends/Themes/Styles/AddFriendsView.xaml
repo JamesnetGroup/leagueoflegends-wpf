@@ -238,11 +238,11 @@
 								</Border.Background>
 							</Border>
 							<StackPanel Grid.Column="1" Margin="0">
-								<TextBlock x:Name="text1" Text="{Binding NickName}" Foreground="#A09B8C" FontSize="12" FontWeight="Normal"/>
-								<TextBlock x:Name="text2" Foreground="#A09B8C" FontSize="12" FontWeight="Normal">
+								<TextBlock x:Name="text1" Text="{Binding Name}" Foreground="#A09B8C" FontSize="12" FontWeight="Normal"/>
+								<TextBlock x:Name="text2" Foreground="#FF464646" FontSize="12" FontWeight="Normal" TextTrimming="CharacterEllipsis">
 									<TextBlock.Text>
 										<MultiBinding StringFormat="{}{0}  #{1}{2}">
-											<Binding Path="UserID"/>
+											<Binding Path="Name"/>
 											<Binding Path="Nation"/>
 											<Binding Path="Level"/>
 										</MultiBinding>
@@ -314,7 +314,7 @@
 									<ImageBrush ImageSource="{Binding Avatar}" Stretch="UniformToFill"/>
 								</Border.Background>
 							</Border>
-							<TextBlock x:Name="text1" Grid.Column="1" Text="{Binding NickName}" Foreground="#A09B8C" FontSize="13"
+							<TextBlock x:Name="text1" Grid.Column="1" Text="{Binding Name}" Foreground="#A09B8C" FontSize="13"
 									   FontWeight="Normal" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="0 0 0 1"/>
 							<Button x:Name="icon" Style="{StaticResource BTN.REQUEST}"/>
 						</Grid>

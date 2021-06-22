@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Friends\GetAddFriendsList.cs" />
     <Compile Include="Friends\GetFriendsList.cs" />
+    <Compile Include="Local\RandomHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setting\GetWinSizeList.cs" />
     <Compile Include="Setting\GetSettingList.cs" />
