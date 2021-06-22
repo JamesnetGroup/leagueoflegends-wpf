@@ -6,7 +6,6 @@ using Leagueoflegends.Windowbase.Riotcore;
 using System;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Windows;
 using System.Windows.Input;
 
 namespace Leagueoflegends.Friends.ViewModels
