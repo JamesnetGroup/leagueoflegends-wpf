@@ -32,6 +32,8 @@
 		DiaEmpty,
 		DiaFill,
 		Check,
-		CheckBold
+		CheckBold,
+		Mark,
+		Menuswap
 	}
 }

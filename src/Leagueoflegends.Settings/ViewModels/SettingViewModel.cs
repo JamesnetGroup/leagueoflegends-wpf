@@ -5,6 +5,7 @@ using Leagueoflegends.ExampleData.Setting;
 using Leagueoflegends.LayoutSupport.Controls;
 using Leagueoflegends.Settings.Views;
 using Leagueoflegends.Windowbase.Mvvm;
+using Leagueoflegends.Windowbase.Riotbase;
 using Leagueoflegends.Windowbase.Riotcore;
 using System;
 using System.Collections.Generic;
@@ -20,6 +21,8 @@ namespace Leagueoflegends.Settings.ViewModels
 		private IRiotUI _currentView;
 		private List<SettingMenuModel> _settingMenus;
 		private SettingMenuModel _currentSettingMenu;
+
+		private ClientNormalViewModel Normal;
 		private Dictionary<int, IRiotUI> UIs { get; set; }
 		#endregion 
 
@@ -58,6 +61,8 @@ namespace Leagueoflegends.Settings.ViewModels
 		{
 			ViewClosed = modalClose;
 			UIs = new();
+			Normal = new ClientNormalViewModel();
+
 			SettingMenus = ExamSettings.GetSettingList();
 			CompleteCommand = new RelayCommand<Modal>(CompleteClick);
 		}
@@ -75,7 +80,7 @@ namespace Leagueoflegends.Settings.ViewModels
 				key = value.Seq;
 				content = value.Seq switch
 				{
-					1 => new ClientNormalView().SetVM(new ClientNormalViewModel()),
+					1 => new ClientNormalView().SetVM(Normal),
 					_ => new EmptyView()
 				};
 
@@ -94,6 +99,11 @@ namespace Leagueoflegends.Settings.ViewModels
 		private void CompleteClick(Modal obj)
 		{
 			ViewClosed.Invoke(View);
+
+			var setting = RiotConfig.Config.Settings;
+			setting.ClientNormal = Normal.Model;
+
+			RiotConfig.SaveSettings(setting);
 		}
 		#endregion
 	}
