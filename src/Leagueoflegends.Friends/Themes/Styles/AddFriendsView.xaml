@@ -1,167 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-					xmlns:views="clr-namespace:Leagueoflegends.Friends.Views"
-					xmlns:ctrls="clr-namespace:Leagueoflegends.LayoutSupport.Controls;assembly=Leagueoflegends.LayoutSupport">
+					xmlns:views="clr-namespace:Leagueoflegends.Friends.Views">
 
-	<LinearGradientBrush x:Key="BTN.BDR" EndPoint="0.5,1" StartPoint="0.5,0">
-		<GradientStop Color="#C8AA6E" Offset="0"/>
-		<GradientStop Color="#795c28" Offset="1"/>
-	</LinearGradientBrush>
-
-	<LinearGradientBrush x:Key="BTN.BDR.OVER" EndPoint="0.5,1" StartPoint="0.5,0">
-		<GradientStop Color="#f0e6d7" Offset="0"/>
-		<GradientStop Color="#c99d3d" Offset="1"/>
-	</LinearGradientBrush>
-
-	<LinearGradientBrush x:Key="BTN.BG.OVER" EndPoint="0.5,1" StartPoint="0.5,0">
-		<GradientStop Color="#1e232a" Offset="0"/>
-		<GradientStop Color="#443e2e" Offset="1"/>
-	</LinearGradientBrush>
-
-	<LinearGradientBrush x:Key="BTN.DONE.BG" EndPoint="0.5,1" StartPoint="0.5,0">
-		<GradientStop Color="#563E21" Offset="0"/>
-		<GradientStop Color="#3B2D1B" Offset="1"/>
-	</LinearGradientBrush>
-
-	<LinearGradientBrush x:Key="BTN.DONE.BDR" EndPoint="0.5,1" StartPoint="0.5,0">
-		<GradientStop Color="#CDB17A" Offset="0"/>
-		<GradientStop Color="#CCA652" Offset="0.5"/>
-		<GradientStop Color="#8A6F40" Offset="1"/>
-	</LinearGradientBrush>
-
-	<LinearGradientBrush x:Key="BTN.BG.DONE.OVER" EndPoint="0.5,1" StartPoint="0.5,0">
-		<GradientStop Color="#654A27" Offset="0"/>
-		<GradientStop Color="#806341" Offset="1"/>
-	</LinearGradientBrush>
-
-	<LinearGradientBrush x:Key="BTN.BDR.DONE.OVER" EndPoint="0.5,1" StartPoint="0.5,0">
-		<GradientStop Color="#EFE5D6" Offset="0"/>
-		<GradientStop Color="#DBC086" Offset="0.5"/>
-		<GradientStop Color="#C89D3E" Offset="1"/>
-	</LinearGradientBrush>
-
-	<Style TargetType="{x:Type Button}" x:Key="BTN.ADD">
-		<Setter Property="Width" Value="95"/>
-		<Setter Property="Height" Value="35"/>
-		<Setter Property="FontWeight" Value="Normal"/>
-		<Setter Property="FontSize" Value="12"/>
-		<Setter Property="Foreground" Value="#CDBE91"/>
-		<Setter Property="HorizontalAlignment" Value="Right"/>
-		<Setter Property="VerticalAlignment" Value="Top"/>
-		<Setter Property="Margin" Value="10 12 0 0"/>
-		<Setter Property="Content" Value="Add Friend"/>
-		<Setter Property="Template">
-			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type Button}">
-					<Grid>
-						<Border x:Name="border"
-								BorderBrush="{StaticResource BTN.BDR}"
-								BorderThickness="1" 
-								Background="#1E2328"
-								SnapsToDevicePixels="True" 
-								ClipToBounds="True">
-							<Grid Margin="0 0 0 0">
-								<ContentPresenter HorizontalAlignment="Center"
-												  VerticalAlignment="Center"/>
-								<Border Background="Transparent" 
-										BorderBrush="#CC091119" 
-										BorderThickness="1" 
-										Margin="0">
-								</Border>
-							</Grid>
-						</Border>
-					</Grid>
-					<ControlTemplate.Triggers>
-						<Trigger Property="IsMouseOver" Value="True">
-							<Setter Property="Cursor" Value="Hand"/>
-							<Setter Property="Foreground" Value="#f0e6d2"/>
-							<Setter TargetName="border" Property="BorderBrush" Value="{StaticResource BTN.BDR.OVER}"/>
-							<Setter TargetName="border" Property="Background" Value="{StaticResource BTN.BG.OVER}"/>
-						</Trigger>
-					</ControlTemplate.Triggers>
-				</ControlTemplate>
-			</Setter.Value>
-		</Setter>
-	</Style>
-
-	<Style TargetType="{x:Type Button}" x:Key="BTN.DELETE">
-		<Setter Property="Command" Value="{Binding RelativeSource={RelativeSource AncestorType=views:AddFriendsView}, Path=DataContext.DeleteCommand}"/>
-		<Setter Property="CommandParameter" Value="{Binding RelativeSource={RelativeSource AncestorType=ListBoxItem}, Path=Content}"/>
-		<Setter Property="HorizontalAlignment" Value="Left"/>
-		<Setter Property="VerticalAlignment" Value="Center"/>
-		<Setter Property="Grid.Column" Value="2"/>
-		<Setter Property="Visibility" Value="Hidden"/>
-		<Setter Property="Template">
-			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type Button}">
-					<Border Background="Transparent">
-						<ctrls:RiotIcon IconType="Close" 
-										HorizontalAlignment="Left"
-										Fill="#CDBE91"
-										Width="17" 
-										Height="17"
-										Stroke="#CDBE91" 
-										StrokeThickness="1" 
-										Margin="0 0 15 0"/>
-					</Border>
-				</ControlTemplate>
-			</Setter.Value>
-		</Setter>
-	</Style>
-
-	<Style TargetType="{x:Type Button}" x:Key="BTN.DONE">
-		<Setter Property="Width" Value="90"/>
-		<Setter Property="Height" Value="35"/>
-		<Setter Property="Grid.Row" Value="3"/>
-		<Setter Property="Command" Value="{Binding CompleteCommand}"/>
-		<Setter Property="CommandParameter" Value="{Binding RelativeSource={RelativeSource AncestorType=ctrls:Modal}}"/>
-		<Setter Property="FontFamily" Value="Friz Quadrata Std"/>
-		<Setter Property="FontWeight" Value="Normal"/>
-		<Setter Property="FontSize" Value="14"/>
-		<Setter Property="Foreground" Value="#CDBE91"/>
-		<Setter Property="HorizontalAlignment" Value="Center"/>
-		<Setter Property="VerticalAlignment" Value="Bottom"/>
-		<Setter Property="Content" Value="DONE"/>
-		<Setter Property="Template">
-			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type Button}">
-					<Grid>
-						<Border x:Name="border" 
-								Background="Transparent" 
-								BorderBrush="#CC091119"
-								BorderThickness="1">
-							<Border x:Name="border2" 
-									Background="{StaticResource BTN.DONE.BG}" 
-									BorderBrush="{StaticResource BTN.DONE.BDR}"
-									BorderThickness="2" 
-									SnapsToDevicePixels="True" 
-									ClipToBounds="True">
-								<Grid Margin="0 0 0 0">
-									<ContentPresenter HorizontalAlignment="Center" 
-													  VerticalAlignment="Center"/>
-									<Border x:Name="border3" 
-											Background="Transparent"
-											BorderBrush="#CC091119" 
-											BorderThickness="1.5"
-											Margin="0"/>
-								</Grid>
-							</Border>
-						</Border>
-					</Grid>
-					<ControlTemplate.Triggers>
-						<Trigger Property="IsMouseOver" Value="True">
-							<Setter Property="Cursor" Value="Hand"/>
-							<Setter Property="Foreground" Value="#F0E6D2"/>
-							<Setter Property="Background" Value="{StaticResource BTN.BG.DONE.OVER}"/>
-							<Setter Property="BorderBrush" Value="{StaticResource BTN.BDR.DONE.OVER}"/>
-							<Setter TargetName="border3" Property="BorderThickness" Value="0 0 0 0"/>
-						</Trigger>
-					</ControlTemplate.Triggers>
-				</ControlTemplate>
-			</Setter.Value>
-		</Setter>
-	</Style>
-	
 	<Style TargetType="{x:Type views:AddFriendsView}">
 		<Setter Property="Template">
 			<Setter.Value>
@@ -198,13 +38,13 @@
 										   Margin="0 15 0 0"/>
 								<StackPanel Orientation="Horizontal">
 									<views:UserSearchTextBox/>
-									<Button Style="{StaticResource BTN.ADD}"/>
+									<views:AddButton/>
 								</StackPanel>
 							</StackPanel>
 
 							<views:RequestUserBox/>
 							<views:RecentUserBox/>
-							<Button Style="{StaticResource BTN.DONE}"/>
+							<views:DoneButton/>
 						</Grid>
 					</Border>
 				</ControlTemplate>
