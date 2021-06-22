@@ -64,6 +64,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Themes\Styles\RiotButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Styles\RiotCheckBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Themes\Styles\RiotTooltip.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -77,6 +85,8 @@
     <Compile Include="Common\UIObject\IModalUIObject.cs" />
     <Compile Include="Controls\Modal.cs" />
     <Compile Include="Controls\MainWindow.cs" />
+    <Compile Include="Controls\RiotButton.cs" />
+    <Compile Include="Controls\RiotCheckBox.cs" />
     <Compile Include="Controls\RiotTextBox.cs" />
     <Compile Include="Controls\RiotTooltip.cs" />
     <Compile Include="Controls\RiotIcon.cs" />

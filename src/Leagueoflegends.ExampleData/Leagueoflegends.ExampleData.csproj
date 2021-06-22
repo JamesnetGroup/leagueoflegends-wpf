@@ -45,6 +45,7 @@
     <Compile Include="Friends\GetAddFriendsList.cs" />
     <Compile Include="Friends\GetFriendsList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Setting\GetWinSizeList.cs" />
     <Compile Include="Setting\GetSettingList.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -53,5 +54,6 @@
       <Name>Leagueoflegends.Data</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

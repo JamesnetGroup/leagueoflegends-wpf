@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Leagueoflegends.ExampleData.Setting
 {
-	public class ExamSettings
+	public partial class ExamSettings
     {
         public static List<SettingMenuModel> GetSettingList()
         {
