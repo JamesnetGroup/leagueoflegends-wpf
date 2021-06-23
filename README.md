@@ -30,8 +30,7 @@ WPF **League of Legends** 개발 관련 정보입니다. 그리고 곧 .NET 6과
 
 ## 프로젝트 구조
 
-솔루션 파일 이름은 **Leagueofelegends.sln** 입니다.
-
+### Leagueofelegends.sln
 > **`01. DB`**
 >  * Leagueoflegends.ExampleData.dll
 >
