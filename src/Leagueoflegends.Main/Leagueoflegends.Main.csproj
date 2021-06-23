@@ -53,31 +53,51 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Views\Units\_mainMenu.xaml">
+    <Page Include="Themes\Units\_friendsSortPopup.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Views\Units\_profile.xaml">
+    <Page Include="Themes\Units\_chatTool.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Views\Units\_currency.xaml">
+    <Page Include="Themes\Units\_currency.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Views\Units\_emptyContent.xaml">
+    <Page Include="Themes\Units\_emptyContent.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Views\Units\_friendsList.xaml">
+    <Page Include="Themes\Units\_friendsList.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Views\Units\_chatTool.xaml">
+    <Page Include="Themes\Units\_mainMenu.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Views\Units\_socialTool.xaml">
+    <Page Include="Themes\Units\_noticeButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\_playButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\_profile.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\_socialTool.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\_subMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\_windowBar.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -85,28 +105,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Themes\Views\Units\_playButton.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Views\Units\_noticeButton.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Themes\Views\Units\_subMenu.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Views\Units\_windowBar.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Local\Collection\FriendsCollection.cs" />
-    <Compile Include="Local\Works\MenuWork.cs" />
-    <Compile Include="Local\Works\ModalWork.cs" />
-    <Compile Include="Local\Works\WindowWork.cs" />
+    <Compile Include="Local\ViewModel\MainViewModel.cs" />
+    <Compile Include="Local\Work\MenuWork.cs" />
+    <Compile Include="Local\Work\ModalWork.cs" />
+    <Compile Include="Local\Work\FriendsSortWork.cs" />
+    <Compile Include="Local\Work\WindowWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -120,19 +126,19 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="ViewModels\MainViewModel.cs" />
-    <Compile Include="Views\Units\MainMenu.cs" />
-    <Compile Include="Views\Units\Profile.cs" />
-    <Compile Include="Views\Units\Currency.cs" />
-    <Compile Include="Views\Units\ChatTool.cs" />
-    <Compile Include="Views\Units\SocialTool.cs" />
-    <Compile Include="Views\Units\FriendsList.cs" />
-    <Compile Include="Views\Units\EmptyContent.cs" />
-    <Compile Include="Views\MainView.cs" />
-    <Compile Include="Views\Units\PlayButton.cs" />
-    <Compile Include="Views\Units\NoticeButton.cs" />
-    <Compile Include="Views\Units\SubMenu.cs" />
-    <Compile Include="Views\Units\WindowBar.cs" />
+    <Compile Include="UI\Units\ChatTool.cs" />
+    <Compile Include="UI\Units\Currency.cs" />
+    <Compile Include="UI\Units\EmptyContent.cs" />
+    <Compile Include="UI\Units\FriendsList.cs" />
+    <Compile Include="UI\Units\MainMenu.cs" />
+    <Compile Include="UI\Units\NoticeButton.cs" />
+    <Compile Include="UI\Units\PlayButton.cs" />
+    <Compile Include="UI\Units\Profile.cs" />
+    <Compile Include="UI\Units\SocialTool.cs" />
+    <Compile Include="UI\Units\SubMenu.cs" />
+    <Compile Include="UI\Units\WindowBar.cs" />
+    <Compile Include="UI\Views\MainView.cs" />
+    <Compile Include="UI\Units\FriendsSortPopup.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -178,10 +184,6 @@
     <ProjectReference Include="..\Leagueoflegends.MyShop\Leagueoflegends.MyShop.csproj">
       <Project>{0273aba2-31c6-4273-85a4-c90e99b18926}</Project>
       <Name>Leagueoflegends.MyShop</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Leagueoflegends.Options\Leagueoflegends.Options.csproj">
-      <Project>{C62293C7-C592-4A62-8347-FB4CD0CBE3CB}</Project>
-      <Name>Leagueoflegends.Options</Name>
     </ProjectReference>
     <ProjectReference Include="..\Leagueoflegends.Resources\Leagueoflegends.Resources.csproj">
       <Project>{1afee701-95ed-4977-95b3-249a9821de5b}</Project>
