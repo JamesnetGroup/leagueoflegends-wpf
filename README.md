@@ -32,6 +32,8 @@ WPF **League of Legends** 개발 관련 정보입니다. 그리고 곧 .NET 6과
 
 솔루션 파일 이름은 **Leagueofelegends.sln** 입니다.
 
+> ![image](https://user-images.githubusercontent.com/52397976/123110531-23197600-d477-11eb-9c34-a4d168ad5fa4.png)
+
 **`01. DB`**
   * Leagueoflegends.ExampleData.dll
 
@@ -55,9 +57,6 @@ WPF **League of Legends** 개발 관련 정보입니다. 그리고 곧 .NET 6과
 
 **`04. App`**
 * Leagueoflegends.exe
-
-![image](https://user-images.githubusercontent.com/52397976/123110531-23197600-d477-11eb-9c34-a4d168ad5fa4.png)
-
 
 ## Main > GeneralView
 ![image](https://user-images.githubusercontent.com/74305823/122345549-f0f1ab00-cf82-11eb-8ee2-e0ab8336673d.png)
