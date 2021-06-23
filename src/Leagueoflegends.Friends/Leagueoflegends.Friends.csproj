@@ -83,6 +83,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Local\Collection\UserCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

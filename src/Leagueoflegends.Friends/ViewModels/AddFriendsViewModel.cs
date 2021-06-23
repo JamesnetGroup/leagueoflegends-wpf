@@ -1,11 +1,12 @@
 ﻿using Leagueoflegends.Data.Main;
 using Leagueoflegends.ExampleData.Friends;
+using Leagueoflegends.Friends.Local;
+using Leagueoflegends.Friends.Local.Collection;
 using Leagueoflegends.LayoutSupport.Controls;
 using Leagueoflegends.Windowbase.Mvvm;
 using Leagueoflegends.Windowbase.Riotcore;
 using System;
 using System.Collections.ObjectModel;
-using System.Linq;
 using System.Windows.Input;
 
 namespace Leagueoflegends.Friends.ViewModels
@@ -54,22 +55,24 @@ namespace Leagueoflegends.Friends.ViewModels
 
         #endregion
 
+        public UserCollection UserCollection { get; }
+
         #region Constructor
 
         public AddFriendsViewModel(Action<IRiotUI> _viewClosed)
         {
+            UserCollection = new();
+
             ViewClosed = _viewClosed;
 
             Keyword = "";
             KeywordCommand = new RelayCommand<object>(KeywordChanged);
             CloseKeywordCommand = new RelayCommand<object>(CloseKeyword);
-            CompleteCommand = new RelayCommand<Modal>(CompleteClick);
-            DeleteCommand = new RelayCommand<object>(DeleteClick);
-            RequestCommand = new RelayCommand<object>(RequestClick);
+            CompleteCommand = new RelayCommand<object>((o) => ViewClosed.Invoke(View));
+            DeleteCommand = new RelayCommand<AddUserModel>(UserCollection.SentDelete);
+            RequestCommand = new RelayCommand<AddUserModel>(UserCollection.SentRequest);
 
-            var friends = ExamFriends.GetAddFriendsList();
-            Friends1 = new(friends.Where(x => x.IsSent));
-            Friends2 = new(friends.Where(x => x.IsSent == false));
+            UserCollection.AddRange(ExamFriends.GetAddFriendsList());
         }
         #endregion
 
@@ -88,38 +91,5 @@ namespace Leagueoflegends.Friends.ViewModels
             Keyword = "";
         }
         #endregion
-
-        #region CompleteClick
-
-        private void CompleteClick(Modal obj)
-        {
-            ViewClosed.Invoke(View);
-        }
-		#endregion
-
-		#region DeleteClick
-
-		private void DeleteClick(object obj)
-        {
-            if (obj is AddUserModel model)
-            {
-                Friends1.Remove(model);
-            }
-        }
-		#endregion
-
-		#region RequestClick
-
-		private void RequestClick(object obj)
-        {
-            if (obj is AddUserModel model)
-            {
-                Friends2.Remove(model);
-                model.IsSent = true;
-
-                Friends1.Add(model);
-            }
-        }
-		#endregion
 	}
 }

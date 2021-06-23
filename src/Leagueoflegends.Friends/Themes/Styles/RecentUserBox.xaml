@@ -98,7 +98,7 @@
 	<Style TargetType="{x:Type views:RecentUserBox}">
 		<Setter Property="Grid.Row" Value="2"/>
 		<Setter Property="ItemContainerStyle" Value="{StaticResource LBXI.RECENT}"/>
-		<Setter Property="ItemsSource" Value="{Binding Friends2}"/>
+		<Setter Property="ItemsSource" Value="{Binding UserCollection.RecentList}"/>
 		<Setter Property="Margin" Value="-5 5 0 0"/>
 		<Setter Property="MinHeight" Value="100"/>
 		<Setter Property="Template">
@@ -134,7 +134,7 @@
 		<Setter Property="ItemsPanel">
 			<Setter.Value>
 				<ItemsPanelTemplate>
-					<UniformGrid Columns="3"/>
+					<UniformGrid Columns="3" VerticalAlignment="Top"/>
 				</ItemsPanelTemplate>
 			</Setter.Value>
 		</Setter>
