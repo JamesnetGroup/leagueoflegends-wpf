@@ -187,7 +187,7 @@
 	<Style TargetType="{x:Type views:RequestUserBox}">
 		<Setter Property="Grid.Row" Value="1"/>
 		<Setter Property="ItemContainerStyle" Value="{StaticResource LBXI.SENT}"/>
-		<Setter Property="ItemsSource" Value="{Binding Friends1}"/>
+		<Setter Property="ItemsSource" Value="{Binding UserCollection.SentList}"/>
 		<Setter Property="Margin" Value="-5 5 0 0"/>
 		<Setter Property="Template">
 			<Setter.Value>

@@ -1,4 +1,5 @@
 ﻿using Leagueoflegends.Main.ViewModels;
+using Leagueoflegends.Main.Views;
 using Leagueoflegends.Windowbase.Riotbase;
 using System;
 using System.Windows;
@@ -7,6 +8,8 @@ namespace Leagueoflegends
 {
 	public class App : RiotApp
 	{
+		static MainView main1;
+
 		public App()
 		{
 
@@ -19,10 +22,14 @@ namespace Leagueoflegends
 			while (dialogResult)
 			{
 				ShutdownMode = ShutdownMode.OnExplicitShutdown;
-				Main.Views.MainView main = new()
+				MainView main = new MainView()
 				{
 					DataContext = new MainViewModel()
 				};
+
+
+				App.main1 = main;
+
 				_ = main.ShowDialog();
 				dialogResult = (bool)main.DialogResult;
 			}
