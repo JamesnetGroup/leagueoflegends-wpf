@@ -17,8 +17,8 @@ You can always share information with us and we are looking forward to it.
 ## WPF LeagueofLegends
 
 Table of Contents
-- [개발 환경]('#개발_환경')
-- 프로젝트 구조
+- [개발 환경](#개발-환경)
+- [프로젝트 구조](#프로젝트-구조)
 
 ## 개발 환경
 
