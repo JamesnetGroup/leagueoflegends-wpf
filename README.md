@@ -1,4 +1,3 @@
-# wpf-leagueoflegends
 ### About us
 
 > &nbsp; :adult: __James Lee__ &nbsp;&nbsp; [Github](https://github.com/devncore-james) &nbsp;&nbsp; james.lee@devncore.org  
@@ -14,6 +13,8 @@ You can always share information with us and we are looking forward to it.
 [![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
 
 ***
+
+# WPF LeagueofLegends
 
 ## Main > GeneralView
 ![image](https://user-images.githubusercontent.com/74305823/122345549-f0f1ab00-cf82-11eb-8ee2-e0ab8336673d.png)
