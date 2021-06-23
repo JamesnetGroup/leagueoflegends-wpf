@@ -1,6 +1,5 @@
 ﻿using Leagueoflegends.Data.Main;
 using Leagueoflegends.ExampleData.Friends;
-using Leagueoflegends.Friends.Local;
 using Leagueoflegends.Friends.Local.Collection;
 using Leagueoflegends.LayoutSupport.Controls;
 using Leagueoflegends.Windowbase.Mvvm;

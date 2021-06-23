@@ -2,17 +2,18 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 	<ResourceDictionary.MergedDictionaries>
-		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Views/Units/_subMenu.xaml"/>
-		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Views/Units/_mainMenu.xaml"/>
-		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Views/Units/_windowBar.xaml"/>
-		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Views/Units/_chatTool.xaml"/>
-		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Views/Units/_socialTool.xaml"/>
-		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Views/Units/_friendsList.xaml"/>
-		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Views/Units/_emptyContent.xaml"/>
-		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Views/Units/_noticeButton.xaml"/>
-		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Views/Units/_playButton.xaml"/>
-		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Views/Units/_currency.xaml"/>
-		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Views/Units/_profile.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Units/_subMenu.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Units/_mainMenu.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Units/_windowBar.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Units/_chatTool.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Units/_friendsSortPopup.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Units/_socialTool.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Units/_friendsList.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Units/_emptyContent.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Units/_noticeButton.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Units/_playButton.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Units/_currency.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Units/_profile.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Views/MainView.xaml"/>
 	</ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
