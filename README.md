@@ -32,16 +32,16 @@ WPF **League of Legends** 개발 관련 정보입니다. 그리고 곧 .NET 6과
 
 ### Leagueofelegends.sln
 
-**01. DB**
+* 01. DB
   * Leagueoflegends.ExampleData.dll
-**02. Base**
-  * `Basement`
+* 02. Base
+  * Basement
     * Leagueoflegends.Data.dll
     * Leagueoflegends.Windowbase.dll
-  * `Implement`
+  * Implement
     * Leagueoflegends.Controls.dll
     * Leagueoflegends.LayoutSupport.dll
-  * `Support`
+  * Support
     * Leagueoflegends.Converter.dll
     * Leagueoflegends.Resources.dll
 
