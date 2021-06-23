@@ -21,10 +21,11 @@ Table of Contents
 - [프로젝트 구조](#프로젝트-구조)
 
 ## 개발 정보
-WPF **League of Legends** 개발 정보입니다.
+WPF **League of Legends** 개발 정보(환경) 입니다.
 - NET 4.8.1 (NET 6 Soon)
 - C# 9.0
-- Visual Studio 2022 Preview
+- [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/ko/vs/preview/vs2022/)
+- [GitHub](https://github.com/devncore/leagueoflegends)
 
 
 ## 프로젝트 구조
