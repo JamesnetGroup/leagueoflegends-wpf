@@ -4,9 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Leagueoflegends.Menus.ViewModels
+namespace Leagueoflegends.Main.Local.Works
 {
-	public class MainMenuViewModel : ObservableObject
+	public class MenuWork : ObservableObject
 	{
 		private Action<MainMenuModel, List<SubMenuModel>> _menuCommand;
 
@@ -27,7 +27,7 @@ namespace Leagueoflegends.Menus.ViewModels
 
 		#region Constructor
 
-		public MainMenuViewModel(Action<MainMenuModel, List<SubMenuModel>> menuCommand)
+		public MenuWork(Action<MainMenuModel, List<SubMenuModel>> menuCommand)
 		{
 			_menuCommand = menuCommand;
 

@@ -5,7 +5,6 @@ using Leagueoflegends.Home.General.Views;
 using Leagueoflegends.Main.Local.Collection;
 using Leagueoflegends.Main.Local.Works;
 using Leagueoflegends.Main.Views;
-using Leagueoflegends.Menus.ViewModels;
 using Leagueoflegends.MyShop.ViewModels;
 using Leagueoflegends.MyShop.Views;
 using Leagueoflegends.Options.ViewModels;
@@ -39,7 +38,7 @@ namespace Leagueoflegends.Main.ViewModels
 
 		#region ViewModels
 
-		public MainMenuViewModel MainMenu { get; }
+		public MenuWork MainMenu { get; }
 		public OptionsViewModel Options { get; }
 		#endregion
 

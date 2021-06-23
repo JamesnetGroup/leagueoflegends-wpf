@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-namespace Leagueoflegends.Menus.Views
+namespace Leagueoflegends.Main.Views
 {
 	public class SubMenu : ListBox
 	{
