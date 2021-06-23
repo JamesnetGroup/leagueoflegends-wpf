@@ -14,7 +14,9 @@ You can always share information with us and we are looking forward to it.
 
 ***
 
-# WPF LeagueofLegends
+## WPF LeagueofLegends
+
+프로젝트 구조
 
 ## Main > GeneralView
 ![image](https://user-images.githubusercontent.com/74305823/122345549-f0f1ab00-cf82-11eb-8ee2-e0ab8336673d.png)
