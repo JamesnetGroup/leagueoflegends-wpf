@@ -45,6 +45,8 @@ WPF **League of Legends** 개발 관련 정보입니다. 그리고 곧 .NET 6과
     * Leagueoflegends.Converter.dll
     * Leagueoflegends.Resources.dll
 #### 03. UI
+* Views
+* Windows
 
 ## Main > GeneralView
 ![image](https://user-images.githubusercontent.com/74305823/122345549-f0f1ab00-cf82-11eb-8ee2-e0ab8336673d.png)
