@@ -22,8 +22,9 @@ Table of Contents
 
 ## 개발 정보
 WPF **League of Legends** 개발 정보입니다.
-- NET 4.8.1
+- NET 4.8.1 (NET 6으로 변경 예정)
 - C# 9.0
+- Visual Studio 2022 Preview
 
 
 ## 프로젝트 구조
