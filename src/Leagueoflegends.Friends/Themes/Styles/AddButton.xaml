@@ -18,7 +18,28 @@
 		<GradientStop Color="#443e2e" Offset="1"/>
 	</LinearGradientBrush>
 
-	<Style TargetType="{x:Type Button}" x:Key="BTN.ADD">
+	<Style TargetType="{x:Type Border}" x:Key="BORDER">
+		<Setter Property="SnapsToDevicePixels" Value="True"/>
+		<Setter Property="UseLayoutRounding" Value="True"/>
+		<Setter Property="ClipToBounds" Value="True"/>
+	</Style>
+
+	<Style TargetType="{x:Type Border}" x:Key="INLINE">
+		<Setter Property="Background" Value="Transparent"/>
+		<Setter Property="BorderBrush" Value="#CC091119"/>
+		<Setter Property="BorderThickness" Value="1"/>
+		<Setter Property="Margin" Value="0"/>
+	</Style>
+
+	<Style TargetType="{x:Type ContentPresenter}" x:Key="CONTENT">
+		<Setter Property="HorizontalAlignment" Value="Center"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+	</Style>
+
+	<Style TargetType="{x:Type views:AddButton}">
+		<Setter Property="Background" Value="#1E2328"/>
+		<Setter Property="BorderBrush" Value="{StaticResource BTN.BDR}"/>
+		<Setter Property="BorderThickness" Value="1"/>
 		<Setter Property="Width" Value="95"/>
 		<Setter Property="Height" Value="35"/>
 		<Setter Property="FontWeight" Value="Normal"/>
@@ -28,33 +49,26 @@
 		<Setter Property="VerticalAlignment" Value="Top"/>
 		<Setter Property="Margin" Value="10 12 0 0"/>
 		<Setter Property="Content" Value="Add Friend"/>
+		<Setter Property="Cursor" Value="Hand"/>
 		<Setter Property="Template">
 			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type Button}">
+				<ControlTemplate TargetType="{x:Type views:AddButton}">
 					<Grid>
-						<Border x:Name="border"
-								BorderBrush="{StaticResource BTN.BDR}"
-								BorderThickness="1" 
-								Background="#1E2328"
-								SnapsToDevicePixels="True" 
-								ClipToBounds="True">
-							<Grid Margin="0 0 0 0">
-								<ContentPresenter HorizontalAlignment="Center"
-												  VerticalAlignment="Center"/>
-								<Border Background="Transparent" 
-										BorderBrush="#CC091119" 
-										BorderThickness="1" 
-										Margin="0">
-								</Border>
+						<Border Style="{StaticResource BORDER}" 
+								Background="{TemplateBinding Background}"
+								BorderBrush="{TemplateBinding BorderBrush}"
+								BorderThickness="{TemplateBinding BorderThickness}">
+							<Grid>
+								<Border Style="{StaticResource INLINE}"/>
+								<ContentPresenter Style="{StaticResource CONTENT}"/>
 							</Grid>
 						</Border>
 					</Grid>
 					<ControlTemplate.Triggers>
 						<Trigger Property="IsMouseOver" Value="True">
-							<Setter Property="Cursor" Value="Hand"/>
-							<Setter Property="Foreground" Value="#f0e6d2"/>
-							<Setter TargetName="border" Property="BorderBrush" Value="{StaticResource BTN.BDR.OVER}"/>
-							<Setter TargetName="border" Property="Background" Value="{StaticResource BTN.BG.OVER}"/>
+							<Setter Property="Foreground" Value="#F0E6D2"/>
+							<Setter Property="BorderBrush" Value="{StaticResource BTN.BDR.OVER}"/>
+							<Setter Property="Background" Value="{StaticResource BTN.BG.OVER}"/>
 						</Trigger>
 					</ControlTemplate.Triggers>
 				</ControlTemplate>
