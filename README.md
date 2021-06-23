@@ -21,8 +21,8 @@ Table of Contents
 - [프로젝트 구조](#프로젝트-구조)
 
 ## 개발 정보
-WPF 리그오브레전드 개발 정보입니다.
-- Microsoft .NET Framework 4.8.1
+WPF **League of Legends** 개발 정보입니다.
+- NET 4.8.1
 - C# 9.0
 
 
