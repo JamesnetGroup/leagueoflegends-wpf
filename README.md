@@ -56,7 +56,7 @@ WPF **League of Legends** 개발 관련 정보입니다. 그리고 곧 .NET 6과
 **`04. App`**
 * Leagueoflegends.exe
 
-![image](https://user-images.githubusercontent.com/52397976/123109549-4a237800-d476-11eb-9e64-8d6a685a4966.png)
+![image](https://user-images.githubusercontent.com/52397976/123110531-23197600-d477-11eb-9c34-a4d168ad5fa4.png)
 
 
 ## Main > GeneralView
