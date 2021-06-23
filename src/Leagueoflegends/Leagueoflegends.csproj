@@ -104,10 +104,6 @@
       <Project>{F94791F2-2CD1-4354-817E-609AEF901794}</Project>
       <Name>Leagueoflegends.Main</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Leagueoflegends.Menus\Leagueoflegends.Menus.csproj">
-      <Project>{ef8f6871-edc0-4dbd-a0d1-11d9f9762562}</Project>
-      <Name>Leagueoflegends.Menus</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Leagueoflegends.Resources\Leagueoflegends.Resources.csproj">
       <Project>{1afee701-95ed-4977-95b3-249a9821de5b}</Project>
       <Name>Leagueoflegends.Resources</Name>

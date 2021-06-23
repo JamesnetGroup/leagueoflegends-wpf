@@ -53,49 +53,58 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Styles\Profile.xaml">
+    <Page Include="Themes\Views\Units\_mainMenu.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Styles\Currency.xaml">
+    <Page Include="Themes\Views\Units\_profile.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Styles\EmptyContent.xaml">
+    <Page Include="Themes\Views\Units\_currency.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Styles\FriendsList.xaml">
+    <Page Include="Themes\Views\Units\_emptyContent.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Styles\ChatTool.xaml">
+    <Page Include="Themes\Views\Units\_friendsList.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Styles\SocialTool.xaml">
+    <Page Include="Themes\Views\Units\_chatTool.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Styles\MainView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Themes\Styles\PlayButton.xaml">
+    <Page Include="Themes\Views\Units\_socialTool.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Styles\NoticeButton.xaml">
+    <Page Include="Themes\Views\MainView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Themes\Styles\WindowBar.xaml">
+    <Page Include="Themes\Views\Units\_playButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Views\Units\_noticeButton.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Views\Units\_subMenu.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Views\Units\_windowBar.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Local\Collection\FriendsCollection.cs" />
+    <Compile Include="Local\Works\MenuWork.cs" />
     <Compile Include="Local\Works\ModalWork.cs" />
     <Compile Include="Local\Works\WindowWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -112,6 +121,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="ViewModels\MainViewModel.cs" />
+    <Compile Include="Views\Units\MainMenu.cs" />
     <Compile Include="Views\Units\Profile.cs" />
     <Compile Include="Views\Units\Currency.cs" />
     <Compile Include="Views\Units\ChatTool.cs" />
@@ -121,6 +131,7 @@
     <Compile Include="Views\MainView.cs" />
     <Compile Include="Views\Units\PlayButton.cs" />
     <Compile Include="Views\Units\NoticeButton.cs" />
+    <Compile Include="Views\Units\SubMenu.cs" />
     <Compile Include="Views\Units\WindowBar.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -163,10 +174,6 @@
     <ProjectReference Include="..\Leagueoflegends.LayoutSupport\Leagueoflegends.LayoutSupport.csproj">
       <Project>{418FBB6A-08E6-4EAE-A304-913F232491A6}</Project>
       <Name>Leagueoflegends.LayoutSupport</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Leagueoflegends.Menus\Leagueoflegends.Menus.csproj">
-      <Project>{ef8f6871-edc0-4dbd-a0d1-11d9f9762562}</Project>
-      <Name>Leagueoflegends.Menus</Name>
     </ProjectReference>
     <ProjectReference Include="..\Leagueoflegends.MyShop\Leagueoflegends.MyShop.csproj">
       <Project>{0273aba2-31c6-4273-85a4-c90e99b18926}</Project>
