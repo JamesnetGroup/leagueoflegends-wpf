@@ -17,10 +17,14 @@ You can always share information with us and we are looking forward to it.
 ## WPF LeagueofLegends
 
 Table of Contents
-- [개발 환경](#개발-환경)
+- [개발 정보](#개발-정보)
 - [프로젝트 구조](#프로젝트-구조)
 
-## 개발 환경
+## 개발 정보
+WPF 리그오브레전드 개발 정보입니다.
+- .NET Framework 4.8.1
+- 
+
 
 ## 프로젝트 구조
 
