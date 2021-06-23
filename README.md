@@ -22,8 +22,8 @@ Table of Contents
 
 ## 개발 정보
 WPF 리그오브레전드 개발 정보입니다.
-- .NET Framework 4.8.1
-- 
+- Microsoft .NET Framework 4.8.1
+- C# 9.0
 
 
 ## 프로젝트 구조
