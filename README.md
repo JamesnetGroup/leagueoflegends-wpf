@@ -20,10 +20,13 @@ You can always share information with us and we are looking forward to it.
 - [Project Structure](#project-structure)
 
 ### Develop Information
-WPF **League of Legends** 개발 관련 정보입니다. 그리고 곧 .NET 6과 C# 10.0으로 업데이트 될 예정입니다.
+This is about **WPF League of Legends** development information.
+
 > ✔️ NET 4.8.1 (NET 6 Soon)  
 > ✔️ C# 9.0  
 > ✔️ [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/ko/vs/preview/vs2022/)
+
+_(It will be soon updated to `.NET 6` and `C# 10.0` 😃)_
 
 ### Project Structure
 
