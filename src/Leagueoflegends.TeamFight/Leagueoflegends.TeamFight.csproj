@@ -90,7 +90,7 @@
       <Name>Leagueoflegends.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\Leagueoflegends.Foundation\Leagueoflegends.Foundation.csproj">
-      <Project>{B0E72967-60F7-4796-8940-36D3822131A7}</Project>
+      <Project>{b0e72967-60f7-4796-8940-36d3822131a7}</Project>
       <Name>Leagueoflegends.Foundation</Name>
     </ProjectReference>
     <ProjectReference Include="..\Leagueoflegends.LayoutSupport\Leagueoflegends.LayoutSupport.csproj">
