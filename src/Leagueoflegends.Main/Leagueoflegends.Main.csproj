@@ -169,6 +169,10 @@
       <Project>{AD7CAAEF-1792-4CC7-A0B3-56F67EA44B03}</Project>
       <Name>Leagueoflegends.ExampleData</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Leagueoflegends.Foundation\Leagueoflegends.Foundation.csproj">
+      <Project>{b0e72967-60f7-4796-8940-36d3822131a7}</Project>
+      <Name>Leagueoflegends.Foundation</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Leagueoflegends.Friends\Leagueoflegends.Friends.csproj">
       <Project>{5df303d7-92fc-4eb2-a58d-8b3169dbd20d}</Project>
       <Name>Leagueoflegends.Friends</Name>
@@ -196,10 +200,6 @@
     <ProjectReference Include="..\Leagueoflegends.TeamFight\Leagueoflegends.TeamFight.csproj">
       <Project>{f7aa3593-bf16-4eea-915d-906b30bbf74b}</Project>
       <Name>Leagueoflegends.TeamFight</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Leagueoflegends.Windowbase\Leagueoflegends.Windowbase.csproj">
-      <Project>{B0E72967-60F7-4796-8940-36D3822131A7}</Project>
-      <Name>Leagueoflegends.Windowbase</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

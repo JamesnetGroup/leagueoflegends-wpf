@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Input;
 
-namespace Leagueoflegends.Windowbase.Mvvm
+namespace Leagueoflegends.Foundation.Mvvm
 {
 	public class RelayCommand<T> : ICommand
 	{

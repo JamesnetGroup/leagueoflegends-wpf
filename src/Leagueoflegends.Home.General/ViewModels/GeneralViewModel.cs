@@ -1,4 +1,4 @@
-﻿using Leagueoflegends.Windowbase.Mvvm;
+﻿using Leagueoflegends.Foundation.Mvvm;
 
 namespace Leagueoflegends.Home.General.ViewModels
 {

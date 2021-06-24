@@ -96,6 +96,10 @@
       <Project>{3e01f5fb-69ad-415d-8114-5d7e4d3cbb74}</Project>
       <Name>Leagueoflegends.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Leagueoflegends.Foundation\Leagueoflegends.Foundation.csproj">
+      <Project>{B0E72967-60F7-4796-8940-36D3822131A7}</Project>
+      <Name>Leagueoflegends.Foundation</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Leagueoflegends.LayoutSupport\Leagueoflegends.LayoutSupport.csproj">
       <Project>{418FBB6A-08E6-4EAE-A304-913F232491A6}</Project>
       <Name>Leagueoflegends.LayoutSupport</Name>
@@ -107,10 +111,6 @@
     <ProjectReference Include="..\Leagueoflegends.Resources\Leagueoflegends.Resources.csproj">
       <Project>{1afee701-95ed-4977-95b3-249a9821de5b}</Project>
       <Name>Leagueoflegends.Resources</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Leagueoflegends.Windowbase\Leagueoflegends.Windowbase.csproj">
-      <Project>{b0e72967-60f7-4796-8940-36d3822131a7}</Project>
-      <Name>Leagueoflegends.Windowbase</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

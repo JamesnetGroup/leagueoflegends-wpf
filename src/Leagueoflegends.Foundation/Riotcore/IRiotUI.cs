@@ -1,7 +1,7 @@
 ﻿using Leagueoflegends.Data.Main;
-using Leagueoflegends.Windowbase.Mvvm;
+using Leagueoflegends.Foundation.Mvvm;
 
-namespace Leagueoflegends.Windowbase.Riotcore
+namespace Leagueoflegends.Foundation.Riotcore
 {
 	public interface IRiotUI
 	{

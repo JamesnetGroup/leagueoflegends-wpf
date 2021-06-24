@@ -5,7 +5,7 @@ using Leagueoflegends.Friends.Views;
 using Leagueoflegends.Main.Local.ViewModel;
 using Leagueoflegends.Settings.ViewModels;
 using Leagueoflegends.Settings.Views;
-using Leagueoflegends.Windowbase.Riotcore;
+using Leagueoflegends.Foundation.Riotcore;
 
 namespace Leagueoflegends.Main.Local.Work
 {

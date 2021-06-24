@@ -1,10 +1,10 @@
 ﻿using Leagueoflegends.Data.Main;
-using Leagueoflegends.Windowbase.Mvvm;
-using Leagueoflegends.Windowbase.Riotcore;
+using Leagueoflegends.Foundation.Mvvm;
+using Leagueoflegends.Foundation.Riotcore;
 using System.Windows;
 using System.Windows.Controls;
 
-namespace Leagueoflegends.Windowbase.Riotbase
+namespace Leagueoflegends.Foundation.Riotbase
 {
 	public class RiotView : UserControl, IRiotUI
 	{

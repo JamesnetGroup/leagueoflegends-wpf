@@ -2,8 +2,8 @@
 using Leagueoflegends.Data.Config;
 using Leagueoflegends.Data.Setting.Clients;
 using Leagueoflegends.ExampleData.Setting;
-using Leagueoflegends.Windowbase.Mvvm;
-using Leagueoflegends.Windowbase.Riotbase;
+using Leagueoflegends.Foundation.Mvvm;
+using Leagueoflegends.Foundation.Riotbase;
 using System.Collections.Generic;
 
 namespace Leagueoflegends.Client.Normal.ViewModels
