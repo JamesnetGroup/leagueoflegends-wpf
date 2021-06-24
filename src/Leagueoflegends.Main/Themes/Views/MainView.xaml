@@ -4,95 +4,71 @@
 					xmlns:units="clr-namespace:Leagueoflegends.Main.UI.Units"
 					xmlns:ctrls="clr-namespace:Leagueoflegends.LayoutSupport.Controls;assembly=Leagueoflegends.LayoutSupport">
 
-	<LinearGradientBrush x:Key="BG.BTM" EndPoint="0.5,1" StartPoint="0.5,0">
-		<GradientStop Color="#33010A13" Offset="0"/>
-		<GradientStop Color="#AB010A13" Offset="0.3"/>
-		<GradientStop Color="#DD010A13" Offset="0.7"/>
-		<GradientStop Color="#010A13" Offset="1"/>
-	</LinearGradientBrush>
+	<!-- TopMenuTemplate -->
+	<DataTemplate x:Key="TOPMENU">
+		<Border BorderBrush="#553D4143" BorderThickness="0 0 0 1">
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="Auto"/>
+					<ColumnDefinition Width="*"/>
+					<ColumnDefinition Width="115"/>
+				</Grid.ColumnDefinitions>
+				<StackPanel Grid.Column="0" Orientation="Horizontal">
+					<units:PlayButton Margin="25 20 20 20"/>
+					<units:NoticeButton/>
+				</StackPanel>
+				<units:MainMenu Grid.Column="1" DataContext="{Binding MainMenu}"/>
+				<units:Currency Grid.Column="2"/>
+			</Grid>
+		</Border>
+	</DataTemplate>
+	
+	<!-- ProfileTemplate -->
+	<DataTemplate x:Key="PROFILE">
+		<Grid Grid.RowSpan="2" Grid.Column="1" Width="225" Height="81" VerticalAlignment="Top">
+			<Border Background="#FF010A13" IsHitTestVisible="False"/>
+			<units:WindowBar/>
+			<units:Profile/>
+		</Grid>
+	</DataTemplate>
+	
+	<!-- ContentTemplate -->
+	<DataTemplate x:Key="CONTENT">
+		<Grid>
+			<ContentControl Content="{Binding CurrentUI}"/>
+			<units:SubMenu HorizontalAlignment="Left" VerticalAlignment="Top"/>
+		</Grid>
+	</DataTemplate>
 
+	<!-- FriendsTemplate -->
+	<DataTemplate x:Key="FRIENDS">
+		<Grid Grid.Row="1" Grid.Column="1" Background="#FF010A13">
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="*"/>
+				<RowDefinition Height="Auto"/>
+			</Grid.RowDefinitions>
+
+			<units:SocialTool Grid.Row="0"/>
+			<units:FriendsList Grid.Row="1"/>
+			<units:ChatTool Grid.Row="2"/>
+
+
+		</Grid>
+	</DataTemplate>
+	
+	<!-- ModalTemplate -->
+	<DataTemplate x:Key="MODAL">
+		<ctrls:Modal Content="{Binding ModalContent}"/>
+	</DataTemplate>
+
+	<!-- MainView -->
 	<Style TargetType="{x:Type views:MainView}" BasedOn="{StaticResource {x:Type ctrls:MainWindow}}">
-		<Setter Property="TopMenuTemplate">
-			<Setter.Value>
-				<DataTemplate>
-					<!--Main Menu-->
-					<Border BorderBrush="#553D4143" BorderThickness="0 0 0 1">
-						<Grid>
-							<Grid.ColumnDefinitions>
-								<ColumnDefinition Width="Auto"/>
-								<ColumnDefinition Width="*"/>
-								<ColumnDefinition Width="115"/>
-							</Grid.ColumnDefinitions>
-							<StackPanel Grid.Column="0" Orientation="Horizontal">
-								<units:PlayButton Margin="25 20 20 20"/>
-								<units:NoticeButton/>
-							</StackPanel>
-							<units:MainMenu Grid.Column="1" DataContext="{Binding MainMenu}"/>
-							<units:Currency Grid.Column="2"/>
-						</Grid>
-					</Border>
-				</DataTemplate>
-			</Setter.Value>
-		</Setter>
-		<Setter Property="ProfileTemplate">
-			<Setter.Value>
-				<DataTemplate>
-					<Grid Grid.RowSpan="2" 
-						  Grid.Column="1" 
-						  Width="225" 
-						  Height="81" 
-						  VerticalAlignment="Top">
-						
-						<Border Background="#FF010A13" IsHitTestVisible="False"/>
-
-						<units:WindowBar/>
-						<units:Profile/>
-					</Grid>
-				</DataTemplate>
-			</Setter.Value>
-		</Setter>
-		<Setter Property="ContentTemplate">
-			<Setter.Value>
-				<DataTemplate>
-					<Grid>
-						<ContentControl Content="{Binding CurrentUI}"/>
-						<units:SubMenu HorizontalAlignment="Left" VerticalAlignment="Top"/>
-					</Grid>
-				</DataTemplate>
-			</Setter.Value>
-		</Setter>
-		<Setter Property="FriendsTemplate">
-			<Setter.Value>
-				<DataTemplate>
-					<!--Friends List-->
-					<Grid Grid.Row="1" Grid.Column="1" Background="#FF010A13">
-						<Grid.RowDefinitions>
-							<RowDefinition Height="Auto"/>
-							<RowDefinition Height="*"/>
-							<RowDefinition Height="Auto"/>
-						</Grid.RowDefinitions>
-
-						<units:SocialTool Grid.Row="0"/>
-						<units:FriendsList Grid.Row="1"/>
-						<units:ChatTool Grid.Row="2"/>
-
-						<Border Grid.Row="1" 
-								Background="{StaticResource BG.BTM}" 
-								BorderBrush="Transparent" 
-								Height="10" 
-								HorizontalAlignment="Stretch" 
-								VerticalAlignment="Bottom"/>
-					</Grid>
-				</DataTemplate>
-			</Setter.Value>
-		</Setter>
-		<Setter Property="ModalTemplate">
-			<Setter.Value>
-				<DataTemplate>
-					<ctrls:Modal Content="{Binding ModalContent}"/>
-				</DataTemplate>
-			</Setter.Value>
-		</Setter>
+		<Setter Property="TopMenuTemplate" Value="{StaticResource TOPMENU}"/>
+		<Setter Property="ProfileTemplate" Value="{StaticResource PROFILE}"/>
+		<Setter Property="ContentTemplate" Value="{StaticResource CONTENT}"/>
+		<Setter Property="FriendsTemplate" Value="{StaticResource FRIENDS}"/>
+		<Setter Property="ModalTemplate" Value="{StaticResource MODAL}"/>
 	</Style>
 	
 </ResourceDictionary>

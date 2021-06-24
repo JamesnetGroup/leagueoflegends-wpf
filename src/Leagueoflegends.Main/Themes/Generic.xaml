@@ -8,6 +8,8 @@
 		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Units/ChatTool.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Units/FriendsSortPopup.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Units/SocialTool.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Units/FriendsGroupExpander.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Units/FriendsListItem.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Units/FriendsList.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Units/EmptyContent.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Main;component/Themes/Units/NoticeButton.xaml"/>
