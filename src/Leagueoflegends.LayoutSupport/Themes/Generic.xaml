@@ -4,6 +4,7 @@
 	<ResourceDictionary.MergedDictionaries>
 		<ResourceDictionary Source="/Leagueoflegends.LayoutSupport;component/Themes/Styles/BasicScroll.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.LayoutSupport;component/Themes/Styles/RiotIcon.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.LayoutSupport;component/Themes/Styles/CircleFace.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.LayoutSupport;component/Themes/Styles/RiotCheckBox.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.LayoutSupport;component/Themes/Styles/RiotButton.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.LayoutSupport;component/Themes/Styles/RiotSlider.xaml"/>
