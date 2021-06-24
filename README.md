@@ -25,8 +25,6 @@ WPF **League of Legends** 개발 관련 정보입니다. 그리고 곧 .NET 6과
 - NET 4.8.1 (NET 6 Soon)
 - C# 9.0
 - [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/ko/vs/preview/vs2022/)
-- [GitHub](https://github.com/devncore/leagueoflegends)
-
 
 ## 프로젝트 구조
 
@@ -77,4 +75,3 @@ WPF **League of Legends** 개발 관련 정보입니다. 그리고 곧 .NET 6과
 ## Reference
 TBD...
 
-[dll]: https://user-images.githubusercontent.com/74305823/123193155-3a8c4980-d4df-11eb-86b0-839431d44a6b.png
