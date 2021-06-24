@@ -21,9 +21,9 @@ You can always share information with us and we are looking forward to it.
 
 ## 개발 정보
 WPF **League of Legends** 개발 관련 정보입니다. 그리고 곧 .NET 6과 C# 10.0으로 업데이트 될 예정입니다.
-- NET 4.8.1 (NET 6 Soon)
-- C# 9.0
-- [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/ko/vs/preview/vs2022/)
+> ✔️ NET 4.8.1 (NET 6 Soon)  
+> ✔️ C# 9.0  
+> ✔️ [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/ko/vs/preview/vs2022/)
 
 ## 프로젝트 구조
 
