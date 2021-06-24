@@ -14,6 +14,8 @@ using Leagueoflegends.Client.Alarm.UI;
 using Leagueoflegends.Client.Alarm.Local.ViewModel;
 using Leagueoflegends.Client.Chat.Local.ViewModel;
 using Leagueoflegends.Client.Chat.UI;
+using Leagueoflegends.Client.Sound.Local.ViewModel;
+using Leagueoflegends.Client.Sound.UI;
 
 namespace Leagueoflegends.Settings.ViewModels
 {
@@ -29,6 +31,7 @@ namespace Leagueoflegends.Settings.ViewModels
 		private ClientNormalViewModel Normal;
 		private ClientAlarmViewModel Alarm;
 		private ClientChatViewModel Chat;
+		private ClientSoundViewModel Sound;
 		private Dictionary<int, IRiotUI> UIs { get; set; }
 		#endregion 
 
@@ -70,6 +73,7 @@ namespace Leagueoflegends.Settings.ViewModels
 			Normal = new ClientNormalViewModel();
 			Alarm = new ClientAlarmViewModel();
 			Chat = new ClientChatViewModel();
+			Sound = new ClientSoundViewModel();
 
 			SettingMenus = ExamSettings.GetSettingList();
 			CompleteCommand = new RelayCommand<Modal>(CompleteClick);
@@ -91,6 +95,7 @@ namespace Leagueoflegends.Settings.ViewModels
 					1 => new ClientNormalView().SetVM(Normal),
 					2 => new ClientAlarmView().SetVM(Alarm),
 					3 => new ClientChatView().SetVM(Chat),
+					4 => new ClientSoundView().SetVM(Sound),
 					_ => new EmptyView()
 				};
 
@@ -114,6 +119,7 @@ namespace Leagueoflegends.Settings.ViewModels
 			setting.ClientNormal = Normal.Model;
 			setting.ClientAlarm = Alarm.Model;
 			setting.ClientChat = Chat.Model;
+			setting.ClientSound = Sound.Model;
 
 			RiotConfig.SaveSettings(setting);
 		}

@@ -34,6 +34,7 @@
 		Check,
 		CheckBold,
 		Mark,
-		Menuswap
+		Menuswap,
+		Thumb
 	}
 }
