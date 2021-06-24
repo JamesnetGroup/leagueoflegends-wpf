@@ -14,7 +14,8 @@
 							<Ellipse Stroke="{TemplateBinding BorderBrush}" 
 								 StrokeThickness="2">
 								<Ellipse.Fill>
-									<ImageBrush ImageSource="{Binding RelativeSource={RelativeSource AncestorType=ctrls:CircleFace}, Path=Source}" Stretch="UniformToFill"/>
+									<ImageBrush ImageSource="{Binding RelativeSource={RelativeSource AncestorType=ctrls:CircleFace}, Path=Source}" 
+												Stretch="UniformToFill"/>
 								</Ellipse.Fill>
 							</Ellipse>
 						</Grid>
