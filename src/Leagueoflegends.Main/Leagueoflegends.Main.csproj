@@ -53,51 +53,51 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Units\_friendsSortPopup.xaml">
+    <Page Include="Themes\Units\FriendsSortPopup.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Units\_chatTool.xaml">
+    <Page Include="Themes\Units\ChatTool.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Units\_currency.xaml">
+    <Page Include="Themes\Units\Currency.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Units\_emptyContent.xaml">
+    <Page Include="Themes\Units\EmptyContent.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Units\_friendsList.xaml">
+    <Page Include="Themes\Units\FriendsList.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Units\_mainMenu.xaml">
+    <Page Include="Themes\Units\MainMenu.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Units\_noticeButton.xaml">
+    <Page Include="Themes\Units\NoticeButton.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Units\_playButton.xaml">
+    <Page Include="Themes\Units\PlayButton.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Units\_profile.xaml">
+    <Page Include="Themes\Units\Profile.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Units\_socialTool.xaml">
+    <Page Include="Themes\Units\SocialTool.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Units\_subMenu.xaml">
+    <Page Include="Themes\Units\SubMenu.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Units\_windowBar.xaml">
+    <Page Include="Themes\Units\WindowBar.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
