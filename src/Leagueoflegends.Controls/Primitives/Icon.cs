@@ -64,6 +64,7 @@ namespace Leagueoflegends.Controls.Primitives
 				case GeoIcon.CheckBold: icon.Data = IconData.CHECK_BOLD.ToGeometry(); break;
 				case GeoIcon.Mark: icon.Data = IconData.MARK.ToGeometry(); break;
 				case GeoIcon.Menuswap: icon.Data = IconData.MENUSWAP.ToGeometry(); break;
+				case GeoIcon.Thumb: icon.Data = IconData.THUMB.ToGeometry(); break;
 
 				case GeoIcon.None:
 					break;
