@@ -55,6 +55,7 @@
     <Compile Include="Main\MainMenuModel.cs" />
     <Compile Include="Main\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Setting\Clients\ClientAlarmModel.cs" />
     <Compile Include="Setting\Clients\ClientNormalModel.cs" />
     <Compile Include="Setting\SettingMenuModel.cs" />
     <Compile Include="Setting\SettingModel.cs" />

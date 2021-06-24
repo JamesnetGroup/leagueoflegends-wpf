@@ -91,6 +91,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Leagueoflegends.Client.Alarm\Leagueoflegends.Client.Alarm.csproj">
+      <Project>{903D9585-68CB-4B96-BAA8-585E6C6B61F8}</Project>
+      <Name>Leagueoflegends.Client.Alarm</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Leagueoflegends.Client.Normal\Leagueoflegends.Client.Normal.csproj">
       <Project>{A0BA31FA-2B99-4879-8FD3-0CB7DE52FC85}</Project>
       <Name>Leagueoflegends.Client.Normal</Name>

@@ -1,9 +1,9 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-namespace Leagueoflegends.LayoutSupport.Controls
+namespace Leagueoflegends.Controls
 {
-	public class RiotCheckBox : CheckBox
+    public class RiotCheckBox : CheckBox
     {
         static RiotCheckBox()
         {

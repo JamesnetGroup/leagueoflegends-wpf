@@ -10,6 +10,10 @@ using Leagueoflegends.Foundation.Riotcore;
 using System;
 using System.Collections.Generic;
 using System.Windows.Input;
+using Leagueoflegends.Data.Setting.Clients;
+using Leagueoflegends.Client.Alarm.UI;
+using System.Data.SqlTypes;
+using Leagueoflegends.Client.Alarm.Local.ViewModel;
 
 namespace Leagueoflegends.Settings.ViewModels
 {
@@ -23,6 +27,7 @@ namespace Leagueoflegends.Settings.ViewModels
 		private SettingMenuModel _currentSettingMenu;
 
 		private ClientNormalViewModel Normal;
+		private ClientAlarmViewModel Alarm;
 		private Dictionary<int, IRiotUI> UIs { get; set; }
 		#endregion 
 
@@ -62,6 +67,7 @@ namespace Leagueoflegends.Settings.ViewModels
 			ViewClosed = modalClose;
 			UIs = new();
 			Normal = new ClientNormalViewModel();
+			Alarm = new ClientAlarmViewModel();
 
 			SettingMenus = ExamSettings.GetSettingList();
 			CompleteCommand = new RelayCommand<Modal>(CompleteClick);
@@ -81,6 +87,7 @@ namespace Leagueoflegends.Settings.ViewModels
 				content = value.Seq switch
 				{
 					1 => new ClientNormalView().SetVM(Normal),
+					2 => new ClientAlarmView().SetVM(Alarm),
 					_ => new EmptyView()
 				};
 
@@ -102,6 +109,7 @@ namespace Leagueoflegends.Settings.ViewModels
 
 			var setting = RiotConfig.Config.Settings;
 			setting.ClientNormal = Normal.Model;
+			setting.ClientAlarm = Alarm.Model;
 
 			RiotConfig.SaveSettings(setting);
 		}
