@@ -1,5 +1,7 @@
 ﻿using Leagueoflegends.Data.Main;
 using Leagueoflegends.ExampleData.Friends;
+using Leagueoflegends.Foundation.Mvvm;
+using Leagueoflegends.Foundation.Riotcore;
 using Leagueoflegends.Home.General.ViewModels;
 using Leagueoflegends.Home.General.Views;
 using Leagueoflegends.Main.Local.Collection;
@@ -9,8 +11,6 @@ using Leagueoflegends.MyShop.ViewModels;
 using Leagueoflegends.MyShop.Views;
 using Leagueoflegends.TeamFight.ViewModels;
 using Leagueoflegends.TeamFight.Views;
-using Leagueoflegends.Foundation.Mvvm;
-using Leagueoflegends.Foundation.Riotcore;
 using System;
 using System.Collections.Generic;
 using System.Linq;

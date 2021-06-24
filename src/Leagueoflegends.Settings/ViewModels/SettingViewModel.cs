@@ -10,10 +10,10 @@ using Leagueoflegends.Foundation.Riotcore;
 using System;
 using System.Collections.Generic;
 using System.Windows.Input;
-using Leagueoflegends.Data.Setting.Clients;
 using Leagueoflegends.Client.Alarm.UI;
-using System.Data.SqlTypes;
 using Leagueoflegends.Client.Alarm.Local.ViewModel;
+using Leagueoflegends.Client.Chat.Local.ViewModel;
+using Leagueoflegends.Client.Chat.UI;
 
 namespace Leagueoflegends.Settings.ViewModels
 {
@@ -28,6 +28,7 @@ namespace Leagueoflegends.Settings.ViewModels
 
 		private ClientNormalViewModel Normal;
 		private ClientAlarmViewModel Alarm;
+		private ClientChatViewModel Chat;
 		private Dictionary<int, IRiotUI> UIs { get; set; }
 		#endregion 
 
@@ -68,6 +69,7 @@ namespace Leagueoflegends.Settings.ViewModels
 			UIs = new();
 			Normal = new ClientNormalViewModel();
 			Alarm = new ClientAlarmViewModel();
+			Chat = new ClientChatViewModel();
 
 			SettingMenus = ExamSettings.GetSettingList();
 			CompleteCommand = new RelayCommand<Modal>(CompleteClick);
@@ -88,6 +90,7 @@ namespace Leagueoflegends.Settings.ViewModels
 				{
 					1 => new ClientNormalView().SetVM(Normal),
 					2 => new ClientAlarmView().SetVM(Alarm),
+					3 => new ClientChatView().SetVM(Chat),
 					_ => new EmptyView()
 				};
 
@@ -110,6 +113,7 @@ namespace Leagueoflegends.Settings.ViewModels
 			var setting = RiotConfig.Config.Settings;
 			setting.ClientNormal = Normal.Model;
 			setting.ClientAlarm = Alarm.Model;
+			setting.ClientChat = Chat.Model;
 
 			RiotConfig.SaveSettings(setting);
 		}
