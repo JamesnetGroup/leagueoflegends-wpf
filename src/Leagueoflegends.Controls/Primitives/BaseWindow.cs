@@ -1,4 +1,4 @@
-﻿using Leagueoflegends.Windowbase.Riotbase;
+﻿using Leagueoflegends.Foundation.Riotbase;
 using System.Windows.Input;
 
 namespace Leagueoflegends.Controls.Primitives

@@ -133,9 +133,9 @@
       <Project>{3e01f5fb-69ad-415d-8114-5d7e4d3cbb74}</Project>
       <Name>Leagueoflegends.Data</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Leagueoflegends.Windowbase\Leagueoflegends.Windowbase.csproj">
+    <ProjectReference Include="..\Leagueoflegends.Foundation\Leagueoflegends.Foundation.csproj">
       <Project>{B0E72967-60F7-4796-8940-36D3822131A7}</Project>
-      <Name>Leagueoflegends.Windowbase</Name>
+      <Name>Leagueoflegends.Foundation</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

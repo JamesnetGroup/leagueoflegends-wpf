@@ -2,8 +2,8 @@
 using Leagueoflegends.ExampleData.Friends;
 using Leagueoflegends.Friends.Local.Collection;
 using Leagueoflegends.LayoutSupport.Controls;
-using Leagueoflegends.Windowbase.Mvvm;
-using Leagueoflegends.Windowbase.Riotcore;
+using Leagueoflegends.Foundation.Mvvm;
+using Leagueoflegends.Foundation.Riotcore;
 using System;
 using System.Collections.ObjectModel;
 using System.Windows.Input;

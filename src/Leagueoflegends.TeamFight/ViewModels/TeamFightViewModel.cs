@@ -1,5 +1,5 @@
 ﻿using Leagueoflegends.Data.TeamFight;
-using Leagueoflegends.Windowbase.Mvvm;
+using Leagueoflegends.Foundation.Mvvm;
 using System.Collections.Generic;
 using System.Linq;
 

@@ -1,8 +1,8 @@
-﻿using Leagueoflegends.Windowbase.Riotcore;
+﻿using Leagueoflegends.Foundation.Riotcore;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace Leagueoflegends.Windowbase.Mvvm
+namespace Leagueoflegends.Foundation.Mvvm
 {
 	public class ObservableObject : INotifyPropertyChanged
 	{

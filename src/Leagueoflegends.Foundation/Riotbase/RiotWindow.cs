@@ -1,9 +1,9 @@
 ﻿using Leagueoflegends.Data.Main;
-using Leagueoflegends.Windowbase.Mvvm;
-using Leagueoflegends.Windowbase.Riotcore;
+using Leagueoflegends.Foundation.Mvvm;
+using Leagueoflegends.Foundation.Riotcore;
 using System.Windows;
 
-namespace Leagueoflegends.Windowbase.Riotbase
+namespace Leagueoflegends.Foundation.Riotbase
 {
 	public class RiotWindow : Window, IRiotUI
 	{

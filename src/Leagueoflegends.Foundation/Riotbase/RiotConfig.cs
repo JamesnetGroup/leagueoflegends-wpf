@@ -5,7 +5,7 @@ using Leagueoflegends.Data.Setting;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
 
-namespace Leagueoflegends.Windowbase.Riotbase
+namespace Leagueoflegends.Foundation.Riotbase
 {
 	public class RiotConfig
 	{

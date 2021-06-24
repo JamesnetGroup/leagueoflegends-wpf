@@ -1,5 +1,5 @@
 ﻿using Leagueoflegends.Data.Main;
-using Leagueoflegends.Windowbase.Mvvm;
+using Leagueoflegends.Foundation.Mvvm;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 
-namespace Leagueoflegends.Windowbase.Riotbase
+namespace Leagueoflegends.Foundation.Riotbase
 {
 	public class RiotApp : Application
 	{
