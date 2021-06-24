@@ -16,7 +16,6 @@ You can always share information with us and we are looking forward to it.
 
 ## WPF LeagueofLegends
 
-Table of Contents
 - [개발 정보](#개발-정보)
 - [프로젝트 구조](#프로젝트-구조)
 
