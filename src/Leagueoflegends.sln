@@ -7,9 +7,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basement", "Basement", "{56
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Implement", "Implement", "{B1E92410-CD1D-4421-B5F3-8FBA5DF2B57C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Support", "Support", "{C0F08FEB-74D4-4C60-AFBE-39E1C5BD9FA2}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Material", "Material", "{C0F08FEB-74D4-4C60-AFBE-39E1C5BD9FA2}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04. App", "04. App", "{8444F372-1C4B-442B-B9E9-BC5FF5CF70C1}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "04. APP", "04. APP", "{8444F372-1C4B-442B-B9E9-BC5FF5CF70C1}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leagueoflegends", "Leagueoflegends\Leagueoflegends.csproj", "{99368414-76AB-43D6-8004-8D705508A4F7}"
 EndProject
@@ -50,6 +50,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02. Base", "02. Base", "{70842664-AD52-4325-AAD6-0EA2EAECFCEA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leagueoflegends.Foundation", "Leagueoflegends.Foundation\Leagueoflegends.Foundation.csproj", "{B0E72967-60F7-4796-8940-36D3822131A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leagueoflegends.Client.Alarm", "Leagueoflegends.Client.Alarm\Leagueoflegends.Client.Alarm.csproj", "{903D9585-68CB-4B96-BAA8-585E6C6B61F8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -117,6 +119,10 @@ Global
 		{B0E72967-60F7-4796-8940-36D3822131A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B0E72967-60F7-4796-8940-36D3822131A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B0E72967-60F7-4796-8940-36D3822131A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{903D9585-68CB-4B96-BAA8-585E6C6B61F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{903D9585-68CB-4B96-BAA8-585E6C6B61F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{903D9585-68CB-4B96-BAA8-585E6C6B61F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{903D9585-68CB-4B96-BAA8-585E6C6B61F8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -142,6 +148,7 @@ Global
 		{7718944A-9FD7-44A9-A19D-5A275F13CDD4} = {477D28C5-1EA3-439F-84EB-E8A5DC2F3B95}
 		{9052252C-D495-405B-8255-F66106923276} = {477D28C5-1EA3-439F-84EB-E8A5DC2F3B95}
 		{B0E72967-60F7-4796-8940-36D3822131A7} = {56621D41-07D0-471B-8C67-9F3BA8AA443D}
+		{903D9585-68CB-4B96-BAA8-585E6C6B61F8} = {9052252C-D495-405B-8255-F66106923276}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EB8A4E83-8ABD-40CF-B56A-559A49B51254}

@@ -40,25 +40,25 @@
 		</Setter>
 	</Style>
 
-	<Style TargetType="{x:Type ctrls:RiotCheckBox}" x:Key="CHK.LOWMODE">
+	<Style TargetType="{x:Type ctrls:CheckBox01}" x:Key="CHK.LOWMODE">
 		<Setter Property="Content" Value="저사양 모드 활성화"/>
 		<Setter Property="IsChecked" Value="{Binding Model.LowSpecMode}"/>
 		<Setter Property="Tag" Value="본 기능을 사용하면 일부 클라이언트 그래픽 품질이 떨어지지만 성능이 크게 향상됩니다. 클라이언트 사용 시 화면이 끊기거나 지연 현상(렉)이 발생한다면 저사양 모드를 권해드립니다."/>
 	</Style>
 
-	<Style TargetType="{x:Type ctrls:RiotCheckBox}" x:Key="CHK.ONOFF">
+	<Style TargetType="{x:Type ctrls:CheckBox01}" x:Key="CHK.ONOFF">
 		<Setter Property="Content" Value="게임 중에는 클라이언트 완전히 끄기"/>
 		<Setter Property="IsChecked" Value="{Binding Model.ShutClient}"/>
 		<Setter Property="Tag" Value="본 설정을 사용하면 게임 실행 중 클라이언트가 종료되어 저사양 환경에서 게임 내 FPS 수치를 향상시킬 수 있지만, 게임 종료 화면의 점수판 로딩 시간이 크게 증가합니다. 저사양 환경이며 게임 내 FPS 수치가 매우 낮을 경우 이 설정 사용을 권해드립니다."/>
 	</Style>
 
-	<Style TargetType="{x:Type ctrls:RiotCheckBox}" x:Key="CHK.ERROR">
+	<Style TargetType="{x:Type ctrls:CheckBox01}" x:Key="CHK.ERROR">
 		<Setter Property="Content" Value="오류 자동 보고"/>
 		<Setter Property="IsChecked" Value="{Binding Model.BugAutoReport}"/>
 		<Setter Property="Tag" Value="이 기능을 사용하면 오류가 발생했을 때 자동으로 문제 해결 데이터를 수집하여 라이엇 게임즈에 전송합니다."/>
 	</Style>
 
-	<Style TargetType="{x:Type ctrls:RiotCheckBox}" x:Key="CHK.GUIDE">
+	<Style TargetType="{x:Type ctrls:CheckBox01}" x:Key="CHK.GUIDE">
 		<Setter Property="Content" Value="초보자 도움말 및 도움말 사용"/>
 		<Setter Property="IsChecked" Value="{Binding Model.BeginnerGuide}"/>
 		<Setter Property="Tag" Value=""/>
@@ -246,10 +246,10 @@
 					<StackPanel Margin="30 10 0 0">
 						<TextBlock Text="리그 오브 레전드 행동 수칙" FontSize="12" Foreground="#A09B8C"/>
 						<Button Style="{StaticResource BTN.DETAIL}"/>
-						<ctrls:RiotCheckBox Style="{StaticResource CHK.LOWMODE}"/>
-						<ctrls:RiotCheckBox Style="{StaticResource CHK.ONOFF}"/>
-						<ctrls:RiotCheckBox Style="{StaticResource CHK.ERROR}"/>
-						<ctrls:RiotCheckBox Style="{StaticResource CHK.GUIDE}"/>
+						<ctrls:CheckBox01 Style="{StaticResource CHK.LOWMODE}"/>
+						<ctrls:CheckBox01 Style="{StaticResource CHK.ONOFF}"/>
+						<ctrls:CheckBox01 Style="{StaticResource CHK.ERROR}"/>
+						<ctrls:CheckBox01 Style="{StaticResource CHK.GUIDE}"/>
 						<TextBlock Text="창 크기" FontSize="12" Foreground="#A09B8C" Margin="0 20 0 0"/>
 						<ComboBox Style="{StaticResource CBX.WINSIZE}"/>
 						<TextBlock Text="문제 해결" FontSize="12" Foreground="#A09B8C" Margin="0 30 0 10"/>

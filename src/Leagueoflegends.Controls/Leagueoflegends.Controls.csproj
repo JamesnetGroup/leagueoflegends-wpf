@@ -47,6 +47,7 @@
     <Compile Include="Primitives\DragBorder.cs" />
     <Compile Include="Primitives\BaseWindow.cs" />
     <Compile Include="Primitives\Icon.cs" />
+    <Compile Include="Primitives\RiotCheckBox.cs" />
     <Compile Include="Primitives\RiotTooltip.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\GeometryExtend.cs" />
