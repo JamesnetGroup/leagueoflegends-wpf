@@ -28,13 +28,13 @@ WPF **League of Legends** 개발 관련 정보입니다. 그리고 곧 .NET 6과
 ## 프로젝트 구조
 
 <details>
-  <summary><b> 📁 01. DB</b></summary>
+  <summary><b> 📁 01. DB </b></summary>
   
   - `Leagueoflegends.ExampleData.dll`
 </details>
 
 <details>
-  <summary><b> 📁 02. BASE</b></summary>
+  <summary><b> 📁 02. BASE </b></summary>
   
   #### &nbsp;&nbsp;&nbsp; `Basement`  
   - `Leagueoflegends.Data.dll`   
@@ -50,7 +50,7 @@ WPF **League of Legends** 개발 관련 정보입니다. 그리고 곧 .NET 6과
 </details>
 
 <details>
-  <summary><b> 📁 03. UI</b></summary>
+  <summary><b> 📁 03. UI </b></summary>
   
   #### &nbsp;&nbsp;&nbsp; `Views`  
   - `Leagueoflegends.Friends.dll`   
@@ -61,7 +61,7 @@ WPF **League of Legends** 개발 관련 정보입니다. 그리고 곧 .NET 6과
 </details>
 
 <details>
-  <summary><b> 📁 04. APP</b></summary>
+  <summary><b> 📁 04. APP </b></summary>
   
   - `Leagueoflegends.exe`
 </details>
