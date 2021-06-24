@@ -53,6 +53,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Themes\Units\FriendsGroupExpander.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\FriendsListItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Themes\Units\FriendsSortPopup.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -129,6 +137,8 @@
     <Compile Include="UI\Units\ChatTool.cs" />
     <Compile Include="UI\Units\Currency.cs" />
     <Compile Include="UI\Units\EmptyContent.cs" />
+    <Compile Include="UI\Units\FriendsGroupExpander.cs" />
+    <Compile Include="UI\Units\FriendsListItem.cs" />
     <Compile Include="UI\Units\FriendsList.cs" />
     <Compile Include="UI\Units\MainMenu.cs" />
     <Compile Include="UI\Units\NoticeButton.cs" />
