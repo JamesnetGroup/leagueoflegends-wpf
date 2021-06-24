@@ -2,7 +2,6 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 					xmlns:units="clr-namespace:Leagueoflegends.Main.UI.Units">
 
-
 	<LinearGradientBrush x:Key="IMG.BDR2" EndPoint="0.5,1" StartPoint="0.5,0">
 		<GradientStop Color="#B79349" Offset="0"/>
 		<GradientStop Color="#957230" Offset="0.5"/>
@@ -14,7 +13,7 @@
 		<GradientStop Color="#D9BD81" Offset="0.5"/>
 		<GradientStop Color="#C99D3F" Offset="1"/>
 	</LinearGradientBrush>
-	
+
 	<Style TargetType="{x:Type units:FriendsListItem}">
 		<Setter Property="Visibility" Value="Collapsed"/>
 		<Setter Property="Background" Value="Transparent"/>
@@ -27,11 +26,7 @@
 								<ColumnDefinition Width="Auto"/>
 								<ColumnDefinition/>
 							</Grid.ColumnDefinitions>
-							<Border x:Name="border" Grid.Column="0" Width="30" Height="30" CornerRadius="20" BorderBrush="{StaticResource IMG.BDR2}" BorderThickness="2">
-								<Border.Background>
-									<ImageBrush ImageSource="{Binding Avatar}" Stretch="UniformToFill"/>
-								</Border.Background>
-							</Border>
+							<units:AvataThumb x:Name="avatar" BorderBrush="{StaticResource IMG.BDR2}"/>
 							<StackPanel Grid.Column="1" Margin="5 0 0 0">
 								<TextBlock x:Name="text1" Text="{Binding Name}" Foreground="#A09B8C" FontSize="13" FontWeight="Bold"/>
 								<TextBlock x:Name="text2" Text="{Binding Status}" Foreground="#A09B8C" FontSize="12" FontWeight="Normal"/>
@@ -39,10 +34,13 @@
 						</Grid>
 					</Border>
 					<ControlTemplate.Triggers>
+						<DataTrigger Binding="{Binding IsUser}" Value="True">
+							<Setter Property="Visibility" Value="Visible"/>
+						</DataTrigger>
 						<Trigger Property="IsMouseOver" Value="True">
 							<Setter TargetName="text1" Property="Foreground" Value="#F0E6D2"/>
 							<Setter Property="Background" Value="#11FFFFFF"/>
-							<Setter TargetName="border" Property="BorderBrush" Value="{StaticResource IMG.BDR2.OVER}"/>
+							<Setter TargetName="avatar" Property="BorderBrush" Value="{StaticResource IMG.BDR2.OVER}"/>
 						</Trigger>
 						<DataTrigger Binding="{Binding Status}" Value="온라인">
 							<Setter TargetName="text2" Property="Foreground" Value="#09A646"/>
@@ -53,7 +51,7 @@
 						<DataTrigger Binding="{Binding IsGeneral}" Value="false">
 							<Setter TargetName="text1" Property="Foreground" Value="#4E514F"/>
 							<Setter TargetName="text2" Property="Foreground" Value="#4E514F"/>
-							<Setter TargetName="border" Property="BorderBrush" Value="{StaticResource IMG.BDR3}"/>
+							<Setter TargetName="avatar" Property="BorderBrush" Value="{StaticResource IMG.BDR3}"/>
 						</DataTrigger>
 						<MultiDataTrigger>
 							<MultiDataTrigger.Conditions>
@@ -62,7 +60,7 @@
 							</MultiDataTrigger.Conditions>
 							<Setter TargetName="text1" Property="Foreground" Value="#9E998B"/>
 							<Setter TargetName="text2" Property="Foreground" Value="#9E998B"/>
-							<Setter TargetName="border" Property="BorderBrush" Value="{StaticResource IMG.BDR3.OVER}"/>
+							<Setter TargetName="avatar" Property="BorderBrush" Value="{StaticResource IMG.BDR3.OVER}"/>
 						</MultiDataTrigger>
 					</ControlTemplate.Triggers>
 				</ControlTemplate>

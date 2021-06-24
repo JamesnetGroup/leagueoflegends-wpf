@@ -37,19 +37,13 @@
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type TreeViewItem}">
 					<StackPanel>
-						<units:FriendsGroupExpander x:Name="expand" IsChecked="{Binding IsExpanded}"/>
-						<units:FriendsListItem x:Name="user"/>
-						<ItemsPresenter x:Name="items" Visibility="Collapsed"/>
+						<units:FriendsGroupExpander IsChecked="{Binding IsExpanded}"/>
+						<units:FriendsListItem/>
+						<ItemsPresenter x:Name="items"/>
 					</StackPanel>
 					<ControlTemplate.Triggers>
-						<DataTrigger Binding="{Binding IsUser}" Value="True">
-							<Setter TargetName="user" Property="Visibility" Value="Visible"/>
-						</DataTrigger>
-						<DataTrigger Binding="{Binding IsUser}" Value="False">
-							<Setter TargetName="expand" Property="Visibility" Value="Visible"/>
-						</DataTrigger>
-						<Trigger Property="IsExpanded" Value="True">
-							<Setter TargetName="items" Property="Visibility" Value="Visible"/>
+						<Trigger Property="IsExpanded" Value="False">
+							<Setter TargetName="items" Property="Visibility" Value="Collapsed"/>
 						</Trigger>
 					</ControlTemplate.Triggers>
 				</ControlTemplate>
