@@ -30,30 +30,45 @@ WPF **League of Legends** 개발 관련 정보입니다. 그리고 곧 .NET 6과
 
 ## 프로젝트 구조
 
-### Leagueofelegends.sln
-> **`01. DB`**
->  * Leagueoflegends.ExampleData.dll
->
->  **`02. Base`**
->  * Basement
->    * Leagueoflegends.Data.dll
->    * Leagueoflegends.Windowbase.dll
->  * Implement
->    * Leagueoflegends.Controls.dll
->    * Leagueoflegends.LayoutSupport.dll
->  * Support
->    * Leagueoflegends.Converter.dll
->    * Leagueoflegends.Resources.dll
->  
->  **`03. UI`**
->  * Views
->    * Leagueoflegends.Friends.dll
->    * Leagueoflegends.Settings.dll
->  * Windows
->    * Leagueoflegends.Main.dll
->  
->  **`04. App`**
->  * Leagueoflegends.exe
+<details>
+  <summary><b> 📁 01. DB</b></summary>
+  
+  - `Leagueoflegends.ExampleData.dll`
+</details>
+
+<details>
+  <summary><b> 📁 02. BASE</b></summary>
+  
+  #### &nbsp;&nbsp;&nbsp; `Basement`  
+  - `Leagueoflegends.Data.dll`   
+  - `Leagueoflegends.Foundation.dll`
+  
+  #### &nbsp;&nbsp;&nbsp; `Implement`  
+  - `Leagueoflegends.Controls.dll`   
+  - `Leagueoflegends.LayoutSupport.dll`
+    
+  #### &nbsp;&nbsp;&nbsp; `Support`
+  - `Leagueoflegends.Converter.dll`   
+  - `Leagueoflegends.Resources.dll`
+</details>
+
+<details>
+  <summary><b> 📁 03. UI</b></summary>
+  
+  #### &nbsp;&nbsp;&nbsp; `Views`  
+  - `Leagueoflegends.Friends.dll`   
+  - `Leagueoflegends.Settings.dll`
+  
+  #### &nbsp;&nbsp;&nbsp; `Windows` 
+  - `Leagueoflegends.Main.dll`   
+</details>
+
+<details>
+  <summary><b> 📁 04. APP</b></summary>
+  
+  - `Leagueoflegends.exe`
+</details>
+
 
 ## Main > GeneralView
 ![image](https://user-images.githubusercontent.com/74305823/122345549-f0f1ab00-cf82-11eb-8ee2-e0ab8336673d.png)
@@ -62,4 +77,4 @@ WPF **League of Legends** 개발 관련 정보입니다. 그리고 곧 .NET 6과
 ## Reference
 TBD...
 
-
+[dll]: https://user-images.githubusercontent.com/74305823/123193155-3a8c4980-d4df-11eb-86b0-839431d44a6b.png
