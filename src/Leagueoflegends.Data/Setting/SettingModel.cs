@@ -8,6 +8,7 @@ namespace Leagueoflegends.Data.Setting
 		public ClientAlarmModel ClientAlarm { get; set; }
 		public ClientChatModel ClientChat { get; set; }
 		public ClientSoundModel ClientSound { get; set; }
+		public ClientVoiceModel ClientVoice { get; set; }
 
 		public SettingModel()
 		{
@@ -15,6 +16,7 @@ namespace Leagueoflegends.Data.Setting
 			ClientAlarm = new ClientAlarmModel();
 			ClientChat = new ClientChatModel();
 			ClientSound = new ClientSoundModel();
+			ClientVoice = new ClientVoiceModel();
 		}
 	}
 }

@@ -107,6 +107,10 @@
       <Project>{A5C9EC2C-18EF-4E67-8723-B2AA05140CAA}</Project>
       <Name>Leagueoflegends.Client.Sound</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Leagueoflegends.Client.Voice\Leagueoflegends.Client.Voice.csproj">
+      <Project>{5229E040-27BB-45CA-B4AF-31F7C53A843C}</Project>
+      <Name>Leagueoflegends.Client.Voice</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Leagueoflegends.Controls\Leagueoflegends.Controls.csproj">
       <Project>{f6309cba-5a01-4e4e-ae66-02841968c02d}</Project>
       <Name>Leagueoflegends.Controls</Name>

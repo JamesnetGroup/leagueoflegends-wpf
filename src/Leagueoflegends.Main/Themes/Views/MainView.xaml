@@ -52,8 +52,6 @@
 			<units:SocialTool Grid.Row="0"/>
 			<units:FriendsList Grid.Row="1"/>
 			<units:ChatTool Grid.Row="2"/>
-
-
 		</Grid>
 	</DataTemplate>
 	
