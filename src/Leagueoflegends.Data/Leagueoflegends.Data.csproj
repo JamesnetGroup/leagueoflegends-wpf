@@ -43,10 +43,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Codes\CodeModel.cs" />
+    <Compile Include="Codes\AudioDevice.cs" />
     <Compile Include="Codes\WindowSizeCode.cs" />
     <Compile Include="Config\ConfigModel.cs" />
     <Compile Include="Enums\GeoIcon.cs" />
     <Compile Include="Enums\SettingMenuType.cs" />
+    <Compile Include="Enums\VoiceInputMode.cs" />
     <Compile Include="Local\RandomHelper.cs" />
     <Compile Include="Main\AddFriendsModel.cs" />
     <Compile Include="Main\FriendsModel.cs" />
@@ -55,6 +57,7 @@
     <Compile Include="Main\MainMenuModel.cs" />
     <Compile Include="Main\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Setting\Clients\ClientVoiceModel.cs" />
     <Compile Include="Setting\Clients\ClientSoundModel.cs" />
     <Compile Include="Setting\Clients\ClientChatModel.cs" />
     <Compile Include="Setting\Clients\ClientAlarmModel.cs" />
