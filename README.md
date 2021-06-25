@@ -26,7 +26,7 @@ This is about **WPF League of Legends** development information.
 > ✔️ C# 9.0  
 > ✔️ [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/ko/vs/preview/vs2022/)
 
-_(It will be soon updated to `.NET 6` and `C# 10.0` 😃)_
+_(It will be soon updated to `.NET 6` and `C# 10.0` 😃)_ 
 
 ### Project Structure
 
