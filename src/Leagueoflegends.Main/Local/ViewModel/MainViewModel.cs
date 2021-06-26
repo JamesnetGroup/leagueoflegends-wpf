@@ -1,4 +1,8 @@
-﻿using Leagueoflegends.Data.Main;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Windows.Input;
+using Leagueoflegends.Data.Main;
 using Leagueoflegends.ExampleData.Friends;
 using Leagueoflegends.Foundation.Mvvm;
 using Leagueoflegends.Foundation.Riotcore;
@@ -11,10 +15,6 @@ using Leagueoflegends.MyShop.ViewModels;
 using Leagueoflegends.MyShop.Views;
 using Leagueoflegends.TeamFight.ViewModels;
 using Leagueoflegends.TeamFight.Views;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Windows.Input;
 
 namespace Leagueoflegends.Main.Local.ViewModel
 {
