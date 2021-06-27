@@ -76,7 +76,7 @@ _(It will be soon updated to `.NET 6` and `C# 10.0` 😃)_
 ### Overview 
 #### `GeneralView`
 
-![image](https://user-images.githubusercontent.com/74305823/122345549-f0f1ab00-cf82-11eb-8ee2-e0ab8336673d.png)
+![imagee](https://user-images.githubusercontent.com/74305823/122345549-f0f1ab00-cf82-11eb-8ee2-e0ab8336673d.png)
 
 <br/>
 
