@@ -2,7 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 					xmlns:units="clr-namespace:Leagueoflegends.Main.UI.Units"
 					xmlns:ctrls="clr-namespace:Leagueoflegends.LayoutSupport.Controls;assembly=Leagueoflegends.LayoutSupport"
-					xmlns:frind="clr-namespace:Leagueoflegends.Friends.Views;assembly=Leagueoflegends.Friends">
+					xmlns:friend="clr-namespace:Leagueoflegends.Friends.UI.Views;assembly=Leagueoflegends.Friends">
 
 	<Style TargetType="{x:Type ctrls:RiotIcon}" x:Key="ICON.COMM">
 		<Setter Property="HorizontalAlignment" Value="Center"/>
@@ -95,7 +95,7 @@
 	<Style TargetType="{x:Type Button}" x:Key="BTN.FRIENDS" BasedOn="{StaticResource BTN.01}">
 		<Setter Property="Tag" Value="01"/>
 		<Setter Property="Command" Value="{Binding ModalCommand}"/>
-		<Setter Property="CommandParameter" Value="{x:Type frind:AddFriendsView}"/>
+		<Setter Property="CommandParameter" Value="{x:Type friend:AddFriendsView}"/>
 		<Style.Resources>
 			<Style TargetType="ToolTip" BasedOn="{StaticResource MAIN.TOOL}">
 				<Setter Property="HorizontalOffset" Value="-15"/>

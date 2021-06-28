@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-namespace Leagueoflegends.Friends.Views
+namespace Leagueoflegends.Friends.UI.Units
 {
 	public class DeleteButton : Button
 	{
