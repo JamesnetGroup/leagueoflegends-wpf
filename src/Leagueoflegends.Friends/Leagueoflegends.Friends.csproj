@@ -73,10 +73,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Styles\UserSearchTextBox.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Themes\Styles\AddFriendsView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -104,7 +100,6 @@
     <Compile Include="Views\Units\DeleteButton.cs" />
     <Compile Include="Views\Units\RequestUserBox.cs" />
     <Compile Include="Views\Units\RecentUserBox.cs" />
-    <Compile Include="Views\Units\UserSearchTextBox.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

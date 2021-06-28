@@ -7,7 +7,6 @@
 		<ResourceDictionary Source="/Leagueoflegends.Friends;component/Themes/Styles/AddButton.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Friends;component/Themes/Styles/DoneButton.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Friends;component/Themes/Styles/DeleteButton.xaml"/>
-		<ResourceDictionary Source="/Leagueoflegends.Friends;component/Themes/Styles/UserSearchTextBox.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Friends;component/Themes/Styles/RequestUserBox.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Friends;component/Themes/Styles/RecentUserBox.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Friends;component/Themes/Styles/AddFriendsView.xaml"/>
