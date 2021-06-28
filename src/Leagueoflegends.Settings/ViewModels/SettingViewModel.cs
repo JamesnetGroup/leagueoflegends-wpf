@@ -1,23 +1,25 @@
-﻿using Leagueoflegends.Client.Normal.ViewModels;
-using Leagueoflegends.Client.Normal.Views;
+﻿using System;
+using System.Windows.Input;
+using System.Collections.Generic;
 using Leagueoflegends.Data.Setting;
-using Leagueoflegends.ExampleData.Setting;
-using Leagueoflegends.LayoutSupport.Controls;
-using Leagueoflegends.Settings.Views;
 using Leagueoflegends.Foundation.Mvvm;
 using Leagueoflegends.Foundation.Riotbase;
 using Leagueoflegends.Foundation.Riotcore;
-using System;
-using System.Collections.Generic;
-using System.Windows.Input;
+using Leagueoflegends.ExampleData.Setting;
+using Leagueoflegends.LayoutSupport.Controls;
+using Leagueoflegends.Settings.Views;
+using Leagueoflegends.Client.Normal.UI;
 using Leagueoflegends.Client.Alarm.UI;
+using Leagueoflegends.Client.Chat.UI;
+using Leagueoflegends.Client.Sound.UI;
+using Leagueoflegends.Client.Voice.UI.Views;
+using Leagueoflegends.Client.Block.UI;
+using Leagueoflegends.Client.Normal.Local.ViewModel;
 using Leagueoflegends.Client.Alarm.Local.ViewModel;
 using Leagueoflegends.Client.Chat.Local.ViewModel;
-using Leagueoflegends.Client.Chat.UI;
 using Leagueoflegends.Client.Sound.Local.ViewModel;
-using Leagueoflegends.Client.Sound.UI;
 using Leagueoflegends.Client.Voice.Local.ViewModel;
-using Leagueoflegends.Client.Voice.UI.Views;
+using Leagueoflegends.Client.Block.Local.ViewModel;
 
 namespace Leagueoflegends.Settings.ViewModels
 {
@@ -34,7 +36,8 @@ namespace Leagueoflegends.Settings.ViewModels
 		private ClientAlarmViewModel Alarm;
 		private ClientChatViewModel Chat;
 		private ClientSoundViewModel Sound;
-		private ClientVoiceViewModel Voice; 
+		private ClientVoiceViewModel Voice;
+		private ClientBlockViewModel Block;
 		private Dictionary<int, IRiotUI> UIs { get; set; }
 		#endregion 
 
@@ -78,6 +81,7 @@ namespace Leagueoflegends.Settings.ViewModels
 			Chat = new ClientChatViewModel();
 			Sound = new ClientSoundViewModel();
 			Voice = new ClientVoiceViewModel();
+			Block = new ClientBlockViewModel();
 
 			SettingMenus = ExamSettings.GetSettingList();
 			CompleteCommand = new RelayCommand<Modal>(CompleteClick);
@@ -101,6 +105,7 @@ namespace Leagueoflegends.Settings.ViewModels
 					3 => new ClientChatView().SetVM(Chat),
 					4 => new ClientSoundView().SetVM(Sound),
 					5 => new ClientVoiceView().SetVM(Voice),
+					6 => new ClientBlockView().SetVM(Block),
 					_ => new EmptyView()
 				};
 

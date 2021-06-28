@@ -6,7 +6,7 @@ using Leagueoflegends.Foundation.Mvvm;
 using Leagueoflegends.Foundation.Riotbase;
 using System.Collections.Generic;
 
-namespace Leagueoflegends.Client.Normal.ViewModels
+namespace Leagueoflegends.Client.Normal.Local.ViewModel
 {
 	public class ClientNormalViewModel : ObservableObject
     {
