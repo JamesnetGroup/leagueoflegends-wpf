@@ -137,10 +137,11 @@
 	</Style>
 	
 	<Style TargetType="{x:Type units:InputSetting}">
+		<Setter Property="Grid.Row" Value="0"/>
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type units:InputSetting}">
-					<StackPanel Grid.Row="0">
+					<StackPanel>
 						<TextBlock Style="{StaticResource TXB.PARTY}"/>
 						<ctrls:CheckBox02 Style="{StaticResource CHK.AUTO}"/>
 						<ctrls:CheckBox02 Style="{StaticResource CHK.MIC}"/>
