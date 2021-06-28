@@ -1,0 +1,112 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:units="clr-namespace:Leagueoflegends.Client.Voice.UI.Units"
+					xmlns:ctrls="clr-namespace:Leagueoflegends.LayoutSupport.Controls;assembly=Leagueoflegends.LayoutSupport">
+
+	<LinearGradientBrush x:Key="GEO.FILL" StartPoint="0.5, 0" EndPoint="0.5, 1">
+		<GradientStop Color="#B28830" Offset="0"/>
+		<GradientStop Color="#A37E30" Offset="0.5"/>
+		<GradientStop Color="#87672B" Offset="1"/>
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="GEO.FILL.OVER" StartPoint="0.5, 0" EndPoint="0.5, 1">
+		<GradientStop Color="#EDE1C9" Offset="0"/>
+		<GradientStop Color="#DBBF84" Offset="0.5"/>
+		<GradientStop Color="#CBA047" Offset="1"/>
+	</LinearGradientBrush>
+	
+	<Style TargetType="{x:Type TextBlock}" x:Key="TXB.MODE">
+		<Setter Property="Text" Value="입력 모드"/>
+		<Setter Property="FontSize" Value="14"/>
+		<Setter Property="FontWeight" Value="Bold"/>
+		<Setter Property="Foreground" Value="#F0E6D2"/>
+		<Setter Property="Margin" Value="0 10 0 0"/>
+	</Style>
+
+	<Style TargetType="{x:Type RadioButton}" x:Key="IN.RDO">
+		<Setter Property="Foreground" Value="#BEB187"/>
+		<Setter Property="Background" Value="Transparent"/>
+		<Setter Property="BorderBrush" Value="Transparent"/>
+		<Setter Property="BorderThickness" Value="0"/>
+		<Setter Property="Margin" Value="0 15 0 0"/>
+		<Setter Property="FontSize" Value="12"/>
+		<Setter Property="Content" Value="{Binding VoiceInputModes.Name}"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type RadioButton}">
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="Auto"/>
+							<ColumnDefinition Width="*"/>
+						</Grid.ColumnDefinitions>
+						<ctrls:RiotIcon x:Name="dia" Grid.Column="0" IconType="DiaEmpty" Width="14" Height="14"
+										HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Fill="{StaticResource GEO.FILL}"/>
+						<TextBlock Grid.Column="1" Margin="5 0 0 0"
+								   Text="{Binding RelativeSource={RelativeSource AncestorType=RadioButton}, Path=Content}"/>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="Foreground" Value="#F0E6D2"/>
+							<Setter TargetName="dia" Property="Fill" Value="{StaticResource GEO.FILL.OVER}"/>
+						</Trigger>
+						<Trigger Property="IsChecked" Value="True">
+							<Setter Property="Foreground" Value="#EAE0CD"/>
+							<Setter TargetName="dia" Property="IconType" Value="DiaFill"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style TargetType="{x:Type ListBoxItem}" x:Key="IN.LBXI">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type ListBoxItem}">
+					<RadioButton Style="{StaticResource IN.RDO}" 
+                                 Content="{Binding Name}"
+                                 IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsSelected}"/>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style TargetType="{x:Type ListBox}" x:Key="LBX.MODE">
+		<Setter Property="ItemContainerStyle" Value="{StaticResource IN.LBXI}"/>
+		<Setter Property="ItemsSource" Value="{Binding InputMode}"/>
+		<Setter Property="SelectedValue" Value="{Binding Model.InputMode}"/>
+		<Setter Property="SelectedValuePath" Value="Mode"/>
+		<Setter Property="Background" Value="Transparent"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type ListBox}">
+					<ItemsPresenter/>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style TargetType="{x:Type units:InputMode}">
+		<Setter Property="Grid.Row" Value="1"/>
+		<Setter Property="Margin" Value="10 0 0 0"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type units:InputMode}">
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="Auto"/>
+							<ColumnDefinition Width="*"/>
+						</Grid.ColumnDefinitions>
+						<StackPanel Grid.Column="0">
+							<TextBlock Style="{StaticResource TXB.MODE}"/>
+							<ListBox Style="{StaticResource LBX.MODE}"/>
+						</StackPanel>
+						<units:InputStatus/>
+						<units:InputPress/>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	
+</ResourceDictionary>

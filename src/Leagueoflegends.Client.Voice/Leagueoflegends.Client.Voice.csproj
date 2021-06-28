@@ -52,11 +52,26 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="UI\Units\InputPress.cs" />
+    <Compile Include="UI\Units\InputStatus.cs" />
+    <Compile Include="UI\Units\InputMode.cs" />
     <Compile Include="UI\Units\InputSetting.cs" />
     <Compile Include="UI\Views\ClientVoiceView.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Themes\Units\InputMode.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Themes\Units\InputSetting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Units\InputPress.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\InputStatus.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

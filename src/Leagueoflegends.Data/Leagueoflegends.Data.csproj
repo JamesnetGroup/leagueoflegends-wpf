@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Codes\CodeModel.cs" />
     <Compile Include="Codes\AudioDevice.cs" />
+    <Compile Include="Codes\VoiceInputMode.cs" />
     <Compile Include="Codes\WindowSizeCode.cs" />
     <Compile Include="Config\ConfigModel.cs" />
     <Compile Include="Enums\GeoIcon.cs" />

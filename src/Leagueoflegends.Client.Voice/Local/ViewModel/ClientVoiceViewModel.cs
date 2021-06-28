@@ -11,6 +11,7 @@ namespace Leagueoflegends.Client.Voice.Local.ViewModel
 	public class ClientVoiceViewModel : ObservableObject
 	{
 		private List<AudioDevice> _deviceList;
+		private List<VoiceInputModes> _inputMode;
 
 		public ClientVoiceModel Model { get; set; }
 
@@ -23,11 +24,21 @@ namespace Leagueoflegends.Client.Voice.Local.ViewModel
 		}
 		#endregion
 
+		#region InputMode
+
+		public List<VoiceInputModes> InputMode
+		{
+			get => _inputMode;
+			set { _inputMode = value; OnPropertyChanged(); }
+		}
+		#endregion
+
 		#region Constructor
 
 		public ClientVoiceViewModel()
 		{
 			DeviceList = ExamSettings.GetAudioDeviceList();
+			InputMode = ExamSettings.GetInputMode();
 
 			ConfigModel config = RiotConfig.LoadConfig();
 			Model = config.Settings.ClientVoice;
