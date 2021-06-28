@@ -53,27 +53,27 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Styles\AddButton.xaml">
+    <Page Include="Themes\Units\AddButton.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Styles\DoneButton.xaml">
+    <Page Include="Themes\Units\DoneButton.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Styles\DeleteButton.xaml">
+    <Page Include="Themes\Units\DeleteButton.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Styles\RequestUserBox.xaml">
+    <Page Include="Themes\Units\RequestUserBox.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Styles\RecentUserBox.xaml">
+    <Page Include="Themes\Units\RecentUserBox.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Styles\AddFriendsView.xaml">
+    <Page Include="Themes\Views\AddFriendsView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -93,13 +93,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="ViewModels\AddFriendsViewModel.cs" />
-    <Compile Include="Views\AddFriendsView.cs" />
-    <Compile Include="Views\Units\AddButton.cs" />
-    <Compile Include="Views\Units\DoneButton.cs" />
-    <Compile Include="Views\Units\DeleteButton.cs" />
-    <Compile Include="Views\Units\RequestUserBox.cs" />
-    <Compile Include="Views\Units\RecentUserBox.cs" />
+    <Compile Include="Local\ViewModel\AddFriendsViewModel.cs" />
+    <Compile Include="UI\Views\AddFriendsView.cs" />
+    <Compile Include="UI\Units\AddButton.cs" />
+    <Compile Include="UI\Units\DoneButton.cs" />
+    <Compile Include="UI\Units\DeleteButton.cs" />
+    <Compile Include="UI\Units\RequestUserBox.cs" />
+    <Compile Include="UI\Units\RecentUserBox.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

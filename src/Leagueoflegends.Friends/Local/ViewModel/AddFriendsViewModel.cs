@@ -8,7 +8,7 @@ using System;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
 
-namespace Leagueoflegends.Friends.ViewModels
+namespace Leagueoflegends.Friends.Local.ViewModel
 {
 	public class AddFriendsViewModel : ObservableObject
 	{
