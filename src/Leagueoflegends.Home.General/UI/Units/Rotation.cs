@@ -1,9 +1,9 @@
-﻿using Leagueoflegends.LayoutSupport.Controls;
-using System.Windows;
+﻿using System.Windows;
+using System.Windows.Controls;
 
 namespace Leagueoflegends.Home.General.UI.Units
 {
-	public class Rotation : View
+	public class Rotation : Control
     {
         static Rotation()
         {
