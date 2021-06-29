@@ -1,9 +1,9 @@
-﻿using Leagueoflegends.LayoutSupport.Controls;
-using System.Windows;
+﻿using System.Windows;
+using System.Windows.Controls;
 
 namespace Leagueoflegends.Client.Voice.UI.Units
 {
-	public class InputMode : View
+	public class InputMode : Control
     {
         #region DefaultStyleKey
 
