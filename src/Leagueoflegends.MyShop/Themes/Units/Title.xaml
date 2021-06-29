@@ -1,0 +1,33 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:units="clr-namespace:Leagueoflegends.MyShop.UI.Units">
+	
+	<Geometry x:Key="GEO.HEADER">M0.35000001,0.65792049 L242.54163,0.65792049 M365.45935,0.48690727 L607.689,0.48690727 M242.08469,0.48069294 L250.7274,9.6305725 M365.65276,0.35000001 L356.7272,9.6604608 M250.39051,9.4891814 L299.01453,9.4891814 M305.01749,9.5403831 L356.91913,9.5403831 M298.62496,9.4651472 L302.02739,13.145463 M305.18564,9.3647624 L301.46767,13.167 M3.9929998,4.5758302 L252.222,4.5541682 M251.8066,4.2413798 L257.1134,9.4346217 M356.279,4.3258302 L604.508,4.3041682 M356.62715,4.0457615 L350.77585,9.4402432</Geometry>
+
+	<LinearGradientBrush x:Key="BDR.HEADER" StartPoint="0, 0.5" EndPoint="1, 0.5">
+		<GradientStop Color="#4B3D18" Offset="0.25"/>
+		<GradientStop Color="#B3933C" Offset="0.35"/>
+		<GradientStop Color="#534824" Offset="0.5"/>
+		<GradientStop Color="#B3933C" Offset="0.65"/>
+		<GradientStop Color="#4B3D18" Offset="0.75"/>
+	</LinearGradientBrush>
+
+	<Style TargetType="{x:Type units:Title}">
+		<Setter Property="Grid.Row" Value="0"/>
+		<Setter Property="Margin" Value="0 20 0 0"/>
+		<Setter Property="VerticalAlignment" Value="Top"/>
+		<Setter Property="HorizontalAlignment" Value="Center"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type units:Title}">
+					<StackPanel HorizontalAlignment="Center">
+						<TextBlock Text="나만의 상점" FontSize="16" FontWeight="Bold" Foreground="#F0E6D2" HorizontalAlignment="Center" Margin="0 0 0 -10"/>
+						<Viewbox Width="970" Height="30">
+							<Path Data="{StaticResource GEO.HEADER}" Stroke="{StaticResource BDR.HEADER}"/>
+						</Viewbox>
+					</StackPanel>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+</ResourceDictionary>

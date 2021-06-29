@@ -1,6 +1,6 @@
 ﻿using Leagueoflegends.Foundation.Mvvm;
 
-namespace Leagueoflegends.MyShop.ViewModels
+namespace Leagueoflegends.MyShop.Local.ViewModel
 {
 	public class MyShopViewModel : ObservableObject
 	{
