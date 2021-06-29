@@ -133,7 +133,7 @@ namespace Leagueoflegends.Main.Local.ViewModel
 				key = value.Name;
 				content = value.Seq switch
 				{
-					0 => new GeneralView().SetVM(new GeneralViewModel()),
+					0 => new OverView().SetVM(new GeneralViewModel()),
 					_ => new EmptyContent()
 				};
 			}

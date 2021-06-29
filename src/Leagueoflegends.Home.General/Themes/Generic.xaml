@@ -5,6 +5,6 @@
 		<ResourceDictionary Source="/Leagueoflegends.Home.General;component/Themes/Units/Rotation.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Home.General;component/Themes/Units/Thumbnail.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Home.General;component/Themes/Units/OfficialVideo.xaml"/>
-		<ResourceDictionary Source="/Leagueoflegends.Home.General;component/Themes/Views/GeneralView.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Home.General;component/Themes/Views/OverView.xaml"/>
 	</ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
