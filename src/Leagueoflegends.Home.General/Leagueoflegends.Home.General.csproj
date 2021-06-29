@@ -56,7 +56,7 @@
     <Compile Include="UI\Units\Rotation.cs" />
     <Compile Include="UI\Units\OfficialVideo.cs" />
     <Compile Include="UI\Units\Thumbnail.cs" />
-    <Compile Include="UI\Views\GeneralView.cs">
+    <Compile Include="UI\Views\OverView.cs">
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Themes\Units\Rotation.xaml">
@@ -71,7 +71,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Themes\Views\GeneralView.xaml">
+    <Page Include="Themes\Views\OverView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

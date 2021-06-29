@@ -25,13 +25,32 @@
 							</Grid.ColumnDefinitions>
 
 							<Image Grid.RowSpan="2" 
-								   Grid.ColumnSpan="2" 
-								   Source="/Leagueoflegends.Resources;component/Images/bg-main-04.png" 
+								   Grid.Column="0" 
+								   Source="/Leagueoflegends.Resources;component/Images/bg-main-05.png" 
 								   Stretch="Fill"/>
-							
 							<Border Grid.RowSpan="2" 
-									Grid.ColumnSpan="2" 
-									Background="#DA000000"/>
+								   Grid.Column="0">
+								<Border.Background>
+									<LinearGradientBrush EndPoint="1,0.5" StartPoint="0,0.5">
+										<GradientStop Color="#FF000000"/>
+										<GradientStop Color="#44000000" Offset="0.5"/>
+										<GradientStop Color="#00000000" Offset="1"/>
+									</LinearGradientBrush>
+								</Border.Background>
+							</Border>
+
+							<Border Grid.Row="0" 
+									Grid.ColumnSpan="2"
+									Height="80"
+									VerticalAlignment="Top">
+								<Border.Background>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#DD000000"/>
+										<GradientStop Color="#77000000" Offset="0.5"/>
+										<GradientStop Color="#00000000" Offset="1"/>
+									</LinearGradientBrush>
+								</Border.Background>
+							</Border>
 
 							<Grid Grid.Row="0" 
 								  Grid.ColumnSpan="2" 
@@ -65,9 +84,12 @@
 									Background="#785a28" 
 									Height="2" 
 									Grid.ColumnSpan="2"/>
-							
-							<Border Grid.Column="1" 
-									BorderBrush="#CC3D4143" 
+
+							<Border 
+									Grid.ColumnSpan="2"
+									BorderBrush="#22ffffff" 
+									SnapsToDevicePixels="True"
+									UseLayoutRounding="True"
 									BorderThickness="0 0 0 1"/>
 
 							<ContentPresenter Grid.RowSpan="2" Grid.ColumnSpan="2"

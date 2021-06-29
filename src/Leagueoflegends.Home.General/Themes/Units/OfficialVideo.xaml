@@ -20,23 +20,25 @@
 	<Style TargetType="{x:Type TextBlock}" x:Key="TXB.SUB">
 		<Setter Property="Foreground" Value="#A09B8C"/>
 		<Setter Property="FontSize" Value="12.5"/>
-		<Setter Property="Text" Value="공식 컨셉 영상"/>
+		<Setter Property="Text" Value="JUNE 21 - JULY 12"/>
+		<Setter Property="FontFamily" Value="Friz Quadrata Std"/>
 		<Setter Property="FontWeight" Value="Bold"/>
-		<Setter Property="Margin" Value="0 0 0 -6"/>
+		<Setter Property="Margin" Value="0 0 0 10"/>
 	</Style>
 
 	<Style TargetType="{x:Type TextBlock}" x:Key="TXB.HEADER">
 		<Setter Property="Foreground" Value="#F0E6D2"/>
-		<Setter Property="FontSize" Value="32"/>
-		<Setter Property="Text" Value="I`LL SHOW YOU"/>
+		<Setter Property="FontSize" Value="40"/>
+		<Setter Property="FontFamily" Value="Friz Quadrata Std"/>
+		<Setter Property="Text" Value="PRIME GAMING -&#x0a;LOL"/>
 		<Setter Property="FontWeight" Value="Bold"/>
 	</Style>
 
 	<Style TargetType="{x:Type TextBlock}" x:Key="TXB.DESC">
-		<Setter Property="Foreground" Value="#A09B8C"/>
+		<Setter Property="Foreground" Value="#FFA09B8C"/>
 		<Setter Property="FontSize" Value="14"/>
 		<Setter Property="TextWrapping" Value="WrapWithOverflow"/>
-		<Setter Property="Text" Value="`I`LL SHOW YOU`의 새로운 컨셉 영상에서 아리가 과거의 자신을 회상합니다."/>
+		<Setter Property="Text" Value="Second of 3 skin shards for this month now&#x0a;available with Prime Gaming."/>
 		<Setter Property="Margin" Value="0 12 0 12"/>
 	</Style>
 
@@ -74,7 +76,7 @@
 	<Style TargetType="{x:Type Button}" x:Key="BTN.MOVIE" BasedOn="{StaticResource BTN.01}">
 		<Setter Property="HorizontalAlignment" Value="Left"/>
 		<Setter Property="Margin" Value="0 6 0 0"/>
-		<Setter Property="Content" Value="영상 보기"/>
+		<Setter Property="Content" Value="CLAIM NOW"/>
 	</Style>
 
 	<Style TargetType="{x:Type units:OfficialVideo}">

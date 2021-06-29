@@ -80,7 +80,7 @@
 				<ControlTemplate TargetType="{x:Type units:Rotation}">
 					<StackPanel>
 						<Button Style="{StaticResource BTN.ROTATE}"/>
-						<Border Style="{StaticResource BDR.MOVIE}"/>
+						<!--<Border Style="{StaticResource BDR.MOVIE}"/>-->
 					</StackPanel>
 				</ControlTemplate>
 			</Setter.Value>

@@ -102,14 +102,14 @@
 		</Setter>
 	</Style>
 
-	<Style TargetType="{x:Type views:GeneralView}">
+	<Style TargetType="{x:Type views:OverView}">
 		<Setter Property="Template">
 			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type views:GeneralView}">
+				<ControlTemplate TargetType="{x:Type views:OverView}">
 					<Grid>
 						<Grid.RowDefinitions>
-							<RowDefinition Height="Auto"/>
 							<RowDefinition Height="*"/>
+							<RowDefinition Height="Auto"/>
 						</Grid.RowDefinitions>
 						<Grid.ColumnDefinitions>
 							<ColumnDefinition Width="*"/>
