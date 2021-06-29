@@ -1,7 +1,7 @@
 ﻿using Leagueoflegends.LayoutSupport.Controls;
 using System.Windows;
 
-namespace Leagueoflegends.MyShop.Views
+namespace Leagueoflegends.MyShop.UI.Views
 {
 	public class MyShopView : View
     {

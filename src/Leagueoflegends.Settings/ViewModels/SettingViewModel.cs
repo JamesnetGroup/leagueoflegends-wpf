@@ -37,7 +37,6 @@ namespace Leagueoflegends.Settings.ViewModels
 		private ClientChatViewModel Chat;
 		private ClientSoundViewModel Sound;
 		private ClientVoiceViewModel Voice;
-		private ClientBlockViewModel Block;
 		private Dictionary<int, IRiotUI> UIs { get; set; }
 		#endregion 
 
@@ -81,7 +80,6 @@ namespace Leagueoflegends.Settings.ViewModels
 			Chat = new ClientChatViewModel();
 			Sound = new ClientSoundViewModel();
 			Voice = new ClientVoiceViewModel();
-			Block = new ClientBlockViewModel();
 
 			SettingMenus = ExamSettings.GetSettingList();
 			CompleteCommand = new RelayCommand<Modal>(CompleteClick);
@@ -105,7 +103,7 @@ namespace Leagueoflegends.Settings.ViewModels
 					3 => new ClientChatView().SetVM(Chat),
 					4 => new ClientSoundView().SetVM(Sound),
 					5 => new ClientVoiceView().SetVM(Voice),
-					6 => new ClientBlockView().SetVM(Block),
+					6 => new ClientBlockView().SetVM(new ClientBlockViewModel()),
 					_ => new EmptyView()
 				};
 

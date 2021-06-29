@@ -52,10 +52,29 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="ViewModels\MyShopViewModel.cs" />
-    <Compile Include="Views\MyShopView.cs">
+    <Compile Include="Local\ViewModel\MyShopViewModel.cs" />
+    <Compile Include="UI\Units\ShopItem.cs" />
+    <Compile Include="UI\Units\EventInfo.cs" />
+    <Compile Include="UI\Units\Title.cs" />
+    <Compile Include="UI\Views\MyShopView.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Themes\Units\ShopItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\EventInfo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\Title.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Views\MyShopView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
