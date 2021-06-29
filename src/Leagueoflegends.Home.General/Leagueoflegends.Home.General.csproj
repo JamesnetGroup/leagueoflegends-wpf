@@ -52,10 +52,29 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="ViewModels\GeneralViewModel.cs" />
-    <Compile Include="Views\GeneralView.cs">
+    <Compile Include="Local\ViewModel\GeneralViewModel.cs" />
+    <Compile Include="UI\Units\Rotation.cs" />
+    <Compile Include="UI\Units\OfficialVideo.cs" />
+    <Compile Include="UI\Units\Thumbnail.cs" />
+    <Compile Include="UI\Views\GeneralView.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Themes\Units\Rotation.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\OfficialVideo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Units\Thumbnail.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Views\GeneralView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

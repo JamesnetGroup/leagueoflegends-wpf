@@ -1,13 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Input;
+using System.Collections.Generic;
 using Leagueoflegends.Data.Main;
-using Leagueoflegends.ExampleData.Friends;
 using Leagueoflegends.Foundation.Mvvm;
 using Leagueoflegends.Foundation.Riotcore;
-using Leagueoflegends.Home.General.ViewModels;
-using Leagueoflegends.Home.General.Views;
+using Leagueoflegends.ExampleData.Friends;
+using Leagueoflegends.Home.General.Local.ViewModel;
+using Leagueoflegends.Home.General.UI.Views;
 using Leagueoflegends.Main.Local.Collection;
 using Leagueoflegends.Main.Local.Work;
 using Leagueoflegends.Main.UI.Units;

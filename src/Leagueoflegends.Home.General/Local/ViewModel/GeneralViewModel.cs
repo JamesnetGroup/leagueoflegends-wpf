@@ -1,6 +1,6 @@
 ﻿using Leagueoflegends.Foundation.Mvvm;
 
-namespace Leagueoflegends.Home.General.ViewModels
+namespace Leagueoflegends.Home.General.Local.ViewModel
 {
 	public class GeneralViewModel : ObservableObject
     {

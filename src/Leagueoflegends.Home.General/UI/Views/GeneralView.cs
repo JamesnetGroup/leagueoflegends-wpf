@@ -1,7 +1,7 @@
 ﻿using Leagueoflegends.LayoutSupport.Controls;
 using System.Windows;
 
-namespace Leagueoflegends.Home.General.Views
+namespace Leagueoflegends.Home.General.UI.Views
 {
 	public class GeneralView : View
     {
