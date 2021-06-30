@@ -35,16 +35,16 @@
 	</Style>
 	
 	<Style TargetType="{x:Type views:SettingView}">
+		<Setter Property="Width" Value="700"/>
+		<Setter Property="Height" Value="600"/>
+		<Setter Property="HorizontalAlignment" Value="Center"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type views:SettingView}">
-					<Border Width="700" 
-							Height="600"
-							Background="#010A13" 
+					<Border Background="#010A13" 
 							BorderBrush="#463714" 
-							BorderThickness="2"
-							HorizontalAlignment="Center" 
-							VerticalAlignment="Center">
+							BorderThickness="2">
 						<Grid>
 							<Grid.RowDefinitions>
 								<RowDefinition Height="75"/>
@@ -56,15 +56,15 @@
 								<ColumnDefinition Width="*"/>
 							</Grid.ColumnDefinitions>
 
-							<!--Current Menu info-->
+							<!--CurrentMenu-->
 							<units:CurrentMenu/>
 							<ctrls:RiotButton Style="{StaticResource BTN.RESTORE}"/>
 
-							<!--Setting Menu List-->
+							<!--MenuList-->
 							<units:MenuList/>
 							<Border Grid.Row="2" Background="{StaticResource VIEW.BDR}"/>
 
-							<!--Current Setting View-->
+							<!--CurrentContent-->
 							<units:CurrentContent/>
 
 							<ctrls:RiotButton Style="{StaticResource BTN.DONE}"/>
