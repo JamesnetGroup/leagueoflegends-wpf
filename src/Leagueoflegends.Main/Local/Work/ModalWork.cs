@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using Leagueoflegends.Foundation.Riotcore;
-using Leagueoflegends.Settings.Views;
 using Leagueoflegends.Friends.UI.Views;
-using Leagueoflegends.Friends.Local.ViewModel;
+using Leagueoflegends.Settings.UI.Views;
 using Leagueoflegends.Main.Local.ViewModel;
-using Leagueoflegends.Settings.ViewModels;
+using Leagueoflegends.Friends.Local.ViewModel;
+using Leagueoflegends.Settings.Local.ViewModel;
 
 namespace Leagueoflegends.Main.Local.Work
 {

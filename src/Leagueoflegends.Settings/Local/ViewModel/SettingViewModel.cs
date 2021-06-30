@@ -7,7 +7,7 @@ using Leagueoflegends.Foundation.Riotbase;
 using Leagueoflegends.Foundation.Riotcore;
 using Leagueoflegends.ExampleData.Setting;
 using Leagueoflegends.LayoutSupport.Controls;
-using Leagueoflegends.Settings.Views;
+using Leagueoflegends.Settings.UI.Views;
 using Leagueoflegends.Client.Normal.UI;
 using Leagueoflegends.Client.Alarm.UI;
 using Leagueoflegends.Client.Chat.UI;
@@ -21,7 +21,7 @@ using Leagueoflegends.Client.Sound.Local.ViewModel;
 using Leagueoflegends.Client.Voice.Local.ViewModel;
 using Leagueoflegends.Client.Block.Local.ViewModel;
 
-namespace Leagueoflegends.Settings.ViewModels
+namespace Leagueoflegends.Settings.Local.ViewModel
 {
 	public class SettingViewModel : ObservableObject
 	{

@@ -1,7 +1,7 @@
 ﻿using Leagueoflegends.LayoutSupport.Controls;
 using System.Windows;
 
-namespace Leagueoflegends.Settings.Views
+namespace Leagueoflegends.Settings.UI.Views
 {
 	public class SettingView : View
     {
