@@ -24,12 +24,19 @@
 		<Setter Property="FontWeight" Value="Normal"/>
 		<Setter Property="FontSize" Value="12"/>
 		<Setter Property="Foreground" Value="#CDBE91"/>
+		<Setter Property="Background" Value="#1E2328"/>
+		<Setter Property="BorderBrush" Value="{StaticResource BTN.BDR}"/>
+		<Setter Property="BorderThickness" Value="1 1 1 1"/>
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type ctrls:RiotButton}">
 					<Grid>
-						<Border x:Name="border" Background="#1E2328" BorderBrush="{StaticResource BTN.BDR}" BorderThickness="1"
-								SnapsToDevicePixels="True" ClipToBounds="True">
+						<Border x:Name="border" 
+								Background="{TemplateBinding Background}" 
+								BorderBrush="{TemplateBinding BorderBrush}" 
+								BorderThickness="{TemplateBinding BorderThickness}"
+								SnapsToDevicePixels="True" 
+								ClipToBounds="True">
 							<Grid Margin="0 0 0 0">
 								<ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
 								<Border Background="Transparent" BorderBrush="#CC091119" BorderThickness="1" Margin="0"/>

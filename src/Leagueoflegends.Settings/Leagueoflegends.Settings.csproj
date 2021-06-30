@@ -49,20 +49,35 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Views\Units\EmptyView.cs" />
+    <Compile Include="UI\Units\CurrentContent.cs" />
+    <Compile Include="UI\Units\MenuList.cs" />
+    <Compile Include="UI\Units\CurrentMenu.cs" />
+    <Compile Include="UI\Views\EmptyView.cs" />
     <Page Include="Themes\Generic.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="ViewModels\SettingViewModel.cs" />
-    <Compile Include="Views\SettingView.cs">
+    <Compile Include="Local\ViewModel\SettingViewModel.cs" />
+    <Compile Include="UI\Views\SettingView.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Themes\Styles\EmptyView.xaml">
+    <Page Include="Themes\Units\CurrentContent.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Styles\Setting.xaml">
+    <Page Include="Themes\Units\MenuList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\CurrentMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Views\EmptyView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Views\Setting.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
