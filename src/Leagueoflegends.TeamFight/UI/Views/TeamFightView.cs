@@ -1,7 +1,7 @@
 ﻿using Leagueoflegends.LayoutSupport.Controls;
 using System.Windows;
 
-namespace Leagueoflegends.TeamFight.Views
+namespace Leagueoflegends.TeamFight.UI.Views
 {
 	public class TeamFightView : View
     {
