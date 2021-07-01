@@ -3,7 +3,7 @@ using Leagueoflegends.Foundation.Mvvm;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Leagueoflegends.TeamFight.ViewModels
+namespace Leagueoflegends.TeamFight.Local.ViewModel
 {
 	public class TeamFightViewModel : ObservableObject
     {
