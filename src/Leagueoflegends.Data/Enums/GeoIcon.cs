@@ -35,6 +35,7 @@
 		CheckBold,
 		Mark,
 		Menuswap,
-		Thumb
+		Thumb,
+		Lightning
 	}
 }
