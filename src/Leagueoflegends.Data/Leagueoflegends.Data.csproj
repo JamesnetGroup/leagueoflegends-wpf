@@ -63,12 +63,11 @@
     <Compile Include="Setting\Clients\ClientChatModel.cs" />
     <Compile Include="Setting\Clients\ClientAlarmModel.cs" />
     <Compile Include="Setting\Clients\ClientNormalModel.cs" />
+    <Compile Include="Setting\Game\GameShortcutModel.cs" />
     <Compile Include="Setting\SettingMenuModel.cs" />
     <Compile Include="Setting\SettingModel.cs" />
     <Compile Include="TeamFight\TeamFightModel.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Setting\Games\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
