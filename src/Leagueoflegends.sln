@@ -63,6 +63,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leagueoflegends.Client.Bloc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leagueoflegends.Game.Shortcut", "Leagueoflegends.Game.Shortcut\Leagueoflegends.Game.Shortcut.csproj", "{B1457FC6-BE4F-4D11-BE48-A7CD189A320C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leagueoflegends.Game.Sound", "Leagueoflegends.Game.Sound\Leagueoflegends.Game.Sound.csproj", "{A100558F-0037-471C-902F-19899F612670}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -153,6 +155,10 @@ Global
 		{B1457FC6-BE4F-4D11-BE48-A7CD189A320C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1457FC6-BE4F-4D11-BE48-A7CD189A320C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1457FC6-BE4F-4D11-BE48-A7CD189A320C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A100558F-0037-471C-902F-19899F612670}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A100558F-0037-471C-902F-19899F612670}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A100558F-0037-471C-902F-19899F612670}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A100558F-0037-471C-902F-19899F612670}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -184,6 +190,7 @@ Global
 		{5229E040-27BB-45CA-B4AF-31F7C53A843C} = {9052252C-D495-405B-8255-F66106923276}
 		{1BD104C6-09EB-45E4-AB44-BB93C054942C} = {9052252C-D495-405B-8255-F66106923276}
 		{B1457FC6-BE4F-4D11-BE48-A7CD189A320C} = {9052252C-D495-405B-8255-F66106923276}
+		{A100558F-0037-471C-902F-19899F612670} = {9052252C-D495-405B-8255-F66106923276}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EB8A4E83-8ABD-40CF-B56A-559A49B51254}
