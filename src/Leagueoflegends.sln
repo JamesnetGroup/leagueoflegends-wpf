@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.31306.274
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31423.177
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Basement", "Basement", "{56621D41-07D0-471B-8C67-9F3BA8AA443D}"
 EndProject
@@ -60,6 +60,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leagueoflegends.Client.Voice", "Leagueoflegends.Client.Voice\Leagueoflegends.Client.Voice.csproj", "{5229E040-27BB-45CA-B4AF-31F7C53A843C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leagueoflegends.Client.Block", "Leagueoflegends.Client.Block\Leagueoflegends.Client.Block.csproj", "{1BD104C6-09EB-45E4-AB44-BB93C054942C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leagueoflegends.Game.Shortcut", "Leagueoflegends.Game.Shortcut\Leagueoflegends.Game.Shortcut.csproj", "{B1457FC6-BE4F-4D11-BE48-A7CD189A320C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leagueoflegends.Game.Sound", "Leagueoflegends.Game.Sound\Leagueoflegends.Game.Sound.csproj", "{A100558F-0037-471C-902F-19899F612670}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -147,6 +151,14 @@ Global
 		{1BD104C6-09EB-45E4-AB44-BB93C054942C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1BD104C6-09EB-45E4-AB44-BB93C054942C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1BD104C6-09EB-45E4-AB44-BB93C054942C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1457FC6-BE4F-4D11-BE48-A7CD189A320C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1457FC6-BE4F-4D11-BE48-A7CD189A320C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1457FC6-BE4F-4D11-BE48-A7CD189A320C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1457FC6-BE4F-4D11-BE48-A7CD189A320C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A100558F-0037-471C-902F-19899F612670}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A100558F-0037-471C-902F-19899F612670}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A100558F-0037-471C-902F-19899F612670}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A100558F-0037-471C-902F-19899F612670}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -177,6 +189,8 @@ Global
 		{A5C9EC2C-18EF-4E67-8723-B2AA05140CAA} = {9052252C-D495-405B-8255-F66106923276}
 		{5229E040-27BB-45CA-B4AF-31F7C53A843C} = {9052252C-D495-405B-8255-F66106923276}
 		{1BD104C6-09EB-45E4-AB44-BB93C054942C} = {9052252C-D495-405B-8255-F66106923276}
+		{B1457FC6-BE4F-4D11-BE48-A7CD189A320C} = {9052252C-D495-405B-8255-F66106923276}
+		{A100558F-0037-471C-902F-19899F612670} = {9052252C-D495-405B-8255-F66106923276}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EB8A4E83-8ABD-40CF-B56A-559A49B51254}

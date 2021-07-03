@@ -11,10 +11,10 @@ using Leagueoflegends.Home.General.UI.Views;
 using Leagueoflegends.Main.Local.Collection;
 using Leagueoflegends.Main.Local.Work;
 using Leagueoflegends.Main.UI.Units;
-using Leagueoflegends.TeamFight.ViewModels;
-using Leagueoflegends.TeamFight.Views;
 using Leagueoflegends.MyShop.UI.Views;
 using Leagueoflegends.MyShop.Local.ViewModel;
+using Leagueoflegends.TeamFight.UI.Views;
+using Leagueoflegends.TeamFight.Local.ViewModel;
 
 namespace Leagueoflegends.Main.Local.ViewModel
 {

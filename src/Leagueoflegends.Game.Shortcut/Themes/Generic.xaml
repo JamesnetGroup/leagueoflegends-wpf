@@ -1,0 +1,11 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary Source="/Leagueoflegends.Game.Shortcut;component/Themes/Units/CastControl.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Game.Shortcut;component/Themes/Units/ItemKeyButton.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Game.Shortcut;component/Themes/Units/SkillKeyButton.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Game.Shortcut;component/Themes/Units/SpellKeyButton.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Game.Shortcut;component/Themes/Views/ShortcutViewResource.xaml"/>
+	</ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>
