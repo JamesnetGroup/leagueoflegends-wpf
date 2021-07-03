@@ -72,6 +72,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Themes\Styles\RiotShortcutButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Themes\Styles\RiotButton.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -112,6 +116,7 @@
     <Compile Include="Controls\CheckBox02.cs" />
     <Compile Include="Controls\Modal.cs" />
     <Compile Include="Controls\MainWindow.cs" />
+    <Compile Include="Controls\RiotShortcutButton.cs" />
     <Compile Include="Controls\RiotComboBoxItem.cs" />
     <Compile Include="Controls\RiotSlider.cs" />
     <Compile Include="Controls\RiotButton.cs" />

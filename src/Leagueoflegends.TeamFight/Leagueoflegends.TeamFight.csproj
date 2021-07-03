@@ -52,10 +52,64 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="ViewModels\TeamFightViewModel.cs" />
-    <Compile Include="Views\TeamFightView.cs">
+    <Compile Include="Local\ViewModel\TeamFightViewModel.cs" />
+    <Compile Include="UI\Units\Thumbnails.cs" />
+    <Compile Include="UI\Units\ItemList.cs" />
+    <Compile Include="UI\Units\ItemInfo.cs" />
+    <Compile Include="UI\Units\LevelControl.cs" />
+    <Compile Include="UI\Units\LockButton.cs" />
+    <Compile Include="UI\Units\QuickButton.cs" />
+    <Compile Include="UI\Units\UpgradeButton.cs" />
+    <Compile Include="UI\Units\SubTitleControl.cs" />
+    <Compile Include="UI\Units\TitleControl.cs" />
+    <Compile Include="UI\Units\FatesPass.cs" />
+    <Compile Include="UI\Views\TeamFightView.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Themes\Units\Thumbnails.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\ItemList.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\ItemInfo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\LevelControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\LockButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\QuickButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\UpgradeButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\SubTitleControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\TitleControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\FatesPass.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Views\TeamFightResource.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -102,5 +156,6 @@
       <Name>Leagueoflegends.Resources</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
