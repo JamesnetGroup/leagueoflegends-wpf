@@ -98,7 +98,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Friends\GetAddFriendsList.cs" />
     <Compile Include="Friends\GetFriendsList.cs" />
     <Compile Include="Local\RandomHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -115,7 +114,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Local\Database\friends.yaml" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -131,8 +129,5 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <None Include="Local\Database\users.yaml" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,16 +1,12 @@
 ﻿using Leagueoflegends.Data.Main;
 using Leagueoflegends.DBEntity.Local.Api;
 using Leagueoflegends.DBEntity.Local.Entities.Schema;
-using Leagueoflegends.ExampleData.Friends;
 using Leagueoflegends.Foundation.Mvvm;
 using Leagueoflegends.Foundation.Riotcore;
 using Leagueoflegends.Friends.Local.Collection;
-using Leagueoflegends.Friends.Local.Model;
 using Leagueoflegends.LayoutSupport.Controls;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Linq;
 using System.Windows.Input;
 
 namespace Leagueoflegends.Friends.Local.ViewModel
