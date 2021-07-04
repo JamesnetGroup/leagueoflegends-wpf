@@ -19,9 +19,10 @@ namespace Leagueoflegends.DBEntity.Local.Api
 							select new MyFriends(u);
 
 				var source = new List<IFriendsList>();
-				var general = new FriendsHeader("GENERAL");
-				var offline = new FriendsHeader("OFFLINE");
-				general.Children.AddRange(users);
+				var general = new FriendsHeader("GENERAL", true);
+				var offline = new FriendsHeader("OFFLINE", false);
+				general.Children.AddRange(users.Take(6).ToList());
+				offline.Children.AddRange(users.Skip(6).ToList());
 
 				source.Add(general);
 				source.Add(offline);
