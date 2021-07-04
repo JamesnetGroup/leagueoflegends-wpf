@@ -1,6 +1,6 @@
 ﻿using Leagueoflegends.Data.Main;
 using Leagueoflegends.DBEntity.Local.Api;
-using Leagueoflegends.DBEntity.Local.Entities.Schema;
+using Leagueoflegends.DBEntity.Local.Entities.Extend;
 using Leagueoflegends.Foundation.Mvvm;
 using Leagueoflegends.Foundation.Riotcore;
 using Leagueoflegends.Friends.Local.Collection;
@@ -53,8 +53,8 @@ namespace Leagueoflegends.Friends.Local.ViewModel
             KeywordCommand = new RelayCommand<object>(KeywordChanged);
             CloseKeywordCommand = new RelayCommand<object>(CloseKeyword);
             CompleteCommand = new RelayCommand<object>((o) => ViewClosed.Invoke(View));
-            DeleteCommand = new RelayCommand<ReqestFriends>(UserCollection.SentDelete);
-            RequestCommand = new RelayCommand<ReqestFriends>(UserCollection.SentRequest);
+            DeleteCommand = new RelayCommand<RequestUsers>(UserCollection.SentDelete);
+            RequestCommand = new RelayCommand<RequestUsers>(UserCollection.SentRequest);
 
             var data = new GetSentFriends().Run(0);
             UserCollection.AddRange(data);

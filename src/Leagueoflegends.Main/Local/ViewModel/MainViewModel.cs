@@ -15,7 +15,7 @@ using Leagueoflegends.MyShop.Local.ViewModel;
 using Leagueoflegends.TeamFight.UI.Views;
 using Leagueoflegends.TeamFight.Local.ViewModel;
 using Leagueoflegends.DBEntity.Local.Api;
-using Leagueoflegends.DBEntity.Local.Entities.Schema;
+using Leagueoflegends.DBEntity.Local.Entities.Extend;
 
 namespace Leagueoflegends.Main.Local.ViewModel
 {
@@ -109,10 +109,9 @@ namespace Leagueoflegends.Main.Local.ViewModel
 
 			MainMenu = new(MenuSelected);
 			Options = new();
-			//Friends = new(ExamFriends.GetFriendsList());
 
 			var friends = new GetFriends().Run(0);
-			Friends = new(SetFriendsNode(friends));
+			Friends = new(friends);
 		}
 		#endregion
 
@@ -166,7 +165,7 @@ namespace Leagueoflegends.Main.Local.ViewModel
 
 		#region SetFriendsNode
 
-		private List<FriendsModel> SetFriendsNode(List<Users> data)
+		private List<FriendsModel> SetFriendsNode(List<MyFriends> data)
 		{
 			List<FriendsModel> friends = new();
 
