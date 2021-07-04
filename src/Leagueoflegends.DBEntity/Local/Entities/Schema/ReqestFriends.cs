@@ -1,7 +1,4 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-
-namespace Leagueoflegends.DBEntity.Local.Entities.Schema
+﻿namespace Leagueoflegends.DBEntity.Local.Entities.Schema
 {
 	public class ReqestFriends : Users
 	{

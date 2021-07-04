@@ -1,8 +1,5 @@
 ﻿using Leagueoflegends.DBEntity.Local.Entities.Schema;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Leagueoflegends.DBEntity.Local.Entities
 {

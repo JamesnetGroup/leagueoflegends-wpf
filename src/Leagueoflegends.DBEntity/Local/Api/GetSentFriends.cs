@@ -1,9 +1,7 @@
 ﻿using Leagueoflegends.DBEntity.Local.Entities;
 using Leagueoflegends.DBEntity.Local.Entities.Schema;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace Leagueoflegends.DBEntity.Local.Api
 {

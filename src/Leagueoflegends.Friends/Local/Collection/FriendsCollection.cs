@@ -1,6 +1,4 @@
-﻿using Leagueoflegends.Data.Main;
-using Leagueoflegends.DBEntity.Local.Entities.Schema;
-using Leagueoflegends.Friends.Local.Model;
+﻿using Leagueoflegends.DBEntity.Local.Entities.Schema;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
