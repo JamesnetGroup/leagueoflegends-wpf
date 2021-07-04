@@ -6,6 +6,7 @@ namespace Leagueoflegends.DBEntity.Local.Entities
 	public class RiotContext : DbContext
 	{
 		public DbSet<Users> Users { get; set; }
+		public DbSet<Friends> Friends { get; set; }
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
 			optionsBuilder
