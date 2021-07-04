@@ -1,25 +1,27 @@
 ﻿using Leagueoflegends.Data.Main;
+using Leagueoflegends.DBEntity.Local.Entities.Schema;
+using Leagueoflegends.Friends.Local.Model;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 
 namespace Leagueoflegends.Friends.Local.Collection
 {
-	public class UserCollection 
+	public class FriendsCollection 
 	{
 		#region SentList
 
-		public ObservableCollection<AddUserModel> SentList { get; set; }
+		public ObservableCollection<ReqestFriends> SentList { get; set; }
 		#endregion
 
 		#region RcentList
 
-		public ObservableCollection<AddUserModel> RecentList { get; set; }
+		public ObservableCollection<ReqestFriends> RecentList { get; set; }
 		#endregion
 
 		#region Constructor
 
-		public UserCollection()
+		public FriendsCollection()
 		{ 
 		
 		}
@@ -29,8 +31,9 @@ namespace Leagueoflegends.Friends.Local.Collection
 
 		#region AddRange 
 
-		internal void AddRange(List<AddUserModel> users)
+		internal void AddRange(List<ReqestFriends> users)
 		{
+			SentList = new(users);
 			SentList = new(users.Where(x => x.IsSent));
 			RecentList = new(users.Where(x => x.IsSent == false));
 		}
@@ -38,7 +41,7 @@ namespace Leagueoflegends.Friends.Local.Collection
 
 		#region SentDelete
 
-		internal void SentDelete(AddUserModel user)
+		internal void SentDelete(ReqestFriends user)
 		{
 			RemoveSentList(user);
 		}
@@ -46,7 +49,7 @@ namespace Leagueoflegends.Friends.Local.Collection
 
 		#region SentRequest
 
-		internal void SentRequest(AddUserModel user)
+		internal void SentRequest(ReqestFriends user)
 		{
 			RemoveRecentList(user);
 			AddSentList(user);
@@ -57,7 +60,7 @@ namespace Leagueoflegends.Friends.Local.Collection
 
 		#region AddSentList
 
-		private void AddSentList(AddUserModel user)
+		private void AddSentList(ReqestFriends user)
 		{
 			user.IsSent = true;
 			SentList.Add(user);
@@ -66,7 +69,7 @@ namespace Leagueoflegends.Friends.Local.Collection
 
 		#region RemoveRecentList
 
-		private void RemoveRecentList(AddUserModel user)
+		private void RemoveRecentList(ReqestFriends user)
 		{
 			RecentList.Remove(user);
 		}
@@ -74,7 +77,7 @@ namespace Leagueoflegends.Friends.Local.Collection
 
 		#region RemoveSentList
 
-		private void RemoveSentList(AddUserModel user)
+		private void RemoveSentList(ReqestFriends user)
 		{
 			SentList.Remove(user);
 		}

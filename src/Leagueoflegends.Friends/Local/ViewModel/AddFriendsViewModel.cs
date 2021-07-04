@@ -1,12 +1,16 @@
 ﻿using Leagueoflegends.Data.Main;
 using Leagueoflegends.DBEntity.Local.Api;
+using Leagueoflegends.DBEntity.Local.Entities.Schema;
 using Leagueoflegends.ExampleData.Friends;
 using Leagueoflegends.Foundation.Mvvm;
 using Leagueoflegends.Foundation.Riotcore;
 using Leagueoflegends.Friends.Local.Collection;
+using Leagueoflegends.Friends.Local.Model;
 using Leagueoflegends.LayoutSupport.Controls;
 using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Linq;
 using System.Windows.Input;
 
 namespace Leagueoflegends.Friends.Local.ViewModel
@@ -39,23 +43,7 @@ namespace Leagueoflegends.Friends.Local.ViewModel
         }
         #endregion
 
-        #region Friends
-
-        public ObservableCollection<AddUserModel> Friends1
-        {
-            get { return _friends1; }
-            set { _friends1 = value; OnPropertyChanged(); }
-        }
-
-        public ObservableCollection<AddUserModel> Friends2
-        {
-            get { return _friends2; }
-            set { _friends2 = value; OnPropertyChanged(); }
-        }
-
-        #endregion
-
-        public UserCollection UserCollection { get; }
+        public FriendsCollection UserCollection { get; }
 
         #region Constructor
 
@@ -69,12 +57,11 @@ namespace Leagueoflegends.Friends.Local.ViewModel
             KeywordCommand = new RelayCommand<object>(KeywordChanged);
             CloseKeywordCommand = new RelayCommand<object>(CloseKeyword);
             CompleteCommand = new RelayCommand<object>((o) => ViewClosed.Invoke(View));
-            DeleteCommand = new RelayCommand<AddUserModel>(UserCollection.SentDelete);
-            RequestCommand = new RelayCommand<AddUserModel>(UserCollection.SentRequest);
+            DeleteCommand = new RelayCommand<ReqestFriends>(UserCollection.SentDelete);
+            RequestCommand = new RelayCommand<ReqestFriends>(UserCollection.SentRequest);
 
-            var a = ExamFriends.GetAddFriendsList();
-            var b = new GetUsers().Run();
-            //UserCollection.AddRange(ExamFriends.GetAddFriendsList());
+            var data = new GetSentFriends().Run(0);
+            UserCollection.AddRange(data);
         }
         #endregion
 
