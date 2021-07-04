@@ -51,6 +51,7 @@
     <Compile Include="Enums\SettingMenuType.cs" />
     <Compile Include="Enums\VoiceInputMode.cs" />
     <Compile Include="Local\RandomHelper.cs" />
+    <Compile Include="Local\Schema\UsersTable.cs" />
     <Compile Include="Main\AddFriendsModel.cs" />
     <Compile Include="Main\FriendsModel.cs" />
     <Compile Include="Main\OptionModel.cs" />

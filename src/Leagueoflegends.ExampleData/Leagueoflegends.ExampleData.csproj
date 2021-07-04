@@ -115,7 +115,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Local\Database\user.yaml" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -130,12 +129,9 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-<<<<<<< HEAD
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-=======
-    <Folder Include="Local\Database\" />
->>>>>>> ee3c54b6d92eac5bb0c1ce4955a81e6207f15c03
+    <None Include="Local\Database\users.yaml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

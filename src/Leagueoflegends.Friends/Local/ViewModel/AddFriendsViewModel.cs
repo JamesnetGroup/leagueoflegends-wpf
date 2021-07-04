@@ -71,7 +71,8 @@ namespace Leagueoflegends.Friends.Local.ViewModel
             DeleteCommand = new RelayCommand<AddUserModel>(UserCollection.SentDelete);
             RequestCommand = new RelayCommand<AddUserModel>(UserCollection.SentRequest);
 
-            UserCollection.AddRange(ExamFriends.GetAddFriendsList());
+            var a = ExamFriends.GetAddFriendsList();
+            //UserCollection.AddRange(ExamFriends.GetAddFriendsList());
         }
         #endregion
 
