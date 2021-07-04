@@ -18,5 +18,9 @@ namespace Leagueoflegends.Data.Main
             Nation = "KR";
             Avatar = $"/Leagueoflegends.Resources;component/Images/Square/{RandomHelper.Random.Next(0, 42)}.png";
         }
+        public AddUserModel()
+        { 
+        
+        }
     }
 }
