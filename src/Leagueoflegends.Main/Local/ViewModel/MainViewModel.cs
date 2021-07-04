@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using Leagueoflegends.Data.Main;
 using Leagueoflegends.Foundation.Mvvm;
 using Leagueoflegends.Foundation.Riotcore;
-using Leagueoflegends.ExampleData.Friends;
 using Leagueoflegends.Home.General.Local.ViewModel;
 using Leagueoflegends.Home.General.UI.Views;
 using Leagueoflegends.Main.Local.Collection;
@@ -15,11 +14,16 @@ using Leagueoflegends.MyShop.UI.Views;
 using Leagueoflegends.MyShop.Local.ViewModel;
 using Leagueoflegends.TeamFight.UI.Views;
 using Leagueoflegends.TeamFight.Local.ViewModel;
+using Leagueoflegends.DBEntity.Local.Api;
+using Leagueoflegends.DBEntity.Local.Entities.Schema;
 
 namespace Leagueoflegends.Main.Local.ViewModel
 {
 	public class MainViewModel : ObservableObject
 	{
+		private static readonly object syncLock = new object();
+		private static readonly Random random = new Random();
+
 		#region Variables
 
 		private readonly WindowWork _winWork;
@@ -105,7 +109,10 @@ namespace Leagueoflegends.Main.Local.ViewModel
 
 			MainMenu = new(MenuSelected);
 			Options = new();
-			Friends = new(ExamFriends.GetFriendsList());
+			//Friends = new(ExamFriends.GetFriendsList());
+
+			var friends = new GetFriends().Run(0);
+			Friends = new(SetFriendsNode(friends));
 		}
 		#endregion
 
@@ -154,6 +161,37 @@ namespace Leagueoflegends.Main.Local.ViewModel
 			}
 
 			CurrentUI = UIs[key];
+		}
+		#endregion
+
+		#region SetFriendsNode
+
+		private List<FriendsModel> SetFriendsNode(List<Users> data)
+		{
+			List<FriendsModel> friends = new();
+
+			FriendsModel general = new("GENERAL");
+			FriendsModel offline = new("OFFLINE");
+
+			friends.Add(general);
+			friends.Add(offline);
+;
+			data.ForEach((u) =>
+			{
+				lock (syncLock)
+				{
+					if (random.Next(0, 2) == 0)
+					{
+						general.Children.Add(new(0, 0, u.Seq, u.Name));
+					}
+					else
+					{
+						offline.Children.Add(new(0, 0, u.Seq, u.Name));
+					}
+				}
+			});
+
+			return friends;
 		}
 		#endregion
 	}
