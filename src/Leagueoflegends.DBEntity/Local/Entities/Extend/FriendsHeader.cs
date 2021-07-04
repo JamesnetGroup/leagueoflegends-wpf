@@ -10,9 +10,10 @@ namespace Leagueoflegends.DBEntity.Local.Entities.Extend
 		public List<MyFriends> Children { get; set; }
 		public string Header { get; set; }
 		public Type Type => GetType();
-		public FriendsHeader(string header)
+		public FriendsHeader(string header, bool isExpanded)
 		{
 			Header = header;
+			IsExpanded = isExpanded;
 			Children = new List<MyFriends>();
 		}
 	}

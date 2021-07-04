@@ -1,7 +1,8 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 					xmlns:ctrls="clr-namespace:Leagueoflegends.LayoutSupport.Controls;assembly=Leagueoflegends.LayoutSupport"
-					xmlns:units="clr-namespace:Leagueoflegends.Main.UI.Units">
+					xmlns:units="clr-namespace:Leagueoflegends.Main.UI.Units"
+					xmlns:convt="clr-namespace:Leagueoflegends.Converter;assembly=Leagueoflegends.Converter">
 
 	<LinearGradientBrush x:Key="IMG.BDR2" EndPoint="0.5,1" StartPoint="0.5,0">
 		<GradientStop Color="#B79349" Offset="0"/>
@@ -27,7 +28,7 @@
 								<ColumnDefinition Width="Auto"/>
 								<ColumnDefinition/>
 							</Grid.ColumnDefinitions>
-							<ctrls:CircleFace x:Name="avatar" BorderBrush="{StaticResource IMG.BDR2}" Source="{Binding Avatar}"/>
+							<ctrls:CircleFace x:Name="avatar" BorderBrush="{StaticResource IMG.BDR2}" Source="{Binding Seq, Converter={convt:ThumbnailConverter}}"/>
 							<StackPanel Grid.Column="1" Margin="5 0 0 0">
 								<TextBlock x:Name="text1" Text="{Binding Name}" Foreground="#A09B8C" FontSize="13" FontWeight="Bold"/>
 								<TextBlock x:Name="text2" Text="{Binding Status}" Foreground="#A09B8C" FontSize="12" FontWeight="Normal"/>
