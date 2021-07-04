@@ -115,6 +115,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Local\Database\friends.yaml" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
