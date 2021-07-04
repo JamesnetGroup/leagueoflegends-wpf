@@ -1,4 +1,4 @@
-﻿using Leagueoflegends.DBEntity.Local.Entities.Schema;
+﻿using Leagueoflegends.DBEntity.Local.Entities.Extend;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
@@ -9,12 +9,12 @@ namespace Leagueoflegends.Friends.Local.Collection
 	{
 		#region SentList
 
-		public ObservableCollection<ReqestFriends> SentList { get; set; }
+		public ObservableCollection<RequestUsers> SentList { get; set; }
 		#endregion
 
 		#region RcentList
 
-		public ObservableCollection<ReqestFriends> RecentList { get; set; }
+		public ObservableCollection<RequestUsers> RecentList { get; set; }
 		#endregion
 
 		#region Constructor
@@ -29,7 +29,7 @@ namespace Leagueoflegends.Friends.Local.Collection
 
 		#region AddRange 
 
-		internal void AddRange(List<ReqestFriends> users)
+		internal void AddRange(List<RequestUsers> users)
 		{
 			SentList = new(users);
 			SentList = new(users.Where(x => x.IsSent));
@@ -39,7 +39,7 @@ namespace Leagueoflegends.Friends.Local.Collection
 
 		#region SentDelete
 
-		internal void SentDelete(ReqestFriends user)
+		internal void SentDelete(RequestUsers user)
 		{
 			RemoveSentList(user);
 		}
@@ -47,7 +47,7 @@ namespace Leagueoflegends.Friends.Local.Collection
 
 		#region SentRequest
 
-		internal void SentRequest(ReqestFriends user)
+		internal void SentRequest(RequestUsers user)
 		{
 			RemoveRecentList(user);
 			AddSentList(user);
@@ -58,7 +58,7 @@ namespace Leagueoflegends.Friends.Local.Collection
 
 		#region AddSentList
 
-		private void AddSentList(ReqestFriends user)
+		private void AddSentList(RequestUsers user)
 		{
 			user.IsSent = true;
 			SentList.Add(user);
@@ -67,7 +67,7 @@ namespace Leagueoflegends.Friends.Local.Collection
 
 		#region RemoveRecentList
 
-		private void RemoveRecentList(ReqestFriends user)
+		private void RemoveRecentList(RequestUsers user)
 		{
 			RecentList.Remove(user);
 		}
@@ -75,7 +75,7 @@ namespace Leagueoflegends.Friends.Local.Collection
 
 		#region RemoveSentList
 
-		private void RemoveSentList(ReqestFriends user)
+		private void RemoveSentList(RequestUsers user)
 		{
 			SentList.Remove(user);
 		}

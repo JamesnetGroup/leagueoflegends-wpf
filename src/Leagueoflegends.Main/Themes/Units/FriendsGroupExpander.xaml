@@ -34,7 +34,7 @@
 							</Grid.ColumnDefinitions>
 							<ctrls:RiotIcon x:Name="path" Style="{StaticResource ICON.UNEXPAND}"/>
 							<StackPanel Grid.Column="1" Orientation="Horizontal">
-								<TextBlock x:Name="text" Style="{StaticResource TXB.FRIENDS}" Text="{Binding Name}"/>
+								<TextBlock x:Name="text" Style="{StaticResource TXB.FRIENDS}" Text="{Binding Header}"/>
 								<TextBlock x:Name="text2" Style="{StaticResource TXB.FRIENDS}" Visibility="Collapsed" Margin="5 0 0 0">
 									<TextBlock.Text>
 										<MultiBinding StringFormat="{}({0}/{1})">
@@ -68,10 +68,10 @@
 						<DataTrigger Binding="{Binding Children.Count}" Value="0">
 							<Setter TargetName="path" Property="Visibility" Value="Collapsed"/>
 						</DataTrigger>
-						<DataTrigger Binding="{Binding Name}" Value="GENERAL">
+						<DataTrigger Binding="{Binding Header}" Value="GENERAL">
 							<Setter TargetName="text2" Property="Visibility" Value="Visible"/>
 						</DataTrigger>
-						<DataTrigger Binding="{Binding Name}" Value="OFFLINE">
+						<DataTrigger Binding="{Binding Header}" Value="OFFLINE">
 							<Setter TargetName="text3" Property="Visibility" Value="Visible"/>
 						</DataTrigger>
 					</ControlTemplate.Triggers>
