@@ -1,4 +1,5 @@
 ﻿using Leagueoflegends.DBEntity.Local.Entities;
+using Leagueoflegends.DBEntity.Local.Entities.Schema;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,13 +7,15 @@ using System.Text;
 
 namespace Leagueoflegends.DBEntity.Local.Api
 {
-	public class GetUsers
+	public class GetSentFriends
 	{
-		public object Run()
+		public List<ReqestFriends> Run(int mySeq)
 		{
 			using (var db = new RiotContext())
 			{
 				var users = db.Users
+					.Where(x=>x.Seq != mySeq)
+					.Select(x =>new ReqestFriends(x))
 					.ToList();
 
 				return users;

@@ -79,7 +79,8 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Local\Collection\UserCollection.cs" />
+    <Compile Include="Local\Collection\FriendsCollection.cs" />
+    <Compile Include="Local\Model\FriendsDataModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
