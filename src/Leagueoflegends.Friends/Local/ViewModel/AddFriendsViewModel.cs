@@ -1,4 +1,5 @@
 ﻿using Leagueoflegends.Data.Main;
+using Leagueoflegends.DBEntity.Local.Api;
 using Leagueoflegends.ExampleData.Friends;
 using Leagueoflegends.Foundation.Mvvm;
 using Leagueoflegends.Foundation.Riotcore;
@@ -72,6 +73,7 @@ namespace Leagueoflegends.Friends.Local.ViewModel
             RequestCommand = new RelayCommand<AddUserModel>(UserCollection.SentRequest);
 
             var a = ExamFriends.GetAddFriendsList();
+            var b = new GetUsers().Run();
             //UserCollection.AddRange(ExamFriends.GetAddFriendsList());
         }
         #endregion
