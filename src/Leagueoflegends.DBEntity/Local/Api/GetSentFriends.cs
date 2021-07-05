@@ -1,7 +1,7 @@
-﻿using Leagueoflegends.DBEntity.Local.Entities;
-using Leagueoflegends.DBEntity.Local.Entities.Extend;
+﻿using System.Linq;
 using System.Collections.Generic;
-using System.Linq;
+using Leagueoflegends.DBEntity.Local.Entities;
+using Leagueoflegends.DBEntity.Local.Entities.Extend;
 
 namespace Leagueoflegends.DBEntity.Local.Api
 {

@@ -12,21 +12,25 @@ namespace Leagueoflegends.DBEntity.Local.Api
 		{
 			using RiotContext db = new();
 
-			var users = from f in db.Friends
+			var query = from f in db.Friends
 						where f.UserSeq == mySeq
 						join u in db.Users
 						on f.FriendsSeq equals u.Seq
 						select new MyFriends(u);
 
-			List<IFriendsList> list = new();
+			var friends = query.ToList()
+				.OrderBy(x=>x.Status)
+				.ToList();
+
 			FriendsHeader general = new("GENERAL", true);
-			FriendsHeader offline = new("OFFLINE", false);
+			FriendsHeader offline = new("OFFLINE", true);
 
-			general.Children.AddRange(users.Take(6).ToList());
-			offline.Children.AddRange(users.Skip(6).ToList());
-
+			List<IFriendsList> list = new();
 			list.Add(general);
 			list.Add(offline);
+
+			general.Children.AddRange(friends.Where(x=>x.Status > 0));
+			offline.Children.AddRange(friends.Where(x => x.Status < 1));
 
 			return list;
 		}
