@@ -30,8 +30,16 @@
 							</Grid.ColumnDefinitions>
 							<ctrls:CircleFace x:Name="avatar" BorderBrush="{StaticResource IMG.BDR2}" Source="{Binding Seq, Converter={convt:ThumbnailConverter}}"/>
 							<StackPanel Grid.Column="1" Margin="5 0 0 0">
-								<TextBlock x:Name="text1" Text="{Binding Name}" Foreground="#A09B8C" FontSize="13" FontWeight="Bold"/>
-								<TextBlock x:Name="text2" Text="{Binding Status}" Foreground="#A09B8C" FontSize="12" FontWeight="Normal"/>
+								<TextBlock x:Name="text1" 
+										   Text="{Binding Name}"
+										   Foreground="#A09B8C" 
+										   FontSize="13" 
+										   FontWeight="Bold"/>
+								<TextBlock x:Name="text2"
+										   Text="{Binding Status, Converter={convt:StatusConverter}}"
+										   Foreground="#FF5B5A56" 
+										   FontSize="12"
+										   FontWeight="Normal"/>
 							</StackPanel>
 						</Grid>
 					</Border>
@@ -44,10 +52,16 @@
 							<Setter Property="Background" Value="#11FFFFFF"/>
 							<Setter TargetName="avatar" Property="BorderBrush" Value="{StaticResource IMG.BDR2.OVER}"/>
 						</Trigger>
-						<DataTrigger Binding="{Binding Status}" Value="온라인">
+						<DataTrigger Binding="{Binding Status}" Value="0">
+							<Setter TargetName="text2" Property="Foreground" Value="#FF5B5A56"/>
+						</DataTrigger>
+						<DataTrigger Binding="{Binding Status}" Value="1">
 							<Setter TargetName="text2" Property="Foreground" Value="#09A646"/>
 						</DataTrigger>
-						<DataTrigger Binding="{Binding Status}" Value="게임 중">
+						<DataTrigger Binding="{Binding Status}" Value="2">
+							<Setter TargetName="text2" Property="Foreground" Value="#0ACBE6"/>
+						</DataTrigger>
+						<DataTrigger Binding="{Binding Status}" Value="3">
 							<Setter TargetName="text2" Property="Foreground" Value="#0ACBE6"/>
 						</DataTrigger>
 						<DataTrigger Binding="{Binding IsGeneral}" Value="false">
