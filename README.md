@@ -78,7 +78,7 @@ _(It will be soon updated to `.NET 6` and `C# 10.0` 😃)_
 
 ![image](https://user-images.githubusercontent.com/52397976/123805450-0b376b80-d929-11eb-909b-d786654506b6.png)
 
-![image](https://user-images.githubusercontent.com/52397976/124482430-3c5de300-dde4-11eb-8696-db7e138a74be.png)
+![image](https://user-images.githubusercontent.com/52397976/124482513-526ba380-dde4-11eb-9b31-c3c1199987b6.png)
 
 <br/>
   
