@@ -8,6 +8,7 @@
 		<Setter Property="FontFamily" Value="Friz Quadrata Std"/>
 		<Setter Property="Foreground" Value="#A09B8C"/>
 		<Setter Property="FontSize" Value="12"/>
+		<Setter Property="FontWeight" Value="Bold"/>
 		<Setter Property="VerticalAlignment" Value="Center"/>
 	</Style>
 	
