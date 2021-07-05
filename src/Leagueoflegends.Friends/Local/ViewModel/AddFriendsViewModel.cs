@@ -1,12 +1,10 @@
-﻿using Leagueoflegends.Data.Main;
-using Leagueoflegends.DBEntity.Local.Api;
+﻿using Leagueoflegends.DBEntity.Local.Api;
 using Leagueoflegends.DBEntity.Local.Entities.Extend;
 using Leagueoflegends.Foundation.Mvvm;
 using Leagueoflegends.Foundation.Riotcore;
 using Leagueoflegends.Friends.Local.Collection;
 using Leagueoflegends.LayoutSupport.Controls;
 using System;
-using System.Collections.ObjectModel;
 using System.Windows.Input;
 
 namespace Leagueoflegends.Friends.Local.ViewModel
@@ -17,8 +15,6 @@ namespace Leagueoflegends.Friends.Local.ViewModel
 
 		private readonly Action<IRiotUI> ViewClosed;
         private string _keyword;
-        private ObservableCollection<AddUserModel> _friends1;
-        private ObservableCollection<AddUserModel> _friends2;
         #endregion
 
         #region ICommands

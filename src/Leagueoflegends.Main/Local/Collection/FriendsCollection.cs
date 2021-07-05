@@ -1,5 +1,4 @@
-﻿using Leagueoflegends.Data.Main;
-using Leagueoflegends.DBEntity.Local.Entities.Extend;
+﻿using Leagueoflegends.DBEntity.Local.Entities.Extend;
 using Leagueoflegends.DBEntity.Local.Entities.Implements;
 using System.Collections.Generic;
 using System.Linq;
