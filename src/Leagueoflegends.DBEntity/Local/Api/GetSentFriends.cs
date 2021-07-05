@@ -9,15 +9,13 @@ namespace Leagueoflegends.DBEntity.Local.Api
 	{
 		public List<RequestUsers> Run(int mySeq)
 		{
-			using (var db = new RiotContext())
-			{
-				var users = db.Users
-					.Where(x=>x.Seq != mySeq)
-					.Select(x =>new RequestUsers(x))
-					.ToList();
+			using RiotContext db = new();
+			var users = db.Users
+				.Where(x => x.Seq != mySeq)
+				.Select(x => new RequestUsers(x))
+				.ToList();
 
-				return users;
-			}
+			return users;
 		}
 	}
 }
