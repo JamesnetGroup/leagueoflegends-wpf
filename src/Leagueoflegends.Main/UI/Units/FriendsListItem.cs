@@ -3,7 +3,7 @@ using System.Windows.Controls;
 
 namespace Leagueoflegends.Main.UI.Units
 {
-	public class FriendsListItem : Control
+	public class FriendsListItem : Button
 	{
 		#region DefaultStyleKey
 
