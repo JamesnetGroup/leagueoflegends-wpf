@@ -19,7 +19,6 @@
 	<Style TargetType="{x:Type units:FriendsListItem}">
 		<Setter Property="Visibility" Value="Collapsed"/>
 		<Setter Property="Background" Value="Transparent"/>
-		<Setter Property="Cursor" Value="Hand"/>
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type units:FriendsListItem}">
@@ -29,7 +28,10 @@
 								<ColumnDefinition Width="Auto"/>
 								<ColumnDefinition/>
 							</Grid.ColumnDefinitions>
-							<ctrls:CircleFace x:Name="avatar" BorderBrush="{StaticResource IMG.BDR2}" Source="{Binding Seq, Converter={convt:ThumbnailConverter}}"/>
+							<ctrls:CircleFace x:Name="avatar" 
+											  Margin="0 0 4 0"
+											  BorderBrush="{StaticResource IMG.BDR2}" 
+											  Source="{Binding Seq, Converter={convt:ThumbnailConverter}}"/>
 							<StackPanel Grid.Column="1" Margin="5 0 0 0">
 								<TextBlock x:Name="text1" 
 										   Text="{Binding Name}"
@@ -49,12 +51,14 @@
 						</DataTrigger>
 						<Trigger Property="IsMouseOver" Value="True">
 							<Setter TargetName="text1" Property="Foreground" Value="#F0E6D2"/>
+							<Setter TargetName="text2" Property="Foreground" Value="#FFA09B8C"/>
 							<Setter Property="Background" Value="#11FFFFFF"/>
 							<Setter TargetName="avatar" Property="BorderBrush" Value="{StaticResource IMG.BDR2.OVER}"/>
 						</Trigger>
-						<DataTrigger Binding="{Binding Status}" Value="0">
-							<Setter TargetName="text2" Property="Foreground" Value="#FF5B5A56"/>
-						</DataTrigger>
+						<Trigger Property="IsPressed" Value="True">
+							<Setter TargetName="text1" Property="Foreground" Value="#22F0E6D2"/>
+							<Setter TargetName="avatar" Property="Opacity" Value="0.4"/>
+						</Trigger>
 						<DataTrigger Binding="{Binding Status}" Value="1">
 							<Setter TargetName="text2" Property="Foreground" Value="#09A646"/>
 						</DataTrigger>
@@ -62,22 +66,8 @@
 							<Setter TargetName="text2" Property="Foreground" Value="#0ACBE6"/>
 						</DataTrigger>
 						<DataTrigger Binding="{Binding Status}" Value="3">
-							<Setter TargetName="text2" Property="Foreground" Value="#0ACBE6"/>
+							<Setter TargetName="text2" Property="Foreground" Value="#FFAE929F"/>
 						</DataTrigger>
-						<DataTrigger Binding="{Binding IsGeneral}" Value="false">
-							<Setter TargetName="text1" Property="Foreground" Value="#4E514F"/>
-							<Setter TargetName="text2" Property="Foreground" Value="#4E514F"/>
-							<Setter TargetName="avatar" Property="BorderBrush" Value="{StaticResource IMG.BDR3}"/>
-						</DataTrigger>
-						<MultiDataTrigger>
-							<MultiDataTrigger.Conditions>
-								<Condition Binding="{Binding IsGeneral}" Value="false"/>
-								<Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=IsMouseOver}" Value="True"/>
-							</MultiDataTrigger.Conditions>
-							<Setter TargetName="text1" Property="Foreground" Value="#9E998B"/>
-							<Setter TargetName="text2" Property="Foreground" Value="#9E998B"/>
-							<Setter TargetName="avatar" Property="BorderBrush" Value="{StaticResource IMG.BDR3.OVER}"/>
-						</MultiDataTrigger>
 					</ControlTemplate.Triggers>
 				</ControlTemplate>
 			</Setter.Value>

@@ -21,12 +21,13 @@
 		<Setter Property="Height" Value="20"/>
 	</Style>
 
-	<Style TargetType="{x:Type units:FriendsGroupExpander}">
+	<Style TargetType="{x:Type units:FriendsExpander}">
+		<Setter Property="IsChecked" Value="{Binding IsExpanded}"/>
 		<Setter Property="Visibility" Value="Collapsed"/>
 		<Setter Property="Padding" Value="5 2 0 2"/>
 		<Setter Property="Template">
 			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type units:FriendsGroupExpander}">
+				<ControlTemplate TargetType="{x:Type units:FriendsExpander}">
 					<Border x:Name="border" Background="Transparent" BorderBrush="Transparent">
 						<Grid Margin="5 2 0 2">
 							<Grid.ColumnDefinitions>
@@ -59,6 +60,11 @@
 							<Setter TargetName="path" Property="Fill" Value="#F0E6D2"/>
 							<Setter TargetName="text" Property="Foreground" Value="#F0E6D2"/>
 							<Setter TargetName="border" Property="Background" Value="#11FFFFFF"/>
+						</Trigger>
+						<Trigger Property="IsPressed" Value="True">
+							<Setter TargetName="text" Property="Foreground" Value="#FFCDBE91"/>
+							<Setter TargetName="text2" Property="Foreground" Value="#FFCDBE91"/>
+							<Setter TargetName="text3" Property="Foreground" Value="#FFCDBE91"/>
 						</Trigger>
 						<Trigger Property="IsChecked" Value="True">
 							<Setter TargetName="path" Property="IconType" Value="Expand"/>
