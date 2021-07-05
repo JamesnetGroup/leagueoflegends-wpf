@@ -29,7 +29,7 @@
 								<ColumnDefinition/>
 							</Grid.ColumnDefinitions>
 							<ctrls:CircleFace x:Name="avatar" 
-											  Margin="0 0 4 0"
+											  Margin="0 0 2 0"
 											  BorderBrush="{StaticResource IMG.BDR2}" 
 											  Source="{Binding Seq, Converter={convt:ThumbnailConverter}}"/>
 							<StackPanel Grid.Column="1" Margin="5 0 0 0">

@@ -15,7 +15,8 @@
 							UseLayoutRounding="True"
 							SnapsToDevicePixels="True">
 						<Grid>
-							<Ellipse Stroke="{TemplateBinding BorderBrush}"  Margin="1"
+							<Ellipse Stroke="{TemplateBinding BorderBrush}"  
+									 Margin="1"
 									 SnapsToDevicePixels="True"
 									 UseLayoutRounding="True"
 									 StrokeThickness="2">
