@@ -5,7 +5,7 @@ using System.Text;
 
 namespace Leagueoflegends.DBEntity.Local.Entities.Schema
 {
-	public class CodeItem
+	public class CodeItems
 	{
 		[Key]
 		public int Seq { get; set; }
