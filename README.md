@@ -18,10 +18,10 @@ You can always share information with us and we are looking forward to it.
 
 - [Develop Information](#develop-information)
 - [Project Structure](#project-structure)
-
+  
 ### Develop Information
 This is about **WPF League of Legends** development information.
-
+  
 > ✔️ NET 4.8.1 (NET 6 Soon)  
 > ✔️ C# 9.0  
 > ✔️ [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/ko/vs/preview/vs2022/)
@@ -74,9 +74,13 @@ _(It will be soon updated to `.NET 6` and `C# 10.0` 😃)_
 *** 
 
 ### Overview 
-#### `GeneralView`
+#### `Overview`
 
 ![image](https://user-images.githubusercontent.com/52397976/123805450-0b376b80-d929-11eb-909b-d786654506b6.png)
+
+![image](https://user-images.githubusercontent.com/52397976/124482513-526ba380-dde4-11eb-9b31-c3c1199987b6.png)
+
+![image](https://user-images.githubusercontent.com/52397976/124488332-ae392b00-ddea-11eb-9991-31e9fe38d709.png)
 
 <br/>
   
