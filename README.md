@@ -18,7 +18,7 @@ You can always share information with us and we are looking forward to it.
 
 - [Develop Information](#develop-information)
 - [Project Structure](#project-structure)
-
+  
 ### Develop Information
 This is about **WPF League of Legends** development information.
   
