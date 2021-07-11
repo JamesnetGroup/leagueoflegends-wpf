@@ -2,7 +2,7 @@
    
 > &nbsp; :adult: __James Lee__ &nbsp;&nbsp; [Github](https://github.com/devncore-james) &nbsp;&nbsp; james.lee@devncore.org  
 > &nbsp; :woman: __Elena Kim__ &nbsp;&nbsp; [Github](https://github.com/devncore-elena) &nbsp;&nbsp; elena.kim@devncore.org
-
+ 
 We are very ordinary developers, so we need to communicate with you.   
 You can always share information with us and we are looking forward to it.  
 
@@ -21,7 +21,7 @@ You can always share information with us and we are looking forward to it.
   
 ### Develop Information
 This is about **WPF League of Legends** development information.
-  
+   
 > ✔️ NET 4.8.1 (NET 6 Soon)  
 > ✔️ C# 9.0  
 > ✔️ [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/ko/vs/preview/vs2022/)
