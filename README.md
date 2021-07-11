@@ -29,7 +29,7 @@ This is about **WPF League of Legends** development information.
 _(It will be soon updated to `.NET 6` and `C# 10.0` 😃)_ 
 
 ### Project Structure
-
+ 
 <details>
   <summary><b> 📁 01. DB </b></summary>
   
