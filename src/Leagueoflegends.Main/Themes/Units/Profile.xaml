@@ -219,7 +219,11 @@
 						<Border.ToolTip>
 							<ToolTip ToolTip="Notifications" VerticalOffset="-8"/>
 						</Border.ToolTip>
-						<ctrls:RiotIcon x:Name="path" IconType="Alarm" HorizontalAlignment="Center" VerticalAlignment="Center" Fill="#C8AA6E"/>
+						<ctrls:RiotIcon x:Name="path" 
+										IconType="Alarm" 
+										HorizontalAlignment="Center" 
+										VerticalAlignment="Center" 
+										Fill="#C8AA6E"/>
 					</Border>
 					<ControlTemplate.Triggers>
 						<Trigger Property="IsMouseOver" Value="True">
