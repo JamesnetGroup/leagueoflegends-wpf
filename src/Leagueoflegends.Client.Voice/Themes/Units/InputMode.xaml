@@ -30,7 +30,7 @@
 		<Setter Property="BorderThickness" Value="0"/>
 		<Setter Property="Margin" Value="0 15 0 0"/>
 		<Setter Property="FontSize" Value="12"/>
-		<Setter Property="Content" Value="{Binding VoiceInputModes.Name}"/>
+		<Setter Property="Content" Value="{Binding InputMode.ItemName}"/>
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type RadioButton}">
@@ -64,7 +64,7 @@
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type ListBoxItem}">
 					<RadioButton Style="{StaticResource IN.RDO}" 
-                                 Content="{Binding Name}"
+                                 Content="{Binding ItemName}"
                                  IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsSelected}"/>
 				</ControlTemplate>
 			</Setter.Value>
@@ -75,7 +75,7 @@
 		<Setter Property="ItemContainerStyle" Value="{StaticResource IN.LBXI}"/>
 		<Setter Property="ItemsSource" Value="{Binding InputMode}"/>
 		<Setter Property="SelectedValue" Value="{Binding Model.InputMode}"/>
-		<Setter Property="SelectedValuePath" Value="Mode"/>
+		<Setter Property="SelectedValuePath" Value="ItemName"/>
 		<Setter Property="Background" Value="Transparent"/>
 		<Setter Property="Template">
 			<Setter.Value>

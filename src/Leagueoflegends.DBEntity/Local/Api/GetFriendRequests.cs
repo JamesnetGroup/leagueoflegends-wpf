@@ -5,7 +5,7 @@ using Leagueoflegends.DBEntity.Local.Entities.Extend;
 
 namespace Leagueoflegends.DBEntity.Local.Api
 {
-	public class GetInputMode
+	public class GetFriendRequests
 	{
 		public List<RequestUsers> Run(int mySeq)
 		{
@@ -14,7 +14,6 @@ namespace Leagueoflegends.DBEntity.Local.Api
 				.Where(x => x.Seq != mySeq)
 				.Select(x => new RequestUsers(x))
 				.ToList();
-
 			return users;
 		}
 	}

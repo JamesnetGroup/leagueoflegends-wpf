@@ -117,6 +117,10 @@
       <Project>{3e01f5fb-69ad-415d-8114-5d7e4d3cbb74}</Project>
       <Name>Leagueoflegends.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Leagueoflegends.DBEntity\Leagueoflegends.DBEntity.csproj">
+      <Project>{2CD75FCF-667F-42EF-BED1-338BF4F1124C}</Project>
+      <Name>Leagueoflegends.DBEntity</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Leagueoflegends.ExampleData\Leagueoflegends.ExampleData.csproj">
       <Project>{ad7caaef-1792-4cc7-a0b3-56f67ea44b03}</Project>
       <Name>Leagueoflegends.ExampleData</Name>

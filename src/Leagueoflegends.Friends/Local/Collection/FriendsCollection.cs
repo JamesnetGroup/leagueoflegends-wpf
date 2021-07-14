@@ -7,12 +7,12 @@ namespace Leagueoflegends.Friends.Local.Collection
 {
 	public class FriendsCollection 
 	{
-		#region SentList
+		#region RequestList
 
-		public ObservableCollection<RequestUsers> SentList { get; set; }
+		public ObservableCollection<RequestUsers> RequestList { get; set; }
 		#endregion
 
-		#region RcentList
+		#region RecentList
 
 		public ObservableCollection<RequestUsers> RecentList { get; set; }
 		#endregion
@@ -31,37 +31,37 @@ namespace Leagueoflegends.Friends.Local.Collection
 
 		internal void AddRange(List<RequestUsers> users)
 		{
-			SentList = new(users);
-			SentList = new(users.Where(x => x.IsSent));
+			RequestList = new(users);
+			RequestList = new(users.Where(x => x.IsSent));
 			RecentList = new(users.Where(x => x.IsSent == false));
 		}
 		#endregion
 
-		#region SentDelete
+		#region CancelRequest
 
-		internal void SentDelete(RequestUsers user)
+		internal void CancelRequest(RequestUsers user)
 		{
-			RemoveSentList(user);
+			RemoveRequestList(user);
 		}
 		#endregion
 
-		#region SentRequest
+		#region SendRequest
 
-		internal void SentRequest(RequestUsers user)
+		internal void SendRequest(RequestUsers user)
 		{
 			RemoveRecentList(user);
-			AddSentList(user);
+			AddRequestList(user);
 		}
 		#endregion
 
 		// Private..
 
-		#region AddSentList
+		#region AddRequestList
 
-		private void AddSentList(RequestUsers user)
+		private void AddRequestList(RequestUsers user)
 		{
 			user.IsSent = true;
-			SentList.Add(user);
+			RequestList.Add(user);
 		}
 		#endregion
 
@@ -73,11 +73,11 @@ namespace Leagueoflegends.Friends.Local.Collection
 		}
 		#endregion
 
-		#region RemoveSentList
+		#region RemoveRequestList
 
-		private void RemoveSentList(RequestUsers user)
+		private void RemoveRequestList(RequestUsers user)
 		{
-			SentList.Remove(user);
+			RequestList.Remove(user);
 		}
 		#endregion
 	}

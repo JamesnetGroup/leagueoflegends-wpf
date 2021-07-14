@@ -49,10 +49,10 @@ namespace Leagueoflegends.Friends.Local.ViewModel
             KeywordCommand = new RelayCommand<object>(KeywordChanged);
             CloseKeywordCommand = new RelayCommand<object>(CloseKeyword);
             CompleteCommand = new RelayCommand<object>((o) => ViewClosed.Invoke(View));
-            DeleteCommand = new RelayCommand<RequestUsers>(UserCollection.SentDelete);
-            RequestCommand = new RelayCommand<RequestUsers>(UserCollection.SentRequest);
+            DeleteCommand = new RelayCommand<RequestUsers>(UserCollection.CancelRequest);
+            RequestCommand = new RelayCommand<RequestUsers>(UserCollection.SendRequest);
 
-            var data = new GetSentFriends().Run(0);
+            var data = new GetFriendRequests().Run(0);
             UserCollection.AddRange(data);
         }
         #endregion

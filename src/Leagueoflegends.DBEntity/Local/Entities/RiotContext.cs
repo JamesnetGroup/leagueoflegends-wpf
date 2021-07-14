@@ -7,7 +7,9 @@ namespace Leagueoflegends.DBEntity.Local.Entities
 	{
 		public DbSet<Users> Users { get; set; }
 		public DbSet<Friends> Friends { get; set; }
+		public DbSet<Codes> Codes { get; set; }	
 		public DbSet<CodeItems> CodeItems { get; set; }
+
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
 			optionsBuilder

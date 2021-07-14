@@ -1,8 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 					xmlns:units="clr-namespace:Leagueoflegends.Client.Voice.UI.Units"
-					xmlns:ctrls="clr-namespace:Leagueoflegends.LayoutSupport.Controls;assembly=Leagueoflegends.LayoutSupport"
-					xmlns:enums="clr-namespace:Leagueoflegends.Data.Enums;assembly=Leagueoflegends.Data">
+					xmlns:ctrls="clr-namespace:Leagueoflegends.LayoutSupport.Controls;assembly=Leagueoflegends.LayoutSupport">
 	
 	<Style TargetType="{x:Type ctrls:RiotSlider}" x:Key="SLD.NOISE">
 		<Setter Property="MinHeight" Value="26"/>
@@ -28,7 +27,7 @@
 						<ctrls:RiotSlider x:Name="slider2" Style="{StaticResource SLD.NOISE}"/>
 					</Grid>
 					<ControlTemplate.Triggers>
-						<DataTrigger Binding="{Binding Model.InputMode}" Value="{x:Static enums:VoiceInputMode.InputStatus}">
+						<DataTrigger Binding="{Binding Model.InputMode}" Value="Voice Activity">
 							<Setter Property="Visibility" Value="Visible"/>
 						</DataTrigger>
 					</ControlTemplate.Triggers>
