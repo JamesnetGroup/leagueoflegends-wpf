@@ -156,11 +156,11 @@
 							<Setter TargetName="border" Property="Visibility" Value="Visible"/>
 							<Setter TargetName="img" Property="Visibility" Value="Visible"/>
 						</Trigger>
-						<DataTrigger Binding="{Binding Name}" Value="My Info">
+						<DataTrigger Binding="{Binding Name}" Value="Profile">
 							<Setter TargetName="path" Property="IconType" Value="AccountCircle"/>
 							<Setter TargetName="border" Property="ToolTip">
 								<Setter.Value>
-									<ToolTip ToolTip="My Info"/>
+                                    <ToolTip ToolTip="Profile"/>
 								</Setter.Value>
 							</Setter>
 						</DataTrigger>
@@ -172,11 +172,11 @@
 								</Setter.Value>
 							</Setter>
 						</DataTrigger>
-						<DataTrigger Binding="{Binding Name}" Value="Production">
+						<DataTrigger Binding="{Binding Name}" Value="Loot">
 							<Setter TargetName="path" Property="IconType" Value="Arc"/>
 							<Setter TargetName="border" Property="ToolTip">
 								<Setter.Value>
-									<ToolTip ToolTip="Production"/>
+                                    <ToolTip ToolTip="Loot"/>
 								</Setter.Value>
 							</Setter>
 						</DataTrigger>

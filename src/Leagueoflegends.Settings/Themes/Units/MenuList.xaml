@@ -16,16 +16,17 @@
 						<Border x:Name="menu" Background="{TemplateBinding Background}">
 							<Grid>
 								<Border x:Name="border" BorderBrush="#BB9138" BorderThickness="3 0 0 0" Visibility="Collapsed"/>
-								<TextBlock x:Name="text" Text="{Binding Name}" Foreground="#CDBE91" Padding="{TemplateBinding Padding}" Margin="10 0 0 0"/>
+                                <TextBlock x:Name="text" Text="{Binding Name}" Foreground="#CDBE91" Padding="{TemplateBinding Padding}" Margin="10 0 0 0" FontFamily="Friz Quadrata Std"/>
 							</Grid>
 						</Border>
-						<TextBlock x:Name="category" Foreground="#A09B8C" Text="{Binding Name}" Margin="20 5 0 10" Visibility="Collapsed"/>
+						<TextBlock x:Name="category" Foreground="#A09B8C" Text="{Binding Name}" Margin="20 10 0 10" Visibility="Collapsed"/>
 					</Grid>
 					<ControlTemplate.Triggers>
 						<DataTrigger Binding="{Binding Category}" Value="카테고리">
 							<Setter TargetName="category" Property="Visibility" Value="Visible"/>
 							<Setter TargetName="menu" Property="Visibility" Value="Collapsed"/>
-						</DataTrigger>
+                            <Setter TargetName="category" Property="FontSize" Value="10"/>
+                        </DataTrigger>
 						<Trigger Property="IsMouseOver" Value="True">
 							<Setter TargetName="text" Property="Foreground" Value="#DBD3C2"/>
 							<Setter TargetName="menu" Property="Background" Value="#1E2328"/>

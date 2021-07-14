@@ -68,7 +68,16 @@
 							<units:CurrentContent/>
 
 							<ctrls:RiotButton Style="{StaticResource BTN.DONE}"/>
-						</Grid>
+
+                            <Border Grid.ColumnSpan="2"
+									BorderBrush="#22ffffff" 
+									SnapsToDevicePixels="True"
+									UseLayoutRounding="True"
+									BorderThickness="0 0 0 0.5"
+                                    Margin="0 0 0 6"
+                                    Width="680"
+                                    HorizontalAlignment="Center"/>
+                        </Grid>
 					</Border>
 				</ControlTemplate>
 			</Setter.Value>
