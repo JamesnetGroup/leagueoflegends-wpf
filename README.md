@@ -33,7 +33,7 @@ _(It will be soon updated to `.NET 6` and `C# 10.0` 😃)_
 <details>
   <summary><b> 📁 01. DB </b></summary>
   
-  - `Leagueoflegends.ExampleData.dll`
+  - `Leagueoflegends.DBEntity.dll`
 </details>
 
 <details>
