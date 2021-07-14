@@ -69,7 +69,10 @@ _(It will be soon updated to `.NET 6` and `C# 10.0` 😃)_
   - `Leagueoflegends.exe`
 </details>
 
-<br/>
+### Database
+> Entity Framework core &nbsp; 👉 [Learn More](https://github.com/devncore/the-easiest-entityframework)
+ 
+<br>
 
 *** 
 
