@@ -9,7 +9,7 @@ namespace Leagueoflegends.DBEntity.Local.Entities.Schema
 		public int Seq { get; set; }
 		public int UserSeq { get; set; }
 		public int FriendsSeq { get; set; }
-		public bool IsAccept { get; set; }
+		public bool IsAccepted { get; set; }
 		public DateTime Created { get; set; }
 		public DateTime Updated { get; set; }
 	}

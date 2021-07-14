@@ -100,7 +100,6 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setting\GetAudioDeviceList.cs" />
-    <Compile Include="Setting\GetInputMode.cs" />
     <Compile Include="Setting\GetWinSizeList.cs" />
     <Compile Include="Setting\GetSettingList.cs" />
   </ItemGroup>

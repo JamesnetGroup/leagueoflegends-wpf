@@ -8,7 +8,7 @@ namespace Leagueoflegends.Data.Setting.Clients
 		public bool Mute { get; set; } = true;
 		public int InputVolume { get; set; } = 100;
 		public string InputDevice { get; set; } = "";
-		public VoiceInputMode InputMode { get; set; } = VoiceInputMode.InputStatus;
+		public string InputMode { get; set; } = "Voice Activity";
 		public int NoiseControl { get; set; } = 50;
 		public string TalkShortCut { get; set; } = "C";
 

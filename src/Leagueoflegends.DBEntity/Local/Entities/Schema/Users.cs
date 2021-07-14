@@ -10,6 +10,5 @@ namespace Leagueoflegends.DBEntity.Local.Entities.Schema
 		public string Name { get; set; }
 		public DateTime Created { get; set; }
 		public DateTime Updated { get; set; }
-
 	}
 }

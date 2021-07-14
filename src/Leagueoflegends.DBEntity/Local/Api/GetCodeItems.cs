@@ -5,17 +5,19 @@ using Leagueoflegends.DBEntity.Local.Entities.Extend;
 
 namespace Leagueoflegends.DBEntity.Local.Api
 {
-	public class GetSentFriends
+	public class GetCodeItems
 	{
-		public List<RequestUsers> Run(int mySeq)
+		public List<UsualCodes> Run(string codeId)
 		{
 			using RiotContext db = new();
-			var users = db.Users
-				.Where(x => x.Seq != mySeq)
-				.Select(x => new RequestUsers(x))
+
+			var items = db.CodeItems
+				.Where(x => x.CodeId == codeId)
+				.OrderBy(x => x.Sort)
+				.Select(x => new UsualCodes(x))
 				.ToList();
 
-			return users;
+			return items;
 		}
 	}
 }
