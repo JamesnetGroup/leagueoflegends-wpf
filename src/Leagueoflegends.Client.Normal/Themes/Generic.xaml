@@ -75,7 +75,7 @@
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type views:ClientNormalView}">
-					<StackPanel Margin="30 10 0 0">
+					<StackPanel Margin="30 15 0 0">
 						<TextBlock Text="리그 오브 레전드 행동 수칙" FontSize="12" Foreground="#A09B8C"/>
 						<Button Style="{StaticResource BTN.DETAIL}"/>
 						<ctrls:CheckBox01 Style="{StaticResource CHK.LOWMODE}"/>

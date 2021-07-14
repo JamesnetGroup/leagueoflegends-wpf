@@ -10,27 +10,27 @@ namespace Leagueoflegends.ExampleData.Setting
         {
             List<SettingMenuModel> source = new()
 			{
-                new SettingMenuModel { Seq = 0, MenuType = SettingMenuType.Directory, Category = "카테고리", Name = "클라이언트" },
-                new SettingMenuModel { Seq = 1, MenuType = SettingMenuType.Normal, Category = "클라이언트", Name = "일반" },
-                new SettingMenuModel { Seq = 2, MenuType = SettingMenuType.Alarm, Category = "클라이언트", Name = "알림" },
-                new SettingMenuModel { Seq = 3, MenuType = SettingMenuType.ChatAndFriends, Category = "클라이언트", Name = "채팅 & 친구" },
-                new SettingMenuModel { Seq = 4, MenuType = SettingMenuType.Sound, Category = "클라이언트", Name = "음향" },
-                new SettingMenuModel { Seq = 5, MenuType = SettingMenuType.Voice, Category = "클라이언트", Name = "음성" },
-                new SettingMenuModel { Seq = 6, MenuType = SettingMenuType.BlockList, Category = "클라이언트", Name = "차단 목록" },
+                new SettingMenuModel { Seq = 0, MenuType = SettingMenuType.Directory, Category = "카테고리", Name = "CLIENT" },
+                new SettingMenuModel { Seq = 1, MenuType = SettingMenuType.Normal, Category = "CLIENT", Name = "GENERAL" },
+                new SettingMenuModel { Seq = 2, MenuType = SettingMenuType.Alarm, Category = "CLIENT", Name = "NOTIFICATIONS" },
+                new SettingMenuModel { Seq = 3, MenuType = SettingMenuType.ChatAndFriends, Category = "CLIENT", Name = "CHAT & FRIENDS" },
+                new SettingMenuModel { Seq = 4, MenuType = SettingMenuType.Sound, Category = "CLIENT", Name = "SOUND" },
+                new SettingMenuModel { Seq = 5, MenuType = SettingMenuType.Voice, Category = "CLIENT", Name = "VOICE" },
+                new SettingMenuModel { Seq = 6, MenuType = SettingMenuType.BlockList, Category = "CLIENT", Name = "BLOCK LIST" },
 
-                new SettingMenuModel { Seq = 7, MenuType = SettingMenuType.Directory, Category = "카테고리", Name = "게임" },
-                new SettingMenuModel { Seq = 8, MenuType = SettingMenuType.Key, Category = "게임", Name = "단축키" },
-                new SettingMenuModel { Seq = 9, MenuType = SettingMenuType.GameSound, Category = "게임", Name = "음향" },
-                new SettingMenuModel { Seq = 10, MenuType = SettingMenuType.Interface, Category = "게임", Name = "인터페이스" },
-                new SettingMenuModel { Seq = 11, MenuType = SettingMenuType.Game, Category = "게임", Name = "게임" },
-                new SettingMenuModel { Seq = 12, MenuType = SettingMenuType.Replay, Category = "게임", Name = "리플레이" },
+                new SettingMenuModel { Seq = 7, MenuType = SettingMenuType.Directory, Category = "카테고리", Name = "IN-GAMES" },
+                new SettingMenuModel { Seq = 8, MenuType = SettingMenuType.Key, Category = "IN-GAMES", Name = "HOTKEYS" },
+                new SettingMenuModel { Seq = 9, MenuType = SettingMenuType.GameSound, Category = "IN-GAMES", Name = "SOUND" },
+                new SettingMenuModel { Seq = 10, MenuType = SettingMenuType.Interface, Category = "IN-GAMES", Name = "INTERFACE" },
+                new SettingMenuModel { Seq = 11, MenuType = SettingMenuType.Game, Category = "IN-GAMES", Name = "GAME" },
+                new SettingMenuModel { Seq = 12, MenuType = SettingMenuType.Replay, Category = "IN-GAMES", Name = "REPLAYS" },
 
-                new SettingMenuModel { Seq = 13, MenuType = SettingMenuType.Directory, Category = "카테고리", Name = "세부 정보" },
-                new SettingMenuModel { Seq = 14, MenuType = SettingMenuType.Authority, Category = "세부 정보", Name = "인증" },
-                new SettingMenuModel { Seq = 15, MenuType = SettingMenuType.PersonalData, Category = "세부 정보", Name = "개인정보 처리방침" },
-                new SettingMenuModel { Seq = 16, MenuType = SettingMenuType.Service, Category = "세부 정보", Name = "서비스 약관" },
-                new SettingMenuModel { Seq = 17, MenuType = SettingMenuType.License, Category = "세부 정보", Name = "외부 라이선스" },
-                new SettingMenuModel { Seq = 18, MenuType = SettingMenuType.Version, Category = "세부 정보", Name = "버전" }
+                new SettingMenuModel { Seq = 13, MenuType = SettingMenuType.Directory, Category = "카테고리", Name = "ABOUT" },
+                new SettingMenuModel { Seq = 14, MenuType = SettingMenuType.Authority, Category = "ABOUT", Name = "VERIFICATION" },
+                new SettingMenuModel { Seq = 15, MenuType = SettingMenuType.PersonalData, Category = "ABOUT", Name = "PRIVACY NOTICE" },
+                new SettingMenuModel { Seq = 16, MenuType = SettingMenuType.Service, Category = "ABOUT", Name = "TOU" },
+                new SettingMenuModel { Seq = 17, MenuType = SettingMenuType.License, Category = "ABOUT", Name = "THIRD-PARTY LICENSES" },
+                new SettingMenuModel { Seq = 18, MenuType = SettingMenuType.Version, Category = "ABOUT", Name = "VERSION" }
             };
             return source;
         }

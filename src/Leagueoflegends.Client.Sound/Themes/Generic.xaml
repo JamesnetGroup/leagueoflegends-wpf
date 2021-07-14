@@ -36,7 +36,7 @@
 
 	<Style TargetType="{x:Type ctrls:CheckBox02}" x:Key="CHK.MUSIC">
 		<Setter Property="Content" Value="음악 켜기"/>
-		<Setter Property="Margin" Value="30 17 0 0"/>
+		<Setter Property="Margin" Value="30 22 0 0"/>
 		<Setter Property="IsChecked" Value="{Binding Model.MusicVolumeOn}"/>
 	</Style>
 
@@ -62,28 +62,28 @@
 		<Setter Property="MinHeight" Value="26"/>
 		<Setter Property="MaxHeight" Value="26"/>
 		<Setter Property="Height" Value="26"/>
-		<Setter Property="Width" Value="380"/>
+		<Setter Property="Width" Value="390"/>
 		<Setter Property="HorizontalAlignment" Value="Left"/>
 		<Setter Property="VerticalAlignment" Value="Center"/>
 		<Setter Property="Margin" Value="30 5 0 0"/>
 	</Style>
 
 	<Style TargetType="{x:Type TextBlock}" x:Key="TXB.MASTER">
-		<Setter Property="Margin" Value="10 7 0 0"/>
+        <Setter Property="Margin" Value="10 10 0 0"/>
 		<Setter Property="Foreground" Value="#9B9688"/>
 		<Setter Property="FontSize" Value="12"/>
 		<Setter Property="Text" Value="{Binding ElementName=sldMaster, Path=Value, StringFormat={}마스터 볼륨: {0:N0}}"/>
 	</Style>
 
 	<Style TargetType="{x:Type TextBlock}" x:Key="TXB.EFFECT">
-		<Setter Property="Margin" Value="30 7 0 0"/>
+		<Setter Property="Margin" Value="35 10 0 0"/>
 		<Setter Property="Foreground" Value="#9B9688"/>
 		<Setter Property="FontSize" Value="12"/>
 		<Setter Property="Text" Value="{Binding ElementName=sldEffect, Path=Value, StringFormat={}음향 특수효과 볼륨: {0:N0}}"/>
 	</Style>
 
 	<Style TargetType="{x:Type TextBlock}" x:Key="TXB.MUSIC">
-		<Setter Property="Margin" Value="30 7 0 0"/>
+        <Setter Property="Margin" Value="35 10 0 0"/>
 		<Setter Property="Foreground" Value="#9B9688"/>
 		<Setter Property="FontSize" Value="12"/>
 		<Setter Property="Text" Value="{Binding ElementName=sldMusic, Path=Value, StringFormat={}음악 볼륨: {0:N0}}"/>
@@ -99,7 +99,7 @@
 						
 						<StackPanel IsEnabled="{Binding ElementName=chbMaster, Path=IsChecked}">
 							<TextBlock Style="{StaticResource TXB.MASTER}"/>
-							<ctrls:RiotSlider x:Name="sldMaster" Style="{StaticResource SLD.BASE}" Value="{Binding Model.MasterVolume}"/>
+							<ctrls:RiotSlider x:Name="sldMaster" Style="{StaticResource SLD.BASE}" Value="{Binding Model.MasterVolume}" Width="415" Margin="5 0 0 0"/>
 
 							<ctrls:CheckBox02 x:Name="chbEffect" Style="{StaticResource CHK.EFFECT}"/>
 							<StackPanel IsEnabled="{Binding ElementName=chbEffect, Path=IsChecked}">

@@ -55,9 +55,9 @@ namespace Leagueoflegends.Main.Local.Work
 				new MainMenuModel(0, "HOME", "TEXT"),
 				new MainMenuModel(1, "TFT", "TEXT"),
 				new MainMenuModel(2, "CLASH", "TEXT"),
-				new MainMenuModel(3, "My Info", "ICON"),
+				new MainMenuModel(3, "Profile", "ICON"),
 				new MainMenuModel(4, "Collection", "ICON"),
-				new MainMenuModel(5, "Production", "ICON"),
+				new MainMenuModel(5, "Loot", "ICON"),
 				new MainMenuModel(6, "My Shop", "ICON"),
 				new MainMenuModel(7, "Store", "ICON")
 			};
@@ -85,12 +85,12 @@ namespace Leagueoflegends.Main.Local.Work
 				new SubMenuModel(10, 4, "WARDS"),
 				new SubMenuModel(11, 4, "CHROMAS"),
 
-				new SubMenuModel(12, 7, "홈으로"),
-				new SubMenuModel(13, 7, "챔피언"),
-				new SubMenuModel(14, 7, "스킨"),
-				new SubMenuModel(15, 7, "전략적 팀 전투"),
-				new SubMenuModel(16, 7, "마법공학 제작"),
-				new SubMenuModel(17, 7, "기타"),
+				new SubMenuModel(12, 7, "FEATURED"),
+				new SubMenuModel(13, 7, "CHAMPIONS"),
+				new SubMenuModel(14, 7, "SKINS"),
+				new SubMenuModel(15, 7, "TFT"),
+				new SubMenuModel(16, 7, "LOOT"),
+				new SubMenuModel(17, 7, "ACCESSORIES"),
 			};
 			return source;
 		}

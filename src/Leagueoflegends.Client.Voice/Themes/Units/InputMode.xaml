@@ -28,7 +28,7 @@
 		<Setter Property="Background" Value="Transparent"/>
 		<Setter Property="BorderBrush" Value="Transparent"/>
 		<Setter Property="BorderThickness" Value="0"/>
-		<Setter Property="Margin" Value="0 15 0 0"/>
+		<Setter Property="Margin" Value="0 20 0 0"/>
 		<Setter Property="FontSize" Value="12"/>
 		<Setter Property="Content" Value="{Binding InputMode.ItemName}"/>
 		<Setter Property="Template">
