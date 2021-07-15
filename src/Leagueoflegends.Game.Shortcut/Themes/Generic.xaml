@@ -3,9 +3,9 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 	<ResourceDictionary.MergedDictionaries>
 		<ResourceDictionary Source="/Leagueoflegends.Game.Shortcut;component/Themes/Units/CastControl.xaml"/>
-		<ResourceDictionary Source="/Leagueoflegends.Game.Shortcut;component/Themes/Units/ItemKeyButton.xaml"/>
-		<ResourceDictionary Source="/Leagueoflegends.Game.Shortcut;component/Themes/Units/SkillKeyButton.xaml"/>
-		<ResourceDictionary Source="/Leagueoflegends.Game.Shortcut;component/Themes/Units/SpellKeyButton.xaml"/>
-		<ResourceDictionary Source="/Leagueoflegends.Game.Shortcut;component/Themes/Views/ShortcutViewResource.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Game.Shortcut;component/Themes/Units/ItemHotKey.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Game.Shortcut;component/Themes/Units/SkillHotKey.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Game.Shortcut;component/Themes/Units/SpellHotKey.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Game.Shortcut;component/Themes/Views/GameHotKeyView.xaml"/>
 	</ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

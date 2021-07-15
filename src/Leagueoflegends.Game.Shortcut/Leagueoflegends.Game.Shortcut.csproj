@@ -52,22 +52,22 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="UI\Units\ItemKeyButton.cs" />
-    <Compile Include="UI\Units\SpellKeyButton.cs" />
-    <Compile Include="UI\Units\SkillKeyButton.cs" />
+    <Compile Include="UI\Units\ItemHotKey.cs" />
+    <Compile Include="UI\Units\SpellHotKey.cs" />
+    <Compile Include="UI\Units\SkillHotKey.cs" />
     <Compile Include="UI\Units\CastControl.cs" />
-    <Compile Include="UI\Views\GameShortcutView.cs">
+    <Compile Include="UI\Views\GameHotKeyView.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Themes\Units\ItemKeyButton.xaml">
+    <Page Include="Themes\Units\ItemHotKey.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Units\SpellKeyButton.xaml">
+    <Page Include="Themes\Units\SpellHotKey.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Units\SkillKeyButton.xaml">
+    <Page Include="Themes\Units\SkillHotKey.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -75,13 +75,13 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Themes\Views\ShortcutViewResource.xaml">
+    <Page Include="Themes\Views\GameHotKeyView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Local\ViewModel\ShortcutViewModel.cs" />
+    <Compile Include="Local\ViewModel\GameHotKeyViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

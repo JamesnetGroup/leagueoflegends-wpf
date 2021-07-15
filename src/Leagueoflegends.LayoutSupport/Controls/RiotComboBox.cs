@@ -25,11 +25,14 @@ namespace Leagueoflegends.LayoutSupport.Controls
             get { return (object)this.GetValue(ContentProperty); }
             set { this.SetValue(ContentProperty, value); }
         }
-		#endregion
+        #endregion
 
-		protected override DependencyObject GetContainerForItemOverride()
+        #region GetContainerForItemOverride
+
+        protected override DependencyObject GetContainerForItemOverride()
 		{
             return new RiotComboBoxItem();
 		}
+		#endregion
 	}
 }

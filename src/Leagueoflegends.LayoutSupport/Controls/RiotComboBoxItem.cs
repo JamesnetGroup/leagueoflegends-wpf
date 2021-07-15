@@ -12,6 +12,5 @@ namespace Leagueoflegends.LayoutSupport.Controls
             DefaultStyleKeyProperty.OverrideMetadata(typeof(RiotComboBoxItem), new FrameworkPropertyMetadata(typeof(RiotComboBoxItem)));
         }
         #endregion
-
 	}
 }
