@@ -22,7 +22,7 @@
 						<TextBlock x:Name="category" Foreground="#A09B8C" Text="{Binding Name}" Margin="20 10 0 10" Visibility="Collapsed"/>
 					</Grid>
 					<ControlTemplate.Triggers>
-						<DataTrigger Binding="{Binding Category}" Value="카테고리">
+						<DataTrigger Binding="{Binding Category}" Value="CATEGORY">
 							<Setter TargetName="category" Property="Visibility" Value="Visible"/>
 							<Setter TargetName="menu" Property="Visibility" Value="Collapsed"/>
                             <Setter TargetName="category" Property="FontSize" Value="10"/>
@@ -51,7 +51,7 @@
 				<ControlTemplate TargetType="{x:Type ListBoxItem}">
 					<RadioButton x:Name="radio" Style="{StaticResource RDO.MENU}"/>
 					<ControlTemplate.Triggers>
-						<DataTrigger Binding="{Binding Category}" Value="카테고리">
+						<DataTrigger Binding="{Binding Category}" Value="CATEGORY">
 							<Setter Property="IsHitTestVisible" Value="False"/>
 							<Setter Property="IsEnabled" Value="False"/>
 						</DataTrigger>

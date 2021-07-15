@@ -65,10 +65,10 @@
 		<Setter Property="Foreground" Value="#F0E6D2"/>
 	</Style>
 	
-	<Style TargetType="{x:Type views:GameShortcutView}">
+	<Style TargetType="{x:Type views:GameHotKeyView}">
 		<Setter Property="Template">
 			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type views:GameShortcutView}">
+				<ControlTemplate TargetType="{x:Type views:GameHotKeyView}">
 					<Grid Margin="20 10 0 0">
 						<Grid.RowDefinitions>
 							<RowDefinition Height="Auto"/>
@@ -83,20 +83,20 @@
 
 						<!--GRID.ROW = 1-->
 						<TextBlock Style="{StaticResource TXB.SKILL}"/>
-						<units:SkillKeyButton/>
+						<units:SkillHotKey/>
 
 						<TextBlock Style="{StaticResource TXB.SPELL}"/>
-						<units:SpellKeyButton/>
+						<units:SpellHotKey/>
 
 						<!--GRID.ROW = 2-->
 						<TextBlock Style="{StaticResource TXB.ITEM}"/>
-						<units:ItemKeyButton/>
+						<units:ItemHotKey/>
 
 						<TextBlock Style="{StaticResource TXB.ACC}"/>
-						<ctrls:RiotShortcutButton Content="{Binding Model.AccKey1}" 
-												  Grid.Row="2" 
-												  Margin="0 30 45 0"
-												  HorizontalAlignment="Right"/>
+						<ctrls:RiotHotKey Content="{Binding Model.AccKey1}" 
+										  Grid.Row="2" 
+										  Margin="0 30 45 0"
+										  HorizontalAlignment="Right"/>
 
 						<!--GRID.ROW = 3-->
 						<StackPanel Grid.Row="3">

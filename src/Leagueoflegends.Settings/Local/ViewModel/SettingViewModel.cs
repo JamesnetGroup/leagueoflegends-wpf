@@ -22,6 +22,8 @@ using Leagueoflegends.Client.Voice.Local.ViewModel;
 using Leagueoflegends.Client.Block.Local.ViewModel;
 using Leagueoflegends.Game.Shortcut.Local.ViewModel;
 using Leagueoflegends.Game.Shortcut.UI.Views;
+using Leagueoflegends.Game.Sound.Local.ViewModel;
+using Leagueoflegends.Game.Sound.Views;
 
 namespace Leagueoflegends.Settings.Local.ViewModel
 {
@@ -39,7 +41,8 @@ namespace Leagueoflegends.Settings.Local.ViewModel
 		private ClientChatViewModel Chat;
 		private ClientSoundViewModel Sound;
 		private ClientVoiceViewModel Voice;
-		private ShortcutViewModel Shortcut;
+		private GameHotKeyViewModel HotKey;
+		private GameSoundViewModel GameSound;
 		private Dictionary<int, IRiotUI> UIs { get; set; }
 		#endregion 
 
@@ -83,7 +86,8 @@ namespace Leagueoflegends.Settings.Local.ViewModel
 			Chat = new ClientChatViewModel();
 			Sound = new ClientSoundViewModel();
 			Voice = new ClientVoiceViewModel();
-			Shortcut = new ShortcutViewModel();
+			HotKey = new GameHotKeyViewModel();
+			GameSound = new GameSoundViewModel();
 
 			SettingMenus = ExamSettings.GetSettingList();
 			CompleteCommand = new RelayCommand<Modal>(CompleteClick);
@@ -111,7 +115,8 @@ namespace Leagueoflegends.Settings.Local.ViewModel
 					6 => new ClientBlockView().SetVM(new ClientBlockViewModel()),
 
 					// Game
-					8 => new GameShortcutView().SetVM(Shortcut),
+					8 => new GameHotKeyView().SetVM(HotKey),
+					9 => new GameSoundView().SetVM(GameSound),
 					_ => new EmptyView()
 				};
 
@@ -137,7 +142,8 @@ namespace Leagueoflegends.Settings.Local.ViewModel
 			setting.ClientChat = Chat.Model;
 			setting.ClientSound = Sound.Model;
 			setting.ClientVoice = Voice.Model;
-			setting.GameShortcut = Shortcut.Model;
+			setting.GameHotKey = HotKey.Model;
+			setting.GameSound = GameSound.Model;
 
 			RiotConfig.SaveSettings(setting);
 		}

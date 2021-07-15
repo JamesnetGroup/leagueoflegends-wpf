@@ -9,8 +9,9 @@
 		<ResourceDictionary Source="/Leagueoflegends.LayoutSupport;component/Themes/Styles/RiotComboBox.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.LayoutSupport;component/Themes/Styles/RiotComboBoxItem.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.LayoutSupport;component/Themes/Styles/RiotButton.xaml"/>
-		<ResourceDictionary Source="/Leagueoflegends.LayoutSupport;component/Themes/Styles/RiotShortcutButton.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.LayoutSupport;component/Themes/Styles/RiotHotKey.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.LayoutSupport;component/Themes/Styles/RiotSlider.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.LayoutSupport;component/Themes/Styles/RiotVolume.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.LayoutSupport;component/Themes/Styles/BasicTooltip.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.LayoutSupport;component/Themes/Styles/RiotTextBox.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.LayoutSupport;component/Themes/Styles/RiotTooltip.xaml"/>

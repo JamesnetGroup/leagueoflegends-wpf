@@ -1,6 +1,6 @@
-﻿namespace Leagueoflegends.Data.Setting.Game
+﻿namespace Leagueoflegends.Data.Setting.InGame
 {
-	public class GameShortcutModel
+	public class GameHotKeyModel
 	{
         public string SkillKey1 { get; set; } = "A";
         public string SkillKey2 { get; set; } = "B";
@@ -18,7 +18,7 @@
         public bool ChangeToFourWay { get; set; } = true;
         public bool RunSkillInstantly { get; set; } = true;
 
-        public GameShortcutModel()
+        public GameHotKeyModel()
 		{
 		}
 	}

@@ -52,9 +52,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="GameSoundView.cs">
+    <Compile Include="Local\ViewModel\GameSoundViewModel.cs" />
+    <Compile Include="UI\Units\SoundControl.cs" />
+    <Compile Include="UI\Views\GameSoundView.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Themes\Units\SoundControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Views\GameSoundView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -84,9 +94,17 @@
       <Project>{f6309cba-5a01-4e4e-ae66-02841968c02d}</Project>
       <Name>Leagueoflegends.Controls</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Leagueoflegends.Converter\Leagueoflegends.Converter.csproj">
+      <Project>{50779308-a9bc-4d0d-862f-4394e3418a1f}</Project>
+      <Name>Leagueoflegends.Converter</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Leagueoflegends.Data\Leagueoflegends.Data.csproj">
       <Project>{3e01f5fb-69ad-415d-8114-5d7e4d3cbb74}</Project>
       <Name>Leagueoflegends.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Leagueoflegends.DBEntity\Leagueoflegends.DBEntity.csproj">
+      <Project>{2CD75FCF-667F-42EF-BED1-338BF4F1124C}</Project>
+      <Name>Leagueoflegends.DBEntity</Name>
     </ProjectReference>
     <ProjectReference Include="..\Leagueoflegends.ExampleData\Leagueoflegends.ExampleData.csproj">
       <Project>{ad7caaef-1792-4cc7-a0b3-56f67ea44b03}</Project>
@@ -105,10 +123,6 @@
       <Name>Leagueoflegends.Resources</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Local\ViewModel\" />
-    <Folder Include="UI\Units\" />
-    <Folder Include="UI\Views\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,5 +1,5 @@
 ﻿using Leagueoflegends.Data.Setting.Clients;
-using Leagueoflegends.Data.Setting.Game;
+using Leagueoflegends.Data.Setting.InGame;
 
 namespace Leagueoflegends.Data.Setting
 {
@@ -10,7 +10,8 @@ namespace Leagueoflegends.Data.Setting
 		public ClientChatModel ClientChat { get; set; }
 		public ClientSoundModel ClientSound { get; set; }
 		public ClientVoiceModel ClientVoice { get; set; }
-		public GameShortcutModel GameShortcut { get; set; }
+		public GameHotKeyModel GameHotKey { get; set; }
+		public GameSoundModel GameSound { get; set; }
 
 		public SettingModel()
 		{
@@ -19,7 +20,8 @@ namespace Leagueoflegends.Data.Setting
 			ClientChat = new ClientChatModel();
 			ClientSound = new ClientSoundModel();
 			ClientVoice = new ClientVoiceModel();
-			GameShortcut = new GameShortcutModel();
+			GameHotKey = new GameHotKeyModel();
+			GameSound = new GameSoundModel();
 		}
 	}
 }

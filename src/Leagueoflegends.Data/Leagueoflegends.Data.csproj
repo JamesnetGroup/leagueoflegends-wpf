@@ -44,12 +44,9 @@
   <ItemGroup>
     <Compile Include="Codes\CodeModel.cs" />
     <Compile Include="Codes\AudioDevice.cs" />
-    <Compile Include="Codes\VoiceInputMode.cs" />
     <Compile Include="Codes\WindowSizeCode.cs" />
     <Compile Include="Config\ConfigModel.cs" />
     <Compile Include="Enums\GeoIcon.cs" />
-    <Compile Include="Enums\SettingMenuType.cs" />
-    <Compile Include="Enums\VoiceInputMode.cs" />
     <Compile Include="Local\RandomHelper.cs" />
     <Compile Include="Local\Schema\UsersTable.cs" />
     <Compile Include="Main\AddFriendsModel.cs" />
@@ -64,7 +61,8 @@
     <Compile Include="Setting\Clients\ClientChatModel.cs" />
     <Compile Include="Setting\Clients\ClientAlarmModel.cs" />
     <Compile Include="Setting\Clients\ClientNormalModel.cs" />
-    <Compile Include="Setting\Game\GameShortcutModel.cs" />
+    <Compile Include="Setting\InGame\GameSoundModel.cs" />
+    <Compile Include="Setting\InGame\GameHotKeyModel.cs" />
     <Compile Include="Setting\SettingMenuModel.cs" />
     <Compile Include="Setting\SettingModel.cs" />
     <Compile Include="TeamFight\TeamFightModel.cs" />

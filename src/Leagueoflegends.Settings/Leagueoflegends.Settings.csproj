@@ -154,6 +154,10 @@
       <Project>{B1457FC6-BE4F-4D11-BE48-A7CD189A320C}</Project>
       <Name>Leagueoflegends.Game.Shortcut</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Leagueoflegends.Game.Sound\Leagueoflegends.Game.Sound.csproj">
+      <Project>{A100558F-0037-471C-902F-19899F612670}</Project>
+      <Name>Leagueoflegends.Game.Sound</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Leagueoflegends.LayoutSupport\Leagueoflegends.LayoutSupport.csproj">
       <Project>{418FBB6A-08E6-4EAE-A304-913F232491A6}</Project>
       <Name>Leagueoflegends.LayoutSupport</Name>

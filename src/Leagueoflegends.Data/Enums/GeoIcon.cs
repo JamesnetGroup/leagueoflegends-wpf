@@ -36,6 +36,8 @@
 		Mark,
 		Menuswap,
 		Thumb,
-		Lightning
+		Lightning,
+		VolumeON,
+		VolumeOFF
 	}
 }

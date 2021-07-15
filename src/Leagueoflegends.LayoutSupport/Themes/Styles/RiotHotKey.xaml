@@ -21,7 +21,7 @@
 		<GradientStop Color="#3A3A34" Offset="1"/>
 	</LinearGradientBrush>
 	
-	<Style TargetType="{x:Type ctrls:RiotShortcutButton}">
+	<Style TargetType="{x:Type ctrls:RiotHotKey}">
 		<Setter Property="Margin" Value="0 20 5 0"/>
 		<Setter Property="HorizontalAlignment" Value="Left"/>
 		<Setter Property="VerticalAlignment" Value="Top"/>
@@ -30,7 +30,7 @@
 		<Setter Property="BorderBrush" Value="{StaticResource BTN.BDR}"/>
 		<Setter Property="Template">
 			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type ctrls:RiotShortcutButton}">
+				<ControlTemplate TargetType="{x:Type ctrls:RiotHotKey}">
 					<Border x:Name="border1" 
 							Width="55"
 							Height="95"
@@ -45,7 +45,7 @@
 									BorderBrush="#8F7335"
 									Padding="0 45 0 0"
 									VerticalAlignment="Center"/>
-							<TextBlock Text="{Binding RelativeSource={RelativeSource AncestorType=ctrls:RiotShortcutButton}, Path=Content}"
+							<TextBlock Text="{Binding RelativeSource={RelativeSource AncestorType=ctrls:RiotHotKey}, Path=Content}"
 										HorizontalAlignment="Center"
 										VerticalAlignment="Center"
 										Foreground="#FFFFFF"

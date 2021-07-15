@@ -3,16 +3,18 @@
 					xmlns:units="clr-namespace:Leagueoflegends.Game.Shortcut.UI.Units"
 					xmlns:ctrls="clr-namespace:Leagueoflegends.LayoutSupport.Controls;assembly=Leagueoflegends.LayoutSupport">
 	
-	<Style TargetType="{x:Type units:SpellKeyButton}">
+	<Style TargetType="{x:Type units:SkillHotKey}">
 		<Setter Property="Grid.Row" Value="1"/>
-		<Setter Property="HorizontalAlignment" Value="Right"/>
-		<Setter Property="Margin" Value="0 20 40 0"/>
+		<Setter Property="HorizontalAlignment" Value="Left"/>
+		<Setter Property="Margin" Value="0 20 0 0"/>
 		<Setter Property="Template">
 			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type units:SpellKeyButton}">
+				<ControlTemplate TargetType="{x:Type units:SkillHotKey}">
 					<StackPanel Orientation="Horizontal">
-						<ctrls:RiotShortcutButton Content="{Binding Model.SpellKey1}"/>
-						<ctrls:RiotShortcutButton Content="{Binding Model.SpellKey2}"/>
+						<ctrls:RiotHotKey Content="{Binding Model.SkillKey1}"/>
+						<ctrls:RiotHotKey Content="{Binding Model.SkillKey2}"/>
+						<ctrls:RiotHotKey Content="{Binding Model.SkillKey3}"/>
+						<ctrls:RiotHotKey Content="{Binding Model.SkillKey4}"/>
 					</StackPanel>
 				</ControlTemplate>
 			</Setter.Value>
