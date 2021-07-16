@@ -8,18 +8,8 @@ using Leagueoflegends.Foundation.Riotcore;
 using Leagueoflegends.ExampleData.Setting;
 using Leagueoflegends.LayoutSupport.Controls;
 using Leagueoflegends.Settings.UI.Views;
-using Leagueoflegends.Client.Normal.UI;
-using Leagueoflegends.Client.Alarm.UI;
-using Leagueoflegends.Client.Chat.UI;
-using Leagueoflegends.Client.Sound.UI;
-using Leagueoflegends.Client.Voice.UI.Views;
-using Leagueoflegends.Client.Block.UI;
-using Leagueoflegends.Client.Normal.Local.ViewModel;
-using Leagueoflegends.Client.Alarm.Local.ViewModel;
-using Leagueoflegends.Client.Chat.Local.ViewModel;
-using Leagueoflegends.Client.Sound.Local.ViewModel;
-using Leagueoflegends.Client.Voice.Local.ViewModel;
-using Leagueoflegends.Client.Block.Local.ViewModel;
+using Leagueoflegends.Settings.Client.UI.Views;
+using Leagueoflegends.Settings.Client.Local.ViewModels;
 using Leagueoflegends.Game.Shortcut.Local.ViewModel;
 using Leagueoflegends.Game.Shortcut.UI.Views;
 using Leagueoflegends.Game.Sound.Local.ViewModel;
@@ -36,11 +26,11 @@ namespace Leagueoflegends.Settings.Local.ViewModel
 		private List<SettingMenuModel> _settingMenus;
 		private SettingMenuModel _currentSettingMenu;
 
-		private ClientNormalViewModel Normal;
-		private ClientAlarmViewModel Alarm;
-		private ClientChatViewModel Chat;
-		private ClientSoundViewModel Sound;
-		private ClientVoiceViewModel Voice;
+		private AlarmViewModel Alarm;
+		private ChatViewModel Chat;
+		private NormalViewModel Normal;
+		private SoundViewModel Sound;
+		private VoiceViewModel Voice;
 		private GameHotKeyViewModel HotKey;
 		private GameSoundViewModel GameSound;
 		private Dictionary<int, IRiotUI> UIs { get; set; }
@@ -81,11 +71,11 @@ namespace Leagueoflegends.Settings.Local.ViewModel
 		{
 			ViewClosed = modalClose;
 			UIs = new();
-			Normal = new ClientNormalViewModel();
-			Alarm = new ClientAlarmViewModel();
-			Chat = new ClientChatViewModel();
-			Sound = new ClientSoundViewModel();
-			Voice = new ClientVoiceViewModel();
+			Normal = new NormalViewModel();
+			Alarm = new AlarmViewModel();
+			Chat = new ChatViewModel();
+			Sound = new SoundViewModel();
+			Voice = new VoiceViewModel();
 			HotKey = new GameHotKeyViewModel();
 			GameSound = new GameSoundViewModel();
 
@@ -107,12 +97,12 @@ namespace Leagueoflegends.Settings.Local.ViewModel
 				content = value.Seq switch
 				{
 					// Client
-					1 => new ClientNormalView().SetVM(Normal),
-					2 => new ClientAlarmView().SetVM(Alarm),
-					3 => new ClientChatView().SetVM(Chat),
-					4 => new ClientSoundView().SetVM(Sound),
-					5 => new ClientVoiceView().SetVM(Voice),
-					6 => new ClientBlockView().SetVM(new ClientBlockViewModel()),
+					1 => new NormalView().SetVM(Normal),
+					2 => new AlarmView().SetVM(Alarm),
+					3 => new ChatView().SetVM(Chat),
+					4 => new SoundView().SetVM(Sound),
+					5 => new VoiceView().SetVM(Voice),
+					6 => new BlockView().SetVM(new BlockViewModel()),
 
 					// Game
 					8 => new GameHotKeyView().SetVM(HotKey),
