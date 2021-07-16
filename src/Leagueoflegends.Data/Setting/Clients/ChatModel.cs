@@ -1,13 +1,13 @@
 ﻿namespace Leagueoflegends.Data.Setting.Clients
 {
-	public class ClientChatModel
+	public class ChatModel
 	{
 		public bool SlangFilter { get; set; } = true;
 		public bool LinkCaution { get; set; } = true;
 		public bool MoreMenuVisible { get; set; } = true;
 		public bool NewFriends { get; set; } = true;
 
-		public ClientChatModel()
+		public ChatModel()
 		{
 		}
 	}

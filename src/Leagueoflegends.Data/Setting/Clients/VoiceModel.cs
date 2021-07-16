@@ -2,7 +2,7 @@
 
 namespace Leagueoflegends.Data.Setting.Clients
 {
-	public class ClientVoiceModel
+	public class VoiceModel
 	{
 		public bool AutoConnecting { get; set; } = true;
 		public bool Mute { get; set; } = true;
@@ -12,7 +12,7 @@ namespace Leagueoflegends.Data.Setting.Clients
 		public int NoiseControl { get; set; } = 50;
 		public string TalkShortCut { get; set; } = "C";
 
-		public ClientVoiceModel()
+		public VoiceModel()
 		{
 		}
 	}

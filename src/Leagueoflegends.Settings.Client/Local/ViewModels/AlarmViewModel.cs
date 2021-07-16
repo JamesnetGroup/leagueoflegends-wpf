@@ -7,14 +7,14 @@ namespace Leagueoflegends.Settings.Client.Local.ViewModels
 {
 	public class AlarmViewModel : ObservableObject
 	{
-		public ClientAlarmModel Model { get; set; }
+		public AlarmModel Model { get; set; }
 
 		#region Constructor
 
 		public AlarmViewModel()
 		{
 			ConfigModel config = RiotConfig.LoadConfig();
-			Model = config.Settings.ClientAlarm;
+			Model = config.Settings.Alarm;
 		}
 		#endregion
 	}

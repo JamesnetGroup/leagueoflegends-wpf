@@ -15,7 +15,7 @@ namespace Leagueoflegends.Settings.Client.Local.ViewModels
 		private List<AudioDevice> _deviceList;
 		private List<UsualCodes> _inputMode;
 
-		public ClientVoiceModel Model { get; set; }
+		public VoiceModel Model { get; set; }
 
 		#region DeviceList
 
@@ -43,7 +43,7 @@ namespace Leagueoflegends.Settings.Client.Local.ViewModels
 			InputMode = new GetCodeItems().Run("000001");
 
 			ConfigModel config = RiotConfig.LoadConfig();
-			Model = config.Settings.ClientVoice;
+			Model = config.Settings.Voice;
 		}
 		#endregion
 	}

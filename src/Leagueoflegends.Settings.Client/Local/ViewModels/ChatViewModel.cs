@@ -7,14 +7,14 @@ namespace Leagueoflegends.Settings.Client.Local.ViewModels
 {
 	public class ChatViewModel : ObservableObject
 	{
-		public ClientChatModel Model { get; set; }
+		public ChatModel Model { get; set; }
 
 		#region Constructor
 
 		public ChatViewModel()
 		{
 			ConfigModel config = RiotConfig.LoadConfig();
-			Model = config.Settings.ClientChat;
+			Model = config.Settings.Chat;
 		}
 		#endregion
 	}

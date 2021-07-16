@@ -126,14 +126,6 @@
       <Project>{B0E72967-60F7-4796-8940-36D3822131A7}</Project>
       <Name>Leagueoflegends.Foundation</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Leagueoflegends.Game.Shortcut\Leagueoflegends.Game.Shortcut.csproj">
-      <Project>{B1457FC6-BE4F-4D11-BE48-A7CD189A320C}</Project>
-      <Name>Leagueoflegends.Game.Shortcut</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Leagueoflegends.Game.Sound\Leagueoflegends.Game.Sound.csproj">
-      <Project>{A100558F-0037-471C-902F-19899F612670}</Project>
-      <Name>Leagueoflegends.Game.Sound</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Leagueoflegends.LayoutSupport\Leagueoflegends.LayoutSupport.csproj">
       <Project>{418FBB6A-08E6-4EAE-A304-913F232491A6}</Project>
       <Name>Leagueoflegends.LayoutSupport</Name>
@@ -145,6 +137,10 @@
     <ProjectReference Include="..\Leagueoflegends.Settings.Client\Leagueoflegends.Settings.Client.csproj">
       <Project>{86EEF60E-51E1-4B6E-8AC1-718A87C0AE0D}</Project>
       <Name>Leagueoflegends.Settings.Client</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Leagueoflegends.Settings.InGame\Leagueoflegends.Settings.InGame.csproj">
+      <Project>{B5BFC241-2BD8-40FA-80CE-DCE99B2F7B88}</Project>
+      <Name>Leagueoflegends.Settings.InGame</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
