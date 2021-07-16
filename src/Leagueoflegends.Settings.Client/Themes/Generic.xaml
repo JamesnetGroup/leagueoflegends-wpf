@@ -1,0 +1,16 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary Source="/Leagueoflegends.Settings.Client;component/Themes/Units/InputMode.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Settings.Client;component/Themes/Units/InputPress.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Settings.Client;component/Themes/Units/InputStatus.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Settings.Client;component/Themes/Units/InputSetting.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Settings.Client;component/Themes/Views/AlarmView.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Settings.Client;component/Themes/Views/BlockView.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Settings.Client;component/Themes/Views/ChatView.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Settings.Client;component/Themes/Views/NormalView.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Settings.Client;component/Themes/Views/SoundView.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Settings.Client;component/Themes/Views/VoiceView.xaml"/>
+	</ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>
