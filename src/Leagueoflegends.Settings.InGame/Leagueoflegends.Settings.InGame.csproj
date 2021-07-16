@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{86EEF60E-51E1-4B6E-8AC1-718A87C0AE0D}</ProjectGuid>
+    <ProjectGuid>{B5BFC241-2BD8-40FA-80CE-DCE99B2F7B88}</ProjectGuid>
     <OutputType>library</OutputType>
-    <RootNamespace>Leagueoflegends.Settings.Client</RootNamespace>
-    <AssemblyName>Leagueoflegends.Settings.Client</AssemblyName>
+    <RootNamespace>Leagueoflegends.Settings.InGame</RootNamespace>
+    <AssemblyName>Leagueoflegends.Settings.InGame</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -52,54 +52,38 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Units\InputMode.xaml">
+    <Page Include="Themes\Units\CastControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Units\InputPress.xaml">
+    <Page Include="Themes\Units\ItemHotKey.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Units\InputSetting.xaml">
+    <Page Include="Themes\Units\SkillHotKey.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Units\InputStatus.xaml">
+    <Page Include="Themes\Units\SoundControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Views\AlarmView.xaml">
+    <Page Include="Themes\Units\SpellHotKey.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Views\BlockView.xaml">
+    <Page Include="Themes\Views\GameSoundView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Views\ChatView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Views\VoiceView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Views\SoundView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Views\GeneralView.xaml">
+    <Page Include="Themes\Views\HotKeyView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Local\ViewModels\AlarmViewModel.cs" />
-    <Compile Include="Local\ViewModels\BlockViewModel.cs" />
-    <Compile Include="Local\ViewModels\ChatViewModel.cs" />
-    <Compile Include="Local\ViewModels\VoiceViewModel.cs" />
-    <Compile Include="Local\ViewModels\SoundViewModel.cs" />
-    <Compile Include="Local\ViewModels\GeneralViewModel.cs" />
+    <Compile Include="Local\ViewModels\GameSoundViewModel.cs" />
+    <Compile Include="Local\ViewModels\HotKeyViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -113,16 +97,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="UI\Units\InputMode.cs" />
-    <Compile Include="UI\Units\InputPress.cs" />
-    <Compile Include="UI\Units\InputSetting.cs" />
-    <Compile Include="UI\Units\InputStatus.cs" />
-    <Compile Include="UI\Views\AlarmView.cs" />
-    <Compile Include="UI\Views\BlockView.cs" />
-    <Compile Include="UI\Views\ChatView.cs" />
-    <Compile Include="UI\Views\VoiceView.cs" />
-    <Compile Include="UI\Views\SoundView.cs" />
-    <Compile Include="UI\Views\GeneralView.cs" />
+    <Compile Include="UI\Units\CastControl.cs" />
+    <Compile Include="UI\Units\ItemHotKey.cs" />
+    <Compile Include="UI\Units\SkillHotKey.cs" />
+    <Compile Include="UI\Units\SoundControl.cs" />
+    <Compile Include="UI\Units\SpellHotKey.cs" />
+    <Compile Include="UI\Views\GameSoundView.cs" />
+    <Compile Include="UI\Views\HotKeyView.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -132,7 +113,6 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Leagueoflegends.Controls\Leagueoflegends.Controls.csproj">
       <Project>{f6309cba-5a01-4e4e-ae66-02841968c02d}</Project>
@@ -167,5 +147,6 @@
       <Name>Leagueoflegends.Resources</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

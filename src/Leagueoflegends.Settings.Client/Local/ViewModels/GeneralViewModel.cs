@@ -8,11 +8,11 @@ using System.Collections.Generic;
 
 namespace Leagueoflegends.Settings.Client.Local.ViewModels
 {
-	public class NormalViewModel : ObservableObject
+	public class GeneralViewModel : ObservableObject
     {
         private List<WindowSizeCode> _sizeList;
 
-        public ClientNormalModel Model { get; set; }
+        public GeneralModel Model { get; set; }
 
         #region SizeList
 
@@ -25,12 +25,12 @@ namespace Leagueoflegends.Settings.Client.Local.ViewModels
 
 		#region Constructor
 
-		public NormalViewModel()
+		public GeneralViewModel()
 		{
 			SizeList = ExamSettings.GetWinSizeList();
 
 			ConfigModel config = RiotConfig.LoadConfig();
-			Model = config.Settings.ClientNormal;
+			Model = config.Settings.General;
         }
         #endregion
     }

@@ -10,10 +10,8 @@ using Leagueoflegends.LayoutSupport.Controls;
 using Leagueoflegends.Settings.UI.Views;
 using Leagueoflegends.Settings.Client.UI.Views;
 using Leagueoflegends.Settings.Client.Local.ViewModels;
-using Leagueoflegends.Game.Shortcut.Local.ViewModel;
-using Leagueoflegends.Game.Shortcut.UI.Views;
-using Leagueoflegends.Game.Sound.Local.ViewModel;
-using Leagueoflegends.Game.Sound.Views;
+using Leagueoflegends.Settings.InGame.UI.Views;
+using Leagueoflegends.Settings.InGame.Local.ViewModels;
 
 namespace Leagueoflegends.Settings.Local.ViewModel
 {
@@ -28,10 +26,10 @@ namespace Leagueoflegends.Settings.Local.ViewModel
 
 		private AlarmViewModel Alarm;
 		private ChatViewModel Chat;
-		private NormalViewModel Normal;
+		private GeneralViewModel General;
 		private SoundViewModel Sound;
 		private VoiceViewModel Voice;
-		private GameHotKeyViewModel HotKey;
+		private HotKeyViewModel HotKey;
 		private GameSoundViewModel GameSound;
 		private Dictionary<int, IRiotUI> UIs { get; set; }
 		#endregion 
@@ -71,12 +69,12 @@ namespace Leagueoflegends.Settings.Local.ViewModel
 		{
 			ViewClosed = modalClose;
 			UIs = new();
-			Normal = new NormalViewModel();
+			General = new GeneralViewModel();
 			Alarm = new AlarmViewModel();
 			Chat = new ChatViewModel();
 			Sound = new SoundViewModel();
 			Voice = new VoiceViewModel();
-			HotKey = new GameHotKeyViewModel();
+			HotKey = new HotKeyViewModel();
 			GameSound = new GameSoundViewModel();
 
 			SettingMenus = ExamSettings.GetSettingList();
@@ -97,7 +95,7 @@ namespace Leagueoflegends.Settings.Local.ViewModel
 				content = value.Seq switch
 				{
 					// Client
-					1 => new NormalView().SetVM(Normal),
+					1 => new GeneralView().SetVM(General),
 					2 => new AlarmView().SetVM(Alarm),
 					3 => new ChatView().SetVM(Chat),
 					4 => new SoundView().SetVM(Sound),
@@ -105,7 +103,7 @@ namespace Leagueoflegends.Settings.Local.ViewModel
 					6 => new BlockView().SetVM(new BlockViewModel()),
 
 					// Game
-					8 => new GameHotKeyView().SetVM(HotKey),
+					8 => new HotKeyView().SetVM(HotKey),
 					9 => new GameSoundView().SetVM(GameSound),
 					_ => new EmptyView()
 				};
@@ -127,12 +125,12 @@ namespace Leagueoflegends.Settings.Local.ViewModel
 			ViewClosed.Invoke(View);
 
 			SettingModel setting = RiotConfig.Config.Settings;
-			setting.ClientNormal = Normal.Model;
-			setting.ClientAlarm = Alarm.Model;
-			setting.ClientChat = Chat.Model;
-			setting.ClientSound = Sound.Model;
-			setting.ClientVoice = Voice.Model;
-			setting.GameHotKey = HotKey.Model;
+			setting.General = General.Model;
+			setting.Alarm = Alarm.Model;
+			setting.Chat = Chat.Model;
+			setting.Sound = Sound.Model;
+			setting.Voice = Voice.Model;
+			setting.HotKey = HotKey.Model;
 			setting.GameSound = GameSound.Model;
 
 			RiotConfig.SaveSettings(setting);

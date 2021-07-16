@@ -3,13 +3,13 @@ using System.Windows;
 
 namespace Leagueoflegends.Settings.Client.UI.Views
 {
-	public class NormalView : View
+	public class GeneralView : View
     {
         #region DefaultStyleKey
 
-        static NormalView()
+        static GeneralView()
         {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(NormalView), new FrameworkPropertyMetadata(typeof(NormalView)));
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(GeneralView), new FrameworkPropertyMetadata(typeof(GeneralView)));
         }
 		#endregion
 	}

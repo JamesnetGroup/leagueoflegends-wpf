@@ -7,14 +7,14 @@ namespace Leagueoflegends.Settings.Client.Local.ViewModels
 {
 	public class SoundViewModel : ObservableObject
 	{
-		public ClientSoundModel Model { get; set; }
+		public SoundModel Model { get; set; }
 
 		#region Constructor
 
 		public SoundViewModel()
 		{
 			ConfigModel config = RiotConfig.LoadConfig();
-			Model = config.Settings.ClientSound;
+			Model = config.Settings.Sound;
 		}
 		#endregion
 	}

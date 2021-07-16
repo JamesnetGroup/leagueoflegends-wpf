@@ -5,22 +5,22 @@ namespace Leagueoflegends.Data.Setting
 {
 	public class SettingModel
 	{ 
-		public ClientNormalModel ClientNormal { get; set; }
-		public ClientAlarmModel ClientAlarm { get; set; }
-		public ClientChatModel ClientChat { get; set; }
-		public ClientSoundModel ClientSound { get; set; }
-		public ClientVoiceModel ClientVoice { get; set; }
-		public GameHotKeyModel GameHotKey { get; set; }
+		public GeneralModel General { get; set; }
+		public AlarmModel Alarm { get; set; }
+		public ChatModel Chat { get; set; }
+		public SoundModel Sound { get; set; }
+		public VoiceModel Voice { get; set; }
+		public HotKeyModel HotKey { get; set; }
 		public GameSoundModel GameSound { get; set; }
 
 		public SettingModel()
 		{
-			ClientNormal = new ClientNormalModel();
-			ClientAlarm = new ClientAlarmModel();
-			ClientChat = new ClientChatModel();
-			ClientSound = new ClientSoundModel();
-			ClientVoice = new ClientVoiceModel();
-			GameHotKey = new GameHotKeyModel();
+			General = new GeneralModel();
+			Alarm = new AlarmModel();
+			Chat = new ChatModel();
+			Sound = new SoundModel();
+			Voice = new VoiceModel();
+			HotKey = new HotKeyModel();
 			GameSound = new GameSoundModel();
 		}
 	}
