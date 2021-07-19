@@ -80,7 +80,7 @@ _(It will be soon updated to `.NET 6` and `C# 10.0` 😃)_
 
 ![image](https://user-images.githubusercontent.com/52397976/124482513-526ba380-dde4-11eb-9b31-c3c1199987b6.png)
 
-![image](https://user-images.githubusercontent.com/52397976/124488332-ae392b00-ddea-11eb-9991-31e9fe38d709.png)
+![image](https://user-images.githubusercontent.com/74305823/126187790-d6d3332e-694c-4318-b556-66e1df34a4be.png)
 
 <br/>
   
