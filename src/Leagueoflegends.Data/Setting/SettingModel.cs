@@ -12,6 +12,7 @@ namespace Leagueoflegends.Data.Setting
 		public VoiceModel Voice { get; set; }
 		public HotKeyModel HotKey { get; set; }
 		public GameSoundModel GameSound { get; set; }
+		public InterfaceModel Interface { get; set; }
 
 		public SettingModel()
 		{
@@ -22,6 +23,7 @@ namespace Leagueoflegends.Data.Setting
 			Voice = new VoiceModel();
 			HotKey = new HotKeyModel();
 			GameSound = new GameSoundModel();
+			Interface = new InterfaceModel(); 
 		}
 	}
 }
