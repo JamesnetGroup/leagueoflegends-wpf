@@ -63,6 +63,7 @@
     <Compile Include="Setting\Clients\GeneralModel.cs" />
     <Compile Include="Setting\InGame\GameSoundModel.cs" />
     <Compile Include="Setting\InGame\HotKeyModel.cs" />
+    <Compile Include="Setting\InGame\InterfaceModel.cs" />
     <Compile Include="Setting\SettingMenuModel.cs" />
     <Compile Include="Setting\SettingModel.cs" />
     <Compile Include="TeamFight\TeamFightModel.cs" />

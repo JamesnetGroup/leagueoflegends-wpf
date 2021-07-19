@@ -56,6 +56,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Themes\Units\InterfaceSize.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Themes\Units\ItemHotKey.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -72,6 +76,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Themes\Units\Strength.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Themes\Views\GameSoundView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -80,9 +88,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Themes\Views\InterfaceView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Local\ViewModels\GameSoundViewModel.cs" />
+    <Compile Include="Local\ViewModels\InterfaceViewModel.cs" />
     <Compile Include="Local\ViewModels\HotKeyViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -98,11 +111,14 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="UI\Units\CastControl.cs" />
+    <Compile Include="UI\Units\Strength.cs" />
     <Compile Include="UI\Units\ItemHotKey.cs" />
     <Compile Include="UI\Units\SkillHotKey.cs" />
     <Compile Include="UI\Units\SoundControl.cs" />
+    <Compile Include="UI\Units\InterfaceSize.cs" />
     <Compile Include="UI\Units\SpellHotKey.cs" />
     <Compile Include="UI\Views\GameSoundView.cs" />
+    <Compile Include="UI\Views\InterfaceView.cs" />
     <Compile Include="UI\Views\HotKeyView.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
