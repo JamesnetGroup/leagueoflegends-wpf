@@ -9,6 +9,11 @@
 		<ResourceDictionary Source="/Leagueoflegends.Settings.InGame;component/Themes/Units/SoundControl.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Settings.InGame;component/Themes/Units/InterfaceSize.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Settings.InGame;component/Themes/Units/Strength.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Settings.InGame;component/Themes/Units/Notification.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Settings.InGame;component/Themes/Units/InterfaceOption.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Settings.InGame;component/Themes/Units/Emotion.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Settings.InGame;component/Themes/Units/Eternals.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Settings.InGame;component/Themes/Units/Messages.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Settings.InGame;component/Themes/Views/HotKeyView.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Settings.InGame;component/Themes/Views/GameSoundView.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Settings.InGame;component/Themes/Views/InterfaceView.xaml"/>
