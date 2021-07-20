@@ -56,6 +56,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Themes\Units\Messages.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\Eternals.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Themes\Units\InterfaceSize.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -73,6 +81,18 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Themes\Units\SpellHotKey.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\Notification.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\InterfaceOption.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\Emotion.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -111,6 +131,11 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="UI\Units\CastControl.cs" />
+    <Compile Include="UI\Units\Messages.cs" />
+    <Compile Include="UI\Units\Eternals.cs" />
+    <Compile Include="UI\Units\InterfaceOption.cs" />
+    <Compile Include="UI\Units\Notification.cs" />
+    <Compile Include="UI\Units\Emotion.cs" />
     <Compile Include="UI\Units\Strength.cs" />
     <Compile Include="UI\Units\ItemHotKey.cs" />
     <Compile Include="UI\Units\SkillHotKey.cs" />

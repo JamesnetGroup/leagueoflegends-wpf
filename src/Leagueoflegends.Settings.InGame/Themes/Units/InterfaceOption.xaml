@@ -1,0 +1,73 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:units="clr-namespace:Leagueoflegends.Settings.InGame.UI.Units"
+					xmlns:ctrls="clr-namespace:Leagueoflegends.LayoutSupport.Controls;assembly=Leagueoflegends.LayoutSupport">
+
+	<Style TargetType="{x:Type TextBlock}" x:Key="TXB.BASE">
+		<Setter Property="FontSize" Value="14"/>
+		<Setter Property="FontWeight" Value="Bold"/>
+		<Setter Property="Foreground" Value="#F0E6D2"/>
+		<Setter Property="Margin" Value="0 25 0 0"/>
+	</Style>
+	
+	<Style TargetType="{x:Type ctrls:RiotComboBoxItem}" x:Key="IN.CBXI">
+		<Setter Property="Content" Value="{Binding ItemName}"/>
+	</Style>
+
+	<Style TargetType="{x:Type ctrls:RiotComboBox}" x:Key="CBX.TIME">
+		<Setter Property="Width" Value="200"/>
+		<Setter Property="Height" Value="30"/>
+		<Setter Property="Margin" Value="0 10 0 0"/>
+		<Setter Property="ItemContainerStyle" Value="{StaticResource IN.CBXI}"/>
+		<Setter Property="ItemsSource" Value="{Binding Times}"/>
+		<Setter Property="SelectedValue" Value="{Binding Model.WaitTime}"/>
+		<Setter Property="SelectedValuePath" Value="ItemName"/>
+		<Setter Property="Content" Value="{Binding RelativeSource={RelativeSource Self}, Path=SelectedItem.ItemName}"/>
+	</Style>
+
+	<Style TargetType="{x:Type units:InterfaceOption}">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type units:InterfaceOption}">
+					<StackPanel>
+
+						<TextBlock Style="{StaticResource TXB.BASE}" Text="스킬과 기본 공격 표시"/>
+						<UniformGrid Rows="3" Columns="2">
+							<ctrls:CheckBox02 Margin="0 10 0 0" Content="공격 시 목표 테두리 표시" IsChecked="{Binding Model.Skill.TargetBorder}"/>
+							<ctrls:CheckBox02 Margin="0 10 0 0" Content="발사체 궤적 표시" IsChecked="{Binding Model.Skill.ViewTrack}"/>
+							<ctrls:CheckBox02 Margin="0 10 0 0" Content="공격 사거리 표시" IsChecked="{Binding Model.Skill.AttackIntersection}"/>
+							<ctrls:CheckBox02 Margin="0 10 0 0" Content="HUD 스킬 클릭 비활성화" IsChecked="{Binding Model.Skill.DeactivateHUD}"/>
+							<ctrls:CheckBox02 Margin="0 10 0 0" Content="스킬 소모값 표시" IsChecked="{Binding Model.Skill.ViewSkillConsume}"/>
+						</UniformGrid>
+						
+						<TextBlock Style="{StaticResource TXB.BASE}" Text="재사용 대기시간 표시"/>
+						<ctrls:RiotComboBox Style="{StaticResource CBX.TIME}"/>
+
+						<TextBlock Style="{StaticResource TXB.BASE}" Text="미니맵 크기"/>
+						<UniformGrid Rows="2" Columns="2">
+							<ctrls:CheckBox02 Margin="0 10 0 0" Content="중립 몬스터 표시" IsChecked="{Binding Model.Minimap.NeutralMonster}"/>
+							<ctrls:CheckBox02 Margin="0 10 0 0" Content="미니맵 좌측에 표시" IsChecked="{Binding Model.Minimap.LocateLeft}"/>
+							<ctrls:CheckBox02 Margin="0 10 0 0" Content="미니맵 이동 허용" IsChecked="{Binding Model.Minimap.AllowMove}"/>
+						</UniformGrid>
+
+						<TextBlock Style="{StaticResource TXB.BASE}" Text="점수표"/>
+						<UniformGrid Rows="1" Columns="2" >
+							<ctrls:CheckBox02 Margin="0 10 0 0" Content="초상화 중심 점수판 정렬" IsChecked="{Binding Model.Score.OrderbyPortrait}"/>
+							<ctrls:CheckBox02 Margin="0 10 0 0" Content="소환사 이름 표시" IsChecked="{Binding Model.Score.ViewChampionName}"/>
+						</UniformGrid>
+
+						<TextBlock Style="{StaticResource TXB.BASE}" Text="팀 프레임"/>
+						<ctrls:CheckBox02 Margin="0 10 0 0" Content="팀 프레임 좌측에 표시" IsChecked="{Binding Model.TeamFrameLocate}"/>
+
+						<TextBlock Style="{StaticResource TXB.BASE}" Text="채팅"/>
+						<UniformGrid Rows="2" Columns="2">
+							<ctrls:CheckBox02 Margin="0 10 0 0" Content="[전체] 채팅 보기 (빠른 대전 게임)" IsChecked="{Binding Model.Chat.ViewAllChatting}"/>
+							<ctrls:CheckBox02 Margin="0 10 0 0" Content="[아군] 채팅 보기" IsChecked="{Binding Model.Chat.ViewFriendChatting}"/>
+							<ctrls:CheckBox02 Margin="0 10 0 0" Content="타임스탬프 표시" IsChecked="{Binding Model.Chat.ViewTimeStamp}"/>
+						</UniformGrid>
+					</StackPanel>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+</ResourceDictionary>

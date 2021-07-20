@@ -77,7 +77,7 @@
         public Chat Chat { get; set; } = new Chat();
         public bool IgnoreEnemyEmotion { get; set; } = true;
         public string Emotion { get; set; } = "Off";
-        public string EmoionSize { get; set; } = "Normal";
+        public string EmotionSize { get; set; } = "Normal";
         public string Achieve { get; set; } = "OurTeam";
         public Message Message { get; set; } = new Message();
     }
