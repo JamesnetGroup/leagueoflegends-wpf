@@ -5,6 +5,7 @@ using Leagueoflegends.Data.Setting.Clients;
 using Leagueoflegends.ExampleData.Setting;
 using Leagueoflegends.Foundation.Mvvm;
 using Leagueoflegends.Foundation.Riotbase;
+using System;
 using System.Collections.Generic;
 
 namespace Leagueoflegends.Settings.Client.Local.ViewModels
