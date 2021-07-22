@@ -1,5 +1,6 @@
 ﻿using Leagueoflegends.Data.Codes;
 using Leagueoflegends.Data.Config;
+using Leagueoflegends.Data.Setting;
 using Leagueoflegends.Data.Setting.Clients;
 using Leagueoflegends.ExampleData.Setting;
 using Leagueoflegends.Foundation.Mvvm;
@@ -30,6 +31,8 @@ namespace Leagueoflegends.Settings.Client.Local.ViewModels
 			SizeList = ExamSettings.GetWinSizeList();
 
 			ConfigModel config = RiotConfig.LoadConfig();
+			config.Settings = config.Settings ?? new SettingModel();
+
 			Model = config.Settings.General;
         }
         #endregion
