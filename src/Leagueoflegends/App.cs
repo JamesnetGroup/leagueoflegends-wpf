@@ -26,7 +26,7 @@ namespace Leagueoflegends
 				};
 
 				_ = main.ShowDialog();
-				dialogResult = (bool)main.DialogResult;
+				dialogResult = (bool)main.DialogResult; 
 			}
 			Environment.Exit(0);
 		}
