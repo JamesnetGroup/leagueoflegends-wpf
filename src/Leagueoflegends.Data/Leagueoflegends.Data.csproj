@@ -61,6 +61,7 @@
     <Compile Include="Setting\Clients\ChatModel.cs" />
     <Compile Include="Setting\Clients\AlarmModel.cs" />
     <Compile Include="Setting\Clients\GeneralModel.cs" />
+    <Compile Include="Setting\InGame\GameModel.cs" />
     <Compile Include="Setting\InGame\GameSoundModel.cs" />
     <Compile Include="Setting\InGame\HotKeyModel.cs" />
     <Compile Include="Setting\InGame\InterfaceModel.cs" />

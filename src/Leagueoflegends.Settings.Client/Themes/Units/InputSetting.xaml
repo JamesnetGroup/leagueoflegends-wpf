@@ -125,7 +125,7 @@
 		<Setter Property="Text" Value="{Binding ElementName=slider, Path=Value, StringFormat={}입력 음량: {0:N0}%}"/>
 	</Style>
 
-	<Style TargetType="{x:Type ctrls:RiotSlider}" x:Key="SLD.INPUT">
+	<Style TargetType="{x:Type ctrls:Slider01}" x:Key="SLD.INPUT">
 		<Setter Property="MinHeight" Value="26"/>
 		<Setter Property="MaxHeight" Value="26"/>
 		<Setter Property="Height" Value="26"/>
@@ -154,7 +154,7 @@
 						</StackPanel>
 						
 						<TextBlock Style="{StaticResource TXB.INPUT}"/>
-						<ctrls:RiotSlider x:Name="slider" Style="{StaticResource SLD.INPUT}"/>
+						<ctrls:Slider01 x:Name="slider" Style="{StaticResource SLD.INPUT}"/>
 						<Border BorderBrush="#1E2328" BorderThickness="0 0 0 1" Margin="3 20 20 0"/>
 					</StackPanel>
 				</ControlTemplate>

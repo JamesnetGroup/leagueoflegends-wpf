@@ -14,8 +14,12 @@
 		<ResourceDictionary Source="/Leagueoflegends.Settings.InGame;component/Themes/Units/Emotion.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Settings.InGame;component/Themes/Units/Eternals.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Settings.InGame;component/Themes/Units/Messages.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Settings.InGame;component/Themes/Units/Graphic.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Settings.InGame;component/Themes/Units/GameControl.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Settings.InGame;component/Themes/Units/GamePlay.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Settings.InGame;component/Themes/Views/HotKeyView.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Settings.InGame;component/Themes/Views/GameSoundView.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Settings.InGame;component/Themes/Views/InterfaceView.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Settings.InGame;component/Themes/Views/GameView.xaml"/>
 	</ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

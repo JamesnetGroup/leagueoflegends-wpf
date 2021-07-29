@@ -3,42 +3,6 @@
 					xmlns:units="clr-namespace:Leagueoflegends.Settings.InGame.UI.Units"
 					xmlns:ctrls="clr-namespace:Leagueoflegends.LayoutSupport.Controls;assembly=Leagueoflegends.LayoutSupport">
 
-	<LinearGradientBrush x:Key="THUMB.FG" StartPoint="0.5, 0" EndPoint="0.5, 1">
-		<GradientStop Color="#B79248" Offset="0"/>
-		<GradientStop Color="#997530" Offset="0.5"/>
-		<GradientStop Color="#74592B" Offset="1"/>
-	</LinearGradientBrush>
-
-	<LinearGradientBrush x:Key="THUMB.FG.DRAG" StartPoint="0.5, 0" EndPoint="0.5, 1">
-		<GradientStop Color="#473814" Offset="0"/>
-		<GradientStop Color="#57421B" Offset="0.5"/>
-		<GradientStop Color="#684E23" Offset="1"/>
-	</LinearGradientBrush>
-
-	<LinearGradientBrush x:Key="THUMB.FG.OVER" StartPoint="0.5, 0" EndPoint="0.5, 1">
-		<GradientStop Color="#EDE1C8" Offset="0"/>
-		<GradientStop Color="#DCC088" Offset="0.5"/>
-		<GradientStop Color="#CBA14A" Offset="1"/>
-	</LinearGradientBrush>
-
-	<LinearGradientBrush x:Key="SLIDER.FG" StartPoint="0, 0.5" EndPoint="1, 0.5">
-		<GradientStop Color="#463714" Offset="0"/>
-		<GradientStop Color="#58471D" Offset="0.5"/>
-		<GradientStop Color="#695625" Offset="1"/>
-	</LinearGradientBrush>
-
-	<LinearGradientBrush x:Key="SLIDER.FG.DRAG" StartPoint="0, 0.5" EndPoint="1, 0.5">
-		<GradientStop Color="#685524" Offset="0"/>
-		<GradientStop Color="#55441B" Offset="0.5"/>
-		<GradientStop Color="#463714" Offset="1"/>
-	</LinearGradientBrush>
-
-	<LinearGradientBrush x:Key="SLIDER.FG.OVER" StartPoint="0, 0.5" EndPoint="1, 0.5">
-		<GradientStop Color="#795B28" Offset="0"/>
-		<GradientStop Color="#C1963B" Offset="0.5"/>
-		<GradientStop Color="#C8AA6D" Offset="1"/>
-	</LinearGradientBrush>
-
 	<Style TargetType="{x:Type TextBlock}" x:Key="TXB.TITLE">
 		<Setter Property="FontSize" Value="14"/>
 		<Setter Property="FontWeight" Value="Bold"/>
@@ -69,110 +33,31 @@
 		<Setter Property="Text" Value="{Binding ElementName=slider3, Path=Value, StringFormat={}미니맵 크기: {0:N0}}"/>
 	</Style>
 
-	<ControlTemplate TargetType="{x:Type ToolTip}" x:Key="TOOLTIP">
-		<Border Background="#010A13" BorderThickness="2">
-			<Border.BorderBrush>
-				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-					<GradientStop Color="#614a1f" Offset="0"/>
-					<GradientStop Color="#463714" Offset="1"/>
-				</LinearGradientBrush>
-			</Border.BorderBrush>
-			<ContentPresenter Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-		</Border>
-	</ControlTemplate>
-
-	<ControlTemplate TargetType="{x:Type Thumb}" x:Key="IN.THUMB">
-		<Grid HorizontalAlignment="Center" VerticalAlignment="Center" UseLayoutRounding="True" Background="Transparent">
-			<ctrls:RiotIcon x:Name="path" Width="24" Height="24" IconType="Thumb" Fill="{StaticResource THUMB.FG}"/>
-		</Grid>
-		<ControlTemplate.Triggers>
-			<Trigger Property="IsMouseOver" Value="true">
-				<Setter TargetName="path" Property="Fill" Value="{StaticResource THUMB.FG.DRAG}" />
-			</Trigger>
-			<Trigger Property="IsDragging" Value="true">
-				<Setter TargetName="path" Property="Fill" Value="{StaticResource THUMB.FG.OVER}" />
-			</Trigger>
-			<DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=Slider}, Path=IsEnabled}" Value="false">
-				<Setter Property="IsEnabled" Value="False"/>
-			</DataTrigger>
-			<Trigger Property="IsEnabled" Value="false">
-				<Setter TargetName="path" Property="Fill" Value="#5C5B67"/>
-			</Trigger>
-		</ControlTemplate.Triggers>
-	</ControlTemplate>
-
-	<ControlTemplate TargetType="{x:Type Slider}" x:Key="SLIDER">
-		<Border x:Name="border" Background="Transparent" SnapsToDevicePixels="True">
-			<Grid Height="{TemplateBinding MinHeight}">
-				<DockPanel LastChildFill="True">
-					<Border x:Name="PART_SelectionRange" Height="2.5" ClipToBounds="True" Visibility="Visible">
-						<Rectangle x:Name="sliderBar" Margin="4 0 -4 0" RadiusX="1" RadiusY="1" Fill="{StaticResource SLIDER.FG}"/>
-					</Border>
-					<Border Height="2.5" ClipToBounds="True" Visibility="Visible">
-						<Rectangle x:Name="PART_NegativeSelection" Margin="8 0 4 0" RadiusX="1" RadiusY="1" Fill="#1E2328"/>
-					</Border>
-				</DockPanel>
-				<Track x:Name="PART_Track">
-					<Track.Thumb>
-						<Thumb x:Name="thumb"
-                                Template="{StaticResource IN.THUMB}"
-                                OverridesDefaultStyle="True"
-                                VerticalAlignment="Center"
-                                Focusable="False">
-							<Thumb.ToolTip>
-								<ToolTip x:Name="thumbTooltip" 
-										 Template="{StaticResource TOOLTIP}" 
-                                         Content="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Value}" 
-                                         ContentStringFormat="N0"
-                                         Placement="Center" 
-										 VerticalOffset="-30" 
-                                         FontSize="12" 
-										 FontWeight="Bold" 
-										 Foreground="#A09B8C" 
-										 Padding="8 2 8 2" 
-										 MinWidth="30"/>
-							</Thumb.ToolTip>
-						</Thumb>
-					</Track.Thumb>
-				</Track>
-			</Grid>
-		</Border>
-		<ControlTemplate.Triggers>
-			<DataTrigger Binding="{Binding ElementName=thumb, Path=IsMouseOver}" Value="true">
-				<Setter TargetName="sliderBar" Property="Fill" Value="{StaticResource SLIDER.FG.OVER}"/>
-			</DataTrigger>
-			<DataTrigger Binding="{Binding ElementName=thumb, Path=IsDragging}" Value="true">
-				<Setter TargetName="sliderBar" Property="Fill" Value="{StaticResource SLIDER.FG.DRAG}"/>
-			</DataTrigger>
-			<Trigger Property="IsEnabled" Value="false">
-				<Setter TargetName="PART_SelectionRange" Property="Visibility" Value="Collapsed"/>
-			</Trigger>
-		</ControlTemplate.Triggers>
-	</ControlTemplate>
-
-	<Style TargetType="{x:Type Slider}" x:Key="SLD.INTERFACE">
-		<Setter Property="Template" Value="{StaticResource SLIDER}"/>
+	<Style TargetType="{x:Type ctrls:Slider02}" x:Key="SLD.INTERFACE">
 		<Setter Property="MinHeight" Value="26"/>
 		<Setter Property="MaxHeight" Value="26"/>
 		<Setter Property="Height" Value="26"/>
 		<Setter Property="Width" Value="400"/>
 		<Setter Property="HorizontalAlignment" Value="Left"/>
 		<Setter Property="VerticalAlignment" Value="Center"/>
-		<Setter Property="IsMoveToPointEnabled" Value="True"/>
-		<Setter Property="AutoToolTipPlacement" Value="None"/>
-		<Setter Property="IsSnapToTickEnabled" Value="True"/>
-		<Setter Property="TickFrequency" Value="0.01"/>
-		<Setter Property="SmallChange" Value="0.01"/>
-		<Setter Property="LargeChange" Value="0.01"/>
-		<Setter Property="Minimum" Value="0"/>
-		<Setter Property="Maximum" Value="100"/>
-		<Setter Property="SelectionStart" Value="{Binding Path=Minimum, RelativeSource={RelativeSource Self}}"/>
-		<Setter Property="SelectionEnd" Value="{Binding Path=Value, RelativeSource={RelativeSource Self}}"/>
-		<Setter Property="Stylus.IsPressAndHoldEnabled" Value="false"/>
-		<Setter Property="Focusable" Value="False"/>
 		<Setter Property="Margin" Value="10 5 0 0"/>
 	</Style>
-	
+
+	<Style TargetType="{x:Type ctrls:RiotComboBoxItem}" x:Key="IN.CBXI">
+		<Setter Property="Content" Value="{Binding ItemName}"/>
+	</Style>
+
+	<Style TargetType="{x:Type ctrls:RiotComboBox}" x:Key="CBX.TIME">
+		<Setter Property="Width" Value="200"/>
+		<Setter Property="Height" Value="30"/>
+		<Setter Property="Margin" Value="0 10 0 0"/>
+		<Setter Property="ItemContainerStyle" Value="{StaticResource IN.CBXI}"/>
+		<Setter Property="ItemsSource" Value="{Binding Times}"/>
+		<Setter Property="SelectedValue" Value="{Binding Model.WaitTime}"/>
+		<Setter Property="SelectedValuePath" Value="ItemName"/>
+		<Setter Property="Content" Value="{Binding RelativeSource={RelativeSource Self}, Path=SelectedItem.ItemName}"/>
+	</Style>
+
 	<Style TargetType="{x:Type units:InterfaceSize}">
 		<Setter Property="Template">
 			<Setter.Value>
@@ -180,11 +65,11 @@
 					<StackPanel>
 						<TextBlock Style="{StaticResource TXB.TITLE}"/>
 						<TextBlock Style="{StaticResource TXB.SIZE}"/>
-						<Slider x:Name="slider1" Style="{StaticResource SLD.INTERFACE}" Value="{Binding Model.InterfaceSize}"/>
+						<ctrls:Slider02 x:Name="slider1" Style="{StaticResource SLD.INTERFACE}" Value="{Binding Model.InterfaceSize}"/>
 						<TextBlock Style="{StaticResource TXB.CHAT}"/>
-						<Slider x:Name="slider2" Style="{StaticResource SLD.INTERFACE}" Value="{Binding Model.ChattingSize}"/>
+						<ctrls:Slider02 x:Name="slider2" Style="{StaticResource SLD.INTERFACE}" Value="{Binding Model.ChattingSize}"/>
 						<TextBlock Style="{StaticResource TXB.MAP}"/>
-						<Slider x:Name="slider3" Style="{StaticResource SLD.INTERFACE}" Value="{Binding Model.MinimapSize}"/>
+						<ctrls:Slider02 x:Name="slider3" Style="{StaticResource SLD.INTERFACE}" Value="{Binding Model.MinimapSize}"/>
 					</StackPanel>
 				</ControlTemplate>
 			</Setter.Value>
