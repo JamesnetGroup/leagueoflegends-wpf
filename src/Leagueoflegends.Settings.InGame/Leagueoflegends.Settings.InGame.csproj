@@ -56,6 +56,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Themes\Units\GameControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\GamePlay.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Themes\Units\Messages.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -96,9 +104,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Themes\Units\Graphic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Themes\Units\Strength.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Views\GameView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Themes\Views\GameSoundView.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -114,6 +130,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Local\ViewModels\GameViewModel.cs" />
     <Compile Include="Local\ViewModels\GameSoundViewModel.cs" />
     <Compile Include="Local\ViewModels\InterfaceViewModel.cs" />
     <Compile Include="Local\ViewModels\HotKeyViewModel.cs" />
@@ -131,17 +148,21 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="UI\Units\CastControl.cs" />
+    <Compile Include="UI\Units\GamePlay.cs" />
+    <Compile Include="UI\Units\GameControl.cs" />
     <Compile Include="UI\Units\Messages.cs" />
     <Compile Include="UI\Units\Eternals.cs" />
     <Compile Include="UI\Units\InterfaceOption.cs" />
     <Compile Include="UI\Units\Notification.cs" />
     <Compile Include="UI\Units\Emotion.cs" />
+    <Compile Include="UI\Units\Graphic.cs" />
     <Compile Include="UI\Units\Strength.cs" />
     <Compile Include="UI\Units\ItemHotKey.cs" />
     <Compile Include="UI\Units\SkillHotKey.cs" />
     <Compile Include="UI\Units\SoundControl.cs" />
     <Compile Include="UI\Units\InterfaceSize.cs" />
     <Compile Include="UI\Units\SpellHotKey.cs" />
+    <Compile Include="UI\Views\GameView.cs" />
     <Compile Include="UI\Views\GameSoundView.cs" />
     <Compile Include="UI\Views\InterfaceView.cs" />
     <Compile Include="UI\Views\HotKeyView.cs" />

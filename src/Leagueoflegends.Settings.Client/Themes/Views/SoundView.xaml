@@ -58,7 +58,7 @@
 		<Setter Property="IsChecked" Value="{Binding Model.MusicLogin}"/>
 	</Style>
 
-	<Style TargetType="{x:Type ctrls:RiotSlider}" x:Key="SLD.BASE">
+	<Style TargetType="{x:Type ctrls:Slider01}" x:Key="SLD.BASE">
 		<Setter Property="MinHeight" Value="26"/>
 		<Setter Property="MaxHeight" Value="26"/>
 		<Setter Property="Height" Value="26"/>
@@ -99,12 +99,12 @@
 						
 						<StackPanel IsEnabled="{Binding ElementName=chbMaster, Path=IsChecked}">
 							<TextBlock Style="{StaticResource TXB.MASTER}"/>
-							<ctrls:RiotSlider x:Name="sldMaster" Style="{StaticResource SLD.BASE}" Value="{Binding Model.MasterVolume}" Width="415" Margin="5 0 0 0"/>
+							<ctrls:Slider01 x:Name="sldMaster" Style="{StaticResource SLD.BASE}" Value="{Binding Model.MasterVolume}" Width="415" Margin="5 0 0 0"/>
 
 							<ctrls:CheckBox02 x:Name="chbEffect" Style="{StaticResource CHK.EFFECT}"/>
 							<StackPanel IsEnabled="{Binding ElementName=chbEffect, Path=IsChecked}">
 								<TextBlock Style="{StaticResource TXB.EFFECT}"/>
-								<ctrls:RiotSlider x:Name="sldEffect" Style="{StaticResource SLD.BASE}" Value="{Binding Model.EffectVolume}"/>
+								<ctrls:Slider01 x:Name="sldEffect" Style="{StaticResource SLD.BASE}" Value="{Binding Model.EffectVolume}"/>
 								<ctrls:CheckBox02 Style="{StaticResource CHK.AROUND}"/>
 								<ctrls:CheckBox02 Style="{StaticResource CHK.SELECT}"/>
 								<ctrls:CheckBox02 Style="{StaticResource CHK.BAN}"/>
@@ -113,7 +113,7 @@
 							<ctrls:CheckBox02 x:Name="chbMusic" Style="{StaticResource CHK.MUSIC}"/>
 							<StackPanel IsEnabled="{Binding ElementName=chbMusic, Path=IsChecked}">
 								<TextBlock Style="{StaticResource TXB.MUSIC}"/>
-								<ctrls:RiotSlider x:Name="sldMusic" Style="{StaticResource SLD.BASE}" Value="{Binding Model.MusicVolume}"/>
+								<ctrls:Slider01 x:Name="sldMusic" Style="{StaticResource SLD.BASE}" Value="{Binding Model.MusicVolume}"/>
 								<ctrls:CheckBox02 Style="{StaticResource CHK.SELECT2}"/>
 								<ctrls:CheckBox02 Style="{StaticResource CHK.LOBBY}"/>
 								<ctrls:CheckBox02 Style="{StaticResource CHK.LOGIN}"/>

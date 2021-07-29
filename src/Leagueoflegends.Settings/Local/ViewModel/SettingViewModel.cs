@@ -32,6 +32,7 @@ namespace Leagueoflegends.Settings.Local.ViewModel
 		private HotKeyViewModel HotKey;
 		private GameSoundViewModel GameSound;
 		private InterfaceViewModel Interface;
+		private GameViewModel Game;
 		private Dictionary<int, IRiotUI> UIs { get; set; }
 		#endregion 
 
@@ -78,6 +79,7 @@ namespace Leagueoflegends.Settings.Local.ViewModel
 			HotKey = new HotKeyViewModel();
 			GameSound = new GameSoundViewModel();
 			Interface = new InterfaceViewModel();
+			Game = new GameViewModel();
 
 			SettingMenus = ExamSettings.GetSettingList();
 			CompleteCommand = new RelayCommand<Modal>(CompleteClick);
@@ -104,10 +106,11 @@ namespace Leagueoflegends.Settings.Local.ViewModel
 					5 => new VoiceView().SetVM(Voice),
 					6 => new BlockView().SetVM(new BlockViewModel()),
 
-					// Game
+					// In-Game
 					8 => new HotKeyView().SetVM(HotKey),
 					9 => new GameSoundView().SetVM(GameSound),
 					10 => new InterfaceView().SetVM(Interface),
+					11 => new GameView().SetVM(Game),
 					_ => new EmptyView()
 				};
 
@@ -136,6 +139,7 @@ namespace Leagueoflegends.Settings.Local.ViewModel
 			setting.HotKey = HotKey.Model;
 			setting.GameSound = GameSound.Model;
 			setting.Interface = Interface.Model;
+			setting.Game = Game.Model;
 
 			RiotConfig.SaveSettings(setting);
 		}

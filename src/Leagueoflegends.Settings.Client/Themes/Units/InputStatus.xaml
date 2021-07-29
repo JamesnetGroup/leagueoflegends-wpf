@@ -3,7 +3,7 @@
 					xmlns:units="clr-namespace:Leagueoflegends.Settings.Client.UI.Units"
 					xmlns:ctrls="clr-namespace:Leagueoflegends.LayoutSupport.Controls;assembly=Leagueoflegends.LayoutSupport">
 	
-	<Style TargetType="{x:Type ctrls:RiotSlider}" x:Key="SLD.NOISE">
+	<Style TargetType="{x:Type ctrls:Slider01}" x:Key="SLD.NOISE">
 		<Setter Property="MinHeight" Value="26"/>
 		<Setter Property="MaxHeight" Value="26"/>
 		<Setter Property="Width" Value="200"/>
@@ -24,7 +24,7 @@
 						<TextBlock Foreground="#9B9688" Margin="110 50 0 30" FontSize="12"
 								   HorizontalAlignment="Left" VerticalAlignment="Center"
 								   Text="{Binding ElementName=slider2, Path=Value, StringFormat={}음성 입력 감도: {0:N0}%}"/>
-						<ctrls:RiotSlider x:Name="slider2" Style="{StaticResource SLD.NOISE}"/>
+						<ctrls:Slider01 x:Name="slider2" Style="{StaticResource SLD.NOISE}"/>
 					</Grid>
 					<ControlTemplate.Triggers>
 						<DataTrigger Binding="{Binding Model.InputMode}" Value="Voice Activity">

@@ -8,7 +8,7 @@
 		<GradientStop Color="#C8A96C" Offset="1" />
 	</LinearGradientBrush>
 
-	<Style TargetType="{x:Type ctrls:RiotSlider}" x:Key="SLD.SOUND">
+	<Style TargetType="{x:Type ctrls:Slider01}" x:Key="SLD.SOUND">
 		<Setter Property="Grid.Row" Value="1"/>
 		<Setter Property="MinHeight" Value="26"/>
 		<Setter Property="MaxHeight" Value="26"/>
@@ -72,7 +72,7 @@
 							<TextBlock Text="{Binding RelativeSource={RelativeSource AncestorType=ctrls:RiotVolume}, Path=Value, StringFormat={}{0:N0}}"
 									   Foreground="#9B9688"/>
 						</StackPanel>
-						<ctrls:RiotSlider x:Name="slider" Style="{StaticResource SLD.SOUND}"/>
+						<ctrls:Slider01 x:Name="slider" Style="{StaticResource SLD.SOUND}"/>
 						<ToggleButton x:Name="toggle" Style="{StaticResource TGL.MUTE}"/>
 					</Grid>
 					<ControlTemplate.Triggers>

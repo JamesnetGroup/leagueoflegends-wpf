@@ -122,8 +122,9 @@
     <Compile Include="Controls\MainWindow.cs" />
     <Compile Include="Controls\RiotHotKey.cs" />
     <Compile Include="Controls\RiotComboBoxItem.cs" />
+    <Compile Include="Controls\Slider02.cs" />
+    <Compile Include="Controls\Slider01.cs" />
     <Compile Include="Controls\RiotVolume.cs" />
-    <Compile Include="Controls\RiotSlider.cs" />
     <Compile Include="Controls\RiotButton.cs" />
     <Compile Include="Controls\CheckBox01.cs" />
     <Compile Include="Controls\RiotComboBox.cs" />
