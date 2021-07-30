@@ -111,6 +111,7 @@ namespace Leagueoflegends.Settings.Local.ViewModel
 					9 => new GameSoundView().SetVM(GameSound),
 					10 => new InterfaceView().SetVM(Interface),
 					11 => new GameView().SetVM(Game),
+					12 => new ReplayView().SetVM(new ReplayViewModel()),
 					_ => new EmptyView()
 				};
 

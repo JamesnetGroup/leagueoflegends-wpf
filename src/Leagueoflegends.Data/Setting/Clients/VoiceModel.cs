@@ -1,6 +1,4 @@
-﻿using Leagueoflegends.Data.Enums;
-
-namespace Leagueoflegends.Data.Setting.Clients
+﻿namespace Leagueoflegends.Data.Setting.Clients
 {
 	public class VoiceModel
 	{

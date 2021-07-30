@@ -3,13 +3,13 @@ using System.Windows;
 
 namespace Leagueoflegends.Settings.InGame.UI.Views
 {
-	public class HotKeyView : View
+	public class ReplayView : View
     {
         #region DefaultStyleKey
 
-        static HotKeyView()
+        static ReplayView()
         {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(HotKeyView), new FrameworkPropertyMetadata(typeof(HotKeyView)));
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(ReplayView), new FrameworkPropertyMetadata(typeof(ReplayView)));
         }
 		#endregion
 	}
