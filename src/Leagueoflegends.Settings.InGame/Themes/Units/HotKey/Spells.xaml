@@ -3,13 +3,13 @@
 					xmlns:units="clr-namespace:Leagueoflegends.Settings.InGame.UI.Units"
 					xmlns:ctrls="clr-namespace:Leagueoflegends.LayoutSupport.Controls;assembly=Leagueoflegends.LayoutSupport">
 	
-	<Style TargetType="{x:Type units:SpellHotKey}">
+	<Style TargetType="{x:Type units:Spells}">
 		<Setter Property="Grid.Row" Value="1"/>
 		<Setter Property="HorizontalAlignment" Value="Right"/>
 		<Setter Property="Margin" Value="0 20 40 0"/>
 		<Setter Property="Template">
 			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type units:SpellHotKey}">
+				<ControlTemplate TargetType="{x:Type units:Spells}">
 					<StackPanel Orientation="Horizontal">
 						<ctrls:RiotHotKey Content="{Binding Model.SpellKey1}"/>
 						<ctrls:RiotHotKey Content="{Binding Model.SpellKey2}"/>

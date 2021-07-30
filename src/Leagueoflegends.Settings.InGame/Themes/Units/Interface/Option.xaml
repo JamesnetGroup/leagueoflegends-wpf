@@ -25,10 +25,10 @@
 		<Setter Property="Content" Value="{Binding RelativeSource={RelativeSource Self}, Path=SelectedItem.ItemName}"/>
 	</Style>
 
-	<Style TargetType="{x:Type units:InterfaceOption}">
+	<Style TargetType="{x:Type units:Option}">
 		<Setter Property="Template">
 			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type units:InterfaceOption}">
+				<ControlTemplate TargetType="{x:Type units:Option}">
 					<StackPanel>
 
 						<TextBlock Style="{StaticResource TXB.BASE}" Text="스킬과 기본 공격 표시"/>

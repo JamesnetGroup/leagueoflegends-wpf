@@ -3,18 +3,20 @@
 					xmlns:units="clr-namespace:Leagueoflegends.Settings.InGame.UI.Units"
 					xmlns:ctrls="clr-namespace:Leagueoflegends.LayoutSupport.Controls;assembly=Leagueoflegends.LayoutSupport">
 	
-	<Style TargetType="{x:Type units:SkillHotKey}">
-		<Setter Property="Grid.Row" Value="1"/>
+	<Style TargetType="{x:Type units:Items}">
+		<Setter Property="Grid.Row" Value="2"/>
 		<Setter Property="HorizontalAlignment" Value="Left"/>
-		<Setter Property="Margin" Value="0 20 0 0"/>
+		<Setter Property="Margin" Value="0 10 0 0"/>
 		<Setter Property="Template">
 			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type units:SkillHotKey}">
+				<ControlTemplate TargetType="{x:Type units:Items}">
 					<StackPanel Orientation="Horizontal">
-						<ctrls:RiotHotKey Content="{Binding Model.SkillKey1}"/>
-						<ctrls:RiotHotKey Content="{Binding Model.SkillKey2}"/>
-						<ctrls:RiotHotKey Content="{Binding Model.SkillKey3}"/>
-						<ctrls:RiotHotKey Content="{Binding Model.SkillKey4}"/>
+						<ctrls:RiotHotKey Content="{Binding Model.ItemKey1}"/>
+						<ctrls:RiotHotKey Content="{Binding Model.ItemKey2}"/>
+						<ctrls:RiotHotKey Content="{Binding Model.ItemKey3}"/>
+						<ctrls:RiotHotKey Content="{Binding Model.ItemKey4}"/>
+						<ctrls:RiotHotKey Content="{Binding Model.ItemKey5}"/>
+						<ctrls:RiotHotKey Content="{Binding Model.ItemKey6}"/>
 					</StackPanel>
 				</ControlTemplate>
 			</Setter.Value>

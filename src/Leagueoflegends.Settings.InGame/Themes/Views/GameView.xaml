@@ -10,7 +10,7 @@
 					<StackPanel Margin="20 10 0 0">
 						<units:Graphic/>
 						<units:GameControl/>
-						<units:GamePlay/>
+						<units:Play/>
 					</StackPanel>
 				</ControlTemplate>
 			</Setter.Value>
