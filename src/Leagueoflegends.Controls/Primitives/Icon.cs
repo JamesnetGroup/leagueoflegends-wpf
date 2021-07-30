@@ -68,6 +68,7 @@ namespace Leagueoflegends.Controls.Primitives
 				case GeoIcon.Lightning: icon.Data = IconData.LIGHTNING.ToGeometry(); break;
 				case GeoIcon.VolumeON: icon.Data = IconData.VOLUME_ON.ToGeometry(); break;
 				case GeoIcon.VolumeOFF: icon.Data = IconData.VOLUME_OFF.ToGeometry(); break;
+				case GeoIcon.Pencil: icon.Data = IconData.PENCIL.ToGeometry(); break;
 
 				case GeoIcon.None:
 					break;

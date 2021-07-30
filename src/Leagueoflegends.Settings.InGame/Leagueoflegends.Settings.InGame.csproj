@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -84,6 +85,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Themes\Units\Replay\FindButton.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\Replay\Location.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Themes\Units\Sound\SoundControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -112,6 +121,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Themes\Views\ReplayView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Themes\Views\GameView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -130,6 +143,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Local\ViewModels\ReplayViewModel.cs" />
     <Compile Include="Local\ViewModels\GameViewModel.cs" />
     <Compile Include="Local\ViewModels\GameSoundViewModel.cs" />
     <Compile Include="Local\ViewModels\InterfaceViewModel.cs" />
@@ -159,9 +173,12 @@
     <Compile Include="UI\Units\Interface\Strength.cs" />
     <Compile Include="UI\Units\HotKey\Items.cs" />
     <Compile Include="UI\Units\HotKey\Skills.cs" />
+    <Compile Include="UI\Units\Replay\FindButton.cs" />
+    <Compile Include="UI\Units\Replay\Location.cs" />
     <Compile Include="UI\Units\Sound\SoundControl.cs" />
     <Compile Include="UI\Units\Interface\Size.cs" />
     <Compile Include="UI\Units\HotKey\Spells.cs" />
+    <Compile Include="UI\Views\ReplayView.cs" />
     <Compile Include="UI\Views\GameView.cs" />
     <Compile Include="UI\Views\GameSoundView.cs" />
     <Compile Include="UI\Views\InterfaceView.cs" />

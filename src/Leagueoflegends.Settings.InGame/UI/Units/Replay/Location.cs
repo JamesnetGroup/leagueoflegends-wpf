@@ -3,13 +3,13 @@ using System.Windows.Controls;
 
 namespace Leagueoflegends.Settings.InGame.UI.Units
 {
-	public class Strength : Control
+	public class Location : Control
     {
         #region DefaultStyleKey
 
-        static Strength()
+        static Location()
         {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(Strength), new FrameworkPropertyMetadata(typeof(Strength)));
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(Location), new FrameworkPropertyMetadata(typeof(Location)));
         }
 		#endregion
 	}

@@ -38,6 +38,7 @@
 		Thumb,
 		Lightning,
 		VolumeON,
-		VolumeOFF
+		VolumeOFF,
+		Pencil
 	}
 }

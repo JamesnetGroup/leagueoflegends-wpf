@@ -17,9 +17,12 @@
 		<ResourceDictionary Source="/Leagueoflegends.Settings.InGame;component/Themes/Units/Game/Graphic.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Settings.InGame;component/Themes/Units/Game/GameControl.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Settings.InGame;component/Themes/Units/Game/Play.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Settings.InGame;component/Themes/Units/Replay/FindButton.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Settings.InGame;component/Themes/Units/Replay/Location.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Settings.InGame;component/Themes/Views/HotKeyView.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Settings.InGame;component/Themes/Views/GameSoundView.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Settings.InGame;component/Themes/Views/InterfaceView.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Settings.InGame;component/Themes/Views/GameView.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Settings.InGame;component/Themes/Views/ReplayView.xaml"/>
 	</ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
