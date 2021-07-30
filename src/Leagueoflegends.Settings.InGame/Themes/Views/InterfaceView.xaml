@@ -8,10 +8,10 @@
 				<ControlTemplate TargetType="{x:Type views:InterfaceView}">
 					<Grid Margin="20 10 0 5">
 						<StackPanel>
-							<units:InterfaceSize/>
+							<units:Size/>
 							<units:Strength/>
 							<units:Notification/>
-							<units:InterfaceOption/>
+							<units:Option/>
 							<units:Emotion/>
 							<units:Eternals/>
 							<units:Messages/>

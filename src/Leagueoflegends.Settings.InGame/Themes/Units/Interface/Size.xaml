@@ -58,10 +58,10 @@
 		<Setter Property="Content" Value="{Binding RelativeSource={RelativeSource Self}, Path=SelectedItem.ItemName}"/>
 	</Style>
 
-	<Style TargetType="{x:Type units:InterfaceSize}">
+	<Style TargetType="{x:Type units:Size}">
 		<Setter Property="Template">
 			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type units:InterfaceSize}">
+				<ControlTemplate TargetType="{x:Type units:Size}">
 					<StackPanel>
 						<TextBlock Style="{StaticResource TXB.TITLE}"/>
 						<TextBlock Style="{StaticResource TXB.SIZE}"/>

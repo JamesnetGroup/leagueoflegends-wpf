@@ -11,10 +11,10 @@
 		<Setter Property="Margin" Value="0 20 0 0"/>
 	</Style>
 	
-	<Style TargetType="{x:Type units:GamePlay}">
+	<Style TargetType="{x:Type units:Play}">
 		<Setter Property="Template">
 			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type units:GamePlay}">
+				<ControlTemplate TargetType="{x:Type units:Play}">
 					<StackPanel>
 						<TextBlock Style="{StaticResource TXB.PLAY}"/>
 						<UniformGrid Rows="2" Columns="2">
