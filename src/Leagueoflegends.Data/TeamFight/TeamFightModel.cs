@@ -1,7 +1,7 @@
 ﻿namespace Leagueoflegends.Data.TeamFight
 {
-	public class TeamFightModel
-	{
+    public class TeamFightModel
+    {
         public int Seq { get; set; }
         public string Name { get; set; }
         public int Level { get; set; }

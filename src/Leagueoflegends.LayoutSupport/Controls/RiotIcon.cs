@@ -3,7 +3,7 @@ using System.Windows;
 
 namespace Leagueoflegends.LayoutSupport.Controls
 {
-	public class RiotIcon : Icon
+    public class RiotIcon : Icon
     {
         #region DefaultStyleKey
 
@@ -11,6 +11,6 @@ namespace Leagueoflegends.LayoutSupport.Controls
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(RiotIcon), new FrameworkPropertyMetadata(typeof(RiotIcon)));
         }
-		#endregion
-	}
+        #endregion
+    }
 }

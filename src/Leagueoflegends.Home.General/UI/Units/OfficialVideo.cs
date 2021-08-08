@@ -3,7 +3,7 @@ using System.Windows.Controls;
 
 namespace Leagueoflegends.Home.General.UI.Units
 {
-	public class OfficialVideo : Control
+    public class OfficialVideo : Control
     {
         static OfficialVideo()
         {

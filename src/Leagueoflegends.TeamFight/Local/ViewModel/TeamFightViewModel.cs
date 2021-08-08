@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Leagueoflegends.TeamFight.Local.ViewModel
 {
-	public class TeamFightViewModel : ObservableObject
+    public class TeamFightViewModel : ObservableObject
     {
         #region TeamFightItem
 

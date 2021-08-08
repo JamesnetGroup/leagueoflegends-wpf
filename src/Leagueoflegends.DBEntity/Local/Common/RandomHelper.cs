@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Leagueoflegends.DBEntity.Common
 {
-	internal class RandomHelper
+    internal class RandomHelper
     {
         [ThreadStatic]
         private static Random local = new();
@@ -22,12 +22,12 @@ namespace Leagueoflegends.DBEntity.Common
             }
         }
 
-		internal static int Next(int v1, int v2)
-		{
+        internal static int Next(int v1, int v2)
+        {
             lock (local)
             {
-                return random.Next(v1, v2);  
+                return random.Next(v1, v2);
             }
-		}
-	}
+        }
+    }
 }

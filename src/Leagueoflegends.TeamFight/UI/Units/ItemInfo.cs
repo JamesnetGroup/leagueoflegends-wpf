@@ -3,7 +3,7 @@ using System.Windows.Controls;
 
 namespace Leagueoflegends.TeamFight.UI.Units
 {
-	public class ItemInfo : Control
+    public class ItemInfo : Control
     {
         static ItemInfo()
         {

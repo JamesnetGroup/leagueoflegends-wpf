@@ -3,7 +3,7 @@ using System.Windows.Controls;
 
 namespace Leagueoflegends.Home.General.UI.Units
 {
-	public class Rotation : Control
+    public class Rotation : Control
     {
         static Rotation()
         {

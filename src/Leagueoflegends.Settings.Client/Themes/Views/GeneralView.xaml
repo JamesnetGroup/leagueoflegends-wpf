@@ -5,7 +5,8 @@
 	xmlns:ctrls="clr-namespace:Leagueoflegends.LayoutSupport.Controls;assembly=Leagueoflegends.LayoutSupport">
 
 	<Style TargetType="{x:Type Button}" x:Key="BTN.DETAIL">
-		<Setter Property="Content" Value="자세히 보기 ↗"/>
+        <Setter Property="Command" Value="{Binding LinkCommand}"/>
+        <Setter Property="Content" Value="자세히 보기 ↗"/>
 		<Setter Property="Foreground" Value="#0596AA"/>
 		<Setter Property="Margin" Value="0 10 0 15"/>
 		<Setter Property="Template">

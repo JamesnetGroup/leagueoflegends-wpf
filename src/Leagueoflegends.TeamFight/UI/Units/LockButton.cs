@@ -3,7 +3,7 @@ using System.Windows.Controls;
 
 namespace Leagueoflegends.TeamFight.UI.Units
 {
-	public class LockButton : Button
+    public class LockButton : Button
     {
         static LockButton()
         {

@@ -3,7 +3,7 @@ using System.Windows;
 
 namespace Leagueoflegends.Settings.InGame.UI.Views
 {
-	public class GameSoundView : View
+    public class GameSoundView : View
     {
         #region DefaultStyleKey
 

@@ -3,7 +3,7 @@ using System.Windows.Controls;
 
 namespace Leagueoflegends.Settings.Client.UI.Units
 {
-	public class InputStatus : Control
+    public class InputStatus : Control
     {
         #region DefaultStyleKey
 
@@ -11,6 +11,6 @@ namespace Leagueoflegends.Settings.Client.UI.Units
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(InputStatus), new FrameworkPropertyMetadata(typeof(InputStatus)));
         }
-		#endregion
-	}
+        #endregion
+    }
 }

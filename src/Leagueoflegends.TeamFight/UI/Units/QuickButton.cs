@@ -3,7 +3,7 @@ using System.Windows.Controls;
 
 namespace Leagueoflegends.TeamFight.UI.Units
 {
-	public class QuickButton : Control
+    public class QuickButton : Control
     {
         static QuickButton()
         {

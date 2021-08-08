@@ -3,7 +3,7 @@ using System.Windows;
 
 namespace Leagueoflegends.TeamFight.UI.Views
 {
-	public class TeamFightView : View
+    public class TeamFightView : View
     {
         static TeamFightView()
         {

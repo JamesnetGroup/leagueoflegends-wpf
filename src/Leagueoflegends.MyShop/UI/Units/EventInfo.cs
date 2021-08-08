@@ -3,7 +3,7 @@ using System.Windows.Controls;
 
 namespace Leagueoflegends.MyShop.UI.Units
 {
-	public class EventInfo : Control
+    public class EventInfo : Control
     {
         static EventInfo()
         {

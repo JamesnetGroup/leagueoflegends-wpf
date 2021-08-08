@@ -5,80 +5,80 @@ using System.Linq;
 
 namespace Leagueoflegends.Friends.Local.Collection
 {
-	public class FriendsCollection 
-	{
-		#region RequestList
+    public class FriendsCollection
+    {
+        #region RequestList
 
-		public ObservableCollection<RequestUsers> RequestList { get; set; }
-		#endregion
+        public ObservableCollection<RequestUsers> RequestList { get; set; }
+        #endregion
 
-		#region RecentList
+        #region RecentList
 
-		public ObservableCollection<RequestUsers> RecentList { get; set; }
-		#endregion
+        public ObservableCollection<RequestUsers> RecentList { get; set; }
+        #endregion
 
-		#region Constructor
+        #region Constructor
 
-		public FriendsCollection()
-		{ 
-		
-		}
-		#endregion
+        public FriendsCollection()
+        {
 
-		// Internal..
+        }
+        #endregion
 
-		#region AddRange 
+        // Internal..
 
-		internal void AddRange(List<RequestUsers> users)
-		{
-			RequestList = new(users);
-			RequestList = new(users.Where(x => x.IsSent));
-			RecentList = new(users.Where(x => x.IsSent == false));
-		}
-		#endregion
+        #region AddRange 
 
-		#region CancelRequest
+        internal void AddRange(List<RequestUsers> users)
+        {
+            RequestList = new(users);
+            RequestList = new(users.Where(x => x.IsSent));
+            RecentList = new(users.Where(x => x.IsSent == false));
+        }
+        #endregion
 
-		internal void CancelRequest(RequestUsers user)
-		{
-			RemoveRequestList(user);
-		}
-		#endregion
+        #region CancelRequest
 
-		#region SendRequest
+        internal void CancelRequest(RequestUsers user)
+        {
+            RemoveRequestList(user);
+        }
+        #endregion
 
-		internal void SendRequest(RequestUsers user)
-		{
-			RemoveRecentList(user);
-			AddRequestList(user);
-		}
-		#endregion
+        #region SendRequest
 
-		// Private..
+        internal void SendRequest(RequestUsers user)
+        {
+            RemoveRecentList(user);
+            AddRequestList(user);
+        }
+        #endregion
 
-		#region AddRequestList
+        // Private..
 
-		private void AddRequestList(RequestUsers user)
-		{
-			user.IsSent = true;
-			RequestList.Add(user);
-		}
-		#endregion
+        #region AddRequestList
 
-		#region RemoveRecentList
+        private void AddRequestList(RequestUsers user)
+        {
+            user.IsSent = true;
+            RequestList.Add(user);
+        }
+        #endregion
 
-		private void RemoveRecentList(RequestUsers user)
-		{
-			RecentList.Remove(user);
-		}
-		#endregion
+        #region RemoveRecentList
 
-		#region RemoveRequestList
+        private void RemoveRecentList(RequestUsers user)
+        {
+            RecentList.Remove(user);
+        }
+        #endregion
 
-		private void RemoveRequestList(RequestUsers user)
-		{
-			RequestList.Remove(user);
-		}
-		#endregion
-	}
+        #region RemoveRequestList
+
+        private void RemoveRequestList(RequestUsers user)
+        {
+            RequestList.Remove(user);
+        }
+        #endregion
+    }
 }

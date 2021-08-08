@@ -3,7 +3,7 @@ using System.Windows.Controls;
 
 namespace Leagueoflegends.Settings.InGame.UI.Units
 {
-	public class SoundControl : Control
+    public class SoundControl : Control
     {
         #region DefaultStyleKey
 
@@ -11,6 +11,6 @@ namespace Leagueoflegends.Settings.InGame.UI.Units
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(SoundControl), new FrameworkPropertyMetadata(typeof(SoundControl)));
         }
-		#endregion
-	}
+        #endregion
+    }
 }

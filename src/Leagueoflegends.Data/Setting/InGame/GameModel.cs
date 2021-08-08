@@ -9,7 +9,7 @@
     }
 
     public class GameModel
-	{
+    {
         public bool DX9LegacyMode { get; set; } = true;
         public bool SoftwareMouse { get; set; } = true;
         public int MouseMoveSpeed { get; set; } = 100;
@@ -22,7 +22,7 @@
         public GamePlay GamePlay { get; set; } = new GamePlay();
 
         public GameModel()
-		{
-		}
-	}
+        {
+        }
+    }
 }

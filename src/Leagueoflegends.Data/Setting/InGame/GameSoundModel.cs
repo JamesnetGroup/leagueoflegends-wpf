@@ -1,7 +1,7 @@
 ﻿namespace Leagueoflegends.Data.Setting.InGame
 {
-	public class GameSoundModel
-	{
+    public class GameSoundModel
+    {
         public int MasterVolume { get; set; } = 100;
         public int MusicVolume { get; set; } = 80;
         public int AnnounceVolume { get; set; } = 80;
@@ -20,7 +20,7 @@
         public bool MuteAllSound { get; set; } = false;
 
         public GameSoundModel()
-		{
-		}
-	}
+        {
+        }
+    }
 }

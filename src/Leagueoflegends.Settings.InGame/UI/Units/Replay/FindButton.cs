@@ -4,7 +4,7 @@ using System.Windows.Controls;
 
 namespace Leagueoflegends.Settings.InGame.UI.Units
 {
-	public class FindButton : Control
+    public class FindButton : Control
     {
         #region DefaultStyleKey
 
@@ -12,16 +12,16 @@ namespace Leagueoflegends.Settings.InGame.UI.Units
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(FindButton), new FrameworkPropertyMetadata(typeof(FindButton)));
         }
-		#endregion
+        #endregion
 
-		#region DependencyProperty
+        #region DependencyProperty
 
-		public static readonly DependencyProperty SavePathProperty = DependencyProperty.Register("SavePath", typeof(string), typeof(FindButton), new PropertyMetadata(""));
-		#endregion
+        public static readonly DependencyProperty SavePathProperty = DependencyProperty.Register("SavePath", typeof(string), typeof(FindButton), new PropertyMetadata(""));
+        #endregion
 
-		#region SavePath
+        #region SavePath
 
-		public string SavePath
+        public string SavePath
         {
             get { return (string)this.GetValue(SavePathProperty); }
             set { this.SetValue(SavePathProperty, value); }

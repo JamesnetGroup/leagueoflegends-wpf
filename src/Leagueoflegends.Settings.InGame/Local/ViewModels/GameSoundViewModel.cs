@@ -8,30 +8,30 @@ using System.Collections.Generic;
 
 namespace Leagueoflegends.Settings.InGame.Local.ViewModels
 {
-	public class GameSoundViewModel : ObservableObject
-	{
-		private List<UsualCodes> _musicTheme;
+    public class GameSoundViewModel : ObservableObject
+    {
+        private List<UsualCodes> _musicTheme;
 
-		public GameSoundModel Model { get; set; }
+        public GameSoundModel Model { get; set; }
 
-		#region MusicTheme
+        #region MusicTheme
 
-		public List<UsualCodes> MusicTheme
-		{
-			get => _musicTheme;
-			set { _musicTheme = value; OnPropertyChanged(); }
-		}
-		#endregion
+        public List<UsualCodes> MusicTheme
+        {
+            get => _musicTheme;
+            set { _musicTheme = value; OnPropertyChanged(); }
+        }
+        #endregion
 
-		#region Constructor
+        #region Constructor
 
-		public GameSoundViewModel()
-		{
-			MusicTheme = new GetCodeItems().Run("000002");
+        public GameSoundViewModel()
+        {
+            MusicTheme = new GetCodeItems().Run("000002");
 
-			ConfigModel config = RiotConfig.LoadConfig();
-			Model = config.Settings.GameSound;
-		}
-		#endregion
-	}
+            ConfigModel config = RiotConfig.LoadConfig();
+            Model = config.Settings.GameSound;
+        }
+        #endregion
+    }
 }

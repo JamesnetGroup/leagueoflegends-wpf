@@ -3,7 +3,7 @@ using System.Windows.Controls;
 
 namespace Leagueoflegends.LayoutSupport.Controls
 {
-	public class RiotComboBox : ComboBox
+    public class RiotComboBox : ComboBox
     {
         #region DefaultStyleKey
 
@@ -30,9 +30,9 @@ namespace Leagueoflegends.LayoutSupport.Controls
         #region GetContainerForItemOverride
 
         protected override DependencyObject GetContainerForItemOverride()
-		{
+        {
             return new RiotComboBoxItem();
-		}
-		#endregion
-	}
+        }
+        #endregion
+    }
 }

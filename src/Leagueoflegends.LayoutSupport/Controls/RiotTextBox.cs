@@ -4,7 +4,7 @@ using System.Windows.Input;
 
 namespace Leagueoflegends.LayoutSupport.Controls
 {
-	public class RiotTextBox : TextBox
+    public class RiotTextBox : TextBox
     {
         #region DefaultStyleKey
 
@@ -51,6 +51,6 @@ namespace Leagueoflegends.LayoutSupport.Controls
         {
             base.OnKeyDown(e);
         }
-		#endregion
-	}
+        #endregion
+    }
 }

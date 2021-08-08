@@ -1,7 +1,7 @@
 ﻿namespace Leagueoflegends.Data.Setting.Clients
 {
-	public class SoundModel
-	{
+    public class SoundModel
+    {
         public bool MasterVolumeOn { get; set; } = true;
         public int MasterVolume { get; set; } = 70;
         public bool EffectVolumeOn { get; set; } = true;
@@ -16,7 +16,7 @@
         public bool MusicLogin { get; set; } = true;
 
         public SoundModel()
-		{
-		}
-	}
+        {
+        }
+    }
 }

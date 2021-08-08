@@ -3,7 +3,7 @@ using System.Windows;
 
 namespace Leagueoflegends.LayoutSupport.Controls
 {
-	public class BasicTooltip : RiotTooltip
+    public class BasicTooltip : RiotTooltip
     {
         #region DefaultStyleKey
 

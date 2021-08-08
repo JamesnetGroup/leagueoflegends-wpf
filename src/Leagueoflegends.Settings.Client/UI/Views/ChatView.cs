@@ -3,7 +3,7 @@ using System.Windows;
 
 namespace Leagueoflegends.Settings.Client.UI.Views
 {
-	public class ChatView : View
+    public class ChatView : View
     {
         #region DefaultStyleKey
 
@@ -11,6 +11,6 @@ namespace Leagueoflegends.Settings.Client.UI.Views
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(ChatView), new FrameworkPropertyMetadata(typeof(ChatView)));
         }
-		#endregion
-	}
+        #endregion
+    }
 }

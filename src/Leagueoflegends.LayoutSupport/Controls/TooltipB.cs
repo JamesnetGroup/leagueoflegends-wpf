@@ -3,14 +3,14 @@ using System.Windows;
 
 namespace Leagueoflegends.LayoutSupport.Controls
 {
-	public class TooltipB : RiotTooltip
-	{
-		#region DefaultStyleKey
+    public class TooltipB : RiotTooltip
+    {
+        #region DefaultStyleKey
 
-		static TooltipB()
-		{
-			DefaultStyleKeyProperty.OverrideMetadata(typeof(TooltipB), new FrameworkPropertyMetadata(typeof(TooltipB)));
-		}
-		#endregion
-	}
+        static TooltipB()
+        {
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(TooltipB), new FrameworkPropertyMetadata(typeof(TooltipB)));
+        }
+        #endregion
+    }
 }

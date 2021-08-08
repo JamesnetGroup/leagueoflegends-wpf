@@ -3,7 +3,7 @@ using System.Windows.Controls;
 
 namespace Leagueoflegends.Settings.InGame.UI.Units
 {
-	public class Emotion : Control
+    public class Emotion : Control
     {
         #region DefaultStyleKey
 
@@ -11,6 +11,6 @@ namespace Leagueoflegends.Settings.InGame.UI.Units
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(Emotion), new FrameworkPropertyMetadata(typeof(Emotion)));
         }
-		#endregion
-	}
+        #endregion
+    }
 }

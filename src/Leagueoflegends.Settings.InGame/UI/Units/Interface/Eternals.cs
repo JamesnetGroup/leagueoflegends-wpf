@@ -3,7 +3,7 @@ using System.Windows.Controls;
 
 namespace Leagueoflegends.Settings.InGame.UI.Units
 {
-	public class Eternals : Control
+    public class Eternals : Control
     {
         #region DefaultStyleKey
 
@@ -11,6 +11,6 @@ namespace Leagueoflegends.Settings.InGame.UI.Units
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(Eternals), new FrameworkPropertyMetadata(typeof(Eternals)));
         }
-		#endregion
-	}
+        #endregion
+    }
 }

@@ -3,7 +3,7 @@ using System.Windows;
 
 namespace Leagueoflegends.Settings.InGame.UI.Views
 {
-	public class ReplayView : View
+    public class ReplayView : View
     {
         #region DefaultStyleKey
 
@@ -11,6 +11,6 @@ namespace Leagueoflegends.Settings.InGame.UI.Views
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(ReplayView), new FrameworkPropertyMetadata(typeof(ReplayView)));
         }
-		#endregion
-	}
+        #endregion
+    }
 }

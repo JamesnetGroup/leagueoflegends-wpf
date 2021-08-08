@@ -3,14 +3,14 @@ using System.Windows.Controls;
 
 namespace Leagueoflegends.Friends.UI.Units
 {
-	public class DeleteButton : Button
-	{
-		#region DefaultStyleKey
+    public class DeleteButton : Button
+    {
+        #region DefaultStyleKey
 
-		static DeleteButton()
-		{
-			DefaultStyleKeyProperty.OverrideMetadata(typeof(DeleteButton), new FrameworkPropertyMetadata(typeof(DeleteButton)));
-		}
-		#endregion
-	}
+        static DeleteButton()
+        {
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(DeleteButton), new FrameworkPropertyMetadata(typeof(DeleteButton)));
+        }
+        #endregion
+    }
 }

@@ -3,7 +3,7 @@ using System.Windows.Controls;
 
 namespace Leagueoflegends.Controls
 {
-	public class RiotTooltip : ToolTip
+    public class RiotTooltip : ToolTip
     {
         public static readonly DependencyProperty TextWrappingProperty = DependencyProperty.Register(
            "TextWrapping", typeof(TextWrapping), typeof(RiotTooltip), new PropertyMetadata(null));

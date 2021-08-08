@@ -4,7 +4,7 @@ using System.Windows.Controls;
 namespace Leagueoflegends.Converter
 {
 
-	public static class TooltipExtension
+    public static class TooltipExtension
     {
         public static Style GetTooltipContainerStyle(DependencyObject obj)
         {
