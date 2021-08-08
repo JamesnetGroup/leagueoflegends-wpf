@@ -12,6 +12,8 @@ using Leagueoflegends.Settings.Client.UI.Views;
 using Leagueoflegends.Settings.Client.Local.ViewModels;
 using Leagueoflegends.Settings.InGame.UI.Views;
 using Leagueoflegends.Settings.InGame.Local.ViewModels;
+using LeagueofLegends.Settings.About.UI.Views;
+using LeagueofLegends.Settings.About.Local.ViewModels;
 
 namespace Leagueoflegends.Settings.Local.ViewModel
 {
@@ -112,6 +114,9 @@ namespace Leagueoflegends.Settings.Local.ViewModel
                     10 => new InterfaceView().SetVM(Interface),
                     11 => new GameView().SetVM(Game),
                     12 => new ReplayView().SetVM(new ReplayViewModel()),
+
+                    // About
+                    14 => new VerificationView().SetVM(new VerificationViewModel()),
                     _ => new EmptyView()
                 };
 
