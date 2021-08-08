@@ -30,12 +30,12 @@ using System.Windows;
 
 
 [assembly: ThemeInfo(
-	ResourceDictionaryLocation.None, //테마별 리소스 사전의 위치
-									 //(페이지 또는 응용 프로그램 리소스 사진에
-									 // 리소스가 없는 경우에 사용됨)
-	ResourceDictionaryLocation.SourceAssembly //제네릭 리소스 사전의 위치
-											  //(페이지 또는 응용 프로그램 리소스 사진에
-											  // 리소스가 없는 경우에 사용됨)
+    ResourceDictionaryLocation.None, //테마별 리소스 사전의 위치
+                                     //(페이지 또는 응용 프로그램 리소스 사진에
+                                     // 리소스가 없는 경우에 사용됨)
+    ResourceDictionaryLocation.SourceAssembly //제네릭 리소스 사전의 위치
+                                              //(페이지 또는 응용 프로그램 리소스 사진에
+                                              // 리소스가 없는 경우에 사용됨)
 )]
 
 

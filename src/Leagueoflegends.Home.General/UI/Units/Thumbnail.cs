@@ -3,7 +3,7 @@ using System.Windows.Controls;
 
 namespace Leagueoflegends.Home.General.UI.Units
 {
-	public class Thumbnail : Control
+    public class Thumbnail : Control
     {
         static Thumbnail()
         {

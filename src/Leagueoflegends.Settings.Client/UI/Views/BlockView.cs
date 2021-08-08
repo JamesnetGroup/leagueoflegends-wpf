@@ -3,7 +3,7 @@ using System.Windows;
 
 namespace Leagueoflegends.Settings.Client.UI.Views
 {
-	public class BlockView : View
+    public class BlockView : View
     {
         #region ClientBlockView
 
@@ -11,6 +11,6 @@ namespace Leagueoflegends.Settings.Client.UI.Views
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(BlockView), new FrameworkPropertyMetadata(typeof(BlockView)));
         }
-		#endregion
-	}
+        #endregion
+    }
 }

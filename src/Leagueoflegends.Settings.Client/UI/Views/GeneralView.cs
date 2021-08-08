@@ -3,7 +3,7 @@ using System.Windows;
 
 namespace Leagueoflegends.Settings.Client.UI.Views
 {
-	public class GeneralView : View
+    public class GeneralView : View
     {
         #region DefaultStyleKey
 
@@ -11,6 +11,6 @@ namespace Leagueoflegends.Settings.Client.UI.Views
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(GeneralView), new FrameworkPropertyMetadata(typeof(GeneralView)));
         }
-		#endregion
-	}
+        #endregion
+    }
 }

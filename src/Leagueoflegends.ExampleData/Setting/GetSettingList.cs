@@ -3,12 +3,12 @@ using System.Collections.Generic;
 
 namespace Leagueoflegends.ExampleData.Setting
 {
-	public partial class ExamSettings
+    public partial class ExamSettings
     {
         public static List<SettingMenuModel> GetSettingList()
         {
             List<SettingMenuModel> source = new()
-			{
+            {
                 new SettingMenuModel { Seq = 0, Category = "CATEGORY", Name = "CLIENT" },
                 new SettingMenuModel { Seq = 1, Category = "CLIENT", Name = "GENERAL" },
                 new SettingMenuModel { Seq = 2, Category = "CLIENT", Name = "NOTIFICATIONS" },
@@ -17,7 +17,7 @@ namespace Leagueoflegends.ExampleData.Setting
                 new SettingMenuModel { Seq = 5, Category = "CLIENT", Name = "VOICE" },
                 new SettingMenuModel { Seq = 6, Category = "CLIENT", Name = "BLOCK LIST" },
 
-                new SettingMenuModel { Seq = 7, Category = "CATEGORY", Name = "IN-GAMES" },
+                new SettingMenuModel { Seq = 7, Category = "CATEGORY", Name = "IN-GAME" },
                 new SettingMenuModel { Seq = 8, Category = "IN-GAMES", Name = "HOTKEYS" },
                 new SettingMenuModel { Seq = 9, Category = "IN-GAMES", Name = "SOUND" },
                 new SettingMenuModel { Seq = 10, Category = "IN-GAMES", Name = "INTERFACE" },

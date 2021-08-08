@@ -2,7 +2,7 @@
 
 namespace Leagueoflegends.Controls.Utils
 {
-	public static class GeometryExtend
+    public static class GeometryExtend
     {
         #region ToGeometry
 

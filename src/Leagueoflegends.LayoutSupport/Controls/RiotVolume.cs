@@ -3,7 +3,7 @@ using System.Windows.Controls;
 
 namespace Leagueoflegends.LayoutSupport.Controls
 {
-	public class RiotVolume : Control
+    public class RiotVolume : Control
     {
         #region DefaultStyleKey
 
@@ -19,11 +19,11 @@ namespace Leagueoflegends.LayoutSupport.Controls
         public static readonly DependencyProperty HeaderProperty = DependencyProperty.Register("Header", typeof(string), typeof(RiotVolume), new PropertyMetadata(""));
         public static readonly DependencyProperty IsMuteProperty = DependencyProperty.Register("IsMute", typeof(bool), typeof(RiotVolume), new PropertyMetadata(false));
         public static readonly DependencyProperty IsHeaderVisibleProperty = DependencyProperty.Register("IsHeaderVisible", typeof(bool), typeof(RiotVolume), new PropertyMetadata(false));
-		#endregion
+        #endregion
 
-		#region Value
+        #region Value
 
-		public double Value
+        public double Value
         {
             get { return (double)this.GetValue(ValueProperty); }
             set { this.SetValue(ValueProperty, value); }
@@ -56,5 +56,5 @@ namespace Leagueoflegends.LayoutSupport.Controls
             set { this.SetValue(IsHeaderVisibleProperty, value); }
         }
         #endregion
-	}
+    }
 }

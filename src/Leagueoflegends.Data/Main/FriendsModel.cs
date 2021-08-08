@@ -2,8 +2,8 @@
 
 namespace Leagueoflegends.Data.Main
 {
-	public class FriendsModel
-	{
+    public class FriendsModel
+    {
         public string Name { get; set; }
         public bool IsExpanded { get; set; }
         public bool IsUser { get; set; }
@@ -11,10 +11,10 @@ namespace Leagueoflegends.Data.Main
         public int Status { get; set; }
         public string Avatar { get; set; }
         public List<FriendsModel> Children { get; set; }
-        
+
         public FriendsModel()
-        { 
-            
+        {
+
         }
 
         public FriendsModel(string header)
@@ -28,7 +28,7 @@ namespace Leagueoflegends.Data.Main
         public FriendsModel(int online, int status, int avatar, string header)
         {
             IsUser = true;
-			Status = status;
+            Status = status;
             Connect = online;
             Avatar = $"/Leagueoflegends.Resources;component/Images/Square/{avatar}.png";
             Name = header;

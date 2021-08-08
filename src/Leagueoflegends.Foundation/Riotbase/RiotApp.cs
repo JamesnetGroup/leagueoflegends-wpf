@@ -4,8 +4,8 @@ using System.Windows;
 
 namespace Leagueoflegends.Foundation.Riotbase
 {
-	public class RiotApp : Application
-	{
+    public class RiotApp : Application
+    {
         public static string REPLAY_PATH;
         public static string HIGHLIGHT_PATH;
 

@@ -3,7 +3,7 @@ using System.Windows.Controls;
 
 namespace Leagueoflegends.TeamFight.UI.Units
 {
-	public class UpgradeButton : Button
+    public class UpgradeButton : Button
     {
         static UpgradeButton()
         {

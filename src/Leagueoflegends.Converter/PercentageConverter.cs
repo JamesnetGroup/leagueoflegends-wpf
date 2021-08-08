@@ -5,7 +5,7 @@ using System.Windows.Markup;
 
 namespace Leagueoflegends.Converter
 {
-	public class PercentageConverter : MarkupExtension, IValueConverter
+    public class PercentageConverter : MarkupExtension, IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
@@ -17,9 +17,9 @@ namespace Leagueoflegends.Converter
             throw new NotImplementedException();
         }
 
-		public override object ProvideValue(IServiceProvider serviceProvider)
+        public override object ProvideValue(IServiceProvider serviceProvider)
         {
             return this;
         }
-	}
+    }
 }

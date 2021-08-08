@@ -1,8 +1,8 @@
 ﻿namespace Leagueoflegends.Data.Codes
 {
-	public abstract class CodeModel
-	{
-		public string Name { get; set; }
-		public string Seq { get; set; }
-	}
+    public abstract class CodeModel
+    {
+        public string Name { get; set; }
+        public string Seq { get; set; }
+    }
 }

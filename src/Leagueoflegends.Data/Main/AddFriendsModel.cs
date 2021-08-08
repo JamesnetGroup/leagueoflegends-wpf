@@ -2,7 +2,7 @@
 
 namespace Leagueoflegends.Data.Main
 {
-	public class AddUserModel : FriendsModel
+    public class AddUserModel : FriendsModel
     {
         public bool IsSent { get; set; }
         public string NickName { get; set; }
@@ -10,7 +10,7 @@ namespace Leagueoflegends.Data.Main
         public string Nation { get; set; }
         public int Level { get; set; }
 
-        public AddUserModel(string name) 
+        public AddUserModel(string name)
         {
             Name = name;
             IsSent = RandomHelper.Random.Next(0, 2) == 0;
@@ -19,8 +19,8 @@ namespace Leagueoflegends.Data.Main
             Avatar = $"/Leagueoflegends.Resources;component/Images/Square/{RandomHelper.Random.Next(0, 42)}.png";
         }
         public AddUserModel()
-        { 
-        
+        {
+
         }
     }
 }

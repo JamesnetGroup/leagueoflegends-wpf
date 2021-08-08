@@ -5,17 +5,17 @@ using Leagueoflegends.Foundation.Riotbase;
 
 namespace Leagueoflegends.Settings.InGame.Local.ViewModels
 {
-	public class HotKeyViewModel : ObservableObject
-	{
-		public HotKeyModel Model { get; set; }
+    public class HotKeyViewModel : ObservableObject
+    {
+        public HotKeyModel Model { get; set; }
 
-		#region Constructor
-		
-		public HotKeyViewModel()
-		{
-			ConfigModel config = RiotConfig.LoadConfig();
-			Model = config.Settings.HotKey;
-		}
-		#endregion
-	}
+        #region Constructor
+
+        public HotKeyViewModel()
+        {
+            ConfigModel config = RiotConfig.LoadConfig();
+            Model = config.Settings.HotKey;
+        }
+        #endregion
+    }
 }

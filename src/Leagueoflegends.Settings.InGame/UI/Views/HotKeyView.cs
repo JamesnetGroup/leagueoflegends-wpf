@@ -3,7 +3,7 @@ using System.Windows;
 
 namespace Leagueoflegends.Settings.InGame.UI.Views
 {
-	public class HotKeyView : View
+    public class HotKeyView : View
     {
         #region DefaultStyleKey
 
@@ -11,6 +11,6 @@ namespace Leagueoflegends.Settings.InGame.UI.Views
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(HotKeyView), new FrameworkPropertyMetadata(typeof(HotKeyView)));
         }
-		#endregion
-	}
+        #endregion
+    }
 }

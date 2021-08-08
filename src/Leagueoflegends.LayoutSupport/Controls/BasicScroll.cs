@@ -3,7 +3,7 @@ using System.Windows.Controls;
 
 namespace Leagueoflegends.LayoutSupport.Controls
 {
-	public class BasicScroll : ScrollViewer
+    public class BasicScroll : ScrollViewer
     {
         #region DefaultStyleKey
 

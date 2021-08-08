@@ -3,7 +3,7 @@ using System.Windows.Controls;
 
 namespace Leagueoflegends.Settings.InGame.UI.Units
 {
-	public class Size : Control
+    public class Size : Control
     {
         #region DefaultStyleKey
 
@@ -11,6 +11,6 @@ namespace Leagueoflegends.Settings.InGame.UI.Units
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(Size), new FrameworkPropertyMetadata(typeof(Size)));
         }
-		#endregion
-	}
+        #endregion
+    }
 }

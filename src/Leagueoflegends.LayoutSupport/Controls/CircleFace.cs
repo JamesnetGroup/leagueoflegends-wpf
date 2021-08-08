@@ -4,28 +4,28 @@ using System.Windows.Media;
 
 namespace Leagueoflegends.LayoutSupport.Controls
 {
-	public class CircleFace : Control
-	{
-		#region DefaultStyleKey
+    public class CircleFace : Control
+    {
+        #region DefaultStyleKey
 
-		static CircleFace()
-		{
-			DefaultStyleKeyProperty.OverrideMetadata(typeof(CircleFace), new FrameworkPropertyMetadata(typeof(CircleFace)));
-		}
-		#endregion
+        static CircleFace()
+        {
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(CircleFace), new FrameworkPropertyMetadata(typeof(CircleFace)));
+        }
+        #endregion
 
-		#region DependencyProperty
+        #region DependencyProperty
 
-		public static readonly DependencyProperty SourceProperty = DependencyProperty.Register("Source", typeof(ImageSource), typeof(CircleFace), new PropertyMetadata(null));
-		#endregion
+        public static readonly DependencyProperty SourceProperty = DependencyProperty.Register("Source", typeof(ImageSource), typeof(CircleFace), new PropertyMetadata(null));
+        #endregion
 
-		#region Source
+        #region Source
 
-		public ImageSource Source
-		{
-			get { return (ImageSource)this.GetValue(SourceProperty); }
-			set { this.SetValue(SourceProperty, value); }
-		}
-		#endregion
-	}
+        public ImageSource Source
+        {
+            get { return (ImageSource)this.GetValue(SourceProperty); }
+            set { this.SetValue(SourceProperty, value); }
+        }
+        #endregion
+    }
 }

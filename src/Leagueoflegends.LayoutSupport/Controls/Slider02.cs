@@ -2,7 +2,7 @@
 
 namespace Leagueoflegends.LayoutSupport.Controls
 {
-	public class Slider02 : RiotSlider
+    public class Slider02 : RiotSlider
     {
         #region DefaultStyleKey
 
@@ -10,6 +10,6 @@ namespace Leagueoflegends.LayoutSupport.Controls
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(Slider02), new FrameworkPropertyMetadata(typeof(Slider02)));
         }
-		#endregion
-	}
+        #endregion
+    }
 }

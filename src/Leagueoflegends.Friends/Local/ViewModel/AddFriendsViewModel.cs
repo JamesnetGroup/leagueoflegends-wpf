@@ -9,11 +9,11 @@ using System.Windows.Input;
 
 namespace Leagueoflegends.Friends.Local.ViewModel
 {
-	public class AddFriendsViewModel : ObservableObject
-	{
-		#region Variables
+    public class AddFriendsViewModel : ObservableObject
+    {
+        #region Variables
 
-		private readonly Action<IRiotUI> ViewClosed;
+        private readonly Action<IRiotUI> ViewClosed;
         private string _keyword;
         #endregion
 
@@ -72,5 +72,5 @@ namespace Leagueoflegends.Friends.Local.ViewModel
             Keyword = "";
         }
         #endregion
-	}
+    }
 }

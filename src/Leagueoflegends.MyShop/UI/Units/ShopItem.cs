@@ -3,7 +3,7 @@ using System.Windows.Controls;
 
 namespace Leagueoflegends.MyShop.UI.Units
 {
-	public class ShopItem : Button
+    public class ShopItem : Button
     {
         static ShopItem()
         {

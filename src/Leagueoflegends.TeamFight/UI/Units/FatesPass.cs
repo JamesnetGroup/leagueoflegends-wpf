@@ -3,7 +3,7 @@ using System.Windows.Controls;
 
 namespace Leagueoflegends.TeamFight.UI.Units
 {
-	public class FatesPass : Control
+    public class FatesPass : Control
     {
         static FatesPass()
         {

@@ -3,7 +3,7 @@ using System.Windows.Controls;
 
 namespace Leagueoflegends.Settings.InGame.UI.Units
 {
-	public class Graphic : Control
+    public class Graphic : Control
     {
         #region DefaultStyleKey
 

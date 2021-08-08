@@ -2,7 +2,7 @@
 
 namespace Leagueoflegends.Data.Main
 {
-	public class UserModel
+    public class UserModel
     {
         public int Seq { get; set; }
         public string Name { get; set; }

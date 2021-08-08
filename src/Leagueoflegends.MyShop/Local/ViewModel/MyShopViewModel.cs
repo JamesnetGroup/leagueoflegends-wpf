@@ -2,14 +2,14 @@
 
 namespace Leagueoflegends.MyShop.Local.ViewModel
 {
-	public class MyShopViewModel : ObservableObject
-	{
-		#region Constructor
-		
-		public MyShopViewModel()
-		{
+    public class MyShopViewModel : ObservableObject
+    {
+        #region Constructor
 
-		}
-		#endregion
-	}
+        public MyShopViewModel()
+        {
+
+        }
+        #endregion
+    }
 }

@@ -36,7 +36,8 @@
 		<Setter Property="Foreground" Value="#9B9688"/>
 		<Setter Property="HorizontalAlignment" Value="Left"/>
 		<Setter Property="TextWrapping" Value="WrapWithOverflow"/>
-		<Setter Property="Width" Value="{Binding RelativeSource={RelativeSource AncestorType=Grid}, Path=ActualWidth, 
+        <Setter Property="Margin" Value="0 7 0 0"/>
+        <Setter Property="Width" Value="{Binding RelativeSource={RelativeSource AncestorType=Grid}, Path=ActualWidth, 
 												 Converter={cnvts:WidthPercentageConverter}, ConverterParameter=0.9}"/>
 		<Setter Property="Text">
 			<Setter.Value>

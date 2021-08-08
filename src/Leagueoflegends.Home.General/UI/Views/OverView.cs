@@ -3,7 +3,7 @@ using System.Windows;
 
 namespace Leagueoflegends.Home.General.UI.Views
 {
-	public class OverView : View
+    public class OverView : View
     {
         static OverView()
         {

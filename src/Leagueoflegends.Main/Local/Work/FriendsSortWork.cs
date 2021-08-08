@@ -5,7 +5,7 @@ using System.Linq;
 
 namespace Leagueoflegends.Main.Local.Work
 {
-	public class FriendsSortWork : ObservableObject
+    public class FriendsSortWork : ObservableObject
     {
         #region SortTypes
 
@@ -36,12 +36,12 @@ namespace Leagueoflegends.Main.Local.Work
         private List<OptionModel> GetSortTypes()
         {
             List<OptionModel> source = new()
-			{
+            {
                 new OptionModel { DisplayName = "Sort Alphabetically" },
                 new OptionModel { DisplayName = "Sort by Status" }
             };
             return source;
         }
-		#endregion
-	}
+        #endregion
+    }
 }

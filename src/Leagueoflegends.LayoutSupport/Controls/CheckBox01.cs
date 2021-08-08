@@ -3,7 +3,7 @@ using System.Windows;
 
 namespace Leagueoflegends.LayoutSupport.Controls
 {
-	public class CheckBox01 : RiotCheckBox
+    public class CheckBox01 : RiotCheckBox
     {
         #region DefaultStyleKey
 
@@ -11,6 +11,6 @@ namespace Leagueoflegends.LayoutSupport.Controls
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(CheckBox01), new FrameworkPropertyMetadata(typeof(CheckBox01)));
         }
-		#endregion
-	}
+        #endregion
+    }
 }

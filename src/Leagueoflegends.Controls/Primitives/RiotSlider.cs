@@ -2,7 +2,7 @@
 
 namespace Leagueoflegends.LayoutSupport.Controls
 {
-	public class RiotSlider : Slider
+    public class RiotSlider : Slider
     {
-	}
+    }
 }

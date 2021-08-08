@@ -5,12 +5,12 @@ namespace Leagueoflegends.Main.UI.Units
 {
     public class WindowBar : Control
     {
-		#region DefaultStyleKey
+        #region DefaultStyleKey
 
-		static WindowBar()
+        static WindowBar()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(WindowBar), new FrameworkPropertyMetadata(typeof(WindowBar)));
         }
-		#endregion
+        #endregion
     }
 }

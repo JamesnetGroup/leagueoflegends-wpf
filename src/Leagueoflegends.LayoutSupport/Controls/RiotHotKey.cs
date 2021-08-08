@@ -3,7 +3,7 @@ using System.Windows.Controls;
 
 namespace Leagueoflegends.LayoutSupport.Controls
 {
-	public class RiotHotKey : Button
+    public class RiotHotKey : Button
     {
         #region DefaultStyleKey
 
@@ -11,6 +11,6 @@ namespace Leagueoflegends.LayoutSupport.Controls
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(RiotHotKey), new FrameworkPropertyMetadata(typeof(RiotHotKey)));
         }
-		#endregion
-	}
+        #endregion
+    }
 }

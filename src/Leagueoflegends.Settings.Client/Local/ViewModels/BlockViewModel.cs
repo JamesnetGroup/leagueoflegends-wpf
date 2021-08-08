@@ -4,8 +4,8 @@ using System.Windows.Input;
 
 namespace Leagueoflegends.Settings.Client.Local.ViewModels
 {
-	public class BlockViewModel : ObservableObject
-	{
+    public class BlockViewModel : ObservableObject
+    {
         #region ICommand
 
         public ICommand KeywordCommand { get; private set; }

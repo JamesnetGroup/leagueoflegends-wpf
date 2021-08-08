@@ -3,7 +3,7 @@ using System.Windows;
 
 namespace Leagueoflegends.MyShop.UI.Views
 {
-	public class MyShopView : View
+    public class MyShopView : View
     {
         static MyShopView()
         {
