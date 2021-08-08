@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2F65A578-13D0-43B9-AFE1-1695F6C9DC5E}</ProjectGuid>
+    <ProjectGuid>{33BB44BE-871A-4DE4-9CC8-92243CE877A0}</ProjectGuid>
     <OutputType>library</OutputType>
-    <RootNamespace>Leagueoflegends.Settings</RootNamespace>
-    <AssemblyName>Leagueoflegends.Settings</AssemblyName>
+    <RootNamespace>LeagueofLegends.Settings.About</RootNamespace>
+    <AssemblyName>LeagueofLegends.Settings.About</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <Deterministic>true</Deterministic>
-    <LangVersion>9.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -49,38 +48,10 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="UI\Units\CurrentContent.cs" />
-    <Compile Include="UI\Units\MenuList.cs" />
-    <Compile Include="UI\Units\CurrentMenu.cs" />
-    <Compile Include="UI\Views\EmptyView.cs" />
-    <Page Include="Themes\Generic.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Compile Include="Local\ViewModel\SettingViewModel.cs" />
-    <Compile Include="UI\Views\SettingView.cs">
+    <Compile Include="Local\ViewModels\VerificationViewModel.cs" />
+    <Compile Include="UI\Views\VerificationView.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="Themes\Units\CurrentContent.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Units\MenuList.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Units\CurrentMenu.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Themes\Views\EmptyView.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Views\Setting.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -106,6 +77,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Themes\Units\" />
+    <Folder Include="UI\Units\" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\Leagueoflegends.Controls\Leagueoflegends.Controls.csproj">
       <Project>{f6309cba-5a01-4e4e-ae66-02841968c02d}</Project>
       <Name>Leagueoflegends.Controls</Name>
@@ -118,8 +93,12 @@
       <Project>{3e01f5fb-69ad-415d-8114-5d7e4d3cbb74}</Project>
       <Name>Leagueoflegends.Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Leagueoflegends.DBEntity\Leagueoflegends.DBEntity.csproj">
+      <Project>{2cd75fcf-667f-42ef-bed1-338bf4f1124c}</Project>
+      <Name>Leagueoflegends.DBEntity</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Leagueoflegends.ExampleData\Leagueoflegends.ExampleData.csproj">
-      <Project>{AD7CAAEF-1792-4CC7-A0B3-56F67EA44B03}</Project>
+      <Project>{ad7caaef-1792-4cc7-a0b3-56f67ea44b03}</Project>
       <Name>Leagueoflegends.ExampleData</Name>
     </ProjectReference>
     <ProjectReference Include="..\Leagueoflegends.Foundation\Leagueoflegends.Foundation.csproj">
@@ -134,18 +113,16 @@
       <Project>{1afee701-95ed-4977-95b3-249a9821de5b}</Project>
       <Name>Leagueoflegends.Resources</Name>
     </ProjectReference>
-    <ProjectReference Include="..\LeagueofLegends.Settings.About\LeagueofLegends.Settings.About.csproj">
-      <Project>{33BB44BE-871A-4DE4-9CC8-92243CE877A0}</Project>
-      <Name>LeagueofLegends.Settings.About</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Leagueoflegends.Settings.Client\Leagueoflegends.Settings.Client.csproj">
-      <Project>{86EEF60E-51E1-4B6E-8AC1-718A87C0AE0D}</Project>
-      <Name>Leagueoflegends.Settings.Client</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Leagueoflegends.Settings.InGame\Leagueoflegends.Settings.InGame.csproj">
-      <Project>{B5BFC241-2BD8-40FA-80CE-DCE99B2F7B88}</Project>
-      <Name>Leagueoflegends.Settings.InGame</Name>
-    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Themes\Generic.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Views\Verification.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
