@@ -41,17 +41,20 @@ namespace Leagueoflegends.Settings.Client.Local.ViewModels
 
             LinkCommand = new RelayCommand<object>(SearchLink);
         }
+        #endregion
+
+        #region SearchLink
 
         private void SearchLink(object obj)
         {
             string Uri = "https://na.leagueoflegends.com/en-us/event/league-of-legends-code-of-conduct/";
-            
+
             var process = new Process()
             {
                 StartInfo = new ProcessStartInfo(Uri)
             };
             process.Start();
         }
-        #endregion
-    }
+		#endregion
+	}
 }
