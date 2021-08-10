@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{F94791F2-2CD1-4354-817E-609AEF901794}</ProjectGuid>
+    <ProjectGuid>{D915320E-9D3E-46C4-A6BE-28413775CD10}</ProjectGuid>
     <OutputType>library</OutputType>
-    <RootNamespace>Leagueoflegends.Main</RootNamespace>
-    <AssemblyName>Leagueoflegends.Main</AssemblyName>
+    <RootNamespace>Leagueoflegends.Home</RootNamespace>
+    <AssemblyName>Leagueoflegends.Home</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
     <Deterministic>true</Deterministic>
-    <LangVersion>9.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -53,74 +52,31 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Units\FriendsExpander.xaml">
+    <Compile Include="Local\ViewModels\OverviewModel.cs" />
+    <Compile Include="UI\Units\OfficialVideo.cs" />
+    <Compile Include="UI\Units\Rotation.cs" />
+    <Compile Include="UI\Units\Thumbnail.cs" />
+    <Compile Include="UI\Views\Overview.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Themes\Units\OfficialVideo.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Units\FriendsListItem.xaml">
+    <Page Include="Themes\Units\Rotation.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Units\FriendsSortPopup.xaml">
+    <Page Include="Themes\Units\Thumbnail.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Units\ChatTool.xaml">
+    <Page Include="Themes\Views\Overview.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Units\Currency.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Units\EmptyContent.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Units\FriendsList.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Units\MainMenu.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Units\NoticeButton.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Units\PlayButton.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Units\Profile.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Units\SocialTool.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Units\SubMenu.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Units\WindowBar.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Themes\Views\MainView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Local\Collection\FriendsCollection.cs" />
-    <Compile Include="Local\ViewModel\MainViewModel.cs" />
-    <Compile Include="Local\Work\MenuWork.cs" />
-    <Compile Include="Local\Work\ModalWork.cs" />
-    <Compile Include="Local\Work\FriendsSortWork.cs" />
-    <Compile Include="Local\Work\WindowWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -134,21 +90,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="UI\Units\ChatTool.cs" />
-    <Compile Include="UI\Units\Currency.cs" />
-    <Compile Include="UI\Units\EmptyContent.cs" />
-    <Compile Include="UI\Units\FriendsExpander.cs" />
-    <Compile Include="UI\Units\FriendsListItem.cs" />
-    <Compile Include="UI\Units\FriendsList.cs" />
-    <Compile Include="UI\Units\MainMenu.cs" />
-    <Compile Include="UI\Units\NoticeButton.cs" />
-    <Compile Include="UI\Units\PlayButton.cs" />
-    <Compile Include="UI\Units\Profile.cs" />
-    <Compile Include="UI\Units\SocialTool.cs" />
-    <Compile Include="UI\Units\SubMenu.cs" />
-    <Compile Include="UI\Units\WindowBar.cs" />
-    <Compile Include="UI\Views\MainView.cs" />
-    <Compile Include="UI\Units\FriendsSortPopup.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -158,6 +99,7 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\Leagueoflegends.Controls\Leagueoflegends.Controls.csproj">
       <Project>{f6309cba-5a01-4e4e-ae66-02841968c02d}</Project>
@@ -168,50 +110,29 @@
       <Name>Leagueoflegends.Converter</Name>
     </ProjectReference>
     <ProjectReference Include="..\Leagueoflegends.Data\Leagueoflegends.Data.csproj">
-      <Project>{3E01F5FB-69AD-415D-8114-5D7E4D3CBB74}</Project>
+      <Project>{3e01f5fb-69ad-415d-8114-5d7e4d3cbb74}</Project>
       <Name>Leagueoflegends.Data</Name>
     </ProjectReference>
     <ProjectReference Include="..\Leagueoflegends.DBEntity\Leagueoflegends.DBEntity.csproj">
-      <Project>{2CD75FCF-667F-42EF-BED1-338BF4F1124C}</Project>
+      <Project>{2cd75fcf-667f-42ef-bed1-338bf4f1124c}</Project>
       <Name>Leagueoflegends.DBEntity</Name>
     </ProjectReference>
     <ProjectReference Include="..\Leagueoflegends.ExampleData\Leagueoflegends.ExampleData.csproj">
-      <Project>{AD7CAAEF-1792-4CC7-A0B3-56F67EA44B03}</Project>
+      <Project>{ad7caaef-1792-4cc7-a0b3-56f67ea44b03}</Project>
       <Name>Leagueoflegends.ExampleData</Name>
     </ProjectReference>
     <ProjectReference Include="..\Leagueoflegends.Foundation\Leagueoflegends.Foundation.csproj">
       <Project>{b0e72967-60f7-4796-8940-36d3822131a7}</Project>
       <Name>Leagueoflegends.Foundation</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Leagueoflegends.Friends\Leagueoflegends.Friends.csproj">
-      <Project>{5df303d7-92fc-4eb2-a58d-8b3169dbd20d}</Project>
-      <Name>Leagueoflegends.Friends</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Leagueoflegends.Home\Leagueoflegends.Home.csproj">
-      <Project>{D915320E-9D3E-46C4-A6BE-28413775CD10}</Project>
-      <Name>Leagueoflegends.Home</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Leagueoflegends.LayoutSupport\Leagueoflegends.LayoutSupport.csproj">
-      <Project>{418FBB6A-08E6-4EAE-A304-913F232491A6}</Project>
+      <Project>{418fbb6a-08e6-4eae-a304-913f232491a6}</Project>
       <Name>Leagueoflegends.LayoutSupport</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Leagueoflegends.MyShop\Leagueoflegends.MyShop.csproj">
-      <Project>{0273aba2-31c6-4273-85a4-c90e99b18926}</Project>
-      <Name>Leagueoflegends.MyShop</Name>
     </ProjectReference>
     <ProjectReference Include="..\Leagueoflegends.Resources\Leagueoflegends.Resources.csproj">
       <Project>{1afee701-95ed-4977-95b3-249a9821de5b}</Project>
       <Name>Leagueoflegends.Resources</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Leagueoflegends.Settings\Leagueoflegends.Settings.csproj">
-      <Project>{2F65A578-13D0-43B9-AFE1-1695F6C9DC5E}</Project>
-      <Name>Leagueoflegends.Settings</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Leagueoflegends.TeamFight\Leagueoflegends.TeamFight.csproj">
-      <Project>{f7aa3593-bf16-4eea-915d-906b30bbf74b}</Project>
-      <Name>Leagueoflegends.TeamFight</Name>
-    </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
