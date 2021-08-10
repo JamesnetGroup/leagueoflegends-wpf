@@ -15,6 +15,8 @@ using Leagueoflegends.TeamFight.Local.ViewModel;
 using Leagueoflegends.DBEntity.Local.Api;
 using Leagueoflegends.Home.UI.Views;
 using Leagueoflegends.Home.Local.ViewModels;
+using Leagueoflegends.Store.UI.Views;
+using Leagueoflegends.Store.Local.ViewModels;
 
 namespace Leagueoflegends.Main.Local.ViewModel
 {
@@ -136,6 +138,7 @@ namespace Leagueoflegends.Main.Local.ViewModel
                 content = value.Seq switch
                 {
                     0 => new Overview().SetVM(new OverviewModel()),
+                    13 => new Champions().SetVM(new ChampionsViewModel()),
                     _ => new EmptyContent()
                 };
             }
