@@ -57,6 +57,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeagueofLegends.Settings.Ab
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leagueoflegends.Home", "Leagueoflegends.Home\Leagueoflegends.Home.csproj", "{D915320E-9D3E-46C4-A6BE-28413775CD10}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Leagueoflegends.Store", "Leagueoflegends.Store\Leagueoflegends.Store.csproj", "{190684C5-7B94-4AA5-AF98-072BB7033A07}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -135,6 +137,10 @@ Global
 		{D915320E-9D3E-46C4-A6BE-28413775CD10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D915320E-9D3E-46C4-A6BE-28413775CD10}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D915320E-9D3E-46C4-A6BE-28413775CD10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{190684C5-7B94-4AA5-AF98-072BB7033A07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{190684C5-7B94-4AA5-AF98-072BB7033A07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{190684C5-7B94-4AA5-AF98-072BB7033A07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{190684C5-7B94-4AA5-AF98-072BB7033A07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -163,6 +169,7 @@ Global
 		{B5BFC241-2BD8-40FA-80CE-DCE99B2F7B88} = {9052252C-D495-405B-8255-F66106923276}
 		{33BB44BE-871A-4DE4-9CC8-92243CE877A0} = {9052252C-D495-405B-8255-F66106923276}
 		{D915320E-9D3E-46C4-A6BE-28413775CD10} = {9052252C-D495-405B-8255-F66106923276}
+		{190684C5-7B94-4AA5-AF98-072BB7033A07} = {9052252C-D495-405B-8255-F66106923276}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EB8A4E83-8ABD-40CF-B56A-559A49B51254}

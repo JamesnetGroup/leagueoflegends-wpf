@@ -67,6 +67,7 @@
     <Compile Include="Setting\InGame\InterfaceModel.cs" />
     <Compile Include="Setting\SettingMenuModel.cs" />
     <Compile Include="Setting\SettingModel.cs" />
+    <Compile Include="Store\StoreMenuModel.cs" />
     <Compile Include="TeamFight\TeamFightModel.cs" />
   </ItemGroup>
   <ItemGroup />
