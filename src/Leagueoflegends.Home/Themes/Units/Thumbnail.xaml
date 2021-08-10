@@ -1,0 +1,107 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:units="clr-namespace:Leagueoflegends.Home.UI.Units">
+
+	<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" x:Key="BTN.BDR.OVER">
+		<GradientStop Color="#FFFFFFE2" Offset="0"/>
+		<GradientStop Color="#FFDC9F27" Offset="1"/>
+	</LinearGradientBrush>
+
+	<Style TargetType="{x:Type Button}" x:Key="BTN.THUMB">
+		<Setter Property="UseLayoutRounding" Value="True"/>
+		<Setter Property="Margin" Value="4 4 4 4"/>
+		<Setter Property="Tag" Value=""/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Grid>
+						<Grid.RowDefinitions>
+							<RowDefinition Height="135"/>
+							<RowDefinition Height="*"/>
+						</Grid.RowDefinitions>
+						<Border x:Name="border" Background="#0B131B" BorderBrush="#28282B" BorderThickness="1" Padding="1">
+							<Border Background="#11171f" BorderThickness="1">
+								<Image x:Name="img" RenderOptions.BitmapScalingMode="Fant" Stretch="UniformToFill" Opacity="0.9"/>
+							</Border>
+						</Border>
+						<TextBlock Grid.Row="1" Text="{TemplateBinding Content}" Foreground="#cdbe91" TextWrapping="WrapWithOverflow"
+                                   FontSize="12" FontWeight="Bold" Margin="0 4 0 4"/>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger Property="Tag" Value="01">
+							<Setter TargetName="img" Property="Source" Value="/Leagueoflegends.Resources;component/Images/lol-thumb-01.png"/>
+						</Trigger>
+						<Trigger Property="Tag" Value="02">
+							<Setter TargetName="img" Property="Source" Value="/Leagueoflegends.Resources;component/Images/lol-thumb-02.png"/>
+						</Trigger>
+						<Trigger Property="Tag" Value="03">
+							<Setter TargetName="img" Property="Source" Value="/Leagueoflegends.Resources;component/Images/lol-thumb-03.png"/>
+						</Trigger>
+						<Trigger Property="Tag" Value="04">
+							<Setter TargetName="img" Property="Source" Value="/Leagueoflegends.Resources;component/Images/lol-thumb-04.png"/>
+						</Trigger>
+						<Trigger Property="Tag" Value="05">
+							<Setter TargetName="img" Property="Source" Value="/Leagueoflegends.Resources;component/Images/lol-thumb-05.png"/>
+						</Trigger>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="Cursor" Value="Hand"/>
+							<Setter TargetName="img" Property="Opacity" Value="1"/>
+							<Setter TargetName="border" Property="BorderBrush" Value="{StaticResource BTN.BDR.OVER}"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style TargetType="{x:Type Button}" x:Key="BTN.THUMB01" BasedOn="{StaticResource BTN.THUMB}">
+		<Setter Property="Tag" Value="01"/>
+		<Setter Property="Content" Value ="▶ K/DA x 1MILLION - I`LL SHOW YOU ↗"/>
+	</Style>
+
+	<Style TargetType="{x:Type Button}" x:Key="BTN.THUMB02" BasedOn="{StaticResource BTN.THUMB}">
+		<Setter Property="Tag" Value="02"/>
+		<Setter Property="Content" Value ="2021 프리시즌 ↗"/>
+	</Style>
+
+	<Style TargetType="{x:Type Button}" x:Key="BTN.THUMB03" BasedOn="{StaticResource BTN.THUMB}">
+		<Setter Property="Tag" Value="03"/>
+		<Setter Property="Content" Value ="[라이엇 스토어] 진 UNLOCKED 스태츄 외 컬렉션 상품을 만나보세요! ↗"/>
+	</Style>
+
+	<Style TargetType="{x:Type Button}" x:Key="BTN.THUMB04" BasedOn="{StaticResource BTN.THUMB}">
+		<Setter Property="Tag" Value="04"/>
+		<Setter Property="Content" Value ="우주 전갈 스카너"/>
+	</Style>
+
+	<Style TargetType="{x:Type Button}" x:Key="BTN.THUMB05" BasedOn="{StaticResource BTN.THUMB}">
+		<Setter Property="Tag" Value="05"/>
+		<Setter Property="Content" Value ="암흑 우주 리산드라"/>
+	</Style>
+	
+	<Style TargetType="{x:Type units:Thumbnail}">
+		<Setter Property="Grid.Row" Value="1"/>
+		<Setter Property="Grid.ColumnSpan" Value="2"/>
+		<Setter Property="Margin" Value="26 0 26 26"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type units:Thumbnail}">
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="1*"/>
+							<ColumnDefinition Width="1*"/>
+							<ColumnDefinition Width="1*"/>
+							<ColumnDefinition Width="115"/>
+							<ColumnDefinition Width="115"/>
+						</Grid.ColumnDefinitions>
+						<Button Grid.Column="0" Style="{StaticResource BTN.THUMB01}"/>
+						<Button Grid.Column="1" Style="{StaticResource BTN.THUMB02}"/>
+						<Button Grid.Column="2" Style="{StaticResource BTN.THUMB03}"/>
+						<Button Grid.Column="3" Style="{StaticResource BTN.THUMB04}"/>
+						<Button Grid.Column="4" Style="{StaticResource BTN.THUMB05}"/>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+</ResourceDictionary>

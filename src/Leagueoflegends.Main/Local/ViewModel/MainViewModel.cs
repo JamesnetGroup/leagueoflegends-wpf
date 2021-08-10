@@ -5,8 +5,6 @@ using System.Collections.Generic;
 using Leagueoflegends.Data.Main;
 using Leagueoflegends.Foundation.Mvvm;
 using Leagueoflegends.Foundation.Riotcore;
-using Leagueoflegends.Home.General.Local.ViewModel;
-using Leagueoflegends.Home.General.UI.Views;
 using Leagueoflegends.Main.Local.Collection;
 using Leagueoflegends.Main.Local.Work;
 using Leagueoflegends.Main.UI.Units;
@@ -15,10 +13,12 @@ using Leagueoflegends.MyShop.Local.ViewModel;
 using Leagueoflegends.TeamFight.UI.Views;
 using Leagueoflegends.TeamFight.Local.ViewModel;
 using Leagueoflegends.DBEntity.Local.Api;
+using Leagueoflegends.Home.UI.Views;
+using Leagueoflegends.Home.Local.ViewModels;
 
 namespace Leagueoflegends.Main.Local.ViewModel
 {
-    public class MainViewModel : ObservableObject
+	public class MainViewModel : ObservableObject
     {
         #region Variables
 
@@ -135,7 +135,7 @@ namespace Leagueoflegends.Main.Local.ViewModel
                 key = value.Name;
                 content = value.Seq switch
                 {
-                    0 => new OverView().SetVM(new GeneralViewModel()),
+                    0 => new Overview().SetVM(new OverviewModel()),
                     _ => new EmptyContent()
                 };
             }

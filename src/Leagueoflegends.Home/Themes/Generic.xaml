@@ -1,0 +1,10 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary Source="/Leagueoflegends.Home;component/Themes/Units/Rotation.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Home;component/Themes/Units/Thumbnail.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Home;component/Themes/Units/OfficialVideo.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Home;component/Themes/Views/Overview.xaml"/>
+	</ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>
