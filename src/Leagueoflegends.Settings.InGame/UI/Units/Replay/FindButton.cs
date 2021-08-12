@@ -1,10 +1,9 @@
-﻿using System;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 
 namespace Leagueoflegends.Settings.InGame.UI.Units
 {
-    public class FindButton : Control
+	public class FindButton : Control
     {
         #region DefaultStyleKey
 
