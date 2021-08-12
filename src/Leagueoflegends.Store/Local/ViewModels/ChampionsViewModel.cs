@@ -10,6 +10,7 @@ namespace Leagueoflegends.Store.Local.ViewModels
     {
         private List<StoreMenuModel> _champMenus;
         private List<SortingModel> _sorting;
+        private List<FilterModel> _filters;
 
         private StoreMenuModel _currentChampMenu;
         private SortingModel _currentSorting;
@@ -60,10 +61,19 @@ namespace Leagueoflegends.Store.Local.ViewModels
         }
         #endregion
 
+        #region Filters
+
+        public List<FilterModel> Filters
+        {
+            get { return _filters; }
+            set { _filters = value; OnPropertyChanged(); }
+        }
+        #endregion
+
         #region Constructor
 
         public ChampionsViewModel()
-		{
+        {
             ChampMenus = ExamStore.GetCategory();
             CurrentChampMenu = ChampMenus.First();
         }
@@ -72,10 +82,11 @@ namespace Leagueoflegends.Store.Local.ViewModels
 		#region MenuChanged
 
         private void MenuChanged(StoreMenuModel value)
-		{
+        {
+            Filters = ExamStore.GetFilters(value.Name);
             Sorting = ExamStore.GetSorting(value.Name);
             CurrentSorting = Sorting.First();
-		}
+        }
         #endregion
 
         #region SearchTextChanged

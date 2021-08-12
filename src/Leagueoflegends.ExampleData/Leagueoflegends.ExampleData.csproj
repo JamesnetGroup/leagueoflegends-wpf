@@ -103,6 +103,7 @@
     <Compile Include="Setting\GetWinSizeList.cs" />
     <Compile Include="Setting\GetSettingList.cs" />
     <Compile Include="Store\GetCategory.cs" />
+    <Compile Include="Store\GetFilters.cs" />
     <Compile Include="Store\GetSorting.cs" />
   </ItemGroup>
   <ItemGroup>

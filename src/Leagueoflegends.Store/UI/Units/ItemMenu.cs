@@ -3,13 +3,13 @@ using System.Windows.Controls;
 
 namespace Leagueoflegends.Store.UI.Units
 {
-	public class Filter : Control
+	public class ItemMenu : Control
     {
         #region DefaultStyleKey
 
-        static Filter()
+        static ItemMenu()
         {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(Filter), new FrameworkPropertyMetadata(typeof(Filter)));
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(ItemMenu), new FrameworkPropertyMetadata(typeof(ItemMenu)));
         }
         #endregion
     }
