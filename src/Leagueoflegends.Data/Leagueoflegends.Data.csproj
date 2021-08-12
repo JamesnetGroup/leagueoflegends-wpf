@@ -46,6 +46,9 @@
     <Compile Include="Codes\AudioDevice.cs" />
     <Compile Include="Codes\WindowSizeCode.cs" />
     <Compile Include="Config\ConfigModel.cs" />
+    <Compile Include="Enums\PackageType.cs" />
+    <Compile Include="Enums\ChampType.cs" />
+    <Compile Include="Enums\ItemType.cs" />
     <Compile Include="Enums\GeoIcon.cs" />
     <Compile Include="Local\RandomHelper.cs" />
     <Compile Include="Local\Schema\UsersTable.cs" />
@@ -67,6 +70,7 @@
     <Compile Include="Setting\InGame\InterfaceModel.cs" />
     <Compile Include="Setting\SettingMenuModel.cs" />
     <Compile Include="Setting\SettingModel.cs" />
+    <Compile Include="Store\FilterModel.cs" />
     <Compile Include="Store\SortingModel.cs" />
     <Compile Include="Store\StoreMenuModel.cs" />
     <Compile Include="TeamFight\TeamFightModel.cs" />

@@ -4,7 +4,9 @@
 	<ResourceDictionary.MergedDictionaries>
 		<ResourceDictionary Source="/Leagueoflegends.Store;component/Themes/Units/Category.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Store;component/Themes/Units/CategoryItem.xaml"/>
-		<ResourceDictionary Source="/Leagueoflegends.Store;component/Themes/Units/Filter.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Store;component/Themes/Units/ItemMenu.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Store;component/Themes/Units/FilterList.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Store;component/Themes/Units/FilterListItem.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Store;component/Themes/Units/SearchTextBox.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Store;component/Themes/Units/StoreCheckBox.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Store;component/Themes/Units/SortComboBox.xaml"/>

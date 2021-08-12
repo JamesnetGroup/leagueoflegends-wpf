@@ -13,7 +13,7 @@
 							<ColumnDefinition Width="*"/>
 						</Grid.ColumnDefinitions>
 
-						<units:Filter/>
+						<units:ItemMenu/>
 					</Grid>
 				</ControlTemplate>
 			</Setter.Value>
