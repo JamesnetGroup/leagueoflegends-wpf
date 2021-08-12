@@ -11,7 +11,7 @@ using System.Windows.Input;
 
 namespace Leagueoflegends.Settings.Client.Local.ViewModels
 {
-    public class GeneralViewModel : ObservableObject
+	public class GeneralViewModel : ObservableObject
     {
         private List<WindowSizeCode> _sizeList;
 
