@@ -102,6 +102,8 @@
     <Compile Include="Setting\GetAudioDeviceList.cs" />
     <Compile Include="Setting\GetWinSizeList.cs" />
     <Compile Include="Setting\GetSettingList.cs" />
+    <Compile Include="Store\GetCategory.cs" />
+    <Compile Include="Store\GetSorting.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Leagueoflegends.Data\Leagueoflegends.Data.csproj">
