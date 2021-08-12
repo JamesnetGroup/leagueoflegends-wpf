@@ -7,6 +7,8 @@
 		<ResourceDictionary Source="/Leagueoflegends.Store;component/Themes/Units/Filter.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Store;component/Themes/Units/SearchTextBox.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Store;component/Themes/Units/StoreCheckBox.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Store;component/Themes/Units/SortComboBox.xaml"/>
+		<ResourceDictionary Source="/Leagueoflegends.Store;component/Themes/Units/SortComboBoxItem.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Store;component/Themes/Views/Champions.xaml"/>
 	</ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

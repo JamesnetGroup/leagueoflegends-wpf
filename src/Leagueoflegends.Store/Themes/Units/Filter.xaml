@@ -1,6 +1,11 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 					xmlns:units="clr-namespace:Leagueoflegends.Store.UI.Units">
+	
+	<Style TargetType="{x:Type units:SortComboBox}" x:Key="CBX.SORT">
+		<Setter Property="ItemsSource" Value="{Binding Sorting}"/>
+		<Setter Property="SelectedValue" Value="{Binding CurrentSorting}"/>
+	</Style>
 
 	<Style TargetType="{x:Type units:Filter}">
 		<Setter Property="Template">
@@ -10,6 +15,7 @@
 						<units:Category/>
 						<units:SearchTextBox/>
 						<units:StoreCheckBox Content="보유 중인 상품도 보기" Margin="0 10 0 0"/>
+						<units:SortComboBox Style="{StaticResource CBX.SORT}"/>
 					</StackPanel>
 				</ControlTemplate>
 			</Setter.Value>

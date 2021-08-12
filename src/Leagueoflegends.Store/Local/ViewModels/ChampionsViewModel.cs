@@ -1,6 +1,6 @@
 ﻿using Leagueoflegends.Data.Store;
+using Leagueoflegends.ExampleData.Store;
 using Leagueoflegends.Foundation.Mvvm;
-using Leagueoflegends.Store.Local.Work;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -9,7 +9,10 @@ namespace Leagueoflegends.Store.Local.ViewModels
 	public class ChampionsViewModel : ObservableObject
     {
         private List<StoreMenuModel> _champMenus;
+        private List<SortingModel> _sorting;
+
         private StoreMenuModel _currentChampMenu;
+        private SortingModel _currentSorting;
         private string _searchText;
 
         #region ChampMenus
@@ -30,9 +33,27 @@ namespace Leagueoflegends.Store.Local.ViewModels
         }
         #endregion
 
-        #region SearchText
+        #region Sorting
 
-        public string SearchText
+        public List<SortingModel> Sorting
+        {
+            get { return _sorting; }
+            set { _sorting = value; OnPropertyChanged(); }
+        }
+        #endregion
+
+        #region CurrentSorting
+
+        public SortingModel CurrentSorting
+        {
+            get { return _currentSorting; }
+            set { _currentSorting = value; OnPropertyChanged(); }
+        }
+		#endregion
+
+		#region SearchText
+
+		public string SearchText
         {
             get { return _searchText; }
             set { _searchText = value; OnPropertyChanged(); SearchTextChanged(value); }
@@ -43,7 +64,7 @@ namespace Leagueoflegends.Store.Local.ViewModels
 
         public ChampionsViewModel()
 		{
-            ChampMenus = new MenuWork().Menus;
+            ChampMenus = ExamStore.GetCategory();
             CurrentChampMenu = ChampMenus.First();
         }
 		#endregion
@@ -52,7 +73,8 @@ namespace Leagueoflegends.Store.Local.ViewModels
 
         private void MenuChanged(StoreMenuModel value)
 		{
-            //
+            Sorting = ExamStore.GetSorting(value.Name);
+            CurrentSorting = Sorting.First();
 		}
         #endregion
 

@@ -55,6 +55,8 @@
     </Page>
     <Compile Include="Local\ViewModels\ChampionsViewModel.cs" />
     <Compile Include="Local\Work\MenuWork.cs" />
+    <Compile Include="UI\Units\SortComboBox.cs" />
+    <Compile Include="UI\Units\SortComboBoxItem.cs" />
     <Compile Include="UI\Units\StoreCheckBox.cs" />
     <Compile Include="UI\Units\SearchTextBox.cs" />
     <Compile Include="UI\Units\Filter.cs" />
@@ -63,6 +65,14 @@
     <Compile Include="UI\Views\Champions.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Themes\Units\SortComboBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Themes\Units\SortComboBoxItem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="Themes\Units\StoreCheckBox.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

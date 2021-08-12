@@ -39,6 +39,8 @@
         Lightning,
         VolumeON,
         VolumeOFF,
-        Pencil
+        Pencil,
+        ArrowUp,
+        ArrowDown
     }
 }
