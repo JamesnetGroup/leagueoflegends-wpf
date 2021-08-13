@@ -11,6 +11,7 @@ namespace Leagueoflegends.LayoutSupport.Controls
         public static readonly DependencyProperty ProfileTemplateProperty = DependencyProperty.Register("ProfileTemplate", typeof(DataTemplate), typeof(MainWindow), new PropertyMetadata(null));
         public static readonly DependencyProperty FriendsTemplateProperty = DependencyProperty.Register("FriendsTemplate", typeof(DataTemplate), typeof(MainWindow), new PropertyMetadata(null));
         public static readonly DependencyProperty ModalTemplateProperty = DependencyProperty.Register("ModalTemplate", typeof(DataTemplate), typeof(MainWindow), new PropertyMetadata(null));
+        public static readonly DependencyProperty BackgroundTemplateProperty = DependencyProperty.Register("BackgroundTemplate", typeof(DataTemplate), typeof(MainWindow), new PropertyMetadata(null));
         #endregion
 
         #region DefaultStyleKey
@@ -54,6 +55,15 @@ namespace Leagueoflegends.LayoutSupport.Controls
         {
             get => (DataTemplate)GetValue(ModalTemplateProperty);
             set => SetValue(ModalTemplateProperty, value);
+        }
+        #endregion
+
+        #region BackgroundTemplate
+
+        public DataTemplate BackgroundTemplate
+        {
+            get => (DataTemplate)GetValue(BackgroundTemplateProperty);
+            set => SetValue(BackgroundTemplateProperty, value);
         }
         #endregion
     }
