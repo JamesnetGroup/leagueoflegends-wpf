@@ -3,41 +3,23 @@
 					xmlns:views="clr-namespace:Leagueoflegends.TeamFight.UI.Views"
 					xmlns:units="clr-namespace:Leagueoflegends.TeamFight.UI.Units">
 
-	<LinearGradientBrush x:Key="BG.LEFT" StartPoint="0 0.5" EndPoint="1 0.5">
-		<GradientStop Color="#9A000000" Offset="0.0" />
-		<GradientStop Color="#33000000" Offset="0.5" />
-		<GradientStop Color="Transparent" Offset="1.0" />
-	</LinearGradientBrush>
-
 	<LinearGradientBrush x:Key="BG.RIGHT" StartPoint="0 0.5" EndPoint="1 0.5">
 		<GradientStop Color="#7F000000" Offset="1.0" />
 		<GradientStop Color="Transparent" Offset="0.0" />
 	</LinearGradientBrush>
 
-	<LinearGradientBrush x:Key="BG.TOP" StartPoint="0.5 0" EndPoint="0.5 1">
-		<GradientStop Color="#AA000000" Offset="0.0" />
-		<GradientStop Color="Transparent" Offset="1.0" />
-	</LinearGradientBrush>
-	
 	<Style TargetType="{x:Type views:TeamFightView}">
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type views:TeamFightView}">
 					<Grid UseLayoutRounding="True" 
 						  SnapsToDevicePixels="True">
-						<Grid.Background>
-							<ImageBrush ImageSource="/Leagueoflegends.Resources;component/Images/lol-teamfight-background.jpg" 
-										RenderOptions.BitmapScalingMode="Fant"
-										Stretch="UniformToFill"/>
-						</Grid.Background>
 						<Grid.RowDefinitions>
 							<RowDefinition Height="*"/>
 							<RowDefinition Height="Auto"/>
 							<RowDefinition Height="Auto"/>
 						</Grid.RowDefinitions>
 						
-						<Rectangle VerticalAlignment="Top" Height="200" Fill="{StaticResource BG.TOP}"/>
-						<Rectangle HorizontalAlignment="Left" Grid.RowSpan="2" Width="500" Fill="{StaticResource BG.LEFT}"/>
 						<Rectangle HorizontalAlignment="Right" Grid.RowSpan="2" Width="250" Fill="{StaticResource BG.RIGHT}"/>
 
 						<Grid Grid.Row="0">

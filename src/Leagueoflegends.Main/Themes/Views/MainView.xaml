@@ -4,6 +4,24 @@
 					xmlns:units="clr-namespace:Leagueoflegends.Main.UI.Units"
 					xmlns:ctrls="clr-namespace:Leagueoflegends.LayoutSupport.Controls;assembly=Leagueoflegends.LayoutSupport">
 
+	<LinearGradientBrush x:Key="TOP" EndPoint="0.5,1" StartPoint="0.5,0">
+		<GradientStop Color="#DD000000"/>
+		<GradientStop Color="#77000000" Offset="0.5"/>
+		<GradientStop Color="#00000000" Offset="1"/>
+	</LinearGradientBrush>
+	
+	<LinearGradientBrush x:Key="LEFT" EndPoint="1,0.5" StartPoint="0,0.5">
+		<GradientStop Color="#FF000000"/>
+		<GradientStop Color="#44000000" Offset="0.5"/>
+		<GradientStop Color="#00000000" Offset="1"/>
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="LEFT.TFT" StartPoint="0 0.5" EndPoint="1 0.5">
+		<GradientStop Color="#9A000000" Offset="0.0" />
+		<GradientStop Color="#33000000" Offset="0.5" />
+		<GradientStop Color="Transparent" Offset="1.0" />
+	</LinearGradientBrush>
+
 	<!-- TopMenuTemplate -->
 	<DataTemplate x:Key="TOPMENU">
 		<Border BorderBrush="#553D4143" BorderThickness="0 0 0 1">
@@ -60,8 +78,41 @@
 		<ctrls:Modal Content="{Binding ModalContent}"/>
 	</DataTemplate>
 
+	<!--BackgroundTemplate-->
+	<DataTemplate x:Key="BACKGROUND">
+		<Grid>
+			<Image x:Name="img"
+				   Source="/Leagueoflegends.Resources;component/Images/bg-main-05.png" 
+				   Stretch="Fill"/>
+			<Rectangle Height="300" 
+					   VerticalAlignment="Top" 
+					   Fill="{StaticResource TOP}"/>
+			<Rectangle x:Name="left"
+					   Width="500"
+					   HorizontalAlignment="Left"
+					   Fill="{StaticResource LEFT}"/>
+			<Border x:Name="border"
+					Background="Transparent"/>
+		</Grid>
+		<DataTemplate.Triggers>
+			<DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.CurrentSeq}" Value="1">
+				<Setter TargetName="img" Property="Source" Value="/Leagueoflegends.Resources;component/Images/lol-teamfight-background.jpg"/>
+				<Setter TargetName="img" Property="RenderOptions.BitmapScalingMode" Value="Fant"/>
+				<Setter TargetName="img" Property="Stretch" Value="UniformToFill"/>
+				<Setter TargetName="left" Property="Fill" Value="{StaticResource LEFT.TFT}"/>
+			</DataTrigger>
+			<DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.CurrentSeq}" Value="6">
+				<Setter TargetName="border" Property="Background" Value="#06111D"/>
+			</DataTrigger>
+			<DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.CurrentSeq}" Value="21">
+				<Setter TargetName="border" Property="Background" Value="#070A0B"/>
+			</DataTrigger>
+		</DataTemplate.Triggers>
+	</DataTemplate>
+
 	<!-- MainView -->
 	<Style TargetType="{x:Type views:MainView}" BasedOn="{StaticResource {x:Type ctrls:MainWindow}}">
+		<Setter Property="BackgroundTemplate" Value="{StaticResource BACKGROUND}"/>
 		<Setter Property="TopMenuTemplate" Value="{StaticResource TOPMENU}"/>
 		<Setter Property="ProfileTemplate" Value="{StaticResource PROFILE}"/>
 		<Setter Property="ContentTemplate" Value="{StaticResource CONTENT}"/>

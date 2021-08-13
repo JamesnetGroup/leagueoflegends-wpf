@@ -33,8 +33,9 @@ namespace Leagueoflegends.Main.Local.ViewModel
         private SubMenuModel _currentSubMenu;
         private MainMenuModel _mainMenu;
         private FriendsCollection _friends;
+        private int _currentSeq;
 
-        private Dictionary<string, IRiotUI> UIs { get; set; }
+        private Dictionary<int, IRiotUI> UIs { get; set; }
         #endregion
 
         #region ViewModels
@@ -68,9 +69,18 @@ namespace Leagueoflegends.Main.Local.ViewModel
         }
         #endregion
 
-        #region SubMenus
+        #region CurrentSeq
 
-        public SubMenuModel CurrentSubMenu
+        public int CurrentSeq
+		{
+            get => _currentSeq;
+			set { _currentSeq = value; OnPropertyChanged(); }
+		}
+		#endregion
+
+		#region SubMenus
+
+		public SubMenuModel CurrentSubMenu
         {
             get => _currentSubMenu;
             set { _currentSubMenu = value; OnPropertyChanged(); SubMenuChanged(value); }
@@ -130,21 +140,21 @@ namespace Leagueoflegends.Main.Local.ViewModel
         private void SubMenuChanged(SubMenuModel value)
         {
             IRiotUI content;
-            string key;
+            int key;
 
             if (value != null)
             {
-                key = value.Name;
+                key = value.Seq;
                 content = value.Seq switch
                 {
-                    0 => new Overview().SetVM(new OverviewModel()),
-                    13 => new Champions().SetVM(new ChampionsViewModel()),
+                    8 => new Overview().SetVM(new OverviewModel()),
+                    21 => new Champions().SetVM(new ChampionsViewModel()),
                     _ => new EmptyContent()
                 };
             }
             else
             {
-                key = _mainMenu.Name;
+                key = _mainMenu.Seq;
                 content = _mainMenu.Seq switch
                 {
                     1 => new TeamFightView().SetVM(new TeamFightViewModel()),
@@ -159,6 +169,7 @@ namespace Leagueoflegends.Main.Local.ViewModel
             }
 
             CurrentUI = UIs[key];
+            CurrentSeq = key;
         }
         #endregion
     }

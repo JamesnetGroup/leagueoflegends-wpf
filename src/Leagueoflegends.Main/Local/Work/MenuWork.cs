@@ -71,26 +71,26 @@ namespace Leagueoflegends.Main.Local.Work
         {
             List<SubMenuModel> source = new()
             {
-                new SubMenuModel(0, 0, "OVERVIEW"),
-                new SubMenuModel(1, 0, "PRESEASON"),
-                new SubMenuModel(2, 0, "PATCH NOTES"),
+                new SubMenuModel(8, 0, "OVERVIEW"),
+                new SubMenuModel(9, 0, "PRESEASON"),
+                new SubMenuModel(10, 0, "PATCH NOTES"),
 
-                new SubMenuModel(3, 4, "CHAMPIONS"),
-                new SubMenuModel(4, 4, "SKINS"),
-                new SubMenuModel(5, 4, "EMOTES"),
-                new SubMenuModel(6, 4, "RUNES"),
-                new SubMenuModel(7, 4, "SPELLS"),
-                new SubMenuModel(8, 4, "ITEMS"),
-                new SubMenuModel(9, 4, "ICONS"),
-                new SubMenuModel(10, 4, "WARDS"),
-                new SubMenuModel(11, 4, "CHROMAS"),
+                new SubMenuModel(11, 4, "CHAMPIONS"),
+                new SubMenuModel(12, 4, "SKINS"),
+                new SubMenuModel(13, 4, "EMOTES"),
+                new SubMenuModel(14, 4, "RUNES"),
+                new SubMenuModel(15, 4, "SPELLS"),
+                new SubMenuModel(16, 4, "ITEMS"),
+                new SubMenuModel(17, 4, "ICONS"),
+                new SubMenuModel(18, 4, "WARDS"),
+                new SubMenuModel(19, 4, "CHROMAS"),
 
-                new SubMenuModel(12, 7, "FEATURED"),
-                new SubMenuModel(13, 7, "CHAMPIONS"),
-                new SubMenuModel(14, 7, "SKINS"),
-                new SubMenuModel(15, 7, "TFT"),
-                new SubMenuModel(16, 7, "LOOT"),
-                new SubMenuModel(17, 7, "ACCESSORIES"),
+                new SubMenuModel(20, 7, "FEATURED"),
+                new SubMenuModel(21, 7, "CHAMPIONS"),
+                new SubMenuModel(22, 7, "SKINS"),
+                new SubMenuModel(23, 7, "TFT"),
+                new SubMenuModel(24, 7, "LOOT"),
+                new SubMenuModel(25, 7, "ACCESSORIES"),
             };
             return source;
         }
