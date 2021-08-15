@@ -26,7 +26,7 @@ namespace Leagueoflegends.ExampleData.Store
             List<FilterModel> source = new();
 
             switch (name)
-			{
+            {
                 case "Champions": source = filters.Where(x => x.IsChampionVisible).ToList(); break;
                 case "Eternals": source = filters.Where(x => x.IsEternalVisible).ToList(); break;
                 case "Bundles": source = filters.Where(x => x.IsBundleVisible).ToList(); break;
