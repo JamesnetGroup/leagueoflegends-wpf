@@ -35,7 +35,10 @@ namespace Leagueoflegends.Friends.Local.ViewModel
         }
         #endregion
 
+        #region UserCollection
+
         public FriendsCollection UserCollection { get; }
+        #endregion
 
         #region Constructor
 
