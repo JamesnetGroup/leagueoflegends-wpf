@@ -8,11 +8,6 @@ namespace Leagueoflegends
 {
     public class App : RiotApp
     {
-        public App()
-        {
-
-        }
-
         protected override void OnStartup(StartupEventArgs e)
         {
             bool dialogResult = true;
@@ -20,13 +15,10 @@ namespace Leagueoflegends
             while (dialogResult)
             {
                 ShutdownMode = ShutdownMode.OnExplicitShutdown;
-                MainView main = new()
-                {
-                    DataContext = new MainViewModel()
-                };
+                MainView main = new();
+                main.DataContext = new MainViewModel();
 
-                _ = main.ShowDialog();
-                dialogResult = (bool)main.DialogResult;
+                dialogResult = (bool)main.ShowDialog();
             }
             Environment.Exit(0);
         }
