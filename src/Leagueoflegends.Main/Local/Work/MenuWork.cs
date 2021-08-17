@@ -91,6 +91,13 @@ namespace Leagueoflegends.Main.Local.Work
                 new SubMenuModel(23, 7, "TFT"),
                 new SubMenuModel(24, 7, "LOOT"),
                 new SubMenuModel(25, 7, "ACCESSORIES"),
+
+                new SubMenuModel(26, 2, "HUB"),
+                new SubMenuModel(26, 2, "TEAM"),
+                new SubMenuModel(26, 2, "MATCH"),
+                new SubMenuModel(26, 2, "WINNING TEAM"),
+                new SubMenuModel(26, 2, "COMPENSATION"),
+
             };
             return source;
         }
