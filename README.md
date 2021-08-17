@@ -16,10 +16,10 @@ You can always share information with us and we are looking forward to it.
 
 ## WPF LeagueofLegends
 
-- [Develop Information](#develop-information)
+- [Development Information](#development-information)
 - [Project Structure](#project-structure)
   
-### Develop Information
+### Development Information
 This is about **WPF League of Legends** development information.
    
 > ✔️ NET 4.8.1 (NET 6 Soon)  
