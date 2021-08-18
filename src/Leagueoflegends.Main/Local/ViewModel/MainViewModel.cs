@@ -151,7 +151,7 @@ namespace Leagueoflegends.Main.Local.ViewModel
                 {
                     8 => new Overview().SetVM(new OverviewModel()),
                     21 => new Champions().SetVM(new ChampionsViewModel()),
-                    //추후에 HubView로 변경 필요
+                    //HubView로 변경 예정
                     26 => new ClashView().SetVM(new ClashViewModel()),
                     _ => new EmptyContent()
                 };
