@@ -54,6 +54,7 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Local\ViewModel\ClashViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -67,6 +68,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="UI\Views\ClashView.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -77,17 +79,28 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Local\" />
     <Folder Include="Themes\Units\" />
-    <Folder Include="Themes\Views\" />
     <Folder Include="UI\Units\" />
-    <Folder Include="UI\Views\" />
   </ItemGroup>
   <ItemGroup>
     <Page Include="Themes\Generic.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Themes\Views\ClashView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Leagueoflegends.Foundation\Leagueoflegends.Foundation.csproj">
+      <Project>{B0E72967-60F7-4796-8940-36D3822131A7}</Project>
+      <Name>Leagueoflegends.Foundation</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Leagueoflegends.LayoutSupport\Leagueoflegends.LayoutSupport.csproj">
+      <Project>{418FBB6A-08E6-4EAE-A304-913F232491A6}</Project>
+      <Name>Leagueoflegends.LayoutSupport</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

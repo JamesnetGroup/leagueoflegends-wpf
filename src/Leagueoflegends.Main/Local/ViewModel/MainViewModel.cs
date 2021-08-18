@@ -17,6 +17,8 @@ using Leagueoflegends.Home.UI.Views;
 using Leagueoflegends.Home.Local.ViewModels;
 using Leagueoflegends.Store.UI.Views;
 using Leagueoflegends.Store.Local.ViewModels;
+using Leagueoflegends.Clash.UI.Views;
+using Leagueoflegends.Clash.Local.ViewModel;
 
 namespace Leagueoflegends.Main.Local.ViewModel
 {
@@ -149,6 +151,8 @@ namespace Leagueoflegends.Main.Local.ViewModel
                 {
                     8 => new Overview().SetVM(new OverviewModel()),
                     21 => new Champions().SetVM(new ChampionsViewModel()),
+                    //추후에 HubView로 변경 필요
+                    26 => new ClashView().SetVM(new ClashViewModel()),
                     _ => new EmptyContent()
                 };
             }

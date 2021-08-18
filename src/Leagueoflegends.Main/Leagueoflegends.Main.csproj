@@ -159,6 +159,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Leagueoflegends.Clash\Leagueoflegends.Clash.csproj">
+      <Project>{6AEC2DA8-21F4-4AF3-B5EE-EEA94DA7F319}</Project>
+      <Name>Leagueoflegends.Clash</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Leagueoflegends.Controls\Leagueoflegends.Controls.csproj">
       <Project>{f6309cba-5a01-4e4e-ae66-02841968c02d}</Project>
       <Name>Leagueoflegends.Controls</Name>
