@@ -78,8 +78,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Local\" />
-    <Folder Include="Themes\" />
-    <Folder Include="UI\" />
+    <Folder Include="Themes\Units\" />
+    <Folder Include="Themes\Views\" />
+    <Folder Include="UI\Units\" />
+    <Folder Include="UI\Views\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
