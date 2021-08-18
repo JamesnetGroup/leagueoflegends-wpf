@@ -10,36 +10,29 @@ namespace Leagueoflegends.DBEntity.Local.Api
     {
         public List<IFriendsList> Run(int mySeq)
         {
-            try
-            {
-                using RiotContext db = new();
+            using RiotContext db = new();
 
-                var query = from f in db.Friends
-                            where f.UserSeq == mySeq
-                            join u in db.Users
-                            on f.FriendsSeq equals u.Seq
-                            select new MyFriends(u);
+            var query = from f in db.Friends
+                        where f.UserSeq == mySeq
+                        join u in db.Users
+                        on f.FriendsSeq equals u.Seq
+                        select new MyFriends(u);
 
-                var friends = query.ToList()
-                    .OrderBy(x => x.Status)
-                    .ToList();
+            var friends = query.ToList()
+                .OrderBy(x => x.Status)
+                .ToList();
 
-                FriendsHeader general = new("GENERAL", true);
-                FriendsHeader offline = new("OFFLINE", true);
+            FriendsHeader general = new("GENERAL", true);
+            FriendsHeader offline = new("OFFLINE", true);
 
-                List<IFriendsList> list = new();
-                list.Add(general);
-                list.Add(offline);
+            List<IFriendsList> list = new();
+            list.Add(general);
+            list.Add(offline);
 
-                general.Children.AddRange(friends.Where(x => x.Status > 0));
-                offline.Children.AddRange(friends.Where(x => x.Status < 1));
+            general.Children.AddRange(friends.Where(x => x.Status > 0));
+            offline.Children.AddRange(friends.Where(x => x.Status < 1));
 
-                return list;
-            }
-            catch (System.Exception ex)
-            {
-                throw;
-            }
+            return list;
         }
     }
 }
