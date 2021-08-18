@@ -2,6 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:views="clr-namespace:Leagueoflegends.Clash.UI.Views">
     <Style TargetType="{x:Type views:ClashView}">
+        <Setter Property="Background" Value="LightGreen"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type views:ClashView}">
