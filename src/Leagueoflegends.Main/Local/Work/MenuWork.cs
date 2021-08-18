@@ -96,7 +96,7 @@ namespace Leagueoflegends.Main.Local.Work
                 new SubMenuModel(26, 2, "TEAM"),
                 new SubMenuModel(26, 2, "MATCH"),
                 new SubMenuModel(26, 2, "WINNING TEAM"),
-                new SubMenuModel(26, 2, "COMPENSATION"),
+                new SubMenuModel(26, 2, "COMPENSATION11"),
 
             };
             return source;
