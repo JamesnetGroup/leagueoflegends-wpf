@@ -68,6 +68,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="UI\Units\CityCup.cs" />
     <Compile Include="UI\Units\Manual.cs" />
     <Compile Include="UI\Views\ClashView.cs" />
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -82,6 +83,10 @@
   <ItemGroup />
   <ItemGroup>
     <Page Include="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Themes\Units\CityCup.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

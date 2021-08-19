@@ -2,21 +2,6 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:views="clr-namespace:Leagueoflegends.Clash.UI.Views"
                     xmlns:units="clr-namespace:Leagueoflegends.Clash.UI.Units">
-    <Style TargetType="{x:Type TextBlock}" x:Key="TXB.HEADER">
-        <Setter Property="Foreground" Value="#F0E6D2"/>
-        <Setter Property="FontSize" Value="23"/>
-        <Setter Property="FontFamily" Value="Friz Quadrata Std"/>
-        <Setter Property="Text" Value="밴들 시티 컵"/>
-        <Setter Property="FontWeight" Value="Bold"/>
-    </Style>
-    <Style TargetType="{x:Type TextBlock}" x:Key="TXB.SUB">
-        <Setter Property="Foreground" Value="#5B5A56"/>
-        <Setter Property="FontSize" Value="20"/>
-        <Setter Property="FontFamily" Value="Friz Quadrata Std"/>
-        <Setter Property="Text" Value="3일차"/>
-        <Setter Property="FontWeight" Value="Bold"/>
-        <Setter Property="HorizontalAlignment" Value="Center"/>
-    </Style>
     <Style TargetType="{x:Type views:ClashView}">
         <Setter Property="Template">
             <Setter.Value>
@@ -30,12 +15,11 @@
                         <units:Manual/>
                         <Grid Grid.Row="1" Margin="110 0 30 0">
                             <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <StackPanel HorizontalAlignment="Left">
-                                <TextBlock Style="{StaticResource TXB.HEADER}"/>
-                                <TextBlock Style="{StaticResource TXB.SUB}"/>
-                            </StackPanel>
-                            <TextBlock Text="테스트2" HorizontalAlignment="Right" Foreground="White"/>
+                            <units:CityCup/>
+                            <TextBlock Grid.Column="1" Text="테스트2" HorizontalAlignment="Right" Foreground="White"/>
                         </Grid>
                     </Grid>
                 </ControlTemplate>
