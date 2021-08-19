@@ -19,7 +19,6 @@
 	</LinearGradientBrush>
 	
 	<Style TargetType="{x:Type ctrls:RiotButton}">
-		<Setter Property="Width" Value="220"/>
 		<Setter Property="Height" Value="30"/>
 		<Setter Property="FontWeight" Value="Normal"/>
 		<Setter Property="FontSize" Value="12"/>
@@ -27,6 +26,7 @@
 		<Setter Property="Background" Value="#1E2328"/>
 		<Setter Property="BorderBrush" Value="{StaticResource BTN.BDR}"/>
 		<Setter Property="BorderThickness" Value="1 1 1 1"/>
+		<Setter Property="Cursor" Value="Hand"/>
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type ctrls:RiotButton}">
@@ -38,14 +38,13 @@
 								SnapsToDevicePixels="True" 
 								ClipToBounds="True">
 							<Grid Margin="0 0 0 0">
-								<ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+								<ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Margin="{TemplateBinding ContentMargin}"/>
 								<Border Background="Transparent" BorderBrush="#CC091119" BorderThickness="1" Margin="0"/>
 							</Grid>
 						</Border>
 					</Grid>
 					<ControlTemplate.Triggers>
 						<Trigger Property="IsMouseOver" Value="True">
-							<Setter Property="Cursor" Value="Hand"/>
 							<Setter Property="Foreground" Value="#f0e6d2"/>
 							<Setter TargetName="border" Property="BorderBrush" Value="{StaticResource BTN.BDR.OVER}"/>
 							<Setter TargetName="border" Property="Background" Value="{StaticResource BTN.BG.OVER}"/>

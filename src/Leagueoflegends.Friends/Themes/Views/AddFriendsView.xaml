@@ -4,6 +4,16 @@
 					xmlns:views="clr-namespace:Leagueoflegends.Friends.UI.Views"
 					xmlns:ctrls="clr-namespace:Leagueoflegends.LayoutSupport.Controls;assembly=Leagueoflegends.LayoutSupport">
 
+	<Style TargetType="{x:Type ctrls:RiotButton}" x:Key="BTN.ADD">
+		<Setter Property="Width" Value="95"/>
+		<Setter Property="Height" Value="35"/>
+		<Setter Property="FontSize" Value="12"/>
+		<Setter Property="HorizontalAlignment" Value="Right"/>
+		<Setter Property="VerticalAlignment" Value="Top"/>
+		<Setter Property="Margin" Value="10 12 0 0"/>
+		<Setter Property="Content" Value="Add Friend"/>
+	</Style>
+	
 	<Style TargetType="{x:Type views:AddFriendsView}">
 		<Setter Property="Template">
 			<Setter.Value>
@@ -40,7 +50,7 @@
 										   Margin="0 15 0 0"/>
 								<StackPanel Orientation="Horizontal">
 									<ctrls:RiotTextBox/>
-									<units:AddButton/>
+									<ctrls:RiotButton Style="{StaticResource BTN.ADD}"/>
 								</StackPanel>
 							</StackPanel>
 

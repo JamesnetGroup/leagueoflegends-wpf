@@ -4,6 +4,4 @@
         <ResourceDictionary Source="/Leagueoflegends.Clash;component/Themes/Views/ClashView.xaml"/>
         <ResourceDictionary Source="/Leagueoflegends.Clash;component/Themes/Units/Manual.xaml"/>
     </ResourceDictionary.MergedDictionaries>
-
-   
 </ResourceDictionary>

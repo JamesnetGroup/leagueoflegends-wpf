@@ -2,7 +2,6 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 	<ResourceDictionary.MergedDictionaries>
-		<ResourceDictionary Source="/Leagueoflegends.Friends;component/Themes/Units/AddButton.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Friends;component/Themes/Units/DoneButton.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Friends;component/Themes/Units/DeleteButton.xaml"/>
 		<ResourceDictionary Source="/Leagueoflegends.Friends;component/Themes/Units/RequestUserBox.xaml"/>
