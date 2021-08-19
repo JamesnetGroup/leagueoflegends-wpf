@@ -1,6 +1,12 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:units="clr-namespace:Leagueoflegends.Clash.UI.Units">
+    <LinearGradientBrush x:Key="IMG.BDR" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#785A28" Offset="0"/>
+        <GradientStop Color="#CBB883" Offset="0.5"/>
+        <GradientStop Color="#463714" Offset="1"/>
+    </LinearGradientBrush>
+
     <Style TargetType="{x:Type TextBlock}" x:Key="TXB.HEADER">
         <Setter Property="Foreground" Value="#F0E6D2"/>
         <Setter Property="FontSize" Value="23"/>
@@ -23,6 +29,23 @@
                     <StackPanel>
                         <TextBlock Style="{StaticResource TXB.HEADER}"/>
                         <TextBlock Style="{StaticResource TXB.SUB}"/>
+                        <!--Border임시 Path로 변경예정-->
+                        <Border x:Name="border"
+									Grid.Column="0"
+									Width="158" 
+									Height="158" 
+									CornerRadius="300"
+                                    Background="Transparent"
+									BorderBrush="{StaticResource IMG.BDR}" 
+									BorderThickness="2.5" 
+									Margin="0 14 0 0">
+                            <Border Margin="8"
+                                    BorderBrush="{StaticResource IMG.BDR}"
+                                    BorderThickness="1.5"
+                                    CornerRadius="300">
+                                
+                            </Border>
+                        </Border>
                     </StackPanel>
                 </ControlTemplate>
             </Setter.Value>
