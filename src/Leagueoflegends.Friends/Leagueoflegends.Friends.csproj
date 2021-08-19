@@ -53,10 +53,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Themes\Units\AddButton.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Themes\Units\DoneButton.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -96,7 +92,6 @@
     </Compile>
     <Compile Include="Local\ViewModel\AddFriendsViewModel.cs" />
     <Compile Include="UI\Views\AddFriendsView.cs" />
-    <Compile Include="UI\Units\AddButton.cs" />
     <Compile Include="UI\Units\DoneButton.cs" />
     <Compile Include="UI\Units\DeleteButton.cs" />
     <Compile Include="UI\Units\RequestUserBox.cs" />

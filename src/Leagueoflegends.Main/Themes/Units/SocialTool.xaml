@@ -40,7 +40,7 @@
 		</Setter>
 	</Style>
 	
-	<Style TargetType="{x:Type Button}" x:Key="BTN.01">
+	<Style TargetType="{x:Type Button}" x:Key="BTN.SOCIAL">
 		<Style.Resources>
 			<Style TargetType="ToolTip" BasedOn="{StaticResource MAIN.TOOL}"/>
 		</Style.Resources>
@@ -92,7 +92,7 @@
 		</Setter>
 	</Style>
 
-	<Style TargetType="{x:Type Button}" x:Key="BTN.FRIENDS" BasedOn="{StaticResource BTN.01}">
+	<Style TargetType="{x:Type Button}" x:Key="BTN.FRIENDS" BasedOn="{StaticResource BTN.SOCIAL}">
 		<Setter Property="Tag" Value="01"/>
 		<Setter Property="Command" Value="{Binding ModalCommand}"/>
 		<Setter Property="CommandParameter" Value="{x:Type friend:AddFriendsView}"/>
@@ -103,7 +103,7 @@
 		</Style.Resources>
 	</Style>
 
-	<Style TargetType="{x:Type Button}" x:Key="BTN.FOLDER" BasedOn="{StaticResource BTN.01}">
+	<Style TargetType="{x:Type Button}" x:Key="BTN.FOLDER" BasedOn="{StaticResource BTN.SOCIAL}">
 		<Setter Property="Tag" Value="02"/>
 		<Style.Resources>
 			<Style TargetType="ToolTip" BasedOn="{StaticResource MAIN.TOOL}">
@@ -112,7 +112,7 @@
 		</Style.Resources>
 	</Style>
 
-	<Style TargetType="{x:Type Button}" x:Key="BTN.FILTER" BasedOn="{StaticResource BTN.01}">
+	<Style TargetType="{x:Type Button}" x:Key="BTN.FILTER" BasedOn="{StaticResource BTN.SOCIAL}">
 		<Setter Property="Tag" Value="04"/>
 		<Setter Property="Margin" Value="6 4 3 4"/>
 		<Style.Resources>
