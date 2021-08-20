@@ -22,11 +22,9 @@ You can always share information with us and we are looking forward to it.
 ### Development Information
 This is about **WPF League of Legends** development information.
    
-> ✔️ NET 4.8.1 (NET 6 Soon)  
+> ✔️ NET 6.0 
 > ✔️ C# 9.0  
 > ✔️ [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/ko/vs/preview/vs2022/)
-
-_(It will be soon updated to `.NET 6` and `C# 10.0` 😃)_ 
 
 ### Project Structure
  
@@ -88,3 +86,5 @@ _(It will be soon updated to `.NET 6` and `C# 10.0` 😃)_
   
 ## Reference
 TBD....
+
+> [20210820] .NET 6.0 업데이트 완료
