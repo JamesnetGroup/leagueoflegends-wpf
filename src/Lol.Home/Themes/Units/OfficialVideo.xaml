@@ -1,0 +1,63 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:units="clr-namespace:Lol.Home.UI.Units"
+					xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
+
+	<Style TargetType="{x:Type TextBlock}" x:Key="TXB.SUB">
+		<Setter Property="Foreground" Value="#A09B8C"/>
+		<Setter Property="FontSize" Value="12.5"/>
+		<Setter Property="Text" Value="JUNE 21 - JULY 12"/>
+		<Setter Property="FontFamily" Value="Friz Quadrata Std"/>
+		<Setter Property="FontWeight" Value="Bold"/>
+		<Setter Property="Margin" Value="0 0 0 10"/>
+	</Style>
+
+	<Style TargetType="{x:Type TextBlock}" x:Key="TXB.HEADER">
+		<Setter Property="Foreground" Value="#F0E6D2"/>
+		<Setter Property="FontSize" Value="40"/>
+		<Setter Property="FontFamily" Value="Friz Quadrata Std"/>
+		<Setter Property="Text" Value="PRIME GAMING -&#x0a;LOL"/>
+		<Setter Property="FontWeight" Value="Bold"/>
+	</Style>
+
+	<Style TargetType="{x:Type TextBlock}" x:Key="TXB.DESC">
+		<Setter Property="Foreground" Value="#FFA09B8C"/>
+		<Setter Property="FontSize" Value="14"/>
+		<Setter Property="TextWrapping" Value="WrapWithOverflow"/>
+		<Setter Property="Text" Value="Second of 3 skin shards for this month now&#x0a;available with Prime Gaming."/>
+		<Setter Property="Margin" Value="0 12 0 12"/>
+	</Style>
+
+	<Style TargetType="{x:Type ctrls:RiotButton}" x:Key="BTN.MOVIE">
+		<Setter Property="Width" Value="130"/>
+		<Setter Property="Height" Value="32"/>
+		<Setter Property="FontSize" Value="14"/>
+		<Setter Property="FontWeight" Value="Bold"/>
+		<Setter Property="BorderThickness" Value="2 2 2 2"/>
+		<Setter Property="FontFamily" Value="Friz Quadrata Std"/>
+		<Setter Property="HorizontalAlignment" Value="Left"/>
+		<Setter Property="Content" Value="CLAIM NOW"/>
+		<Setter Property="Margin" Value="0 6 0 0"/>
+		<Setter Property="ContentMargin" Value="18 0 18 0"/>
+	</Style>
+
+
+	<Style TargetType="{x:Type units:OfficialVideo}">
+		<Setter Property="Grid.Row" Value="0"/>
+		<Setter Property="Grid.Column" Value="0"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+		<Setter Property="Margin" Value="30 0 0 0"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type units:OfficialVideo}">
+					<StackPanel>
+						<TextBlock Style="{StaticResource TXB.SUB}"/>
+						<TextBlock Style="{StaticResource TXB.HEADER}"/>
+						<TextBlock Style="{StaticResource TXB.DESC}"/>
+						<ctrls:RiotButton Style="{StaticResource BTN.MOVIE}"/>
+					</StackPanel>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+</ResourceDictionary>

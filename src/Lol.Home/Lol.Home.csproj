@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Lol.LayoutSupport\Lol.LayoutSupport.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="UI\Views\Overview.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\OfficialVideo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\Rotation.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\Thumbnail.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Views\Overview.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+</Project>

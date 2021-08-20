@@ -1,0 +1,59 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Lol.Data\Lol.Data.csproj" />
+    <ProjectReference Include="..\Lol.Foundation\Lol.Foundation.csproj" />
+    <ProjectReference Include="..\Lol.LayoutSupport\Lol.LayoutSupport.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="UI\Views\TeamFightView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\FatesPass.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\ItemInfo.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\ItemList.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\LevelControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\LockButton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\QuickButton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\SubTitleControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\Thumbnails.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\TitleControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\UpgradeButton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Views\TeamFightResource.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+</Project>

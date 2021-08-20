@@ -1,7 +1,0 @@
-﻿<ResourceDictionary
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-	<ResourceDictionary.MergedDictionaries>
-		<ResourceDictionary Source="Leagueoflegends.Settings.About;component/Themes/Views/Verification.xaml"/>
-	</ResourceDictionary.MergedDictionaries>
-</ResourceDictionary>

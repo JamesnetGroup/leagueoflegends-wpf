@@ -1,0 +1,21 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Styles/BasicScroll.xaml"/>
+		<ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Styles/RiotIcon.xaml"/>
+		<ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Styles/CircleFace.xaml"/>
+		<ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Styles/RiotCheckBox.xaml"/>
+		<ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Styles/RiotComboBox.xaml"/>
+		<ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Styles/RiotComboBoxItem.xaml"/>
+		<ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Styles/RiotButton.xaml"/>
+		<ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Styles/RiotHotKey.xaml"/>
+		<ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Styles/RiotSlider.xaml"/>
+		<ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Styles/RiotVolume.xaml"/>
+		<ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Styles/BasicTooltip.xaml"/>
+		<ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Styles/RiotTextBox.xaml"/>
+		<ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Styles/RiotTooltip.xaml"/>
+		<ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Styles/Modal.xaml"/>
+		<ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Styles/MainWindow.xaml"/>
+	</ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

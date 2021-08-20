@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Lol.LayoutSupport\Lol.LayoutSupport.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\CityCup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\Manual.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Views\ClashView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Lol.DBEntity\Lol.DBEntity.csproj" />
+    <ProjectReference Include="..\Lol.LayoutSupport\Lol.LayoutSupport.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\DeleteButton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\DoneButton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\RecentUserBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\RequestUserBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Views\AddFriendsView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+</Project>
