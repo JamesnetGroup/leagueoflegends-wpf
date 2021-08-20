@@ -54,6 +54,7 @@
 		<Setter Property="HorizontalAlignment" Value="Left"/>
 		<Setter Property="Margin" Value="0 6 0 0"/>
 		<Setter Property="Content" Value="전체 복구 시작"/>
+		<Setter Property="Width" Value="220"/>
 	</Style>
 
 	<Style TargetType="{x:Type ctrls:RiotComboBoxItem}" x:Key="IN.CBXI">
