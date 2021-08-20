@@ -47,13 +47,11 @@ namespace Lol.Settings.Client.Local.ViewModels
 
         private void SearchLink(object obj)
         {
-            string Uri = "https://na.Lol.com/en-us/event/league-of-legends-code-of-conduct/";
+            string Uri = "https://na.leagueoflegends.com/en-us/event/league-of-legends-code-of-conduct/";
 
-            var process = new Process()
-            {
-                StartInfo = new ProcessStartInfo(Uri)
-            };
-            process.Start();
+            Process.Start(new ProcessStartInfo(Uri) { 
+                UseShellExecute = true 
+            });
         }
 		#endregion
 	}

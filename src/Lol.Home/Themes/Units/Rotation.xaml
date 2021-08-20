@@ -4,7 +4,7 @@
 					xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
 
 	<Style TargetType="{x:Type ctrls:RiotButton}" x:Key="BTN.ROTATE">
-		<Setter Property="Width" Value="165"/>
+		<Setter Property="Width" Value="170"/>
 		<Setter Property="Height" Value="32"/>
 		<Setter Property="FontFamily" Value="Friz Quadrata Std"/>
 		<Setter Property="Content" Value="Free Champion Rotation"/>
