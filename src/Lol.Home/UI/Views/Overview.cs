@@ -1,10 +1,9 @@
 ﻿using Lol.LayoutSupport.Controls;
-using Lol.LayoutSupport.Controls;
 using System.Windows;
 
 namespace Lol.Home.UI.Views
 {
-	public class Overview : View
+    public class Overview : View
     {
         #region DefaultStyleKey
 
