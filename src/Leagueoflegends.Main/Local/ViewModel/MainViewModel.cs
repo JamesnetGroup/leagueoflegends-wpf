@@ -150,9 +150,9 @@ namespace Leagueoflegends.Main.Local.ViewModel
                 content = value.Seq switch
                 {
                     8 => new Overview().SetVM(new OverviewModel()),
-                    21 => new Champions().SetVM(new ChampionsViewModel()),
-                    //HubView로 변경 예정
-                    26 => new ClashView().SetVM(new ClashViewModel()),
+                    // TODO: [Kevin] HubView로 변경 예정
+                    11 => new ClashView().SetVM(new ClashViewModel()),
+                    26 => new Champions().SetVM(new ChampionsViewModel()),
                     _ => new EmptyContent()
                 };
             }
