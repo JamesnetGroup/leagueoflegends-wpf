@@ -1,5 +1,4 @@
-﻿using Lol.Controls;
-using Lol.Controls.Primitives;
+﻿using Lol.Controls.Primitives;
 using System.Windows;
 
 namespace Lol.LayoutSupport.Controls
