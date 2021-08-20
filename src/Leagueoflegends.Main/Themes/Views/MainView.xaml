@@ -104,7 +104,7 @@
 			<DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.CurrentSeq}" Value="6">
 				<Setter TargetName="border" Property="Background" Value="#06111D"/>
 			</DataTrigger>
-			<DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.CurrentSeq}" Value="21">
+			<DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.CurrentSeq}" Value="26">
 				<Setter TargetName="border" Property="Background" Value="#070A0B"/>
 			</DataTrigger>
 		</DataTemplate.Triggers>

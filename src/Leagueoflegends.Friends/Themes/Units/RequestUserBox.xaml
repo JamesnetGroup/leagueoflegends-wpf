@@ -129,7 +129,7 @@
 	<Style TargetType="{x:Type units:RequestUserBox}">
 		<Setter Property="Grid.Row" Value="1"/>
 		<Setter Property="ItemContainerStyle" Value="{StaticResource LBXI.SENT}"/>
-		<Setter Property="ItemsSource" Value="{Binding UserCollection.SentList}"/>
+		<Setter Property="ItemsSource" Value="{Binding UserCollection.RequestList}"/>
 		<Setter Property="Margin" Value="-5 5 0 0"/>
 		<Setter Property="Template">
 			<Setter.Value>
