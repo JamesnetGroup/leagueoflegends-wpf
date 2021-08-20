@@ -31,34 +31,34 @@ This is about **WPF League of Legends** development information.
 <details>
   <summary><b> 📁 01. DB </b></summary>
   
-  - `Leagueoflegends.DBEntity.dll`
+  - `Lol.DBEntity.dll`
 </details>
 
 <details>
   <summary><b> 📁 02. BASE </b></summary>
   
   #### &nbsp;&nbsp;&nbsp; `Basement`  
-  - `Leagueoflegends.Data.dll`   
-  - `Leagueoflegends.Foundation.dll`
+  - `Lol.Data.dll`   
+  - `Lol.Foundation.dll`
   
   #### &nbsp;&nbsp;&nbsp; `Implement`  
-  - `Leagueoflegends.Controls.dll`   
-  - `Leagueoflegends.LayoutSupport.dll`
+  - `Lol.Controls.dll`   
+  - `Lol.LayoutSupport.dll`
     
   #### &nbsp;&nbsp;&nbsp; `Support`
-  - `Leagueoflegends.Converter.dll`   
-  - `Leagueoflegends.Resources.dll`
+  - `Lol.Converter.dll`   
+  - `Lol.Resources.dll`
 </details>
 
 <details>
   <summary><b> 📁 03. UI </b></summary>
   
   #### &nbsp;&nbsp;&nbsp; `Views`  
-  - `Leagueoflegends.Friends.dll`   
-  - `Leagueoflegends.Settings.dll`
+  - `Lol.Friends.dll`   
+  - `Lol.Settings.dll`
   
   #### &nbsp;&nbsp;&nbsp; `Windows` 
-  - `Leagueoflegends.Main.dll`   
+  - `Lol.Main.dll`   
 </details>
 
 <details>
