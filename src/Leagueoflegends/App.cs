@@ -1,6 +1,6 @@
-﻿using Leagueoflegends.Foundation.Riotbase;
-using Leagueoflegends.Main.Local.ViewModel;
-using Leagueoflegends.Main.UI.Views;
+﻿using Lol.Foundation.Riotbase;
+using Lol.Main.Local.ViewModel;
+using Lol.Main.UI.Views;
 using System;
 using System.Windows;
 

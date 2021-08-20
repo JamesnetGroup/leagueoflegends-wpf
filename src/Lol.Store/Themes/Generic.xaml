@@ -1,0 +1,16 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary Source="/Lol.Store;component/Themes/Units/Category.xaml"/>
+		<ResourceDictionary Source="/Lol.Store;component/Themes/Units/CategoryItem.xaml"/>
+		<ResourceDictionary Source="/Lol.Store;component/Themes/Units/ItemMenu.xaml"/>
+		<ResourceDictionary Source="/Lol.Store;component/Themes/Units/FilterList.xaml"/>
+		<ResourceDictionary Source="/Lol.Store;component/Themes/Units/FilterListItem.xaml"/>
+		<ResourceDictionary Source="/Lol.Store;component/Themes/Units/SearchTextBox.xaml"/>
+		<ResourceDictionary Source="/Lol.Store;component/Themes/Units/StoreCheckBox.xaml"/>
+		<ResourceDictionary Source="/Lol.Store;component/Themes/Units/SortComboBox.xaml"/>
+		<ResourceDictionary Source="/Lol.Store;component/Themes/Units/SortComboBoxItem.xaml"/>
+		<ResourceDictionary Source="/Lol.Store;component/Themes/Views/Champions.xaml"/>
+	</ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

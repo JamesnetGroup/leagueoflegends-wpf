@@ -1,0 +1,286 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:units="clr-namespace:Lol.Main.UI.Units"
+	xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
+
+	<LinearGradientBrush x:Key="LGB.RDO.BG" EndPoint="0.5,1" StartPoint="0.5,0">
+		<GradientStop Color="Transparent" Offset="0"/>
+		<GradientStop Color="#008B6811" Offset="0.5"/>
+		<GradientStop Color="#228B6811" Offset="0.75"/>
+		<GradientStop Color="#448B6811" Offset="1"/>
+	</LinearGradientBrush>
+
+	<Style TargetType="{x:Type ctrls:RiotIcon}" x:Key="IN.ICON">
+		<Setter Property="HorizontalAlignment" Value="Center"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+		<Setter Property="Fill" Value="#CDBE91"/>
+		<Setter Property="Width" Value="27"/>
+		<Setter Property="Height" Value="27"/>
+		<Setter Property="Margin" Value="11 0 11 0"/>
+	</Style>
+
+	<Style TargetType="{x:Type ToolTip}" x:Key="MAIN.TOOL">
+		<Setter Property="Placement" Value="Bottom"/>
+		<Setter Property="VerticalOffset" Value="5"/>
+		<Setter Property="HorizontalOffset" Value="5"/>
+		<Setter Property="Foreground" Value="#A09B8C"/>
+		<Setter Property="FontSize" Value="11"/>
+		<Setter Property="FontWeight" Value="Bold"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate>
+					<Border Background="#010A13" BorderThickness="2">
+						<Border.BorderBrush>
+							<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+								<GradientStop Color="#614a1f" Offset="0"/>
+								<GradientStop Color="#463714" Offset="1"/>
+							</LinearGradientBrush>
+						</Border.BorderBrush>
+						<ContentPresenter Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center">
+							<ContentPresenter.Content>
+								<TextBlock Text="{TemplateBinding ToolTip}" Padding="2 2 2 2"/>
+							</ContentPresenter.Content>
+						</ContentPresenter>
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style TargetType="{x:Type Image}" x:Key="IN.IMG">
+		<Setter Property="Source" Value="/Lol.Resources;component/Images/icon-menu-selected.png"/>
+		<Setter Property="Visibility" Value="Collapsed"/>
+		<Setter Property="VerticalAlignment" Value="Top"/>
+		<Setter Property="UseLayoutRounding" Value="True"/>
+		<Setter Property="Width" Value="28"/>
+		<Setter Property="Height" Value="15"/>
+		<Setter Property="Margin" Value="0 2 0 0"/>
+	</Style>
+	
+	<Style TargetType="{x:Type RadioButton}" x:Key="MENU.TEXT">
+		<Setter Property="Command" Value="{Binding MenuSelectCommand}"/>
+		<Setter Property="CommandParameter" Value="{Binding}"/>
+		<Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+		<Setter Property="GroupName" Value="GROUP.MENU"/>
+		<Setter Property="Background" Value="Transparent"/>
+		<Setter Property="Margin" Value="0 0 0 0"/>
+		<Setter Property="Padding" Value="15 27 15 28"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type RadioButton}">
+					<ControlTemplate.Resources>
+						<Style TargetType="{x:Type TextBlock}" x:Key="IN.CONTENT">
+							<Setter Property="Text" Value="{Binding Name}"/>
+							<Setter Property="Foreground" Value="#CDBE91"/>
+							<Setter Property="VerticalAlignment" Value="Bottom"/>
+							<Setter Property="Padding" Value="15 27 15 28"/>
+							<Setter Property="FontFamily" Value="Friz Quadrata Std"/>
+							<Setter Property="FontSize" Value="15"/>
+							<Setter Property="FontWeight" Value="Bold"/>
+						</Style>
+						<Style TargetType="{x:Type Border}" x:Key="IN.BORDER">
+							<Setter Property="Visibility" Value="Collapsed"/>
+							<Setter Property="Background" Value="{StaticResource LGB.RDO.BG}"/>
+						</Style>
+					</ControlTemplate.Resources>
+					<Grid>
+						<Image x:Name="image" Style="{StaticResource IN.IMG}"/>
+						<TextBlock x:Name="text" Style="{StaticResource IN.CONTENT}"/>
+						<Border x:Name="border" Style="{StaticResource IN.BORDER}"/>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter TargetName="text" Property="Foreground" Value="#FFFFFF"/>
+							<Setter TargetName="border" Property="Visibility" Value="Visible"/>
+							<Setter Property="Cursor" Value="Hand"/>
+						</Trigger>
+						<Trigger Property="IsChecked" Value="True">
+							<Setter TargetName="text" Property="Foreground" Value="#FFFFFF"/>
+							<Setter TargetName="border" Property="Visibility" Value="Visible"/>
+							<Setter TargetName="image" Property="Visibility" Value="Visible"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style TargetType="{x:Type RadioButton}" x:Key="MENU.ICON">
+		<Style.Resources>
+			<Style TargetType="ToolTip" BasedOn="{StaticResource MAIN.TOOL}"/>
+		</Style.Resources>
+		<Setter Property="Command" Value="{Binding MenuSelectCommand}"/>
+		<Setter Property="CommandParameter" Value="{Binding}"/>
+		<Setter Property="GroupName" Value="GROUP.MENU"/>
+		<Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+		<Setter Property="Foreground" Value="#CDBE91"/>
+		<Setter Property="Margin" Value="0 0 0 0"/>
+		<Setter Property="FontSize" Value="20"/>
+		<Setter Property="FontWeight" Value="Bold"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type RadioButton}">
+					<ControlTemplate.Resources>
+						<Style TargetType="{x:Type Border}" x:Key="IN.BORDER.01">
+							<Setter Property="Background" Value="Transparent"/>
+							<Setter Property="Padding" Value="3 0 3 0"/>
+						</Style>
+						<Style TargetType="{x:Type Border}" x:Key="IN.BORDER.02">
+							<Setter Property="Visibility" Value="Collapsed"/>
+							<Setter Property="Background" Value="{StaticResource LGB.RDO.BG}"/>
+							<Setter Property="ToolTip">
+								<Setter.Value>
+									<ToolTip ToolTip="{Binding RelativeSource={RelativeSource AncestorType=Border}, Path=ToolTip}"/>
+								</Setter.Value>
+							</Setter>
+						</Style>
+					</ControlTemplate.Resources>
+					<Grid>
+						<Border Style="{StaticResource IN.BORDER.01}">
+							<Grid>
+								<Image x:Name="img" Style="{StaticResource IN.IMG}"/>
+								<ctrls:RiotIcon x:Name="path" Style="{StaticResource IN.ICON}"/>
+							</Grid>
+						</Border>
+						<Border x:Name="border" Style="{StaticResource IN.BORDER.02}"/>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="Foreground" Value="#FFFFFF"/>
+							<Setter TargetName="border" Property="Visibility" Value="Visible"/>
+							<Setter Property="Cursor" Value="Hand"/>
+						</Trigger>
+						<Trigger Property="IsChecked" Value="True">
+							<Setter Property="Foreground" Value="#FFFFFF"/>
+							<Setter TargetName="border" Property="Visibility" Value="Visible"/>
+							<Setter TargetName="img" Property="Visibility" Value="Visible"/>
+						</Trigger>
+						<DataTrigger Binding="{Binding Name}" Value="Profile">
+							<Setter TargetName="path" Property="IconType" Value="AccountCircle"/>
+							<Setter TargetName="border" Property="ToolTip">
+								<Setter.Value>
+                                    <ToolTip ToolTip="Profile"/>
+								</Setter.Value>
+							</Setter>
+						</DataTrigger>
+						<DataTrigger Binding="{Binding Name}" Value="Collection">
+							<Setter TargetName="path" Property="IconType" Value="Bag"/>
+							<Setter TargetName="border" Property="ToolTip">
+								<Setter.Value>
+									<ToolTip ToolTip="Collection"/>
+								</Setter.Value>
+							</Setter>
+						</DataTrigger>
+						<DataTrigger Binding="{Binding Name}" Value="Loot">
+							<Setter TargetName="path" Property="IconType" Value="Arc"/>
+							<Setter TargetName="border" Property="ToolTip">
+								<Setter.Value>
+                                    <ToolTip ToolTip="Loot"/>
+								</Setter.Value>
+							</Setter>
+						</DataTrigger>
+						<DataTrigger Binding="{Binding Name}" Value="My Shop">
+							<Setter TargetName="path" Property="IconType" Value="Card"/>
+							<Setter TargetName="border" Property="ToolTip">
+								<Setter.Value>
+									<ToolTip ToolTip="My Shop"/>
+								</Setter.Value>
+							</Setter>
+						</DataTrigger>
+						<DataTrigger Binding="{Binding Name}" Value="Store">
+							<Setter TargetName="path" Property="IconType" Value="Coin"/>
+							<Setter TargetName="border" Property="ToolTip">
+								<Setter.Value>
+									<ToolTip ToolTip="Store"/>
+								</Setter.Value>
+							</Setter>
+						</DataTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style TargetType="{x:Type ListBoxItem}" x:Key="LBXI.TEXTMENU">
+		<Setter Property="Visibility" Value="Collapsed"/>
+		<Setter Property="Background" Value="Transparent"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type ListBoxItem}">
+					<RadioButton Style="{StaticResource MENU.TEXT}"
+                                 IsChecked="{Binding RelativeSource={RelativeSource AncestorType=ListBoxItem}, Path=IsSelected}"/>
+					<ControlTemplate.Triggers>
+						<DataTrigger Binding="{Binding MenuType}" Value="TEXT">
+							<Setter Property="Visibility" Value="Visible"/>
+						</DataTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style TargetType="{x:Type ListBoxItem}" x:Key="LBXI.ICONMENU">
+		<Setter Property="Visibility" Value="Collapsed"/>
+		<Setter Property="Background" Value="Transparent"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type ListBoxItem}">
+					<RadioButton Style="{StaticResource MENU.ICON}"
+                                 IsChecked="{Binding RelativeSource={RelativeSource AncestorType=ListBoxItem}, Path=IsSelected}"/>
+					<ControlTemplate.Triggers>
+						<DataTrigger Binding="{Binding MenuType}" Value="ICON">
+							<Setter Property="Visibility" Value="Visible"/>
+						</DataTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style TargetType="{x:Type ListBox}" x:Key="IN.LBX">
+		<Setter Property="ItemsSource" Value="{Binding Menus}"/>
+        <Setter Property="SelectedItem" Value="{Binding CurrentMenu}"/>
+        <Setter Property="Background" Value="Transparent"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type ListBox}">
+					<ItemsPresenter/>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="ItemsPanel">
+			<Setter.Value>
+				<ItemsPanelTemplate>
+					<StackPanel Orientation="Horizontal"/>
+				</ItemsPanelTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style TargetType="{x:Type ListBox}" x:Key="LBX.TEXT" BasedOn="{StaticResource IN.LBX}">
+		<Setter Property="ItemContainerStyle" Value="{StaticResource LBXI.TEXTMENU}"/>
+	</Style>
+
+	<Style TargetType="{x:Type ListBox}" x:Key="LBX.ICON" BasedOn="{StaticResource IN.LBX}">
+		<Setter Property="ItemContainerStyle" Value="{StaticResource LBXI.ICONMENU}"/>
+	</Style>
+
+	<Style TargetType="{x:Type units:MainMenu}">
+        <Setter Property="Template">
+            <Setter.Value>
+				<ControlTemplate TargetType="{x:Type units:MainMenu}">
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="Auto"/>
+							<ColumnDefinition Width="200"/>
+							<ColumnDefinition Width="Auto"/>
+						</Grid.ColumnDefinitions>
+						<ListBox Grid.Column="0" Style="{StaticResource LBX.TEXT}"/>
+						<ListBox Grid.Column="2" Style="{StaticResource LBX.ICON}"/>
+					</Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

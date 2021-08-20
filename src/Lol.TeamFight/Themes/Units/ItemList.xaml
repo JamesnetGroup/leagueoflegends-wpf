@@ -1,0 +1,122 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:units="clr-namespace:Lol.TeamFight.UI.Units"
+					xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
+
+	<LinearGradientBrush x:Key="BDR.IMG" StartPoint="0.5, 0" EndPoint="0.5, 1">
+		<GradientStop Color="#D9838F" Offset="0"/>
+		<GradientStop Color="#BE5F71" Offset="0.5"/>
+		<GradientStop Color="#A43D55" Offset="1"/>
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="BDR.IMG.OVER" StartPoint="0.5, 0" EndPoint="0.5, 1">
+		<GradientStop Color="#FEC1CD" Offset="0"/>
+		<GradientStop Color="#E78CA0" Offset="0.5"/>
+		<GradientStop Color="#D15976" Offset="1"/>
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="BG.LVL" StartPoint="0.5, 0" EndPoint="0.5, 1">
+		<GradientStop Color="#08B5B3" Offset="0"/>
+		<GradientStop Color="#049ABC" Offset="0.5"/>
+		<GradientStop Color="#0175A0" Offset="1"/>
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="BG.LVL.OVER" StartPoint="0.5, 0" EndPoint="0.5, 1">
+		<GradientStop Color="#09D4D2" Offset="0"/>
+		<GradientStop Color="#0399BB" Offset="0.5"/>
+		<GradientStop Color="#01729D" Offset="1"/>
+	</LinearGradientBrush>
+
+	<Style TargetType="{x:Type ctrls:TooltipB}" x:Key="TOOL.TYPE.02">
+		<Setter Property="Placement" Value="Top"/>
+		<Setter Property="Width" Value="160"/>
+		<Setter Property="Height" Value="80"/>
+		<Setter Property="HorizontalOffset" Value="-15"/>
+		<Setter Property="VerticalOffset" Value="-5"/>
+		<Setter Property="HorizontalAlignment" Value="Center"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+	</Style>
+
+	<Style TargetType="{x:Type ListBoxItem}" x:Key="LBXI.ITEM">
+		<Style.Resources>
+			<Style TargetType="{x:Type ctrls:TooltipB}" BasedOn="{StaticResource TOOL.TYPE.02}"/>
+		</Style.Resources>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type ListBoxItem}">
+					<Border x:Name="border" Background="Transparent" BorderBrush="Transparent">
+						<Grid Margin="10 5 10 10">
+							<Grid.RowDefinitions>
+								<RowDefinition Height="*"/>
+								<RowDefinition Height="Auto"/>
+							</Grid.RowDefinitions>
+							<Border x:Name="border2" Grid.Row="0" Width="90" Height="90" Background="Transparent" BorderBrush="{StaticResource BDR.IMG}" BorderThickness="3">
+								<Image Source="{Binding Url}" Stretch="UniformToFill"/>
+								<Border.ToolTip>
+									<ctrls:TooltipB x:Name="tooltip">
+										<ctrls:TooltipB.ToolTip>
+											<StackPanel>
+												<TextBlock Text="{Binding Name}" Foreground="#F0E6D2" FontWeight="Bold" FontSize="11" 
+														   TextWrapping="WrapWithOverflow" TextAlignment="Center"/>
+												<TextBlock Text="{Binding Explain}" Foreground="#A09B8C" FontWeight="Bold" FontSize="10" 
+														   TextWrapping="WrapWithOverflow" TextAlignment="Center" Padding="10 5 10 0"/>
+											</StackPanel>
+										</ctrls:TooltipB.ToolTip>
+									</ctrls:TooltipB>
+								</Border.ToolTip>
+							</Border>
+							<Border x:Name="border3" Grid.Row="1" Width="40" Height="20" Background="{StaticResource BG.LVL}"
+									BorderBrush="#213747" BorderThickness="1" Margin="0 25 0 20">
+								<Border x:Name="border4" BorderBrush="#0594A8" BorderThickness="1" Padding="1">
+									<ContentPresenter>
+										<ContentPresenter.Content>
+											<TextBlock x:Name="text" Grid.Row="1" Text="{Binding Level}" Background="Transparent" Foreground="#F0E6D2" Margin="0 1 0 0"
+													   FontWeight="Bold" FontSize="14" FontFamily="Friz Quadrata Std" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+										</ContentPresenter.Content>
+									</ContentPresenter>
+								</Border>
+							</Border>
+						</Grid>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter TargetName="border2" Property="BorderBrush" Value="{StaticResource BDR.IMG.OVER}"/>
+							<Setter TargetName="border3" Property="Background" Value="{StaticResource BG.LVL.OVER}"/>
+							<Setter TargetName="border4" Property="BorderBrush" Value="#05CEE6"/>
+						</Trigger>
+						<Trigger Property="IsSelected" Value="True">
+							<Setter TargetName="border" Property="Background" Value="#33FFFFFF"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style TargetType="{x:Type units:ItemList}">
+		<Setter Property="Grid.Row" Value="1"/>
+		<Setter Property="ItemContainerStyle" Value="{StaticResource LBXI.ITEM}"/>
+		<Setter Property="ItemsSource" Value="{Binding TeamFightItem}"/>
+		<Setter Property="SelectedItem" Value="{Binding CurrentTeamFightItem}"/>
+		<Setter Property="Background" Value="Transparent"/>
+		<Setter Property="BorderBrush" Value="Transparent"/>
+		<Setter Property="VerticalAlignment" Value="Top"/>
+		<Setter Property="Margin" Value="20 0 20 0"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type units:ItemList}">
+					<ctrls:BasicScroll HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Hidden">
+						<ItemsPresenter/>
+					</ctrls:BasicScroll>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="ItemsPanel">
+			<Setter.Value>
+				<ItemsPanelTemplate>
+					<StackPanel Orientation="Horizontal"/>
+				</ItemsPanelTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+</ResourceDictionary>

@@ -1,0 +1,88 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Lol.Data\Lol.Data.csproj" />
+    <ProjectReference Include="..\Lol.DBEntity\Lol.DBEntity.csproj" />
+    <ProjectReference Include="..\Lol.Foundation\Lol.Foundation.csproj" />
+    <ProjectReference Include="..\Lol.LayoutSupport\Lol.LayoutSupport.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\Game\GameControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\Game\Graphic.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\Game\Play.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\HotKey\CastControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\HotKey\Items.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\HotKey\Skills.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\HotKey\Spells.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\Interface\Emotion.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\Interface\Eternals.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\Interface\Messages.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\Interface\Notification.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\Interface\Option.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\Interface\Size.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\Interface\Strength.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\Replay\FindButton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\Replay\Location.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\Sound\SoundControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Views\GameSoundView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Views\GameView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Views\HotKeyView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Views\InterfaceView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Views\ReplayView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+</Project>

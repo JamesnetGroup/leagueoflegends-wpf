@@ -1,0 +1,28 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary Source="/Lol.Settings.InGame;component/Themes/Units/HotKey/CastControl.xaml"/>
+		<ResourceDictionary Source="/Lol.Settings.InGame;component/Themes/Units/HotKey/Items.xaml"/>
+		<ResourceDictionary Source="/Lol.Settings.InGame;component/Themes/Units/HotKey/Skills.xaml"/>
+		<ResourceDictionary Source="/Lol.Settings.InGame;component/Themes/Units/HotKey/Spells.xaml"/>
+		<ResourceDictionary Source="/Lol.Settings.InGame;component/Themes/Units/Sound/SoundControl.xaml"/>
+		<ResourceDictionary Source="/Lol.Settings.InGame;component/Themes/Units/Interface/Size.xaml"/>
+		<ResourceDictionary Source="/Lol.Settings.InGame;component/Themes/Units/Interface/Strength.xaml"/>
+		<ResourceDictionary Source="/Lol.Settings.InGame;component/Themes/Units/Interface/Notification.xaml"/>
+		<ResourceDictionary Source="/Lol.Settings.InGame;component/Themes/Units/Interface/Option.xaml"/>
+		<ResourceDictionary Source="/Lol.Settings.InGame;component/Themes/Units/Interface/Emotion.xaml"/>
+		<ResourceDictionary Source="/Lol.Settings.InGame;component/Themes/Units/Interface/Eternals.xaml"/>
+		<ResourceDictionary Source="/Lol.Settings.InGame;component/Themes/Units/Interface/Messages.xaml"/>
+		<ResourceDictionary Source="/Lol.Settings.InGame;component/Themes/Units/Game/Graphic.xaml"/>
+		<ResourceDictionary Source="/Lol.Settings.InGame;component/Themes/Units/Game/GameControl.xaml"/>
+		<ResourceDictionary Source="/Lol.Settings.InGame;component/Themes/Units/Game/Play.xaml"/>
+		<ResourceDictionary Source="/Lol.Settings.InGame;component/Themes/Units/Replay/FindButton.xaml"/>
+		<ResourceDictionary Source="/Lol.Settings.InGame;component/Themes/Units/Replay/Location.xaml"/>
+		<ResourceDictionary Source="/Lol.Settings.InGame;component/Themes/Views/HotKeyView.xaml"/>
+		<ResourceDictionary Source="/Lol.Settings.InGame;component/Themes/Views/GameSoundView.xaml"/>
+		<ResourceDictionary Source="/Lol.Settings.InGame;component/Themes/Views/InterfaceView.xaml"/>
+		<ResourceDictionary Source="/Lol.Settings.InGame;component/Themes/Views/GameView.xaml"/>
+		<ResourceDictionary Source="/Lol.Settings.InGame;component/Themes/Views/ReplayView.xaml"/>
+	</ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

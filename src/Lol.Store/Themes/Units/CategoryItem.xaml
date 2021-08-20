@@ -1,0 +1,48 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:units="clr-namespace:Lol.Store.UI.Units"
+					xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
+
+	<Style TargetType="{x:Type units:CategoryItem}">
+		<Setter Property="Foreground" Value="#CDBE91"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type units:CategoryItem}">
+					<Border x:Name="border"
+							Background="Transparent"
+							BorderBrush="Transparent"
+							Padding="0 8 6 6">
+						<Grid>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="Auto"/>
+								<ColumnDefinition Width="*"/>
+							</Grid.ColumnDefinitions>
+							<ctrls:RiotIcon x:Name="icon" 
+											Grid.Column="0"
+											HorizontalAlignment="Center"
+											VerticalAlignment="Center"
+											IconType="DiaEmpty"
+											Fill="#BC7F49"
+											Width="14"
+											Height="14"/>
+							<TextBlock Grid.Column="1" 
+									   Margin="5 0 0 0" 
+									   Text="{Binding Name}"/>
+						</Grid>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="Foreground" Value="#F0E6D2"/>
+							<Setter TargetName="border" Property="Background" Value="#228B6811"/>
+						</Trigger>
+						<Trigger Property="IsSelected" Value="True">
+							<Setter Property="Foreground" Value="#F0E6D2"/>
+							<Setter TargetName="icon" Property="IconType" Value="DiaFill"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	
+</ResourceDictionary>

@@ -1,0 +1,117 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:units="clr-namespace:Lol.Settings.InGame.UI.Units"
+					xmlns:views="clr-namespace:Lol.Settings.InGame.UI.Views"
+					xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
+
+	<Style TargetType="{x:Type TextBlock}" x:Key="TXB.MAINKEY">
+		<Setter Property="Grid.Row" Value="0"/>
+		<Setter Property="Text" Value="주 단축키"/>
+		<Setter Property="Margin" Value="0 0 0 0"/>
+		<Setter Property="FontSize" Value="14"/>
+		<Setter Property="FontWeight" Value="Bold"/>
+		<Setter Property="Foreground" Value="#F0E6D2"/>
+	</Style>
+
+	<Style TargetType="{x:Type TextBlock}" x:Key="TXB.SKILL">
+		<Setter Property="Grid.Row" Value="1"/>
+		<Setter Property="Margin" Value="0 20 0 0"/>
+		<Setter Property="Text" Value="스킬"/>
+		<Setter Property="Foreground" Value="#9B9688"/>
+		<Setter Property="FontSize" Value="12"/>
+		<Setter Property="FontWeight" Value="Bold"/>
+	</Style>
+
+	<Style TargetType="{x:Type TextBlock}" x:Key="TXB.SPELL">
+		<Setter Property="Grid.Row" Value="1"/>
+		<Setter Property="Margin" Value="0 20 100 0"/>
+		<Setter Property="Text" Value="소환사 주문"/>
+		<Setter Property="HorizontalAlignment" Value="Right"/>
+		<Setter Property="Foreground" Value="#9B9688"/>
+		<Setter Property="FontSize" Value="12"/>
+	</Style>
+
+	<Style TargetType="{x:Type TextBlock}" x:Key="TXB.ITEM">
+		<Setter Property="Grid.Row" Value="2"/>
+		<Setter Property="Margin" Value="0 10 0 0"/>
+		<Setter Property="Text" Value="아이템"/>
+		<Setter Property="VerticalAlignment" Value="Top"/>
+		<Setter Property="Foreground" Value="#9B9688"/>
+		<Setter Property="FontSize" Value="12"/>
+	</Style>
+	
+	<Style TargetType="{x:Type TextBlock}" x:Key="TXB.ACC">
+		<Setter Property="Grid.Row" Value="2"/>
+		<Setter Property="Margin" Value="0 10 70 0"/>
+		<Setter Property="Text" Value="장신구"/>
+		<Setter Property="HorizontalAlignment" Value="Right"/>
+		<Setter Property="Foreground" Value="#9B9688"/>
+		<Setter Property="FontSize" Value="12"/>
+	</Style>
+
+	<Style TargetType="{x:Type TextBlock}" x:Key="TXB.INSTANT">
+		<Setter Property="Text" Value="즉시 시전 시 사거리 표시"/>
+		<Setter Property="Margin" Value="0 15 0 0"/>
+		<Setter Property="FontSize" Value="14"/>
+		<Setter Property="FontWeight" Value="Bold"/>
+		<Setter Property="Foreground" Value="#F0E6D2"/>
+	</Style>
+
+	<Style TargetType="{x:Type TextBlock}" x:Key="TXB.EXTRA">
+		<Setter Property="Text" Value="추가 단축키"/>
+		<Setter Property="Margin" Value="0 20 0 0"/>
+		<Setter Property="FontSize" Value="14"/>
+		<Setter Property="FontWeight" Value="Bold"/>
+		<Setter Property="Foreground" Value="#F0E6D2"/>
+	</Style>
+	
+	<Style TargetType="{x:Type views:HotKeyView}">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type views:HotKeyView}">
+					<Grid Margin="20 10 0 0">
+						<Grid.RowDefinitions>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="*"/>
+						</Grid.RowDefinitions>
+
+						<!--GRID.ROW = 0-->
+						<TextBlock Style="{StaticResource TXB.MAINKEY}"/>
+						<units:CastControl/>
+
+						<!--GRID.ROW = 1-->
+						<TextBlock Style="{StaticResource TXB.SKILL}"/>
+						<units:Skills/>
+
+						<TextBlock Style="{StaticResource TXB.SPELL}"/>
+						<units:Spells/>
+
+						<!--GRID.ROW = 2-->
+						<TextBlock Style="{StaticResource TXB.ITEM}"/>
+						<units:Items/>
+
+						<TextBlock Style="{StaticResource TXB.ACC}"/>
+						<ctrls:RiotHotKey Content="{Binding Model.AccKey1}" 
+										  Grid.Row="2" 
+										  Margin="0 30 45 0"
+										  HorizontalAlignment="Right"/>
+
+						<!--GRID.ROW = 3-->
+						<StackPanel Grid.Row="3">
+							<TextBlock Style="{StaticResource TXB.INSTANT}"/>
+							<ctrls:CheckBox02 Content="즉시 시전 단축키에서 '즉시 시전'을 '즉시 시전 시 사거리 표시'로 치환"
+											  IsChecked="{Binding Model.ChangeToFourWay}"
+											  Margin="0 10 0 0"/>
+							<ctrls:CheckBox02 Content="다른 스킬을 누르면 먼저 누르고 있던 스킬 즉시 시전"
+											  IsChecked="{Binding Model.RunSkillInstantly}"
+											  Margin="0 10 0 0"/>
+							<TextBlock Style="{StaticResource TXB.EXTRA}"/>
+						</StackPanel>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+</ResourceDictionary>

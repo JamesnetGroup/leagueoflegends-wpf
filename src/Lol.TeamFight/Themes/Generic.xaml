@@ -1,0 +1,17 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary Source="Lol.TeamFight;component/Themes/Units/FatesPass.xaml"/>
+		<ResourceDictionary Source="Lol.TeamFight;component/Themes/Units/LevelControl.xaml"/>
+		<ResourceDictionary Source="Lol.TeamFight;component/Themes/Units/TitleControl.xaml"/>
+		<ResourceDictionary Source="Lol.TeamFight;component/Themes/Units/SubTitleControl.xaml"/>
+		<ResourceDictionary Source="Lol.TeamFight;component/Themes/Units/UpgradeButton.xaml"/>
+		<ResourceDictionary Source="Lol.TeamFight;component/Themes/Units/QuickButton.xaml"/>
+		<ResourceDictionary Source="Lol.TeamFight;component/Themes/Units/LockButton.xaml"/>
+		<ResourceDictionary Source="Lol.TeamFight;component/Themes/Units/Thumbnails.xaml"/>
+		<ResourceDictionary Source="Lol.TeamFight;component/Themes/Units/ItemInfo.xaml"/>
+		<ResourceDictionary Source="Lol.TeamFight;component/Themes/Units/ItemList.xaml"/>
+		<ResourceDictionary Source="Lol.TeamFight;component/Themes/Views/TeamFightResource.xaml"/>
+	</ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

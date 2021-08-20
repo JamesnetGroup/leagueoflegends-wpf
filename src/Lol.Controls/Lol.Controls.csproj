@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Lol.Data\Lol.Data.csproj" />
+    <ProjectReference Include="..\Lol.Foundation\Lol.Foundation.csproj" />
+  </ItemGroup>
+
+</Project>

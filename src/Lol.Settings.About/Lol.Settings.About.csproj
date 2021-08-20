@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="UI\units\**" />
+    <EmbeddedResource Remove="UI\units\**" />
+    <None Remove="UI\units\**" />
+    <Page Remove="UI\units\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Themes\units\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Lol.LayoutSupport\Lol.LayoutSupport.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="UI\Views\VerificationView.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Lol.DBEntity\Lol.DBEntity.csproj" />
+    <ProjectReference Include="..\Lol.ExampleData\Lol.ExampleData.csproj" />
+    <ProjectReference Include="..\Lol.Foundation\Lol.Foundation.csproj" />
+    <ProjectReference Include="..\Lol.LayoutSupport\Lol.LayoutSupport.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\InputMode.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\InputPress.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\InputSetting.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\InputStatus.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Views\AlarmView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Views\BlockView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Views\ChatView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Views\GeneralView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Views\SoundView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Views\VoiceView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+</Project>

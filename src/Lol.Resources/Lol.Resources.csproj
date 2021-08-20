@@ -1,0 +1,152 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\bg-main-01.png" />
+    <None Remove="Images\bg-main-02.png" />
+    <None Remove="Images\bg-main-03.png" />
+    <None Remove="Images\bg-main-04.png" />
+    <None Remove="Images\bg-main-05.png" />
+    <None Remove="Images\card-kaisa.png" />
+    <None Remove="Images\icon-menu-selected.png" />
+    <None Remove="Images\lol-blue-essence.png" />
+    <None Remove="Images\lol-logo-03.png" />
+    <None Remove="Images\lol-rp-icon.png" />
+    <None Remove="Images\lol-runeterra.jpeg" />
+    <None Remove="Images\lol-star-piece.png" />
+    <None Remove="Images\lol-teamfight-background.jpg" />
+    <None Remove="Images\lol-teamfight-thumb01.jpg" />
+    <None Remove="Images\lol-teamfight-thumb02.jpg" />
+    <None Remove="Images\lol-teamfight-thumb03.jpg" />
+    <None Remove="Images\lol-teamfight-thumb04.jpg" />
+    <None Remove="Images\lol-thumb-01.png" />
+    <None Remove="Images\lol-thumb-02.png" />
+    <None Remove="Images\lol-thumb-03.png" />
+    <None Remove="Images\lol-thumb-04.png" />
+    <None Remove="Images\lol-thumb-05.png" />
+    <None Remove="Images\profile-01.png" />
+    <None Remove="Images\Square\0.png" />
+    <None Remove="Images\Square\1.png" />
+    <None Remove="Images\Square\10.png" />
+    <None Remove="Images\Square\11.png" />
+    <None Remove="Images\Square\12.png" />
+    <None Remove="Images\Square\13.png" />
+    <None Remove="Images\Square\14.png" />
+    <None Remove="Images\Square\15.png" />
+    <None Remove="Images\Square\16.png" />
+    <None Remove="Images\Square\17.png" />
+    <None Remove="Images\Square\18.png" />
+    <None Remove="Images\Square\19.png" />
+    <None Remove="Images\Square\2.png" />
+    <None Remove="Images\Square\20.png" />
+    <None Remove="Images\Square\21.png" />
+    <None Remove="Images\Square\22.png" />
+    <None Remove="Images\Square\23.png" />
+    <None Remove="Images\Square\24.png" />
+    <None Remove="Images\Square\25.png" />
+    <None Remove="Images\Square\26.png" />
+    <None Remove="Images\Square\27.png" />
+    <None Remove="Images\Square\28.png" />
+    <None Remove="Images\Square\29.png" />
+    <None Remove="Images\Square\3.png" />
+    <None Remove="Images\Square\30.png" />
+    <None Remove="Images\Square\31.png" />
+    <None Remove="Images\Square\32.png" />
+    <None Remove="Images\Square\33.png" />
+    <None Remove="Images\Square\34.png" />
+    <None Remove="Images\Square\35.png" />
+    <None Remove="Images\Square\36.png" />
+    <None Remove="Images\Square\37.png" />
+    <None Remove="Images\Square\38.png" />
+    <None Remove="Images\Square\39.png" />
+    <None Remove="Images\Square\4.png" />
+    <None Remove="Images\Square\40.png" />
+    <None Remove="Images\Square\41.png" />
+    <None Remove="Images\Square\42.png" />
+    <None Remove="Images\Square\5.png" />
+    <None Remove="Images\Square\6.png" />
+    <None Remove="Images\Square\7.png" />
+    <None Remove="Images\Square\8.png" />
+    <None Remove="Images\Square\9.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\bg-main-01.png" />
+    <Resource Include="Images\bg-main-02.png" />
+    <Resource Include="Images\bg-main-03.png" />
+    <Resource Include="Images\bg-main-04.png" />
+    <Resource Include="Images\bg-main-05.png" />
+    <Resource Include="Images\card-kaisa.png" />
+    <Resource Include="Images\icon-menu-selected.png" />
+    <Resource Include="Images\lol-blue-essence.png" />
+    <Resource Include="Images\lol-logo-03.png" />
+    <Resource Include="Images\lol-rp-icon.png" />
+    <Resource Include="Images\lol-runeterra.jpeg" />
+    <Resource Include="Images\lol-star-piece.png" />
+    <Resource Include="Images\lol-teamfight-background.jpg" />
+    <Resource Include="Images\lol-teamfight-thumb01.jpg" />
+    <Resource Include="Images\lol-teamfight-thumb02.jpg" />
+    <Resource Include="Images\lol-teamfight-thumb03.jpg" />
+    <Resource Include="Images\lol-teamfight-thumb04.jpg" />
+    <Resource Include="Images\lol-thumb-01.png" />
+    <Resource Include="Images\lol-thumb-02.png" />
+    <Resource Include="Images\lol-thumb-03.png" />
+    <Resource Include="Images\lol-thumb-04.png" />
+    <Resource Include="Images\lol-thumb-05.png" />
+    <Resource Include="Images\profile-01.png" />
+    <Resource Include="Images\Square\0.png" />
+    <Resource Include="Images\Square\1.png" />
+    <Resource Include="Images\Square\10.png" />
+    <Resource Include="Images\Square\11.png" />
+    <Resource Include="Images\Square\12.png" />
+    <Resource Include="Images\Square\13.png" />
+    <Resource Include="Images\Square\14.png" />
+    <Resource Include="Images\Square\15.png" />
+    <Resource Include="Images\Square\16.png" />
+    <Resource Include="Images\Square\17.png" />
+    <Resource Include="Images\Square\18.png" />
+    <Resource Include="Images\Square\19.png" />
+    <Resource Include="Images\Square\2.png" />
+    <Resource Include="Images\Square\20.png" />
+    <Resource Include="Images\Square\21.png" />
+    <Resource Include="Images\Square\22.png" />
+    <Resource Include="Images\Square\23.png" />
+    <Resource Include="Images\Square\24.png" />
+    <Resource Include="Images\Square\25.png" />
+    <Resource Include="Images\Square\26.png" />
+    <Resource Include="Images\Square\27.png" />
+    <Resource Include="Images\Square\28.png" />
+    <Resource Include="Images\Square\29.png" />
+    <Resource Include="Images\Square\3.png" />
+    <Resource Include="Images\Square\30.png" />
+    <Resource Include="Images\Square\31.png" />
+    <Resource Include="Images\Square\32.png" />
+    <Resource Include="Images\Square\33.png" />
+    <Resource Include="Images\Square\34.png" />
+    <Resource Include="Images\Square\35.png" />
+    <Resource Include="Images\Square\36.png" />
+    <Resource Include="Images\Square\37.png" />
+    <Resource Include="Images\Square\38.png" />
+    <Resource Include="Images\Square\39.png" />
+    <Resource Include="Images\Square\4.png" />
+    <Resource Include="Images\Square\40.png" />
+    <Resource Include="Images\Square\41.png" />
+    <Resource Include="Images\Square\42.png" />
+    <Resource Include="Images\Square\5.png" />
+    <Resource Include="Images\Square\6.png" />
+    <Resource Include="Images\Square\7.png" />
+    <Resource Include="Images\Square\8.png" />
+    <Resource Include="Images\Square\9.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+</Project>
