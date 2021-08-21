@@ -71,6 +71,7 @@ namespace Lol.Controls.Primitives
                 case GeoIcon.Pencil: icon.Data = IconData.PENCIL.ToGeometry(); break;
                 case GeoIcon.ArrowUp: icon.Data = IconData.ARROW_UP.ToGeometry(); break;
                 case GeoIcon.ArrowDown: icon.Data = IconData.ARROW_DOWN.ToGeometry(); break;
+                case GeoIcon.Plus: icon.Data = IconData.PLUS.ToGeometry(); break;
 
                 case GeoIcon.None:
                     break;
