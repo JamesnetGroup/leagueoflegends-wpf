@@ -14,7 +14,12 @@
         <GradientStop Color="#46331B" Offset="0.5"/>
         <GradientStop Color="#332617" Offset="1"/>
     </LinearGradientBrush>
-    
+
+
+    <LinearGradientBrush x:Key="BG.CONTENT" StartPoint="0.5, 0" EndPoint="0.5, 1">
+        <GradientStop Color="#171F23" Offset="1"/>
+    </LinearGradientBrush>
+
     <Style TargetType="{x:Type Button}" x:Key="BTN.ADD">
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="Template">
@@ -31,6 +36,35 @@
             </Setter.Value>
         </Setter>
     </Style>
+
+    <Style TargetType="{x:Type ContentControl}" x:Key="CTC.ADD">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border Background="{StaticResource BG.CONTENT}" Width="88" CornerRadius="0 6 6 0">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                            <StackPanel Orientation="Horizontal">
+                                <Grid>
+                                    <ctrls:RiotIcon Fill="#D0A756" Width="14" Height="14" HorizontalAlignment="Center" VerticalAlignment="Center" IconType="Square"/>
+                                    <Border Width="3" Height="4" Background="{StaticResource BG.CONTENT}" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                                    <Border Width="3" Height="4" Background="{StaticResource BG.CONTENT}" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                                </Grid>
+                                <TextBlock Foreground="#A09B7F" Text="0" Margin="2 0 0 0"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="12 0 0 0">
+                                <Grid>
+                                    <ctrls:RiotIcon  Fill="White" Width="14" Height="14" HorizontalAlignment="Center" VerticalAlignment="Center" IconType="Square"/>
+                                    <Border Width="3" Height="4" Background="{StaticResource BG.CONTENT}" VerticalAlignment="Top" HorizontalAlignment="Center"/>
+                                    <Border Width="3" Height="4" Background="{StaticResource BG.CONTENT}" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+                                </Grid>
+                                <TextBlock Foreground="#A09B7F" Text="0" Margin="2 0 0 0"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
     
     <Style TargetType="{x:Type units:TicketButton}">
         <Setter Property="Margin" Value="0 8 0 0"/>
@@ -40,6 +74,7 @@
                 <ControlTemplate TargetType="{x:Type units:TicketButton}">
                     <StackPanel Orientation="Horizontal">
                         <Button Style="{StaticResource BTN.ADD}"/>
+                        <ContentControl Style="{StaticResource CTC.ADD}"/>
                     </StackPanel>
                 </ControlTemplate>
             </Setter.Value>

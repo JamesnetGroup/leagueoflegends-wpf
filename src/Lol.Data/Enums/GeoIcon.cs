@@ -43,6 +43,7 @@
         ArrowUp,
         ArrowDown,
         Plus,
-        MenuLeft
+        MenuLeft,
+        Square
     }
 }
