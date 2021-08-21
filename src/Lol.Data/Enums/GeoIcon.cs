@@ -42,6 +42,7 @@
         Pencil,
         ArrowUp,
         ArrowDown,
-        Plus
+        Plus,
+        MenuLeft
     }
 }

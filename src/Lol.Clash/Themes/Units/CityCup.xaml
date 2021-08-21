@@ -51,6 +51,7 @@
                             </Border>
                         </Border>
                         <TextBlock Text="0/400" Margin="0 6 0 0" Foreground="{StaticResource TXT.FGD}" FontSize="19" HorizontalAlignment="Center"/>
+                        <units:TicketButton/>
                     </StackPanel>
                 </ControlTemplate>
             </Setter.Value>

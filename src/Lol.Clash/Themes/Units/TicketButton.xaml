@@ -2,27 +2,44 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:units="clr-namespace:Lol.Clash.UI.Units"
                     xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
+    
     <LinearGradientBrush x:Key="BDR.BUTTON" StartPoint="0.5, 0" EndPoint="0.5, 1">
         <GradientStop Color="#BE9F63" Offset="0"/>
         <GradientStop Color="#83662B" Offset="0.5"/>
         <GradientStop Color="#664C26" Offset="1"/>
     </LinearGradientBrush>
+    
     <LinearGradientBrush x:Key="BG.BUTTON" StartPoint="0.5, 0" EndPoint="0.5, 1">
         <GradientStop Color="#563E1E" Offset="0"/>
         <GradientStop Color="#46331B" Offset="0.5"/>
         <GradientStop Color="#332617" Offset="1"/>
     </LinearGradientBrush>
+    
+    <Style TargetType="{x:Type Button}" x:Key="BTN.ADD">
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border x:Name="border1" Width="29" Height="29" Background="{StaticResource BG.BUTTON}" CornerRadius="3 0 0 3"
+								BorderBrush="{StaticResource BDR.BUTTON}" BorderThickness="2" Margin="0 0 0 0">
+                        <Grid>
+                            <ctrls:RiotIcon x:Name="icon" Fill="#CDBE91" Width="18" Height="18" HorizontalAlignment="Center" VerticalAlignment="Center" IconType="Plus"/>
+                            <ctrls:RiotIcon x:Name="icon2" Fill="#9D7931" Width="16" Height="16" HorizontalAlignment="Right" VerticalAlignment="Center" IconType="MenuLeft" Margin="0 0 -7 0"/>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
     <Style TargetType="{x:Type units:TicketButton}">
+        <Setter Property="Margin" Value="0 8 0 0"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:TicketButton}">
                     <StackPanel Orientation="Horizontal">
-                        <Border x:Name="border1" Width="30" Height="30" Background="#1E2328" CornerRadius="3 0 0 3"
-								BorderBrush="{StaticResource TGL.BDR}" BorderThickness="2" Margin="-15 0 0 0">
-                            <Border x:Name="border2" Background="Transparent" BorderBrush="#14171A" BorderThickness="1" CornerRadius="20">
-                                <ctrls:RiotIcon x:Name="icon" Fill="#CDBE91" Width="14" Height="14" HorizontalAlignment="Center" VerticalAlignment="Center" IconType="Plus"/>
-                            </Border>
-                        </Border>
+                        <Button Style="{StaticResource BTN.ADD}"/>
                     </StackPanel>
                 </ControlTemplate>
             </Setter.Value>
