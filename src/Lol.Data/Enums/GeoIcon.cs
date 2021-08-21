@@ -44,6 +44,7 @@
         ArrowDown,
         Plus,
         MenuLeft,
-        Square
+        Square,
+        AccountSupervisor
     }
 }
