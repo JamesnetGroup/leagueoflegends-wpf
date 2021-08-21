@@ -41,6 +41,7 @@
         VolumeOFF,
         Pencil,
         ArrowUp,
-        ArrowDown
+        ArrowDown,
+        Plus
     }
 }
