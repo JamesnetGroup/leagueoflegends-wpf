@@ -2,10 +2,12 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:units="clr-namespace:Lol.Clash.UI.Units">
     <LinearGradientBrush x:Key="IMG.BDR" StartPoint="0.5,0" EndPoint="0.5,1">
+        
         <GradientStop Color="#785A28" Offset="0"/>
         <GradientStop Color="#CBB883" Offset="0.5"/>
         <GradientStop Color="#463714" Offset="1"/>
     </LinearGradientBrush>
+    
     <LinearGradientBrush x:Key="TXT.FGD" StartPoint="0.5,0" EndPoint="0.5,1">
         <GradientStop Color="#CBB883" Offset="0"/>
         <GradientStop Color="#74623D" Offset="1"/>
@@ -18,6 +20,7 @@
         <Setter Property="Text" Value="밴들 시티 컵"/>
         <Setter Property="FontWeight" Value="Bold"/>
     </Style>
+    
     <Style TargetType="{x:Type TextBlock}" x:Key="TXB.SUB">
         <Setter Property="Foreground" Value="#5B5A56"/>
         <Setter Property="FontSize" Value="20"/>
@@ -25,6 +28,21 @@
         <Setter Property="Text" Value="3일차"/>
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
+    </Style>
+    
+    <LinearGradientBrush x:Key="BDR.TRAN" StartPoint="0, 0.5" EndPoint="1, 0.5">
+        <GradientStop Color="Transparent" Offset="0"/>
+        <GradientStop Color="#333C4244" Offset="0.1"/>
+        <GradientStop Color="#C8BA8E" Offset="0.5"/>
+        <GradientStop Color="#333C4244" Offset="0.9"/>
+        <GradientStop Color="Transparent" Offset="1"/>
+    </LinearGradientBrush>
+
+    <Style TargetType="{x:Type Border}" x:Key="TRAN.BORDER">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="{StaticResource BDR.TRAN}"/>
+        <Setter Property="BorderThickness" Value="0 0 0 0.5"/>
+        <Setter Property="Margin" Value="-25 15 -25 15"/>
     </Style>
     <Style TargetType="{x:Type units:CityCup}">
         <Setter Property="Template">
@@ -52,6 +70,7 @@
                         </Border>
                         <TextBlock Text="0/400" Margin="0 6 0 0" Foreground="{StaticResource TXT.FGD}" FontSize="19" HorizontalAlignment="Center"/>
                         <units:TicketButton/>
+                        <Border Style="{StaticResource TRAN.BORDER}"/>
                     </StackPanel>
                 </ControlTemplate>
             </Setter.Value>
