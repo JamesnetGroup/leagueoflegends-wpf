@@ -219,6 +219,10 @@
                         <Border Style="{StaticResource TRAN.BORDER}"/>
                         <ContentControl Style="{StaticResource CTC.TIER}"/>
                         <ContentControl Style="{StaticResource CTC.FREE}"/>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                            <units:PositionButton/>
+                            <units:PositionButton Margin="30 0 0 0"/>
+                        </StackPanel>
                     </StackPanel>
                 </ControlTemplate>
             </Setter.Value>
