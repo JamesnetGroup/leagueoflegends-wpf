@@ -58,6 +58,7 @@
         </Setter>
     </Style>
 
+    <!-- TODO: [Kevin] https://materialdesignicons.com/ 비슷한 아이콘 안보여서 임시로 만듬, Path로 작업 필요-->
     <Style TargetType="{x:Type ContentControl}" x:Key="CTC.ADD">
         <Setter Property="Template">
             <Setter.Value>
