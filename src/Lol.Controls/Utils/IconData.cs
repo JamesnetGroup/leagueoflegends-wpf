@@ -43,5 +43,6 @@
         internal static readonly string ARROW_DOWN = "M11,4H13V16L18.5,10.5L19.92,11.92L12,19.84L4.08,11.92L5.5,10.5L11,16V4Z";
         internal static readonly string PLUS = "M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z";
         internal static readonly string MENU_LEFT = "M14,7L9,12L14,17V7Z";
+        internal static readonly string SQUARE = "M3,3V21H21V3";
     }
 }
