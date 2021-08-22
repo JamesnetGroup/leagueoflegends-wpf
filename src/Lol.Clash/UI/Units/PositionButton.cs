@@ -29,6 +29,7 @@ namespace Lol.Clash.UI.Units
         }
         #endregion
 
+        //TODO: [Kevin] 이 방법이 최선인가 추후 수정???
         #region SendIconType
 
         public GeoIcon SendIconType
