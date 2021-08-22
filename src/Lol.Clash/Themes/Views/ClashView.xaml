@@ -23,7 +23,7 @@
                             <units:Schedule Grid.Column="2" />
                             <Grid Grid.Column="1" Width="70"/>
                         </Grid>
-                        <Grid Grid.Row="2" Height="130">
+                        <Grid Grid.Row="2" Height="100">
                             
                         </Grid>
                     </Grid>
