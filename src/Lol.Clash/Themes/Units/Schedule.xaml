@@ -37,7 +37,7 @@
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="BorderBrush" Value="{StaticResource BDR.TRAN}"/>
         <Setter Property="BorderThickness" Value="0.5 0 0 0"/>
-        <Setter Property="Margin" Value="70 -10 0 0"/>
+        <Setter Property="Margin" Value="0 -10 0 0"/>
     </Style>
     
     <Style TargetType="{x:Type units:Schedule}">
@@ -47,7 +47,7 @@
                     <Border Style="{StaticResource TRAN.BORDER}">
                         <Grid>
                             <Grid.RowDefinitions>
-                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="Auto"/>
                                 <RowDefinition Height="*"/>
                             </Grid.RowDefinitions>
                             <Grid>
@@ -57,6 +57,23 @@
                                 </Grid.ColumnDefinitions>
                                 <Button Style="{StaticResource BTN.HEADER}" Content="일정"/>
                                 <Button Grid.Column="1" Style="{StaticResource BTN.HEADER}" Content="전적" IsEnabled="False"/>
+                            </Grid>
+                            <Grid Grid.Row="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto"/>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <TextBlock Text="현재 토너먼트" Margin="26 15 0 0" Foreground="#F0E6D2" FontWeight="Bold" FontSize="13"/>
+                                <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0 10 0 0" HorizontalAlignment="Left" VerticalAlignment="Top">
+                                    <!--<Border Height="38" Width="38" Background="#09151F" BorderBrush="#3A3A3F" BorderThickness="1">
+                                        <Border.RenderTransform>
+                                            <RotateTransform Angle="45"/>
+                                        </Border.RenderTransform>
+                                        <Border Margin="5" Background="#09151F" BorderBrush="#3A3A3F" BorderThickness="1">
+                                           
+                                        </Border>
+                                    </Border>-->
+                                </StackPanel>
                             </Grid>
                         </Grid>
                     </Border>
