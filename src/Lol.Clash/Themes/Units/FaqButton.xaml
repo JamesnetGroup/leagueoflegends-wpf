@@ -1,0 +1,26 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:units="clr-namespace:Lol.Clash.UI.Units"
+                    xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
+    <Style TargetType="{x:Type units:FaqButton}">
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type units:FaqButton}">
+                    <Border Background="Transparent">
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom">
+                            <TextBlock x:Name="text1" Foreground="#05899B" Text="격전 FAQ" Margin="0 0 4 0" />
+                            <ctrls:RiotIcon x:Name="icon" Fill="#05899B" Width="16" Height="16" HorizontalAlignment="Center" VerticalAlignment="Center" IconType="ArrowTopRgiht"/>
+                        </StackPanel>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="text1" Property="Foreground" Value="#C1ECEC"/>
+                            <Setter TargetName="icon" Property="Fill" Value="#C1ECEC"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

@@ -47,6 +47,7 @@
         Square,
         AccountSupervisor,
         Grass,
-        ArrowDecision
+        ArrowDecision,
+        ArrowTopRgiht
     }
 }
