@@ -6,7 +6,6 @@
 		<ResourceDictionary Source="/Lol.Home;component/Themes/Units/Thumbnail.xaml"/>
 		<ResourceDictionary Source="/Lol.Home;component/Themes/Units/OfficialVideo.xaml"/>
         <ResourceDictionary Source="/Lol.Home;component/Themes/Views/Overview.xaml"/>
-        <ResourceDictionary Source="/Lol.Home;component/Themes/Views/FaqButton.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 
     
