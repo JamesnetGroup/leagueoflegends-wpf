@@ -19,7 +19,10 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
                             <units:CityCup/>
-                            <TextBlock Grid.Column="1" Text="테스트2" HorizontalAlignment="Right" Foreground="White"/>
+                            <units:Schedule Grid.Column="1"/>
+                        </Grid>
+                        <Grid Grid.Row="2" Height="100">
+                            
                         </Grid>
                     </Grid>
                 </ControlTemplate>
