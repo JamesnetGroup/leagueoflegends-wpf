@@ -3,24 +3,62 @@
                     xmlns:units="clr-namespace:Lol.Clash.UI.Units">
     <LinearGradientBrush x:Key="BDR.TRAN" StartPoint="0.5, 0" EndPoint="0.5, 1">
         <GradientStop Color="Transparent" Offset="0"/>
-        <GradientStop Color="#25292F" Offset="0.1"/>
+        <GradientStop Color="#9925292F" Offset="0.1"/>
         <GradientStop Color="#C8BA8E" Offset="0.5"/>
-        <GradientStop Color="#25292F" Offset="0.9"/>
+        <GradientStop Color="#9925292F" Offset="0.9"/>
         <GradientStop Color="Transparent" Offset="1"/>
     </LinearGradientBrush>
 
+    <!--임시??라디오버튼 or 탭컨트롤로 가는게 맞음 전적탭 비활성화라 볼 수 없어서 버튼으로 작업-->
+    <Style TargetType="{x:Type Button}" x:Key="BTN.HEADER">
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Border x:Name="border1" Padding="0 5 0 5" BorderThickness="0 0 0 3" BorderBrush="#FABE0A" Background="Transparent">
+                        <ContentPresenter x:Name="text" TextBlock.Foreground="#F0E6D2" TextBlock.FontWeight="Bold" HorizontalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="text" Property="TextBlock.Foreground" Value="#785A27"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="text" Property="TextBlock.Foreground" Value="#584B35"/>
+                            <Setter TargetName="border1" Property="BorderThickness" Value="0 0 0 1"/>
+                            <Setter TargetName="border1" Property="BorderBrush" Value="#6B6F73"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
     <Style TargetType="{x:Type Border}" x:Key="TRAN.BORDER">
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="BorderBrush" Value="{StaticResource BDR.TRAN}"/>
         <Setter Property="BorderThickness" Value="0.5 0 0 0"/>
-        <Setter Property="Margin" Value="70 0 0 0"/>
+        <Setter Property="Margin" Value="70 -10 0 0"/>
     </Style>
+    
     <Style TargetType="{x:Type units:Schedule}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
                     <Border Style="{StaticResource TRAN.BORDER}">
-                        
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Button Style="{StaticResource BTN.HEADER}" Content="일정"/>
+                                <Button Grid.Column="1" Style="{StaticResource BTN.HEADER}" Content="전적" IsEnabled="False"/>
+                            </Grid>
+                        </Grid>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
