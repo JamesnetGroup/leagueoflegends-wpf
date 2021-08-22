@@ -65,14 +65,28 @@
                                 </Grid.RowDefinitions>
                                 <TextBlock Text="현재 토너먼트" Margin="26 15 0 0" Foreground="#F0E6D2" FontWeight="Bold" FontSize="13"/>
                                 <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0 10 0 0" HorizontalAlignment="Left" VerticalAlignment="Top">
-                                    <!--<Border Height="38" Width="38" Background="#09151F" BorderBrush="#3A3A3F" BorderThickness="1">
-                                        <Border.RenderTransform>
-                                            <RotateTransform Angle="45"/>
-                                        </Border.RenderTransform>
-                                        <Border Margin="5" Background="#09151F" BorderBrush="#3A3A3F" BorderThickness="1">
-                                           
-                                        </Border>
-                                    </Border>-->
+                                    <Grid>
+                                        <Path StrokeThickness="1" Stroke="#3A3A3F" Fill="#09151F">
+                                            <Path.Data>
+                                                <PathGeometry>
+                                                    <PathFigure StartPoint="0,0">
+                                                        <PolyLineSegment Points="24,24 0,48"/>
+                                                        <LineSegment Point="0,0" IsStroked="False"/>
+                                                    </PathFigure>
+                                                </PathGeometry>
+                                            </Path.Data>
+                                        </Path>
+                                        <Path StrokeThickness="1" Stroke="#3A3A3F" Fill="#09151F" VerticalAlignment="Center">
+                                            <Path.Data>
+                                                <PathGeometry>
+                                                    <PathFigure StartPoint="0,0">
+                                                        <PolyLineSegment Points="16,16 0,32"/>
+                                                        <LineSegment Point="0,0" IsStroked="False"/>
+                                                    </PathFigure>
+                                                </PathGeometry>
+                                            </Path.Data>
+                                        </Path>
+                                    </Grid>
                                 </StackPanel>
                             </Grid>
                         </Grid>
