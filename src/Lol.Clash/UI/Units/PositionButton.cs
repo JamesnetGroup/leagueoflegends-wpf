@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Lol.Controls.Primitives;
+using Lol.Data.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,14 +17,26 @@ using System.Windows.Shapes;
 
 namespace Lol.Clash.UI.Units
 {
-    #region Constructor
 
     public class PositionButton : Control
     {
+        public static readonly DependencyProperty SendIconTypeProperty = DependencyProperty.Register("SendIconType", typeof(GeoIcon), typeof(PositionButton), new PropertyMetadata(GeoIcon.None));
+        #region Constructor
+
         static PositionButton()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(PositionButton), new FrameworkPropertyMetadata(typeof(PositionButton)));
         }
+        #endregion
+
+        #region SendIconType
+
+        public GeoIcon SendIconType
+        {
+            get => (GeoIcon)GetValue(SendIconTypeProperty);
+            set => SetValue(SendIconTypeProperty, value);
+        }
+        #endregion
     }
-    #endregion
+
 }

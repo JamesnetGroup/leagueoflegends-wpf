@@ -45,6 +45,8 @@
         Plus,
         MenuLeft,
         Square,
-        AccountSupervisor
+        AccountSupervisor,
+        Grass,
+        ArrowDecision
     }
 }
