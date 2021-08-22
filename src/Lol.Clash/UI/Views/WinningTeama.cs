@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Lol.LayoutSupport.Controls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,7 @@ using System.Windows.Shapes;
 
 namespace Lol.Clash.UI.Views
 {
-    public class WinningTeama : Control
+    public class WinningTeama : View
     {
         static WinningTeama()
         {

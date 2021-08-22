@@ -7,7 +7,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type views:WinningTeama}">
                     <Grid>
-                      
+                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Foreground="White" Text="테스트"/>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
