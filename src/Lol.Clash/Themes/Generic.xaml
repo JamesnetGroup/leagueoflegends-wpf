@@ -6,5 +6,6 @@
         <ResourceDictionary Source="/Lol.Clash;component/Themes/Units/CityCup.xaml"/>
         <ResourceDictionary Source="/Lol.Clash;component/Themes/Units/TicketButton.xaml"/>
         <ResourceDictionary Source="/Lol.Clash;component/Themes/Units/PositionButton.xaml"/>
+        <ResourceDictionary Source="/Lol.Clash;component/Themes/Units/Schedule.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
