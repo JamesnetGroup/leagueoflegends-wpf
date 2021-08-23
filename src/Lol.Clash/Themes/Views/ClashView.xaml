@@ -3,30 +3,39 @@
                     xmlns:views="clr-namespace:Lol.Clash.UI.Views"
                     xmlns:units="clr-namespace:Lol.Clash.UI.Units">
 	
-    <Style TargetType="{x:Type views:ClashView}">
+	<LinearGradientBrush x:Key="BDR.TRAN" StartPoint="0.5, 0" EndPoint="0.5, 1">
+		<GradientStop Color="Transparent" Offset="0"/>
+		<GradientStop Color="#9925292F" Offset="0.1"/>
+		<GradientStop Color="#C8BA8E" Offset="0.5"/>
+		<GradientStop Color="#9925292F" Offset="0.9"/>
+		<GradientStop Color="Transparent" Offset="1"/>
+	</LinearGradientBrush>
+	
+	<Style TargetType="{x:Type Border}" x:Key="TRAN.BORDER">
+		<Setter Property="Grid.Column" Value="1"/>
+		<Setter Property="Background" Value="Transparent"/>
+		<Setter Property="BorderBrush" Value="{StaticResource BDR.TRAN}"/>
+		<Setter Property="BorderThickness" Value="0.5 0 0 0"/>
+		<Setter Property="Margin" Value="0 0 0 15"/>
+		<Setter Property="Height" Value="470"/>
+	</Style>
+	
+	<Style TargetType="{x:Type views:ClashView}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type views:ClashView}">
                     <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="Auto"/>
-                        </Grid.RowDefinitions>
-                        <units:Manual/>
-                        <Grid Grid.Row="1" Margin="110 0 30 0">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="Auto"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <units:CityCup/>
-                            <units:Schedule Grid.Column="2"/>
-                            <Grid Grid.Column="1" Width="70"/>
-                        </Grid>
-                        <Grid Grid.Row="2" Height="100">
-                            <units:FaqButton Margin="32 0 0 32"/>
-                        </Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="0.47*"/>
+							<ColumnDefinition Width="*"/>
+						</Grid.ColumnDefinitions>
+						
+						<units:CityCup/>
+						<units:FaqButton/>
+
+						<Border Style="{StaticResource TRAN.BORDER}"/>
+						<units:Manual/>
+                        <units:Schedule/>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>

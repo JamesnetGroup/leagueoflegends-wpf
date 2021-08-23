@@ -28,7 +28,8 @@
         <Setter Property="FontFamily" Value="Friz Quadrata Std"/>
         <Setter Property="Text" Value="밴들 시티 컵"/>
         <Setter Property="FontWeight" Value="Bold"/>
-    </Style>
+		<Setter Property="HorizontalAlignment" Value="Center"/>
+	</Style>
     
     <Style TargetType="{x:Type TextBlock}" x:Key="TXB.SUB">
         <Setter Property="Foreground" Value="#5B5A56"/>
@@ -75,6 +76,7 @@
 		<Setter Property="BorderBrush" Value="{StaticResource BDR.TRAN}"/>
 		<Setter Property="BorderThickness" Value="0 0 0 1"/>
 		<Setter Property="Margin" Value="0 10 0 10"/>
+		<Setter Property="Width" Value="130"/>
 	</Style>
 	
     <Style TargetType="{x:Type ContentControl}" x:Key="CTC.TIER">
@@ -123,7 +125,9 @@
     </Style>
 
     <Style TargetType="{x:Type units:CityCup}">
-        <Setter Property="Template">
+		<Setter Property="Grid.Column" Value="0"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+		<Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:CityCup}">
                     <StackPanel>

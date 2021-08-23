@@ -1,97 +1,128 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:units="clr-namespace:Lol.Clash.UI.Units">
-    <LinearGradientBrush x:Key="BDR.TRAN" StartPoint="0.5, 0" EndPoint="0.5, 1">
-        <GradientStop Color="Transparent" Offset="0"/>
-        <GradientStop Color="#9925292F" Offset="0.1"/>
-        <GradientStop Color="#C8BA8E" Offset="0.5"/>
-        <GradientStop Color="#9925292F" Offset="0.9"/>
-        <GradientStop Color="Transparent" Offset="1"/>
-    </LinearGradientBrush>
 
     <!--임시??라디오버튼 or 탭컨트롤로 가는게 맞음 전적탭 비활성화라 볼 수 없어서 버튼으로 작업-->
-    <Style TargetType="{x:Type Button}" x:Key="BTN.HEADER">
-        <Setter Property="Cursor" Value="Hand"/>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}">
-                    <Border x:Name="border1" Padding="0 5 0 5" BorderThickness="0 0 0 3" BorderBrush="#FABE0A" Background="Transparent">
-                        <ContentPresenter x:Name="text" TextBlock.Foreground="#F0E6D2" TextBlock.FontWeight="Bold" HorizontalAlignment="Center"/>
-                    </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsPressed" Value="True">
-                            <Setter TargetName="text" Property="TextBlock.Foreground" Value="#785A27"/>
-                        </Trigger>
-                        <Trigger Property="IsEnabled" Value="False">
-                            <Setter TargetName="text" Property="TextBlock.Foreground" Value="#584B35"/>
-                            <Setter TargetName="border1" Property="BorderThickness" Value="0 0 0 1"/>
-                            <Setter TargetName="border1" Property="BorderBrush" Value="#6B6F73"/>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-    
-    <Style TargetType="{x:Type Border}" x:Key="TRAN.BORDER">
-        <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="BorderBrush" Value="{StaticResource BDR.TRAN}"/>
-        <Setter Property="BorderThickness" Value="0.5 0 0 0"/>
-        <Setter Property="Margin" Value="0 -10 0 0"/>
-    </Style>
-    
-    <Style TargetType="{x:Type units:Schedule}">
-        <Setter Property="Template">
+	<!--[0823 Elena] 라디오버튼 리스트박스로 작업-->	
+	<Style TargetType="{x:Type RadioButton}" x:Key="RDO.CATEGORY">
+		<Setter Property="Cursor" Value="Hand"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type RadioButton}">
+					<Border x:Name="border" Padding="0 5 0 5" BorderThickness="0 0 0 3" BorderBrush="#FABE0A" Background="Transparent">
+						<TextBlock x:Name="text" Foreground="#F0E6D2" FontWeight="Bold" HorizontalAlignment="Center" Text="{Binding Name}"/>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsPressed" Value="True">
+							<Setter TargetName="text" Property="Foreground" Value="#785A27"/>
+						</Trigger>
+						<Trigger Property="IsChecked" Value="False">
+							<Setter TargetName="text" Property="Foreground" Value="#584B35"/>
+							<Setter TargetName="border" Property="BorderThickness" Value="0 0 0 1"/>
+							<Setter TargetName="border" Property="BorderBrush" Value="#6B6F73"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style TargetType="{x:Type ListBoxItem}" x:Key="LBXI.TABS">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type ListBoxItem}">
+					<Border>
+						<RadioButton Style="{StaticResource RDO.CATEGORY}" 
+									 IsChecked="{Binding RelativeSource={RelativeSource AncestorType=ListBoxItem}, Path=IsSelected}"/>
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style TargetType="{x:Type ListBox}" x:Key="LBX.TABS">
+		<Setter Property="ItemContainerStyle" Value="{StaticResource LBXI.TABS}"/>
+		<Setter Property="ItemsSource" Value="{Binding Tabs}"/>
+		<Setter Property="SelectedItem" Value="{Binding CurrentTab}"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type ListBox}">
+					<ItemsPresenter/>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="ItemsPanel">
+			<Setter.Value>
+				<ItemsPanelTemplate>
+					<UniformGrid Columns="2"/>
+				</ItemsPanelTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<DataTemplate x:Key="TAB.SCHEDULE">
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="Auto"/>
+				<RowDefinition Height="*"/>
+			</Grid.RowDefinitions>
+			<TextBlock Text="현재 토너먼트" Margin="26 15 0 0" Foreground="#F0E6D2" FontWeight="Bold" FontSize="13"/>
+			<StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0 10 0 0" HorizontalAlignment="Left" VerticalAlignment="Top">
+				<Grid>
+					<Path StrokeThickness="1" Stroke="#3A3A3F" Fill="#09151F">
+						<Path.Data>
+							<PathGeometry>
+								<PathFigure StartPoint="0,0">
+									<PolyLineSegment Points="24,24 0,48"/>
+									<LineSegment Point="0,0" IsStroked="False"/>
+								</PathFigure>
+							</PathGeometry>
+						</Path.Data>
+					</Path>
+					<Path StrokeThickness="1" Stroke="#3A3A3F" Fill="#09151F" VerticalAlignment="Center">
+						<Path.Data>
+							<PathGeometry>
+								<PathFigure StartPoint="0,0">
+									<PolyLineSegment Points="16,16 0,32"/>
+									<LineSegment Point="0,0" IsStroked="False"/>
+								</PathFigure>
+							</PathGeometry>
+						</Path.Data>
+					</Path>
+				</Grid>
+			</StackPanel>
+		</Grid>
+	</DataTemplate>
+
+	<DataTemplate x:Key="TAB.RECORD">
+		<Border>
+			<TextBlock Text="현재 전적" Margin="26 15 0 0" Foreground="#F0E6D2" FontWeight="Bold" FontSize="13"/>
+		</Border>
+	</DataTemplate>
+	
+	<Style TargetType="{x:Type units:Schedule}">
+		<Setter Property="Grid.Column" Value="1"/>
+		<Setter Property="Margin" Value="0 80 20 0"/>
+		<Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
-                    <Border Style="{StaticResource TRAN.BORDER}">
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
-                                <Button Style="{StaticResource BTN.HEADER}" Content="일정"/>
-                                <Button Grid.Column="1" Style="{StaticResource BTN.HEADER}" Content="전적" IsEnabled="False"/>
-                            </Grid>
-                            <Grid Grid.Row="1">
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="*"/>
-                                </Grid.RowDefinitions>
-                                <TextBlock Text="현재 토너먼트" Margin="26 15 0 0" Foreground="#F0E6D2" FontWeight="Bold" FontSize="13"/>
-                                <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0 10 0 0" HorizontalAlignment="Left" VerticalAlignment="Top">
-                                    <Grid>
-                                        <Path StrokeThickness="1" Stroke="#3A3A3F" Fill="#09151F">
-                                            <Path.Data>
-                                                <PathGeometry>
-                                                    <PathFigure StartPoint="0,0">
-                                                        <PolyLineSegment Points="24,24 0,48"/>
-                                                        <LineSegment Point="0,0" IsStroked="False"/>
-                                                    </PathFigure>
-                                                </PathGeometry>
-                                            </Path.Data>
-                                        </Path>
-                                        <Path StrokeThickness="1" Stroke="#3A3A3F" Fill="#09151F" VerticalAlignment="Center">
-                                            <Path.Data>
-                                                <PathGeometry>
-                                                    <PathFigure StartPoint="0,0">
-                                                        <PolyLineSegment Points="16,16 0,32"/>
-                                                        <LineSegment Point="0,0" IsStroked="False"/>
-                                                    </PathFigure>
-                                                </PathGeometry>
-                                            </Path.Data>
-                                        </Path>
-                                    </Grid>
-                                </StackPanel>
-                            </Grid>
-                        </Grid>
-                    </Border>
-                </ControlTemplate>
+					<Grid>
+						<Grid.RowDefinitions>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="*"/>
+						</Grid.RowDefinitions>
+						<ListBox Style="{StaticResource LBX.TABS}"/>
+						<ContentPresenter x:Name="content" Grid.Row="1"/>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<DataTrigger Binding="{Binding CurrentTab.Seq}" Value="0">
+							<Setter TargetName="content" Property="ContentTemplate" Value="{StaticResource TAB.SCHEDULE}"/>
+						</DataTrigger>
+						<DataTrigger Binding="{Binding CurrentTab.Seq}" Value="1">
+							<Setter TargetName="content" Property="ContentTemplate" Value="{StaticResource TAB.RECORD}"/>
+						</DataTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
