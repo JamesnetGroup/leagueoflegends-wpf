@@ -10,12 +10,11 @@
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
                         <StackPanel>
-                            <Grid Margin="48 62 34 0">
+                            <Grid Margin="48 16 34 0">
                                 <units:Title />
-                                <ctrls:RiotTextBox MinWidth="220" Height="30" HorizontalAlignment="Right" VerticalAlignment="Center" Tag="Temp"/>
+                                <ctrls:RiotTextBox MinWidth="220" Height="30" HorizontalAlignment="Right" VerticalAlignment="Top" Tag="Temp" Margin="0 60 0 0"/>
                             </Grid>
                         </StackPanel>
                     </Grid>
