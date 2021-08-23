@@ -15,7 +15,7 @@
                         <StackPanel>
                             <Grid Margin="48 62 34 0">
                                 <units:Title />
-                                <ctrls:RiotTextBox Width="30" Height="220" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                                <ctrls:RiotTextBox MinWidth="220" Height="30" HorizontalAlignment="Right" VerticalAlignment="Center" Tag="Temp"/>
                             </Grid>
                         </StackPanel>
                     </Grid>
