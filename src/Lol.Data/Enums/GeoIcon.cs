@@ -48,6 +48,8 @@
         AccountSupervisor,
         Grass,
         ArrowDecision,
-        ArrowTopRgiht
+        ArrowTopRgiht,
+        ChevronUp,
+        ChevronDown
     }
 }
