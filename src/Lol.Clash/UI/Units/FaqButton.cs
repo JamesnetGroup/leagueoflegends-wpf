@@ -3,7 +3,7 @@ using System.Windows.Controls;
 
 namespace Lol.Clash.UI.Units
 {
-    public class FaqButton : Control
+    public class FaqButton : Button
     {
         #region DefaultStyleKey
 

@@ -2,6 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:units="clr-namespace:Lol.Clash.UI.Units"
                     xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
+	
     <LinearGradientBrush x:Key="IMG.BDR" StartPoint="0.5,0" EndPoint="0.5,1">
         <GradientStop Color="#785A28" Offset="0"/>
         <GradientStop Color="#CBB883" Offset="0.5"/>
@@ -13,7 +14,15 @@
         <GradientStop Color="#74623D" Offset="1"/>
     </LinearGradientBrush>
 
-    <Style TargetType="{x:Type TextBlock}" x:Key="TXB.HEADER">
+	<LinearGradientBrush x:Key="BDR.TRAN" StartPoint="0, 0.5" EndPoint="1, 0.5">
+		<GradientStop Color="Transparent" Offset="0"/>
+		<GradientStop Color="#333C4244" Offset="0.1"/>
+		<GradientStop Color="#C8BA8E" Offset="0.5"/>
+		<GradientStop Color="#333C4244" Offset="0.9"/>
+		<GradientStop Color="Transparent" Offset="1"/>
+	</LinearGradientBrush>
+
+	<Style TargetType="{x:Type TextBlock}" x:Key="TXB.HEADER">
         <Setter Property="Foreground" Value="#F0E6D2"/>
         <Setter Property="FontSize" Value="23"/>
         <Setter Property="FontFamily" Value="Friz Quadrata Std"/>
@@ -29,143 +38,67 @@
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
     </Style>
-    
-    <LinearGradientBrush x:Key="BDR.TRAN" StartPoint="0, 0.5" EndPoint="1, 0.5">
-        <GradientStop Color="Transparent" Offset="0"/>
-        <GradientStop Color="#333C4244" Offset="0.1"/>
-        <GradientStop Color="#C8BA8E" Offset="0.5"/>
-        <GradientStop Color="#333C4244" Offset="0.9"/>
-        <GradientStop Color="Transparent" Offset="1"/>
-    </LinearGradientBrush>
 
-    <LinearGradientBrush x:Key="TGL.ONOFF.BDR" StartPoint="0.5,0" EndPoint="0.5,1">
-        <GradientStop Color="#9F8449" Offset="0"/>
-        <GradientStop Color="#7D612B" Offset="0.5"/>
-        <GradientStop Color="#5D4828" Offset="1"/>
-    </LinearGradientBrush>
+	<Style TargetType="{x:Type TextBlock}" x:Key="TXB.GAUGE">
+		<Setter Property="Text" Value="0 / 400"/>
+		<Setter Property="Foreground" Value="{StaticResource TXT.FGD}"/>
+		<Setter Property="FontSize" Value="19"/>
+		<Setter Property="HorizontalAlignment" Value="Center"/>
+		<Setter Property="Margin" Value="0 6 0 0"/>
+	</Style>
 
-    <LinearGradientBrush x:Key="TGL.OFF.BG" StartPoint="0,0.5" EndPoint="1,0.5">
-        <GradientStop Color="#22404B" Offset="0"/>
-        <GradientStop Color="#20313A" Offset="0.5"/>
-        <GradientStop Color="#1F2D34" Offset="1"/>
-    </LinearGradientBrush>
-
-    <LinearGradientBrush x:Key="TGL.ON.BG" StartPoint="0,0.5" EndPoint="1,0.5">
-        <GradientStop Color="#2C5138" Offset="0"/>
-        <GradientStop Color="#327E3F" Offset="0.3"/>
-        <GradientStop Color="#349C44" Offset="0.5"/>
-        <GradientStop Color="#349C44" Offset="1"/>
-    </LinearGradientBrush>
-
-    <LinearGradientBrush x:Key="TGL.ONOFF.ICON.BDR" StartPoint="0.5,0" EndPoint="0.5,1">
-        <GradientStop Color="#B79858" Offset="0"/>
-        <GradientStop Color="#93712F" Offset="0.5"/>
-        <GradientStop Color="#664D27" Offset="1"/>
-    </LinearGradientBrush>
-
-    <LinearGradientBrush x:Key="TGL.ONOFF.ICON.BDR.OVER" StartPoint="0.5,0" EndPoint="0.5,1">
-        <GradientStop Color="#EDE2CD" Offset="0"/>
-        <GradientStop Color="#D2B67C" Offset="0.5"/>
-        <GradientStop Color="#C3973D" Offset="1"/>
-    </LinearGradientBrush>
-
-    <SolidColorBrush x:Key="TGL.ICON.FILL" Color="#CDBE91" />
-    <SolidColorBrush x:Key="TGL.ICON.FILL.OVER" Color="#F0E6D2" />
-
-    <Style TargetType="{x:Type Border}" x:Key="TRAN.BORDER">
-        <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="BorderBrush" Value="{StaticResource BDR.TRAN}"/>
-        <Setter Property="BorderThickness" Value="0 0 0 0.5"/>
-        <Setter Property="Margin" Value="-25 15 -25 15"/>
-    </Style>
-
+	<Style TargetType="{x:Type Control}" x:Key="BDR.CIRCLE">
+		<Setter Property="Grid.Column" Value="0"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Control}">
+					<Border Width="158" 
+							Height="158" 
+							CornerRadius="300"
+                            Background="Transparent"
+							BorderBrush="{StaticResource IMG.BDR}" 
+							BorderThickness="2.5" 
+							Margin="0 14 0 0">
+						<Border Margin="8"
+                                BorderBrush="{StaticResource IMG.BDR}"
+                                BorderThickness="1.5"
+                                CornerRadius="300">
+						</Border>
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	
+	<Style TargetType="{x:Type Border}" x:Key="BDR.SEPERATE">
+		<Setter Property="Background" Value="Transparent"/>
+		<Setter Property="BorderBrush" Value="{StaticResource BDR.TRAN}"/>
+		<Setter Property="BorderThickness" Value="0 0 0 1"/>
+		<Setter Property="Margin" Value="0 10 0 10"/>
+	</Style>
+	
     <Style TargetType="{x:Type ContentControl}" x:Key="CTC.TIER">
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
                     <StackPanel Orientation="Horizontal">
-                        <TextBlock Foreground="#A09B8C" Text="내 격전 티어:" VerticalAlignment="Center"/>
-                        <Border Background="#A09B8C" CornerRadius="3" Width="46" Height="20" Margin="8 0 0 0">
-                            <TextBlock FontFamily="Friz Quadrata Std" FontSize="13" Foreground="Black" Text="I  티어" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold"/>
+                        <TextBlock Foreground="#A09B8C" 
+								   Text="내 격전 티어:"/>
+						<Border Width="46" 
+								Height="20" 
+								Margin="8 0 0 0"
+								CornerRadius="3" 
+								Background="#A09B8C">
+							<TextBlock Text="I  티어" 
+									   Foreground="#000000" 
+									   FontSize="13" 
+									   FontWeight="Bold"
+									   FontFamily="Friz Quadrata Std" 
+									   HorizontalAlignment="Center" 
+									   VerticalAlignment="Center"/>
                         </Border>
                     </StackPanel>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-
-    <Style TargetType="{x:Type ToggleButton}" x:Key="TGL.ONOFF">
-        <Setter Property="BorderThickness" Value="2"/>
-        <Setter Property="Cursor" Value="Hand"/>
-        <Setter Property="Margin" Value="14 0 0 0"/>
-        <Setter Property="VerticalAlignment" Value="Center"/>
-        <Setter Property="HorizontalAlignment" Value="Center"/>
-        <Setter Property="Background" Value="#1E2328"/>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type ToggleButton}">
-                    <ControlTemplate.Resources>
-                        <Storyboard x:Key="OnChecking">
-                            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Thumb"
-                                                           Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.X)">
-                                <SplineDoubleKeyFrame KeyTime="00:00:00.2" Value="32"/>
-                            </DoubleAnimationUsingKeyFrames>
-                        </Storyboard>
-                        <Storyboard x:Key="OnUnchecking">
-                            <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="Thumb"
-                                                           Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.X)">
-                                <SplineDoubleKeyFrame KeyTime="00:00:00.2" Value="0"/>
-                            </DoubleAnimationUsingKeyFrames>
-                        </Storyboard>
-                    </ControlTemplate.Resources>
-                    <Grid >
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="auto"/>
-                            <ColumnDefinition Width="auto"/>
-                        </Grid.ColumnDefinitions>
-                        <Border Margin="1,0,1,0" BorderThickness="{TemplateBinding BorderThickness}" 
-                                CornerRadius="8"
-                                BorderBrush="{StaticResource TGL.ONOFF.BDR}"
-                                Width="38" Height="19"
-                                Background="{StaticResource TGL.OFF.BG}"
-                                x:Name="RangeBorder"
-                                UseLayoutRounding="True">
-                            <ctrls:RiotIcon Fill="#20432A" Width="13" Height="13" HorizontalAlignment="Left" VerticalAlignment="Center" IconType="Check" Margin="3 0 0 0"/>
-                        </Border>
-                        <Border x:Name="Thumb" 
-                                Width="26" Height="26" 
-                                Background="{TemplateBinding Background}" 
-                                BorderBrush="{StaticResource TGL.ONOFF.ICON.BDR}"
-                                BorderThickness="2"
-                                CornerRadius="300"
-                                VerticalAlignment="Center"
-                                HorizontalAlignment="Left"
-                                Margin="-8 0 0 0">
-                            <ctrls:RiotIcon x:Name="icon"  Fill="{StaticResource TGL.ICON.FILL}" Width="15" Height="15" HorizontalAlignment="Center" VerticalAlignment="Center" IconType="AccountSupervisor"/>
-                            <Border.RenderTransform>
-                                <TransformGroup>
-                                    <TranslateTransform X="0" Y="0"/>
-                                </TransformGroup>
-                            </Border.RenderTransform>
-                        </Border>
-                        <ContentPresenter Grid.Column="1" Margin="4 0 0 0" VerticalAlignment="Center" x:Name="content"/>
-                    </Grid> 
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="Thumb" Property="BorderBrush" Value="{StaticResource TGL.ONOFF.ICON.BDR.OVER}"/>
-                            <Setter TargetName="icon" Property="Fill" Value="{StaticResource TGL.ICON.FILL.OVER}"/>
-                        </Trigger>
-                        <Trigger Property="IsChecked" Value="True">
-                            <Setter TargetName="RangeBorder" Property="Background" Value="{StaticResource TGL.ON.BG}"/>
-                            <Trigger.ExitActions>
-                                <BeginStoryboard Storyboard="{StaticResource OnUnchecking}"/>
-                            </Trigger.ExitActions>
-                            <Trigger.EnterActions>
-                                <BeginStoryboard Storyboard="{StaticResource OnChecking}"/>
-                            </Trigger.EnterActions>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
@@ -179,16 +112,15 @@
                 <ControlTemplate>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Foreground="#A09B8C" Text="자유 선수" VerticalAlignment="Center"/>
-                        <ToggleButton Style="{StaticResource TGL.ONOFF}"/>
-                        <Border CornerRadius="300" Width="18" Height="18" Background="#C89B3C" Margin="8 0 0 0">
-                            <ctrls:RiotIcon  Fill="Black" Width="12" Height="12" HorizontalAlignment="Center" VerticalAlignment="Center" IconType="Help"/>
+                        <units:OnOffButton/>
+						<Border Width="18" Height="18" CornerRadius="30" Background="#C89B3C" Margin="10 0 0 0">
+							<ctrls:RiotIcon Width="12" Height="12" Fill="#000000" HorizontalAlignment="Center" VerticalAlignment="Center" IconType="Help"/>
                         </Border>
                     </StackPanel>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
-
 
     <Style TargetType="{x:Type units:CityCup}">
         <Setter Property="Template">
@@ -198,25 +130,10 @@
                         <TextBlock Style="{StaticResource TXB.HEADER}"/>
                         <TextBlock Style="{StaticResource TXB.SUB}"/>
                         <!--Border임시 Path로 변경예정-->
-                        <Border x:Name="border"
-									Grid.Column="0"
-									Width="158" 
-									Height="158" 
-									CornerRadius="300"
-                                    Background="Transparent"
-									BorderBrush="{StaticResource IMG.BDR}" 
-									BorderThickness="2.5" 
-									Margin="0 14 0 0">
-                            <Border Margin="8"
-                                    BorderBrush="{StaticResource IMG.BDR}"
-                                    BorderThickness="1.5"
-                                    CornerRadius="300">
-                                
-                            </Border>
-                        </Border>
-                        <TextBlock Text="0/400" Margin="0 6 0 0" Foreground="{StaticResource TXT.FGD}" FontSize="19" HorizontalAlignment="Center"/>
+						<Control Style="{StaticResource BDR.CIRCLE}"/>
+						<TextBlock Style="{StaticResource TXB.GAUGE}"/>
                         <units:TicketButton/>
-                        <Border Style="{StaticResource TRAN.BORDER}"/>
+						<Border Style="{StaticResource BDR.SEPERATE}"/>
                         <ContentControl Style="{StaticResource CTC.TIER}"/>
                         <ContentControl Style="{StaticResource CTC.FREE}"/>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 20 0 0">

@@ -16,6 +16,10 @@
     <Page Update="Themes\Units\CityCup.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Themes\Units\OnOffButton.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Themes\Units\FaqButton.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
