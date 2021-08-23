@@ -1,13 +1,14 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Lol.Clash;component/Themes/Views/ClashView.xaml"/>
         <ResourceDictionary Source="/Lol.Clash;component/Themes/Units/Manual.xaml"/>
-        <ResourceDictionary Source="/Lol.Clash;component/Themes/Units/CityCup.xaml"/>
-        <ResourceDictionary Source="/Lol.Clash;component/Themes/Units/TicketButton.xaml"/>
+		<ResourceDictionary Source="/Lol.Clash;component/Themes/Units/CityCup.xaml"/>
+		<ResourceDictionary Source="/Lol.Clash;component/Themes/Units/OnOffButton.xaml"/>
+		<ResourceDictionary Source="/Lol.Clash;component/Themes/Units/TicketButton.xaml"/>
         <ResourceDictionary Source="/Lol.Clash;component/Themes/Units/PositionButton.xaml"/>
         <ResourceDictionary Source="/Lol.Clash;component/Themes/Units/Schedule.xaml"/>
-        <ResourceDictionary Source="/Lol.Clash;component/Themes/Units/FaqButton.xaml"/>
-        <ResourceDictionary Source="/Lol.Clash;component/Themes/Units/WinningTeam.xaml"/>
+		<ResourceDictionary Source="/Lol.Clash;component/Themes/Units/FaqButton.xaml"/>
+		<ResourceDictionary Source="/Lol.Clash;component/Themes/Views/ClashView.xaml"/>
+		<ResourceDictionary Source="/Lol.Clash;component/Themes/Views/WinningTeam.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

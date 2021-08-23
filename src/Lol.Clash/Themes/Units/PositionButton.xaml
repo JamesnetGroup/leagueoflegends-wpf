@@ -2,19 +2,20 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:units="clr-namespace:Lol.Clash.UI.Units"
                     xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
-    <LinearGradientBrush x:Key="BDR.BUTTON" StartPoint="0, 0" EndPoint="1, 1">
+	
+    <LinearGradientBrush x:Key="BTN.BDR" StartPoint="0, 0" EndPoint="1, 1">
         <GradientStop Color="#BE9F63" Offset="0"/>
         <GradientStop Color="#83662B" Offset="0.5"/>
         <GradientStop Color="#664C26" Offset="1"/>
     </LinearGradientBrush>
 
-    <LinearGradientBrush x:Key="BDR.BUTTON.OVER" StartPoint="0, 0" EndPoint="1, 1">
+	<LinearGradientBrush x:Key="BTN.BDR.OVER" StartPoint="0, 0" EndPoint="1, 1">
         <GradientStop Color="#E7DCC6" Offset="0"/>
         <GradientStop Color="#BDAE85" Offset="0.5"/>
         <GradientStop Color="#C1953B" Offset="1"/>
     </LinearGradientBrush>
 
-    <LinearGradientBrush x:Key="BG.BUTTON.OVER" StartPoint="0, 0" EndPoint="1, 1">
+    <LinearGradientBrush x:Key="BTN.BG.OVER" StartPoint="0, 0" EndPoint="1, 1">
         <GradientStop Color="#212529" Offset="0"/>
         <GradientStop Color="#2C2F2E" Offset="0.5"/>
         <GradientStop Color="#383833" Offset="1"/>
@@ -26,11 +27,24 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:PositionButton}">
-                    <Border x:Name="border1" Height="44" Width="44"  Background="{TemplateBinding Background}" BorderThickness="2.5" BorderBrush="{StaticResource BDR.BUTTON}" RenderTransformOrigin="0.5, 0.5">
+					<Border x:Name="border" 
+							Height="44" 
+							Width="44" 
+							Background="{TemplateBinding Background}" 
+							BorderBrush="{StaticResource BTN.BDR}"
+							BorderThickness="2.5"  
+							RenderTransformOrigin="0.5, 0.5">
                         <Border.RenderTransform>
                             <RotateTransform Angle="45"/>
                         </Border.RenderTransform>
-                        <ctrls:RiotIcon x:Name="icon" Fill="#C8AA6E" Width="26" Height="26" HorizontalAlignment="Center" VerticalAlignment="Center" IconType="{TemplateBinding SendIconType}"  RenderTransformOrigin="0.5, 0.5">
+						<ctrls:RiotIcon x:Name="icon" 
+										Width="26" 
+										Height="26" 
+										Fill="#C8AA6E" 
+										HorizontalAlignment="Center" 
+										VerticalAlignment="Center" 
+										IconType="{TemplateBinding SendIconType}" 
+										RenderTransformOrigin="0.5, 0.5">
                             <ctrls:RiotIcon.RenderTransform>
                                 <RotateTransform Angle="-45"/>
                             </ctrls:RiotIcon.RenderTransform>
@@ -38,8 +52,8 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="border1" Property="BorderBrush" Value="{StaticResource BDR.BUTTON.OVER}"/>
-                            <Setter TargetName="border1" Property="Background" Value="{StaticResource BG.BUTTON.OVER}"/>
+							<Setter TargetName="border" Property="BorderBrush" Value="{StaticResource BTN.BDR.OVER}"/>
+							<Setter TargetName="border" Property="Background" Value="{StaticResource BTN.BG.OVER}"/>
                             <Setter TargetName="icon" Property="Fill" Value="#F0E6D2"/>
                         </Trigger>
                     </ControlTemplate.Triggers>

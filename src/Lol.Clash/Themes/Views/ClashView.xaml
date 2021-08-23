@@ -2,6 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:views="clr-namespace:Lol.Clash.UI.Views"
                     xmlns:units="clr-namespace:Lol.Clash.UI.Units">
+	
     <Style TargetType="{x:Type views:ClashView}">
         <Setter Property="Template">
             <Setter.Value>
@@ -20,7 +21,7 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
                             <units:CityCup/>
-                            <units:Schedule Grid.Column="2" />
+                            <units:Schedule Grid.Column="2"/>
                             <Grid Grid.Column="1" Width="70"/>
                         </Grid>
                         <Grid Grid.Row="2" Height="100">

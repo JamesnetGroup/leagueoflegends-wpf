@@ -152,7 +152,7 @@ namespace Lol.Main.Local.ViewModel
                     8 => new Overview().SetVM(new OverviewModel()),
                     // TODO: [Kevin] HubView로 변경 예정
                     11 => new ClashView().SetVM(new ClashViewModel()),
-                    14 => new WinningTeama().SetVM(new ClashViewModel()),
+                    14 => new WinningTeam().SetVM(new ClashViewModel()),
                     26 => new Champions().SetVM(new ChampionsViewModel()),
                     _ => new EmptyContent()
                 };
