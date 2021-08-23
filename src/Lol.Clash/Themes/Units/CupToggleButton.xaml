@@ -19,18 +19,47 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:CupToggleButton}">
                     <Border Background="Transparent">
-                        <StackPanel Orientation="Horizontal">
-                            <TextBlock Style="{StaticResource TXB.TEMP}"/>
-                            <StackPanel VerticalAlignment="Center" Margin="6 4 0 0">
-                                <ctrls:RiotIcon x:Name="icon1" Fill="#C8AA6E" Width="12" Height="12" IconType="ChevronUp" Margin="0 0 0 -2"/>
-                                <ctrls:RiotIcon x:Name="icon2" Fill="#C8AA6E" Width="12" Height="12" IconType="ChevronDown" Margin="0 -2 0 0"/>
+                        <Grid>
+                            <!-- TODO: [Kevin] 임시작업 변경예정-->
+                            <StackPanel Orientation="Horizontal" x:Name="sp1">
+                                <TextBlock Style="{StaticResource TXB.TEMP}"/>
+                                <StackPanel VerticalAlignment="Center" Margin="6 4 0 0">
+                                    <ctrls:RiotIcon x:Name="icon1" Fill="#C8AA6E" Width="12" Height="12" IconType="ChevronUp" Margin="0 0 0 -2"/>
+                                    <ctrls:RiotIcon x:Name="icon2" Fill="#C8AA6E" Width="12" Height="12" IconType="ChevronDown" Margin="0 -2 0 0"/>
+                                </StackPanel>
                             </StackPanel>
-                        </StackPanel>
+                            <Border x:Name="bd1"
+                                    Width="408" Height="496"
+                                    BorderThickness="2"
+                                    Margin="-2 44 0 0"
+                                    BorderBrush="#463714"
+                                    Background="#010A13"
+                                    Visibility="Collapsed" 
+                                    HorizontalAlignment="Left" VerticalAlignment="Top">
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
+                                    <TextBlock Style="{StaticResource TXB.TEMP}"/>
+                                    <StackPanel VerticalAlignment="Center" Margin="6 4 0 0">
+                                        <ctrls:RiotIcon x:Name="icon3" Fill="#C8AA6E" Width="12" Height="12" IconType="ChevronUp" Margin="0 0 0 -2"/>
+                                        <ctrls:RiotIcon x:Name="icon4" Fill="#C8AA6E" Width="12" Height="12" IconType="ChevronDown" Margin="0 -2 0 0"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Border>
+                        </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="icon1" Property="Fill" Value="#FFFFF2"/>
                             <Setter TargetName="icon2" Property="Fill" Value="#FFFFF2"/>
+                            <Setter TargetName="icon3" Property="Fill" Value="#FFFFF2"/>
+                            <Setter TargetName="icon4" Property="Fill" Value="#FFFFF2"/>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="bd1" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="sp1" Property="Visibility" Value="Collapsed"/>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="False">
+                            <Setter TargetName="bd1" Property="Visibility" Value="Collapsed"/>
+                            <Setter TargetName="sp1" Property="Visibility" Value="Visible"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

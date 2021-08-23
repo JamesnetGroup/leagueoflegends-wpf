@@ -9,17 +9,17 @@
         <Setter Property="Foreground" Value="{StaticResource TXT.FGD}"/>
         <Setter Property="FontSize" Value="30"/>
         <Setter Property="FontWeight" Value="Bold"/>
-        <Setter Property="Margin" Value="0 6 0 0"/>
+        <Setter Property="Margin" Value="0 75 0 0"/>
     </Style>
     
     <Style TargetType="{x:Type units:Title}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:Title}">
-                    <StackPanel>
-                        <units:CupToggleButton/>
+                    <Grid>
                         <TextBlock Style="{StaticResource TXB.TEMP}"/>
-                    </StackPanel>
+                        <units:CupToggleButton/>
+                    </Grid>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
