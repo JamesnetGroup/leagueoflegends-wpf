@@ -68,6 +68,10 @@
 						<Trigger Property="IsMouseOver" Value="True">
 							<Setter Property="Cursor" Value="IBeam"/>
 						</Trigger>
+                        <!--임시-->
+                        <Trigger Property="Tag" Value="Temp">
+                            <Setter TargetName="placeholder" Property="Text" Value="팀 검색"/>
+                        </Trigger>
 						<DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Text}" Value="">
 							<Setter TargetName="placeholder" Property="Visibility" Value="Visible"/>
 							<Setter TargetName="close" Property="Visibility" Value="Collapsed"/>
