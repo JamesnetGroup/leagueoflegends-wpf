@@ -7,7 +7,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListBoxItem}">
                     <Border>
-                        
+                        <TextBlock Foreground="Red" Text="{Binding Name}"/>
                     </Border>
                     <ControlTemplate.Triggers>
                     </ControlTemplate.Triggers>
@@ -17,6 +17,7 @@
     </Style>
 
     <Style TargetType="{x:Type units:CupListBox}">
+        <Setter Property="ItemsSource" Value="{Binding Cups}"/>
         <Setter Property="ItemContainerStyle" Value="{StaticResource LBXI.CUP}"/>
         <Setter Property="Template">
             <Setter.Value>
