@@ -19,7 +19,7 @@
                     <Border Background="Transparent">
                         <Grid>
                             <!-- TODO: [Kevin] 임시작업 변경예정-->
-                            <StackPanel Orientation="Horizontal" x:Name="sp1">
+                            <StackPanel Orientation="Horizontal" x:Name="sp1" Margin="10 8 0 0">
                                 <TextBlock Style="{StaticResource TXB.TEMP}"/>
                                 <StackPanel VerticalAlignment="Center" Margin="6 4 0 0">
                                     <ctrls:RiotIcon x:Name="icon1" Fill="#C8AA6E" Width="12" Height="12" IconType="ChevronUp" Margin="0 0 0 -2"/>
@@ -34,8 +34,8 @@
                                     Background="#010A13"
                                     Visibility="Collapsed" 
                                     HorizontalAlignment="Left" VerticalAlignment="Top">
-                                <StackPanel Orientation="Horizontal" VerticalAlignment="Top">
-                                    <TextBlock Style="{StaticResource TXB.TEMP}"/>
+                                <StackPanel Orientation="Horizontal" VerticalAlignment="Top" Margin="10 4 0 0">
+                                    <TextBlock Style="{StaticResource TXB.TEMP}" Margin="0 0 0 0"/>
                                     <StackPanel VerticalAlignment="Center" Margin="6 4 0 0">
                                         <ctrls:RiotIcon x:Name="icon3" Fill="#C8AA6E" Width="12" Height="12" IconType="ChevronUp" Margin="0 0 0 -2"/>
                                         <ctrls:RiotIcon x:Name="icon4" Fill="#C8AA6E" Width="12" Height="12" IconType="ChevronDown" Margin="0 -2 0 0"/>
