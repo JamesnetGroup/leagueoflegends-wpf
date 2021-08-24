@@ -3,11 +3,9 @@
                     xmlns:units="clr-namespace:Lol.Clash.UI.Units"
                     xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
 
-    <SolidColorBrush Color="#CDBE91" x:Key="TXT.FGD"/>
-
     <Style TargetType="{x:Type TextBlock}" x:Key="TXB.TEMP">
         <Setter Property="Text" Value="밴들 시티 컵 o 4일 차"/>
-        <Setter Property="Foreground" Value="{StaticResource TXT.FGD}"/>
+		<Setter Property="Foreground" Value="#CDBE91"/>
         <Setter Property="FontSize" Value="17"/>
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="VerticalAlignment" Value="Center"/>

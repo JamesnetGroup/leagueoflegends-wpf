@@ -55,6 +55,7 @@ namespace Lol.Controls.Primitives
                 case GeoIcon.Close: icon.Data = IconData.WIN_CLOSE.ToGeometry(); break;
                 case GeoIcon.Help: icon.Data = IconData.WIN_HELP.ToGeometry(); break;
                 case GeoIcon.Ticket: icon.Data = IconData.TICKET.ToGeometry(); break;
+                case GeoIcon.TicketOutline: icon.Data = IconData.TICKET_OUTLINE.ToGeometry(); break;
                 case GeoIcon.Clock: icon.Data = IconData.CLOCK.ToGeometry(); break;
                 case GeoIcon.Task: icon.Data = IconData.TASK.ToGeometry(); break;
                 case GeoIcon.Lock: icon.Data = IconData.LOCK.ToGeometry(); break;
@@ -73,7 +74,6 @@ namespace Lol.Controls.Primitives
                 case GeoIcon.ArrowDown: icon.Data = IconData.ARROW_DOWN.ToGeometry(); break;
                 case GeoIcon.Plus: icon.Data = IconData.PLUS.ToGeometry(); break;
                 case GeoIcon.MenuLeft: icon.Data = IconData.MENU_LEFT.ToGeometry(); break;
-                case GeoIcon.Square: icon.Data = IconData.SQUARE.ToGeometry(); break;
                 case GeoIcon.AccountSupervisor: icon.Data = IconData.ACCOUNT_SUPERVISOR.ToGeometry(); break;
                 case GeoIcon.Grass: icon.Data = IconData.GRASS.ToGeometry(); break;
                 case GeoIcon.ArrowDecision: icon.Data = IconData.ARROWDECISION.ToGeometry(); break;

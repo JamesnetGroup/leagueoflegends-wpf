@@ -83,7 +83,7 @@
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate>
+                <ControlTemplate TargetType="{x:Type ContentControl}">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Foreground="#A09B8C" 
 								   Text="내 격전 티어:"/>
@@ -111,7 +111,7 @@
         <Setter Property="Margin" Value="0 10 0 0"/>
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate>
+                <ControlTemplate TargetType="{x:Type ContentControl}">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Foreground="#A09B8C" Text="자유 선수" VerticalAlignment="Center"/>
                         <units:OnOffButton/>

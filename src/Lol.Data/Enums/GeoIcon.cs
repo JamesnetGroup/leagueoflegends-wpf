@@ -26,6 +26,7 @@
         Close,
         Help,
         Ticket,
+        TicketOutline,
         Clock,
         Task,
         Lock,
