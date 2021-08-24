@@ -36,8 +36,8 @@
 					<Border x:Name="border" Width="29" Height="29" Background="{StaticResource BTN.BG}" CornerRadius="3 0 0 3"
 								BorderBrush="{StaticResource BTN.BDR}" BorderThickness="2" Margin="0 0 0 0">
                         <Grid>
-                            <ctrls:RiotIcon x:Name="icon" Fill="#CDBE91" Width="18" Height="18" HorizontalAlignment="Center" VerticalAlignment="Center" IconType="Plus"/>
-                            <ctrls:RiotIcon x:Name="icon2" Fill="#9D7931" Width="16" Height="16" HorizontalAlignment="Right" VerticalAlignment="Center" IconType="MenuLeft" Margin="0 0 -7 0"/>
+                            <ctrls:RiotIcon x:Name="icon" Fill="#CDBE91" Width="18" Height="18" HorizontalAlignment="Center" IconType="Plus"/>
+                            <ctrls:RiotIcon x:Name="icon2" Fill="#9D7931" Width="16" Height="16" HorizontalAlignment="Right" IconType="MenuLeft" Margin="0 0 -7 0"/>
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
@@ -54,6 +54,7 @@
     </Style>
 
     <!-- TODO: [Kevin] https://materialdesignicons.com/ 비슷한 아이콘 안보여서 임시로 만듬, Path로 작업 필요-->
+	<!--[0824] Elena: 비슷한 아이콘으로 대체-->
     <Style TargetType="{x:Type ContentControl}" x:Key="CTC.ADD">
         <Setter Property="Template">
             <Setter.Value>
