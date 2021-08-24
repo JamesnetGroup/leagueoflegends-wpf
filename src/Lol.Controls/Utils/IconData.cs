@@ -50,6 +50,7 @@
         internal static readonly string ARROWTOPRGIHT = "M5,17.59L15.59,7H9V5H19V15H17V8.41L6.41,19L5,17.59Z";
         internal static readonly string CHEVRON_UP = "M7.41,15.41L12,10.83L16.59,15.41L18,14L12,8L6,14L7.41,15.41Z";
         internal static readonly string CHEVRON_DOWN = "M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z";
+        internal static readonly string CHEVRON_RIGHT = "M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z";
     }
         
 }

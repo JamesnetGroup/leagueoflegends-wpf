@@ -51,6 +51,7 @@
         ArrowDecision,
         ArrowTopRgiht,
         ChevronUp,
-        ChevronDown
+        ChevronDown,
+        ChevronRight
     }
 }

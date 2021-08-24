@@ -6,10 +6,25 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListBoxItem}">
-                    <Border>
-                        <TextBlock Foreground="Red" Text="{Binding Name}"/>
+                    <Border Padding="10 10 18 10" Background="{TemplateBinding Background}" BorderThickness="0 0 0 1" BorderBrush="#1E2328">
+                        <Grid>
+                            <TextBlock x:Name="text"
+                                       Text="{Binding Name}" 
+                                       FontWeight="Bold"
+                                       FontSize="15"
+                                       Foreground="#CDBE91"
+                                       HorizontalAlignment="Left"/>
+                            <ctrls:RiotIcon x:Name="icon" Visibility="Collapsed" HorizontalAlignment="Right" Fill="#D4CDBC" Width="18" Height="18" IconType="Check"/>
+                        </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#1E2328"/>
+                            <Setter TargetName="text" Property="Foreground" Value="#F0E6D2"/>
+                        </Trigger>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter TargetName="icon" Property="Visibility" Value="Visible"/>
+                        </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
@@ -17,7 +32,10 @@
     </Style>
 
     <Style TargetType="{x:Type units:CupListBox}">
+        <Setter Property="Grid.Row" Value="1"/>
         <Setter Property="ItemsSource" Value="{Binding Cups}"/>
+        <Setter Property="SelectedItem" Value="{Binding CurrentCup}"/>
+        <Setter Property="Margin" Value="0 0 0 0"/>
         <Setter Property="ItemContainerStyle" Value="{StaticResource LBXI.CUP}"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -27,12 +45,14 @@
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
-                        <TextBlock FontSize="13" 
-								   Foreground="#A09B8C" 
+                        <StackPanel Orientation="Horizontal" Margin="4 20 0 10">
+                            <ctrls:RiotIcon Fill="#A09B8C" Width="24" Height="24" IconType="ChevronRight"/>
+                            <TextBlock Foreground="#A09B8C" 
 								   HorizontalAlignment="Left" 
-								   VerticalAlignment="Top" 
+								   VerticalAlignment="Center" 
 								   Text="지난 토너먼트" 
-								   Margin="0 20 0 10"/>
+                                   Cursor="Arrow"/>
+                        </StackPanel>
                         <ctrls:BasicScroll Grid.Row="1" Margin="0"
 										   ScrollViewer.VerticalScrollBarVisibility="Auto" 
 										   ScrollViewer.HorizontalScrollBarVisibility="Disabled">
