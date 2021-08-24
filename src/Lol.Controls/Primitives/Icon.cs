@@ -80,6 +80,7 @@ namespace Lol.Controls.Primitives
                 case GeoIcon.ArrowTopRgiht: icon.Data = IconData.ARROWTOPRGIHT.ToGeometry(); break;
                 case GeoIcon.ChevronUp: icon.Data = IconData.CHEVRON_UP.ToGeometry(); break;
                 case GeoIcon.ChevronDown: icon.Data = IconData.CHEVRON_DOWN.ToGeometry(); break;
+                case GeoIcon.ChevronRight: icon.Data = IconData.CHEVRON_RIGHT.ToGeometry(); break;
 
                 case GeoIcon.None:
                     break;

@@ -34,8 +34,12 @@
                                     Background="#010A13"
                                     Visibility="Collapsed" 
                                     HorizontalAlignment="Left" VerticalAlignment="Top">
-                                <StackPanel VerticalAlignment="Top" Margin="10 4 0 0">
-                                    <StackPanel Orientation="Horizontal">
+                                <Grid VerticalAlignment="Top">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition/>
+                                    </Grid.RowDefinitions>
+                                    <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="10 4 0 0">
                                         <TextBlock Style="{StaticResource TXB.TEMP}" Margin="0 0 0 0"/>
                                         <StackPanel VerticalAlignment="Center" Margin="6 4 0 0">
                                             <ctrls:RiotIcon x:Name="icon3" Fill="#C8AA6E" Width="12" Height="12" IconType="ChevronUp" Margin="0 0 0 -2"/>
@@ -43,7 +47,7 @@
                                         </StackPanel>
                                     </StackPanel>
                                     <units:CupListBox/>
-                                </StackPanel>
+                                </Grid>
                             </Border>
                         </Grid>
                     </Border>

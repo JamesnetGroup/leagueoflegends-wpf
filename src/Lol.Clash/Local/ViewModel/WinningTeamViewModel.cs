@@ -12,6 +12,7 @@ namespace Lol.Clash.Local.ViewModel
     public class WinningTeamViewModel : ObservableObject
     {
         private List<CupModel> _cups;
+        private CupModel _currentCup;
 
         #region Cups
 
@@ -21,9 +22,20 @@ namespace Lol.Clash.Local.ViewModel
             set { _cups = value; OnPropertyChanged(); }
         }
         #endregion
+
+        #region CurrentCup
+
+        public CupModel CurrentCup
+        {
+            get => _currentCup;
+            set { _currentCup = value; OnPropertyChanged(); }
+        }
+        #endregion
+
         public WinningTeamViewModel()
         {
             Cups = ExamWinningTeam.GetCup();
+            CurrentCup = Cups.First();
         }
     }
 }
