@@ -8,9 +8,9 @@
         <ResourceDictionary Source="/Lol.Clash;component/Themes/Units/PositionButton.xaml"/>
         <ResourceDictionary Source="/Lol.Clash;component/Themes/Units/Schedule.xaml"/>
         <ResourceDictionary Source="/Lol.Clash;component/Themes/Units/FaqButton.xaml"/>
-        <ResourceDictionary Source="/Lol.Clash;component/Themes/Views/ClashView.xaml"/>
-        <ResourceDictionary Source="/Lol.Clash;component/Themes/Views/WinningTeam.xaml"/>
         <ResourceDictionary Source="/Lol.Clash;component/Themes/Units/Title.xaml"/>
-        <ResourceDictionary Source="/Lol.Clash;component/Themes/Units/CupToggleButton.xaml"/>
-    </ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary Source="/Lol.Clash;component/Themes/Units/CupToggleButton.xaml"/>
+		<ResourceDictionary Source="/Lol.Clash;component/Themes/Views/ClashView.xaml"/>
+		<ResourceDictionary Source="/Lol.Clash;component/Themes/Views/WinningTeam.xaml"/>
+	</ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

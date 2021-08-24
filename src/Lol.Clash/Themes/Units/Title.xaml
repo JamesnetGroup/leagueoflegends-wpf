@@ -2,11 +2,9 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:units="clr-namespace:Lol.Clash.UI.Units">
 
-    <SolidColorBrush Color="#F0E6D2" x:Key="TXT.FGD"/>
-
     <Style TargetType="{x:Type TextBlock}" x:Key="TXB.TEMP">
         <Setter Property="Text" Value="격전 챔피언"/>
-        <Setter Property="Foreground" Value="{StaticResource TXT.FGD}"/>
+		<Setter Property="Foreground" Value="#F0E6D2"/>
         <Setter Property="FontSize" Value="30"/>
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="Margin" Value="0 75 0 0"/>
