@@ -52,7 +52,7 @@
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type ToggleButton}">
-					<Border Width="45" Height="22" Background="#AA000000" BorderBrush="Transparent" CornerRadius="8">
+					<Border Height="22" Background="#AA000000" BorderBrush="Transparent" CornerRadius="8">
 						<StackPanel Orientation="Horizontal">
 							<Image Source="/Lol.Resources;component/Images/lol-star-piece.png"
 								   RenderOptions.BitmapScalingMode="Fant" Width="10" Margin="7 0 0 1">
@@ -60,7 +60,7 @@
 									<RotateTransform Angle="10"/>
 								</Image.LayoutTransform>
 							</Image>
-							<TextBlock Text="0" FontWeight="Bold" FontSize="15" Foreground="#CCC8BD" VerticalAlignment="Center" Padding="7 0 0 2"/>
+							<TextBlock Text="480" FontWeight="Bold" FontSize="14" Foreground="#CCC8BD" VerticalAlignment="Center" Padding="7 0 7 2"/>
 						</StackPanel>
 					</Border>
 					<ControlTemplate.Triggers>

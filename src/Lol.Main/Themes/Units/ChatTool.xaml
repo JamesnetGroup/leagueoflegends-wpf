@@ -25,7 +25,7 @@
 				<ControlTemplate TargetType="{x:Type Control}">
 					<Border>
 						<Border.ToolTip>
-							<ctrls:BasicTooltip ToolTip="V11.1.351.8352"/>
+							<ctrls:BasicTooltip ToolTip="V11.1.351.8352" Placement="Top" HorizontalOffset="-5" VerticalOffset="-3"/>
 						</Border.ToolTip>
 						<TextBlock Background="Transparent" Text="V11.1" FontSize="13" Foreground="#3C3C41" HorizontalAlignment="Stretch"
 								   VerticalAlignment="Stretch" TextAlignment="Center" Padding="25 5 25 5"/>
