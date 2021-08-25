@@ -28,7 +28,7 @@
     <Page Update="Themes\Units\Manual.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Views\ClashView.xaml">
+    <Page Update="Themes\Views\HubView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
