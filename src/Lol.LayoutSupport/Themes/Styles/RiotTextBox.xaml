@@ -60,18 +60,14 @@
 						<ctrls:RiotIcon IconType="Magnify" HorizontalAlignment="Left" 
 										Fill="#F0E6D2" Width="15" Height="15" Margin="10 0 0 0"/>
 						<ScrollViewer x:Name="PART_ContentHost" Margin="30 0 30 0" VerticalAlignment="Center"/>
-						<TextBlock x:Name="placeholder" Margin="32 0 10 0" VerticalAlignment="Center" 
-								   Foreground="#757575" Text="Player Name" Visibility="Collapsed"/>
+						<TextBlock x:Name="placeholder" Margin="32 0 10 0" VerticalAlignment="Center" Visibility="Collapsed"
+								   Foreground="#757575" Text="{Binding RelativeSource={RelativeSource AncestorType=ctrls:RiotTextBox}, Path=PlaceHolder}"/>
 						<Button x:Name="close" Style="{StaticResource BTN.CLOSE}"/>
 					</Grid>
 					<ControlTemplate.Triggers>
 						<Trigger Property="IsMouseOver" Value="True">
 							<Setter Property="Cursor" Value="IBeam"/>
 						</Trigger>
-                        <!--임시-->
-                        <Trigger Property="Tag" Value="Temp">
-                            <Setter TargetName="placeholder" Property="Text" Value="팀 검색"/>
-                        </Trigger>
 						<DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Text}" Value="">
 							<Setter TargetName="placeholder" Property="Visibility" Value="Visible"/>
 							<Setter TargetName="close" Property="Visibility" Value="Collapsed"/>

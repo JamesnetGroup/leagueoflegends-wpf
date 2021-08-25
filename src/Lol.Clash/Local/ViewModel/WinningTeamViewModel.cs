@@ -1,22 +1,19 @@
-﻿using Lol.Data.WinningTeam;
-using Lol.ExampleData.WinningTeam;
+﻿using Lol.Data.Clash;
+using Lol.ExampleData.Clash;
 using Lol.Foundation.Mvvm;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Lol.Clash.Local.ViewModel
 {
-    public class WinningTeamViewModel : ObservableObject
+	public class WinningTeamViewModel : ObservableObject
     {
-        private List<CupModel> _cups;
-        private CupModel _currentCup;
+        private List<BaseModel> _cups;
+        private BaseModel _currentCup;
 
         #region Cups
 
-        public List<CupModel> Cups
+        public List<BaseModel> Cups
         {
             get => _cups;
             set { _cups = value; OnPropertyChanged(); }
@@ -25,17 +22,20 @@ namespace Lol.Clash.Local.ViewModel
 
         #region CurrentCup
 
-        public CupModel CurrentCup
+        public BaseModel CurrentCup
         {
             get => _currentCup;
             set { _currentCup = value; OnPropertyChanged(); }
         }
         #endregion
 
+        #region Constructor
+
         public WinningTeamViewModel()
         {
-            Cups = ExamWinningTeam.GetCup();
+            Cups = ExamClash.GetCup();
             CurrentCup = Cups.First();
         }
-    }
+		#endregion
+	}
 }

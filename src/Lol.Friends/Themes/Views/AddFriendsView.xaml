@@ -49,7 +49,7 @@
 										   Text="Already know your friend's Summoner Name or Riot ID? Send them a friend request!" 
 										   Margin="0 15 0 0"/>
 								<StackPanel Orientation="Horizontal">
-									<ctrls:RiotTextBox/>
+									<ctrls:RiotTextBox PlaceHolder="Player Name"/>
 									<ctrls:RiotButton Style="{StaticResource BTN.ADD}"/>
 								</StackPanel>
 							</StackPanel>

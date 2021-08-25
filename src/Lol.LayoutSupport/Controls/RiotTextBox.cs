@@ -17,6 +17,7 @@ namespace Lol.LayoutSupport.Controls
         #region DependencyProperty
 
         public static readonly DependencyProperty CommandProperty = DependencyProperty.Register("Command", typeof(ICommand), typeof(RiotTextBox));
+        public static readonly DependencyProperty PlaceHolderProperty = DependencyProperty.Register("PlaceHolder", typeof(string), typeof(RiotTextBox), new PropertyMetadata(""));
         #endregion
 
         #region Command
@@ -28,9 +29,18 @@ namespace Lol.LayoutSupport.Controls
         }
         #endregion
 
-        #region OnTextInput
+        #region PlaceHolder
 
-        protected override void OnTextInput(TextCompositionEventArgs e)
+        public string PlaceHolder
+        {
+            get { return (string)this.GetValue(PlaceHolderProperty); }
+            set { this.SetValue(PlaceHolderProperty, value); }
+        }
+		#endregion
+
+		#region OnTextInput
+
+		protected override void OnTextInput(TextCompositionEventArgs e)
         {
             base.OnTextInput(e);
         }

@@ -8,12 +8,12 @@ namespace Lol.Clash.Local.ViewModel
 {
 	public class ClashViewModel : ObservableObject
     {
-        private List<CategoryModel> _tabs;
-        private CategoryModel _currentTab;
+        private List<BaseModel> _tabs;
+        private BaseModel _currentTab;
 
         #region Tabs
 
-        public List<CategoryModel> Tabs
+        public List<BaseModel> Tabs
         {
             get => _tabs;
             set { _tabs = value; OnPropertyChanged(); }
@@ -22,7 +22,7 @@ namespace Lol.Clash.Local.ViewModel
 
         #region CurrentTab
 
-        public CategoryModel CurrentTab
+        public BaseModel CurrentTab
         {
             get => _currentTab;
             set { _currentTab = value; OnPropertyChanged(); }

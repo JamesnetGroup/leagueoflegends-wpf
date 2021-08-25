@@ -14,13 +14,13 @@
                 <ControlTemplate TargetType="{x:Type units:FaqButton}">
                     <Border Background="Transparent">
                         <StackPanel Orientation="Horizontal">
-                            <TextBlock x:Name="text1" Foreground="#05899B" Text="격전 FAQ" Margin="0 0 4 0" />
-                            <ctrls:RiotIcon x:Name="icon" Fill="#05899B" Width="16" Height="16" IconType="ArrowTopRgiht" Padding="0 3 0 0"/>
+                            <TextBlock x:Name="text" Foreground="#05899B" Text="격전 FAQ" Margin="0 0 4 0" />
+                            <ctrls:RiotIcon x:Name="icon" Fill="#05899B" Width="16" Height="16" IconType="ArrowTopRight" Padding="0 3 0 0"/>
                         </StackPanel>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="text1" Property="Foreground" Value="#C1ECEC"/>
+                            <Setter TargetName="text" Property="Foreground" Value="#C1ECEC"/>
                             <Setter TargetName="icon" Property="Fill" Value="#C1ECEC"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
