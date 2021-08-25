@@ -16,7 +16,7 @@
 		<Setter Property="TextAlignment" Value="Center"/>
 		<Setter Property="HorizontalAlignment" Value="Center"/>
 		<Setter Property="VerticalAlignment" Value="Center"/>
-		<Setter Property="Margin" Value="22 12 22 12"/>
+		<Setter Property="Padding" Value="22 12 22 12"/>
 	</Style>
 	
 	<Style TargetType="{x:Type ctrls:CheckBox01}">

@@ -18,8 +18,8 @@
 		<Setter Property="Background" Value="#010A13"/>
 		<Setter Property="BorderThickness" Value="2"/>
 		<Setter Property="BorderBrush" Value="{StaticResource TOOL.BDR}"/>
-		<Setter Property="TextWrapping" Value="Wrap"/>
-		<Setter Property="Template">
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type ctrls:TooltipA}">
 					<Border Background="{TemplateBinding Background}"
@@ -27,8 +27,7 @@
                             BorderThickness="{TemplateBinding BorderThickness}"
                             CornerRadius="{TemplateBinding CornerRadius}">
 						<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
-                                          VerticalAlignment="{TemplateBinding VerticalAlignment}"
-                                          Margin="{TemplateBinding Margin}">
+                                          VerticalAlignment="{TemplateBinding VerticalAlignment}">
 							<ContentPresenter.Content>
 								<TextBlock Text="{TemplateBinding ToolTip}"
                                            Padding="{TemplateBinding Padding}"
@@ -60,7 +59,7 @@
 						<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
                                           VerticalAlignment="{TemplateBinding VerticalAlignment}"
                                           Content="{TemplateBinding ToolTip}"
-                                          Margin="{TemplateBinding Margin}"/>
+                                          Margin="{TemplateBinding Padding}"/>
 					</Border>
 				</ControlTemplate>
 			</Setter.Value>

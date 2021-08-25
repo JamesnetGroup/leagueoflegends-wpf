@@ -12,6 +12,7 @@ namespace Lol.Clash.Local.ViewModel
         private List<BaseModel> _cups;
         private BaseModel _currentCup;
         private bool _isCup;
+
         #region Cups
 
         public List<BaseModel> Cups
@@ -21,6 +22,14 @@ namespace Lol.Clash.Local.ViewModel
         }
         #endregion
 
+        #region CurrentCup
+
+        public BaseModel CurrentCup
+        {
+            get => _currentCup;
+            set { _currentCup = value; OnPropertyChanged(); CupChanged(); }
+        }
+        #endregion
 
         #region IsCup
 
@@ -28,15 +37,6 @@ namespace Lol.Clash.Local.ViewModel
         {
             get => _isCup;
             set { _isCup = value; OnPropertyChanged(); }
-        }
-        #endregion
-
-        #region CurrentCup
-
-        public BaseModel CurrentCup
-        {
-            get => _currentCup;
-            set { _currentCup = value; OnPropertyChanged(); CupChanged(value);  }
         }
         #endregion
 
@@ -51,7 +51,7 @@ namespace Lol.Clash.Local.ViewModel
 
         #region CupChanged
 
-        private void CupChanged(BaseModel value)
+        private void CupChanged()
         {
             IsCup = false;
         }
