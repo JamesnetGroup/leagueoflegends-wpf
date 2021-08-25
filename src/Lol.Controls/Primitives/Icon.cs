@@ -77,10 +77,11 @@ namespace Lol.Controls.Primitives
                 case GeoIcon.AccountSupervisor: icon.Data = IconData.ACCOUNT_SUPERVISOR.ToGeometry(); break;
                 case GeoIcon.Grass: icon.Data = IconData.GRASS.ToGeometry(); break;
                 case GeoIcon.ArrowDecision: icon.Data = IconData.ARROWDECISION.ToGeometry(); break;
-                case GeoIcon.ArrowTopRgiht: icon.Data = IconData.ARROWTOPRGIHT.ToGeometry(); break;
+                case GeoIcon.ArrowTopRight: icon.Data = IconData.ARROWTOPRIGHT.ToGeometry(); break;
                 case GeoIcon.ChevronUp: icon.Data = IconData.CHEVRON_UP.ToGeometry(); break;
                 case GeoIcon.ChevronDown: icon.Data = IconData.CHEVRON_DOWN.ToGeometry(); break;
                 case GeoIcon.ChevronRight: icon.Data = IconData.CHEVRON_RIGHT.ToGeometry(); break;
+                case GeoIcon.Unfold: icon.Data = IconData.UNFOLD.ToGeometry(); break;
 
                 case GeoIcon.None:
                     break;

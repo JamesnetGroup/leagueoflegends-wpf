@@ -5,12 +5,12 @@ namespace Lol.ExampleData.Clash
 {
     public partial class ExamClash
     {
-        public static List<CategoryModel> GetCategory()
+        public static List<BaseModel> GetCategory()
         {
-            List<CategoryModel> source = new()
+            List<BaseModel> source = new()
             {
-                new CategoryModel(0, "일정"),
-                new CategoryModel(1, "전적")
+                new BaseModel(0, "일정"),
+                new BaseModel(1, "전적")
             };
 
             return source;

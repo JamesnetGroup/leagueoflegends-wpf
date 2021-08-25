@@ -1,7 +1,9 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:units="clr-namespace:Lol.Clash.UI.Units"
-                    xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
+                    xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport"
+					xmlns:cnvts="clr-namespace:Lol.Converter;assembly=Lol.Converter">
+	
     <Style TargetType="{x:Type ListBoxItem}" x:Key="LBXI.CUP">
         <Setter Property="Template">
             <Setter.Value>
@@ -14,16 +16,14 @@
                                        FontSize="15"
                                        Foreground="#CDBE91"
                                        HorizontalAlignment="Left"/>
-                            <ctrls:RiotIcon x:Name="icon" Visibility="Collapsed" HorizontalAlignment="Right" Fill="#D4CDBC" Width="18" Height="18" IconType="Check"/>
+                            <ctrls:RiotIcon x:Name="icon" HorizontalAlignment="Right" Fill="#D4CDBC" Width="18" Height="18" IconType="Check"
+											Visibility="{Binding RelativeSource={RelativeSource AncestorType=ListBoxItem}, Path=IsSelected, Converter={cnvts:BooleanToVisibilityConverter}}"/>
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="Background" Value="#1E2328"/>
                             <Setter TargetName="text" Property="Foreground" Value="#F0E6D2"/>
-                        </Trigger>
-                        <Trigger Property="IsSelected" Value="True">
-                            <Setter TargetName="icon" Property="Visibility" Value="Visible"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -35,7 +35,6 @@
         <Setter Property="Grid.Row" Value="1"/>
         <Setter Property="ItemsSource" Value="{Binding Cups}"/>
         <Setter Property="SelectedItem" Value="{Binding CurrentCup}"/>
-        <Setter Property="Margin" Value="0 0 0 0"/>
         <Setter Property="ItemContainerStyle" Value="{StaticResource LBXI.CUP}"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -47,13 +46,13 @@
                         </Grid.RowDefinitions>
                         <StackPanel Orientation="Horizontal" Margin="4 20 0 10">
                             <ctrls:RiotIcon Fill="#A09B8C" Width="24" Height="24" IconType="ChevronRight"/>
-                            <TextBlock Foreground="#A09B8C" 
-								   HorizontalAlignment="Left" 
-								   VerticalAlignment="Center" 
-								   Text="지난 토너먼트" 
-                                   Cursor="Arrow"/>
-                        </StackPanel>
-                        <ctrls:BasicScroll Grid.Row="1" Margin="0"
+							<TextBlock Foreground="#A09B8C" 
+								       HorizontalAlignment="Left" 
+								       VerticalAlignment="Center" 
+								       Text="지난 토너먼트" 
+                                       Cursor="Arrow"/>
+						</StackPanel>
+                        <ctrls:BasicScroll Grid.Row="1"
 										   ScrollViewer.VerticalScrollBarVisibility="Auto" 
 										   ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                             <ItemsPresenter/>

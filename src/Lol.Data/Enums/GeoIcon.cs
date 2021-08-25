@@ -45,13 +45,13 @@
         ArrowDown,
         Plus,
         MenuLeft,
-        Square,
         AccountSupervisor,
         Grass,
         ArrowDecision,
-        ArrowTopRgiht,
+        ArrowTopRight,
         ChevronUp,
         ChevronDown,
-        ChevronRight
+        ChevronRight,
+        Unfold
     }
 }
