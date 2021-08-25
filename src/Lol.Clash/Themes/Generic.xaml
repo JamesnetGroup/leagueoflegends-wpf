@@ -11,7 +11,7 @@
         <ResourceDictionary Source="/Lol.Clash;component/Themes/Units/Title.xaml"/>
 		<ResourceDictionary Source="/Lol.Clash;component/Themes/Units/CupToggleButton.xaml"/>
         <ResourceDictionary Source="/Lol.Clash;component/Themes/Units/CupListBox.xaml"/>
-		<ResourceDictionary Source="/Lol.Clash;component/Themes/Views/ClashView.xaml"/>
+		<ResourceDictionary Source="/Lol.Clash;component/Themes/Views/HubView.xaml"/>
         <ResourceDictionary Source="/Lol.Clash;component/Themes/Views/WinningTeam.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

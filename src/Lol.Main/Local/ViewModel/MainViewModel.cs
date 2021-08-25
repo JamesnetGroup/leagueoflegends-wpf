@@ -150,8 +150,7 @@ namespace Lol.Main.Local.ViewModel
                 content = value.Seq switch
                 {
                     8 => new Overview().SetVM(new OverviewModel()),
-                    // TODO: [Kevin] HubView로 변경 예정
-                    11 => new ClashView().SetVM(new ClashViewModel()),
+                    11 => new HubView().SetVM(new HubViewModel()),
                     14 => new WinningTeam().SetVM(new WinningTeamViewModel()),
                     26 => new Champions().SetVM(new ChampionsViewModel()),
                     _ => new EmptyContent()

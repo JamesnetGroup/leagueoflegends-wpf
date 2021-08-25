@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Lol.Clash.Local.ViewModel
 {
-	public class ClashViewModel : ObservableObject
+	public class HubViewModel : ObservableObject
     {
         private List<BaseModel> _tabs;
         private BaseModel _currentTab;
@@ -31,7 +31,7 @@ namespace Lol.Clash.Local.ViewModel
 
         #region Constructor
 
-        public ClashViewModel()
+        public HubViewModel()
         {
             Tabs = ExamClash.GetCategory();
             CurrentTab = Tabs.First();
