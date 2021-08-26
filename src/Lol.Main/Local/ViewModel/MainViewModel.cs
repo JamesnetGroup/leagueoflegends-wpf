@@ -15,10 +15,10 @@ using Lol.TeamFight.Local.ViewModel;
 using Lol.DBEntity.Local.Api;
 using Lol.Home.UI.Views;
 using Lol.Home.Local.ViewModels;
-using Lol.Store.UI.Views;
-using Lol.Store.Local.ViewModels;
 using Lol.Clash.UI.Views;
 using Lol.Clash.Local.ViewModel;
+using Lol.Store.UI.Views;
+using Lol.Store.Local.ViewModels;
 
 namespace Lol.Main.Local.ViewModel
 {
@@ -152,6 +152,8 @@ namespace Lol.Main.Local.ViewModel
 					8 => new Overview().SetVM(new OverviewModel()),
 					11 => new HubView().SetVM(new HubViewModel()),
 					14 => new WinningTeam().SetVM(new WinningTeamViewModel()),
+                    16 => new Lol.Collection.UI.Views.Champions().SetVM(new Lol.Collection.Local.ViewModel.ChampionsViewModel()),
+                    20 => new Lol.Collection.UI.Views.Spells().SetVM(new Lol.Collection.Local.ViewModel.SpellsViewModel()),
 					26 => new Champions().SetVM(new ChampionsViewModel()),
 					_ => new EmptyContent()
 				};
