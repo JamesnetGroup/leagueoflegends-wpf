@@ -12,9 +12,10 @@
     </Style>
     
     <Style TargetType="{x:Type Border}" x:Key="BD.BASE">
-        <Setter Property="Height" Value="80"/>
-        <Setter Property="Width" Value="26"/>
+        <Setter Property="Height" Value="26"/>
+        <Setter Property="Width" Value="80"/>
         <Setter Property="BorderBrush" Value="#676C71"/>
+        <Setter Property="Background" Value="Transparent"/>
         <Setter Property="BorderThickness" Value="0 0 0 1"/>
         <Setter Property="VerticalAlignment" Value="Top"/>
     </Style>
@@ -24,11 +25,11 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListBoxItem}">
-                    <Grid>
+                    <Grid VerticalAlignment="Top" Background="Transparent">
                         <Border Style="{StaticResource BD.BASE}">
-                            <TextBlock x:Name="text" Text="I" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+                            <TextBlock x:Name="text" Text="{Binding Name}" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#A0906A"/>
                         </Border>
-                        <Border x:Name="border" VerticalAlignment="Bottom" Width="26" Height="3" Background="#FABE0A" Visibility="Collapsed"/>
+                        <Border x:Name="border" VerticalAlignment="Bottom" Width="80" Height="3" Background="#FABE0A" Visibility="Collapsed"/>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
