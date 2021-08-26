@@ -24,6 +24,8 @@ namespace Lol.Foundation.Riotbase
 
 		private void RiotWindow_Loaded(object sender, RoutedEventArgs e)
 		{
+			ResizeMode = ResizeMode.CanMinimize;
+
 			if (DataContext is ObservableObject vm)
 			{
 				vm.InitRegistUI(this);
