@@ -2,7 +2,7 @@
 
 namespace Lol.Controls.Primitives
 {
-    public class RiotSlider : Slider
-    {
-    }
+	public class RiotSlider : Slider
+	{
+	}
 }

@@ -3,14 +3,14 @@ using System.Windows.Controls;
 
 namespace Lol.Settings.InGame.UI.Units
 {
-    public class Option : Control
-    {
-        #region DefaultStyleKey
+	public class Option : Control
+	{
+		#region DefaultStyleKey
 
-        static Option()
-        {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(Option), new FrameworkPropertyMetadata(typeof(Option)));
-        }
-        #endregion
-    }
+		static Option()
+		{
+			DefaultStyleKeyProperty.OverrideMetadata(typeof(Option), new FrameworkPropertyMetadata(typeof(Option)));
+		}
+		#endregion
+	}
 }

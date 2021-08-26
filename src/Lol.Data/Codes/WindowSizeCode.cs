@@ -1,6 +1,6 @@
 ﻿namespace Lol.Data.Codes
 {
-    public class WindowSizeCode : CodeModel
-    {
-    }
+	public class WindowSizeCode : CodeModel
+	{
+	}
 }

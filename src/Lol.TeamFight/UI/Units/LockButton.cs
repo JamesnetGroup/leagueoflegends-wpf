@@ -3,11 +3,11 @@ using System.Windows.Controls;
 
 namespace Lol.TeamFight.UI.Units
 {
-    public class LockButton : Button
-    {
-        static LockButton()
-        {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(LockButton), new FrameworkPropertyMetadata(typeof(LockButton)));
-        }
-    }
+	public class LockButton : Button
+	{
+		static LockButton()
+		{
+			DefaultStyleKeyProperty.OverrideMetadata(typeof(LockButton), new FrameworkPropertyMetadata(typeof(LockButton)));
+		}
+	}
 }

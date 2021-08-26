@@ -12,47 +12,48 @@ using System.Windows.Input;
 namespace Lol.Settings.Client.Local.ViewModels
 {
 	public class GeneralViewModel : ObservableObject
-    {
-        private List<WindowSizeCode> _sizeList;
+	{
+		private List<WindowSizeCode> _sizeList;
 
-        public ICommand LinkCommand { get; set; }
-        
-        public GeneralModel Model { get; set; }
+		public ICommand LinkCommand { get; set; }
 
-        #region SizeList
+		public GeneralModel Model { get; set; }
 
-        public List<WindowSizeCode> SizeList
-        {
-            get => _sizeList;
-            set { _sizeList = value; OnPropertyChanged(); }
-        }
-        #endregion
+		#region SizeList
 
-        #region Constructor
+		public List<WindowSizeCode> SizeList
+		{
+			get => _sizeList;
+			set { _sizeList = value; OnPropertyChanged(); }
+		}
+		#endregion
 
-        public GeneralViewModel()
-        {
-            SizeList = ExamSettings.GetWinSizeList();
+		#region Constructor
 
-            ConfigModel config = RiotConfig.LoadConfig();
-            config.Settings = config.Settings ?? new SettingModel();
+		public GeneralViewModel()
+		{
+			SizeList = ExamSettings.GetWinSizeList();
 
-            Model = config.Settings.General;
+			ConfigModel config = RiotConfig.LoadConfig();
+			config.Settings = config.Settings ?? new SettingModel();
 
-            LinkCommand = new RelayCommand<object>(SearchLink);
-        }
-        #endregion
+			Model = config.Settings.General;
 
-        #region SearchLink
+			LinkCommand = new RelayCommand<object>(SearchLink);
+		}
+		#endregion
 
-        private void SearchLink(object obj)
-        {
-            string Uri = "https://na.leagueoflegends.com/en-us/event/league-of-legends-code-of-conduct/";
+		#region SearchLink
 
-            Process.Start(new ProcessStartInfo(Uri) { 
-                UseShellExecute = true 
-            });
-        }
+		private void SearchLink(object obj)
+		{
+			string Uri = "https://na.leagueoflegends.com/en-us/event/league-of-legends-code-of-conduct/";
+
+			Process.Start(new ProcessStartInfo(Uri)
+			{
+				UseShellExecute = true
+			});
+		}
 		#endregion
 	}
 }

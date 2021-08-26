@@ -3,14 +3,14 @@ using System.Windows;
 
 namespace Lol.Settings.Client.UI.Views
 {
-    public class BlockView : View
-    {
-        #region ClientBlockView
+	public class BlockView : View
+	{
+		#region ClientBlockView
 
-        static BlockView()
-        {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(BlockView), new FrameworkPropertyMetadata(typeof(BlockView)));
-        }
-        #endregion
-    }
+		static BlockView()
+		{
+			DefaultStyleKeyProperty.OverrideMetadata(typeof(BlockView), new FrameworkPropertyMetadata(typeof(BlockView)));
+		}
+		#endregion
+	}
 }

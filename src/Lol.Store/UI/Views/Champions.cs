@@ -4,13 +4,13 @@ using System.Windows;
 namespace Lol.Store.UI.Views
 {
 	public class Champions : View
-    {
-        #region DefaultStyleKey
+	{
+		#region DefaultStyleKey
 
-        static Champions()
-        {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(Champions), new FrameworkPropertyMetadata(typeof(Champions)));
-        }
+		static Champions()
+		{
+			DefaultStyleKeyProperty.OverrideMetadata(typeof(Champions), new FrameworkPropertyMetadata(typeof(Champions)));
+		}
 		#endregion
 	}
 }

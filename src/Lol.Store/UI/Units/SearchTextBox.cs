@@ -4,13 +4,13 @@ using System.Windows.Controls;
 namespace Lol.Store.UI.Units
 {
 	public class SearchTextBox : TextBox
-    {
-        #region DefaultStyleKey
+	{
+		#region DefaultStyleKey
 
-        static SearchTextBox()
-        {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(SearchTextBox), new FrameworkPropertyMetadata(typeof(SearchTextBox)));
-        }
-        #endregion
-    }
+		static SearchTextBox()
+		{
+			DefaultStyleKeyProperty.OverrideMetadata(typeof(SearchTextBox), new FrameworkPropertyMetadata(typeof(SearchTextBox)));
+		}
+		#endregion
+	}
 }

@@ -2,7 +2,7 @@
 
 namespace Lol.Controls.Primitives
 {
-    public class DragBorder : Border
-    {
-    }
+	public class DragBorder : Border
+	{
+	}
 }

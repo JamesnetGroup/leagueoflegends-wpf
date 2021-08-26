@@ -3,14 +3,14 @@ using System.Windows;
 
 namespace Lol.LayoutSupport.Controls
 {
-    public class BasicTooltip : RiotTooltip
-    {
-        #region DefaultStyleKey
+	public class BasicTooltip : RiotTooltip
+	{
+		#region DefaultStyleKey
 
-        static BasicTooltip()
-        {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(BasicTooltip), new FrameworkPropertyMetadata(typeof(BasicTooltip)));
-        }
-        #endregion
-    }
+		static BasicTooltip()
+		{
+			DefaultStyleKeyProperty.OverrideMetadata(typeof(BasicTooltip), new FrameworkPropertyMetadata(typeof(BasicTooltip)));
+		}
+		#endregion
+	}
 }

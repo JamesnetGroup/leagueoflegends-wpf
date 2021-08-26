@@ -3,14 +3,14 @@ using System.Windows;
 
 namespace Lol.Settings.Client.UI.Views
 {
-    public class AlarmView : View
-    {
-        #region DefaultStyleKey
+	public class AlarmView : View
+	{
+		#region DefaultStyleKey
 
-        static AlarmView()
-        {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(AlarmView), new FrameworkPropertyMetadata(typeof(AlarmView)));
-        }
-        #endregion
-    }
+		static AlarmView()
+		{
+			DefaultStyleKeyProperty.OverrideMetadata(typeof(AlarmView), new FrameworkPropertyMetadata(typeof(AlarmView)));
+		}
+		#endregion
+	}
 }

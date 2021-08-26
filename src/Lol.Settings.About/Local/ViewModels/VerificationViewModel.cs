@@ -2,11 +2,11 @@
 
 namespace Lol.Settings.About.Local.ViewModels
 {
-    public class VerificationViewModel : ObservableObject
-    {
-        public VerificationViewModel()
-        {
+	public class VerificationViewModel : ObservableObject
+	{
+		public VerificationViewModel()
+		{
 
-        }
-    }
+		}
+	}
 }

@@ -3,14 +3,14 @@ using System.Windows.Controls;
 
 namespace Lol.Home.UI.Units
 {
-    public class Thumbnail : Control
-    {
-        #region DefaultStyleKey
+	public class Thumbnail : Control
+	{
+		#region DefaultStyleKey
 
-        static Thumbnail()
-        {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(Thumbnail), new FrameworkPropertyMetadata(typeof(Thumbnail)));
-        }
+		static Thumbnail()
+		{
+			DefaultStyleKeyProperty.OverrideMetadata(typeof(Thumbnail), new FrameworkPropertyMetadata(typeof(Thumbnail)));
+		}
 		#endregion
 	}
 }
