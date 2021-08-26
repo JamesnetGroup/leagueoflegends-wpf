@@ -3,14 +3,14 @@ using System.Windows.Controls.Primitives;
 
 namespace Lol.Clash.UI.Units
 {
-    public class OnOffButton : ToggleButton
-    {
-        #region DefaultStyleKey
+	public class OnOffButton : ToggleButton
+	{
+		#region DefaultStyleKey
 
-        static OnOffButton()
-        {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(OnOffButton), new FrameworkPropertyMetadata(typeof(OnOffButton)));
-        }
-        #endregion
-    }
+		static OnOffButton()
+		{
+			DefaultStyleKeyProperty.OverrideMetadata(typeof(OnOffButton), new FrameworkPropertyMetadata(typeof(OnOffButton)));
+		}
+		#endregion
+	}
 }

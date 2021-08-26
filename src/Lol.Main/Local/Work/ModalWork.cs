@@ -9,68 +9,68 @@ using Lol.Settings.Local.ViewModel;
 
 namespace Lol.Main.Local.Work
 {
-    public class ModalWork
-    {
-        #region Variables 
+	public class ModalWork
+	{
+		#region Variables 
 
-        private readonly MainViewModel _vm;
-        private readonly Dictionary<Type, IRiotUI> _modals;
-        #endregion
+		private readonly MainViewModel _vm;
+		private readonly Dictionary<Type, IRiotUI> _modals;
+		#endregion
 
-        #region Constructor
+		#region Constructor
 
-        public ModalWork(MainViewModel vm)
-        {
-            _vm = vm;
-            _modals = new();
-        }
-        #endregion
+		public ModalWork(MainViewModel vm)
+		{
+			_vm = vm;
+			_modals = new();
+		}
+		#endregion
 
-        #region SwitchModal
+		#region SwitchModal
 
-        internal void SwitchModal(Type type)
-        {
-            IRiotUI content = null;
+		internal void SwitchModal(Type type)
+		{
+			IRiotUI content = null;
 
-            if (typeof(SettingView) == type) content = SwitchSettingView(type);
-            if (typeof(AddFriendsView) == type) content = SwitchAddFriendsView(type);
+			if (typeof(SettingView) == type) content = SwitchSettingView(type);
+			if (typeof(AddFriendsView) == type) content = SwitchAddFriendsView(type);
 
-            _vm.ModalContent = content;
-        }
-        #endregion
+			_vm.ModalContent = content;
+		}
+		#endregion
 
-        #region SwitchSettingView
+		#region SwitchSettingView
 
-        private IRiotUI SwitchSettingView(Type type)
-        {
-            if (!_modals.ContainsKey(type))
-            {
-                _modals.Add(type, new SettingView().SetVM(new SettingViewModel(CloseModal)));
-            }
+		private IRiotUI SwitchSettingView(Type type)
+		{
+			if (!_modals.ContainsKey(type))
+			{
+				_modals.Add(type, new SettingView().SetVM(new SettingViewModel(CloseModal)));
+			}
 
-            return _modals[type];
-        }
-        #endregion
+			return _modals[type];
+		}
+		#endregion
 
-        #region SwitchAddFriendsView
+		#region SwitchAddFriendsView
 
-        private IRiotUI SwitchAddFriendsView(Type type)
-        {
-            if (!_modals.ContainsKey(type))
-            {
-                _modals.Add(type, new AddFriendsView().SetVM(new AddFriendsViewModel(CloseModal)));
-            }
+		private IRiotUI SwitchAddFriendsView(Type type)
+		{
+			if (!_modals.ContainsKey(type))
+			{
+				_modals.Add(type, new AddFriendsView().SetVM(new AddFriendsViewModel(CloseModal)));
+			}
 
-            return _modals[type];
-        }
-        #endregion
+			return _modals[type];
+		}
+		#endregion
 
-        #region CloseModal
+		#region CloseModal
 
-        private void CloseModal(IRiotUI ui)
-        {
-            _vm.ModalContent = null;
-        }
-        #endregion
-    }
+		private void CloseModal(IRiotUI ui)
+		{
+			_vm.ModalContent = null;
+		}
+		#endregion
+	}
 }

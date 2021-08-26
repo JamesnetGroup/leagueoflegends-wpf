@@ -5,17 +5,17 @@ using Lol.Foundation.Riotbase;
 
 namespace Lol.Settings.Client.Local.ViewModels
 {
-    public class SoundViewModel : ObservableObject
-    {
-        public SoundModel Model { get; set; }
+	public class SoundViewModel : ObservableObject
+	{
+		public SoundModel Model { get; set; }
 
-        #region Constructor
+		#region Constructor
 
-        public SoundViewModel()
-        {
-            ConfigModel config = RiotConfig.LoadConfig();
-            Model = config.Settings.Sound;
-        }
-        #endregion
-    }
+		public SoundViewModel()
+		{
+			ConfigModel config = RiotConfig.LoadConfig();
+			Model = config.Settings.Sound;
+		}
+		#endregion
+	}
 }

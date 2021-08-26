@@ -14,20 +14,20 @@ namespace Lol.Store.Local.Work
 		{
 			Menus = GetMenus();
 		}
-        #endregion
+		#endregion
 
-        #region GetMenus
+		#region GetMenus
 
-        private List<StoreMenuModel> GetMenus()
-        {
-            List<StoreMenuModel> source = new()
-            {
-                new StoreMenuModel(0, "Champions"),
-                new StoreMenuModel(1, "Eternals"),
-                new StoreMenuModel(2, "Bundles")
-            };
-            return source;
-        }
-        #endregion
-    }
+		private List<StoreMenuModel> GetMenus()
+		{
+			List<StoreMenuModel> source = new()
+			{
+				new StoreMenuModel(0, "Champions"),
+				new StoreMenuModel(1, "Eternals"),
+				new StoreMenuModel(2, "Bundles")
+			};
+			return source;
+		}
+		#endregion
+	}
 }

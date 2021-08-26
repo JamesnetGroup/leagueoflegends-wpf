@@ -2,14 +2,14 @@
 
 namespace Lol.MyShop.Local.ViewModel
 {
-    public class MyShopViewModel : ObservableObject
-    {
-        #region Constructor
+	public class MyShopViewModel : ObservableObject
+	{
+		#region Constructor
 
-        public MyShopViewModel()
-        {
+		public MyShopViewModel()
+		{
 
-        }
-        #endregion
-    }
+		}
+		#endregion
+	}
 }

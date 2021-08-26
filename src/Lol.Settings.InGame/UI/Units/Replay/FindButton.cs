@@ -4,27 +4,27 @@ using System.Windows.Controls;
 namespace Lol.Settings.InGame.UI.Units
 {
 	public class FindButton : Control
-    {
-        #region DefaultStyleKey
+	{
+		#region DefaultStyleKey
 
-        static FindButton()
-        {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(FindButton), new FrameworkPropertyMetadata(typeof(FindButton)));
-        }
-        #endregion
+		static FindButton()
+		{
+			DefaultStyleKeyProperty.OverrideMetadata(typeof(FindButton), new FrameworkPropertyMetadata(typeof(FindButton)));
+		}
+		#endregion
 
-        #region DependencyProperty
+		#region DependencyProperty
 
-        public static readonly DependencyProperty SavePathProperty = DependencyProperty.Register("SavePath", typeof(string), typeof(FindButton), new PropertyMetadata(""));
-        #endregion
+		public static readonly DependencyProperty SavePathProperty = DependencyProperty.Register("SavePath", typeof(string), typeof(FindButton), new PropertyMetadata(""));
+		#endregion
 
-        #region SavePath
+		#region SavePath
 
-        public string SavePath
-        {
-            get { return (string)this.GetValue(SavePathProperty); }
-            set { this.SetValue(SavePathProperty, value); }
-        }
-        #endregion
-    }
+		public string SavePath
+		{
+			get { return (string)this.GetValue(SavePathProperty); }
+			set { this.SetValue(SavePathProperty, value); }
+		}
+		#endregion
+	}
 }

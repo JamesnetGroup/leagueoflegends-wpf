@@ -8,54 +8,54 @@ using System.Linq;
 namespace Lol.Clash.Local.ViewModel
 {
 	public class WinningTeamViewModel : ObservableObject
-    {
-        private List<BaseModel> _cups;
-        private BaseModel _currentCup;
-        private bool _isCup;
+	{
+		private List<BaseModel> _cups;
+		private BaseModel _currentCup;
+		private bool _isCup;
 
-        #region Cups
+		#region Cups
 
-        public List<BaseModel> Cups
-        {
-            get => _cups;
-            set { _cups = value; OnPropertyChanged(); }
-        }
-        #endregion
+		public List<BaseModel> Cups
+		{
+			get => _cups;
+			set { _cups = value; OnPropertyChanged(); }
+		}
+		#endregion
 
-        #region CurrentCup
+		#region CurrentCup
 
-        public BaseModel CurrentCup
-        {
-            get => _currentCup;
-            set { _currentCup = value; OnPropertyChanged(); CupChanged(); }
-        }
-        #endregion
+		public BaseModel CurrentCup
+		{
+			get => _currentCup;
+			set { _currentCup = value; OnPropertyChanged(); CupChanged(); }
+		}
+		#endregion
 
-        #region IsCup
+		#region IsCup
 
-        public bool IsCup
-        {
-            get => _isCup;
-            set { _isCup = value; OnPropertyChanged(); }
-        }
-        #endregion
+		public bool IsCup
+		{
+			get => _isCup;
+			set { _isCup = value; OnPropertyChanged(); }
+		}
+		#endregion
 
-        #region Constructor
+		#region Constructor
 
-        public WinningTeamViewModel()
-        {
-            Cups = ExamClash.GetCup();
-            CurrentCup = Cups.First();
-        }
-        #endregion
+		public WinningTeamViewModel()
+		{
+			Cups = ExamClash.GetCup();
+			CurrentCup = Cups.First();
+		}
+		#endregion
 
-        #region CupChanged
+		#region CupChanged
 
-        private void CupChanged()
-        {
-            IsCup = false;
-        }
-        #endregion
+		private void CupChanged()
+		{
+			IsCup = false;
+		}
+		#endregion
 
-    }
+	}
 }

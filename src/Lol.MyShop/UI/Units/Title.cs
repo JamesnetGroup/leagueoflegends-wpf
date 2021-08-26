@@ -3,11 +3,11 @@ using System.Windows.Controls;
 
 namespace Lol.MyShop.UI.Units
 {
-    public class Title : Control
-    {
-        static Title()
-        {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(Title), new FrameworkPropertyMetadata(typeof(Title)));
-        }
-    }
+	public class Title : Control
+	{
+		static Title()
+		{
+			DefaultStyleKeyProperty.OverrideMetadata(typeof(Title), new FrameworkPropertyMetadata(typeof(Title)));
+		}
+	}
 }

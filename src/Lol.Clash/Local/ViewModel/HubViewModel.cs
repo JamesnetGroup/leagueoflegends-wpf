@@ -7,35 +7,35 @@ using System.Linq;
 namespace Lol.Clash.Local.ViewModel
 {
 	public class HubViewModel : ObservableObject
-    {
-        private List<BaseModel> _tabs;
-        private BaseModel _currentTab;
+	{
+		private List<BaseModel> _tabs;
+		private BaseModel _currentTab;
 
-        #region Tabs
+		#region Tabs
 
-        public List<BaseModel> Tabs
-        {
-            get => _tabs;
-            set { _tabs = value; OnPropertyChanged(); }
-        }
-        #endregion
+		public List<BaseModel> Tabs
+		{
+			get => _tabs;
+			set { _tabs = value; OnPropertyChanged(); }
+		}
+		#endregion
 
-        #region CurrentTab
+		#region CurrentTab
 
-        public BaseModel CurrentTab
-        {
-            get => _currentTab;
-            set { _currentTab = value; OnPropertyChanged(); }
-        }
-        #endregion
+		public BaseModel CurrentTab
+		{
+			get => _currentTab;
+			set { _currentTab = value; OnPropertyChanged(); }
+		}
+		#endregion
 
-        #region Constructor
+		#region Constructor
 
-        public HubViewModel()
-        {
-            Tabs = ExamClash.GetCategory();
-            CurrentTab = Tabs.First();
-        }
-        #endregion
-    }
+		public HubViewModel()
+		{
+			Tabs = ExamClash.GetCategory();
+			CurrentTab = Tabs.First();
+		}
+		#endregion
+	}
 }

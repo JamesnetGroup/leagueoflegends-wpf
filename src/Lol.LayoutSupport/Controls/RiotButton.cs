@@ -3,29 +3,29 @@ using System.Windows.Controls;
 
 namespace Lol.LayoutSupport.Controls
 {
-    public class RiotButton : Button
-    {
-        #region DefaultStyleKey
+	public class RiotButton : Button
+	{
+		#region DefaultStyleKey
 
-        static RiotButton()
-        {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(RiotButton), new FrameworkPropertyMetadata(typeof(RiotButton)));
-        }
-        #endregion
+		static RiotButton()
+		{
+			DefaultStyleKeyProperty.OverrideMetadata(typeof(RiotButton), new FrameworkPropertyMetadata(typeof(RiotButton)));
+		}
+		#endregion
 
-        #region DependencyProperty
+		#region DependencyProperty
 
-        public static readonly DependencyProperty ContentMarginProperty = DependencyProperty.Register(
-            "ContentMargin", typeof(Thickness), typeof(RiotButton), new PropertyMetadata(default(Thickness)));
-        #endregion
+		public static readonly DependencyProperty ContentMarginProperty = DependencyProperty.Register(
+			"ContentMargin", typeof(Thickness), typeof(RiotButton), new PropertyMetadata(default(Thickness)));
+		#endregion
 
-        #region ContentMargin
+		#region ContentMargin
 
-        public Thickness ContentMargin
-        {
-            get { return (Thickness)GetValue(ContentMarginProperty); }
-            set { SetValue(ContentMarginProperty, value); }
-        }
+		public Thickness ContentMargin
+		{
+			get { return (Thickness)GetValue(ContentMarginProperty); }
+			set { SetValue(ContentMarginProperty, value); }
+		}
 		#endregion
 	}
 }

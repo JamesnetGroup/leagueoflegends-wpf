@@ -7,79 +7,79 @@ using YamlDotNet.Serialization.NamingConventions;
 
 namespace Lol.Foundation.Riotbase
 {
-    public class RiotConfig
-    {
-        #region Variables
+	public class RiotConfig
+	{
+		#region Variables
 
-        public static string WIN_PATH { get; }
-        public static string SYS_PATH { get; }
-        public static string CFG_PATH { get; }
-        public static ConfigModel Config { get; private set; }
-        #endregion
+		public static string WIN_PATH { get; }
+		public static string SYS_PATH { get; }
+		public static string CFG_PATH { get; }
+		public static ConfigModel Config { get; private set; }
+		#endregion
 
-        #region Constructor
+		#region Constructor
 
-        static RiotConfig()
-        {
-            WIN_PATH = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-            SYS_PATH = string.Format(@"{0}\Riot\System", WIN_PATH);
-            CFG_PATH = string.Format(@"{0}\Config.yaml", SYS_PATH);
+		static RiotConfig()
+		{
+			WIN_PATH = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+			SYS_PATH = string.Format(@"{0}\Riot\System", WIN_PATH);
+			CFG_PATH = string.Format(@"{0}\Config.yaml", SYS_PATH);
 
-            LoadConfigFile();
-        }
-        #endregion
+			LoadConfigFile();
+		}
+		#endregion
 
-        #region LoadConfigFile
+		#region LoadConfigFile
 
-        private static void LoadConfigFile()
-        {
-            if (!Directory.Exists(SYS_PATH))
-            {
-                _ = Directory.CreateDirectory(SYS_PATH);
-            }
+		private static void LoadConfigFile()
+		{
+			if (!Directory.Exists(SYS_PATH))
+			{
+				_ = Directory.CreateDirectory(SYS_PATH);
+			}
 
-            if (!File.Exists(CFG_PATH))
-            {
-                SaveConfig(new ConfigModel());
-            }
+			if (!File.Exists(CFG_PATH))
+			{
+				SaveConfig(new ConfigModel());
+			}
 
-            IDeserializer deserializer = new DeserializerBuilder()
-              .WithNamingConvention(CamelCaseNamingConvention.Instance)
-              .Build();
+			IDeserializer deserializer = new DeserializerBuilder()
+			  .WithNamingConvention(CamelCaseNamingConvention.Instance)
+			  .Build();
 
-            Config = deserializer.Deserialize<ConfigModel>(File.ReadAllText(CFG_PATH));
-        }
-        #endregion
+			Config = deserializer.Deserialize<ConfigModel>(File.ReadAllText(CFG_PATH));
+		}
+		#endregion
 
-        #region LoadConfig
+		#region LoadConfig
 
-        public static ConfigModel LoadConfig()
-        {
-            return Config;
-        }
-        #endregion
+		public static ConfigModel LoadConfig()
+		{
+			return Config;
+		}
+		#endregion
 
-        #region SaveSettings
+		#region SaveSettings
 
-        public static void SaveSettings(SettingModel set)
-        {
-            Config.Settings = set;
-            SaveConfig(Config);
-        }
-        #endregion
+		public static void SaveSettings(SettingModel set)
+		{
+			Config.Settings = set;
+			SaveConfig(Config);
+		}
+		#endregion
 
-        #region SaveConfig
+		#region SaveConfig
 
-        private static void SaveConfig(ConfigModel config)
-        {
-            ISerializer serializer = new SerializerBuilder()
-                .WithNamingConvention(CamelCaseNamingConvention.Instance)
-                .Build();
+		private static void SaveConfig(ConfigModel config)
+		{
+			ISerializer serializer = new SerializerBuilder()
+				.WithNamingConvention(CamelCaseNamingConvention.Instance)
+				.Build();
 
-            string yaml = serializer.Serialize(config);
+			string yaml = serializer.Serialize(config);
 
-            File.WriteAllText(CFG_PATH, yaml);
-        }
-        #endregion
-    }
+			File.WriteAllText(CFG_PATH, yaml);
+		}
+		#endregion
+	}
 }

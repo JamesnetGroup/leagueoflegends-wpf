@@ -4,21 +4,21 @@ using System.Windows.Controls;
 namespace Lol.Store.UI.Units
 {
 	public class Category : ListBox
-    {
-        #region DefaultStyleKey
+	{
+		#region DefaultStyleKey
 
-        static Category()
-        {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(Category), new FrameworkPropertyMetadata(typeof(Category)));
-        }
-        #endregion
+		static Category()
+		{
+			DefaultStyleKeyProperty.OverrideMetadata(typeof(Category), new FrameworkPropertyMetadata(typeof(Category)));
+		}
+		#endregion
 
-        #region GetContainerForItemOverride
+		#region GetContainerForItemOverride
 
-        protected override DependencyObject GetContainerForItemOverride()
-        {
-            return new CategoryItem();
-        }
-        #endregion
-    }
+		protected override DependencyObject GetContainerForItemOverride()
+		{
+			return new CategoryItem();
+		}
+		#endregion
+	}
 }

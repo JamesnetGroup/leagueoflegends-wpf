@@ -3,14 +3,14 @@ using System.Windows;
 
 namespace Lol.Friends.UI.Views
 {
-    public class AddFriendsView : View
-    {
-        #region DefaultStyleKey
+	public class AddFriendsView : View
+	{
+		#region DefaultStyleKey
 
-        static AddFriendsView()
-        {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(AddFriendsView), new FrameworkPropertyMetadata(typeof(AddFriendsView)));
-        }
-        #endregion
-    }
+		static AddFriendsView()
+		{
+			DefaultStyleKeyProperty.OverrideMetadata(typeof(AddFriendsView), new FrameworkPropertyMetadata(typeof(AddFriendsView)));
+		}
+		#endregion
+	}
 }
