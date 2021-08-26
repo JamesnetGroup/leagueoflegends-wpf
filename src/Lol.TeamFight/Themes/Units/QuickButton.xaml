@@ -60,7 +60,7 @@
 									<RotateTransform Angle="10"/>
 								</Image.LayoutTransform>
 							</Image>
-							<TextBlock Text="480" FontWeight="Bold" FontSize="14" Foreground="#CCC8BD" VerticalAlignment="Center" Padding="7 0 7 2"/>
+							<TextBlock Text="480" FontWeight="Bold" FontSize="14" Foreground="#CCC8BD" VerticalAlignment="Center" Padding="5 0 7 1"/>
 						</StackPanel>
 					</Border>
 					<ControlTemplate.Triggers>
