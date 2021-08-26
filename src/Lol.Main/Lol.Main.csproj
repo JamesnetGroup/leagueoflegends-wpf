@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Lol.Clash\Lol.Clash.csproj" />
+    <ProjectReference Include="..\Lol.Collection\Lol.Collection.csproj" />
     <ProjectReference Include="..\Lol.Data\Lol.Data.csproj" />
     <ProjectReference Include="..\Lol.DBEntity\Lol.DBEntity.csproj" />
     <ProjectReference Include="..\Lol.Foundation\Lol.Foundation.csproj" />
