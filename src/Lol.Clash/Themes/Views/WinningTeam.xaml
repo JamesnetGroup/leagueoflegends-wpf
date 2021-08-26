@@ -14,8 +14,9 @@
 										   VerticalAlignment="Top" 
 										   PlaceHolder="팀 검색" 
 										   Margin="0 60 40 0"/>
+                        <!-- TODO: [Kevin] 이벤트 해결 필요-->
                         <units:TierMenu/>
-						<units:Title/>
+                        <units:Title/>
                     </Grid>
 				</ControlTemplate>
             </Setter.Value>

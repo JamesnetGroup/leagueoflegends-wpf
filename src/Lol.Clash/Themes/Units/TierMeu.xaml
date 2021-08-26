@@ -20,20 +20,23 @@
         <Setter Property="VerticalAlignment" Value="Top"/>
     </Style>
 
-    <Style TargetType="{x:Type ListBoxItem}" x:Key="LBXI.Tier">
+    <Style TargetType="{x:Type ListBoxItem}" x:Key="LBXI.TIER">
         <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListBoxItem}">
-                    <Grid VerticalAlignment="Top" Background="Transparent">
-                        <Border Style="{StaticResource BD.BASE}">
-                            <TextBlock x:Name="text" Text="{Binding Name}" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#A0906A"/>
-                        </Border>
-                        <Border x:Name="border" VerticalAlignment="Bottom" Width="80" Height="3" Background="#FABE0A" Visibility="Collapsed"/>
-                    </Grid>
+                    <Border Background="Transparent" VerticalAlignment="Top">
+                        <Grid>
+                            <Border Style="{StaticResource BD.BASE}">
+                                <TextBlock x:Name="text" Text="{Binding Name}" HorizontalAlignment="Center" VerticalAlignment="Top" Foreground="#A0906A"/>
+                            </Border>
+                            <Border x:Name="border" VerticalAlignment="Bottom" Width="80" Height="3" Background="#FABE0A" Visibility="Collapsed"/>
+                        </Grid>
+                    </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="text" Property="Foreground" Value="#F0D69F"/>
+                            <Setter Property="Cursor" Value="Hand"/>
                         </Trigger>
                         <Trigger Property="IsSelected" Value="True">
                             <Setter TargetName="text" Property="Foreground" Value="#F0D69F"/>
@@ -46,9 +49,9 @@
     </Style>
 
     <Style TargetType="{x:Type units:TierMenu}">
-        <Setter Property="ItemContainerStyle" Value="{StaticResource LBXI.Tier}"/>
         <Setter Property="ItemsSource" Value="{Binding TierMenus}"/>
         <Setter Property="SelectedItem" Value="{Binding CurrentTierMenu}"/>
+        <Setter Property="ItemContainerStyle" Value="{StaticResource LBXI.TIER}"/>
         <Setter Property="Margin" Value="66 130 0 0"/>
         <Setter Property="Template">
             <Setter.Value>
