@@ -21,7 +21,7 @@
 		<Setter Property="FontWeight" Value="Bold"/>
 		<Setter Property="Template">
 			<Setter.Value>
-				<ControlTemplate>
+				<ControlTemplate TargetType="{x:Type ToolTip}">
 					<Border Background="#010A13" BorderThickness="2">
 						<Border.BorderBrush>
 							<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">

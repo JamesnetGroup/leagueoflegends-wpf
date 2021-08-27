@@ -18,7 +18,7 @@
 		<Setter Property="Margin" Value="10 5 5 5"/>
 		<Setter Property="Template">
 			<Setter.Value>
-				<ControlTemplate>
+				<ControlTemplate TargetType="{x:Type Button}">
 					<Border Background="Transparent">
 						<ctrls:RiotIcon Style="{StaticResource IN.ICON}" IconType="Help"/>
 					</Border>
@@ -40,7 +40,7 @@
 		<Setter Property="Margin" Value="10 5 5 5"/>
 		<Setter Property="Template">
 			<Setter.Value>
-				<ControlTemplate>
+				<ControlTemplate TargetType="{x:Type Button}">
 					<Border Background="Transparent">
 						<ctrls:RiotIcon Style="{StaticResource IN.ICON}" IconType="Minimize"/>
 					</Border>
@@ -84,7 +84,7 @@
 		<Setter Property="Margin" Value="10 5 5 5"/>
 		<Setter Property="Template">
 			<Setter.Value>
-				<ControlTemplate>
+				<ControlTemplate TargetType="{x:Type Button}">
 					<Border Background="Transparent">
 						<ctrls:RiotIcon Style="{StaticResource IN.ICON}" IconType="Close"/>
 					</Border>
