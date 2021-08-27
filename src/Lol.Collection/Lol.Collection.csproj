@@ -8,12 +8,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ApplicationDefinition Remove="App.xaml" />
+    <Compile Remove="Themes\Units\**" />
+    <Compile Remove="UI\Units\**" />
+    <EmbeddedResource Remove="Themes\Units\**" />
+    <EmbeddedResource Remove="UI\Units\**" />
+    <None Remove="Themes\Units\**" />
+    <None Remove="UI\Units\**" />
+    <Page Remove="Themes\Units\**" />
+    <Page Remove="UI\Units\**" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Themes\Units\" />
-    <Folder Include="UI\Units\" />
+    <ApplicationDefinition Remove="App.xaml" />
   </ItemGroup>
 
   <ItemGroup>

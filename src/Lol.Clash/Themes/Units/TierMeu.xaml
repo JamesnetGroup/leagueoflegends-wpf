@@ -36,7 +36,6 @@
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="text" Property="Foreground" Value="#F0D69F"/>
-                            <Setter Property="Cursor" Value="Hand"/>
                         </Trigger>
                         <Trigger Property="IsSelected" Value="True">
                             <Setter TargetName="text" Property="Foreground" Value="#F0D69F"/>

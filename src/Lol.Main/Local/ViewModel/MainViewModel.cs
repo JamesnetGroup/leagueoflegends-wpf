@@ -17,8 +17,10 @@ using Lol.Home.UI.Views;
 using Lol.Home.Local.ViewModels;
 using Lol.Clash.UI.Views;
 using Lol.Clash.Local.ViewModel;
-using Lol.Store.UI.Views;
-using Lol.Store.Local.ViewModels;
+using store = Lol.Store.UI.Views;
+using storeVM = Lol.Store.Local.ViewModels;
+using Lol.Collection.UI.Views;
+using Lol.Collection.Local.ViewModel;
 
 namespace Lol.Main.Local.ViewModel
 {
@@ -152,9 +154,10 @@ namespace Lol.Main.Local.ViewModel
 					8 => new Overview().SetVM(new OverviewModel()),
 					11 => new HubView().SetVM(new HubViewModel()),
 					14 => new WinningTeam().SetVM(new WinningTeamViewModel()),
-                    16 => new Lol.Collection.UI.Views.Champions().SetVM(new Lol.Collection.Local.ViewModel.ChampionsViewModel()),
-                    20 => new Lol.Collection.UI.Views.Spells().SetVM(new Lol.Collection.Local.ViewModel.SpellsViewModel()),
-					26 => new Champions().SetVM(new ChampionsViewModel()),
+                    16 => new Champions().SetVM(new ChampionsViewModel()),
+                    20 => new Spells().SetVM(new SpellsViewModel()),
+					// TODO: [Elena] 클래스 이름 중복 관련 임시 처리 
+					26 => new store.Champions().SetVM(new storeVM.ChampionsViewModel()),
 					_ => new EmptyContent()
 				};
 			}
