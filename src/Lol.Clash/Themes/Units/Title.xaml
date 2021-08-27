@@ -11,6 +11,8 @@
     </Style>
     
     <Style TargetType="{x:Type units:Title}">
+		<Setter Property="HorizontalAlignment" Value="Left"/>
+		<Setter Property="VerticalAlignment" Value="Top"/>
 		<Setter Property="Margin" Value="50 0 0 0"/>
 		<Setter Property="Template">
             <Setter.Value>
