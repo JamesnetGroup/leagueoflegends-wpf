@@ -6,11 +6,11 @@ using System.Windows.Markup;
 
 namespace Lol.Converter
 {
-	public class BooleanToCollapsedConverter : MarkupExtension, IValueConverter
+	public class BooleanToHiddenConverter : MarkupExtension, IValueConverter
 	{
 		public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
 		{
-			return value.Equals(true) ? Visibility.Collapsed : Visibility.Visible;
+			return value.Equals(true) ? Visibility.Hidden : Visibility.Visible;
 		}
 
 		public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
