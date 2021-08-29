@@ -20,7 +20,7 @@
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
-                                <Grid Width="68"></Grid>
+                                <Image Width="68" Source="/Lol.Resources;component/Images/WinningIcons/1.png" Height="30"/>
                                 <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="18 0 0 0">
                                     <StackPanel Orientation="Horizontal">
                                         <TextBlock FontWeight="Bold" FontSize="19" Foreground="#C8AA6E" Text="{Binding SubName}" VerticalAlignment="Center"/>
