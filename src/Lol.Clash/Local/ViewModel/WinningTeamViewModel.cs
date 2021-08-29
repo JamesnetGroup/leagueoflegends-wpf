@@ -15,6 +15,8 @@ namespace Lol.Clash.Local.ViewModel
 		private BaseModel _currentTierMenu;
 		private bool _isCup;
 
+		private List<TierDetailModel> _tierDetails;
+
 		#region Cups
 
 		public List<BaseModel> Cups
@@ -60,6 +62,15 @@ namespace Lol.Clash.Local.ViewModel
 		}
 		#endregion
 
+		#region TierDetails
+
+		public List<TierDetailModel> TierDetails
+		{
+			get => _tierDetails;
+			set { _tierDetails = value; OnPropertyChanged(); }
+		}
+		#endregion
+
 		#region Constructor
 
 		public WinningTeamViewModel()
@@ -69,6 +80,8 @@ namespace Lol.Clash.Local.ViewModel
 
 			TierMenus = ExamClash.GetTier();
 			CurrentTierMenu = TierMenus.First();
+
+			TierDetails = ExamClash.GetTierDetail();
 		}
 		#endregion
 
