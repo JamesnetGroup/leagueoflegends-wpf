@@ -2,13 +2,44 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:units="clr-namespace:Lol.Clash.UI.Units"
                     xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
+    
+    <LinearGradientBrush x:Key="ITEM.BG.OVER" StartPoint="0, 0.5" EndPoint="1, 0.5">
+        <GradientStop Color="#07111A" Offset="0"/>
+        <GradientStop Color="#1D2830" Offset="0.5"/>
+        <GradientStop Color="#3C464E" Offset="1"/>
+    </LinearGradientBrush>
+    
     <Style TargetType="{x:Type ListBoxItem}" x:Key="LBIT.DETAIL">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListBoxItem}">
-                    <Border BorderThickness="1 0 1 0" BorderBrush="Red" Margin="0 22 0 0" Height="84">
-                        <TextBlock Foreground="LightGreen" Text="{Binding Name}" FontSize="20"/>
+                    <Border BorderThickness="0 0 2 0" BorderBrush="#2D373E" Margin="0 22 0 0" Height="84" Background="Transparent">
+                        <Border x:Name="bd" Margin="1 0 1 0" BorderThickness="1" BorderBrush="Transparent" Background="Transparent" Padding="18 10 34 10">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid Width="68"></Grid>
+                                <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="18 0 0 0">
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock FontWeight="Bold" FontSize="19" Foreground="#C8AA6E" Text="{Binding SubName}" VerticalAlignment="Center"/>
+                                        <TextBlock Margin="4 0 0 0" FontWeight="Bold" FontSize="18" Foreground="#A09B8C" Text="{Binding Name}" VerticalAlignment="Center"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal" Margin="0 6 0 0">
+                                        <TextBlock Text="평균 승리 시간: " Foreground="#A09B8C"/>
+                                        <TextBlock Text="{Binding Time}" Foreground="#A09B8C"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Grid>
+                        </Border>
                     </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="bd" Property="BorderBrush" Value="#858586"/>
+                            <Setter TargetName="bd" Property="Background" Value="{StaticResource ITEM.BG.OVER}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
