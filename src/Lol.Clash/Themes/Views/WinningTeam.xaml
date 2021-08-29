@@ -16,9 +16,10 @@
 										   Margin="0 60 40 0"/>
 						<!-- TODO: [Kevin] 이벤트 해결 필요-->
 						<!--[Elena]: BooleanToCollapsedConverter > BooleanToHiddenConverter로 변경-->
-						<units:TierMenu/>
 						<units:Title/>
-					</Grid>
+						<units:TierMenu/>
+                        <units:TierDetailListBox/>
+                    </Grid>
 				</ControlTemplate>
             </Setter.Value>
         </Setter>

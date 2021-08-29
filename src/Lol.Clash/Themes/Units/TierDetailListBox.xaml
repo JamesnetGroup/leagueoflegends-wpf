@@ -1,18 +1,35 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:units="clr-namespace:Lol.Clash.UI.Units">
+                    xmlns:units="clr-namespace:Lol.Clash.UI.Units"
+                    xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
     <Style TargetType="{x:Type ListBoxItem}" x:Key="LBIT.DETAIL">
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate>
-                    
+                <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                    <Border BorderThickness="1 0 1 0" BorderBrush="Red" Margin="0 22 0 0" Height="84">
+                        <TextBlock Foreground="LightGreen" Text="{Binding Name}" FontSize="20"/>
+                    </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
     <Style TargetType="{x:Type units:TierDetailListBox}">
-        <Setter Property="Margin" Value="0 200 0 0"/>
+        <Setter Property="ItemsSource" Value="{Binding TierDetails}"/>
+        <Setter Property="Margin" Value="50 172 0 0"/>
         <Setter Property="ItemContainerStyle" Value="{StaticResource LBIT.DETAIL}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Grid>
+                        <ctrls:BasicScroll Grid.Row="1" Margin="0"
+										   ScrollViewer.VerticalScrollBarVisibility="Auto" 
+										   ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                            <ItemsPresenter/>
+                        </ctrls:BasicScroll>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
         <Setter Property="ItemsPanel">
             <Setter.Value>
                 <ItemsPanelTemplate>

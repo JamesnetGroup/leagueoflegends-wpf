@@ -12,7 +12,7 @@
         <ResourceDictionary Source="/Lol.Clash;component/Themes/Units/CupToggleButton.xaml"/>
         <ResourceDictionary Source="/Lol.Clash;component/Themes/Units/CupListBox.xaml"/>
         <ResourceDictionary Source="/Lol.Clash;component/Themes/Units/TierMenu.xaml"/>
-        <ResourceDictionary Source="/Lol.Clash;component/Themes/Units/TierMenu.xaml"/>
+        <ResourceDictionary Source="/Lol.Clash;component/Themes/Units/TierDetailListBox.xaml"/>
         <ResourceDictionary Source="/Lol.Clash;component/Themes/Views/HubView.xaml"/>
         <ResourceDictionary Source="/Lol.Clash;component/Themes/Views/WinningTeam.xaml"/>
     </ResourceDictionary.MergedDictionaries>
