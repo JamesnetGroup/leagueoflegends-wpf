@@ -4,6 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net6.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>C:\devncore\leagueoflegends\src\Lol.Resources\Icon\LoLicon.ico</ApplicationIcon>
     <!--<ApplicationIcon>C:\devncore\leagueoflegends\src\Lol.Resources\Icon\LoLicon.ico</ApplicationIcon>-->
   </PropertyGroup>
 
