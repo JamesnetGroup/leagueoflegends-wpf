@@ -20,7 +20,8 @@
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
-                                <Image Width="68" Source="/Lol.Resources;component/Images/WinningIcons/1.png" Height="30"/>
+                                <!-- TODO: [Kevin] WinningIcons폴더 이미지가 불러와지지 않음-->
+                                <Image Width="68" Source="/Lol.Resources;component/Images/lol-logo-03.png" Height="30"/>
                                 <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="18 0 0 0">
                                     <StackPanel Orientation="Horizontal">
                                         <TextBlock FontWeight="Bold" FontSize="19" Foreground="#C8AA6E" Text="{Binding SubName}" VerticalAlignment="Center"/>
