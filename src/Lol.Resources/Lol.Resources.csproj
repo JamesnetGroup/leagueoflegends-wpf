@@ -72,7 +72,7 @@
     <None Remove="Images\Square\7.png" />
     <None Remove="Images\Square\8.png" />
     <None Remove="Images\Square\9.png" />
-    <None Remove="Images\WinningIcons\1.png" />
+    <!--<None Remove="Images\WinningIcons\1.png" />
     <None Remove="Images\WinningIcons\2.png" />
     <None Remove="Images\WinningIcons\3.png" />
     <None Remove="Images\WinningIcons\4.png" />
@@ -87,7 +87,7 @@
     <None Remove="Images\WinningIcons\13.png" />
     <None Remove="Images\WinningIcons\14.png" />
     <None Remove="Images\WinningIcons\15.png" />
-    <None Remove="Images\WinningIcons\16.png" />
+    <None Remove="Images\WinningIcons\16.png" />-->
   </ItemGroup>
 
   <ItemGroup>
@@ -157,7 +157,7 @@
     <Resource Include="Images\Square\7.png" />
     <Resource Include="Images\Square\8.png" />
     <Resource Include="Images\Square\9.png" />
-    <Resource Include="Images\WinningIcons\1.png" />
+    <!--<Resource Include="Images\WinningIcons\1.png" />
     <Resource Include="Images\WinningIcons\2.png" />
     <Resource Include="Images\WinningIcons\3.png" />
     <Resource Include="Images\WinningIcons\4.png" />
@@ -172,7 +172,7 @@
     <Resource Include="Images\WinningIcons\13.png" />
     <Resource Include="Images\WinningIcons\14.png" />
     <Resource Include="Images\WinningIcons\15.png" />
-    <Resource Include="Images\WinningIcons\16.png" />
+    <Resource Include="Images\WinningIcons\16.png" />-->
   </ItemGroup>
 
   <ItemGroup>
