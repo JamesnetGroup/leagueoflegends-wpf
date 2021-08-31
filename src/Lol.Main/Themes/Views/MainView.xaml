@@ -101,6 +101,12 @@
 				<Setter TargetName="img" Property="Stretch" Value="UniformToFill"/>
 				<Setter TargetName="left" Property="Fill" Value="{StaticResource LEFT.TFT}"/>
 			</DataTrigger>
+			<DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.CurrentSeq}" Value="14">
+                <Setter TargetName="img" Property="Source" Value="/Lol.Resources;component/Images/bg-winningteam.png"/>
+				<Setter TargetName="img" Property="RenderOptions.BitmapScalingMode" Value="Fant"/>
+				<Setter TargetName="img" Property="Stretch" Value="UniformToFill"/>
+				<Setter TargetName="left" Property="Fill" Value="{StaticResource LEFT.TFT}"/>
+			</DataTrigger>
 			<DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.CurrentSeq}" Value="6">
 				<Setter TargetName="border" Property="Background" Value="#06111D"/>
 			</DataTrigger>
