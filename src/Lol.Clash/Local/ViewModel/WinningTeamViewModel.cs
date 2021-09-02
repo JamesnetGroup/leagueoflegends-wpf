@@ -1,6 +1,7 @@
 ﻿using Lol.Data.Clash;
 using Lol.ExampleData.Clash;
 using Lol.Foundation.Mvvm;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -49,13 +50,13 @@ namespace Lol.Clash.Local.ViewModel
 		public BaseModel CurrentTierMenu
 		{
 			get => _currentTierMenu;
-			set { _currentTierMenu = value; OnPropertyChanged(); }
+			set { _currentTierMenu = value; OnPropertyChanged(); TierMenuChanged(value); }
 		}
-		#endregion
+        #endregion
 
-		#region IsCup
+        #region IsCup
 
-		public bool IsCup
+        public bool IsCup
 		{
 			get => _isCup;
 			set { _isCup = value; OnPropertyChanged(); }
@@ -92,6 +93,13 @@ namespace Lol.Clash.Local.ViewModel
 			IsCup = false;
 		}
 		#endregion
+
+		private void TierMenuChanged(BaseModel value)
+		{
+			if (value == null)
+				return;
+
+		}
 
 	}
 }
