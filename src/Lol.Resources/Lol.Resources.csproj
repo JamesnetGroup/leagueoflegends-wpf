@@ -13,6 +13,7 @@
     <None Remove="Images\bg-main-04.png" />
     <None Remove="Images\bg-main-05.png" />
     <None Remove="Images\card-kaisa.png" />
+    <None Remove="Images\ico-14.png" />
     <None Remove="Images\icon-menu-selected.png" />
     <None Remove="Images\lol-blue-essence.png" />
     <None Remove="Images\lol-logo-03.png" />
@@ -74,15 +75,8 @@
     <None Remove="Images\Square\7.png" />
     <None Remove="Images\Square\8.png" />
     <None Remove="Images\Square\9.png" />
-	<None Remove="Images\WinIcons\1.png" />
-    <None Remove="Images\WinIcons\2.png" />
-    <None Remove="Images\WinIcons\3.png" />
-    <None Remove="Images\WinIcons\4.png" />
-    <None Remove="Images\WinIcons\5.png" />
-    <None Remove="Images\WinIcons\6.png" />
-    <None Remove="Images\WinIcons\7.png" />
-    <None Remove="Images\WinIcons\8.png" />
-    <None Remove="Images\WinIcons\9.png" />
+    <None Remove="Images\WinIcons\1 - Copy.png" />
+    <None Remove="Images\WinIcons\1.png" />
     <None Remove="Images\WinIcons\10.png" />
     <None Remove="Images\WinIcons\11.png" />
     <None Remove="Images\WinIcons\12.png" />
@@ -90,6 +84,46 @@
     <None Remove="Images\WinIcons\14.png" />
     <None Remove="Images\WinIcons\15.png" />
     <None Remove="Images\WinIcons\16.png" />
+    <None Remove="Images\WinIcons\17.png" />
+    <None Remove="Images\WinIcons\18.png" />
+    <None Remove="Images\WinIcons\19.png" />
+    <None Remove="Images\WinIcons\2.png" />
+    <None Remove="Images\WinIcons\20.png" />
+    <None Remove="Images\WinIcons\21.png" />
+    <None Remove="Images\WinIcons\22.png" />
+    <None Remove="Images\WinIcons\23.png" />
+    <None Remove="Images\WinIcons\24.png" />
+    <None Remove="Images\WinIcons\25.png" />
+    <None Remove="Images\WinIcons\26.png" />
+    <None Remove="Images\WinIcons\27.png" />
+    <None Remove="Images\WinIcons\28.png" />
+    <None Remove="Images\WinIcons\29.png" />
+    <None Remove="Images\WinIcons\3.png" />
+    <None Remove="Images\WinIcons\30.png" />
+    <None Remove="Images\WinIcons\31.png" />
+    <None Remove="Images\WinIcons\32.png" />
+    <None Remove="Images\WinIcons\33.png" />
+    <None Remove="Images\WinIcons\34.png" />
+    <None Remove="Images\WinIcons\35.png" />
+    <None Remove="Images\WinIcons\36.png" />
+    <None Remove="Images\WinIcons\37.png" />
+    <None Remove="Images\WinIcons\38.png" />
+    <None Remove="Images\WinIcons\39.png" />
+    <None Remove="Images\WinIcons\4.png" />
+    <None Remove="Images\WinIcons\40.png" />
+    <None Remove="Images\WinIcons\41.png" />
+    <None Remove="Images\WinIcons\42.png" />
+    <None Remove="Images\WinIcons\43.png" />
+    <None Remove="Images\WinIcons\44.png" />
+    <None Remove="Images\WinIcons\45.png" />
+    <None Remove="Images\WinIcons\46.png" />
+    <None Remove="Images\WinIcons\47.png" />
+    <None Remove="Images\WinIcons\48.png" />
+    <None Remove="Images\WinIcons\5.png" />
+    <None Remove="Images\WinIcons\6.png" />
+    <None Remove="Images\WinIcons\7.png" />
+    <None Remove="Images\WinIcons\8.png" />
+    <None Remove="Images\WinIcons\9.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -99,6 +133,7 @@
     <Resource Include="Images\bg-main-04.png" />
     <Resource Include="Images\bg-main-05.png" />
     <Resource Include="Images\card-kaisa.png" />
+    <Resource Include="Images\ico-14.png" />
     <Resource Include="Images\icon-menu-selected.png" />
     <Resource Include="Images\lol-blue-essence.png" />
     <Resource Include="Images\lol-logo-03.png" />
@@ -160,22 +195,59 @@
     <Resource Include="Images\Square\7.png" />
     <Resource Include="Images\Square\8.png" />
 	<Resource Include="Images\Square\9.png" />
-	<Resource Include="Images\WinIcons\1.png" />
-    <Resource Include="Images\WinIcons\2.png" />
-    <Resource Include="Images\WinIcons\3.png" />
-    <Resource Include="Images\WinIcons\4.png" />
-    <Resource Include="Images\WinIcons\5.png" />
-    <Resource Include="Images\WinIcons\6.png" />
-    <Resource Include="Images\WinIcons\7.png" />
-    <Resource Include="Images\WinIcons\8.png" />
-    <Resource Include="Images\WinIcons\9.png" />
-    <Resource Include="Images\WinIcons\10.png" />
-    <Resource Include="Images\WinIcons\11.png" />
-    <Resource Include="Images\WinIcons\12.png" />
-    <Resource Include="Images\WinIcons\13.png" />
-    <Resource Include="Images\WinIcons\14.png" />
-    <Resource Include="Images\WinIcons\15.png" />
-    <Resource Include="Images\WinIcons\16.png" />
+	<Resource Include="Images\1 - Copy.png">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</Resource>
+	<Resource Include="Images\WinIcons\1.png">
+	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	</Resource>
+	<Resource Include="Images\WinIcons\10.png" />
+	<Resource Include="Images\WinIcons\11.png" />
+	<Resource Include="Images\WinIcons\12.png" />
+	<Resource Include="Images\WinIcons\13.png" />
+	<Resource Include="Images\WinIcons\14.png" />
+	<Resource Include="Images\WinIcons\15.png" />
+	<Resource Include="Images\WinIcons\16.png" />
+	<Resource Include="Images\WinIcons\17.png" />
+	<Resource Include="Images\WinIcons\18.png" />
+	<Resource Include="Images\WinIcons\19.png" />
+	<Resource Include="Images\WinIcons\2.png" />
+	<Resource Include="Images\WinIcons\20.png" />
+	<Resource Include="Images\WinIcons\21.png" />
+	<Resource Include="Images\WinIcons\22.png" />
+	<Resource Include="Images\WinIcons\23.png" />
+	<Resource Include="Images\WinIcons\24.png" />
+	<Resource Include="Images\WinIcons\25.png" />
+	<Resource Include="Images\WinIcons\26.png" />
+	<Resource Include="Images\WinIcons\27.png" />
+	<Resource Include="Images\WinIcons\28.png" />
+	<Resource Include="Images\WinIcons\29.png" />
+	<Resource Include="Images\WinIcons\3.png" />
+	<Resource Include="Images\WinIcons\30.png" />
+	<Resource Include="Images\WinIcons\31.png" />
+	<Resource Include="Images\WinIcons\32.png" />
+	<Resource Include="Images\WinIcons\33.png" />
+	<Resource Include="Images\WinIcons\34.png" />
+	<Resource Include="Images\WinIcons\35.png" />
+	<Resource Include="Images\WinIcons\36.png" />
+	<Resource Include="Images\WinIcons\37.png" />
+	<Resource Include="Images\WinIcons\38.png" />
+	<Resource Include="Images\WinIcons\39.png" />
+	<Resource Include="Images\WinIcons\4.png" />
+	<Resource Include="Images\WinIcons\40.png" />
+	<Resource Include="Images\WinIcons\41.png" />
+	<Resource Include="Images\WinIcons\42.png" />
+	<Resource Include="Images\WinIcons\43.png" />
+	<Resource Include="Images\WinIcons\44.png" />
+	<Resource Include="Images\WinIcons\45.png" />
+	<Resource Include="Images\WinIcons\46.png" />
+	<Resource Include="Images\WinIcons\47.png" />
+	<Resource Include="Images\WinIcons\48.png" />
+	<Resource Include="Images\WinIcons\5.png" />
+	<Resource Include="Images\WinIcons\6.png" />
+	<Resource Include="Images\WinIcons\7.png" />
+	<Resource Include="Images\WinIcons\8.png" />
+	<Resource Include="Images\WinIcons\9.png" />
   </ItemGroup>
 
   <ItemGroup>
