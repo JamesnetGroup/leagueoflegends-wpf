@@ -195,9 +195,6 @@
     <Resource Include="Images\Square\7.png" />
     <Resource Include="Images\Square\8.png" />
 	<Resource Include="Images\Square\9.png" />
-	<Resource Include="Images\1 - Copy.png">
-	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-	</Resource>
 	<Resource Include="Images\WinIcons\1.png">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 	</Resource>
