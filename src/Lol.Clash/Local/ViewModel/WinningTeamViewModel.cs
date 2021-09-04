@@ -1,7 +1,6 @@
 ﻿using Lol.Data.Clash;
 using Lol.ExampleData.Clash;
 using Lol.Foundation.Mvvm;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
