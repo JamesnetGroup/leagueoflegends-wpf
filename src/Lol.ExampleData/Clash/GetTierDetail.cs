@@ -1,6 +1,5 @@
 ﻿using Lol.Data.Clash;
 using System.Collections.Generic;
-
 namespace Lol.ExampleData.Clash
 {
 	public partial class ExamClash
@@ -60,7 +59,6 @@ namespace Lol.ExampleData.Clash
 				new TierDetailModel(14, 2, "격전", "OEO", "28:57", "/Lol.Resources;component/Images/WinIcons/47.png"),
 				new TierDetailModel(15, 2, "치오띠", "WKU", "28:57", "/Lol.Resources;component/Images/WinIcons/48.png"),
 			};
-
 			return source;
 		}
 	}
