@@ -6,6 +6,8 @@ namespace Lol.ExampleData.Clash
 	{
 		public static List<TierDetailModel> GetTierDetail()
 		{
+			string imgResource(int name) => @"/Lol.Resources;component/Images/WinIcons/{name}.png";
+
 			List<TierDetailModel> source = new()
 			{
 				new TierDetailModel(0,  0, "격전의신", "CEX", "28:57", "/Lol.Resources;component/Images/WinIcons/1.png"),
