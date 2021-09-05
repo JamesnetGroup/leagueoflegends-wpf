@@ -6,13 +6,14 @@ namespace Lol.ExampleData.Clash
 	{
 		public static List<TierDetailModel> GetTierDetail()
 		{
-			string imgResource(int name) => @"/Lol.Resources;component/Images/WinIcons/{name}.png";
+			// TODO: [James] 임시 리소스 정리
+			string imgResource(int name) => $"/Lol.Resources;component/Images/WinIcons/{name}.png";
 
 			List<TierDetailModel> source = new()
 			{
-				new TierDetailModel(0,  0, "격전의신", "CEX", "28:57", "/Lol.Resources;component/Images/WinIcons/1.png"),
-				new TierDetailModel(1,  0, "평경1짱", "SBM", "28:57", "/Lol.Resources;component/Images/WinIcons/2.png"),
-				new TierDetailModel(2,  0, "수박먹고싶다", "asd", "28:57", "/Lol.Resources;component/Images/WinIcons/3.png"),
+				new TierDetailModel(0,  0, "격전의신", "CEX", "28:57", imgResource(1)),
+				new TierDetailModel(1,  0, "평경1짱", "SBM", "28:57", imgResource(2)),
+				new TierDetailModel(2,  0, "수박먹고싶다", "asd", "28:57", imgResource(3)),
 				new TierDetailModel(3,  0, "주지훈", "GOD", "28:57", "/Lol.Resources;component/Images/WinIcons/4.png"),
 				new TierDetailModel(4,  0, "korea", "KOR", "28:57", "/Lol.Resources;component/Images/WinIcons/5.png"),
 				new TierDetailModel(5,  0, "wOw", "WoW", "28:57", "/Lol.Resources;component/Images/WinIcons/6.png"),
