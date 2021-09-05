@@ -14,8 +14,6 @@
 										   VerticalAlignment="Top" 
 										   PlaceHolder="팀 검색" 
 										   Margin="0 60 40 0"/>
-						<!-- TODO: [Kevin] 이벤트 해결 필요-->
-						<!--[Elena]: BooleanToCollapsedConverter > BooleanToHiddenConverter로 변경-->
                         <units:TierDetailListBox/>
 						<units:TierMenu/>
 						<units:Title/>

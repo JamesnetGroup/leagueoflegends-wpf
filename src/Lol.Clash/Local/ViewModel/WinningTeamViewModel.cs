@@ -73,7 +73,6 @@ namespace Lol.Clash.Local.ViewModel
 
 		#region Constructor
 
-
 		public WinningTeamViewModel()
 		{
 			Cups = ExamClash.GetCup();
@@ -81,8 +80,6 @@ namespace Lol.Clash.Local.ViewModel
 
 			TierMenus = ExamClash.GetTier();
 			CurrentTierMenu = TierMenus.First();
-
-			
 		}
 		#endregion
 
@@ -100,9 +97,6 @@ namespace Lol.Clash.Local.ViewModel
 				return;
 
 			TierDetails = ExamClash.GetTierDetail().Where(x => x.ParentSeq == value.Seq).ToList();
-
-
 		}
-
 	}
 }
