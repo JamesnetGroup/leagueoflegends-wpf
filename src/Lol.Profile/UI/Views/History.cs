@@ -19,7 +19,7 @@ namespace Lol.Profile.UI.Views
    
     public class History : View
     {
-        #region Constructor
+        #region DefaultStyleKey
 
         static History()
         {
