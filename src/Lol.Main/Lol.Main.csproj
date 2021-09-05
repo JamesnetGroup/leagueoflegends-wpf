@@ -15,6 +15,7 @@
     <ProjectReference Include="..\Lol.Home\Lol.Home.csproj" />
     <ProjectReference Include="..\Lol.LayoutSupport\Lol.LayoutSupport.csproj" />
     <ProjectReference Include="..\Lol.MyShop\Lol.MyShop.csproj" />
+    <ProjectReference Include="..\Lol.Profile\Lol.Profile.csproj" />
     <ProjectReference Include="..\Lol.Settings\Lol.Settings.csproj" />
     <ProjectReference Include="..\Lol.Store\Lol.Store.csproj" />
     <ProjectReference Include="..\Lol.TeamFight\Lol.TeamFight.csproj" />

@@ -12,11 +12,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Local\ViewModels\" />
-    <Folder Include="Themes\Views\" />
     <Folder Include="Themes\Units\" />
-    <Folder Include="UI\Views\" />
     <Folder Include="UI\Units\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Lol.LayoutSupport\Lol.LayoutSupport.csproj" />
   </ItemGroup>
 
 </Project>

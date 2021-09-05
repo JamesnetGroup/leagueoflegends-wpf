@@ -79,7 +79,7 @@ namespace Lol.Main.Local.Work
 				new SubMenuModel(12, 2, "TEAM"),
 				new SubMenuModel(13, 2, "MATCH"),
 				new SubMenuModel(14, 2, "WINNING TEAM"),
-				new SubMenuModel(15, 2, "COMPENSATION11"),
+				new SubMenuModel(15, 2, "COMPENSATION"),
 
 				new SubMenuModel(16, 4, "CHAMPIONS"),
 				new SubMenuModel(17, 4, "SKINS"),
@@ -96,7 +96,13 @@ namespace Lol.Main.Local.Work
 				new SubMenuModel(27, 7, "SKINS"),
 				new SubMenuModel(28, 7, "TFT"),
 				new SubMenuModel(29, 7, "LOOT"),
-				new SubMenuModel(30, 7, "ACCESSORIES")
+				new SubMenuModel(30, 7, "ACCESSORIES"),
+
+				new SubMenuModel(31, 3, "SUMMARY"),
+				new SubMenuModel(32, 3, "HISTORY"),
+				new SubMenuModel(33, 3, "RANK"),
+				new SubMenuModel(34, 3, "HIGHLIGHT"),
+				new SubMenuModel(35, 3, "STATISTICS"),
 
 			};
 			return source;
