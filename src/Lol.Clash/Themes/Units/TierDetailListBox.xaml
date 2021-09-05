@@ -10,7 +10,7 @@
         <GradientStop Color="#3C464E" Offset="1"/>
     </LinearGradientBrush>
     
-    <Style TargetType="{x:Type ListBoxItem}" x:Key="LBIT.DETAIL">
+    <Style TargetType="{x:Type ListBoxItem}" x:Key="LBXI.DETAIL">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListBoxItem}">
@@ -48,20 +48,20 @@
             </Setter.Value>
         </Setter>
     </Style>
+    
     <Style TargetType="{x:Type units:TierDetailListBox}">
         <Setter Property="ItemsSource" Value="{Binding TierDetails}"/>
         <Setter Property="Margin" Value="50 172 0 0"/>
-        <Setter Property="ItemContainerStyle" Value="{StaticResource LBIT.DETAIL}"/>
+        <Setter Property="ItemContainerStyle" Value="{StaticResource LBXI.DETAIL}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
-                    <Grid>
-                        <ctrls:BasicScroll Grid.Row="1" Margin="0"
-										   ScrollViewer.VerticalScrollBarVisibility="Auto" 
-										   ScrollViewer.HorizontalScrollBarVisibility="Disabled">
-                            <ItemsPresenter/>
-                        </ctrls:BasicScroll>
-                    </Grid>
+                    <ctrls:BasicScroll Grid.Row="1" 
+                                       Margin="0"
+									   ScrollViewer.VerticalScrollBarVisibility="Auto" 
+									   ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                        <ItemsPresenter/>
+                    </ctrls:BasicScroll>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
