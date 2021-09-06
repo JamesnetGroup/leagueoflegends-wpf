@@ -6,13 +6,20 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListBoxItem}">
-                    
+                    <Border x:Name="bd1" BorderThickness="6 0 0 0" BorderBrush="Transparent" Height="88">
+                        <Border x:Name="bd2" BorderThickness="0 1 0 1" BorderBrush="Transparent">
+                            <Border BorderThickness="0 0 0 1" BorderBrush="#24211E" Margin="44 0 0 0">
+                                <TextBlock Text="테스트" Foreground="Red"/>
+                            </Border>
+                        </Border>
+                    </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
     <Style TargetType="{x:Type units:HistoryListBox}">
-        <Setter Property="Margin" Value="50 0 0 0"/>
+        <Setter Property="ItemsSource" Value="{Binding Historys}"/>
+        <Setter Property="Margin" Value="0 0 0 0"/>
         <Setter Property="ItemContainerStyle" Value="{StaticResource LBXI.HISTORY}"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -22,8 +29,8 @@
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
-                        <TextBlock Foreground="#F0E6D2" FontWeight="Bold" Text="최근 게임 (최근 20회)" FontSize="14"/>
-                        <ctrls:BasicScroll Grid.Row="1"
+                        <TextBlock Foreground="#F0E6D2" FontWeight="Bold" Text="최근 게임 (최근 20회)" FontSize="14" Margin="50 0 0 0"/>
+                        <ctrls:BasicScroll Grid.Row="1" Margin="0 54 0 0"
 										   ScrollViewer.VerticalScrollBarVisibility="Auto" 
 										   ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                             <ItemsPresenter/>
