@@ -17,7 +17,7 @@
 										   HorizontalAlignment="Right" 
 										   PlaceHolder="소환사 검색" 
 										   Margin="0 14 66 0"/>
-                        <Grid Grid.Row="1" Margin="50 20 50 0">
+                        <Grid Grid.Row="1" Margin="0 20 50 0">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="2*"/>
                                 <ColumnDefinition Width="1*"/>
