@@ -7,7 +7,7 @@ namespace Lol.ExampleData.Clash
 		public static List<TierDetailModel> GetTierDetail()
 		{
 			// TODO: [James] 임시 리소스 정리
-			string imgResource(int name) => $"/Lol.Resources;component/Images/WinIcons/{name}.png";
+			static string imgResource(int name) => $"/Lol.Resources;component/Images/WinIcons/{name}.png";
 
 			List<TierDetailModel> source = new()
 			{

@@ -19,7 +19,8 @@ namespace Lol.Clash.UI.Units
 		public static readonly DependencyProperty SendIconTypeProperty = DependencyProperty.Register("SendIconType", typeof(GeoIcon), typeof(PositionButton), new PropertyMetadata(GeoIcon.None));
 		#endregion
 
-		//TODO: [Kevin] 이 방법이 최선인가 추후 수정???
+		// TODO: [Kevin] 이 방법이 최선인가 추후 수정???
+		// 설명: ??
 		#region SendIconType
 
 		public GeoIcon SendIconType
