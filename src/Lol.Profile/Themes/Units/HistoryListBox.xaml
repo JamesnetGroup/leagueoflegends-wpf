@@ -2,12 +2,25 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:units="clr-namespace:Lol.Profile.UI.Units"
                     xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
+    <LinearGradientBrush x:Key="BDR.PARENT.OVER" StartPoint="0.5, 0" EndPoint="0.5, 1">
+        <GradientStop Color="#69491F" Offset="0"/>
+        <GradientStop Color="#563D19" Offset="0.5"/>
+        <GradientStop Color="#4A3616" Offset="1"/>
+    </LinearGradientBrush>
+    
+    <LinearGradientBrush x:Key="BDR.CHILD.OVER" StartPoint="0, 0.5" EndPoint="1, 0.5">
+        <GradientStop Color="#67471E" Offset="0"/>
+        <GradientStop Color="#CBA86F" Offset="0.5"/>
+        <GradientStop Color="#67471E" Offset="0.88"/>
+        <GradientStop Color="Transparent" Offset="1"/>
+    </LinearGradientBrush>
+    
     <Style TargetType="{x:Type ListBoxItem}" x:Key="LBXI.HISTORY">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListBoxItem}">
-                    <Border x:Name="bd1" BorderThickness="6 0 0 0" BorderBrush="Transparent" Height="88">
-                        <Border x:Name="bd2" BorderThickness="0 1 0 1" BorderBrush="Transparent">
+                    <Border x:Name="bd1" BorderThickness="6 0 0 0" BorderBrush="{StaticResource BDR.PARENT.OVER}" Height="88">
+                        <Border x:Name="bd2" BorderThickness="0 1 0 1" BorderBrush="{StaticResource BDR.CHILD.OVER}">
                             <Border BorderThickness="0 0 0 1" BorderBrush="#24211E" Margin="44 0 0 0">
                                 <TextBlock Text="테스트" Foreground="Red"/>
                             </Border>
