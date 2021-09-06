@@ -17,12 +17,12 @@ using Lol.Home.UI.Views;
 using Lol.Home.Local.ViewModels;
 using Lol.Clash.UI.Views;
 using Lol.Clash.Local.ViewModel;
-using store = Lol.Store.UI.Views;
-using storeVM = Lol.Store.Local.ViewModels;
 using Lol.Collection.UI.Views;
 using Lol.Collection.Local.ViewModel;
 using Lol.Profile.UI.Views;
 using Lol.Profile.Local.ViewModels;
+using store = Lol.Store.UI.Views;
+using storeVM = Lol.Store.Local.ViewModels;
 
 namespace Lol.Main.Local.ViewModel
 {
