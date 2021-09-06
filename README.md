@@ -85,7 +85,7 @@ This is about **WPF League of Legends** development information.
 ***
   
 ## Reference
-TBD....
+TBD...
 
 > [20210820] .NET 6.0 업데이트 완료
 
