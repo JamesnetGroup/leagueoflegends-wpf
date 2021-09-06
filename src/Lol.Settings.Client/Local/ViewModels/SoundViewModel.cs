@@ -7,7 +7,10 @@ namespace Lol.Settings.Client.Local.ViewModels
 {
 	public class SoundViewModel : ObservableObject
 	{
+		#region Model
+
 		public SoundModel Model { get; set; }
+		#endregion
 
 		#region Constructor
 

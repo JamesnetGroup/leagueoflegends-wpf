@@ -15,7 +15,10 @@ namespace Lol.Settings.Client.Local.ViewModels
 		private List<AudioDevice> _deviceList;
 		private List<UsualCodes> _inputMode;
 
+		#region Model
+
 		public VoiceModel Model { get; set; }
+		#endregion
 
 		#region DeviceList
 
