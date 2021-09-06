@@ -10,8 +10,8 @@
     
     <LinearGradientBrush x:Key="BDR.CHILD.OVER" StartPoint="0, 0.5" EndPoint="1, 0.5">
         <GradientStop Color="#67471E" Offset="0"/>
-        <GradientStop Color="#CBA86F" Offset="0.5"/>
-        <GradientStop Color="#67471E" Offset="0.88"/>
+        <GradientStop Color="#ebc486" Offset="0.3"/>
+        <GradientStop Color="#67471E" Offset="0.5"/>
         <GradientStop Color="Transparent" Offset="1"/>
     </LinearGradientBrush>
     
@@ -19,13 +19,21 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListBoxItem}">
-                    <Border x:Name="bd1" BorderThickness="6 0 0 0" BorderBrush="{StaticResource BDR.PARENT.OVER}" Height="88">
-                        <Border x:Name="bd2" BorderThickness="0 1 0 1" BorderBrush="{StaticResource BDR.CHILD.OVER}">
-                            <Border BorderThickness="0 0 0 1" BorderBrush="#24211E" Margin="44 0 0 0">
-                                <TextBlock Text="테스트" Foreground="Red"/>
+                    <Grid>
+                        <Border BorderThickness="0 0 0 1" BorderBrush="#24211E" Margin="50 0 0 0" Padding="0 8 0 8">
+                            <TextBlock Text="테스트" Foreground="Red"/>
+                        </Border>
+                        <Border x:Name="bd1" BorderThickness="6 0 0 0" BorderBrush="Transparent" Height="88" Margin="0 -1 0 0">
+                            <Border x:Name="bd2" BorderThickness="0 1 0 1" BorderBrush="Transparent">
                             </Border>
                         </Border>
-                    </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="bd1" Property="BorderBrush" Value="{StaticResource BDR.PARENT.OVER}"/>
+                            <Setter TargetName="bd2" Property="BorderBrush" Value="{StaticResource BDR.CHILD.OVER}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
