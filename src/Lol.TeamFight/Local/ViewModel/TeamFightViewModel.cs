@@ -8,8 +8,11 @@ namespace Lol.TeamFight.Local.ViewModel
 {
 	public class TeamFightViewModel : ObservableObject
 	{
+		#region Variables
+
 		private List<TeamFightModel> _teamFightItem;
 		private TeamFightModel _currentTeamFightItem;
+		#endregion
 
 		#region TeamFightItem
 

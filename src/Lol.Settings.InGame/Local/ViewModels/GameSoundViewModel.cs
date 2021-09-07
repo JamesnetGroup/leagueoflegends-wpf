@@ -10,9 +10,15 @@ namespace Lol.Settings.InGame.Local.ViewModels
 {
 	public class GameSoundViewModel : ObservableObject
 	{
+		#region Variables
+
 		private List<UsualCodes> _musicTheme;
+		#endregion
+
+		#region Model
 
 		public GameSoundModel Model { get; set; }
+		#endregion
 
 		#region MusicTheme
 

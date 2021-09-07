@@ -8,6 +8,8 @@ namespace Lol.Store.Local.ViewModels
 {
 	public class ChampionsViewModel : ObservableObject
 	{
+		#region Variables
+
 		private List<StoreMenuModel> _champMenus;
 		private List<SortingModel> _sorting;
 		private List<FilterModel> _filters;
@@ -15,6 +17,7 @@ namespace Lol.Store.Local.ViewModels
 		private StoreMenuModel _currentChampMenu;
 		private SortingModel _currentSorting;
 		private string _searchText;
+		#endregion
 
 		#region ChampMenus
 
