@@ -11,24 +11,27 @@ namespace Lol.Profile.Local.ViewModels
 {
     public class HistoryViewModel : ObservableObject
     {
-        private List<HistoryModel> _historys;
+		#region Variables
 
-        #region Historys
+		private List<HistoryModel> _historys;
+		#endregion 
 
-        public List<HistoryModel> Historys
+		#region Historys
+
+		public List<HistoryModel> Historys
         {
             get { return _historys; }
             set { _historys = value; OnPropertyChanged(); }
         }
-        #endregion
+		#endregion
 
-        #region Constructor
+		#region Constructor
 
-        public HistoryViewModel()
-        {
-            Historys = ExamHistory.GetHistory();
-        }
-        #endregion
+		public HistoryViewModel()
+		{
+			Historys = ExamHistory.GetHistory();
+		}
+		#endregion
 
-    }
+	}
 }

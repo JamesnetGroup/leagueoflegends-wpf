@@ -13,11 +13,20 @@ namespace Lol.Settings.Client.Local.ViewModels
 {
 	public class GeneralViewModel : ObservableObject
 	{
+		#region Variables
+
 		private List<WindowSizeCode> _sizeList;
+		#endregion
+
+		#region Commands 
 
 		public ICommand LinkCommand { get; set; }
+		#endregion
+
+		#region Model
 
 		public GeneralModel Model { get; set; }
+		#endregion
 
 		#region SizeList
 

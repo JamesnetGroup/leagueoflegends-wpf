@@ -8,6 +8,8 @@ namespace Lol.Clash.Local.ViewModel
 {
 	public class WinningTeamViewModel : ObservableObject
 	{
+		#region Variables
+
 		private List<BaseModel> _cups;
 		private BaseModel _currentCup;
 
@@ -16,6 +18,7 @@ namespace Lol.Clash.Local.ViewModel
 		private bool _isCup;
 
 		private List<TierDetailModel> _tierDetails;
+		#endregion
 
 		#region Cups
 
@@ -91,6 +94,8 @@ namespace Lol.Clash.Local.ViewModel
 		}
 		#endregion
 
+		#region TierMenuChanged
+
 		private void TierMenuChanged(BaseModel value)
 		{
 			if (value == null)
@@ -98,5 +103,6 @@ namespace Lol.Clash.Local.ViewModel
 
 			TierDetails = ExamClash.GetTierDetail().Where(x => x.ParentSeq == value.Seq).ToList();
 		}
+		#endregion
 	}
 }
