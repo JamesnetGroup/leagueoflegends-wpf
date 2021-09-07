@@ -7,7 +7,10 @@ namespace Lol.Settings.Client.Local.ViewModels
 {
 	public class ChatViewModel : ObservableObject
 	{
+		#region Model
+
 		public ChatModel Model { get; set; }
+		#endregion
 
 		#region Constructor
 

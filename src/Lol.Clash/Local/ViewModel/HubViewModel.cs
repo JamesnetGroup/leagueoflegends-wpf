@@ -8,8 +8,11 @@ namespace Lol.Clash.Local.ViewModel
 {
 	public class HubViewModel : ObservableObject
 	{
+		#region Variables
+
 		private List<BaseModel> _tabs;
 		private BaseModel _currentTab;
+		#endregion
 
 		#region Tabs
 

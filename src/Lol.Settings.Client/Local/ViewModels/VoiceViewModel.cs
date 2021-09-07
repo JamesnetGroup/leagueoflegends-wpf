@@ -12,8 +12,11 @@ namespace Lol.Settings.Client.Local.ViewModels
 {
 	public class VoiceViewModel : ObservableObject
 	{
+		#region Variables
+
 		private List<AudioDevice> _deviceList;
 		private List<UsualCodes> _inputMode;
+		#endregion
 
 		#region Model
 

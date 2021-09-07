@@ -7,7 +7,10 @@ namespace Lol.Settings.Client.Local.ViewModels
 {
 	public class AlarmViewModel : ObservableObject
 	{
+		#region Model
+
 		public AlarmModel Model { get; set; }
+		#endregion
 
 		#region Constructor
 
