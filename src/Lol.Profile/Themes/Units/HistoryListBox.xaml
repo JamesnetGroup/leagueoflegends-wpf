@@ -35,7 +35,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListBoxItem}">
                     <Grid Background="Transparent">
-                        <Border BorderThickness="0 0 0 1" BorderBrush="#24211E" Margin="40 0 0 0" Padding="0 8 0 8">
+                        <Border BorderThickness="0 0 0 1" BorderBrush="#24211E" Margin="40 0 0 0" Padding="0 10 0 10">
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
@@ -62,7 +62,7 @@
                                         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="15" Foreground="{StaticResource FG.LEVEL}" FontWeight="Bold"/>
                                     </Border>
                                 </Grid>
-                                <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="20 0 0 0">
+                                <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="20 0 0 0">
                                     <TextBlock Text="승리" FontWeight="Bold" Foreground="{StaticResource FG.WIN}" FontSize="14"/>
                                     <TextBlock Text="개인/2인 랭크 게임" Foreground="{StaticResource FG.DEFAULT}"/>
                                     <Border Height="22" Width="42" BorderThickness="1" BorderBrush="{StaticResource BDR.SPELL}" HorizontalAlignment="Left" Margin="0 8 0 0">
@@ -74,6 +74,14 @@
                                             <Border BorderThickness="0 0 1 0" BorderBrush="{StaticResource BDR.SPELL}"/>
                                         </Grid>
                                     </Border>
+                                </StackPanel>
+                                <Grid Grid.Column="2"/>
+                                <StackPanel Grid.Column="3" VerticalAlignment="Top" Margin="100 0 0 0">
+                                    <TextBlock Text="소환사의 협곡" Foreground="{StaticResource FG.DEFAULT}"/>
+                                    <StackPanel Orientation="Horizontal" Margin="0 6 0 0">
+                                        <TextBlock Text="23:42" Foreground="{StaticResource FG.DEFAULT}"/>
+                                        <TextBlock Text="2021/09/05" Foreground="{StaticResource FG.DEFAULT}" Margin="10 0 0 0"/>
+                                    </StackPanel>
                                 </StackPanel>
                             </Grid>
                         </Border>
