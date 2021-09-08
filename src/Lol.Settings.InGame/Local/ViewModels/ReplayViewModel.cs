@@ -8,8 +8,15 @@ namespace Lol.Settings.InGame.Local.ViewModels
 {
 	public class ReplayViewModel : ObservableObject
 	{
+		#region ReplayPath
+
 		public string ReplayPath => RiotApp.REPLAY_PATH;
+		#endregion
+
+		#region HighlightPath
+
 		public string HighlightPath => RiotApp.HIGHLIGHT_PATH;
+		#endregion
 
 		#region ICommand
 
@@ -23,6 +30,8 @@ namespace Lol.Settings.InGame.Local.ViewModels
 			FindCommand = new RelayCommand<object>(ChangePath);
 		}
 		#endregion
+
+		#region ChangePath
 
 		private void ChangePath(object obj)
 		{
@@ -39,5 +48,6 @@ namespace Lol.Settings.InGame.Local.ViewModels
 				}
 			}
 		}
+		#endregion
 	}
 }
