@@ -14,16 +14,78 @@
         <GradientStop Color="#67471E" Offset="0.5"/>
         <GradientStop Color="Transparent" Offset="1"/>
     </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="BDR.SPELL" Color="#463714"/>
+    <SolidColorBrush x:Key="BDR.CHAMP" Color="#8D7B54"/>
+    <SolidColorBrush x:Key="BDR.LEVEL" Color="#C6993B"/>
+    <SolidColorBrush x:Key="BG.LEVEL" Color="#010A13"/>
+    <SolidColorBrush x:Key="FG.LEVEL" Color="#938F82"/>
+    <SolidColorBrush x:Key="FG.WIN" Color="#09BED8"/>
+    <SolidColorBrush x:Key="FG.LOSE" Color="#EF2141"/>
+    <SolidColorBrush x:Key="FG.DEFAULT" Color="#A09B8C"/>
+
+    <LinearGradientBrush x:Key="BDR.CHAMP.OVER" StartPoint="0,0" EndPoint="1,1">
+        <GradientStop Color="#85703E" Offset="0"/>
+        <GradientStop Color="#D2C57F" Offset="0.5"/>
+        <GradientStop Color="#85703E" Offset="1"/>
+    </LinearGradientBrush>
     
     <Style TargetType="{x:Type ListBoxItem}" x:Key="LBXI.HISTORY">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListBoxItem}">
-                    <Grid>
-                        <Border BorderThickness="0 0 0 1" BorderBrush="#24211E" Margin="50 0 0 0" Padding="0 8 0 8">
-                            <TextBlock Text="테스트" Foreground="Red"/>
+                    <Grid Background="Transparent">
+                        <Border BorderThickness="0 0 0 1" BorderBrush="#24211E" Margin="40 0 0 0" Padding="0 10 0 10">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/> 
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid>
+                                    <Border x:Name="bd3"
+                                            Height="60" Width="60"
+                                            CornerRadius="300"
+                                            BorderBrush="{StaticResource BDR.CHAMP}" 
+                                            BorderThickness="2" 
+                                            VerticalAlignment="Center"/>
+                                    <Border HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                                            Height="22" Width="22"
+                                            CornerRadius="300"
+                                            BorderThickness="1"
+                                            Background="{StaticResource BG.LEVEL}" 
+                                            BorderBrush="{StaticResource BDR.LEVEL}"
+                                            Margin="0 0 -5 5">
+                                        <!--레벨 바인딩-->
+                                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="15" Foreground="{StaticResource FG.LEVEL}" FontWeight="Bold"/>
+                                    </Border>
+                                </Grid>
+                                <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="20 0 0 0">
+                                    <TextBlock Text="승리" FontWeight="Bold" Foreground="{StaticResource FG.WIN}" FontSize="14"/>
+                                    <TextBlock Text="개인/2인 랭크 게임" Foreground="{StaticResource FG.DEFAULT}"/>
+                                    <Border Height="22" Width="42" BorderThickness="1" BorderBrush="{StaticResource BDR.SPELL}" HorizontalAlignment="Left" Margin="0 8 0 0">
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="*"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Border BorderThickness="0 0 1 0" BorderBrush="{StaticResource BDR.SPELL}"/>
+                                        </Grid>
+                                    </Border>
+                                </StackPanel>
+                                <Grid Grid.Column="2"/>
+                                <StackPanel Grid.Column="3" VerticalAlignment="Top" Margin="100 0 0 0">
+                                    <TextBlock Text="소환사의 협곡" Foreground="{StaticResource FG.DEFAULT}"/>
+                                    <StackPanel Orientation="Horizontal" Margin="0 6 0 0">
+                                        <TextBlock Text="23:42" Foreground="{StaticResource FG.DEFAULT}"/>
+                                        <TextBlock Text="2021/09/05" Foreground="{StaticResource FG.DEFAULT}" Margin="10 0 0 0"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Grid>
                         </Border>
-                        <Border x:Name="bd1" BorderThickness="6 0 0 0" BorderBrush="Transparent" Height="88" Margin="0 -1 0 0">
+                        <Border x:Name="bd1" BorderThickness="7 0 0 0" BorderBrush="Transparent" Height="88" Margin="0 -1 0 0">
                             <Border x:Name="bd2" BorderThickness="0 1 0 1" BorderBrush="Transparent">
                             </Border>
                         </Border>
@@ -32,6 +94,7 @@
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="bd1" Property="BorderBrush" Value="{StaticResource BDR.PARENT.OVER}"/>
                             <Setter TargetName="bd2" Property="BorderBrush" Value="{StaticResource BDR.CHILD.OVER}"/>
+                            <Setter TargetName="bd3" Property="BorderBrush" Value="{StaticResource BDR.CHAMP.OVER}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

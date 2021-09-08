@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Lol.Clash.Local.ViewModel
 {
-	public class WinningTeamViewModel : ObservableObject
+	public class WinnersViewModel : ObservableObject
 	{
 		#region Variables
 
@@ -15,7 +15,8 @@ namespace Lol.Clash.Local.ViewModel
 
 		private List<BaseModel> _timerMenus;
 		private BaseModel _currentTierMenu;
-		private bool _isCup;
+		private bool _isCupChanged;
+		private int _lastSeq;
 
 		private List<TierDetailModel> _tierDetails;
 		#endregion
@@ -54,14 +55,23 @@ namespace Lol.Clash.Local.ViewModel
 			get => _currentTierMenu;
 			set { _currentTierMenu = value; OnPropertyChanged(); TierMenuChanged(value); }
 		}
-        #endregion
+		#endregion
 
-        #region IsCup
+		#region IsCupChanged
 
-        public bool IsCup
+		public bool IsCupChanged
 		{
-			get => _isCup;
-			set { _isCup = value; OnPropertyChanged(); }
+			get => _isCupChanged;
+			set { _isCupChanged = value; OnPropertyChanged(); }
+		}
+		#endregion
+
+		#region LastSeq
+
+		public int LastSeq
+		{
+			get => _lastSeq;
+			set { _lastSeq = value; OnPropertyChanged(); }
 		}
 		#endregion
 
@@ -76,7 +86,7 @@ namespace Lol.Clash.Local.ViewModel
 
 		#region Constructor
 
-		public WinningTeamViewModel()
+		public WinnersViewModel()
 		{
 			Cups = ExamClash.GetCup();
 			CurrentCup = Cups.First();
@@ -90,7 +100,7 @@ namespace Lol.Clash.Local.ViewModel
 
 		private void CupChanged()
 		{
-			IsCup = false;
+			IsCupChanged = false;
 		}
 		#endregion
 
@@ -102,6 +112,7 @@ namespace Lol.Clash.Local.ViewModel
 				return;
 
 			TierDetails = ExamClash.GetTierDetail().Where(x => x.ParentSeq == value.Seq).ToList();
+			LastSeq = TierDetails.Any() ? TierDetails.OrderByDescending(x => x.Seq).First().Seq : 0;
 		}
 		#endregion
 	}
