@@ -14,6 +14,6 @@
         <ResourceDictionary Source="/Lol.Clash;component/Themes/Units/TierMenu.xaml"/>
         <ResourceDictionary Source="/Lol.Clash;component/Themes/Units/TierDetailListBox.xaml"/>
         <ResourceDictionary Source="/Lol.Clash;component/Themes/Views/HubView.xaml"/>
-        <ResourceDictionary Source="/Lol.Clash;component/Themes/Views/WinningTeam.xaml"/>
+        <ResourceDictionary Source="/Lol.Clash;component/Themes/Views/WinnersView.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

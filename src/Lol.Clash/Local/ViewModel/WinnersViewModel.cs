@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Lol.Clash.Local.ViewModel
 {
-	public class WinningTeamViewModel : ObservableObject
+	public class WinnersViewModel : ObservableObject
 	{
 		#region Variables
 
@@ -76,7 +76,7 @@ namespace Lol.Clash.Local.ViewModel
 
 		#region Constructor
 
-		public WinningTeamViewModel()
+		public WinnersViewModel()
 		{
 			Cups = ExamClash.GetCup();
 			CurrentCup = Cups.First();
