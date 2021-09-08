@@ -15,7 +15,7 @@ namespace Lol.Clash.Local.ViewModel
 
 		private List<BaseModel> _timerMenus;
 		private BaseModel _currentTierMenu;
-		private bool _isCup;
+		private bool _isCupChanged;
 		private int _lastSeq;
 
 		private List<TierDetailModel> _tierDetails;
@@ -55,14 +55,14 @@ namespace Lol.Clash.Local.ViewModel
 			get => _currentTierMenu;
 			set { _currentTierMenu = value; OnPropertyChanged(); TierMenuChanged(value); }
 		}
-        #endregion
+		#endregion
 
-        #region IsCup
+		#region IsCupChanged
 
-        public bool IsCup
+		public bool IsCupChanged
 		{
-			get => _isCup;
-			set { _isCup = value; OnPropertyChanged(); }
+			get => _isCupChanged;
+			set { _isCupChanged = value; OnPropertyChanged(); }
 		}
 		#endregion
 
@@ -100,7 +100,7 @@ namespace Lol.Clash.Local.ViewModel
 
 		private void CupChanged()
 		{
-			IsCup = false;
+			IsCupChanged = false;
 		}
 		#endregion
 
