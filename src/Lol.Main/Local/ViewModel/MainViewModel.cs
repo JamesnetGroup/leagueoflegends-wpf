@@ -155,7 +155,7 @@ namespace Lol.Main.Local.ViewModel
 				{
 					8 => new Overview().SetVM(new OverviewModel()),
 					11 => new HubView().SetVM(new HubViewModel()),
-					14 => new WinningTeam().SetVM(new WinningTeamViewModel()),
+					14 => new WinnersView().SetVM(new WinnersViewModel()),
                     16 => new Champions().SetVM(new ChampionsViewModel()),
                     32 => new History().SetVM(new HistoryViewModel()),
 					20 => new Spells().SetVM(new SpellsViewModel()),
