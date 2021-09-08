@@ -16,9 +16,20 @@
                 <ControlTemplate TargetType="{x:Type ListBoxItem}">
                     <!-- TODO: [Kevin] 3번째 Bordethickness 지우기 DataTrigger 사용 데이터로 제어 되지만 더 좋은방법 찾는중-->
                     <!-- TODO: [Kevin] 컨버터 사용 진행중 현재 ListBoxItem 부모 인덱스 얻어야함(미완료)-->
-                    <Border BorderThickness="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Converter={cnvts:IndexToThicknessConverter},
-                                              Path=(ItemsControl.AlternationIndex)}" BorderBrush="#2D373E" Margin="0 22 0 0" Height="84" Background="Transparent">
-                        <Border x:Name="bd" Margin="1 0 1 0" BorderThickness="1" BorderBrush="Transparent" Background="Transparent" Padding="18 10 34 10">
+                    <!-- TODO: [Elena] IndexToThicknessConverter 부모 인덱스 처리 완료 & 마지막 아이템 MultiValueEqualityConverter 추가함-->
+                    <Border x:Name="bd" 
+                            Background="Transparent"
+                            BorderThickness="{Binding RelativeSource={RelativeSource TemplatedParent}, Converter={cnvts:IndexToThicknessConverter},
+                                                      Path=(ItemsControl.AlternationIndex)}" 
+                            BorderBrush="#2D373E" 
+                            Margin="0 22 0 0" 
+                            Height="84">
+                        <Border x:Name="bd2" 
+                                Background="Transparent"
+                                BorderBrush="Transparent" 
+                                BorderThickness="1" 
+                                Margin="1 0 1 0"  
+                                Padding="18 10 34 10">
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
@@ -40,9 +51,19 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="bd" Property="BorderBrush" Value="#858586"/>
-                            <Setter TargetName="bd" Property="Background" Value="{StaticResource ITEM.BG.OVER}"/>
+                            <Setter TargetName="bd2" Property="BorderBrush" Value="#858586"/>
+                            <Setter TargetName="bd2" Property="Background" Value="{StaticResource ITEM.BG.OVER}"/>
                         </Trigger>
+                        <DataTrigger Value="true">
+                            <DataTrigger.Binding>
+                                <MultiBinding Converter="{cnvts:MultiValueEqualityConverter}">
+                                    <Binding Path="Seq"/>
+                                    <Binding RelativeSource="{RelativeSource AncestorType=units:TierDetailListBox}" 
+                                             Path="DataContext.LastSeq"/>
+                                </MultiBinding>
+                            </DataTrigger.Binding>
+                            <Setter TargetName="bd" Property="BorderBrush" Value="Transparent"/>
+                        </DataTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
@@ -53,6 +74,7 @@
         <Setter Property="ItemsSource" Value="{Binding TierDetails}"/>
         <Setter Property="Margin" Value="50 172 0 0"/>
         <Setter Property="ItemContainerStyle" Value="{StaticResource LBXI.DETAIL}"/>
+        <Setter Property="AlternationCount" Value="3"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
@@ -60,7 +82,7 @@
                                        Margin="0"
 									   ScrollViewer.VerticalScrollBarVisibility="Auto" 
 									   ScrollViewer.HorizontalScrollBarVisibility="Disabled">
-                        <ItemsPresenter/>
+                        <ItemsPresenter Margin="0 0 15 60"/>
                     </ctrls:BasicScroll>
                 </ControlTemplate>
             </Setter.Value>

@@ -46,7 +46,7 @@
 	</Style>
 	
     <Style TargetType="{x:Type units:CupToggleButton}">
-        <Setter Property="IsChecked" Value="{Binding IsCup}"/>
+        <Setter Property="IsChecked" Value="{Binding IsCupChanged}"/>
 		<Setter Property="HorizontalAlignment" Value="Left"/>
 		<Setter Property="VerticalAlignment" Value="Top"/>
 		<Setter Property="Cursor" Value="Hand"/>

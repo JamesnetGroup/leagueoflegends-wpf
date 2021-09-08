@@ -76,10 +76,10 @@ namespace Lol.Main.Local.Work
 				new SubMenuModel(10, 0, "PATCH NOTES"),
 
 				new SubMenuModel(11, 2, "HUB"),
-				new SubMenuModel(12, 2, "TEAM"),
-				new SubMenuModel(13, 2, "MATCH"),
-				new SubMenuModel(14, 2, "WINNING TEAM"),
-				new SubMenuModel(15, 2, "COMPENSATION"),
+				new SubMenuModel(12, 2, "FIND A TEAM"),
+				new SubMenuModel(13, 2, "BRACKET"),
+				new SubMenuModel(14, 2, "WINNERS"),
+				new SubMenuModel(15, 2, "AWARDS"),
 
 				new SubMenuModel(16, 4, "CHAMPIONS"),
 				new SubMenuModel(17, 4, "SKINS"),
@@ -99,10 +99,10 @@ namespace Lol.Main.Local.Work
 				new SubMenuModel(30, 7, "ACCESSORIES"),
 
 				new SubMenuModel(31, 3, "SUMMARY"),
-				new SubMenuModel(32, 3, "HISTORY"),
-				new SubMenuModel(33, 3, "RANK"),
-				new SubMenuModel(34, 3, "HIGHLIGHT"),
-				new SubMenuModel(35, 3, "STATISTICS"),
+				new SubMenuModel(32, 3, "MATCH HISTORY"),
+				new SubMenuModel(33, 3, "RANKED"),
+				new SubMenuModel(34, 3, "HIGHLIGHTS"),
+				new SubMenuModel(35, 3, "STATS"),
 
 			};
 			return source;
