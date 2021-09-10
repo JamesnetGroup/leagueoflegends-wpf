@@ -3,10 +3,10 @@
 					xmlns:views="clr-namespace:Lol.Store.UI.Views"
 					xmlns:units="clr-namespace:Lol.Store.UI.Units">
 
-	<Style TargetType="{x:Type views:Champions}">
+	<Style TargetType="{x:Type views:ChampionsView}">
 		<Setter Property="Template">
 			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type views:Champions}">
+                <ControlTemplate TargetType="{x:Type views:ChampionsView}">
 					<Grid>
 						<Grid.ColumnDefinitions>
 							<ColumnDefinition Width="200"/>
