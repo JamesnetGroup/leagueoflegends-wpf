@@ -9,9 +9,9 @@ namespace Lol.ExampleData.Store
 		{
 			List<StoreMenuModel> source = new()
 			{
-				new StoreMenuModel(0, "Champions"),
-				new StoreMenuModel(1, "Eternals"),
-				new StoreMenuModel(2, "Bundles")
+				new StoreMenuModel(0, "CHAMPIONS"),
+				new StoreMenuModel(1, "ETERNALS"),
+				new StoreMenuModel(2, "BUNDLES")
 			};
 
 			return source;

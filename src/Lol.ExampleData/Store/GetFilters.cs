@@ -14,11 +14,11 @@ namespace Lol.ExampleData.Store
 			new FilterModel(ChampType.Mage, "Mage", true, true, false),
 			new FilterModel(ChampType.Marksman, "Marksman", true, true, false),
 			new FilterModel(ChampType.Support, "Support", true, true, false),
-			new FilterModel(ChampType.Tanker, "Tanker", true, true, false),
-			new FilterModel(PackageType.StarterSet, "입문자 세트", false, true, false),
-			new FilterModel(PackageType.SeriesA, "시리즈1", false, true, false),
-			new FilterModel(PackageType.OnSale, "할인 중", true, true, false),
-			new FilterModel(PackageType.Limited, "한정 판매", false, false, true)
+			new FilterModel(ChampType.Tanker, "Tank", true, true, false),
+			new FilterModel(PackageType.StarterSet, "Starter Series", false, true, false),
+			new FilterModel(PackageType.SeriesA, "Series 1", false, true, false),
+			new FilterModel(PackageType.OnSale, "On Sale", true, true, false),
+			new FilterModel(PackageType.Limited, "Limited Availability", false, false, true)
 		};
 
 		public static List<FilterModel> GetFilters(string name)
@@ -27,9 +27,9 @@ namespace Lol.ExampleData.Store
 
 			switch (name)
 			{
-				case "Champions": source = filters.Where(x => x.IsChampionVisible).ToList(); break;
-				case "Eternals": source = filters.Where(x => x.IsEternalVisible).ToList(); break;
-				case "Bundles": source = filters.Where(x => x.IsBundleVisible).ToList(); break;
+				case "CHAMPIONS": source = filters.Where(x => x.IsChampionVisible).ToList(); break;
+				case "ETERNALS": source = filters.Where(x => x.IsEternalVisible).ToList(); break;
+				case "BUNDLES": source = filters.Where(x => x.IsBundleVisible).ToList(); break;
 			}
 
 			return source;
