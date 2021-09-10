@@ -23,15 +23,15 @@
 									BorderThickness="1"
 									Margin="0 0 10 0">
                                 <ctrls:RiotIcon x:Name="icon"
-											IconType="CheckBold"
-											HorizontalAlignment="Left"
-											Fill="#A38137"
-											Width="13"
-											Height="13"
-											Margin="0 0 0 2"
-											Stroke="#000000"
-											StrokeThickness="1"
-											Visibility="Hidden"/>
+												IconType="CheckBold"
+												HorizontalAlignment="Left"
+												Fill="#A38137"
+												Width="13"
+												Height="13"
+												Margin="0 0 0 2"
+												Stroke="#000000"
+												StrokeThickness="1"
+												Visibility="Hidden"/>
                             </Border>
                             <ContentPresenter Margin="0 0 0 0" VerticalAlignment="Center"/>
                         </StackPanel>

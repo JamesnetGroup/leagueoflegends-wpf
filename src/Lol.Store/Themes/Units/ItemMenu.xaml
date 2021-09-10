@@ -14,7 +14,7 @@
 					<StackPanel Margin="30 55 5 0">
 						<units:Category/>
 						<units:SearchTextBox/>
-						<units:StoreCheckBox Content="Show Owned" Margin="0 10 0 0"/>
+						<units:StoreCheckBox Content="Show Owned" Margin="0 2 0 0"/>
 						<units:SortComboBox Style="{StaticResource CBX.SORT}"/>
 						<units:FilterList/>
 					</StackPanel>
