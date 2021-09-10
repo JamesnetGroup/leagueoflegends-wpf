@@ -1,11 +1,11 @@
-﻿using Lol.DBEntity.Local.Api;
+﻿using System;
+using System.Windows.Input;
+using Lol.DBEntity.Local.Api;
 using Lol.DBEntity.Local.Entities.Extend;
 using Lol.Foundation.Mvvm;
 using Lol.Foundation.Riotcore;
 using Lol.Friends.Local.Collection;
 using Lol.LayoutSupport.Controls;
-using System;
-using System.Windows.Input;
 
 namespace Lol.Friends.Local.ViewModel
 {
