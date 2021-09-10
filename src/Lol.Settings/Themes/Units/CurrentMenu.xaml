@@ -8,10 +8,22 @@
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type units:CurrentMenu}">
 					<StackPanel Orientation="Horizontal">
-                        <TextBlock Foreground="#A09B8C" FontSize="17" FontWeight="Bold" VerticalAlignment="Center" FontFamily="Friz Quadrata Std"
-								   HorizontalAlignment="Left" Margin="8 0 0 7" Text="{Binding CurrentSettingMenu.Category, StringFormat={}{0:}  /}"/>
-                        <TextBlock Foreground="#F0E6D2" FontSize="17" FontWeight="Bold" VerticalAlignment="Center" FontFamily="Friz Quadrata Std"
-								   HorizontalAlignment="Left" Margin="5 0 0 7" Text="{Binding CurrentSettingMenu.Name, StringFormat=' {0}'}"/>
+                        <TextBlock Foreground="#A09B8C" 
+								   FontSize="17" 
+								   FontWeight="Bold" 
+								   VerticalAlignment="Center" 
+								   FontFamily="Friz Quadrata Std"
+								   HorizontalAlignment="Left"
+								   Margin="8 0 0 7" 
+								   Text="{Binding CurrentSettingMenu.Category, StringFormat={}{0:}  /}"/>
+                        <TextBlock Foreground="#F0E6D2" 
+								   FontSize="17" 
+								   FontWeight="Bold" 
+								   VerticalAlignment="Center" 
+								   FontFamily="Friz Quadrata Std"
+								   HorizontalAlignment="Left" 
+								   Margin="5 0 0 7"
+								   Text="{Binding CurrentSettingMenu.Name, StringFormat=' {0}'}"/>
 					</StackPanel>
 				</ControlTemplate>
 			</Setter.Value>
