@@ -15,11 +15,23 @@
 					<Grid>
 						<Border x:Name="menu" Background="{TemplateBinding Background}">
 							<Grid>
-								<Border x:Name="border" BorderBrush="#BB9138" BorderThickness="3 0 0 0" Visibility="Collapsed"/>
-                                <TextBlock x:Name="text" Text="{Binding Name}" Foreground="#CDBE91" Padding="{TemplateBinding Padding}" Margin="10 0 0 0" FontFamily="Friz Quadrata Std"/>
+								<Border x:Name="border" 
+										BorderBrush="#BB9138"
+										BorderThickness="3 0 0 0"
+										Visibility="Collapsed"/>
+                                <TextBlock x:Name="text"
+										   Text="{Binding Name}" 
+										   Foreground="#CDBE91"
+										   Padding="{TemplateBinding Padding}"
+										   Margin="10 0 0 0"
+										   FontFamily="Friz Quadrata Std"/>
 							</Grid>
 						</Border>
-						<TextBlock x:Name="category" Foreground="#A09B8C" Text="{Binding Name}" Margin="20 10 0 10" Visibility="Collapsed"/>
+						<TextBlock x:Name="category"
+								   Foreground="#A09B8C"
+								   Text="{Binding Name}"
+								   Margin="20 10 0 10" 
+								   Visibility="Collapsed"/>
 					</Grid>
 					<ControlTemplate.Triggers>
 						<DataTrigger Binding="{Binding Category}" Value="CATEGORY">
