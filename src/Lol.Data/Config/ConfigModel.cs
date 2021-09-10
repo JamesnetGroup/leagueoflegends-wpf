@@ -6,9 +6,12 @@ namespace Lol.Data.Config
 	{
 		public SettingModel Settings { get; set; }
 
+		#region Constructor
+
 		public ConfigModel()
 		{
 			Settings = new SettingModel();
 		}
+		#endregion
 	}
 }
