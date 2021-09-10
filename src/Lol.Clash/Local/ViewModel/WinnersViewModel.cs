@@ -1,8 +1,8 @@
-﻿using Lol.Data.Clash;
+﻿using System.Linq;
+using System.Collections.Generic;
+using Lol.Data.Clash;
 using Lol.ExampleData.Clash;
 using Lol.Foundation.Mvvm;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Lol.Clash.Local.ViewModel
 {
