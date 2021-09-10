@@ -40,6 +40,7 @@ namespace Lol.Main.Local.ViewModel
 		private MainMenuModel _mainMenu;
 		private FriendsCollection _friends;
 		private int _currentSeq;
+		private int _parentSeq;
 
 		private Dictionary<int, IRiotUI> UIs { get; set; }
 		#endregion
@@ -81,6 +82,15 @@ namespace Lol.Main.Local.ViewModel
 		{
 			get => _currentSeq;
 			set { _currentSeq = value; OnPropertyChanged(); }
+		}
+		#endregion
+
+		#region ParentSeq
+
+		public int ParentSeq
+		{
+			get => _parentSeq;
+			set { _parentSeq = value; OnPropertyChanged(); }
 		}
 		#endregion
 
@@ -156,13 +166,16 @@ namespace Lol.Main.Local.ViewModel
 					8 => new Overview().SetVM(new OverviewModel()),
 					11 => new HubView().SetVM(new HubViewModel()),
 					14 => new WinnersView().SetVM(new WinnersViewModel()),
-                    16 => new Champions().SetVM(new ChampionsViewModel()),
-                    32 => new History().SetVM(new HistoryViewModel()),
-					20 => new Spells().SetVM(new SpellsViewModel()),
+                    16 => new ChampionsView().SetVM(new ChampionsViewModel()),
+                    32 => new HistoryView().SetVM(new HistoryViewModel()),
+					20 => new SpellsView().SetVM(new SpellsViewModel()),
 					// TODO: [Elena] 클래스 이름 중복 관련 임시 처리 
-					26 => new store.Champions().SetVM(new storeVM.ChampionsViewModel()),
+					26 => new store.ChampionsView().SetVM(new storeVM.ChampionsViewModel()),
 					_ => new EmptyContent()
 				};
+
+				// TODO: [Elena] Store의 경우 SubMenu마다 Background가 동일하여 부모Seq로 처리하려고 추가함. 
+				ParentSeq = value.MainSeq;
 			}
 			else
 			{

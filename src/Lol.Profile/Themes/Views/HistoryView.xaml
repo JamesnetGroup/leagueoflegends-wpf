@@ -3,10 +3,10 @@
                     xmlns:views="clr-namespace:Lol.Profile.UI.Views"
                     xmlns:units="clr-namespace:Lol.Profile.UI.Units"
                     xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
-    <Style TargetType="{x:Type views:History}">
+    <Style TargetType="{x:Type views:HistoryView}">
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type views:History}">
+                <ControlTemplate TargetType="{x:Type views:HistoryView}">
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>

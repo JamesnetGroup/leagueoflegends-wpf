@@ -11,6 +11,6 @@
 		<ResourceDictionary Source="/Lol.Store;component/Themes/Units/StoreCheckBox.xaml"/>
 		<ResourceDictionary Source="/Lol.Store;component/Themes/Units/SortComboBox.xaml"/>
 		<ResourceDictionary Source="/Lol.Store;component/Themes/Units/SortComboBoxItem.xaml"/>
-		<ResourceDictionary Source="/Lol.Store;component/Themes/Views/Champions.xaml"/>
+		<ResourceDictionary Source="/Lol.Store;component/Themes/Views/ChampionsView.xaml"/>
 	</ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
