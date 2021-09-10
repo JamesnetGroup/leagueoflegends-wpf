@@ -79,7 +79,7 @@ namespace Lol.Store.Local.ViewModels
 		{
 			ChampMenus = ExamStore.GetCategory();
 			CurrentChampMenu = ChampMenus.First();
-		}
+		}	
 		#endregion
 
 		#region MenuChanged
@@ -96,7 +96,7 @@ namespace Lol.Store.Local.ViewModels
 
 		private void SearchTextChanged(string value)
 		{
-			if (CurrentChampMenu.Name == "Champions")
+			if (CurrentChampMenu.Name == "CHAMPIONS")
 			{
 				//
 			}

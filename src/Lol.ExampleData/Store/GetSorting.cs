@@ -9,25 +9,25 @@ namespace Lol.ExampleData.Store
 		{
 			List<SortingModel> source = new();
 
-			if (name != "Bundles")
+			if (name != "BUNDLES")
 			{
-				source.Add(new SortingModel(0, "출시 일자", "Down"));
-				source.Add(new SortingModel(1, "출시 일자", "Up"));
-				source.Add(new SortingModel(2, "가격 (RP)", "Down"));
-				source.Add(new SortingModel(3, "가격 (RP)", "Up"));
-				source.Add(new SortingModel(4, "가격 (BE)", "Down"));
+				source.Add(new SortingModel(0, "Release Date", "Down"));
+				source.Add(new SortingModel(1, "Release Date", "Up"));
+				source.Add(new SortingModel(2, "Price (RP)", "Down"));
+				source.Add(new SortingModel(3, "Price (RP)", "Up"));
+				source.Add(new SortingModel(4, "Price (BE)", "Down"));
 				source.Add(new SortingModel(5, "가격 (BE)", "Up"));
-				source.Add(new SortingModel(6, "가나다순", "Down"));
-				source.Add(new SortingModel(7, "가나다순", "Up"));
+				source.Add(new SortingModel(6, "Alphabetical", "Down"));
+				source.Add(new SortingModel(7, "Alphabetical", "Up"));
 			}
 			else
 			{
-				source.Add(new SortingModel(0, "출시 일자", "Down"));
-				source.Add(new SortingModel(1, "출시 일자", "Up"));
-				source.Add(new SortingModel(2, "가격 (RP)", "Down"));
-				source.Add(new SortingModel(3, "가격 (RP)", "Up"));
-				source.Add(new SortingModel(4, "가나다순", "Down"));
-				source.Add(new SortingModel(5, "가나다순", "Up"));
+				source.Add(new SortingModel(0, "Release Date", "Down"));
+				source.Add(new SortingModel(1, "Release Date", "Up"));
+				source.Add(new SortingModel(2, "Price (RP)", "Down"));
+				source.Add(new SortingModel(3, "Price (RP)", "Up"));
+				source.Add(new SortingModel(4, "Alphabetical", "Down"));
+				source.Add(new SortingModel(5, "Alphabetical", "Up"));
 			}
 
 			return source;

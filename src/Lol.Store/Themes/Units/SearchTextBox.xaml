@@ -42,7 +42,7 @@
 											Margin="10 0 0 0"/>
 							<TextBlock x:Name="placeholder"
 									   Grid.Column="1"
-									   Text="검색"
+									   Text="Search"
 									   FontWeight="Bold"
 									   VerticalAlignment="Center"
 									   Margin="4 0 0 0"
