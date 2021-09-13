@@ -21,9 +21,15 @@
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type units:Title}">
 					<StackPanel HorizontalAlignment="Center">
-						<TextBlock Text="나만의 상점" FontSize="16" FontWeight="Bold" Foreground="#F0E6D2" HorizontalAlignment="Center" Margin="0 0 0 -10"/>
+						<TextBlock Text="나만의 상점" 
+                                   FontSize="16" 
+                                   FontWeight="Bold"
+                                   Foreground="#F0E6D2" 
+                                   HorizontalAlignment="Center" 
+                                   Margin="0 0 0 -10"/>
 						<Viewbox Width="970" Height="30">
-							<Path Data="{StaticResource GEO.HEADER}" Stroke="{StaticResource BDR.HEADER}"/>
+							<Path Data="{StaticResource GEO.HEADER}" 
+                                  Stroke="{StaticResource BDR.HEADER}"/>
 						</Viewbox>
 					</StackPanel>
 				</ControlTemplate>
