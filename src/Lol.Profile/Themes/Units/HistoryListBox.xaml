@@ -65,15 +65,16 @@
                                 <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="20 0 0 0" Width="156">
                                     <TextBlock Text="{Binding Result}" FontWeight="Bold" Foreground="{StaticResource FG.WIN}" FontSize="14"/>
                                     <TextBlock Text="{Binding GameType}" Foreground="{StaticResource FG.DEFAULT}"/>
-                                    <!--TODO: [Kevin] 리스트로 변경 예정-->
-                                    <!--<units:SpellListBox ItemsSource="{Binding Spells}"/>-->
                                     <Border Height="22" Width="42" BorderThickness="1" BorderBrush="{StaticResource BDR.SPELL}" HorizontalAlignment="Left" Margin="0 8 0 0">
                                         <Grid>
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="*"/>
                                                 <ColumnDefinition Width="*"/>
                                             </Grid.ColumnDefinitions>
-                                            <Border BorderThickness="0 0 1 0" BorderBrush="{StaticResource BDR.SPELL}"/>
+                                            <Border BorderThickness="0 0 1 0" BorderBrush="{StaticResource BDR.SPELL}">
+                                                <Image Source="{Binding Spell1}"/>
+                                            </Border>
+                                            <Image Source="{Binding Spell2}" Grid.Column="1"/>
                                         </Grid>
                                     </Border>
                                 </StackPanel>

@@ -20,8 +20,9 @@ namespace Lol.Data.History
 		public int D { get; set; }
 		public int A { get; set; }
 		public int Level { get; set; }
+		public string Spell1 { get; set; }
+		public string Spell2 { get; set; }
 
-		public List<string> Spells { get; set; }
 		public List<string> Items { get; set; }
 
 
