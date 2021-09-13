@@ -16,4 +16,11 @@
     <ProjectReference Include="..\Lol.LayoutSupport\Lol.LayoutSupport.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Page Update="Themes\Units\SpellListBox.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
 </Project>

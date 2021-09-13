@@ -62,9 +62,11 @@
                                         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Level}" Foreground="{StaticResource FG.LEVEL}" FontWeight="Bold"/>
                                     </Border>
                                 </Grid>
-                                <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="20 0 0 0">
+                                <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="20 0 0 0" Width="156">
                                     <TextBlock Text="{Binding Result}" FontWeight="Bold" Foreground="{StaticResource FG.WIN}" FontSize="14"/>
                                     <TextBlock Text="{Binding GameType}" Foreground="{StaticResource FG.DEFAULT}"/>
+                                    <!--TODO: [Kevin] 리스트로 변경 예정-->
+                                    <!--<units:SpellListBox ItemsSource="{Binding Spells}"/>-->
                                     <Border Height="22" Width="42" BorderThickness="1" BorderBrush="{StaticResource BDR.SPELL}" HorizontalAlignment="Left" Margin="0 8 0 0">
                                         <Grid>
                                             <Grid.ColumnDefinitions>
@@ -75,8 +77,32 @@
                                         </Grid>
                                     </Border>
                                 </StackPanel>
-                                <Grid Grid.Column="2"/>
-                                <StackPanel Grid.Column="3" VerticalAlignment="Top" Margin="100 0 0 0">
+                                <!--TODO: [Kevin] 리스트로 변경 예정-->
+                                <!--<units:ItemListBox ItemsSource="{Binding Items}" Grid.Column="2"/>-->
+                                <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Top">
+                                    <Border Height="35" Width="35" BorderBrush="#443114" BorderThickness="1">
+
+                                    </Border>
+                                    <Border Height="35" Width="35" BorderBrush="#443114" BorderThickness="1">
+
+                                    </Border>
+                                    <Border Height="35" Width="35" BorderBrush="#443114" BorderThickness="1">
+
+                                    </Border>
+                                    <Border Height="35" Width="35" BorderBrush="#443114" BorderThickness="1">
+
+                                    </Border>
+                                    <Border Height="35" Width="35" BorderBrush="#443114" BorderThickness="1">
+
+                                    </Border>
+                                    <Border Height="35" Width="35" BorderBrush="#443114" BorderThickness="1">
+
+                                    </Border>
+                                    <Border Height="35" Width="35" BorderBrush="#443114" BorderThickness="1">
+
+                                    </Border>
+                                </StackPanel>
+                                <StackPanel Grid.Column="3" VerticalAlignment="Top" Margin="22 0 0 0">
                                     <TextBlock Text="{Binding MapType}" Foreground="{StaticResource FG.DEFAULT}"/>
                                     <StackPanel Orientation="Horizontal" Margin="0 6 0 0">
                                         <TextBlock Text="{Binding GameTime}" Foreground="{StaticResource FG.DEFAULT}"/>
