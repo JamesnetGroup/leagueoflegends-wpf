@@ -23,19 +23,30 @@
     <SolidColorBrush x:Key="FG.WIN" Color="#09BED8"/>
     <SolidColorBrush x:Key="FG.LOSE" Color="#EF2141"/>
     <SolidColorBrush x:Key="FG.DEFAULT" Color="#A09B8C"/>
+    <SolidColorBrush x:Key="FG.INFO" Color="#9E998A"/>
 
     <LinearGradientBrush x:Key="BDR.CHAMP.OVER" StartPoint="0,0" EndPoint="1,1">
         <GradientStop Color="#85703E" Offset="0"/>
         <GradientStop Color="#D2C57F" Offset="0.5"/>
         <GradientStop Color="#85703E" Offset="1"/>
     </LinearGradientBrush>
+
+    <Style TargetType="{x:Type TextBlock}" x:Key="TXB.INFO">
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Foreground" Value="{StaticResource FG.INFO}"/>
+    </Style>
+    
+    <Style TargetType="{x:Type TextBlock}" BasedOn="{StaticResource TXB.INFO}" x:Key="TXB.DIVISION">
+        <Setter Property="Margin" Value="3 0 3 0"/>
+    </Style>
     
     <Style TargetType="{x:Type ListBoxItem}" x:Key="LBXI.HISTORY">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListBoxItem}">
                     <Grid Background="Transparent">
-                        <Border BorderThickness="0 0 0 1" BorderBrush="#24211E" Margin="40 0 0 0" Padding="0 10 0 10">
+                        <Border BorderThickness="0 0 0 1" BorderBrush="#22201C" Margin="40 0 0 0" Padding="0 10 0 10">
                             <Grid>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
@@ -63,7 +74,7 @@
                                     </Border>
                                 </Grid>
                                 <StackPanel Grid.Column="1" VerticalAlignment="Top" Margin="20 0 0 0" Width="156">
-                                    <TextBlock Text="{Binding Result}" FontWeight="Bold" Foreground="{StaticResource FG.WIN}" FontSize="14"/>
+                                    <TextBlock x:Name="textResult" Text="{Binding Result}" FontWeight="Bold" Foreground="{StaticResource FG.WIN}" FontSize="14"/>
                                     <TextBlock Text="{Binding GameType}" Foreground="{StaticResource FG.DEFAULT}"/>
                                     <Border Height="22" Width="42" BorderThickness="1" BorderBrush="{StaticResource BDR.SPELL}" HorizontalAlignment="Left" Margin="0 8 0 0">
                                         <Grid>
@@ -80,29 +91,43 @@
                                 </StackPanel>
                                 <!--TODO: [Kevin] 리스트로 변경 예정-->
                                 <!--<units:ItemListBox ItemsSource="{Binding Items}" Grid.Column="2"/>-->
-                                <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Top">
-                                    <Border Height="35" Width="35" BorderBrush="#443114" BorderThickness="1">
+                                <Grid Grid.Column="2">
+                                    <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Top">
+                                        <Border Height="35" Width="35" BorderBrush="#443114" BorderThickness="1" Margin="0 0 1 0">
 
-                                    </Border>
-                                    <Border Height="35" Width="35" BorderBrush="#443114" BorderThickness="1">
+                                        </Border>
+                                        <Border Height="35" Width="35" BorderBrush="#443114" BorderThickness="1" Margin="0 0 1 0">
 
-                                    </Border>
-                                    <Border Height="35" Width="35" BorderBrush="#443114" BorderThickness="1">
+                                        </Border>
+                                        <Border Height="35" Width="35" BorderBrush="#443114" BorderThickness="1" Margin="0 0 1 0">
 
-                                    </Border>
-                                    <Border Height="35" Width="35" BorderBrush="#443114" BorderThickness="1">
+                                        </Border>
+                                        <Border Height="35" Width="35" BorderBrush="#443114" BorderThickness="1" Margin="0 0 1 0">
 
-                                    </Border>
-                                    <Border Height="35" Width="35" BorderBrush="#443114" BorderThickness="1">
+                                        </Border>
+                                        <Border Height="35" Width="35" BorderBrush="#443114" BorderThickness="1" Margin="0 0 1 0">
 
-                                    </Border>
-                                    <Border Height="35" Width="35" BorderBrush="#443114" BorderThickness="1">
+                                        </Border>
+                                        <Border Height="35" Width="35" BorderBrush="#443114" BorderThickness="1" Margin="0 0 1 0">
 
-                                    </Border>
-                                    <Border Height="35" Width="35" BorderBrush="#443114" BorderThickness="1">
+                                        </Border>
+                                        <Border Height="35" Width="35" BorderBrush="#443114" BorderThickness="1" Margin="0 0 1 0">
 
-                                    </Border>
-                                </StackPanel>
+                                        </Border>
+                                    </StackPanel>
+                                    <Grid VerticalAlignment="Bottom">
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="{Binding K}" Style="{StaticResource TXB.INFO}"/>
+                                            <TextBlock Text="/" Style="{StaticResource TXB.DIVISION}"/>
+                                            <TextBlock Text="{Binding D}" Style="{StaticResource TXB.INFO}"/>
+                                            <TextBlock Text="/" Style="{StaticResource TXB.DIVISION}"/>
+                                            <TextBlock Text="{Binding A}" Style="{StaticResource TXB.INFO}"/>
+                                        </StackPanel>
+                                        <TextBlock Text="{Binding Cs}" Style="{StaticResource TXB.INFO}" HorizontalAlignment="Center"/>
+                                        <TextBlock Text="{Binding Money}" Style="{StaticResource TXB.INFO}" HorizontalAlignment="Right"/>
+                                    </Grid>
+                                </Grid>
+                                
                                 <StackPanel Grid.Column="3" VerticalAlignment="Top" Margin="22 0 0 0">
                                     <TextBlock Text="{Binding MapType}" Foreground="{StaticResource FG.DEFAULT}"/>
                                     <StackPanel Orientation="Horizontal" Margin="0 6 0 0">
@@ -123,6 +148,9 @@
                             <Setter TargetName="bd2" Property="BorderBrush" Value="{StaticResource BDR.CHILD.OVER}"/>
                             <Setter TargetName="bd3" Property="BorderBrush" Value="{StaticResource BDR.CHAMP.OVER}"/>
                         </Trigger>
+                        <DataTrigger Binding="{Binding Result}" Value="패배">
+                            <Setter TargetName="textResult" Property="Foreground" Value="{StaticResource FG.LOSE}"/>
+                        </DataTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>

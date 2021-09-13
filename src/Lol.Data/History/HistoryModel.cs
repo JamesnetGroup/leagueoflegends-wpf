@@ -22,8 +22,14 @@ namespace Lol.Data.History
 		public int Level { get; set; }
 		public string Spell1 { get; set; }
 		public string Spell2 { get; set; }
+		public string Item1 { get; set; }
+		public string Item2 { get; set; }
+		public string Item3 { get; set; }
+		public string Item4 { get; set; }
+		public string Item5 { get; set; }
+		public string Item6 { get; set; }
+		public string Item7 { get; set; }
 
-		public List<string> Items { get; set; }
 
 
 		//public HistoryModel(int seq, string gametype, string maptype, string item, bool iswin, DateTime stdt, string gametime, int money, string cs, int k, int d, int a)
