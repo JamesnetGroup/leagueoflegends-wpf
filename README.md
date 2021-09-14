@@ -15,6 +15,7 @@ You can always share information with us and we are looking forward to it.
 ***
 
 ## WPF LeagueofLegends
+WPF를 통해 만든 리그오브레전드입니다.
 
 - [Development Information](#development-information)
 - [Project Structure](#project-structure)
