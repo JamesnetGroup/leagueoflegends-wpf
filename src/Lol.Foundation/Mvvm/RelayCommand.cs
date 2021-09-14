@@ -3,48 +3,51 @@ using System.Windows.Input;
 
 namespace Lol.Foundation.Mvvm
 {
-	public class RelayCommand<T> : ICommand
-	{
-		readonly Action<T> _execute = null;
-		readonly Predicate<T> _canExecute = null;
+    public class RelayCommand<T> : ICommand
+    {
+        #region Variables
 
-		#region Constructors
+        readonly Action<T> _execute = null;
+        readonly Predicate<T> _canExecute = null;
+        #endregion
 
-		public RelayCommand(Action<T> execute)
-			: this(execute, null)
-		{
-		}
+        #region Constructors
 
-		public RelayCommand(Action<T> execute, Predicate<T> canExecute)
-		{
-			_execute = execute ?? throw new ArgumentNullException("execute");
-			_canExecute = canExecute;
-		}
-		#endregion
+        public RelayCommand(Action<T> execute)
+            : this(execute, null)
+        {
+        }
 
-		#region CanExecute
+        public RelayCommand(Action<T> execute, Predicate<T> canExecute)
+        {
+            _execute = execute ?? throw new ArgumentNullException(nameof(execute));
+            _canExecute = canExecute;
+        }
+        #endregion
 
-		public bool CanExecute(object parameter)
-		{
-			return _canExecute == null || _canExecute((T)parameter);
-		}
-		#endregion
+        #region CanExecute
 
-		#region CanExecuteChanged
+        public bool CanExecute(object parameter)
+        {
+            return _canExecute == null || _canExecute((T)parameter);
+        }
+        #endregion
 
-		public event EventHandler CanExecuteChanged
-		{
-			add { CommandManager.RequerySuggested += value; }
-			remove { CommandManager.RequerySuggested -= value; }
-		}
-		#endregion
+        #region CanExecuteChanged
 
-		#region Execute
-		
-		public void Execute(object parameter)
-		{
-			_execute((T)parameter);
-		}
-		#endregion
-	}
+        public event EventHandler CanExecuteChanged
+        {
+            add { CommandManager.RequerySuggested += value; }
+            remove { CommandManager.RequerySuggested -= value; }
+        }
+        #endregion
+
+        #region Execute
+
+        public void Execute(object parameter)
+        {
+            _execute((T)parameter);
+        }
+        #endregion
+    }
 }

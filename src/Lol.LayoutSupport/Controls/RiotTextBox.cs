@@ -4,63 +4,63 @@ using System.Windows.Input;
 
 namespace Lol.LayoutSupport.Controls
 {
-	public class RiotTextBox : TextBox
-	{
-		#region DefaultStyleKey
+    public class RiotTextBox : TextBox
+    {
+        #region DefaultStyleKey
 
-		static RiotTextBox()
-		{
-			DefaultStyleKeyProperty.OverrideMetadata(typeof(RiotTextBox), new FrameworkPropertyMetadata(typeof(RiotTextBox)));
-		}
-		#endregion
+        static RiotTextBox()
+        {
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(RiotTextBox), new FrameworkPropertyMetadata(typeof(RiotTextBox)));
+        }
+        #endregion
 
-		#region DependencyProperty
+        #region DependencyProperty
 
-		public static readonly DependencyProperty CommandProperty = DependencyProperty.Register("Command", typeof(ICommand), typeof(RiotTextBox));
-		public static readonly DependencyProperty PlaceHolderProperty = DependencyProperty.Register("PlaceHolder", typeof(string), typeof(RiotTextBox), new PropertyMetadata(""));
-		#endregion
+        public static readonly DependencyProperty CommandProperty = DependencyProperty.Register("Command", typeof(ICommand), typeof(RiotTextBox));
+        public static readonly DependencyProperty PlaceHolderProperty = DependencyProperty.Register("PlaceHolder", typeof(string), typeof(RiotTextBox), new PropertyMetadata(""));
+        #endregion
 
-		#region Command
+        #region Command
 
-		public ICommand Command
-		{
-			get { return (ICommand)this.GetValue(CommandProperty); }
-			set { this.SetValue(CommandProperty, value); }
-		}
-		#endregion
+        public ICommand Command
+        {
+            get { return (ICommand)this.GetValue(CommandProperty); }
+            set { this.SetValue(CommandProperty, value); }
+        }
+        #endregion
 
-		#region PlaceHolder
+        #region PlaceHolder
 
-		public string PlaceHolder
-		{
-			get { return (string)this.GetValue(PlaceHolderProperty); }
-			set { this.SetValue(PlaceHolderProperty, value); }
-		}
-		#endregion
+        public string PlaceHolder
+        {
+            get { return (string)this.GetValue(PlaceHolderProperty); }
+            set { this.SetValue(PlaceHolderProperty, value); }
+        }
+        #endregion
 
-		#region OnTextInput
+        #region OnTextInput
 
-		protected override void OnTextInput(TextCompositionEventArgs e)
-		{
-			base.OnTextInput(e);
-		}
-		#endregion
+        protected override void OnTextInput(TextCompositionEventArgs e)
+        {
+            base.OnTextInput(e);
+        }
+        #endregion
 
-		#region OnTextChanged
+        #region OnTextChanged
 
-		protected override void OnTextChanged(TextChangedEventArgs e)
-		{
-			base.OnTextChanged(e);
-			Command?.Execute(this);
-		}
-		#endregion
+        protected override void OnTextChanged(TextChangedEventArgs e)
+        {
+            base.OnTextChanged(e);
+            Command?.Execute(this);
+        }
+        #endregion
 
-		#region OnKeyDown
+        #region OnKeyDown
 
-		protected override void OnKeyDown(KeyEventArgs e)
-		{
-			base.OnKeyDown(e);
-		}
-		#endregion
-	}
+        protected override void OnKeyDown(KeyEventArgs e)
+        {
+            base.OnKeyDown(e);
+        }
+        #endregion
+    }
 }

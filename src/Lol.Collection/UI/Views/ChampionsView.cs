@@ -3,7 +3,7 @@ using System.Windows;
 
 namespace Lol.Collection.UI.Views
 {
-	public class ChampionsView : View
+    public class ChampionsView : View
     {
         #region DefaultStyleKey
 
@@ -11,6 +11,6 @@ namespace Lol.Collection.UI.Views
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(ChampionsView), new FrameworkPropertyMetadata(typeof(ChampionsView)));
         }
-		#endregion
-	}
+        #endregion
+    }
 }

@@ -8,36 +8,36 @@ using System.Collections.Generic;
 
 namespace Lol.Settings.InGame.Local.ViewModels
 {
-	public class GameSoundViewModel : ObservableObject
-	{
-		#region Variables
+    public class GameSoundViewModel : ObservableObject
+    {
+        #region Variables
 
-		private List<UsualCodes> _musicTheme;
-		#endregion
+        private List<UsualCodes> _musicTheme;
+        #endregion
 
-		#region Model
+        #region Model
 
-		public GameSoundModel Model { get; set; }
-		#endregion
+        public GameSoundModel Model { get; set; }
+        #endregion
 
-		#region MusicTheme
+        #region MusicTheme
 
-		public List<UsualCodes> MusicTheme
-		{
-			get => _musicTheme;
-			set { _musicTheme = value; OnPropertyChanged(); }
-		}
-		#endregion
+        public List<UsualCodes> MusicTheme
+        {
+            get => _musicTheme;
+            set { _musicTheme = value; OnPropertyChanged(); }
+        }
+        #endregion
 
-		#region Constructor
+        #region Constructor
 
-		public GameSoundViewModel()
-		{
-			MusicTheme = new GetCodeItems().Run("000002");
+        public GameSoundViewModel()
+        {
+            MusicTheme = new GetCodeItems().Run("000002");
 
-			ConfigModel config = RiotConfig.LoadConfig();
-			Model = config.Settings.GameSound;
-		}
-		#endregion
-	}
+            ConfigModel config = RiotConfig.LoadConfig();
+            Model = config.Settings.GameSound;
+        }
+        #endregion
+    }
 }

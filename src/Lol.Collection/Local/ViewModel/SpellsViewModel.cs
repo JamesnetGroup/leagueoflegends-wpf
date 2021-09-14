@@ -2,14 +2,14 @@
 
 namespace Lol.Collection.Local.ViewModel
 {
-	public class SpellsViewModel : ObservableObject
+    public class SpellsViewModel : ObservableObject
     {
-		#region Consturctor
+        #region Consturctor
 
-		public SpellsViewModel()
+        public SpellsViewModel()
         {
 
         }
-		#endregion
-	}
+        #endregion
+    }
 }

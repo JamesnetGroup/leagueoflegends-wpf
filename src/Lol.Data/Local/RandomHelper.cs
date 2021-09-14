@@ -2,8 +2,8 @@
 
 namespace Lol.Data.Local
 {
-	internal class RandomHelper
-	{
-		internal static Random Random = new();
-	}
+    internal class RandomHelper
+    {
+        internal static Random Random = new();
+    }
 }

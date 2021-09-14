@@ -3,14 +3,14 @@ using System.Windows.Controls.Primitives;
 
 namespace Lol.Clash.UI.Units
 {
-	public class CupToggleButton : ToggleButton
-	{
-		#region DefaultStyleKey
+    public class CupToggleButton : ToggleButton
+    {
+        #region DefaultStyleKey
 
-		static CupToggleButton()
-		{
-			DefaultStyleKeyProperty.OverrideMetadata(typeof(CupToggleButton), new FrameworkPropertyMetadata(typeof(CupToggleButton)));
-		}
-		#endregion
-	}
+        static CupToggleButton()
+        {
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(CupToggleButton), new FrameworkPropertyMetadata(typeof(CupToggleButton)));
+        }
+        #endregion
+    }
 }

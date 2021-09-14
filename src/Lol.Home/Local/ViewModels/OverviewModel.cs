@@ -2,13 +2,13 @@
 
 namespace Lol.Home.Local.ViewModels
 {
-	public class OverviewModel : ObservableObject
-	{
-		#region Constructor
+    public class OverviewModel : ObservableObject
+    {
+        #region Constructor
 
-		public OverviewModel()
-		{
-		}
-		#endregion
-	}
+        public OverviewModel()
+        {
+        }
+        #endregion
+    }
 }

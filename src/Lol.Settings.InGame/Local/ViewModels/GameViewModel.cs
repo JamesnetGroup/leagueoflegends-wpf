@@ -8,30 +8,30 @@ using System.Collections.Generic;
 
 namespace Lol.Settings.InGame.Local.ViewModels
 {
-	public class GameViewModel : ObservableObject
-	{
-		private List<UsualCodes> _camLockMode;
+    public class GameViewModel : ObservableObject
+    {
+        private List<UsualCodes> _camLockMode;
 
-		public GameModel Model { get; set; }
+        public GameModel Model { get; set; }
 
-		#region CamLockMode
+        #region CamLockMode
 
-		public List<UsualCodes> CamLockMode
-		{
-			get => _camLockMode;
-			set { _camLockMode = value; OnPropertyChanged(); }
-		}
-		#endregion
+        public List<UsualCodes> CamLockMode
+        {
+            get => _camLockMode;
+            set { _camLockMode = value; OnPropertyChanged(); }
+        }
+        #endregion
 
-		#region Constructor
+        #region Constructor
 
-		public GameViewModel()
-		{
-			CamLockMode = new GetCodeItems().Run("000008");
+        public GameViewModel()
+        {
+            CamLockMode = new GetCodeItems().Run("000008");
 
-			ConfigModel config = RiotConfig.LoadConfig();
-			Model = config.Settings.Game;
-		}
-		#endregion
-	}
+            ConfigModel config = RiotConfig.LoadConfig();
+            Model = config.Settings.Game;
+        }
+        #endregion
+    }
 }

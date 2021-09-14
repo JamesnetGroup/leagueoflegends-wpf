@@ -1,6 +1,6 @@
 ﻿namespace Lol.Data.Codes
 {
-	public class AudioDevice : CodeModel
-	{
-	}
+    public class AudioDevice : CodeModel
+    {
+    }
 }

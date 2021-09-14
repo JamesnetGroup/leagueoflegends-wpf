@@ -4,16 +4,16 @@ using System.Windows;
 
 namespace Lol.Foundation.Riotbase
 {
-	public class RiotApp : Application
-	{
-		public static string REPLAY_PATH;
-		public static string HIGHLIGHT_PATH;
+    public class RiotApp : Application
+    {
+        public static string REPLAY_PATH;
+        public static string HIGHLIGHT_PATH;
 
-		static RiotApp()
-		{
-			string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-			REPLAY_PATH = Path.Combine(path, "League of Legends\\Replays");
-			HIGHLIGHT_PATH = Path.Combine(path, "League of Legends\\Highlights");
-		}
-	}
+        static RiotApp()
+        {
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            REPLAY_PATH = Path.Combine(path, "League of Legends\\Replays");
+            HIGHLIGHT_PATH = Path.Combine(path, "League of Legends\\Highlights");
+        }
+    }
 }

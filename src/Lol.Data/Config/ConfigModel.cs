@@ -2,16 +2,16 @@
 
 namespace Lol.Data.Config
 {
-	public class ConfigModel
-	{
-		public SettingModel Settings { get; set; }
+    public class ConfigModel
+    {
+        public SettingModel Settings { get; set; }
 
-		#region Constructor
+        #region Constructor
 
-		public ConfigModel()
-		{
-			Settings = new SettingModel();
-		}
-		#endregion
-	}
+        public ConfigModel()
+        {
+            Settings = new SettingModel();
+        }
+        #endregion
+    }
 }
