@@ -17,9 +17,7 @@ You can always share information with us and we are looking forward to it.
 ## WPF 리그오브레전드
 WPF를 통해 만든 리그오브레전드입니다. 그리고 GitHub를 통해 모두에게 제공하고 있습니다.
 
-- [개발정보](#개발-)
-- [Project Structure](#project-structure)
-
+<br>
 
 ## 이 오픈소스가 있는 장점
 - 올바른 WPF 프로젝트를 어떻게 구현해 나가는지에 대한 방향성을 제시합니다.
@@ -27,13 +25,16 @@ WPF를 통해 만든 리그오브레전드입니다. 그리고 GitHub를 통해 
 - 외부 MVVM 모듈을 사용하지 않고 MVVM 패턴을 직접 구현하여 WPF의 이해도를 지속적으로 학습하고 성장시킬 수 있습니다.
 - Geometry(SVG) 리소스 활요을 통해 기존의 이미지 사용을 지양하고 WPF 장점을 살린 Vector를 활용할 수 있습니다.
 
-  
+<br>
+
 ## 개발 정보
 This is about **WPF League of Legends** development information.
    
 > ✔️ .NET 6.0  
 > ✔️ C# 9.0  
 > ✔️ [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/ko/vs/preview/vs2022/)
+
+<br>
 
 ## 프로젝트 구조
  
