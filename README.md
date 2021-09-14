@@ -14,7 +14,7 @@ You can always share information with us and we are looking forward to it.
 
 ***
 
-## WPF LeagueofLegends
+## WPF 리그오브레전드
 WPF를 통해 만든 리그오브레전드입니다. 그리고 GitHub를 통해 모두에게 제공하고 있습니다.
 
 - [개발정보](#개발-)
