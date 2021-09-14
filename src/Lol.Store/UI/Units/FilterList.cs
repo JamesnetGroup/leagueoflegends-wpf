@@ -3,22 +3,22 @@ using System.Windows.Controls;
 
 namespace Lol.Store.UI.Units
 {
-	public class FilterList : ListBox
-	{
-		#region DefaultStyleKey
+    public class FilterList : ListBox
+    {
+        #region DefaultStyleKey
 
-		static FilterList()
-		{
-			DefaultStyleKeyProperty.OverrideMetadata(typeof(FilterList), new FrameworkPropertyMetadata(typeof(FilterList)));
-		}
-		#endregion
+        static FilterList()
+        {
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(FilterList), new FrameworkPropertyMetadata(typeof(FilterList)));
+        }
+        #endregion
 
-		#region GetContainerForItemOverride
+        #region GetContainerForItemOverride
 
-		protected override DependencyObject GetContainerForItemOverride()
-		{
-			return new FilterListItem();
-		}
-		#endregion
-	}
+        protected override DependencyObject GetContainerForItemOverride()
+        {
+            return new FilterListItem();
+        }
+        #endregion
+    }
 }

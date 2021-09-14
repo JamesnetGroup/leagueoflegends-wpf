@@ -5,20 +5,20 @@ using Lol.Foundation.Riotbase;
 
 namespace Lol.Settings.Client.Local.ViewModels
 {
-	public class AlarmViewModel : ObservableObject
-	{
-		#region Model
+    public class AlarmViewModel : ObservableObject
+    {
+        #region Model
 
-		public AlarmModel Model { get; set; }
-		#endregion
+        public AlarmModel Model { get; set; }
+        #endregion
 
-		#region Constructor
+        #region Constructor
 
-		public AlarmViewModel()
-		{
-			ConfigModel config = RiotConfig.LoadConfig();
-			Model = config.Settings.Alarm;
-		}
-		#endregion
-	}
+        public AlarmViewModel()
+        {
+            ConfigModel config = RiotConfig.LoadConfig();
+            Model = config.Settings.Alarm;
+        }
+        #endregion
+    }
 }

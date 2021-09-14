@@ -26,176 +26,176 @@ using storeVM = Lol.Store.Local.ViewModels;
 
 namespace Lol.Main.Local.ViewModel
 {
-	public class MainViewModel : ObservableObject
-	{
-		#region Variables
+    public class MainViewModel : ObservableObject
+    {
+        #region Variables
 
-		private readonly WindowWork _winWork;
-		private readonly ModalWork _modalWork;
+        private readonly WindowWork _winWork;
+        private readonly ModalWork _modalWork;
 
-		private object _modalContent;
-		private IRiotUI _currentUI;
-		private List<SubMenuModel> _subMenus;
-		private SubMenuModel _currentSubMenu;
-		private MainMenuModel _mainMenu;
-		private FriendsCollection _friends;
-		private int _currentSeq;
-		private int _parentSeq;
+        private object _modalContent;
+        private IRiotUI _currentUI;
+        private List<SubMenuModel> _subMenus;
+        private SubMenuModel _currentSubMenu;
+        private MainMenuModel _mainMenu;
+        private FriendsCollection _friends;
+        private int _currentSeq;
+        private int _parentSeq;
 
-		private Dictionary<int, IRiotUI> UIs { get; set; }
-		#endregion
+        private Dictionary<int, IRiotUI> UIs { get; set; }
+        #endregion
 
-		#region ViewModels
+        #region ViewModels
 
-		public MenuWork MainMenu { get; }
-		public FriendsSortWork Options { get; }
-		#endregion
+        public MenuWork MainMenu { get; }
+        public FriendsSortWork Options { get; }
+        #endregion
 
-		#region ICommands
+        #region ICommands
 
-		public ICommand ModalCommand { get; }
-		public ICommand CloseCommand { get; }
-		public ICommand MinimizeCommand { get; }
-		#endregion
+        public ICommand ModalCommand { get; }
+        public ICommand CloseCommand { get; }
+        public ICommand MinimizeCommand { get; }
+        #endregion
 
-		#region ModalContent
+        #region ModalContent
 
-		public object ModalContent
-		{
-			get => _modalContent;
-			set { _modalContent = value; OnPropertyChanged(); }
-		}
-		#endregion
+        public object ModalContent
+        {
+            get => _modalContent;
+            set { _modalContent = value; OnPropertyChanged(); }
+        }
+        #endregion
 
-		#region CurrentUI
+        #region CurrentUI
 
-		public IRiotUI CurrentUI
-		{
-			get => _currentUI;
-			set { _currentUI = value; OnPropertyChanged(); }
-		}
-		#endregion
+        public IRiotUI CurrentUI
+        {
+            get => _currentUI;
+            set { _currentUI = value; OnPropertyChanged(); }
+        }
+        #endregion
 
-		#region CurrentSeq
+        #region CurrentSeq
 
-		public int CurrentSeq
-		{
-			get => _currentSeq;
-			set { _currentSeq = value; OnPropertyChanged(); }
-		}
-		#endregion
+        public int CurrentSeq
+        {
+            get => _currentSeq;
+            set { _currentSeq = value; OnPropertyChanged(); }
+        }
+        #endregion
 
-		#region ParentSeq
+        #region ParentSeq
 
-		public int ParentSeq
-		{
-			get => _parentSeq;
-			set { _parentSeq = value; OnPropertyChanged(); }
-		}
-		#endregion
+        public int ParentSeq
+        {
+            get => _parentSeq;
+            set { _parentSeq = value; OnPropertyChanged(); }
+        }
+        #endregion
 
-		#region SubMenus
+        #region SubMenus
 
-		public SubMenuModel CurrentSubMenu
-		{
-			get => _currentSubMenu;
-			set { _currentSubMenu = value; OnPropertyChanged(); SubMenuChanged(value); }
-		}
+        public SubMenuModel CurrentSubMenu
+        {
+            get => _currentSubMenu;
+            set { _currentSubMenu = value; OnPropertyChanged(); SubMenuChanged(value); }
+        }
 
-		public List<SubMenuModel> SubMenus
-		{
-			get => _subMenus;
-			set { _subMenus = value; OnPropertyChanged(); }
-		}
-		#endregion
+        public List<SubMenuModel> SubMenus
+        {
+            get => _subMenus;
+            set { _subMenus = value; OnPropertyChanged(); }
+        }
+        #endregion
 
-		#region Friends
+        #region Friends
 
-		public FriendsCollection Friends
-		{
-			get => _friends;
-			set { _friends = value; OnPropertyChanged(); }
-		}
-		#endregion
+        public FriendsCollection Friends
+        {
+            get => _friends;
+            set { _friends = value; OnPropertyChanged(); }
+        }
+        #endregion
 
-		#region Constructor
+        #region Constructor
 
-		public MainViewModel()
-		{
-			_winWork = new(this);
-			_modalWork = new(this);
+        public MainViewModel()
+        {
+            _winWork = new(this);
+            _modalWork = new(this);
 
-			UIs = new();
+            UIs = new();
 
-			CloseCommand = new RelayCommand<object>(_winWork.DoClosing);
-			MinimizeCommand = new RelayCommand<object>(_winWork.DoMinizing);
-			ModalCommand = new RelayCommand<Type>(_modalWork.SwitchModal);
+            CloseCommand = new RelayCommand<object>(_winWork.DoClosing);
+            MinimizeCommand = new RelayCommand<object>(_winWork.DoMinizing);
+            ModalCommand = new RelayCommand<Type>(_modalWork.SwitchModal);
 
-			MainMenu = new(MenuSelected);
-			Options = new();
+            MainMenu = new(MenuSelected);
+            Options = new();
 
-			var friends = new GetFriends().Run(0);
-			Friends = new(friends);
-		}
-		#endregion
+            var friends = new GetFriends().Run(0);
+            Friends = new(friends);
+        }
+        #endregion
 
-		// Private
+        // Private
 
-		#region MenuSelected
+        #region MenuSelected
 
-		private void MenuSelected(MainMenuModel menu, List<SubMenuModel> subMenus)
-		{
-			_mainMenu = menu;
-			SubMenus = subMenus;
-			CurrentSubMenu = SubMenus.FirstOrDefault();
-		}
-		#endregion
+        private void MenuSelected(MainMenuModel menu, List<SubMenuModel> subMenus)
+        {
+            _mainMenu = menu;
+            SubMenus = subMenus;
+            CurrentSubMenu = SubMenus.FirstOrDefault();
+        }
+        #endregion
 
-		#region SubMenuChanged
+        #region SubMenuChanged
 
-		private void SubMenuChanged(SubMenuModel value)
-		{
-			IRiotUI content;
-			int key;
+        private void SubMenuChanged(SubMenuModel value)
+        {
+            IRiotUI content;
+            int key;
 
-			if (value != null)
-			{
-				key = value.Seq;
-				content = value.Seq switch
-				{
-					8 => new Overview().SetVM(new OverviewModel()),
-					11 => new HubView().SetVM(new HubViewModel()),
-					14 => new WinnersView().SetVM(new WinnersViewModel()),
+            if (value != null)
+            {
+                key = value.Seq;
+                content = value.Seq switch
+                {
+                    8 => new Overview().SetVM(new OverviewModel()),
+                    11 => new HubView().SetVM(new HubViewModel()),
+                    14 => new WinnersView().SetVM(new WinnersViewModel()),
                     16 => new ChampionsView().SetVM(new ChampionsViewModel()),
                     32 => new HistoryView().SetVM(new HistoryViewModel()),
-					20 => new SpellsView().SetVM(new SpellsViewModel()),
-					// TODO: [Elena] 클래스 이름 중복 관련 임시 처리 
-					26 => new store.ChampionsView().SetVM(new storeVM.ChampionsViewModel()),
-					_ => new EmptyContent()
-				};
+                    20 => new SpellsView().SetVM(new SpellsViewModel()),
+                    // TODO: [Elena] 클래스 이름 중복 관련 임시 처리 
+                    26 => new store.ChampionsView().SetVM(new storeVM.ChampionsViewModel()),
+                    _ => new EmptyContent()
+                };
 
-				// TODO: [Elena] Store의 경우 SubMenu마다 Background가 동일하여 부모Seq로 처리하려고 추가함. 
-				ParentSeq = value.MainSeq;
-			}
-			else
-			{
-				key = _mainMenu.Seq;
-				content = _mainMenu.Seq switch
-				{
-					1 => new TeamFightView().SetVM(new TeamFightViewModel()),
-					6 => new MyShopView().SetVM(new MyShopViewModel()),
-					_ => new EmptyContent()
-				};
-			}
+                // TODO: [Elena] Store의 경우 SubMenu마다 Background가 동일하여 부모Seq로 처리하려고 추가함. 
+                ParentSeq = value.MainSeq;
+            }
+            else
+            {
+                key = _mainMenu.Seq;
+                content = _mainMenu.Seq switch
+                {
+                    1 => new TeamFightView().SetVM(new TeamFightViewModel()),
+                    6 => new MyShopView().SetVM(new MyShopViewModel()),
+                    _ => new EmptyContent()
+                };
+            }
 
-			if (!UIs.ContainsKey(key))
-			{
-				UIs.Add(key, content);
-			}
+            if (!UIs.ContainsKey(key))
+            {
+                UIs.Add(key, content);
+            }
 
-			CurrentUI = UIs[key];
-			CurrentSeq = key;
-		}
-		#endregion
-	}
+            CurrentUI = UIs[key];
+            CurrentSeq = key;
+        }
+        #endregion
+    }
 }

@@ -8,74 +8,74 @@ using System.Collections.Generic;
 
 namespace Lol.Settings.InGame.Local.ViewModels
 {
-	public class InterfaceViewModel : ObservableObject
-	{
-		private List<UsualCodes> _names;
-		private List<UsualCodes> _times;
-		private List<UsualCodes> _emotions;
-		private List<UsualCodes> _emotionSizes;
-		private List<UsualCodes> _eternalWorks;
+    public class InterfaceViewModel : ObservableObject
+    {
+        private List<UsualCodes> _names;
+        private List<UsualCodes> _times;
+        private List<UsualCodes> _emotions;
+        private List<UsualCodes> _emotionSizes;
+        private List<UsualCodes> _eternalWorks;
 
-		public InterfaceModel Model { get; set; }
+        public InterfaceModel Model { get; set; }
 
-		#region Names
+        #region Names
 
-		public List<UsualCodes> Names
-		{
-			get => _names;
-			set { _names = value; OnPropertyChanged(); }
-		}
-		#endregion
+        public List<UsualCodes> Names
+        {
+            get => _names;
+            set { _names = value; OnPropertyChanged(); }
+        }
+        #endregion
 
-		#region Times
+        #region Times
 
-		public List<UsualCodes> Times
-		{
-			get => _times;
-			set { _times = value; OnPropertyChanged(); }
-		}
-		#endregion
+        public List<UsualCodes> Times
+        {
+            get => _times;
+            set { _times = value; OnPropertyChanged(); }
+        }
+        #endregion
 
-		#region Emotions
+        #region Emotions
 
-		public List<UsualCodes> Emotions
-		{
-			get => _emotions;
-			set { _emotions = value; OnPropertyChanged(); }
-		}
-		#endregion
+        public List<UsualCodes> Emotions
+        {
+            get => _emotions;
+            set { _emotions = value; OnPropertyChanged(); }
+        }
+        #endregion
 
-		#region EmotionSizes
+        #region EmotionSizes
 
-		public List<UsualCodes> EmotionSizes
-		{
-			get => _emotionSizes;
-			set { _emotionSizes = value; OnPropertyChanged(); }
-		}
-		#endregion
+        public List<UsualCodes> EmotionSizes
+        {
+            get => _emotionSizes;
+            set { _emotionSizes = value; OnPropertyChanged(); }
+        }
+        #endregion
 
-		#region EternalWorks
+        #region EternalWorks
 
-		public List<UsualCodes> EternalWorks
-		{
-			get => _eternalWorks;
-			set { _eternalWorks = value; OnPropertyChanged(); }
-		}
-		#endregion
+        public List<UsualCodes> EternalWorks
+        {
+            get => _eternalWorks;
+            set { _eternalWorks = value; OnPropertyChanged(); }
+        }
+        #endregion
 
-		#region Constructor
+        #region Constructor
 
-		public InterfaceViewModel()
-		{
-			Names = new GetCodeItems().Run("000003");
-			Times = new GetCodeItems().Run("000004");
-			Emotions = new GetCodeItems().Run("000005");
-			EmotionSizes = new GetCodeItems().Run("000006");
-			EternalWorks = new GetCodeItems().Run("000007");
+        public InterfaceViewModel()
+        {
+            Names = new GetCodeItems().Run("000003");
+            Times = new GetCodeItems().Run("000004");
+            Emotions = new GetCodeItems().Run("000005");
+            EmotionSizes = new GetCodeItems().Run("000006");
+            EternalWorks = new GetCodeItems().Run("000007");
 
-			ConfigModel config = RiotConfig.LoadConfig();
-			Model = config.Settings.Interface;
-		}
-		#endregion
-	}
+            ConfigModel config = RiotConfig.LoadConfig();
+            Model = config.Settings.Interface;
+        }
+        #endregion
+    }
 }

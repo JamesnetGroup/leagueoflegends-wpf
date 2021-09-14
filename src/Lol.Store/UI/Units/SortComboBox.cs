@@ -3,36 +3,36 @@ using System.Windows.Controls;
 
 namespace Lol.Store.UI.Units
 {
-	public class SortComboBox : ComboBox
-	{
-		#region DefaultStyleKey
+    public class SortComboBox : ComboBox
+    {
+        #region DefaultStyleKey
 
-		static SortComboBox()
-		{
-			DefaultStyleKeyProperty.OverrideMetadata(typeof(SortComboBox), new FrameworkPropertyMetadata(typeof(SortComboBox)));
-		}
-		#endregion
+        static SortComboBox()
+        {
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(SortComboBox), new FrameworkPropertyMetadata(typeof(SortComboBox)));
+        }
+        #endregion
 
-		#region DependencyProperty
+        #region DependencyProperty
 
-		public static readonly DependencyProperty ContentProperty = DependencyProperty.Register("Content", typeof(object), typeof(SortComboBox), new PropertyMetadata(null));
-		#endregion
+        public static readonly DependencyProperty ContentProperty = DependencyProperty.Register("Content", typeof(object), typeof(SortComboBox), new PropertyMetadata(null));
+        #endregion
 
-		#region Content
+        #region Content
 
-		public object Content
-		{
-			get { return (object)this.GetValue(ContentProperty); }
-			set { this.SetValue(ContentProperty, value); }
-		}
-		#endregion
+        public object Content
+        {
+            get { return (object)this.GetValue(ContentProperty); }
+            set { this.SetValue(ContentProperty, value); }
+        }
+        #endregion
 
-		#region GetContainerForItemOverride
+        #region GetContainerForItemOverride
 
-		protected override DependencyObject GetContainerForItemOverride()
-		{
-			return new SortComboBoxItem();
-		}
-		#endregion
-	}
+        protected override DependencyObject GetContainerForItemOverride()
+        {
+            return new SortComboBoxItem();
+        }
+        #endregion
+    }
 }

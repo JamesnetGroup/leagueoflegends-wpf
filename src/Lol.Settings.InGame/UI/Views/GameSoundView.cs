@@ -3,14 +3,14 @@ using System.Windows;
 
 namespace Lol.Settings.InGame.UI.Views
 {
-	public class GameSoundView : View
-	{
-		#region DefaultStyleKey
+    public class GameSoundView : View
+    {
+        #region DefaultStyleKey
 
-		static GameSoundView()
-		{
-			DefaultStyleKeyProperty.OverrideMetadata(typeof(GameSoundView), new FrameworkPropertyMetadata(typeof(GameSoundView)));
-		}
-		#endregion
-	}
+        static GameSoundView()
+        {
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(GameSoundView), new FrameworkPropertyMetadata(typeof(GameSoundView)));
+        }
+        #endregion
+    }
 }

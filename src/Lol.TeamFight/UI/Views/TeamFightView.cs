@@ -3,11 +3,11 @@ using System.Windows;
 
 namespace Lol.TeamFight.UI.Views
 {
-	public class TeamFightView : View
-	{
-		static TeamFightView()
-		{
-			DefaultStyleKeyProperty.OverrideMetadata(typeof(TeamFightView), new FrameworkPropertyMetadata(typeof(TeamFightView)));
-		}
-	}
+    public class TeamFightView : View
+    {
+        static TeamFightView()
+        {
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(TeamFightView), new FrameworkPropertyMetadata(typeof(TeamFightView)));
+        }
+    }
 }

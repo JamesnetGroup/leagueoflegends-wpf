@@ -2,14 +2,14 @@
 
 namespace Lol.Collection.Local.ViewModel
 {
-	public class ChampionsViewModel : ObservableObject
+    public class ChampionsViewModel : ObservableObject
     {
-		#region Constructor
+        #region Constructor
 
-		public ChampionsViewModel()
+        public ChampionsViewModel()
         {
 
         }
-		#endregion
-	}
+        #endregion
+    }
 }

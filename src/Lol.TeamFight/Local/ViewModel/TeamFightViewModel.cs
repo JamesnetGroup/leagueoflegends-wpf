@@ -6,39 +6,39 @@ using System.Linq;
 
 namespace Lol.TeamFight.Local.ViewModel
 {
-	public class TeamFightViewModel : ObservableObject
-	{
-		#region Variables
+    public class TeamFightViewModel : ObservableObject
+    {
+        #region Variables
 
-		private List<TeamFightModel> _teamFightItem;
-		private TeamFightModel _currentTeamFightItem;
-		#endregion
+        private List<TeamFightModel> _teamFightItem;
+        private TeamFightModel _currentTeamFightItem;
+        #endregion
 
-		#region TeamFightItem
+        #region TeamFightItem
 
-		public List<TeamFightModel> TeamFightItem
-		{
-			get { return _teamFightItem; }
-			set { _teamFightItem = value; OnPropertyChanged(); }
-		}
-		#endregion
+        public List<TeamFightModel> TeamFightItem
+        {
+            get { return _teamFightItem; }
+            set { _teamFightItem = value; OnPropertyChanged(); }
+        }
+        #endregion
 
-		#region CurrentTeamFightItem
+        #region CurrentTeamFightItem
 
-		public TeamFightModel CurrentTeamFightItem
-		{
-			get { return _currentTeamFightItem; }
-			set { _currentTeamFightItem = value; OnPropertyChanged(); }
-		}
-		#endregion
+        public TeamFightModel CurrentTeamFightItem
+        {
+            get { return _currentTeamFightItem; }
+            set { _currentTeamFightItem = value; OnPropertyChanged(); }
+        }
+        #endregion
 
-		#region Constructor
+        #region Constructor
 
-		public TeamFightViewModel()
-		{
-			TeamFightItem = ExamTeamFight.GetItems();
-			CurrentTeamFightItem = TeamFightItem.First();
-		}
-		#endregion
-	}
+        public TeamFightViewModel()
+        {
+            TeamFightItem = ExamTeamFight.GetItems();
+            CurrentTeamFightItem = TeamFightItem.First();
+        }
+        #endregion
+    }
 }

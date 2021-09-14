@@ -5,43 +5,43 @@ using System.Linq;
 
 namespace Lol.Main.Local.Work
 {
-	public class FriendsSortWork : ObservableObject
-	{
-		#region SortTypes
+    public class FriendsSortWork : ObservableObject
+    {
+        #region SortTypes
 
-		public List<OptionModel> SortTypes { get; set; }
-		#endregion
+        public List<OptionModel> SortTypes { get; set; }
+        #endregion
 
-		#region CurrentSortType
+        #region CurrentSortType
 
-		private OptionModel _currentSortType;
-		public OptionModel CurrentSortType
-		{
-			get { return _currentSortType; }
-			set { _currentSortType = value; OnPropertyChanged(); }
-		}
-		#endregion
+        private OptionModel _currentSortType;
+        public OptionModel CurrentSortType
+        {
+            get { return _currentSortType; }
+            set { _currentSortType = value; OnPropertyChanged(); }
+        }
+        #endregion
 
-		#region Constructor
+        #region Constructor
 
-		public FriendsSortWork()
-		{
-			SortTypes = GetSortTypes();
-			CurrentSortType = SortTypes.First();
-		}
-		#endregion
+        public FriendsSortWork()
+        {
+            SortTypes = GetSortTypes();
+            CurrentSortType = SortTypes.First();
+        }
+        #endregion
 
-		#region GetSortTypes
+        #region GetSortTypes
 
-		private List<OptionModel> GetSortTypes()
-		{
-			List<OptionModel> source = new()
-			{
-				new OptionModel { DisplayName = "Sort Alphabetically" },
-				new OptionModel { DisplayName = "Sort by Status" }
-			};
-			return source;
-		}
-		#endregion
-	}
+        private List<OptionModel> GetSortTypes()
+        {
+            List<OptionModel> source = new()
+            {
+                new OptionModel { DisplayName = "Sort Alphabetically" },
+                new OptionModel { DisplayName = "Sort by Status" }
+            };
+            return source;
+        }
+        #endregion
+    }
 }

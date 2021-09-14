@@ -6,39 +6,39 @@ using Lol.Foundation.Mvvm;
 
 namespace Lol.Clash.Local.ViewModel
 {
-	public class HubViewModel : ObservableObject
-	{
-		#region Variables
+    public class HubViewModel : ObservableObject
+    {
+        #region Variables
 
-		private List<BaseModel> _tabs;
-		private BaseModel _currentTab;
-		#endregion
+        private List<BaseModel> _tabs;
+        private BaseModel _currentTab;
+        #endregion
 
-		#region Tabs
+        #region Tabs
 
-		public List<BaseModel> Tabs
-		{
-			get => _tabs;
-			set { _tabs = value; OnPropertyChanged(); }
-		}
-		#endregion
+        public List<BaseModel> Tabs
+        {
+            get => _tabs;
+            set { _tabs = value; OnPropertyChanged(); }
+        }
+        #endregion
 
-		#region CurrentTab
+        #region CurrentTab
 
-		public BaseModel CurrentTab
-		{
-			get => _currentTab;
-			set { _currentTab = value; OnPropertyChanged(); }
-		}
-		#endregion
+        public BaseModel CurrentTab
+        {
+            get => _currentTab;
+            set { _currentTab = value; OnPropertyChanged(); }
+        }
+        #endregion
 
-		#region Constructor
+        #region Constructor
 
-		public HubViewModel()
-		{
-			Tabs = ExamClash.GetCategory();
-			CurrentTab = Tabs.First();
-		}
-		#endregion
-	}
+        public HubViewModel()
+        {
+            Tabs = ExamClash.GetCategory();
+            CurrentTab = Tabs.First();
+        }
+        #endregion
+    }
 }

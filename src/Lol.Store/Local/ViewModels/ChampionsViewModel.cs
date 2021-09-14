@@ -6,102 +6,102 @@ using System.Linq;
 
 namespace Lol.Store.Local.ViewModels
 {
-	public class ChampionsViewModel : ObservableObject
-	{
-		#region Variables
+    public class ChampionsViewModel : ObservableObject
+    {
+        #region Variables
 
-		private List<StoreMenuModel> _champMenus;
-		private List<SortingModel> _sorting;
-		private List<FilterModel> _filters;
+        private List<StoreMenuModel> _champMenus;
+        private List<SortingModel> _sorting;
+        private List<FilterModel> _filters;
 
-		private StoreMenuModel _currentChampMenu;
-		private SortingModel _currentSorting;
-		private string _searchText;
-		#endregion
+        private StoreMenuModel _currentChampMenu;
+        private SortingModel _currentSorting;
+        private string _searchText;
+        #endregion
 
-		#region ChampMenus
+        #region ChampMenus
 
-		public List<StoreMenuModel> ChampMenus
-		{
-			get { return _champMenus; }
-			set { _champMenus = value; OnPropertyChanged(); }
-		}
-		#endregion
+        public List<StoreMenuModel> ChampMenus
+        {
+            get { return _champMenus; }
+            set { _champMenus = value; OnPropertyChanged(); }
+        }
+        #endregion
 
-		#region CurrentChampMenu
+        #region CurrentChampMenu
 
-		public StoreMenuModel CurrentChampMenu
-		{
-			get { return _currentChampMenu; }
-			set { _currentChampMenu = value; OnPropertyChanged(); MenuChanged(value); }
-		}
-		#endregion
+        public StoreMenuModel CurrentChampMenu
+        {
+            get { return _currentChampMenu; }
+            set { _currentChampMenu = value; OnPropertyChanged(); MenuChanged(value); }
+        }
+        #endregion
 
-		#region Sorting
+        #region Sorting
 
-		public List<SortingModel> Sorting
-		{
-			get { return _sorting; }
-			set { _sorting = value; OnPropertyChanged(); }
-		}
-		#endregion
+        public List<SortingModel> Sorting
+        {
+            get { return _sorting; }
+            set { _sorting = value; OnPropertyChanged(); }
+        }
+        #endregion
 
-		#region CurrentSorting
+        #region CurrentSorting
 
-		public SortingModel CurrentSorting
-		{
-			get { return _currentSorting; }
-			set { _currentSorting = value; OnPropertyChanged(); }
-		}
-		#endregion
+        public SortingModel CurrentSorting
+        {
+            get { return _currentSorting; }
+            set { _currentSorting = value; OnPropertyChanged(); }
+        }
+        #endregion
 
-		#region SearchText
+        #region SearchText
 
-		public string SearchText
-		{
-			get { return _searchText; }
-			set { _searchText = value; OnPropertyChanged(); SearchTextChanged(value); }
-		}
-		#endregion
+        public string SearchText
+        {
+            get { return _searchText; }
+            set { _searchText = value; OnPropertyChanged(); SearchTextChanged(value); }
+        }
+        #endregion
 
-		#region Filters
+        #region Filters
 
-		public List<FilterModel> Filters
-		{
-			get { return _filters; }
-			set { _filters = value; OnPropertyChanged(); }
-		}
-		#endregion
+        public List<FilterModel> Filters
+        {
+            get { return _filters; }
+            set { _filters = value; OnPropertyChanged(); }
+        }
+        #endregion
 
-		#region Constructor
+        #region Constructor
 
-		public ChampionsViewModel()
-		{
-			ChampMenus = ExamStore.GetCategory();
-			CurrentChampMenu = ChampMenus.First();
-		}	
-		#endregion
+        public ChampionsViewModel()
+        {
+            ChampMenus = ExamStore.GetCategory();
+            CurrentChampMenu = ChampMenus.First();
+        }
+        #endregion
 
-		#region MenuChanged
+        #region MenuChanged
 
-		private void MenuChanged(StoreMenuModel value)
-		{
-			Filters = ExamStore.GetFilters(value.Name);
-			Sorting = ExamStore.GetSorting(value.Name);
-			CurrentSorting = Sorting.First();
-		}
-		#endregion
+        private void MenuChanged(StoreMenuModel value)
+        {
+            Filters = ExamStore.GetFilters(value.Name);
+            Sorting = ExamStore.GetSorting(value.Name);
+            CurrentSorting = Sorting.First();
+        }
+        #endregion
 
-		#region SearchTextChanged
+        #region SearchTextChanged
 
-		private void SearchTextChanged(string value)
-		{
-			if (CurrentChampMenu.Name == "CHAMPIONS")
-			{
-				//
-			}
-		}
-		#endregion
+        private void SearchTextChanged(string _)
+        {
+            if (CurrentChampMenu.Name == "CHAMPIONS")
+            {
+                //
+            }
+        }
+        #endregion
 
-	}
+    }
 }

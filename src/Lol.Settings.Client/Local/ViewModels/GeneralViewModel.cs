@@ -11,58 +11,58 @@ using System.Windows.Input;
 
 namespace Lol.Settings.Client.Local.ViewModels
 {
-	public class GeneralViewModel : ObservableObject
-	{
-		#region Variables
+    public class GeneralViewModel : ObservableObject
+    {
+        #region Variables
 
-		private List<WindowSizeCode> _sizeList;
-		#endregion
+        private List<WindowSizeCode> _sizeList;
+        #endregion
 
-		#region Commands 
+        #region Commands 
 
-		public ICommand LinkCommand { get; set; }
-		#endregion
+        public ICommand LinkCommand { get; set; }
+        #endregion
 
-		#region Model
+        #region Model
 
-		public GeneralModel Model { get; set; }
-		#endregion
+        public GeneralModel Model { get; set; }
+        #endregion
 
-		#region SizeList
+        #region SizeList
 
-		public List<WindowSizeCode> SizeList
-		{
-			get => _sizeList;
-			set { _sizeList = value; OnPropertyChanged(); }
-		}
-		#endregion
+        public List<WindowSizeCode> SizeList
+        {
+            get => _sizeList;
+            set { _sizeList = value; OnPropertyChanged(); }
+        }
+        #endregion
 
-		#region Constructor
+        #region Constructor
 
-		public GeneralViewModel()
-		{
-			SizeList = ExamSettings.GetWinSizeList();
+        public GeneralViewModel()
+        {
+            SizeList = ExamSettings.GetWinSizeList();
 
-			ConfigModel config = RiotConfig.LoadConfig();
-			config.Settings = config.Settings ?? new SettingModel();
+            ConfigModel config = RiotConfig.LoadConfig();
+            config.Settings ??= new SettingModel();
 
-			Model = config.Settings.General;
+            Model = config.Settings.General;
 
-			LinkCommand = new RelayCommand<object>(SearchLink);
-		}
-		#endregion
+            LinkCommand = new RelayCommand<object>(SearchLink);
+        }
+        #endregion
 
-		#region SearchLink
+        #region SearchLink
 
-		private void SearchLink(object obj)
-		{
-			string Uri = "https://na.leagueoflegends.com/en-us/event/league-of-legends-code-of-conduct/";
+        private void SearchLink(object obj)
+        {
+            string Uri = "https://na.leagueoflegends.com/en-us/event/league-of-legends-code-of-conduct/";
 
-			Process.Start(new ProcessStartInfo(Uri)
-			{
-				UseShellExecute = true
-			});
-		}
-		#endregion
-	}
+            Process.Start(new ProcessStartInfo(Uri)
+            {
+                UseShellExecute = true
+            });
+        }
+        #endregion
+    }
 }

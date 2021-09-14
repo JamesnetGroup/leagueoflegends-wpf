@@ -10,47 +10,47 @@ using System.Collections.Generic;
 
 namespace Lol.Settings.Client.Local.ViewModels
 {
-	public class VoiceViewModel : ObservableObject
-	{
-		#region Variables
+    public class VoiceViewModel : ObservableObject
+    {
+        #region Variables
 
-		private List<AudioDevice> _deviceList;
-		private List<UsualCodes> _inputMode;
-		#endregion
+        private List<AudioDevice> _deviceList;
+        private List<UsualCodes> _inputMode;
+        #endregion
 
-		#region Model
+        #region Model
 
-		public VoiceModel Model { get; set; }
-		#endregion
+        public VoiceModel Model { get; set; }
+        #endregion
 
-		#region DeviceList
+        #region DeviceList
 
-		public List<AudioDevice> DeviceList
-		{
-			get => _deviceList;
-			set { _deviceList = value; OnPropertyChanged(); }
-		}
-		#endregion
+        public List<AudioDevice> DeviceList
+        {
+            get => _deviceList;
+            set { _deviceList = value; OnPropertyChanged(); }
+        }
+        #endregion
 
-		#region InputMode
+        #region InputMode
 
-		public List<UsualCodes> InputMode
-		{
-			get => _inputMode;
-			set { _inputMode = value; OnPropertyChanged(); }
-		}
-		#endregion
+        public List<UsualCodes> InputMode
+        {
+            get => _inputMode;
+            set { _inputMode = value; OnPropertyChanged(); }
+        }
+        #endregion
 
-		#region Constructor
+        #region Constructor
 
-		public VoiceViewModel()
-		{
-			DeviceList = ExamSettings.GetAudioDeviceList();
-			InputMode = new GetCodeItems().Run("000001");
+        public VoiceViewModel()
+        {
+            DeviceList = ExamSettings.GetAudioDeviceList();
+            InputMode = new GetCodeItems().Run("000001");
 
-			ConfigModel config = RiotConfig.LoadConfig();
-			Model = config.Settings.Voice;
-		}
-		#endregion
-	}
+            ConfigModel config = RiotConfig.LoadConfig();
+            Model = config.Settings.Voice;
+        }
+        #endregion
+    }
 }

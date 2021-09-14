@@ -5,20 +5,20 @@ using Lol.Foundation.Riotbase;
 
 namespace Lol.Settings.Client.Local.ViewModels
 {
-	public class ChatViewModel : ObservableObject
-	{
-		#region Model
+    public class ChatViewModel : ObservableObject
+    {
+        #region Model
 
-		public ChatModel Model { get; set; }
-		#endregion
+        public ChatModel Model { get; set; }
+        #endregion
 
-		#region Constructor
+        #region Constructor
 
-		public ChatViewModel()
-		{
-			ConfigModel config = RiotConfig.LoadConfig();
-			Model = config.Settings.Chat;
-		}
-		#endregion
-	}
+        public ChatViewModel()
+        {
+            ConfigModel config = RiotConfig.LoadConfig();
+            Model = config.Settings.Chat;
+        }
+        #endregion
+    }
 }

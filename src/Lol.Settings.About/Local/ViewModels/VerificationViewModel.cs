@@ -2,14 +2,14 @@
 
 namespace Lol.Settings.About.Local.ViewModels
 {
-	public class VerificationViewModel : ObservableObject
-	{
-		#region Constructor
+    public class VerificationViewModel : ObservableObject
+    {
+        #region Constructor
 
-		public VerificationViewModel()
-		{
+        public VerificationViewModel()
+        {
 
-		}
-		#endregion
-	}
+        }
+        #endregion
+    }
 }

@@ -5,29 +5,30 @@ using System.Collections.Generic;
 
 namespace Lol.Profile.Local.ViewModels
 {
-	public class HistoryViewModel : ObservableObject
+    public class HistoryViewModel : ObservableObject
     {
-		#region Variables
+        #region Variables
 
-		private List<HistoryModel> _historys;
-		#endregion 
+        private List<HistoryModel> _historys;
+        #endregion
 
-		#region Historys
+        #region Historys
 
-		public List<HistoryModel> Historys
+        public List<HistoryModel> Historys
         {
-            get { return _historys; }
+            get => _historys; 
             set { _historys = value; OnPropertyChanged(); }
         }
-		#endregion
+        #endregion
 
-		#region Constructor
+        #region Constructor
 
-		public HistoryViewModel()
-		{
-			Historys = ExamHistory.GetHistory();
-		}
-		#endregion
+        // TODO: [James] 생성자 경고알림 왜뜨는건지...?
+        public HistoryViewModel()
+        {
+            Historys = ExamHistory.GetHistory();
+        }
+        #endregion
 
-	}
+    }
 }

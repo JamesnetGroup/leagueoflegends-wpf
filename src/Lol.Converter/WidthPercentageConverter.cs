@@ -5,27 +5,27 @@ using System.Windows.Markup;
 
 namespace Lol.Converter
 {
-	public class WidthPercentageConverter : MarkupExtension, IValueConverter
-	{
-		private static WidthPercentageConverter _instance;
+    public class WidthPercentageConverter : MarkupExtension, IValueConverter
+    {
+        private static WidthPercentageConverter _instance;
 
-		#region IValueConverter Members
+        #region IValueConverter Members
 
-		public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-		{
-			return System.Convert.ToDouble(value) * System.Convert.ToDouble(parameter);
-		}
+        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            return System.Convert.ToDouble(value) * System.Convert.ToDouble(parameter);
+        }
 
-		public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-		{
-			throw new NotImplementedException();
-		}
+        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
+        {
+            throw new NotImplementedException();
+        }
 
-		#endregion
+        #endregion
 
-		public override object ProvideValue(IServiceProvider serviceProvider)
-		{
-			return _instance ??= new WidthPercentageConverter();
-		}
-	}
+        public override object ProvideValue(IServiceProvider serviceProvider)
+        {
+            return _instance ??= new WidthPercentageConverter();
+        }
+    }
 }

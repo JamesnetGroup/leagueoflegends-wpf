@@ -1,8 +1,8 @@
 ﻿namespace Lol.Data.Enums
 {
-	public enum ItemType
-	{
-		Champion,
-		Package
-	}
+    public enum ItemType
+    {
+        Champion,
+        Package
+    }
 }
