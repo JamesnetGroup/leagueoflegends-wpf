@@ -17,10 +17,10 @@ You can always share information with us and we are looking forward to it.
 ## WPF LeagueofLegends
 WPF를 통해 만든 리그오브레전드입니다.
 
-- [Development Information](#development-information)
+- [개발정보](#개발-)
 - [Project Structure](#project-structure)
   
-### Development Information
+### 개발 정보
 This is about **WPF League of Legends** development information.
    
 > ✔️ .NET 6.0  
