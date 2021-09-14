@@ -17,14 +17,13 @@ You can always share information with us and we are looking forward to it.
 ## WPF LeagueofLegends
 WPF를 통해 만든 리그오브레전드입니다. 그리고 GitHub를 통해 모두에게 제공하고 있습니다.
 
-## 이 오픈소스를 통해 얻을 수 있는 장점
-✔️ 상용 컴포넌트를 사용하지 않고 수준높은 디자인을 모두 직접 구현하여 제공.  
-✔️ 외부 MVVM 모듈을 사용하지 않고 패턴을 직접 구현하여 직관적인 프레임워크 구조를 제공.
-
-
-
 - [개발정보](#개발-)
 - [Project Structure](#project-structure)
+
+
+### 이 오픈소스를 통해 얻을 수 있는 장점
+✔️ 상용 컴포넌트를 사용하지 않고 수준높은 디자인을 모두 직접 구현하여 제공.  
+✔️ 외부 MVVM 모듈을 사용하지 않고 패턴을 직접 구현하여 직관적인 프레임워크 구조를 제공.
   
 ### 개발 정보
 This is about **WPF League of Legends** development information.
