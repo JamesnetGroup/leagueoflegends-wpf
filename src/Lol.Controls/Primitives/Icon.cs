@@ -1,7 +1,7 @@
-﻿using Lol.Controls.Utils;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
+using Lol.Controls.Utils;
 using Lol.Data.Enums;
 
 namespace Lol.Controls.Primitives

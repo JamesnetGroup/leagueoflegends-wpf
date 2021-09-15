@@ -1,6 +1,5 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
-using Lol.Data.Main;
 using Lol.Foundation.Mvvm;
 using Lol.Foundation.Riotcore;
 

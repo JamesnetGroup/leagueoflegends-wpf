@@ -1,6 +1,6 @@
-﻿using Lol.Foundation.Riotcore;
-using System.ComponentModel;
+﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using Lol.Foundation.Riotcore;
 
 namespace Lol.Foundation.Mvvm
 {
