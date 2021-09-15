@@ -8,7 +8,7 @@ namespace Lol.Collection.Local.ViewModel
     public class SpellsViewModel : ObservableObject
     {
         public List<SpellModel> Spells { get; set; }
-    
+
 
         public SpellsViewModel()
         {

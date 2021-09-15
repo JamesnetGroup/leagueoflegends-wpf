@@ -4,5 +4,12 @@ namespace Lol.Controls.Primitives
 {
     public class RiotSlider : Slider
     {
+        #region Constructor
+
+        public RiotSlider()
+        {
+
+        }
+        #endregion
     }
 }

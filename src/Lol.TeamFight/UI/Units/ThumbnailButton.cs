@@ -9,7 +9,7 @@ namespace Lol.TeamFight.UI.Units
 
         public static readonly DependencyProperty OrderProperty = DependencyProperty.Register("Order", typeof(int), typeof(ThumbnailButton), new PropertyMetadata(0));
         #endregion
-            
+
         #region DefaultStyleKey
 
         static ThumbnailButton()

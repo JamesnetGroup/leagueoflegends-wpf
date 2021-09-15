@@ -1,7 +1,6 @@
-﻿using Lol.Data.Main;
+﻿using System.Windows;
 using Lol.Foundation.Mvvm;
 using Lol.Foundation.Riotcore;
-using System.Windows;
 
 namespace Lol.Foundation.Riotbase
 {

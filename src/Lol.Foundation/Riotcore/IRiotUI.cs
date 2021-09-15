@@ -1,5 +1,4 @@
-﻿using Lol.Data.Main;
-using Lol.Foundation.Mvvm;
+﻿using Lol.Foundation.Mvvm;
 
 namespace Lol.Foundation.Riotcore
 {

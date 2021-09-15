@@ -14,8 +14,8 @@ namespace Lol.ExampleData.Collection
         {
             var source = new List<SpellModel>();
 
-            source.Add(new SpellModel {Name = "점화", ImageSource = imgResource("ignite") });
-            source.Add(new SpellModel {Name = "점멸", ImageSource = imgResource("flash") });
+            source.Add(new SpellModel { Name = "점화", ImageSource = imgResource("ignite") });
+            source.Add(new SpellModel { Name = "점멸", ImageSource = imgResource("flash") });
 
             return source;
         }
