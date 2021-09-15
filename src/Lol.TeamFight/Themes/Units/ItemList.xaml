@@ -51,7 +51,7 @@
 								<RowDefinition Height="Auto"/>
 							</Grid.RowDefinitions>
 							<Border x:Name="border2" Grid.Row="0" Width="90" Height="90" Background="Transparent" BorderBrush="{StaticResource BDR.IMG}" BorderThickness="3">
-								<Image Source="{Binding Url}" Stretch="UniformToFill"/>
+                                <Image x:Name="img" Source="{Binding MD5}" Stretch="UniformToFill" Opacity="0.9"/>
 								<Border.ToolTip>
 									<ctrls:TooltipB x:Name="tooltip">
 										<ctrls:TooltipB.ToolTip>
@@ -82,8 +82,9 @@
 						<Trigger Property="IsMouseOver" Value="True">
 							<Setter TargetName="border2" Property="BorderBrush" Value="{StaticResource BDR.IMG.OVER}"/>
 							<Setter TargetName="border3" Property="Background" Value="{StaticResource BG.LVL.OVER}"/>
-							<Setter TargetName="border4" Property="BorderBrush" Value="#05CEE6"/>
-						</Trigger>
+                            <Setter TargetName="border4" Property="BorderBrush" Value="#05CEE6"/>
+                            <Setter TargetName="img" Property="Opacity" Value="1"/>
+                        </Trigger>
 						<Trigger Property="IsSelected" Value="True">
 							<Setter TargetName="border" Property="Background" Value="#33FFFFFF"/>
 						</Trigger>
