@@ -7,20 +7,24 @@ namespace Lol.Foundation.Riotbase
 {
     public class RiotWindow : Window, IRiotUI
     {
+        #region Constructor
+
         public RiotWindow()
         {
             Loaded += RiotWindow_Loaded;
         }
+        #endregion
 
-        public void Show(SubMenuModel menu)
-        {
-        }
+        #region SetVM
 
         public IRiotUI SetVM(ObservableObject vm)
         {
             DataContext = vm;
             return this;
         }
+        #endregion
+
+        #region RiotWindow_Loaded
 
         private void RiotWindow_Loaded(object sender, RoutedEventArgs e)
         {
@@ -31,6 +35,6 @@ namespace Lol.Foundation.Riotbase
                 vm.InitRegistUI(this);
             }
         }
-
+        #endregion
     }
 }
