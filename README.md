@@ -63,6 +63,8 @@ This is about **WPF League of Legends** development information.
 
 ### Database
 > Entity Framework core &nbsp; 👉 [Learn More](https://github.com/devncore/the-easiest-entityframework)
+
+> 추후 yaml으로 대체할 예정입니다.
  
 <br>
 
