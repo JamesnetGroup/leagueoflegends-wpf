@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Lol.DBEntity.Local.Entities.Extend;
 using Lol.DBEntity.Local.Entities.Implements;
 
