@@ -59,6 +59,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lol.Collection", "Lol.Colle
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lol.Profile", "Lol.Profile\Lol.Profile.csproj", "{2C040A44-098B-40F5-8746-3909600E6B12}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AppData", "AppData", "{393FC49D-D9C9-4171-B798-E8813C5A41B9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lol.YamlDatabase", "Lol.YamlDatabase\Lol.YamlDatabase.csproj", "{BD3B50FB-8C00-4ED0-91E7-8ED1AEDBCF34}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -153,6 +157,10 @@ Global
 		{2C040A44-098B-40F5-8746-3909600E6B12}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2C040A44-098B-40F5-8746-3909600E6B12}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2C040A44-098B-40F5-8746-3909600E6B12}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BD3B50FB-8C00-4ED0-91E7-8ED1AEDBCF34}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BD3B50FB-8C00-4ED0-91E7-8ED1AEDBCF34}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BD3B50FB-8C00-4ED0-91E7-8ED1AEDBCF34}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BD3B50FB-8C00-4ED0-91E7-8ED1AEDBCF34}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -181,6 +189,7 @@ Global
 		{F9CD1A05-7835-4B25-9787-2C90C071D4F8} = {A4696F9F-6D53-459D-BAB8-0FF6573C1A84}
 		{22414441-F1C2-4716-A27C-FDB6642EC034} = {A4696F9F-6D53-459D-BAB8-0FF6573C1A84}
 		{2C040A44-098B-40F5-8746-3909600E6B12} = {A4696F9F-6D53-459D-BAB8-0FF6573C1A84}
+		{BD3B50FB-8C00-4ED0-91E7-8ED1AEDBCF34} = {393FC49D-D9C9-4171-B798-E8813C5A41B9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EB8A4E83-8ABD-40CF-B56A-559A49B51254}
