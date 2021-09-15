@@ -94,15 +94,16 @@
 			<Border x:Name="border"
 					Background="Transparent"/>
 		</Grid>
-		<DataTemplate.Triggers>
+        <DataTemplate.Triggers>
+
             <!--TeamFightView-->
-			<DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.CurrentSeq}" Value="1">
-				<Setter TargetName="img" Property="Source" Value="/Lol.Resources;component/Images/lol-teamfight-background.jpg"/>
-				<Setter TargetName="img" Property="RenderOptions.BitmapScalingMode" Value="Fant"/>
-				<Setter TargetName="img" Property="Stretch" Value="UniformToFill"/>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.CurrentSeq}" Value="1">
+                <Setter TargetName="img" Property="Source" Value="/Lol.Resources;component/Images/lol-teamfight-background.jpg"/>
+                <Setter TargetName="img" Property="RenderOptions.BitmapScalingMode" Value="Fant"/>
+                <Setter TargetName="img" Property="Stretch" Value="UniformToFill"/>
                 <Setter TargetName="left" Property="Fill" Value="{StaticResource LGB.LEFT}"/>
             </DataTrigger>
-            
+
             <!--MyShopView-->
             <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.CurrentSeq}" Value="6">
                 <Setter TargetName="border" Property="Background" Value="#06111D"/>
@@ -121,8 +122,8 @@
             <!--Store의 각 SubMenu마다 Backgroud가 동일하기 때문에 ParentSeq로 처리-->
             <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.ParentSeq}" Value="7">
 				<Setter TargetName="border" Property="Background" Value="#070A0B"/>
-			</DataTrigger>
-		</DataTemplate.Triggers>
+            </DataTrigger>
+        </DataTemplate.Triggers>
 	</DataTemplate>
 
 	<!-- MainView -->

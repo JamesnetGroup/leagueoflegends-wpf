@@ -186,6 +186,8 @@ namespace Lol.Main.Local.ViewModel
                     6 => new MyShopView().SetVM(new MyShopViewModel()),
                     _ => new EmptyContent()
                 };
+
+                ParentSeq = 0;
             }
 
             if (!UIs.ContainsKey(key))
