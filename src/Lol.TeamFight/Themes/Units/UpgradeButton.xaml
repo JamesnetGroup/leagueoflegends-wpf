@@ -38,18 +38,16 @@
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type units:UpgradeButton}">
-					<Grid>
-						<Border x:Name="border" Background="Transparent" BorderBrush="#CC091119" BorderThickness="1">
-							<Border x:Name="border2" Background="{StaticResource BTN.BG}" BorderBrush="{StaticResource BTN.BDR}"
-									BorderThickness="2" SnapsToDevicePixels="True" ClipToBounds="True">
-								<Grid Margin="0">
-									<ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 0 1"/>
-									<Border x:Name="border3" Background="Transparent" BorderBrush="#CC091119" BorderThickness="1.5" Margin="0"/>
-								</Grid>
-							</Border>
-						</Border>
-					</Grid>
-					<ControlTemplate.Triggers>
+                    <Border x:Name="border" Background="Transparent" BorderBrush="#CC091119" BorderThickness="1">
+                        <Border x:Name="border2" Background="{StaticResource BTN.BG}" BorderBrush="{StaticResource BTN.BDR}"
+								BorderThickness="2" SnapsToDevicePixels="True" ClipToBounds="True">
+                            <Grid Margin="0">
+                                <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 0 0 1"/>
+                                <Border x:Name="border3" Background="Transparent" BorderBrush="#CC091119" BorderThickness="1.5" Margin="0"/>
+                            </Grid>
+                        </Border>
+                    </Border>
+                    <ControlTemplate.Triggers>
 						<Trigger Property="IsMouseOver" Value="True">
 							<Setter Property="Foreground" Value="#F0E6D2"/>
 							<Setter Property="Background" Value="{StaticResource BTN.BG.OVER}"/>

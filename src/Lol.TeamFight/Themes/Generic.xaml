@@ -8,8 +8,9 @@
 		<ResourceDictionary Source="Lol.TeamFight;component/Themes/Units/SubTitleControl.xaml"/>
 		<ResourceDictionary Source="Lol.TeamFight;component/Themes/Units/UpgradeButton.xaml"/>
 		<ResourceDictionary Source="Lol.TeamFight;component/Themes/Units/QuickButton.xaml"/>
-		<ResourceDictionary Source="Lol.TeamFight;component/Themes/Units/LockButton.xaml"/>
-		<ResourceDictionary Source="Lol.TeamFight;component/Themes/Units/Thumbnails.xaml"/>
+        <ResourceDictionary Source="Lol.TeamFight;component/Themes/Units/LockButton.xaml"/>
+        <ResourceDictionary Source="Lol.TeamFight;component/Themes/Units/ThumbnailButton.xaml"/>
+        <ResourceDictionary Source="Lol.TeamFight;component/Themes/Units/Thumbnails.xaml"/>
 		<ResourceDictionary Source="Lol.TeamFight;component/Themes/Units/ItemInfo.xaml"/>
 		<ResourceDictionary Source="Lol.TeamFight;component/Themes/Units/ItemList.xaml"/>
 		<ResourceDictionary Source="Lol.TeamFight;component/Themes/Views/TeamFightResource.xaml"/>
