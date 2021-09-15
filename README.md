@@ -79,13 +79,3 @@ This is about **WPF League of Legends** development information.
 ![image](https://user-images.githubusercontent.com/74305823/126187790-d6d3332e-694c-4318-b556-66e1df34a4be.png)
 
 ![image](https://user-images.githubusercontent.com/52397976/133266434-97659a57-284d-4207-bfab-ac2684c16f04.png)
-
-<br/>
-  
-***
-  
-## Reference
-TBD...
-
-> [20210820] .NET 6.0 업데이트 완료
-
