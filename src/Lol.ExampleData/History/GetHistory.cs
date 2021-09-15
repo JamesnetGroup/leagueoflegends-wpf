@@ -9,8 +9,10 @@ namespace Lol.ExampleData.History
         // TODO: [Kevin] 필히 변경 해야함
         public static List<HistoryModel> GetHistory()
         {
-            static string imgResource(string name) => $"/Lol.Resources;component/Images/Spell/{name}.png";
-            static string _(string name) => $"/Lol.Resources;component/Images/Items/{name}.png";
+            static string imgResource(string name)
+            {
+                return $"/Lol.Resources;component/Images/Spell/{name}.png";
+            }
 
             List<HistoryModel> source = new()
             {
