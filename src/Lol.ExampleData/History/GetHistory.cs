@@ -11,7 +11,7 @@ namespace Lol.ExampleData.History
         {
             static string imgResource(string name)
             {
-                return $"/Lol.Resources;component/Images/Spell/{name}.png";
+                return $"/Lol.Resources;component/Images/Spell/{name}.jpg";
             }
 
             List<HistoryModel> source = new()
