@@ -1,10 +1,12 @@
-﻿using Lol.Foundation.Riotbase;
-using System.Windows.Input;
+﻿using System.Windows.Input;
+using Lol.Foundation.Riotbase;
 
 namespace Lol.Controls.Primitives
 {
     public class BaseWindow : RiotWindow
     {
+        #region OnApplyTemplate
+
         public override void OnApplyTemplate()
         {
             base.OnApplyTemplate();
@@ -14,6 +16,9 @@ namespace Lol.Controls.Primitives
                 bar.MouseDown += Bar_MouseDown;
             }
         }
+        #endregion
+
+        #region Bar_MouseDown
 
         private void Bar_MouseDown(object sender, MouseButtonEventArgs e)
         {
@@ -22,5 +27,6 @@ namespace Lol.Controls.Primitives
                 GetWindow(this).DragMove();
             }
         }
+        #endregion
     }
 }
