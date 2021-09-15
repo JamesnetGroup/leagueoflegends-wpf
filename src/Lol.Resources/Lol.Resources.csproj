@@ -32,6 +32,8 @@
     <None Remove="Images\lol-thumb-05.png" />
     <None Remove="Images\profile-01.png" />
 	<None Remove="Images\bg-winningteam.png" />
+	<None Remove="Images\Spell\flash.jpg" />
+	<None Remove="Images\Spell\ignite.jpg" />
     <None Remove="Images\Square\0.png" />
     <None Remove="Images\Square\1.png" />
     <None Remove="Images\Square\10.png" />
@@ -161,6 +163,8 @@
     <Resource Include="Images\lol-thumb-05.png" />
     <Resource Include="Images\profile-01.png" />
 	<Resource Include="Images\bg-winningteam.png" />
+	<Resource Include="Images\Spell\flash.jpg" />
+	<Resource Include="Images\Spell\ignite.jpg" />
     <Resource Include="Images\Square\0.png" />
     <Resource Include="Images\Square\1.png" />
     <Resource Include="Images\Square\10.png" />
