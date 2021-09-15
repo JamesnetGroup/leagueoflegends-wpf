@@ -1,7 +1,7 @@
-﻿using Lol.Data.History;
+﻿using System.Collections.Generic;
+using Lol.Data.History;
 using Lol.ExampleData.History;
 using Lol.Foundation.Mvvm;
-using System.Collections.Generic;
 
 namespace Lol.Profile.Local.ViewModels
 {
@@ -14,7 +14,6 @@ namespace Lol.Profile.Local.ViewModels
 
         #region Constructor
 
-        // TODO: [James] 생성자 경고알림 왜뜨는건지...?
         public HistoryViewModel()
         {
             Historys = ExamHistory.GetHistory();
