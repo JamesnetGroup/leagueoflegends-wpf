@@ -7,18 +7,9 @@ namespace Lol.Profile.Local.ViewModels
 {
     public class HistoryViewModel : ObservableObject
     {
-        #region Variables
-
-        private List<HistoryModel> _historys;
-        #endregion
-
         #region Historys
 
-        public List<HistoryModel> Historys
-        {
-            get => _historys; 
-            set { _historys = value; OnPropertyChanged(); }
-        }
+        public List<HistoryModel> Historys { get; set; }
         #endregion
 
         #region Constructor

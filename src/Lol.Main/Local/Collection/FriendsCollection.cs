@@ -14,7 +14,7 @@ namespace Lol.Main.Local.Collection
 
         #region OfflineFriendsCount
 
-        public int OfflineFriendsCount => OfflineList.Children.Count();
+        public int OfflineFriendsCount => OfflineList.Children.Count;
         #endregion
 
         #region TotalFriendsCount

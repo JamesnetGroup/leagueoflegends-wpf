@@ -1,7 +1,7 @@
-﻿using Lol.Foundation.Mvvm;
+﻿using System.Windows.Input;
+using Lol.Foundation.Mvvm;
 using Lol.Foundation.Riotbase;
 using Lol.Settings.InGame.UI.Units;
-using System.Windows.Input;
 using wf = System.Windows.Forms;
 
 namespace Lol.Settings.InGame.Local.ViewModels
@@ -10,12 +10,12 @@ namespace Lol.Settings.InGame.Local.ViewModels
     {
         #region ReplayPath
 
-        public string ReplayPath => RiotApp.REPLAY_PATH;
+        public string ReplayPath { get; set; }
         #endregion
 
         #region HighlightPath
 
-        public string HighlightPath => RiotApp.HIGHLIGHT_PATH;
+        public string HighlightPath { get; set; }
         #endregion
 
         #region ICommand
@@ -28,6 +28,8 @@ namespace Lol.Settings.InGame.Local.ViewModels
         public ReplayViewModel()
         {
             FindCommand = new RelayCommand<object>(ChangePath);
+            ReplayPath = RiotApp.REPLAY_PATH;
+            HighlightPath = RiotApp.HIGHLIGHT_PATH;
         }
         #endregion
 
@@ -37,6 +39,7 @@ namespace Lol.Settings.InGame.Local.ViewModels
         {
             if (obj is FindButton btn)
             {
+                // TODO: [James] 윈폼 DLL을 사용하지 않고도 해결 방법이 있는지 확인 필요.
                 wf.FolderBrowserDialog folderBrowser = new()
                 {
                     SelectedPath = btn.SavePath
