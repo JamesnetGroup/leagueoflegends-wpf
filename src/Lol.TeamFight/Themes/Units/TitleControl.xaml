@@ -16,6 +16,22 @@
 			</Setter.Value>
 		</Setter>
 	</Style>
+
+    <Style TargetType="{x:Type TextBlock}" x:Key="TXB.TITLE">
+        <Setter Property="Grid.Column" Value="1"/>
+        <Setter Property="Text" Value="FATES PASS"/>
+        <Setter Property="FontSize" Value="38"/>
+        <Setter Property="FontFamily" Value="Friz Quadrata Std"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Foreground" Value="#F0E6D2"/>
+        <Setter Property="Margin" Value="-2 15 0 7"/>
+    </Style>
+
+    <Style TargetType="{x:Type Border}" x:Key="BDR.SPLIT">
+        <Setter Property="Grid.ColumnSpan" Value="2"/>
+        <Setter Property="BorderBrush" Value="#BC9D6B"/>
+        <Setter Property="BorderThickness" Value="0 0 0 2"/>
+    </Style>
 	
 	<Style TargetType="{x:Type units:TitleControl}">
 		<Setter Property="Margin" Value="20 30 0 0"/>
@@ -29,8 +45,8 @@
 							<ColumnDefinition Width="*"/>
 						</Grid.ColumnDefinitions>
 						<ctrls:RiotIcon Style="{StaticResource ICON.TICKET}"/>
-						<TextBlock Grid.Column="1" Text="FATES PASS" FontSize="38" FontFamily="Friz Quadrata Std" FontWeight="Bold" Foreground="#F0E6D2" Margin="-2 15 0 7"/>
-						<Border Grid.ColumnSpan="2" BorderBrush="#BC9D6B" BorderThickness="0 0 0 2"/>
+						<TextBlock Style="{StaticResource TXB.TITLE}"/>
+						<Border Style="{StaticResource BDR.SPLIT}"/>
 					</Grid>
 				</ControlTemplate>
 			</Setter.Value>
