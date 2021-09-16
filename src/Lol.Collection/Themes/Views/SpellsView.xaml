@@ -6,8 +6,12 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type views:SpellsView}">
-                    <Grid>
-                        <units:SpellListBox ItemsSource="{Binding Spells}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <Grid Margin="36 56 0 76">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="6*"/>
+                            <RowDefinition Height="4*"/>
+                        </Grid.RowDefinitions>
+                        <units:SpellListBox ItemsSource="{Binding Spells}" VerticalAlignment="Top" HorizontalAlignment="Left" />
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
