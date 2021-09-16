@@ -4,7 +4,7 @@ WPF를 통해 만든 리그오브레전드입니다. 그리고 GitHub를 통해 
 <br>
 
 ## 만든이 소개
-[DevNcore 오픈소스 팀](https://github.com/devncore/devncore)
+[DevNcore 오픈소스 팀](https://github.com/devncore/devncore)이 리드하고 있습니다.
 
 <br>
 
