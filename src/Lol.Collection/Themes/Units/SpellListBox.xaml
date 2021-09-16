@@ -5,17 +5,22 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListBoxItem}">
-                    <StackPanel>
-                        <Border x:Name="bd1" BorderBrush="#323438" BorderThickness="1">
-                            <Image x:Name="img1" Source="{Binding ImageSource}" Height="64" Margin="1"/>
-                        </Border>
-                        <TextBlock x:Name="text1" Text="{Binding Name}" HorizontalAlignment="Center" Foreground="#A09B8C"/>
+                    <StackPanel Margin="0 8 46 0">
+                        <Grid>
+                            <Border x:Name="bd1" BorderBrush="#323438" BorderThickness="1">
+                                <Image x:Name="img1" Source="{Binding ImageSource}" Height="64" Margin="1"/>
+                            </Border>
+                            <Border x:Name="bd2" BorderBrush="#795B28" BorderThickness="2" Visibility="Collapsed">
+                                
+                            </Border>
+                        </Grid>
+                        <TextBlock x:Name="text1" Text="{Binding Name}" HorizontalAlignment="Center" Foreground="#A09B8C" Margin="0 8 0 0"/>
                     </StackPanel>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsSelected" Value="True">
                             <Setter TargetName="text1" Property="Foreground" Value="#F0E6D2"/>
-                            <Setter TargetName="bd1"  Property="BorderBrush" Value="#795B28"/>
-                            <Setter TargetName="bd1"  Property="BorderThickness" Value="2"/>
+                            <Setter TargetName="bd2"  Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="bd1"  Property="BorderThickness" Value="1"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
