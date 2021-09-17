@@ -66,6 +66,8 @@ This is about **WPF League of Legends** development information.
   - `Leagueoflegends.exe`
 </details>
 
+<br>
+
 ### Database
 > Entity Framework core &nbsp; 👉 [Learn More](https://github.com/devncore/the-easiest-entityframework)
 
