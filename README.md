@@ -70,7 +70,7 @@ WPF를 통해 만든 리그오브레전드입니다. 그리고 GitHub를 통해 
 ### Database
 > Entity Framework core &nbsp; 👉 [Learn More](https://github.com/devncore/the-easiest-entityframework)
 
-> 추후 yaml으로 대체할 예정입니다.
+_추후 yaml으로 대체할 예정입니다._
  
 <br>
 
