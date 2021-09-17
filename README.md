@@ -17,8 +17,7 @@ WPF를 통해 만든 리그오브레전드입니다. 그리고 GitHub를 통해 
 <br>
 
 ## 개발 정보
-This is about **WPF League of Legends** development information.
-   
+
 > ✔️ .NET 6.0  
 > ✔️ C# 9.0  
 > ✔️ [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/ko/vs/preview/vs2022/)
