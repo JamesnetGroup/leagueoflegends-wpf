@@ -12,6 +12,7 @@
     <None Remove="Images\bg-main-03.png" />
     <None Remove="Images\bg-main-04.png" />
     <None Remove="Images\bg-main-05.png" />
+    <None Remove="Images\bg-spell.png" />
     <None Remove="Images\card-kaisa.png" />
     <None Remove="Images\ico-14.png" />
     <None Remove="Images\icon-menu-selected.png" />
@@ -142,6 +143,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\bg-spell.png" />
     <Resource Include="Images\Spell\exhaust.png" />
     <Resource Include="Images\Spell\flash.png" />
     <Resource Include="Images\Spell\heal.png" />
