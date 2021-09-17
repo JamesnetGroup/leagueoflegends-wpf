@@ -8,9 +8,12 @@
                     <StackPanel Margin="0 8 46 0">
                         <Grid>
                             <Border x:Name="bd1" BorderBrush="#323438" BorderThickness="1">
-                                <Image x:Name="img1" Source="{Binding ImageSource}" Height="64" Margin="1"/>
+                                <Grid>
+                                    <Image x:Name="img1" Source="{Binding ImageSource}" Height="64" Margin="1"/>
+                                    <Border x:Name="bd2" Background="Black" Opacity="0.3"/>
+                                </Grid>
                             </Border>
-                            <Border x:Name="bd2" BorderBrush="#795B28" BorderThickness="2" Visibility="Collapsed">
+                            <Border x:Name="bd3" BorderBrush="#795B28" BorderThickness="2" Visibility="Collapsed">
                                 
                             </Border>
                         </Grid>
@@ -19,8 +22,11 @@
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsSelected" Value="True">
                             <Setter TargetName="text1" Property="Foreground" Value="#F0E6D2"/>
-                            <Setter TargetName="bd2"  Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="bd3"  Property="Visibility" Value="Visible"/>
                             <Setter TargetName="bd1"  Property="BorderThickness" Value="1"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="bd2" Property="Opacity" Value="0"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

@@ -16,6 +16,12 @@
 		<GradientStop Color="#00000000" Offset="1"/>
 	</LinearGradientBrush>
 
+    <LinearGradientBrush x:Key="BG.OPACITY" StartPoint="0 0.5" EndPoint="1, 0.5">
+        <GradientStop Color="#ee0C1616" Offset="0.0" />
+        <GradientStop Color="#550C1616" Offset="0.5" />
+        <GradientStop Color="#330C1616" Offset="1.0" />
+    </LinearGradientBrush>
+
 	<LinearGradientBrush x:Key="LGB.LEFT" StartPoint="0 0.5" EndPoint="1 0.5">
 		<GradientStop Color="#9A000000" Offset="0.0" />
 		<GradientStop Color="#33000000" Offset="0.5" />
@@ -118,6 +124,16 @@
                 <Setter TargetName="border" Property="Background" Value="#091215"/>
                 <Setter TargetName="border" Property="Opacity" Value="0.9"/>
 			</DataTrigger>
+
+
+            <!--Collection/SpellView-->
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.CurrentSeq}" Value="20">
+                <Setter TargetName="img" Property="Source" Value="/Lol.Resources;component/Images/bg-spell.png"/>
+                <Setter TargetName="img" Property="RenderOptions.BitmapScalingMode" Value="Fant"/>
+                <Setter TargetName="img" Property="Stretch" Value="UniformToFill"/>
+                <Setter TargetName="left" Property="Fill" Value="{StaticResource LGB.LEFT}"/>
+                <Setter TargetName="border" Property="Background" Value="{StaticResource BG.OPACITY}"/>
+            </DataTrigger>
 
             <!--Store의 각 SubMenu마다 Backgroud가 동일하기 때문에 ParentSeq로 처리-->
             <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.ParentSeq}" Value="7">
