@@ -74,8 +74,6 @@ WPF를 통해 만든 리그오브레전드입니다. 그리고 GitHub를 통해 
  
 <br>
 
-*** 
-
 ## 스크린샷 
 
 ![image](https://user-images.githubusercontent.com/52397976/124482513-526ba380-dde4-11eb-9b31-c3c1199987b6.png)
