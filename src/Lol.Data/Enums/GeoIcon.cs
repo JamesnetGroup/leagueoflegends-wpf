@@ -52,6 +52,7 @@
         ChevronUp,
         ChevronDown,
         ChevronRight,
-        Unfold
+        Unfold,
+        Download
     }
 }

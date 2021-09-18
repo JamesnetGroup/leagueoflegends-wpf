@@ -19,8 +19,8 @@
 										   Margin="0 14 66 0"/>
                         <Grid Grid.Row="1" Margin="0 20 50 0">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="2*"/>
-                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="760"/>
+                                <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
                             <units:HistoryListBox/>
                         </Grid>
