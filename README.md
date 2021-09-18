@@ -26,6 +26,13 @@ WPF를 통해 만든 리그오브레전드입니다. 그리고 GitHub를 통해 
 
 ## 프로젝트 구조
  
+ - AppData
+ - Based
+ - Implement
+ - Material
+ - Presentation
+ - Leagueoflegends
+ 
 <details>
   <summary><b> 📁 01. DB </b></summary>
   
