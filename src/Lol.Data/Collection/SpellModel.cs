@@ -4,6 +4,8 @@
     {
         public string Name { get; set; }
         public string ImageSource { get; set; }
+        public string SpellName{ get; set; }
+        public string Level { get; set; }
 
         //public SpellModel(string name, string image_source)
         //{
