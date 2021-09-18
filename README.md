@@ -26,54 +26,13 @@ WPF를 통해 만든 리그오브레전드입니다. 그리고 GitHub를 통해 
 
 ## 프로젝트 구조
  
- - 📁 AppData
- - 📁 Based
- - 📁 Implement
- - 📁 Material
- - 📁 Presentation
- - Leagueoflegends
+- 📁 AppData
+- 📁 Based
+- 📁 Implement
+- 📁 Material
+- 📁 Presentation
+- Leagueoflegends
  
- <br /> 
- 
-<details>
-  <summary><b> 📁 01. DB </b></summary>
-  
-  - `Lol.DBEntity.dll`
-</details>
-
-<details>
-  <summary><b> 📁 02. BASE </b></summary>
-  
-  #### &nbsp;&nbsp;&nbsp; `Basement`  
-  - `Lol.Data.dll`   
-  - `Lol.Foundation.dll`
-  
-  #### &nbsp;&nbsp;&nbsp; `Implement`  
-  - `Lol.Controls.dll`   
-  - `Lol.LayoutSupport.dll`
-    
-  #### &nbsp;&nbsp;&nbsp; `Support`
-  - `Lol.Converter.dll`   
-  - `Lol.Resources.dll`
-</details>
-
-<details>
-  <summary><b> 📁 03. UI </b></summary>
-  
-  #### &nbsp;&nbsp;&nbsp; `Views`  
-  - `Lol.Friends.dll`   
-  - `Lol.Settings.dll`
-  
-  #### &nbsp;&nbsp;&nbsp; `Windows` 
-  - `Lol.Main.dll`   
-</details>
-
-<details>
-  <summary><b> 📁 04. APP </b></summary>
-  
-  - `Leagueoflegends.exe`
-</details>
-
 <br>
 
 ### Database
