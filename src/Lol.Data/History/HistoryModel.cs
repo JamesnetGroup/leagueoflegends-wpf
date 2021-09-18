@@ -28,6 +28,9 @@ namespace Lol.Data.History
         public string Item5 { get; set; }
         public string Item6 { get; set; }
         public string Item7 { get; set; }
+        public string Percent { get; set; }
+        public double ActivePercent { get; set; }
+        public string Job { get; set; }
 
 
 

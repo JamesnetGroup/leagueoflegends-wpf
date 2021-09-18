@@ -3,6 +3,7 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Lol.Profile;component/Themes/Units/PlayChampListBox.xaml"/>
         <ResourceDictionary Source="/Lol.Profile;component/Themes/Units/RecentChampion.xaml"/>
+        <ResourceDictionary Source="/Lol.Profile;component/Themes/Units/RecentActivityListBox.xaml"/>
         <ResourceDictionary Source="/Lol.Profile;component/Themes/Units/HistoryListBox.xaml"/>
         <ResourceDictionary Source="/Lol.Profile;component/Themes/Units/ItemListBox.xaml"/>
         <ResourceDictionary Source="/Lol.Profile;component/Themes/Views/HistoryView.xaml"/>
