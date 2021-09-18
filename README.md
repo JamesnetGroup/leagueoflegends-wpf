@@ -1,14 +1,33 @@
-## WPF 리그오브레전드
-WPF를 통해 만든 리그오브레전드입니다. 그리고 GitHub를 통해 모두에게 제공하고 있습니다.
+<div align=center>
+  <a href="https://www.leagueoflegends.com/en-us/">
+    <img src="https://user-images.githubusercontent.com/74305823/133882864-6fc75ced-e297-41f9-bdbf-e779b57c8ff3.png" width="200"/>
+  </a>
+ 
+  <h2>WPF Leagueoflegends</h2>
+  <sub>WPF로 만든 Leagueoflegends입니다.</sub> 
+ 
+  <br/>
+  <br/>
+ 
+  <sub align="center">
+    이 레포지토리는 DevNcore팀이 관리하고 있습니다.
+  <br />
+  <a href="https://github.com/devncore/devncore"><strong>더 알아보기 »</strong></a>
+  </sub>
+ 
+  <br />
+  <br />
+ 
+  <p align="center">
+   <a href="https://github.com/devncore/leagueoflegends/stargazers"><img src="https://img.shields.io/github/stars/devncore/leagueoflegends" alt="Github Stars"></a>
+   <img src="https://img.shields.io/github/license/devncore/leagueoflegends" alt="License">
+   <a href="https://github.com/devncore/leagueoflegends/pulse"><img src="https://img.shields.io/github/commit-activity/m/devncore/leagueoflegends" alt="Commits-per-month"></a>
+ </p>
+</div>
 
 <br />
 
-## 만든이 소개
-[DevNcore 오픈소스 팀](https://github.com/devncore/devncore)이 리드하고 있습니다.
-
-<br />
-
-## 이 오픈소스의 장점
+## 이 오픈소스의 특징
 - WPF 프로젝트를 올바르게 구현하는 방법을 학습할 수 있습니다.
 - **리그오브레전드**와 같은 최상위 디자인 영역의 표현을 상용 컴포넌트에 의지하지 않고 직접 구현하는 방법에 대해 설명합니다.
 - MVVM 패턴을 직접 구현하여 WPF에 대해 자세하게 이해 및 학습할 수 있습니다.

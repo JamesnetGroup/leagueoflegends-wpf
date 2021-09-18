@@ -9,10 +9,12 @@ namespace Lol.Collection.Local.ViewModel
     {
         public List<SpellModel> Spells { get; set; }
 
+        #region Constructor
 
         public SpellsViewModel()
         {
             Spells = ExamSpell.GetSpell();
         }
+        #endregion
     }
 }

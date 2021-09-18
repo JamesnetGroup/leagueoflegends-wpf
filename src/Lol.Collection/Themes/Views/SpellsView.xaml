@@ -37,6 +37,7 @@
                             <TextBlock Grid.Row="6" Text="챔피언이 10초 동안 유닛과 충돌하지 않게 되며 챔피언 레벨에" Foreground="#9C9889"/>
                             <TextBlock Grid.Row="7" Text="재사용 대기시간: 210초" Foreground="#9C9889"/>
                         </Grid>
+                        <units:SpellListBox/>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
