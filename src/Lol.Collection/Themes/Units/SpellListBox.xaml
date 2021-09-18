@@ -10,7 +10,7 @@
                             <Border x:Name="bd1" BorderBrush="#323438" BorderThickness="1">
                                 <Grid>
                                     <Image x:Name="img1" Source="{Binding ImageSource}" Height="64" Margin="1"/>
-                                    <Border x:Name="bd2" Background="Black" Opacity="0.3"/>
+                                    <Border x:Name="bd2" Background="Black" Opacity="0.2"/>
                                 </Grid>
                             </Border>
                             <Border x:Name="bd3" BorderBrush="#795B28" BorderThickness="2" Visibility="Collapsed">
