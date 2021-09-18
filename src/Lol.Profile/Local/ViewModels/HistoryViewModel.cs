@@ -11,9 +11,15 @@ namespace Lol.Profile.Local.ViewModels
 
         public List<HistoryModel> Historys { get; set; }
         #endregion
-        #region Historys
+
+        #region PlayChampions
 
         public List<HistoryModel> PlayChampions { get; set; }
+        #endregion
+
+        #region Activitys
+
+        public List<HistoryModel> Activitys { get; set; }
         #endregion
 
         #region Constructor
@@ -22,6 +28,7 @@ namespace Lol.Profile.Local.ViewModels
         {
             Historys = ExamHistory.GetHistory();
             PlayChampions = ExamHistory.GetPlayChampions();
+            Activitys = ExamHistory.GetActivitys();
         }
         #endregion
 
