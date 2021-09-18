@@ -7,14 +7,24 @@ namespace Lol.Collection.Local.ViewModel
 {
     public class SpellsViewModel : ObservableObject
     {
-        public List<SpellModel> Spells { get; set; }
+        #region Variables 
+        
         private SpellModel _CurrentSpell;
+        #endregion
+
+        #region Spells
+        
+        public List<SpellModel> Spells { get; set; }
+        #endregion
+
+        #region CurrentSpell
 
         public SpellModel CurrentSpell
         {
             get { return _CurrentSpell; }
             set { _CurrentSpell = value;OnPropertyChanged(); }
         }
+        #endregion
 
         #region Constructor
 
