@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows;
 using Lol.Foundation.Riotcore;
 
 namespace Lol.Foundation.Mvvm
@@ -14,9 +15,15 @@ namespace Lol.Foundation.Mvvm
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
         }
 
+        protected virtual void OnLoaded(Window window)
+        { 
+            //   asdasd
+        }
+
         internal void InitRegistUI(IRiotUI _view)
         {
             View = _view;
+            OnLoaded(View as Window);
         }
     }
 }

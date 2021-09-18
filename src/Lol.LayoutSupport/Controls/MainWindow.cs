@@ -1,5 +1,6 @@
 ﻿using Lol.Controls.Primitives;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace Lol.LayoutSupport.Controls
 {
@@ -19,6 +20,24 @@ namespace Lol.LayoutSupport.Controls
         static MainWindow()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(MainWindow), new FrameworkPropertyMetadata(typeof(MainWindow)));
+        }
+        #endregion
+
+        #region Variables
+
+        public Image BackgroundImage;
+        #endregion
+
+        #region OnApplyTemplate
+
+        public override void OnApplyTemplate()
+        {
+            base.OnApplyTemplate();
+
+            if (GetTemplateChild("PART_BackgroundImage") is Image img)
+            {
+                BackgroundImage = img;
+            }
         }
         #endregion
 
