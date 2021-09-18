@@ -66,7 +66,7 @@
             <Setter.Value>
                 <ControlTemplate>
                     <Border x:Name="border1" Width="34" Height="34" CornerRadius="20" Background="#1E2328"  Grid.Column="5"
-								BorderBrush="{StaticResource BTN.BDR}" BorderThickness="3" Margin="0 0 0 0">
+								BorderBrush="{StaticResource BTN.BDR}" BorderThickness="2.5" Margin="0 0 0 0">
                         <Border x:Name="border2" Background="Transparent" BorderBrush="#14171A" BorderThickness="1" CornerRadius="20">
                             <ctrls:RiotIcon x:Name="icon" Fill="#CDBE91" Width="20" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center" IconType="Download"/>
                         </Border>

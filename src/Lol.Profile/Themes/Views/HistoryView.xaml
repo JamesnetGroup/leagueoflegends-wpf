@@ -23,6 +23,9 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
                             <units:HistoryListBox/>
+                            <StackPanel Grid.Column="1">
+                                <units:RecentChampion/>
+                            </StackPanel>
                         </Grid>
                     </Grid>
                 </ControlTemplate>
