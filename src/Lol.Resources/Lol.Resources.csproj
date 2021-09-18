@@ -339,4 +339,8 @@
     </Page>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Images\Concepts\" />
+  </ItemGroup>
+
 </Project>
