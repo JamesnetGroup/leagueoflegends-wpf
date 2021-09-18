@@ -16,4 +16,15 @@
     <ProjectReference Include="..\Lol.LayoutSupport\Lol.LayoutSupport.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Page Update="Themes\Units\PlayChampListBox.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\RecentChampion.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
 </Project>
