@@ -11,12 +11,17 @@ namespace Lol.Profile.Local.ViewModels
 
         public List<HistoryModel> Historys { get; set; }
         #endregion
+        #region Historys
+
+        public List<HistoryModel> PlayChampions { get; set; }
+        #endregion
 
         #region Constructor
 
         public HistoryViewModel()
         {
             Historys = ExamHistory.GetHistory();
+            PlayChampions = ExamHistory.GetPlayChampions();
         }
         #endregion
 

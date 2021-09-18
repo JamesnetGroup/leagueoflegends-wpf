@@ -6,13 +6,14 @@ namespace Lol.ExampleData.History
 {
     public partial class ExamHistory
     {
+        static string imgResource(string folder, string name)
+        {
+            return $"/Lol.Resources;component/Images/{folder}/{name}.png";
+        }
+
         // TODO: [Kevin] 필히 변경 해야함
         public static List<HistoryModel> GetHistory()
         {
-            static string imgResource(string folder, string name)
-            {
-                return $"/Lol.Resources;component/Images/{folder}/{name}.png";
-            }
 
             List<HistoryModel> source = new()
             {
