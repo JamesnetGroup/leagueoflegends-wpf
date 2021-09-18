@@ -12,10 +12,5 @@ namespace Lol.Collection.UI.Units
             DefaultStyleKeyProperty.OverrideMetadata(typeof(SpellListBox), new FrameworkPropertyMetadata(typeof(SpellListBox)));
         }
         #endregion
-
-        
-
-        // 트리거 발생시 값을 넣어줌
-        
     }
 }
