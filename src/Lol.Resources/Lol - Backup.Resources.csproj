@@ -16,6 +16,13 @@
     <None Remove="Images\card-kaisa.png" />
     <None Remove="Images\ico-14.png" />
     <None Remove="Images\icon-menu-selected.png" />
+    <None Remove="Images\Items\potion.png" />
+    <None Remove="Images\Items\quicksilver.png" />
+    <None Remove="Images\Items\rabadon.png" />
+    <None Remove="Images\Items\shoose.png" />
+    <None Remove="Images\Items\solari.png" />
+    <None Remove="Images\Items\warmog.png" />
+    <None Remove="Images\Items\zhonya.png" />
     <None Remove="Images\lol-blue-essence.png" />
     <None Remove="Images\lol-logo-03.png" />
     <None Remove="Images\lol-rp-icon.png" />
@@ -33,6 +40,12 @@
     <None Remove="Images\lol-thumb-05.png" />
     <None Remove="Images\profile-01.png" />
 	<None Remove="Images\bg-winningteam.png" />
+	<None Remove="Images\Spell\exhaust.png" />
+	<None Remove="Images\Spell\flash.png" />
+	<None Remove="Images\Spell\heal.png" />
+	<None Remove="Images\Spell\ignite.png" />
+	<None Remove="Images\Spell\shield.png" />
+	<None Remove="Images\Spell\speed.png" />
     <None Remove="Images\Square\0.png" />
     <None Remove="Images\Square\1.png" />
     <None Remove="Images\Square\10.png" />
@@ -138,6 +151,19 @@
 
   <ItemGroup>
     <Resource Include="Images\bg-spell.png" />
+    <Resource Include="Images\Items\potion.png" />
+    <Resource Include="Images\Items\quicksilver.png" />
+    <Resource Include="Images\Items\rabadon.png" />
+    <Resource Include="Images\Items\shoose.png" />
+    <Resource Include="Images\Items\solari.png" />
+    <Resource Include="Images\Items\warmog.png" />
+    <Resource Include="Images\Items\zhonya.png" />
+    <Resource Include="Images\Spell\exhaust.png" />
+    <Resource Include="Images\Spell\flash.png" />
+    <Resource Include="Images\Spell\heal.png" />
+    <Resource Include="Images\Spell\ignite.png" />
+    <Resource Include="Images\Spell\shield.png" />
+    <Resource Include="Images\Spell\speed.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -268,42 +294,6 @@
 	<Resource Include="Images\WinIcons\7.png" />
 	<Resource Include="Images\WinIcons\8.png" />
 	<Resource Include="Images\WinIcons\9.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Images\Spell\barrier.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Images\Spell\boost.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Images\Spell\dot.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Images\Spell\exhaust.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Images\Spell\flash.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Images\Spell\haste.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Images\Spell\heal.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Images\Spell\mana.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Images\Spell\smite.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Images\Spell\snowball.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Images\Spell\teleport.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
   <ItemGroup>
