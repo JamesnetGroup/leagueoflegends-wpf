@@ -44,6 +44,7 @@
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsSelected" Value="True">
                             <Setter Property="Foreground" Value="#F0E6D2"/>
+                            <Setter TargetName="img" Property="Opacity" Value="1"/>
                             <Setter TargetName="bd" Property="Visibility" Value="Visible"/>
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="True">
