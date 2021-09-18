@@ -12,6 +12,31 @@
                             <RowDefinition Height="4*"/>
                         </Grid.RowDefinitions>
                         <units:SpellListBox ItemsSource="{Binding Spells}" VerticalAlignment="Top" HorizontalAlignment="Left" />
+                        <Grid Grid.Row="1" Margin="0 15 0 0 ">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="0.5*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="2*"/>
+                                <RowDefinition Height="1*"/>
+                                <RowDefinition Height="0.5*"/>
+                                <RowDefinition Height="0.5*"/>
+                                <RowDefinition Height="0.5*"/>
+                                <RowDefinition Height="0.5*"/>
+                                <RowDefinition Height="0.5*"/>
+                                <RowDefinition Height="0.5*"/>
+                                <RowDefinition Height="1*"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Row="0" Text="￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣" Foreground="#474C45"/>
+                            <TextBlock Grid.Row="1" Text="유체화" Foreground="#F0E6D2" Margin="0 10 0 0"/>
+                            <TextBlock Grid.Row="2" Text="소환사 레벨 1" Foreground="#9C9889" Margin="0 2 0 0"/>
+                            <TextBlock Grid.Row="3" Text="유체화" Foreground="#9C9889"/>
+                            <TextBlock Grid.Row="4" Text="유체화" Foreground="#9C9889"/>
+                            <TextBlock Grid.Row="5" Text="유체화" Foreground="#9C9889"/>
+                            <TextBlock Grid.Row="6" Text="챔피언이 10초 동안 유닛과 충돌하지 않게 되며 챔피언 레벨에" Foreground="#9C9889"/>
+                            <TextBlock Grid.Row="6" Text="챔피언이 10초 동안 유닛과 충돌하지 않게 되며 챔피언 레벨에" Foreground="#9C9889"/>
+                            <TextBlock Grid.Row="6" Text="챔피언이 10초 동안 유닛과 충돌하지 않게 되며 챔피언 레벨에" Foreground="#9C9889"/>
+                            <TextBlock Grid.Row="7" Text="재사용 대기시간: 210초" Foreground="#9C9889"/>
+                        </Grid>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
