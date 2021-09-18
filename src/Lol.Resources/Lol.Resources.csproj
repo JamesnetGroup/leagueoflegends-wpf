@@ -16,6 +16,13 @@
     <None Remove="Images\card-kaisa.png" />
     <None Remove="Images\ico-14.png" />
     <None Remove="Images\icon-menu-selected.png" />
+    <None Remove="Images\Items\potion.png" />
+    <None Remove="Images\Items\quicksilver.png" />
+    <None Remove="Images\Items\rabadon.png" />
+    <None Remove="Images\Items\shoose.png" />
+    <None Remove="Images\Items\solari.png" />
+    <None Remove="Images\Items\warmog.png" />
+    <None Remove="Images\Items\zhonya.png" />
     <None Remove="Images\lol-blue-essence.png" />
     <None Remove="Images\lol-logo-03.png" />
     <None Remove="Images\lol-rp-icon.png" />
@@ -40,6 +47,7 @@
 	<None Remove="Images\Spell\flash.png" />
 	<None Remove="Images\Spell\haste.png" />
 	<None Remove="Images\Spell\heal.png" />
+	<None Remove="Images\Spell\ignite.png" />
 	<None Remove="Images\Spell\mana.png" />
 	<None Remove="Images\Spell\smite.png" />
 	<None Remove="Images\Spell\snowball.png" />
@@ -148,6 +156,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\Items\potion.png" />
+    <Resource Include="Images\Items\quicksilver.png" />
+    <Resource Include="Images\Items\rabadon.png" />
+    <Resource Include="Images\Items\shoose.png" />
+    <Resource Include="Images\Items\solari.png" />
+    <Resource Include="Images\Items\warmog.png" />
+    <Resource Include="Images\Items\zhonya.png" />
     <Resource Include="Images\Spell\barrier.png">
       <CopyToOutputDirectory></CopyToOutputDirectory>
     </Resource>
@@ -201,6 +216,7 @@
 	<Resource Include="Images\Spell\heal.png">
 	  <CopyToOutputDirectory></CopyToOutputDirectory>
 	</Resource>
+	<Resource Include="Images\Spell\ignite.png" />
 	<Resource Include="Images\Spell\mana.png">
 	  <CopyToOutputDirectory></CopyToOutputDirectory>
 	</Resource>
