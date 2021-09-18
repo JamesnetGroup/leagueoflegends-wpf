@@ -11,7 +11,7 @@
                             <RowDefinition Height="6*"/>
                             <RowDefinition Height="4*"/>
                         </Grid.RowDefinitions>
-                        <units:SpellListBox ItemsSource="{Binding Spells}" VerticalAlignment="Top" HorizontalAlignment="Left" />
+                        <units:SpellListBox/>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
