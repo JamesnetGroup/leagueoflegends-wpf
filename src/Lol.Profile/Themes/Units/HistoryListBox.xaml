@@ -56,12 +56,15 @@
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
                                 <Grid>
-                                    <Border x:Name="bd3"
+                                    <Ellipse x:Name="bd3"
                                             Height="60" Width="60"
-                                            CornerRadius="300"
-                                            BorderBrush="{StaticResource BDR.CHAMP}" 
-                                            BorderThickness="2" 
-                                            VerticalAlignment="Center"/>
+                                            Stroke="{StaticResource BDR.CHAMP}" 
+                                            StrokeThickness="2" 
+                                            VerticalAlignment="Center">
+                                        <Ellipse.Fill>
+                                            <ImageBrush ImageSource="{Binding Champion}" Stretch="Fill"></ImageBrush>
+                                        </Ellipse.Fill>
+                                    </Ellipse>
                                     <Border HorizontalAlignment="Right" VerticalAlignment="Bottom"
                                             Height="22" Width="22"
                                             CornerRadius="300"
@@ -69,7 +72,6 @@
                                             Background="{StaticResource BG.LEVEL}" 
                                             BorderBrush="{StaticResource BDR.LEVEL}"
                                             Margin="0 0 -5 5">
-                                        <!--레벨 바인딩-->
                                         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Level}" Foreground="{StaticResource FG.LEVEL}" FontWeight="Bold"/>
                                     </Border>
                                 </Grid>
@@ -94,25 +96,25 @@
                                 <Grid Grid.Column="2">
                                     <StackPanel Grid.Column="2" Orientation="Horizontal" VerticalAlignment="Top">
                                         <Border Height="35" Width="35" BorderBrush="#443114" BorderThickness="1" Margin="0 0 1 0">
-
+                                            <Image Source="{Binding Item1}"/>
                                         </Border>
                                         <Border Height="35" Width="35" BorderBrush="#443114" BorderThickness="1" Margin="0 0 1 0">
-
+                                            <Image Source="{Binding Item2}"/>
                                         </Border>
                                         <Border Height="35" Width="35" BorderBrush="#443114" BorderThickness="1" Margin="0 0 1 0">
-
+                                            <Image Source="{Binding Item3}"/>
                                         </Border>
                                         <Border Height="35" Width="35" BorderBrush="#443114" BorderThickness="1" Margin="0 0 1 0">
-
+                                            <Image Source="{Binding Item4}"/>
                                         </Border>
                                         <Border Height="35" Width="35" BorderBrush="#443114" BorderThickness="1" Margin="0 0 1 0">
-
+                                            <Image Source="{Binding Item5}"/>
                                         </Border>
                                         <Border Height="35" Width="35" BorderBrush="#443114" BorderThickness="1" Margin="0 0 1 0">
-
+                                            <Image Source="{Binding Item6}"/>
                                         </Border>
                                         <Border Height="35" Width="35" BorderBrush="#443114" BorderThickness="1" Margin="0 0 1 0">
-
+                                            <Image Source="{Binding Item7}"/>
                                         </Border>
                                     </StackPanel>
                                     <Grid VerticalAlignment="Bottom">
@@ -146,7 +148,7 @@
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="bd1" Property="BorderBrush" Value="{StaticResource BDR.PARENT.OVER}"/>
                             <Setter TargetName="bd2" Property="BorderBrush" Value="{StaticResource BDR.CHILD.OVER}"/>
-                            <Setter TargetName="bd3" Property="BorderBrush" Value="{StaticResource BDR.CHAMP.OVER}"/>
+                            <Setter TargetName="bd3" Property="Stroke" Value="{StaticResource BDR.CHAMP.OVER}"/>
                         </Trigger>
                         <DataTrigger Binding="{Binding Result}" Value="패배">
                             <Setter TargetName="textResult" Property="Foreground" Value="{StaticResource FG.LOSE}"/>

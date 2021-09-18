@@ -9,9 +9,9 @@ namespace Lol.ExampleData.History
         // TODO: [Kevin] 필히 변경 해야함
         public static List<HistoryModel> GetHistory()
         {
-            static string imgResource(string name)
+            static string imgResource(string folder, string name)
             {
-                return $"/Lol.Resources;component/Images/Spell/{name}.jpg";
+                return $"/Lol.Resources;component/Images/{folder}/{name}.png";
             }
 
             List<HistoryModel> source = new()
@@ -19,7 +19,7 @@ namespace Lol.ExampleData.History
                 new HistoryModel
                 {
                     Seq = 0,
-                    Champion = "Nautilus",
+                    Champion = imgResource("Square", "1"),
                     GameType = "개인/2인 랭크 게임",
                     MapType = "소환사의 협곡",
                     Result = "승리",
@@ -31,20 +31,20 @@ namespace Lol.ExampleData.History
                     D = 12,
                     A = 5,
                     Level = 18,
-                    Spell1 = imgResource("ignite"),
-                    Spell2 = imgResource("flash"),
-                    Item1 = "Potion",
-                    Item2 = "Solari",
-                    Item3 = "Shoose",
-                    Item4 = "Zhonya",
-                    Item5 = "Warmog",
-                    Item6 = "Rabadon",
-                    Item7 = "Quicksilver"
+                    Spell1 = imgResource("Spell", "ignite"),
+                    Spell2 = imgResource("Spell", "flash"),
+                    Item1 = imgResource("Items", "potion"),
+                    Item2 = imgResource("Items", "solari"),
+                    Item3 = imgResource("Items", "shoose"),
+                    Item4 = imgResource("Items", "zhonya"),
+                    Item5 = imgResource("Items", "warmog"),
+                    Item6 = imgResource("Items", "rabadon"),
+                    Item7 = imgResource("Items", "quicksilver"),
                 },
                 new HistoryModel
                 {
                     Seq = 1,
-                    Champion = "Nautilus",
+                    Champion = imgResource("Square", "2"),
                     GameType = "개인/2인 랭크 게임",
                     MapType = "소환사의 협곡",
                     Result = "승리",
@@ -56,13 +56,20 @@ namespace Lol.ExampleData.History
                     D = 12,
                     A = 5,
                     Level = 9,
-                    Spell1 = imgResource("ignite"),
-                    Spell2 = imgResource("flash"),
+                    Spell1 = imgResource("Spell", "ignite"),
+                    Spell2 = imgResource("Spell", "flash"),
+                    Item1 = imgResource("Items", "potion"),
+                    Item2 = imgResource("Items", "solari"),
+                    Item3 = imgResource("Items", "shoose"),
+                    Item4 = imgResource("Items", "zhonya"),
+                    Item5 = imgResource("Items", "warmog"),
+                    Item6 = imgResource("Items", "rabadon"),
+                    Item7 = imgResource("Items", "quicksilver"),
                 },
                 new HistoryModel
                 {
                     Seq = 2,
-                    Champion = "Nautilus",
+                    Champion = imgResource("Square", "3"),
                     GameType = "개인/2인 랭크 게임",
                     MapType = "소환사의 협곡",
                     Result = "패배",
@@ -74,13 +81,20 @@ namespace Lol.ExampleData.History
                     D = 12,
                     A = 5,
                     Level = 14,
-                    Spell1 = imgResource("ignite"),
-                    Spell2 = imgResource("flash"),
+                    Spell1 = imgResource("Spell", "ignite"),
+                    Spell2 = imgResource("Spell", "flash"),
+                    Item1 = imgResource("Items", "potion"),
+                    Item2 = imgResource("Items", "solari"),
+                    Item3 = imgResource("Items", "shoose"),
+                    Item4 = imgResource("Items", "zhonya"),
+                    Item5 = imgResource("Items", "warmog"),
+                    Item6 = imgResource("Items", "rabadon"),
+                    Item7 = imgResource("Items", "quicksilver"),
                 },
                 new HistoryModel
                 {
                     Seq = 3,
-                    Champion = "Nautilus",
+                    Champion = imgResource("Square", "4"),
                     GameType = "개인/2인 랭크 게임",
                     MapType = "소환사의 협곡",
                     Result = "패배",
@@ -92,8 +106,15 @@ namespace Lol.ExampleData.History
                     D = 12,
                     A = 5,
                     Level = 7,
-                    Spell1 = imgResource("ignite"),
-                    Spell2 = imgResource("flash"),
+                    Spell1 = imgResource("Spell", "ignite"),
+                    Spell2 = imgResource("Spell", "flash"),
+                    Item1 = imgResource("Items", "potion"),
+                    Item2 = imgResource("Items", "solari"),
+                    Item3 = imgResource("Items", "shoose"),
+                    Item4 = imgResource("Items", "zhonya"),
+                    Item5 = imgResource("Items", "warmog"),
+                    Item6 = imgResource("Items", "rabadon"),
+                    Item7 = imgResource("Items", "quicksilver"),
                 },
             };
 
