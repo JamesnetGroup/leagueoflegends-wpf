@@ -33,6 +33,17 @@
     <None Remove="Images\lol-thumb-05.png" />
     <None Remove="Images\profile-01.png" />
 	<None Remove="Images\bg-winningteam.png" />
+	<None Remove="Images\Spell\barrier.png" />
+	<None Remove="Images\Spell\boost.png" />
+	<None Remove="Images\Spell\dot.png" />
+	<None Remove="Images\Spell\exhaust.png" />
+	<None Remove="Images\Spell\flash.png" />
+	<None Remove="Images\Spell\haste.png" />
+	<None Remove="Images\Spell\heal.png" />
+	<None Remove="Images\Spell\mana.png" />
+	<None Remove="Images\Spell\smite.png" />
+	<None Remove="Images\Spell\snowball.png" />
+	<None Remove="Images\Spell\teleport.png" />
     <None Remove="Images\Square\0.png" />
     <None Remove="Images\Square\1.png" />
     <None Remove="Images\Square\10.png" />
@@ -137,6 +148,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\Spell\barrier.png">
+      <CopyToOutputDirectory></CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Images\bg-spell.png" />
   </ItemGroup>
 
@@ -166,6 +183,36 @@
     <Resource Include="Images\lol-thumb-05.png" />
     <Resource Include="Images\profile-01.png" />
 	<Resource Include="Images\bg-winningteam.png" />
+	<Resource Include="Images\Spell\boost.png">
+	  <CopyToOutputDirectory></CopyToOutputDirectory>
+	</Resource>
+	<Resource Include="Images\Spell\dot.png">
+	  <CopyToOutputDirectory></CopyToOutputDirectory>
+	</Resource>
+	<Resource Include="Images\Spell\exhaust.png">
+	  <CopyToOutputDirectory></CopyToOutputDirectory>
+	</Resource>
+	<Resource Include="Images\Spell\flash.png">
+	  <CopyToOutputDirectory></CopyToOutputDirectory>
+	</Resource>
+	<Resource Include="Images\Spell\haste.png">
+	  <CopyToOutputDirectory></CopyToOutputDirectory>
+	</Resource>
+	<Resource Include="Images\Spell\heal.png">
+	  <CopyToOutputDirectory></CopyToOutputDirectory>
+	</Resource>
+	<Resource Include="Images\Spell\mana.png">
+	  <CopyToOutputDirectory></CopyToOutputDirectory>
+	</Resource>
+	<Resource Include="Images\Spell\smite.png">
+	  <CopyToOutputDirectory></CopyToOutputDirectory>
+	</Resource>
+	<Resource Include="Images\Spell\snowball.png">
+	  <CopyToOutputDirectory></CopyToOutputDirectory>
+	</Resource>
+	<Resource Include="Images\Spell\teleport.png">
+	  <CopyToOutputDirectory></CopyToOutputDirectory>
+	</Resource>
     <Resource Include="Images\Square\0.png" />
     <Resource Include="Images\Square\1.png" />
     <Resource Include="Images\Square\10.png" />
@@ -268,42 +315,6 @@
 	<Resource Include="Images\WinIcons\7.png" />
 	<Resource Include="Images\WinIcons\8.png" />
 	<Resource Include="Images\WinIcons\9.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="Images\Spell\barrier.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Images\Spell\boost.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Images\Spell\dot.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Images\Spell\exhaust.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Images\Spell\flash.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Images\Spell\haste.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Images\Spell\heal.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Images\Spell\mana.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Images\Spell\smite.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Images\Spell\snowball.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Images\Spell\teleport.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
   </ItemGroup>
 
   <ItemGroup>
