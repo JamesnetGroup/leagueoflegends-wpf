@@ -61,6 +61,7 @@
 
     <Style TargetType="{x:Type units:SpellListBox}">
         <Setter Property="ItemsSource" Value="{Binding Spells}"/>
+        <Setter Property="SelectedItem" Value="{Binding CurrentSpell}"/>
         <Setter Property="ItemContainerStyle" Value="{StaticResource LBXI.SPELL}"/>
         <Setter Property="HorizontalAlignment" Value="Left"/>
         <Setter Property="VerticalAlignment" Value="Top"/>
