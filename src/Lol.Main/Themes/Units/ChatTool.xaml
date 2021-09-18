@@ -44,24 +44,24 @@
 		<Setter Property="IconType" Value="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=Tag}"/>
 	</Style>	
 	
-	<Style TargetType="{x:Type Button}" x:Key="BTN.02">
+	<Style TargetType="{x:Type Button}" x:Key="BTN.TOOL">
 		<Setter Property="Width" Value="35"/>
 		<Setter Property="Height" Value="30"/>
-		<Setter Property="Foreground" Value="#CDBE91"/>
-		<Setter Property="Template">
+        <Setter Property="Foreground" Value="#CDBE91"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type Button}">
-					<Grid>
-						<Border x:Name="border" Background="#1E2328" BorderThickness="1" BorderBrush="{StaticResource BTN.BDR}" 
-								SnapsToDevicePixels="True" ClipToBounds="True">
-							<Grid Margin="0 0 0 0">
-								<Border Background="Transparent" BorderThickness="1" BorderBrush="#CC091119" Margin="0">
-									<ctrls:RiotIcon x:Name="path" Style="{StaticResource ICON.MENUS}"/>
-								</Border>
-							</Grid>
-						</Border>
-					</Grid>
-					<ControlTemplate.Triggers>
+                    <Border x:Name="border" Background="#1E2328" BorderThickness="1" BorderBrush="{StaticResource BTN.BDR}" 
+							SnapsToDevicePixels="True" ClipToBounds="True">
+                        <Grid Margin="0 0 0 0">
+                            <Border Background="Transparent" BorderThickness="1" BorderBrush="#CC091119" Margin="0">
+                                <ctrls:RiotIcon x:Name="path" Style="{StaticResource ICON.MENUS}"/>
+                            </Border>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
 						<Trigger Property="IsMouseOver" Value="True">
 							<Setter Property="Cursor" Value="Hand"/>
 							<Setter TargetName="path" Property="Fill" Value="#F0E6D2"/>
@@ -74,28 +74,47 @@
 		</Setter>
 	</Style>
 
-	<Style TargetType="{x:Type Button}" x:Key="BTN.CHAT" BasedOn="{StaticResource BTN.02}">
-		<Setter Property="HorizontalAlignment" Value="Center"/>
-		<Setter Property="VerticalAlignment" Value="Center"/>
-		<Setter Property="Margin" Value="0 0 2 0"/>
-		<Setter Property="Tag" Value="Chat"/>
-	</Style>
+    <Style TargetType="{x:Type ToggleButton}" x:Key="TGL.CHAT">
+        <Setter Property="Width" Value="35"/>
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Foreground" Value="#CDBE91"/>
+        <Setter Property="Margin" Value="0 0 2 0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Border x:Name="border" Background="#1E2328" BorderThickness="1" BorderBrush="{StaticResource BTN.BDR}" 
+							SnapsToDevicePixels="True" ClipToBounds="True">
+                        <Grid Margin="0 0 0 0">
+                            <Border Background="Transparent" BorderThickness="1" BorderBrush="#CC091119" Margin="0">
+                                <ctrls:RiotIcon x:Name="path" Style="{StaticResource ICON.MENUS}" Fill="#CDBE91" Width="18" Height="18"
+                                                HorizontalAlignment="Center" VerticalAlignment="Center" IconType="Chat"/>
+                            </Border>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Cursor" Value="Hand"/>
+                            <Setter TargetName="path" Property="Fill" Value="#F0E6D2"/>
+                            <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource BTN.BDR.OVER}"/>
+                            <Setter TargetName="border" Property="Background" Value="{StaticResource BTN.BG.OVER}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
-	<Style TargetType="{x:Type Button}" x:Key="BTN.SCRIPT" BasedOn="{StaticResource BTN.02}">
-		<Setter Property="HorizontalAlignment" Value="Center"/>
-		<Setter Property="VerticalAlignment" Value="Center"/>
+    <Style TargetType="{x:Type Button}" x:Key="BTN.SCRIPT" BasedOn="{StaticResource BTN.TOOL}">
 		<Setter Property="Margin" Value="2 0 2 0"/>
 		<Setter Property="Tag" Value="Script"/>
 	</Style>
 
-	<Style TargetType="{x:Type Button}" x:Key="BTN.MIC" BasedOn="{StaticResource BTN.02}">
-		<Setter Property="HorizontalAlignment" Value="Center"/>
-		<Setter Property="VerticalAlignment" Value="Center"/>
+    <Style TargetType="{x:Type Button}" x:Key="BTN.MIC" BasedOn="{StaticResource BTN.TOOL}">
 		<Setter Property="Margin" Value="2 0 0 0"/>
 		<Setter Property="Tag" Value="Mic"/>
 	</Style>
 
-	<Style TargetType="{x:Type Button}" x:Key="BTN.BUG" BasedOn="{StaticResource BTN.02}">
+    <Style TargetType="{x:Type Button}" x:Key="BTN.BUG" BasedOn="{StaticResource BTN.TOOL}">
 		<Setter Property="Width" Value="27"/>
 		<Setter Property="Height" Value="27"/>
 		<Setter Property="HorizontalAlignment" Value="Right"/>
@@ -116,12 +135,12 @@
 					<Grid>
 						<Border Grid.Row="2" Background="Transparent" BorderBrush="#1E282D" BorderThickness="0 1 0 0"/>
 						<StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0 1 0 0">
-							<Button Style="{StaticResource BTN.CHAT}"/>
-							<Button Style="{StaticResource BTN.SCRIPT}"/>
+                            <ToggleButton Style="{StaticResource TGL.CHAT}"/>
+                            <Button Style="{StaticResource BTN.SCRIPT}"/>
 							<Button Style="{StaticResource BTN.MIC}"/>
 							<Control Style="{StaticResource CTL.VERSION}"/>
 						</StackPanel>
-						<Button Grid.Row="2" Style="{StaticResource BTN.BUG}"/>
+						<Button Style="{StaticResource BTN.BUG}"/>
 					</Grid>
 				</ControlTemplate>
 			</Setter.Value>
