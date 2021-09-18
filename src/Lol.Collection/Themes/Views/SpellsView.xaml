@@ -2,6 +2,12 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:views="clr-namespace:Lol.Collection.UI.Views"
                     xmlns:units="clr-namespace:Lol.Collection.UI.Units">
+    <Style TargetType="{x:Type Border}" x:Key="BDR.TEMP">
+        <Setter Property="BorderThickness" Value="0.5"/>
+        <Setter Property="BorderBrush" Value="#474C45"/>
+        <Setter Property="Width" Value="400"/>
+        <Setter Property="Margin" Value="0 10 0 10"/>
+    </Style>
     <Style TargetType="{x:Type views:SpellsView}">
         <Setter Property="Template">
             <Setter.Value>
@@ -12,7 +18,11 @@
                             <RowDefinition Height="4*"/>
                         </Grid.RowDefinitions>
                         <units:SpellListBox ItemsSource="{Binding Spells}" VerticalAlignment="Top" HorizontalAlignment="Left" />
-                        <Grid Grid.Row="1">
+                        <StackPanel Grid.Row="1" HorizontalAlignment="Left">
+                            <Border Style="{StaticResource BDR.TEMP}" HorizontalAlignment="Left"/>
+                            <units:SpellInfo DataContext="{Binding CurrentSpell}"/>
+                        </StackPanel>
+                        <!--<Grid Grid.Row="1">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="auto"/>
                                 <RowDefinition Height="auto"/>
@@ -23,7 +33,6 @@
                                 <RowDefinition Height="auto"/>
                                 <RowDefinition Height="auto"/>
                             </Grid.RowDefinitions>
-                            <TextBlock Grid.Row="0" Text="￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣" Foreground="#474C45" Margin="0 10 0 0 "/>
                             <TextBlock Grid.Row="1" Text="유체화" FontSize="25" FontWeight="Black" Foreground="#F0E6D2" />
                             <TextBlock Grid.Row="2" Text="소환사 레벨 1" FontSize="14" FontWeight="Black" Foreground="#9C9889" Margin="0 1 0 0"/>
                             <TextBlock Grid.Row="3" Text="무작위 총력전, 클래식, 튜토리얼" FontSize="12" FontWeight="UltraLight" Foreground="#9C9889" Margin="0 15 0 0"/>
@@ -31,7 +40,7 @@
                             <TextBlock Grid.Row="5" Text="따라 이동 속도가 24~48% 증가합니다. 처치 관여 시 유체화 지" Foreground="#9C9889" Margin="0 1 0 0"/>
                             <TextBlock Grid.Row="6" Text="속시간이 늘어납니다." Foreground="#9C9889" Margin="0 1 0 0"/>
                             <TextBlock Grid.Row="7" Text="재사용 대기시간: 210초" Foreground="#9C9889" Margin="0 12 0 0"/>
-                        </Grid>
+                        </Grid>-->
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>

@@ -17,8 +17,8 @@
 	</LinearGradientBrush>
 
     <LinearGradientBrush x:Key="BG.OPACITY" StartPoint="0 0.5" EndPoint="1, 0.5">
-        <GradientStop Color="#ee0C1616" Offset="0.0" />
-        <GradientStop Color="#880C1616" Offset="0.5" />
+        <GradientStop Color="Black" Offset="0.0" />
+        <GradientStop Color="#AA0C1616" Offset="0.5" />
         <GradientStop Color="#550C1616" Offset="1.0" />
     </LinearGradientBrush>
 

@@ -4,8 +4,11 @@
     {
         public string Name { get; set; }
         public string ImageSource { get; set; }
-        public string SpellName{ get; set; }
-        public string Level { get; set; }
+        public int Level { get; set; }
+        public string Maps { get; set; }
+        public string Content { get; set; }
+        public int Delay { get; set; }
+
 
         //public SpellModel(string name, string image_source)
         //{

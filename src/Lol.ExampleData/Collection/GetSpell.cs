@@ -14,17 +14,17 @@ namespace Lol.ExampleData.Collection
         {
             var source = new List<SpellModel>();
 
-            source.Add(new SpellModel { Name = "유체화", ImageSource = imgResource("haste"), SpellName = "유체화", Level = "소환사 레벨 1" });
-            source.Add(new SpellModel { Name = "회복", ImageSource = imgResource("heal"), SpellName = "회복", Level = "소환사 레벨 1" });
-            source.Add(new SpellModel { Name = "방어막", ImageSource = imgResource("barrier"), SpellName = "방어막", Level = "소환사 레벨 4" });
-            source.Add(new SpellModel { Name = "탈진", ImageSource = imgResource("exhaust"), SpellName = "탈진", Level = "소환사 레벨 4" });
-            source.Add(new SpellModel { Name = "총명", ImageSource = imgResource("mana"), SpellName = "총명", Level = "소환사 레벨 6" });
-            source.Add(new SpellModel { Name = "표식", ImageSource = imgResource("snowball"), SpellName = "표식", Level = "소환사 레벨 6" });
-            source.Add(new SpellModel { Name = "순간이동", ImageSource = imgResource("teleport"), SpellName = "순간이동", Level = "소환사 레벨 7" });
-            source.Add(new SpellModel { Name = "점멸", ImageSource = imgResource("flash"), SpellName = "점멸", Level = "소환사 레벨 7" });
-            source.Add(new SpellModel { Name = "강타", ImageSource = imgResource("smite"), SpellName = "강타", Level = "소환사 레벨 9" });
-            source.Add(new SpellModel { Name = "점화", ImageSource = imgResource("dot"), SpellName = "점화", Level = "소환사 레벨 9" });
-            source.Add(new SpellModel { Name = "정화", ImageSource = imgResource("boost"), SpellName = "정화", Level = "소환사 레벨 9" });
+            source.Add(new SpellModel { Name = "유체화", ImageSource = imgResource("haste"), Level = 1, Maps = "무작위 총력전, 클래식, 튜토리얼", Content = "챔피언이 10초 동안 유닛과 충돌하지 않게 되며 챔피언 레벨에 따라 이동 속도가 24~48% 증가합니다. 처치 관여 시 유체화 지속시간이 늘어납니다.", Delay = 210 });
+            source.Add(new SpellModel { Name = "회복", ImageSource = imgResource("heal"), Level = 1, Maps = "무작위 총력전, 클래식, 튜토리얼", Content = "챔피언이 10초 동안 유닛과 충돌하지 않게 되며 챔피언 레벨에 따라 이동 속도가 24~48% 증가합니다. 처치 관여 시 유체화 지속시간이 늘어납니다.", Delay = 210 });
+            source.Add(new SpellModel { Name = "방어막", ImageSource = imgResource("barrier"), Level = 4, Maps = "무작위 총력전, 클래식, 튜토리얼", Content = "챔피언이 10초 동안 유닛과 충돌하지 않게 되며 챔피언 레벨에 따라 이동 속도가 24~48% 증가합니다. 처치 관여 시 유체화 지속시간이 늘어납니다.", Delay = 210 });
+            source.Add(new SpellModel { Name = "탈진", ImageSource = imgResource("exhaust"), Level = 4, Maps = "무작위 총력전, 클래식, 튜토리얼", Content = "챔피언이 10초 동안 유닛과 충돌하지 않게 되며 챔피언 레벨에 따라 이동 속도가 24~48% 증가합니다. 처치 관여 시 유체화 지속시간이 늘어납니다.", Delay = 210 });
+            source.Add(new SpellModel { Name = "총명", ImageSource = imgResource("mana"), Level = 6, Maps = "무작위 총력전, 클래식, 튜토리얼", Content = "챔피언이 10초 동안 유닛과 충돌하지 않게 되며 챔피언 레벨에 따라 이동 속도가 24~48% 증가합니다. 처치 관여 시 유체화 지속시간이 늘어납니다.", Delay = 210 });
+            source.Add(new SpellModel { Name = "표식", ImageSource = imgResource("snowball"), Level = 6, Maps = "무작위 총력전, 클래식, 튜토리얼", Content = "챔피언이 10초 동안 유닛과 충돌하지 않게 되며 챔피언 레벨에 따라 이동 속도가 24~48% 증가합니다. 처치 관여 시 유체화 지속시간이 늘어납니다.", Delay = 210 });
+            source.Add(new SpellModel { Name = "순간이동", ImageSource = imgResource("teleport"), Level = 7, Maps = "무작위 총력전, 클래식, 튜토리얼", Content = "챔피언이 10초 동안 유닛과 충돌하지 않게 되며 챔피언 레벨에 따라 이동 속도가 24~48% 증가합니다. 처치 관여 시 유체화 지속시간이 늘어납니다.", Delay = 210 });
+            source.Add(new SpellModel { Name = "점멸", ImageSource = imgResource("flash"), Level = 7 , Maps = "무작위 총력전, 클래식, 튜토리얼", Content = "챔피언이 10초 동안 유닛과 충돌하지 않게 되며 챔피언 레벨에 따라 이동 속도가 24~48% 증가합니다. 처치 관여 시 유체화 지속시간이 늘어납니다.", Delay = 210 });
+            source.Add(new SpellModel { Name = "강타", ImageSource = imgResource("smite"), Level = 9 , Maps = "무작위 총력전, 클래식, 튜토리얼", Content = "챔피언이 10초 동안 유닛과 충돌하지 않게 되며 챔피언 레벨에 따라 이동 속도가 24~48% 증가합니다. 처치 관여 시 유체화 지속시간이 늘어납니다.", Delay = 210 });
+            source.Add(new SpellModel { Name = "점화", ImageSource = imgResource("dot"), Level = 9   , Maps = "무작위 총력전, 클래식, 튜토리얼", Content = "챔피언이 10초 동안 유닛과 충돌하지 않게 되며 챔피언 레벨에 따라 이동 속도가 24~48% 증가합니다. 처치 관여 시 유체화 지속시간이 늘어납니다.", Delay = 210 });
+            source.Add(new SpellModel { Name = "정화", ImageSource = imgResource("boost"), Level = 9, Maps = "무작위 총력전, 클래식, 튜토리얼", Content = "챔피언이 10초 동안 유닛과 충돌하지 않게 되며 챔피언 레벨에 따라 이동 속도가 24~48% 증가합니다. 처치 관여 시 유체화 지속시간이 늘어납니다.", Delay = 210 });
 
             return source;
         }
