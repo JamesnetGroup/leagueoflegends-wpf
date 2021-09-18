@@ -9,11 +9,5 @@
         public string Content { get; set; }
         public int Delay { get; set; }
 
-
-        //public SpellModel(string name, string image_source)
-        //{
-        //    Name = name;
-        //    ImageSource = image_source;
-        //}
     }
 }

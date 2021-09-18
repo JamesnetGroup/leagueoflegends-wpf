@@ -22,9 +22,9 @@
                         </Grid.RowDefinitions>
                         <TextBlock Grid.Row="0" Text="{Binding Name}" FontSize="25" FontWeight="Black" Foreground="#F0E6D2" />
                         <TextBlock Grid.Row="1" Text="{Binding Level, StringFormat={}소환사 레벨: {0}}" FontSize="14" FontWeight="Black" Style="{StaticResource TXB.DETAULT}"  Margin="0 1 0 0"/>
-                        <TextBlock Grid.Row="2" Text="{Binding Maps}" FontSize="12" FontWeight="UltraLight" Style="{StaticResource TXB.DETAULT}" Margin="0 15 0 0"/>
-                        <TextBlock Grid.Row="3" Text="{Binding Content}" Style="{StaticResource TXB.DETAULT}" Margin="0 12 0 0" Width="316" TextWrapping="Wrap" />
-                        <TextBlock Grid.Row="4" Text="{Binding Delay, StringFormat={}재사용 대기시간: {0}초}" Style="{StaticResource TXB.DETAULT}" Margin="0 1 0 0"/>
+                        <TextBlock Grid.Row="2" Text="{Binding Maps}" FontSize="12" FontWeight="UltraLight" Style="{StaticResource TXB.DETAULT}" Margin="0 20 0 0"/>
+                        <TextBlock Grid.Row="3" Text="{Binding Content}" Style="{StaticResource TXB.DETAULT}" Margin="0 15 0 0" Width="340" TextWrapping="Wrap" />
+                        <TextBlock Grid.Row="4" Text="{Binding Delay, StringFormat={}재사용 대기시간: {0}초}" Style="{StaticResource TXB.DETAULT}" Margin="0 14 0 0"/>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
