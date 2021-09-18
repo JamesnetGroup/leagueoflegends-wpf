@@ -2,6 +2,14 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:units="clr-namespace:Lol.Profile.UI.Units">
     <SolidColorBrush Color="#1E2328" x:Key="BDR.TEMP"/>
+
+    <Style TargetType="{x:Type Border}" x:Key="TEMP.BORDER">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="{StaticResource BDR.TEMP}"/>
+        <Setter Property="BorderThickness" Value="0 0.5 0 0"/>
+        <Setter Property="Margin" Value="0 22 0 22"/>
+    </Style>
+    
     <Style TargetType="{x:Type units:RecentChampion}">
         <Setter Property="Margin" Value="16 0 0 0"/>
         <Setter Property="Template">
@@ -10,7 +18,7 @@
                     <StackPanel>
                         <units:PlayChampListBox/>
                         <TextBlock Margin="0 12 0 0" Text="플레이한 게임 중 비율" Foreground="#A09B8C" HorizontalAlignment="Center"/>
-                        <Border BorderThickness="0 1 0 0" BorderBrush="{StaticResource BDR.TEMP}" Margin="0 22 0 22"/>
+                        <Border Style="{StaticResource .BORDER}"/>
                     </StackPanel>
                 </ControlTemplate>
             </Setter.Value>
