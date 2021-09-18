@@ -23,6 +23,9 @@ using Lol.Profile.UI.Views;
 using Lol.Profile.Local.ViewModels;
 using store = Lol.Store.UI.Views;
 using storeVM = Lol.Store.Local.ViewModels;
+using System.Windows;
+using Lol.LayoutSupport.Controls;
+using System.Windows.Controls;
 
 namespace Lol.Main.Local.ViewModel
 {
@@ -41,6 +44,8 @@ namespace Lol.Main.Local.ViewModel
         private FriendsCollection _friends;
         private int _currentSeq;
         private int _parentSeq;
+
+        private Image BackgroundImage;
 
         private Dictionary<int, IRiotUI> UIs { get; set; }
         #endregion
@@ -168,7 +173,7 @@ namespace Lol.Main.Local.ViewModel
                     14 => new WinnersView().SetVM(new WinnersViewModel()),
                     16 => new ChampionsView().SetVM(new ChampionsViewModel()),
                     32 => new HistoryView().SetVM(new HistoryViewModel()),
-                    20 => new SpellsView().SetVM(new SpellsViewModel()),
+                    20 => new SpellsView().SetVM(new SpellsViewModel(BackgroundImage)),
                     // TODO: [Elena] 클래스 이름 중복 관련 임시 처리 
                     26 => new store.ChampionsView().SetVM(new storeVM.ChampionsViewModel()),
                     _ => new EmptyContent()
@@ -199,5 +204,14 @@ namespace Lol.Main.Local.ViewModel
             CurrentSeq = key;
         }
         #endregion
+
+
+        protected override void OnLoaded(Window window)
+        {
+            if (window is MainWindow win)
+            {
+                BackgroundImage = win.BackgroundImage;
+            }
+        }
     }
 }

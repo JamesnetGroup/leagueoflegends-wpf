@@ -28,7 +28,13 @@
 											  Grid.Column="0"
 											  ContentTemplate="{TemplateBinding BackgroundTemplate}"/>
 
-							<Grid Grid.Row="0" 
+                            <Image x:Name="PART_BackgroundImage"
+                                   Visibility="Collapsed"
+								   Stretch="Fill"
+                                   Grid.RowSpan="2"
+                                   Grid.Column="0"/>
+
+                            <Grid Grid.Row="0" 
 								  Grid.ColumnSpan="2" 
 								  VerticalAlignment="Top" 
 								  Background="Transparent"
@@ -61,8 +67,7 @@
 									Height="2" 
 									Grid.ColumnSpan="2"/>
 
-							<Border 
-									Grid.ColumnSpan="2"
+							<Border Grid.ColumnSpan="2"
 									BorderBrush="#22ffffff" 
 									SnapsToDevicePixels="True"
 									UseLayoutRounding="True"
