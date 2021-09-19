@@ -14,6 +14,12 @@
     <None Remove="Images\bg-main-05.png" />
     <None Remove="Images\bg-spell.png" />
     <None Remove="Images\card-kaisa.png" />
+    <None Remove="Images\Concepts\assassin.PNG" />
+    <None Remove="Images\Concepts\dealer.PNG" />
+    <None Remove="Images\Concepts\support.PNG" />
+    <None Remove="Images\Concepts\tanker.PNG" />
+    <None Remove="Images\Concepts\warrior.PNG" />
+    <None Remove="Images\Concepts\wizard.PNG" />
     <None Remove="Images\ico-14.png" />
     <None Remove="Images\icon-menu-selected.png" />
     <None Remove="Images\Items\potion.png" />
@@ -23,7 +29,6 @@
     <None Remove="Images\Items\solari.png" />
     <None Remove="Images\Items\warmog.png" />
     <None Remove="Images\Items\zhonya.png" />
-    <None Remove="Images\leona.jpg" />
     <None Remove="Images\lol-blue-essence.png" />
     <None Remove="Images\lol-logo-03.png" />
     <None Remove="Images\lol-rp-icon.png" />
@@ -157,6 +162,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\Concepts\assassin.PNG" />
+    <Resource Include="Images\Concepts\dealer.PNG" />
+    <Resource Include="Images\Concepts\support.PNG" />
+    <Resource Include="Images\Concepts\tanker.PNG" />
+    <Resource Include="Images\Concepts\warrior.PNG" />
+    <Resource Include="Images\Concepts\wizard.PNG" />
     <Resource Include="Images\Items\potion.png" />
     <Resource Include="Images\Items\quicksilver.png" />
     <Resource Include="Images\Items\rabadon.png" />
@@ -164,7 +175,6 @@
     <Resource Include="Images\Items\solari.png" />
     <Resource Include="Images\Items\warmog.png" />
     <Resource Include="Images\Items\zhonya.png" />
-    <Resource Include="Images\leona.jpg" />
     <Resource Include="Images\Spell\barrier.png">
       <CopyToOutputDirectory></CopyToOutputDirectory>
     </Resource>
@@ -339,10 +349,6 @@
     <Page Update="Themes\Generic.xaml">
       <SubType>Designer</SubType>
     </Page>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Images\Concepts\" />
   </ItemGroup>
 
 </Project>
