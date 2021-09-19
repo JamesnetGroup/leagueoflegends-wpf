@@ -30,7 +30,7 @@ namespace Lol.Data.History
         public string Item7 { get; set; }
         public string Percent { get; set; }
         public double ActivePercent { get; set; }
-        public string Job { get; set; }
+        public string Concept { get; set; }
 
 
 
