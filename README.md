@@ -1,5 +1,4 @@
 <div align="center">
-  <br />
   <a href="https://www.leagueoflegends.com/en-us/">
     <img src="https://user-images.githubusercontent.com/74305823/133882864-6fc75ced-e297-41f9-bdbf-e779b57c8ff3.png" width="200"/>
   </a>
