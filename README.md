@@ -33,7 +33,7 @@
 - MVVM 패턴을 직접 구현하여 WPF에 대해 자세하게 이해 및 학습할 수 있습니다.
 - 이미지 형식의 사용을 지양하고 `Geometry(SVG)` 리소스를 활용하여 WPF 장점을 살릴 수 있습니다.
 
-<br />
+<br>
 
 ## 개발 정보
 
@@ -41,7 +41,7 @@
 - C# 9.0  
 - [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/ko/vs/preview/vs2022/)
 
-<br />
+<br>
 
 ## 프로젝트 구조
  
