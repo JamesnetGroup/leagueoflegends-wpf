@@ -3,7 +3,7 @@
     <img src="https://user-images.githubusercontent.com/74305823/133882864-6fc75ced-e297-41f9-bdbf-e779b57c8ff3.png" width="250"/>
   </a>
  
-  <h2>WPF Leagueoflegends</h2>
+  <h1>WPF Leagueoflegends</h1>
   WPF로 만든 Leagueoflegends입니다.
  
   <br />
