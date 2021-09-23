@@ -29,6 +29,7 @@
     <None Remove="Images\Items\solari.png" />
     <None Remove="Images\Items\warmog.png" />
     <None Remove="Images\Items\zhonya.png" />
+    <None Remove="Images\leona.jpg" />
     <None Remove="Images\lol-blue-essence.png" />
     <None Remove="Images\lol-logo-03.png" />
     <None Remove="Images\lol-rp-icon.png" />
@@ -175,6 +176,7 @@
     <Resource Include="Images\Items\solari.png" />
     <Resource Include="Images\Items\warmog.png" />
     <Resource Include="Images\Items\zhonya.png" />
+    <Resource Include="Images\leona.jpg" />
     <Resource Include="Images\Spell\barrier.png">
       <CopyToOutputDirectory></CopyToOutputDirectory>
     </Resource>

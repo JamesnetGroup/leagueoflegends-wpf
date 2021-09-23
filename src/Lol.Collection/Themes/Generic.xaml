@@ -5,5 +5,6 @@
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/SpellListBox.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Views/ChampionsView.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Views/SpellsView.xaml"/>
+        <ResourceDictionary Source="/Lol.Collection;component/Themes/Views/ItemView.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
