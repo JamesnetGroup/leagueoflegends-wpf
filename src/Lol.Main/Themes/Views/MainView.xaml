@@ -123,6 +123,15 @@
                 <Setter TargetName="left" Property="Fill" Value="{StaticResource LGB.LEFT}"/>
                 <Setter TargetName="border" Property="Background" Value="{StaticResource BG.OPACITY}"/>
             </DataTrigger>
+            
+            <!--Collection/Item-->
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.CurrentSeq}" Value="21">
+                <Setter TargetName="img" Property="Source" Value="/Lol.Resources;component/Images/leona.jpg"/>
+                <Setter TargetName="img" Property="RenderOptions.BitmapScalingMode" Value="Fant"/>
+                <Setter TargetName="img" Property="Stretch" Value="UniformToFill"/>
+                <Setter TargetName="left" Property="Fill" Value="{StaticResource LGB.LEFT}"/>
+                <Setter TargetName="border" Property="Background" Value="{StaticResource BG.OPACITY}"/>
+            </DataTrigger>
 
             <!--Clash의 각 SubMenu마다 Backgroud가 동일하기 때문에 ParentSeq로 처리-->
             <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.ParentSeq}" Value="2">
