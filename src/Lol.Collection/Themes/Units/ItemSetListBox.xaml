@@ -7,8 +7,8 @@
     <Style TargetType="{x:Type Border}" x:Key="BDR.TEMP">
         <Setter Property="BorderThickness" Value="0.5"/>
         <Setter Property="BorderBrush" Value="#463714"/>
-        <Setter Property="Width" Value="400"/>
-        <Setter Property="Margin" Value="0 10 0 10"/>
+        <Setter Property="Width" Value="1000"/>
+        <Setter Property="Margin" Value="40 0 0 0"/>
         <Setter Property="HorizontalAlignment" Value="Left"/>
     </Style>
 
@@ -27,7 +27,7 @@
                                     <ColumnDefinition Width="auto"/>
                                     <ColumnDefinition Width="auto"/>
                                 </Grid.ColumnDefinitions>
-                                <CheckBox IsChecked="False" Margin="0 10 0 0 "/>
+                                <CheckBox IsChecked="False" Margin="0 12 0 0 "/>
                                 <TextBlock Grid.Column="1" Text="{Binding Name}" FontSize="14" FontWeight="Bold" Foreground="#A09B8C" Margin="10"/>
                                 <TextBlock Grid.Column="2" Text="{Binding Champ}" FontSize="14" FontWeight="Bold" Foreground="#A09B8C" Margin="10"/>
                                 <TextBlock Grid.Column="3" Text="{Binding MapType1}" Foreground="#A09B8C" Margin="10"/>
@@ -52,8 +52,8 @@
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="auto"/>
-                            <RowDefinition Height="6*"/>
-                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="6.5*"/>
+                            <RowDefinition Height="auto"/>
                         </Grid.RowDefinitions>
                         <StackPanel Orientation="Horizontal" Margin="40 30 20 0" Background="#1E2328" VerticalAlignment="Center">
                             <CheckBox IsChecked="False" Margin="0 3 0 0"/>
@@ -61,12 +61,18 @@
                             <TextBlock Foreground="#F0E6D2" FontWeight="Bold" Text="챔피언" FontSize="15" Margin="300 0 0 0"/>
                             <TextBlock Foreground="#F0E6D2" FontWeight="Bold" Text="맵" FontSize="15" Margin="350 0 0 0"/>
                         </StackPanel>
-                        <Border Grid.Row="1" Margin="0 5 0 0">
+                        <Border x:Name="bd" Grid.Row="1" Margin="0 5 0 0" Opacity="0.8">
                             <ItemsPresenter/>
                         </Border>
-                        <Border Style="{StaticResource BDR.TEMP}"/>
+                        <StackPanel Grid.Row="2">
+                            <Border Style="{StaticResource BDR.TEMP}"/>    
+                        </StackPanel>
                     </Grid>
-                    
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="bd" Property="Opacity" Value="1"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

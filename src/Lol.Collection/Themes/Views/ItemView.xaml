@@ -11,8 +11,7 @@
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="auto"/>
-                            <RowDefinition Height="6*"/>
-                            <RowDefinition Height="1.13*"/>
+                            <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 50 0 0">
                             <ctrls:RiotIconButton IconType="TEST" Margin="0 0 10 0"/>
@@ -25,7 +24,6 @@
                                            Margin="0 0 20 0"/>
                         </StackPanel>
                         <units:ItemSetListBox Grid.Row="1"/>
-                        <Border Grid.Row="2" BorderThickness="0.1" BorderBrush="#463714"/>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
