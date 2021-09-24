@@ -1,0 +1,81 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:units="clr-namespace:Lol.Collection.UI.Units"
+                    xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
+
+
+    <Style TargetType="{x:Type Border}" x:Key="BDR.TEMP">
+        <Setter Property="BorderThickness" Value="0.5"/>
+        <Setter Property="BorderBrush" Value="#463714"/>
+        <Setter Property="Width" Value="400"/>
+        <Setter Property="Margin" Value="0 10 0 10"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+    </Style>
+
+    <Style TargetType="{x:Type ListBoxItem}" x:Key="LBXI.HISTORY">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                    <Grid Background="Transparent" >
+                        <Border BorderThickness="0 0 0 1" BorderBrush="#22201C" Margin="40 0 0 0" Padding="0 10 0 10">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="320"/>
+                                    <ColumnDefinition Width="200"/>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="auto"/>
+                                </Grid.ColumnDefinitions>
+                                <CheckBox IsChecked="False" Margin="0 10 0 0 "/>
+                                <TextBlock Grid.Column="1" Text="{Binding Name}" FontSize="14" FontWeight="Bold" Foreground="#A09B8C" Margin="10"/>
+                                <TextBlock Grid.Column="2" Text="{Binding Champ}" FontSize="14" FontWeight="Bold" Foreground="#A09B8C" Margin="10"/>
+                                <TextBlock Grid.Column="3" Text="{Binding MapType1}" Foreground="#A09B8C" Margin="10"/>
+                                <TextBlock Grid.Column="4" Text="{Binding MapType2}" Foreground="#A09B8C" Margin="10"/>
+                                <TextBlock Grid.Column="4" Text="{Binding Option}" Foreground="#A09B8C" Margin="10"/>
+                            </Grid>
+                        </Border>
+                        <Border >
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style TargetType="{x:Type units:ItemSetListBox}">
+        <Setter Property="ItemsSource" Value="{Binding ItemLists}"/>
+        <Setter Property="Margin" Value="0 0 0 0"/>
+        <Setter Property="ItemContainerStyle" Value="{StaticResource LBXI.HISTORY}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type units:ItemSetListBox}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="6*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <StackPanel Orientation="Horizontal" Margin="40 30 20 0" Background="#1E2328" VerticalAlignment="Center">
+                            <CheckBox IsChecked="False" Margin="0 3 0 0"/>
+                            <TextBlock Foreground="#F0E6D2" FontWeight="Bold" Text="이름" FontSize="15" Margin="10 0 0 0"/>
+                            <TextBlock Foreground="#F0E6D2" FontWeight="Bold" Text="챔피언" FontSize="15" Margin="300 0 0 0"/>
+                            <TextBlock Foreground="#F0E6D2" FontWeight="Bold" Text="맵" FontSize="15" Margin="350 0 0 0"/>
+                        </StackPanel>
+                        <Border Grid.Row="1" Margin="0 5 0 0">
+                            <ItemsPresenter/>
+                        </Border>
+                        <Border Style="{StaticResource BDR.TEMP}"/>
+                    </Grid>
+                    
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="ItemsPanel">
+            <Setter.Value>
+                <ItemsPanelTemplate>
+                    <StackPanel/>
+                </ItemsPanelTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
