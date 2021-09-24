@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Linq;
+using System.Windows;
 using System.Windows.Input;
+using System.Windows.Controls;
 using System.Collections.Generic;
 using Lol.Data.Main;
 using Lol.Foundation.Mvvm;
 using Lol.Foundation.Riotcore;
+using Lol.LayoutSupport.Controls;
 using Lol.Main.Local.Collection;
 using Lol.Main.Local.Work;
 using Lol.Main.UI.Units;
@@ -23,9 +26,6 @@ using Lol.Profile.UI.Views;
 using Lol.Profile.Local.ViewModels;
 using store = Lol.Store.UI.Views;
 using storeVM = Lol.Store.Local.ViewModels;
-using System.Windows;
-using Lol.LayoutSupport.Controls;
-using System.Windows.Controls;
 
 namespace Lol.Main.Local.ViewModel
 {
@@ -206,6 +206,7 @@ namespace Lol.Main.Local.ViewModel
         }
         #endregion
 
+        #region OnLoaded
 
         protected override void OnLoaded(Window window)
         {
@@ -214,5 +215,6 @@ namespace Lol.Main.Local.ViewModel
                 BackgroundImage = win.BackgroundImage;
             }
         }
+        #endregion
     }
 }

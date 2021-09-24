@@ -1,31 +1,19 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:units="clr-namespace:Lol.Collection.UI.Units">
-    <SolidColorBrush Color="#9C9889" x:Key="FG.DEFAULT"/>
-
-    <Style TargetType="{x:Type TextBlock}" x:Key="TXB.DETAULT">
-        <Setter Property="Foreground" Value="{StaticResource FG.DEFAULT}"/>
-        <Setter Property="HorizontalAlignment" Value="Left"/>
-    </Style>
-
+    
     <Style TargetType="{x:Type units:SpellInfo}">
+        <Setter Property="Foreground" Value="#9C9889"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:SpellInfo}">
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="auto"/>
-                        </Grid.RowDefinitions>
-                        <TextBlock Grid.Row="0" Text="{Binding Name}" FontSize="25" FontWeight="Black" Foreground="#F0E6D2" />
-                        <TextBlock Grid.Row="1" Text="{Binding Level, StringFormat={}소환사 레벨: {0}}" FontSize="14" FontWeight="Black" Style="{StaticResource TXB.DETAULT}"  Margin="0 1 0 0"/>
-                        <TextBlock Grid.Row="2" Text="{Binding Maps}" FontSize="12" FontWeight="UltraLight" Style="{StaticResource TXB.DETAULT}" Margin="0 20 0 0"/>
-                        <TextBlock Grid.Row="3" Text="{Binding Content}" Style="{StaticResource TXB.DETAULT}" Margin="0 15 0 0" Width="340" TextWrapping="Wrap" />
-                        <TextBlock Grid.Row="4" Text="{Binding Delay, StringFormat={}재사용 대기시간: {0}초}" Style="{StaticResource TXB.DETAULT}" Margin="0 14 0 0"/>
-                    </Grid>
+                    <StackPanel HorizontalAlignment="Left">
+                        <TextBlock Text="{Binding Name}" FontSize="25" FontWeight="Bold" Foreground="#F0E6D2" />
+                        <TextBlock Text="{Binding Level, StringFormat={}소환사 레벨: {0}}" FontSize="14" FontWeight="Bold" Margin="0 1 0 0"/>
+                        <TextBlock Text="{Binding Maps}" FontSize="12" FontWeight="UltraLight" Margin="0 20 0 0"/>
+                        <TextBlock Text="{Binding Content}" Width="340" TextWrapping="Wrap" Margin="0 15 0 0"/>
+                        <TextBlock Text="{Binding Delay, StringFormat={}재사용 대기시간: {0}초}" Margin="0 14 0 0"/>
+                    </StackPanel>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

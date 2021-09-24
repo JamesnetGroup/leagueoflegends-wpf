@@ -2,24 +2,27 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:views="clr-namespace:Lol.Collection.UI.Views"
                     xmlns:units="clr-namespace:Lol.Collection.UI.Units">
+    
     <Style TargetType="{x:Type Border}" x:Key="BDR.TEMP">
         <Setter Property="BorderThickness" Value="0.5"/>
         <Setter Property="BorderBrush" Value="#474C45"/>
         <Setter Property="Width" Value="400"/>
         <Setter Property="Margin" Value="0 10 0 10"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
     </Style>
+    
     <Style TargetType="{x:Type views:SpellsView}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type views:SpellsView}">
-                    <Grid Margin="36 56 0 74">
+                    <Grid Margin="36 55 0 0">
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="6*"/>
-                            <RowDefinition Height="4*"/>
+                            <RowDefinition Height="0.55*"/>
+                            <RowDefinition Height="0.45*"/>
                         </Grid.RowDefinitions>
-                        <units:SpellListBox ItemsSource="{Binding Spells}" VerticalAlignment="Top" HorizontalAlignment="Left" />
-                        <StackPanel Grid.Row="1" HorizontalAlignment="Left">
-                            <Border Style="{StaticResource BDR.TEMP}" HorizontalAlignment="Left"/>
+                        <units:SpellListBox Margin="0 0 0 0"/>
+                        <StackPanel Grid.Row="1">
+                            <Border Style="{StaticResource BDR.TEMP}"/>
                             <units:SpellInfo DataContext="{Binding CurrentSpell}"/>
                         </StackPanel>
                     </Grid>

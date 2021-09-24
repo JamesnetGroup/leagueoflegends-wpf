@@ -1,10 +1,9 @@
 ﻿using Lol.Data.Collection;
 using Lol.ExampleData.Collection;
 using Lol.Foundation.Mvvm;
-using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Controls;
-using System.Windows.Media.Imaging;
 
 namespace Lol.Collection.Local.ViewModel
 {
@@ -12,7 +11,7 @@ namespace Lol.Collection.Local.ViewModel
     {
         #region Variables 
         
-        private SpellModel _CurrentSpell;
+        private SpellModel _currentSpell;
         private Image BackgroundImage;
         #endregion
 
@@ -25,8 +24,8 @@ namespace Lol.Collection.Local.ViewModel
 
         public SpellModel CurrentSpell
         {
-            get { return _CurrentSpell; }
-            set { _CurrentSpell = value; OnPropertyChanged(); SpellChanged(value); }
+            get => _currentSpell;
+            set { _currentSpell = value; OnPropertyChanged(); SpellChanged(value); }
         }
         #endregion
 
@@ -36,7 +35,7 @@ namespace Lol.Collection.Local.ViewModel
         {
             BackgroundImage = backgroundImage;
             Spells = ExamSpell.GetSpell();
-            CurrentSpell = Spells[0];
+            CurrentSpell = Spells.First();
         }
         #endregion
 
