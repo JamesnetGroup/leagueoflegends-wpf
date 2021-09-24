@@ -20,7 +20,7 @@
                             <RowDefinition Height="0.55*"/>
                             <RowDefinition Height="0.45*"/>
                         </Grid.RowDefinitions>
-                        <units:SpellListBox Margin="0 0 0 0"/>
+                        <units:SpellListBox/>
                         <StackPanel Grid.Row="1">
                             <Border Style="{StaticResource BDR.TEMP}"/>
                             <units:SpellInfo DataContext="{Binding CurrentSpell}"/>
