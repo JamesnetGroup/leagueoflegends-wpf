@@ -6,17 +6,40 @@
         <GradientStop Color="#B2955B" Offset="0.5"/>
         <GradientStop Color="#362A17" Offset="1"/>
     </LinearGradientBrush>
+    <!-- TODO: [Kevin] 임시작업 변경예정-->
     <Style TargetType="{x:Type ListBoxItem}" x:Key="LBXI.PLAYCHAMP">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate>
                     <StackPanel>
                         <Image Source="{Binding Champion}" Margin="1" Width="68"/>
-                        <Border Margin="6 -1 6 0" Height="34" Background="#510913">
-                            <Border BorderThickness="1" BorderBrush="#745727">
-                                
+                        <Grid Margin="6 -1 6 0" Height="34">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="3*"/>
+                                <RowDefinition Height="1*"/>
+                            </Grid.RowDefinitions>
+                            <Border Background="#510913" >
+                                <Border BorderThickness="1" BorderBrush="#745727" Margin="3">
+
+                                </Border>
                             </Border>
-                        </Border>
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+                                <Path Grid.Column="0" Stroke="#510913" StrokeThickness="2" Stretch="Fill">
+                                    <Path.Data>
+                                        <LineGeometry StartPoint="0,1" EndPoint="1,0" />
+                                    </Path.Data>
+                                </Path>
+                                <Path Grid.Column="1" Stroke="#510913" StrokeThickness="2" Stretch="Fill">
+                                    <Path.Data>
+                                        <LineGeometry StartPoint="0,0" EndPoint="1,1" />
+                                    </Path.Data>
+                                </Path>
+                            </Grid>
+                        </Grid>
                         <TextBlock Margin="0 12 0 0"
                                    Text="{Binding Percent}"
                                    Foreground="{StaticResource FG.PERCENT}"
