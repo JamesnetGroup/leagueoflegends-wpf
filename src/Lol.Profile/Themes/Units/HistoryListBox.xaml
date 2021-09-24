@@ -2,17 +2,6 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:units="clr-namespace:Lol.Profile.UI.Units"
                     xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
-    <LinearGradientBrush x:Key="BTN.BDR" StartPoint="0.5, 0" EndPoint="0.5, 1">
-        <GradientStop Color="#B89959" Offset="0"/>
-        <GradientStop Color="#997B44" Offset="0.5"/>
-        <GradientStop Color="#70552A" Offset="1"/>
-    </LinearGradientBrush>
-
-    <LinearGradientBrush x:Key="BTN.BDR.OVER" StartPoint="0.5, 0" EndPoint="0.5, 1">
-        <GradientStop Color="#EFC574" Offset="0"/>
-        <GradientStop Color="#BA9652" Offset="0.5"/>
-        <GradientStop Color="#8C6A34" Offset="1"/>
-    </LinearGradientBrush>
     <LinearGradientBrush x:Key="BDR.PARENT.OVER" StartPoint="0.5, 0" EndPoint="0.5, 1">
         <GradientStop Color="#69491F" Offset="0"/>
         <GradientStop Color="#563D19" Offset="0.5"/>
@@ -60,28 +49,6 @@
         <Setter Property="BorderBrush" Value="#443114"/>
     </Style>
 
-    <Style TargetType="{x:Type Button}" x:Key="BTN.DOWN">
-        <Setter Property="VerticalAlignment" Value="Top"/>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate>
-                    <Border x:Name="border1" Width="34" Height="34" CornerRadius="20" Background="#1E2328"  Grid.Column="5"
-								BorderBrush="{StaticResource BTN.BDR}" BorderThickness="2.5" Margin="0 0 0 0">
-                        <Border x:Name="border2" Background="Transparent" BorderBrush="#14171A" BorderThickness="1" CornerRadius="20">
-                            <ctrls:RiotIcon x:Name="icon" Fill="#CDBE91" Width="20" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center" IconType="Download"/>
-                        </Border>
-                    </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="border1" Property="BorderBrush" Value="{StaticResource BTN.BDR.OVER}"/>
-                            <Setter TargetName="icon" Property="Fill" Value="#FFEDB5"/>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-    
     <Style TargetType="{x:Type ListBoxItem}" x:Key="LBXI.HISTORY">
         <Setter Property="Template">
             <Setter.Value>
@@ -97,6 +64,7 @@
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
+                                
                                 <Grid>
                                     <Ellipse x:Name="bd3"
                                             Height="60" Width="60"
@@ -177,8 +145,7 @@
                                         <TextBlock Text="{Binding StDt, StringFormat={}{0:yyyy/MM/dd}}" Foreground="{StaticResource FG.DEFAULT}" Margin="10 0 0 0"/>
                                     </StackPanel>
                                 </StackPanel>
-
-                                <Button Grid.Column="5" Style="{StaticResource BTN.DOWN}"/>
+                                <ctrls:RiotIconButton Grid.Column="5" IconType="Download"/>
                             </Grid>
                         </Border>
                         <Border x:Name="bd1" BorderThickness="7 0 0 0" BorderBrush="Transparent" Height="88" Margin="0 -1 0 0">
