@@ -9,21 +9,25 @@
                 <ControlTemplate TargetType="{x:Type views:ItemView}">
                     <Grid>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="auto"/>
                             <RowDefinition Height="6*"/>
-                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="1.13*"/>
                         </Grid.RowDefinitions>
-                        <StackPanel>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 50 0 0">
+                            <TextBlock Margin="0 0 20 0" HorizontalAlignment="Center" Foreground="Green" FontSize="20" Text="test" VerticalAlignment="Center"/>
+                            <TextBlock Margin="0 0 20 0" HorizontalAlignment="Center" Foreground="Green" FontSize="20" Text="test2" VerticalAlignment="Center"/>
+                            <TextBlock Margin="0 0 20 0" HorizontalAlignment="Center" Foreground="Green" FontSize="20" Text="test3" VerticalAlignment="Center"/>
                             <ctrls:RiotTextBox MinWidth="300"
                                            Height="30"
                                            HorizontalAlignment="Right"
                                            PlaceHolder="아이템 세트 검색"
-                                           Margin="0 14 66 0"/>
-                            <TextBlock HorizontalAlignment="Center" Foreground="Green" FontSize="20" Text="test" VerticalAlignment="Center"/>
-                            <TextBlock HorizontalAlignment="Center" Foreground="Green" FontSize="20" Text="test2" VerticalAlignment="Center"/>
+                                           Margin="0 0 20 0"/>
+                            
                         </StackPanel>
-                        
-                        <TextBlock Grid.Row="1" HorizontalAlignment="Center" Foreground="Green" FontSize="20" Text="텍스트" VerticalAlignment="Center"/>
+
+                        <Border Grid.Row="1" BorderThickness="1" BorderBrush="#463714" Margin="0 20 0 0"/>
+                        <Border Grid.Row="2" BorderThickness="0.1" BorderBrush="#463714"/>
+
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
