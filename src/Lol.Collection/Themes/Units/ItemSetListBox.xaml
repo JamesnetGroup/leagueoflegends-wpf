@@ -3,13 +3,20 @@
                     xmlns:units="clr-namespace:Lol.Collection.UI.Units"
                     xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
 
-
     <Style TargetType="{x:Type Border}" x:Key="BDR.TEMP">
         <Setter Property="BorderThickness" Value="0.5"/>
         <Setter Property="BorderBrush" Value="#463714"/>
         <Setter Property="Width" Value="1000"/>
         <Setter Property="Margin" Value="40 0 0 0"/>
         <Setter Property="HorizontalAlignment" Value="Left"/>
+    </Style>
+
+    <Style TargetType="{x:Type Border}" x:Key="BD.ITEM">
+        <Setter Property="Height" Value="35"/>
+        <Setter Property="Width" Value="35"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Margin" Value="0 0 10 0"/>
+        <Setter Property="BorderBrush" Value="#443114"/>
     </Style>
 
     <Style TargetType="{x:Type ListBoxItem}" x:Key="LBXI.HISTORY">
@@ -22,17 +29,23 @@
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="auto"/>
                                     <ColumnDefinition Width="320"/>
-                                    <ColumnDefinition Width="200"/>
+                                    <ColumnDefinition Width="390"/>
                                     <ColumnDefinition Width="auto"/>
                                     <ColumnDefinition Width="auto"/>
-                                    <ColumnDefinition Width="auto"/>
+                                    <ColumnDefinition Width="300"/>
                                 </Grid.ColumnDefinitions>
                                 <CheckBox IsChecked="False" Margin="0 12 0 0 "/>
-                                <TextBlock Grid.Column="1" Text="{Binding Name}" FontSize="14" FontWeight="Bold" Foreground="#A09B8C" Margin="10"/>
-                                <TextBlock Grid.Column="2" Text="{Binding Champ}" FontSize="14" FontWeight="Bold" Foreground="#A09B8C" Margin="10"/>
-                                <TextBlock Grid.Column="3" Text="{Binding MapType1}" Foreground="#A09B8C" Margin="10"/>
-                                <TextBlock Grid.Column="4" Text="{Binding MapType2}" Foreground="#A09B8C" Margin="10"/>
-                                <TextBlock Grid.Column="4" Text="{Binding Option}" Foreground="#A09B8C" Margin="10"/>
+                                <TextBlock Grid.Column="1" Text="{Binding Name}" FontSize="14" FontWeight="Bold" Foreground="#A09B8C" Margin="10 10 0 0"/>
+                                <TextBlock Grid.Column="2" Text="{Binding Champ}" FontSize="14" FontWeight="Bold" Foreground="#A09B8C" Margin="10 10 0 0"/>
+                                <Border Grid.Column="3" Style="{StaticResource BD.ITEM}">
+                                    <Image Source="{Binding MapType1}"/>    
+                                </Border>
+                                <Border Grid.Column="4" Style="{StaticResource BD.ITEM}">
+                                    <Image Source="{Binding MapType2}" />
+                                </Border>
+                                <Border Grid.Column="5" Style="{StaticResource BD.ITEM}">
+                                    <Image Source="{Binding Option}" />
+                                </Border>
                             </Grid>
                         </Border>
                         <Border >
