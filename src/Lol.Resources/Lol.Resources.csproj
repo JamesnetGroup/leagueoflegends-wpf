@@ -7,6 +7,7 @@
 
   <ItemGroup>
     <None Remove="Icon\1.png" />
+    <None Remove="Images\bg-ezreal.jpg" />
     <None Remove="Images\bg-main-01.png" />
     <None Remove="Images\bg-main-02.png" />
     <None Remove="Images\bg-main-03.png" />
@@ -14,12 +15,12 @@
     <None Remove="Images\bg-main-05.png" />
     <None Remove="Images\bg-spell.png" />
     <None Remove="Images\card-kaisa.png" />
-    <None Remove="Images\Concepts\assassin.PNG" />
-    <None Remove="Images\Concepts\dealer.PNG" />
-    <None Remove="Images\Concepts\support.PNG" />
-    <None Remove="Images\Concepts\tanker.PNG" />
-    <None Remove="Images\Concepts\warrior.PNG" />
-    <None Remove="Images\Concepts\wizard.PNG" />
+    <None Remove="Images\Concepts\assassin.png" />
+    <None Remove="Images\Concepts\dealer.png" />
+    <None Remove="Images\Concepts\support.png" />
+    <None Remove="Images\Concepts\tanker.png" />
+    <None Remove="Images\Concepts\warrior.png" />
+    <None Remove="Images\Concepts\wizard.png" />
     <None Remove="Images\ico-14.png" />
     <None Remove="Images\icon-menu-selected.png" />
     <None Remove="Images\Items\potion.png" />
@@ -163,12 +164,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\Concepts\assassin.PNG" />
-    <Resource Include="Images\Concepts\dealer.PNG" />
-    <Resource Include="Images\Concepts\support.PNG" />
-    <Resource Include="Images\Concepts\tanker.PNG" />
-    <Resource Include="Images\Concepts\warrior.PNG" />
-    <Resource Include="Images\Concepts\wizard.PNG" />
+    <Resource Include="Images\bg-ezreal.jpg" />
+    <Resource Include="Images\Concepts\assassin.png" />
+    <Resource Include="Images\Concepts\dealer.png" />
+    <Resource Include="Images\Concepts\support.png" />
+    <Resource Include="Images\Concepts\tanker.png" />
+    <Resource Include="Images\Concepts\warrior.png" />
+    <Resource Include="Images\Concepts\wizard.png" />
     <Resource Include="Images\Items\potion.png" />
     <Resource Include="Images\Items\quicksilver.png" />
     <Resource Include="Images\Items\rabadon.png" />
