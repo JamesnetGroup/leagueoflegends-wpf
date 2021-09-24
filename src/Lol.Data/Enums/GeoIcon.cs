@@ -53,6 +53,7 @@
         ChevronDown,
         ChevronRight,
         Unfold,
-        Download
+        Download,
+        TEST
     }
 }
