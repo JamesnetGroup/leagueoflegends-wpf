@@ -16,11 +16,12 @@
 	</LinearGradientBrush>
 	
 	<Style TargetType="{x:Type units:SearchTextBox}">
-		<Setter Property="Foreground" Value="#F0E6D2"/>
-		<Setter Property="FontSize" Value="12"/>
+        <Setter Property="Foreground" Value="#F0E6D2"/>
+        <Setter Property="CaretBrush" Value="#F0E6D2"/>
+        <Setter Property="FontSize" Value="12"/>
 		<Setter Property="Margin" Value="0 30 0 0"/>
 		<Setter Property="Text" Value="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}"/>
-		<Setter Property="Template">
+        <Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type units:SearchTextBox}">
 					<Border x:Name="border"
@@ -52,7 +53,7 @@
 										  Grid.Column="1"
 										  Focusable="False"
 										  VerticalAlignment="Center"
-										  Margin="0 0 0 0"
+										  Margin="4 0 0 0"
 										  Padding="0 0 0 0"
 										  HorizontalScrollBarVisibility="Hidden"
 										  VerticalScrollBarVisibility="Hidden"/>
@@ -79,8 +80,8 @@
 								<Condition Property="IsKeyboardFocused" Value="True"/>
 								<Condition Property="Text" Value=""/>
 							</MultiTrigger.Conditions>
-							<Setter TargetName="placeholder" Property="Visibility" Value="Visible"/>
-						</MultiTrigger>
+							<Setter TargetName="placeholder" Property="Visibility" Value="Hidden"/>
+                        </MultiTrigger>
 					</ControlTemplate.Triggers>
 				</ControlTemplate>
 			</Setter.Value>
