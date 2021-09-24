@@ -64,7 +64,6 @@
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="Auto"/>
                                 </Grid.ColumnDefinitions>
-                                
                                 <Grid>
                                     <Ellipse x:Name="bd3"
                                             Height="60" Width="60"

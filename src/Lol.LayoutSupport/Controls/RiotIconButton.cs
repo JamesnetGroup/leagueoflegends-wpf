@@ -1,18 +1,6 @@
 ﻿using Lol.Data.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Lol.LayoutSupport.Controls
 {
@@ -21,6 +9,8 @@ namespace Lol.LayoutSupport.Controls
         #region DependencyProperty
 
         public static readonly DependencyProperty IconTypeProperty = DependencyProperty.Register("IconType", typeof(GeoIcon), typeof(RiotIconButton), new PropertyMetadata(GeoIcon.None));
+        public static readonly DependencyProperty IconWidthProperty = DependencyProperty.Register("IconWidth", typeof(double), typeof(RiotIconButton), new PropertyMetadata(20.0));
+        public static readonly DependencyProperty IconHeightProperty = DependencyProperty.Register("IconHeight", typeof(double), typeof(RiotIconButton), new PropertyMetadata(20.0));
         #endregion
 
         #region DefaultStyleKey
@@ -37,6 +27,24 @@ namespace Lol.LayoutSupport.Controls
         {
             get => (GeoIcon)GetValue(IconTypeProperty);
             set => SetValue(IconTypeProperty, value);
+        }
+        #endregion
+
+        #region IconWidth
+
+        public double IconWidth
+        {
+            get => (double)GetValue(IconWidthProperty);
+            set => SetValue(IconWidthProperty, value);
+        }
+        #endregion
+
+        #region IconHeight
+
+        public double IconHeight
+        {
+            get => (double)GetValue(IconHeightProperty);
+            set => SetValue(IconHeightProperty, value);
         }
         #endregion
     }
