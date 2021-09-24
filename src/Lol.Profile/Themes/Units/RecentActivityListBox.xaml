@@ -32,6 +32,7 @@
                 <ControlTemplate>
                     <StackPanel>
                         <ProgressBar Value="{Binding ActivePercent}" Style="{StaticResource PGB.ACTIVITY}"/>
+                        <!-- TODO: [Kevin] 이미지 추후 교체예정 -->
                         <Image Source="{Binding Concept}" Height="20" Width="20" Margin="0 10 0 0"/>
                     </StackPanel>
                 </ControlTemplate>
