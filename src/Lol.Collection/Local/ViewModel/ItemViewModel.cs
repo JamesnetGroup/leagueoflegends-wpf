@@ -1,7 +1,6 @@
 ﻿using Lol.Data.Collection;
 using Lol.ExampleData.Collection;
 using Lol.Foundation.Mvvm;
-using System;
 using System.Collections.Generic;
 
 namespace Lol.Collection.Local.ViewModel

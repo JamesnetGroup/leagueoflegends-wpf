@@ -1,6 +1,5 @@
-﻿using System.Collections.Generic;
-using Lol.DBEntity.Local.Entities.Extend;
-using Lol.DBEntity.Local.Entities.Implements;
+﻿using Lol.YamlDatabase.Entites.Schema;
+using System.Collections.Generic;
 
 namespace Lol.Main.Local.Collection
 {
