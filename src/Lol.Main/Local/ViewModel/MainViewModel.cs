@@ -28,6 +28,7 @@ using store = Lol.Store.UI.Views;
 using storeVM = Lol.Store.Local.ViewModels;
 using Lol.GameRoom.UI.Views;
 using Lol.GameRoom.Local;
+using Lol.YamlDatabase.Controller;
 
 namespace Lol.Main.Local.ViewModel
 {
@@ -145,7 +146,7 @@ namespace Lol.Main.Local.ViewModel
             MainMenu = new(MenuSelected);
             Options = new();
 
-            var friends = new GetFriends().Run(0);
+            var friends = new FriendsApi().Get(0);
             Friends = new(friends);
         }
         #endregion
