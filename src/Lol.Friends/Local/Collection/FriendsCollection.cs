@@ -1,4 +1,4 @@
-﻿using Lol.DBEntity.Local.Entities.Extend;
+﻿using Lol.YamlDatabase.Entites.Schema;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;

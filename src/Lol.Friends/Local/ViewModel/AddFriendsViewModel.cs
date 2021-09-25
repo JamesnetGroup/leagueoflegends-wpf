@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Windows.Input;
-using Lol.DBEntity.Local.Api;
-using Lol.DBEntity.Local.Entities.Extend;
 using Lol.Foundation.Mvvm;
 using Lol.Foundation.Riotcore;
 using Lol.Friends.Local.Collection;
 using Lol.LayoutSupport.Controls;
+using Lol.YamlDatabase.Controller;
+using Lol.YamlDatabase.Entites.Schema;
 
 namespace Lol.Friends.Local.ViewModel
 {
@@ -55,7 +55,7 @@ namespace Lol.Friends.Local.ViewModel
             DeleteCommand = new RelayCommand<RequestUsers>(UserCollection.CancelRequest);
             RequestCommand = new RelayCommand<RequestUsers>(UserCollection.SendRequest);
 
-            var data = new GetFriendRequests().Run(0);
+            var data = new FriendsApi().GetFriendRequests(0);
             UserCollection.AddRange(data);
         }
         #endregion
