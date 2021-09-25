@@ -15,6 +15,7 @@
 
     <Style TargetType="{x:Type ctrls:RiotIconButton}">
         <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Width" Value="34"/>
         <Setter Property="Height" Value="34"/>
         <Setter Property="Template">
