@@ -146,7 +146,7 @@ namespace Lol.Main.Local.ViewModel
             MainMenu = new(MenuSelected);
             Options = new();
 
-            var friends = new FriendsApi().Get(0);
+            var friends = new FriendsApi().GetMyFriends(0);
             Friends = new(friends);
         }
         #endregion

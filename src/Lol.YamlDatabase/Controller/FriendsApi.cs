@@ -10,7 +10,7 @@ namespace Lol.YamlDatabase.Controller
 {
     public class FriendsApi
     {
-        public List<IFriendsList> Get(int mySeq)
+        public List<IFriendsList> GetMyFriends(int mySeq)
         {
             // TODO: [Elena] Yaml DB 임시 작업중!
             var friends1 = GetFriends1().Where(x => x.UserSeq == mySeq).ToList();
@@ -32,6 +32,22 @@ namespace Lol.YamlDatabase.Controller
 
             return list;
         }
+
+        public List<RequestUsers> GetFriendRequests(int mySeq)
+        {
+            var friends1 = GetFriends1().Where(x => x.UserSeq == mySeq).ToList();
+            var users1 = GetUsers();
+
+            var friends = friends1.Select(x => new MyFriends(users1.First(u => x.FriendsSeq == u.Seq))).ToList()
+                .OrderBy(x => x.Status)
+                .ToList();
+
+            var users = friends
+                .Select(x => new RequestUsers(x))
+                .ToList();
+            return users;
+        }
+
 
         private List<Friends> GetFriends1()
         {
