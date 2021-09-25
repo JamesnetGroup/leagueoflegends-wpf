@@ -51,7 +51,7 @@
 - 📁 Presentation
 - Leagueoflegends
  
-<br>
+<br />
 
 ### Database
 > Entity Framework core &nbsp; 👉 [Learn More](https://github.com/devncore/the-easiest-entityframework)
