@@ -2,8 +2,8 @@
 {
     public class SpellModel
     {
+        public int Seq { get; set; }
         public string Name { get; set; }
-        public string ImageSource { get; set; }
         public int Level { get; set; }
         public string Maps { get; set; }
         public string Content { get; set; }

@@ -31,7 +31,7 @@ namespace Lol.Data.History
         public string Percent { get; set; }
         public double ActivePercent { get; set; }
         public string Concept { get; set; }
-        public string Concept_Name { get; set; }
+        public string ConceptName { get; set; }
 
 
 

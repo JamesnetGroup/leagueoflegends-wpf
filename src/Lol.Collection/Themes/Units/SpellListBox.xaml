@@ -1,6 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:units="clr-namespace:Lol.Collection.UI.Units">
+                    xmlns:units="clr-namespace:Lol.Collection.UI.Units"
+                    xmlns:cnvts="clr-namespace:Lol.Converter;assembly=Lol.Converter">
 
     <LinearGradientBrush x:Key="BTN.BDR" EndPoint="0.5,1" StartPoint="0.5,0">
         <GradientStop Color="#8A6F40" Offset="0"/>
@@ -24,7 +25,7 @@
                                 BorderThickness="1">
                             <Border Background="#000000">
                                 <Image x:Name="img" 
-                                       Source="{Binding ImageSource}" 
+                                       Source="{Binding Seq, Converter={cnvts:ThumbnailConverter}, ConverterParameter=Spell}" 
                                        Margin="1" 
                                        Opacity="0.7"/>
                             </Border>

@@ -9,7 +9,7 @@ namespace Lol.Converter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return $"/Lol.Resources;component/Images/Square/{value}.png";
+            return $"/Lol.Resources;component/Images/{parameter}/{value}.png";
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
