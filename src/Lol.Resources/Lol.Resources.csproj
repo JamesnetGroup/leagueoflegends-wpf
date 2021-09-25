@@ -13,6 +13,7 @@
     <None Remove="Images\bg-main-03.png" />
     <None Remove="Images\bg-main-04.png" />
     <None Remove="Images\bg-main-05.png" />
+    <None Remove="Images\bg-map.jpg" />
     <None Remove="Images\bg-spell.png" />
     <None Remove="Images\card-kaisa.png" />
     <None Remove="Images\Concepts\assassin.png" />
@@ -181,6 +182,7 @@
 
   <ItemGroup>
     <Resource Include="Images\bg-ezreal.jpg" />
+    <Resource Include="Images\bg-map.jpg" />
     <Resource Include="Images\Concepts\assassin.png" />
     <Resource Include="Images\Concepts\dealer.png" />
     <Resource Include="Images\Concepts\support.png" />

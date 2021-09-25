@@ -22,7 +22,13 @@
         <GradientStop Color="#550C1616" Offset="1.0" />
     </LinearGradientBrush>
 
-	<LinearGradientBrush x:Key="LGB.LEFT" StartPoint="0 0.5" EndPoint="1 0.5">
+
+    <LinearGradientBrush x:Key="BG.GAME.OPACITY" StartPoint="0.5, 0" EndPoint="0.5, 1">
+        <GradientStop Color="#FF04111C" Offset="0.2" />
+        <GradientStop Color="#5504111C" Offset="1.0" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="LGB.LEFT" StartPoint="0 0.5" EndPoint="1 0.5">
 		<GradientStop Color="#9A000000" Offset="0.0" />
 		<GradientStop Color="#33000000" Offset="0.5" />
 		<GradientStop Color="Transparent" Offset="1.0" />
@@ -151,6 +157,15 @@
                 <Setter TargetName="left" Property="Fill" Value="{StaticResource LGB.LEFT}"/>
                 <Setter TargetName="border" Property="Background" Value="Black"/>
                 <Setter TargetName="border" Property="Opacity" Value="0.9"/>
+            </DataTrigger>
+
+            <!--GameRoom의 각 SubMenu마다 Backgroud가 동일하기 때문에 ParentSeq로 처리-->
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.ParentSeq}" Value="8">
+                <Setter TargetName="img" Property="Source" Value="/Lol.Resources;component/Images/bg-map.jpg"/>
+                <Setter TargetName="img" Property="RenderOptions.BitmapScalingMode" Value="Fant"/>
+                <Setter TargetName="img" Property="Stretch" Value="UniformToFill"/>
+                <Setter TargetName="left" Property="Fill" Value="{StaticResource LGB.LEFT}"/>
+                <Setter TargetName="border" Property="Background" Value="{StaticResource BG.GAME.OPACITY}"/>
             </DataTrigger>
 
             <!--Store의 각 SubMenu마다 Backgroud가 동일하기 때문에 ParentSeq로 처리-->
