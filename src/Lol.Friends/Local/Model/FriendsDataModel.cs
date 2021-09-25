@@ -1,4 +1,4 @@
-﻿using Lol.DBEntity.Local.Entities.Schema;
+﻿using Lol.YamlDatabase.Entites.Schema;
 
 namespace Lol.Friends.Local.Model
 {

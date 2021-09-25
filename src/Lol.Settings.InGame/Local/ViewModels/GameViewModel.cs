@@ -1,10 +1,10 @@
 ﻿using Lol.Data.Config;
 using Lol.Data.Setting.InGame;
-using Lol.DBEntity.Local.Api;
-using Lol.DBEntity.Local.Entities.Extend;
+using Lol.YamlDatabase.Entites.Schema;
 using Lol.Foundation.Mvvm;
 using Lol.Foundation.Riotbase;
 using System.Collections.Generic;
+using Lol.YamlDatabase.Controller;
 
 namespace Lol.Settings.InGame.Local.ViewModels
 {
@@ -27,7 +27,7 @@ namespace Lol.Settings.InGame.Local.ViewModels
 
         public GameViewModel()
         {
-            CamLockMode = new GetCodeItems().Run("000008");
+            CamLockMode = new CodesApi().GetCodes("000008");
 
             ConfigModel config = RiotConfig.LoadConfig();
             Model = config.Settings.Game;

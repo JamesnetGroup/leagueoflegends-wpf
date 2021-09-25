@@ -1,10 +1,10 @@
 ﻿using Lol.Data.Config;
 using Lol.Data.Setting.InGame;
-using Lol.DBEntity.Local.Api;
-using Lol.DBEntity.Local.Entities.Extend;
+using Lol.YamlDatabase.Entites.Schema;
 using Lol.Foundation.Mvvm;
 using Lol.Foundation.Riotbase;
 using System.Collections.Generic;
+using Lol.YamlDatabase.Controller;
 
 namespace Lol.Settings.InGame.Local.ViewModels
 {
@@ -67,11 +67,11 @@ namespace Lol.Settings.InGame.Local.ViewModels
 
         public InterfaceViewModel()
         {
-            Names = new GetCodeItems().Run("000003");
-            Times = new GetCodeItems().Run("000004");
-            Emotions = new GetCodeItems().Run("000005");
-            EmotionSizes = new GetCodeItems().Run("000006");
-            EternalWorks = new GetCodeItems().Run("000007");
+            Names = new CodesApi().GetCodes("000003");
+            Times = new CodesApi().GetCodes("000004");
+            Emotions = new CodesApi().GetCodes("000005");
+            EmotionSizes = new CodesApi().GetCodes("000006");
+            EternalWorks = new CodesApi().GetCodes("000007");
 
             ConfigModel config = RiotConfig.LoadConfig();
             Model = config.Settings.Interface;
