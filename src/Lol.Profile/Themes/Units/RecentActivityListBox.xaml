@@ -33,7 +33,7 @@
                     <StackPanel>
                         <ProgressBar Value="{Binding ActivePercent}" Style="{StaticResource PGB.ACTIVITY}">
                             <ProgressBar.ToolTip>
-                                <ctrls:BasicTooltip ToolTip="{Binding Concept_Name}" Placement="Top" HorizontalOffset="13" VerticalOffset="-3"/>
+                                <ctrls:BasicTooltip ToolTip="{Binding ConceptName}" Placement="Top" HorizontalOffset="13" VerticalOffset="-3"/>
                             </ProgressBar.ToolTip>
                         </ProgressBar>
                         <!-- TODO: [Kevin] 이미지 추후 교체예정 -->

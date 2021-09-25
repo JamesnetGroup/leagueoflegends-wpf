@@ -2,7 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 					xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport"
 					xmlns:units="clr-namespace:Lol.Main.UI.Units"
-					xmlns:convt="clr-namespace:Lol.Converter;assembly=Lol.Converter">
+					xmlns:cnvts="clr-namespace:Lol.Converter;assembly=Lol.Converter">
 
 	<LinearGradientBrush x:Key="IMG.BDR2" EndPoint="0.5,1" StartPoint="0.5,0">
 		<GradientStop Color="#B79349" Offset="0"/>
@@ -31,14 +31,14 @@
 							<ctrls:CircleFace x:Name="avatar" 
 											  Margin="0 0 2 0"
 											  BorderBrush="{StaticResource IMG.BDR2}" 
-											  Source="{Binding Seq, Converter={convt:ThumbnailConverter}}"/>
+											  Source="{Binding Seq, Converter={cnvts:ThumbnailConverter}, ConverterParameter=Square}"/>
 							<StackPanel Grid.Column="1" Margin="5 0 0 0">
 								<TextBlock x:Name="text1" 
 										   Text="{Binding Name}"
 										   Foreground="#A09B8C" 
 										   FontSize="13"/>
 								<TextBlock x:Name="text2"
-										   Text="{Binding Status, Converter={convt:StatusConverter}}"
+										   Text="{Binding Status, Converter={cnvts:StatusConverter}}"
 										   Foreground="#FF5B5A56" 
 										   FontSize="12"
 										   FontWeight="Normal"/>
