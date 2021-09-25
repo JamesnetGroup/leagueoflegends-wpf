@@ -1,0 +1,154 @@
+﻿- seq: 0
+  id: '000001'
+  codeId: '000001'
+  itemName: Voice Activity
+  itemValue: Voice Activity
+  explain: Input mode voice activity
+  sort: 1
+- seq: 1
+  id: '000002'
+  codeId: '000001'
+  itemName: Push to Talk
+  itemValue: Push to Talk
+  explain: Input mode Push to Talk
+  sort: 2
+- seq: 2
+  id: '000003'
+  codeId: '000002'
+  itemName: Update Version
+  itemValue: Update Version
+  explain: Music Theme Update Version
+  sort: 1
+- seq: 3
+  id: '000004'
+  codeId: '000002'
+  itemName: Classic
+  itemValue: Classic
+  explain: Music Theme Classic
+  sort: 2
+- seq: 4
+  id: '000005'
+  codeId: '000003'
+  itemName: None
+  itemValue: None
+  explain: Show Name None
+  sort: 1
+- seq: 5
+  id: '000006'
+  codeId: '000003'
+  itemName: Summoner
+  itemValue: Summoner
+  explain: Show Name Summoner
+  sort: 2
+- seq: 6
+  id: '000007'
+  codeId: '000003'
+  itemName: Champion
+  itemValue: Champion
+  explain: Show Name Champion
+  sort: 3
+- seq: 7
+  id: '000008'
+  codeId: '000004'
+  itemName: None
+  itemValue: None
+  explain: wait time None
+  sort: 1
+- seq: 8
+  id: '000009'
+  codeId: '000004'
+  itemName: Sec
+  itemValue: Sec
+  explain: wait time Sec
+  sort: 2
+- seq: 9
+  id: '000010'
+  codeId: '000004'
+  itemName: All
+  itemValue: All
+  explain: wait time All
+  sort: 3
+- seq: 10
+  id: '000011'
+  codeId: '000004'
+  itemName: Min
+  itemValue: Min
+  explain: wait time Min
+  sort: 4
+- seq: 11
+  id: '000012'
+  codeId: '000005'
+  itemName: 'On'
+  itemValue: 'On'
+  explain: emotion On
+  sort: 1
+- seq: 12
+  id: '000013'
+  codeId: '000005'
+  itemName: Mute
+  itemValue: Mute
+  explain: emotion Mute
+  sort: 2
+- seq: 13
+  id: '000014'
+  codeId: '000005'
+  itemName: 'Off'
+  itemValue: 'Off'
+  explain: emotion Off
+  sort: 3
+- seq: 14
+  id: '000015'
+  codeId: '000006'
+  itemName: Normal
+  itemValue: Normal
+  explain: emotion size Normal
+  sort: 1
+- seq: 15
+  id: '000016'
+  codeId: '000006'
+  itemName: Small
+  itemValue: Small
+  explain: emotion size Small
+  sort: 2
+- seq: 16
+  id: '000017'
+  codeId: '000007'
+  itemName: All
+  itemValue: All
+  explain: achieve All
+  sort: 1
+- seq: 17
+  id: '000018'
+  codeId: '000007'
+  itemName: OurTeam
+  itemValue: OurTeam
+  explain: achieve OurTeam
+  sort: 2
+- seq: 18
+  id: '000019'
+  codeId: '000007'
+  itemName: None
+  itemValue: None
+  explain: achieve None
+  sort: 3
+- seq: 19
+  id: '000020'
+  codeId: '000008'
+  itemName: Per-Side Offset
+  itemValue: Per-Side Offset
+  explain: cam lock mode per-side
+  sort: 1
+- seq: 20
+  id: '000021'
+  codeId: '000008'
+  itemName: Fixed Offset
+  itemValue: Fixed Offset
+  explain: cam lock mode fixed
+  sort: 2
+- seq: 21
+  id: '000022'
+  codeId: '000008'
+  itemName: Semi-Locked
+  itemValue: Semi-Locked
+  explain: cam lock mode semi-locked
+  sort: 3
