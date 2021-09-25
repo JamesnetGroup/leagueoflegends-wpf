@@ -15,7 +15,6 @@ using Lol.MyShop.UI.Views;
 using Lol.MyShop.Local.ViewModel;
 using Lol.TeamFight.UI.Views;
 using Lol.TeamFight.Local.ViewModel;
-using Lol.DBEntity.Local.Api;
 using Lol.Home.UI.Views;
 using Lol.Home.Local.ViewModels;
 using Lol.Clash.UI.Views;
