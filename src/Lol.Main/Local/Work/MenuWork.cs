@@ -39,7 +39,7 @@ namespace Lol.Main.Local.Work
             MenuChanged(CurrentMenu);
         }
 
-        private void MenuChanged(MainMenuModel obj)
+        internal void MenuChanged(MainMenuModel obj)
         {
             List<SubMenuModel> subMenus = TotalSubMenus.Where(x => x.MainSeq == obj.Seq).ToList();
             _menuCommand.Invoke(obj, subMenus);
@@ -59,7 +59,8 @@ namespace Lol.Main.Local.Work
                 new MainMenuModel(4, "Collection", "ICON"),
                 new MainMenuModel(5, "Loot", "ICON"),
                 new MainMenuModel(6, "My Shop", "ICON"),
-                new MainMenuModel(7, "Store", "ICON")
+                new MainMenuModel(7, "Store", "ICON"),
+                new MainMenuModel(8, "Game", "TEXT")
             };
             return source;
         }
@@ -103,6 +104,12 @@ namespace Lol.Main.Local.Work
                 new SubMenuModel(33, 3, "RANKED"),
                 new SubMenuModel(34, 3, "HIGHLIGHTS"),
                 new SubMenuModel(35, 3, "STATS"),
+
+                new SubMenuModel(31, 8, "PVP"),
+                new SubMenuModel(32, 8, "AI 상대 대전"),
+                new SubMenuModel(33, 8, "훈련"),
+                new SubMenuModel(34, 8, "사용자 설정 게임 생성"),
+                new SubMenuModel(35, 8, "사용자 설정 게임 참가"),
 
             };
             return source;
