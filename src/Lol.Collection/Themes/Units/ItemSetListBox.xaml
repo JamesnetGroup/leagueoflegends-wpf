@@ -23,69 +23,69 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListBoxItem}">
-                    <Grid Background="Transparent" >
-                        <Border BorderThickness="0 0 0 1" BorderBrush="#22201C" Margin="40 0 0 0" Padding="0 10 0 10">
-                            <Grid>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="auto"/>
-                                    <ColumnDefinition Width="320"/>
-                                    <ColumnDefinition Width="390"/>
-                                    <ColumnDefinition Width="auto"/>
-                                    <ColumnDefinition Width="auto"/>
-                                    <ColumnDefinition Width="300"/>
-                                </Grid.ColumnDefinitions>
-                                <CheckBox IsChecked="False" Margin="0 12 0 0 "/>
-                                <TextBlock Grid.Column="1" Text="{Binding Name}" FontSize="14" FontWeight="Bold" Foreground="#A09B8C" Margin="10 10 0 0"/>
-                                <TextBlock Grid.Column="2" Text="{Binding Champ}" FontSize="14" FontWeight="Bold" Foreground="#A09B8C" Margin="10 10 0 0"/>
-                                <Border Grid.Column="3" Style="{StaticResource BD.ITEM}">
-                                    <Image Source="{Binding MapType1}"/>    
-                                </Border>
-                                <Border Grid.Column="4" Style="{StaticResource BD.ITEM}">
-                                    <Image Source="{Binding MapType2}" />
-                                </Border>
-                                <Border Grid.Column="5" Style="{StaticResource BD.ITEM}">
+                    <Border x:Name="bd" BorderThickness="0 0 0 1" BorderBrush="#22201C" Margin="0 0 0 0" Padding="8 10 0 10">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <CheckBox IsChecked="False" Margin="0 0 0 0 " Content="{Binding Name}" FontSize="14" FontWeight="Bold" Foreground="#A09B8C" VerticalAlignment="Center"/>
+                            <TextBlock Grid.Column="1" Text="{Binding Champ}" FontSize="14" FontWeight="Bold" Foreground="#A09B8C" VerticalAlignment="Center"/>
+                            <Grid Grid.Column="2">
+                                <StackPanel  Orientation="Horizontal" Margin="0 0 0 0" HorizontalAlignment="Left">
+                                    <Border Style="{StaticResource BD.ITEM}">
+                                        <Image Source="{Binding MapType1}"/>
+                                    </Border>
+                                    <Border Style="{StaticResource BD.ITEM}">
+                                        <Image Source="{Binding MapType2}" />
+                                    </Border>
+                                </StackPanel>
+                                <Border Style="{StaticResource BD.ITEM}" HorizontalAlignment="Right">
                                     <Image Source="{Binding Option}" />
                                 </Border>
                             </Grid>
-                        </Border>
-                        <Border >
-                        </Border>
-                    </Grid>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="bd" Property="Background" Value="#0F171D"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
     <Style TargetType="{x:Type units:ItemSetListBox}">
         <Setter Property="ItemsSource" Value="{Binding ItemLists}"/>
-        <Setter Property="Margin" Value="0 0 0 0"/>
+        <Setter Property="Margin" Value="40 20 0 0"/>
         <Setter Property="ItemContainerStyle" Value="{StaticResource LBXI.HISTORY}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:ItemSetListBox}">
-                    <Grid>
+                    <Grid >
                         <Grid.RowDefinitions>
                             <RowDefinition Height="auto"/>
                             <RowDefinition Height="6.5*"/>
                             <RowDefinition Height="auto"/>
                         </Grid.RowDefinitions>
-                        <StackPanel Orientation="Horizontal" Margin="40 30 20 0" Background="#1E2328" VerticalAlignment="Center">
-                            <CheckBox IsChecked="False" Margin="0 3 0 0"/>
-                            <TextBlock Foreground="#F0E6D2" FontWeight="Bold" Text="이름" FontSize="15" Margin="10 0 0 0"/>
-                            <TextBlock Foreground="#F0E6D2" FontWeight="Bold" Text="챔피언" FontSize="15" Margin="300 0 0 0"/>
-                            <TextBlock Foreground="#F0E6D2" FontWeight="Bold" Text="맵" FontSize="15" Margin="350 0 0 0"/>
-                        </StackPanel>
-                        <Border x:Name="bd" Grid.Row="1" Margin="0 5 0 0" Opacity="0.8">
-                            <ItemsPresenter/>
+                        <Border Background="#1E2328" Padding="8 6 0 6">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <CheckBox  Grid.Column="0" IsChecked="False" VerticalAlignment="Center" Foreground="#F0E6D2" FontWeight="Bold" Content="이름" FontSize="15"/>
+                                <TextBlock Grid.Column="1" Foreground="#F0E6D2" FontWeight="Bold" Text="챔피언" FontSize="15"/>
+                                <TextBlock Grid.Column="2" Foreground="#F0E6D2" FontWeight="Bold" Text="맵" FontSize="15"/>
+                            </Grid>
                         </Border>
+                        <ItemsPresenter Grid.Row="1"/>
                         <StackPanel Grid.Row="2">
-                            <Border Style="{StaticResource BDR.TEMP}"/>    
+                            <Border Style="{StaticResource BDR.TEMP}"/>
                         </StackPanel>
                     </Grid>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="bd" Property="Opacity" Value="1"/>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
