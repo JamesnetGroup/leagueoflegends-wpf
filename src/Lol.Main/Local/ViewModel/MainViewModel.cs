@@ -26,6 +26,8 @@ using Lol.Profile.UI.Views;
 using Lol.Profile.Local.ViewModels;
 using store = Lol.Store.UI.Views;
 using storeVM = Lol.Store.Local.ViewModels;
+using Lol.GameRoom.UI.Views;
+using Lol.GameRoom.Local;
 
 namespace Lol.Main.Local.ViewModel
 {
@@ -35,6 +37,7 @@ namespace Lol.Main.Local.ViewModel
 
         private readonly WindowWork _winWork;
         private readonly ModalWork _modalWork;
+        private readonly GameWork _gameWork;
 
         private object _modalContent;
         private IRiotUI _currentUI;
@@ -61,6 +64,7 @@ namespace Lol.Main.Local.ViewModel
         public ICommand ModalCommand { get; }
         public ICommand CloseCommand { get; }
         public ICommand MinimizeCommand { get; }
+        public ICommand GameCommand { get; }
         #endregion
 
         #region ModalContent
@@ -129,12 +133,14 @@ namespace Lol.Main.Local.ViewModel
         {
             _winWork = new(this);
             _modalWork = new(this);
+            _gameWork = new(this);
 
             UIs = new();
 
             CloseCommand = new RelayCommand<object>(_winWork.DoClosing);
             MinimizeCommand = new RelayCommand<object>(_winWork.DoMinizing);
             ModalCommand = new RelayCommand<Type>(_modalWork.SwitchModal);
+            GameCommand = new RelayCommand<Type>(_gameWork.OpenGameRoom);
 
             MainMenu = new(MenuSelected);
             Options = new();
@@ -148,7 +154,7 @@ namespace Lol.Main.Local.ViewModel
 
         #region MenuSelected
 
-        private void MenuSelected(MainMenuModel menu, List<SubMenuModel> subMenus)
+        internal void MenuSelected(MainMenuModel menu, List<SubMenuModel> subMenus)
         {
             _mainMenu = menu;
             SubMenus = subMenus;
@@ -177,6 +183,7 @@ namespace Lol.Main.Local.ViewModel
                     21 => new ItemView().SetVM(new ItemViewModel()),
                     // TODO: [Elena] 클래스 이름 중복 관련 임시 처리 
                     26 => new store.ChampionsView().SetVM(new storeVM.ChampionsViewModel()),
+                    31 => new PVPView().SetVM(new PVPViewModel()),
                     _ => new EmptyContent()
                 };
 
