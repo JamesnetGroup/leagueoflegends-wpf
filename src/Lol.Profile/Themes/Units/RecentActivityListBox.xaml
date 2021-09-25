@@ -31,7 +31,11 @@
             <Setter.Value>
                 <ControlTemplate>
                     <StackPanel>
-                        <ProgressBar Value="{Binding ActivePercent}" Style="{StaticResource PGB.ACTIVITY}"/>
+                        <ProgressBar Value="{Binding ActivePercent}" Style="{StaticResource PGB.ACTIVITY}">
+                            <ProgressBar.ToolTip>
+                                <ctrls:BasicTooltip ToolTip="{Binding Concept_Name}" Placement="Top" HorizontalOffset="13" VerticalOffset="-3"/>
+                            </ProgressBar.ToolTip>
+                        </ProgressBar>
                         <!-- TODO: [Kevin] 이미지 추후 교체예정 -->
                         <Image Source="{Binding Concept}" Height="20" Width="20" Margin="0 10 0 0"/>
                     </StackPanel>
