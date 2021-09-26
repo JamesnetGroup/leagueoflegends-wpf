@@ -63,7 +63,7 @@
 
 ## 데이터베이스
 **리그오브레전드 WPF**는 클래식 **RDB** 대신 **YAML**을 데이터베이스로 사용하고 있습니다.
-> YMAL은 Json과 함께 널리 사용되는 데이터 양식입니다. 이 기술에 대한 내용은 [The Eaiest Yaml](https://github.com/devncore/the-eaiest-yaml)을 통해 더 자세히 학습할 수 있도록 제공하고 있습니다.
+> YMAL은 Json과 함께 널리 사용되는 데이터 양식입니다. 이 기술에 대한 내용은 [The Eaiest Yaml](https://github.com/devncore/the-easiest-yaml)을 통해 더 자세히 학습할 수 있도록 제공하고 있습니다.
 
 ## 구현된 화면 목록
 - [x] 메인 (Main)
