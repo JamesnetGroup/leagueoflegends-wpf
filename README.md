@@ -4,7 +4,7 @@
   </a>
  
   <h1>WPF League of Legends</h1>
-  WPF로 만든 **리그오브레전드**입니다.
+  WPF로 만든 <b>리그오브레전드<b/>입니다.
  
   <br />
   <br />
