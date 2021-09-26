@@ -213,8 +213,11 @@
 					<ControlTemplate.Triggers>
 						<DataTrigger Binding="{Binding MenuType}" Value="TEXT">
 							<Setter Property="Visibility" Value="Visible"/>
-						</DataTrigger>
-					</ControlTemplate.Triggers>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Name}" Value="GAME">
+                            <Setter Property="Visibility" Value="Collapsed"/>
+                        </DataTrigger>
+                    </ControlTemplate.Triggers>
 				</ControlTemplate>
 			</Setter.Value>
 		</Setter>
