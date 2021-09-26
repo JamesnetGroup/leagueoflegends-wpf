@@ -111,8 +111,6 @@
             <!--TeamFightView-->
             <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.CurrentSeq}" Value="1">
                 <Setter TargetName="img" Property="Source" Value="/Lol.Resources;component/Images/lol-teamfight-background.jpg"/>
-                <Setter TargetName="img" Property="RenderOptions.BitmapScalingMode" Value="Fant"/>
-                <Setter TargetName="img" Property="Stretch" Value="UniformToFill"/>
                 <Setter TargetName="left" Property="Fill" Value="{StaticResource LGB.LEFT}"/>
             </DataTrigger>
 
@@ -124,8 +122,6 @@
             <!--Collection/SpellView-->
             <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.CurrentSeq}" Value="20">
                 <Setter TargetName="img" Property="Source" Value="/Lol.Resources;component/Images/bg-spell.png"/>
-                <Setter TargetName="img" Property="RenderOptions.BitmapScalingMode" Value="Fant"/>
-                <Setter TargetName="img" Property="Stretch" Value="UniformToFill"/>
                 <Setter TargetName="left" Property="Fill" Value="{StaticResource LGB.LEFT}"/>
                 <Setter TargetName="border" Property="Background" Value="{StaticResource BG.OPACITY}"/>
             </DataTrigger>
@@ -133,8 +129,6 @@
             <!--Collection/Item-->
             <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.CurrentSeq}" Value="21">
                 <Setter TargetName="img" Property="Source" Value="/Lol.Resources;component/Images/leona.jpg"/>
-                <Setter TargetName="img" Property="RenderOptions.BitmapScalingMode" Value="Fant"/>
-                <Setter TargetName="img" Property="Stretch" Value="UniformToFill"/>
                 <Setter TargetName="left" Property="Fill" Value="{StaticResource LGB.LEFT}"/>
                 <Setter TargetName="border" Property="Background" Value="{StaticResource BG.OPACITY}"/>
             </DataTrigger>
@@ -142,8 +136,6 @@
             <!--Clash의 각 SubMenu마다 Backgroud가 동일하기 때문에 ParentSeq로 처리-->
             <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.ParentSeq}" Value="2">
                 <Setter TargetName="img" Property="Source" Value="/Lol.Resources;component/Images/bg-winningteam.png"/>
-				<Setter TargetName="img" Property="RenderOptions.BitmapScalingMode" Value="Fant"/>
-				<Setter TargetName="img" Property="Stretch" Value="UniformToFill"/>
 				<Setter TargetName="left" Property="Fill" Value="{StaticResource LGB.LEFT}"/>
                 <Setter TargetName="border" Property="Background" Value="#091215"/>
                 <Setter TargetName="border" Property="Opacity" Value="0.9"/>
@@ -152,8 +144,6 @@
             <!--Prifile의 각 SubMenu마다 Backgroud가 동일하기 때문에 ParentSeq로 처리-->
             <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.ParentSeq}" Value="3">
                 <Setter TargetName="img" Property="Source" Value="/Lol.Resources;component/Images/bg-ezreal.jpg"/>
-                <Setter TargetName="img" Property="RenderOptions.BitmapScalingMode" Value="Fant"/>
-                <Setter TargetName="img" Property="Stretch" Value="UniformToFill"/>
                 <Setter TargetName="left" Property="Fill" Value="{StaticResource LGB.LEFT}"/>
                 <Setter TargetName="border" Property="Background" Value="Black"/>
                 <Setter TargetName="border" Property="Opacity" Value="0.9"/>
@@ -162,8 +152,6 @@
             <!--GameRoom의 각 SubMenu마다 Backgroud가 동일하기 때문에 ParentSeq로 처리-->
             <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.ParentSeq}" Value="8">
                 <Setter TargetName="img" Property="Source" Value="/Lol.Resources;component/Images/bg-map.jpg"/>
-                <Setter TargetName="img" Property="RenderOptions.BitmapScalingMode" Value="Fant"/>
-                <Setter TargetName="img" Property="Stretch" Value="UniformToFill"/>
                 <Setter TargetName="left" Property="Fill" Value="{StaticResource LGB.LEFT}"/>
                 <Setter TargetName="border" Property="Background" Value="{StaticResource BG.GAME.OPACITY}"/>
             </DataTrigger>

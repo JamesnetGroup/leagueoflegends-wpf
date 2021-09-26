@@ -29,7 +29,6 @@
 											  ContentTemplate="{TemplateBinding BackgroundTemplate}"/>
 
                             <Image x:Name="PART_BackgroundImage"
-                                   Visibility="Collapsed"
 								   Stretch="Fill"
                                    Grid.RowSpan="2"
                                    Grid.Column="0"/>
