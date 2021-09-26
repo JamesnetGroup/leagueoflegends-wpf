@@ -74,5 +74,6 @@ _추후 yaml으로 대체할 예정입니다._
 
 ![image](https://user-images.githubusercontent.com/52397976/134776025-2420380e-e225-4b68-8368-3f00be042ccf.png)
 
-![image](https://user-images.githubusercontent.com/68521148/134799389-afa1ebd4-374a-4f82-a2c4-2f47b76447e1.png)
+![image](https://user-images.githubusercontent.com/68521148/134799412-3530fd23-e640-4a19-a3d0-7b50530715d5.png)
+
 
