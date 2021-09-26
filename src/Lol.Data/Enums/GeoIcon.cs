@@ -54,6 +54,7 @@
         ChevronRight,
         Unfold,
         Download,
-        TEST
+        TEST,
+        Trophy
     }
 }
