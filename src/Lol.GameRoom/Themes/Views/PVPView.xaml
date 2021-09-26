@@ -2,25 +2,13 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:views="clr-namespace:Lol.GameRoom.UI.Views"
                     xmlns:units="clr-namespace:Lol.GameRoom.UI.Units">
-
-    <Style TargetType="{x:Type Border}" x:Key="BD.SECTION">
-        <Setter Property="BorderThickness" Value="0 1 0 0"/>
-        <Setter Property="BorderBrush" Value="#606F6E"/>
-    </Style>
-
     <Style TargetType="{x:Type views:PVPView}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type views:PVPView}">
                     <Grid Margin="36 0 36 0">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="*"/>
-                        </Grid.RowDefinitions>
                         <units:MapListBox/>
-                        <Border Grid.Row="1" Style="{StaticResource BD.SECTION}">
-                        </Border>
-                        <units:TrophyButton Grid.RowSpan="2"/>
+                        <units:TrophyButton />
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
