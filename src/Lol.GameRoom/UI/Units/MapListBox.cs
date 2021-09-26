@@ -15,13 +15,13 @@ using System.Windows.Shapes;
 
 namespace Lol.GameRoom.UI.Units
 {
-    public class TournamentButton : Button
+    public class MapListBox : ListBox
     {
         #region DefaultStyleKey
 
-        static TournamentButton()
+        static MapListBox()
         {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(TournamentButton), new FrameworkPropertyMetadata(typeof(TournamentButton)));
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(MapListBox), new FrameworkPropertyMetadata(typeof(MapListBox)));
         }
         #endregion
     }
