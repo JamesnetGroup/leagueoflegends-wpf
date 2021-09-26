@@ -26,6 +26,14 @@
 
 <br />
 
+## 내용
+- [이 오픈소스의 특징](#이-오픈소스의-특징)
+- [개발 정보](#개발-정보)
+- [프로젝트 구조](#프로젝트-구조)
+- [데이터베이스](#데이터베이스)
+
+<br />
+
 ## 이 오픈소스의 특징
 - WPF 프로젝트를 올바르게 구현하는 방법을 학습할 수 있습니다.
 - **리그오브레전드**와 같은 최상위 디자인 영역의 표현을 상용 컴포넌트에 의지하지 않고 직접 구현하는 방법에 대해 설명합니다.
@@ -51,13 +59,21 @@
 - 📁 Presentation
 - Leagueoflegends
  
-<br />
+<br>
 
-### Database
-> Entity Framework core &nbsp; 👉 [Learn More](https://github.com/devncore/the-easiest-entityframework)
+## 데이터베이스
+**리그오브레전드 WPF**는 클래식 **RDB** 대신 **YAML**을 데이터베이스로 사용하고 있습니다.
+> YMAL은 Json과 함께 널리 사용되는 데이터 양식입니다. 이 기술에 대한 내용은 [The Eaiest Yaml](https://github.com/devncore/the-eaiest-yaml)을 통해 더 자세히 학습할 수 있도록 제공하고 있습니다.
 
-_추후 yaml으로 대체할 예정입니다._
- 
+## 구현된 화면 목록
+- [x] 메인 (Main)
+- [x] 친구목록 (Friends)
+- [x] 설정 (Settings)
+- [x] TFT (TFT)
+- [x] 전적 (Match)
+- [x] 스펠 (Spell)
+- [x] 격전 (Winning) 
+
 <br />
 
 ## 스크린샷 
