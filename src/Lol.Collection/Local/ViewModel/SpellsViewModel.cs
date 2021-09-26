@@ -1,9 +1,11 @@
 ﻿using Lol.Data.Collection;
 using Lol.ExampleData.Collection;
 using Lol.Foundation.Mvvm;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Controls;
+using System.Windows.Media.Imaging;
 
 namespace Lol.Collection.Local.ViewModel
 {
@@ -47,8 +49,8 @@ namespace Lol.Collection.Local.ViewModel
             {
                 // TODO: [Lucas] 임시로 배경화면 변경 부분 처리
                 // (전체 구조가 보완되어야 함)
-                //var uri = new Uri(@"/Lol.Resources;component/Images/leona.jpg", UriKind.RelativeOrAbsolute);
-                //BackgroundImage.Source = new BitmapImage(uri);
+                var uri = new Uri(@"/Lol.Resources;component/Images/leona.jpg", UriKind.RelativeOrAbsolute);
+                BackgroundImage.Source = new BitmapImage(uri);
             }
         }
         #endregion
