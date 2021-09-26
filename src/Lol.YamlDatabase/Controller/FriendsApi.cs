@@ -1,4 +1,6 @@
-﻿using Lol.YamlDatabase.Entites.Schema;
+﻿using Lol.YamlDatabase.Entites.Core;
+using Lol.YamlDatabase.Entites.Schema;
+using Lol.YamlDatabase.Entites.Statics;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -8,13 +10,13 @@ using YamlDotNet.Serialization.NamingConventions;
 
 namespace Lol.YamlDatabase.Controller
 {
-    public class FriendsApi
+    public class FriendsApi : LolDbContext
     {
         public List<IFriendsList> GetMyFriends(int mySeq)
         {
             // TODO: [Elena] Yaml DB 임시 작업중!
-            var friends1 = GetFriends1().Where(x => x.UserSeq == mySeq).ToList();
-            var users1 = GetUsers();
+            var friends1 = Db.Friends.Where(x => x.UserSeq == mySeq).ToList();
+            var users1 = Db.Users;
 
             var friends = friends1.Select(x => new MyFriends(users1.First(u => x.FriendsSeq == u.Seq))).ToList()
                 .OrderBy(x => x.Status)
@@ -35,8 +37,8 @@ namespace Lol.YamlDatabase.Controller
 
         public List<RequestUsers> GetFriendRequests(int mySeq)
         {
-            var friends1 = GetFriends1().Where(x => x.UserSeq == mySeq).ToList();
-            var users1 = GetUsers();
+            var friends1 = Db.Friends.Where(x => x.UserSeq == mySeq).ToList();
+            var users1 = Db.Users;
 
             var friends = friends1.Select(x => new MyFriends(users1.First(u => x.FriendsSeq == u.Seq))).ToList()
                 .OrderBy(x => x.Status)
@@ -46,35 +48,6 @@ namespace Lol.YamlDatabase.Controller
                 .Select(x => new RequestUsers(x))
                 .ToList();
             return users;
-        }
-
-
-        private List<Friends> GetFriends1()
-        {
-            string file = "/datas/friends.yml";
-            string path = Environment.CurrentDirectory + file;
-
-            string readText = File.ReadAllText(path);
-
-            var deserializer = new DeserializerBuilder()
-                .WithNamingConvention(CamelCaseNamingConvention.Instance)
-                .Build();
-
-            return deserializer.Deserialize<List<Friends>>(readText);
-        }
-
-        private List<Users> GetUsers()
-        {
-            string file = "/datas/users.yml";
-            string path = Environment.CurrentDirectory + file;
-
-            string readText = File.ReadAllText(path);
-
-            var deserializer = new DeserializerBuilder()
-                .WithNamingConvention(CamelCaseNamingConvention.Instance)
-                .Build();
-
-            return deserializer.Deserialize<List<Users>>(readText);
         }
     }
 }

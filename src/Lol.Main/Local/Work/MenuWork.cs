@@ -60,7 +60,7 @@ namespace Lol.Main.Local.Work
                 new MainMenuModel(5, "Loot", "ICON"),
                 new MainMenuModel(6, "My Shop", "ICON"),
                 new MainMenuModel(7, "Store", "ICON"),
-                new MainMenuModel(8, "Game", "TEXT")
+                new MainMenuModel(8, "GAME", "TEXT")
             };
             return source;
         }
