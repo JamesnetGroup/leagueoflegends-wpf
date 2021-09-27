@@ -98,14 +98,26 @@
                             <RowDefinition Height="4.7*"/>
                             <RowDefinition Height="5.3*"/>
                         </Grid.RowDefinitions>
-                        <StackPanel VerticalAlignment="Bottom" Margin="0 0 0 44">
-                            <TextBlock x:Name="txb1" FontSize="15" Text="{Binding WarType}" Style="{StaticResource TXB.MAP}"/>
-                            <TextBlock x:Name="txb2" FontSize="24" Text="{Binding MapName}" Style="{StaticResource TXB.MAP}"/>
-                        </StackPanel>
+                        <Grid VerticalAlignment="Bottom">
+                            <StackPanel Margin="0 0 0 44">
+                                <TextBlock x:Name="txb1" FontSize="15" Text="{Binding WarType}" Style="{StaticResource TXB.MAP}"/>
+                                <TextBlock x:Name="txb2" FontSize="24" Text="{Binding MapName}" Style="{StaticResource TXB.MAP}"/>
+                            </StackPanel>
+                            <Border x:Name="bd1" Height="30" Width="160"
+                                    Background="White"
+                                    CornerRadius="6 6 0 0"
+                                    VerticalAlignment="Bottom"
+                                    HorizontalAlignment="Center"
+                                    Visibility="Collapsed">
+                                <Border.Effect>
+                                    <BlurEffect Radius="100" KernelType="Gaussian"/>
+                                </Border.Effect>
+                            </Border>
+                        </Grid>
                         <Border Grid.Row="1" Style="{StaticResource BD.SECTION}" Margin="0 0 0 0" >
                             <StackPanel Margin="0 12 0 0">
                                 <TextBlock x:Name="txb3" TextWrapping="Wrap" Text="{Binding Content}" Foreground="#A09B8C" FontSize="14" Visibility="Collapsed"/>
-                                <Border x:Name="bd" BorderThickness="0 1 0 0" BorderBrush="#576260" Margin="0 12 0 2" Visibility="Collapsed"/>
+                                <Border x:Name="bd2" BorderThickness="0 1 0 0" BorderBrush="#576260" Margin="0 12 0 2" Visibility="Collapsed"/>
                                 <ListBox x:Name="lb" Style="{StaticResource LBX.MAPTYPE}" ItemsSource="{Binding GameTypes}" Visibility="Collapsed"/>
                             </StackPanel>
                         </Border>
@@ -116,7 +128,8 @@
                             <Setter TargetName="txb2" Property="Foreground" Value="{StaticResource FG.SELECT}"/>
                             <Setter TargetName="txb3" Property="Foreground" Value="{StaticResource FG.SELECT}"/>
                             <Setter TargetName="txb3" Property="Visibility" Value="Visible"/>
-                            <Setter TargetName="bd" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="bd1" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="bd2" Property="Visibility" Value="Visible"/>
                             <Setter TargetName="lb" Property="Visibility" Value="Visible"/>
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="True">
