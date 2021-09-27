@@ -8,10 +8,10 @@ namespace Lol.YamlDatabase.Controller
         public List<IFriendsList> GetMyFriends(int mySeq)
         {
             // TODO: [Elena] Yaml DB 임시 작업중!
-            var friends1 = Db.Friends.Where(x => x.UserSeq == mySeq).ToList();
-            var users1 = Db.Users;
+            var users = Db.Users;
 
-            var friends = friends1.Select(x => new MyFriends(users1.First(u => x.FriendsSeq == u.Seq))).ToList()
+            var friends = Db.Friends.Where(x => x.UserSeq == mySeq)
+                .Select(x => new MyFriends(users.First(u => x.FriendsSeq == u.Seq)))
                 .OrderBy(x => x.Status)
                 .ToList();
 
@@ -30,17 +30,18 @@ namespace Lol.YamlDatabase.Controller
 
         public List<RequestUsers> GetFriendRequests(int mySeq)
         {
-            var friends1 = Db.Friends.Where(x => x.UserSeq == mySeq).ToList();
-            var users1 = Db.Users;
+            var users = Db.Users;
 
-            var friends = friends1.Select(x => new MyFriends(users1.First(u => x.FriendsSeq == u.Seq))).ToList()
+            var friends = Db.Friends.Where(x => x.UserSeq == mySeq)
+                .Select(x => new MyFriends(users.First(u => x.FriendsSeq == u.Seq)))
                 .OrderBy(x => x.Status)
-                .ToList();
+                .ToList(); 
 
-            var users = friends
+            var requests = friends
                 .Select(x => new RequestUsers(x))
                 .ToList();
-            return users;
+
+            return requests;
         }
     }
 }

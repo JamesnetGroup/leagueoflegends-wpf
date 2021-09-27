@@ -17,16 +17,22 @@ namespace Lol.YamlDatabase.Entites.Statics
         private List<Friends> _friends;
         internal List<CodeItems> _codeItems;
 
+        private string GetText(string table)
+        {
+            string file = $"/datas/{table}.yml";
+            string path = Environment.CurrentDirectory + file;
+            string text = File.ReadAllText(path);
+
+            return text;
+        }
+
         internal List<Users> Users
         {
             get
             {
                 if (_users == null)
                 {
-                    string file = "/datas/users.yml";
-                    string path = Environment.CurrentDirectory + file;
-
-                    string readText = File.ReadAllText(path);
+                    string readText = GetText("users");
 
                     var deserializer = new DeserializerBuilder()
                         .WithNamingConvention(CamelCaseNamingConvention.Instance)
@@ -43,10 +49,7 @@ namespace Lol.YamlDatabase.Entites.Statics
             {
                 if (_friends == null)
                 {
-                    string file = "/datas/friends.yml";
-                    string path = Environment.CurrentDirectory + file;
-
-                    string readText = File.ReadAllText(path);
+                    string readText = GetText("friends");
 
                     var deserializer = new DeserializerBuilder()
                         .WithNamingConvention(CamelCaseNamingConvention.Instance)
@@ -63,10 +66,7 @@ namespace Lol.YamlDatabase.Entites.Statics
             {
                 if (_codeItems == null)
                 {
-                    string file = "/datas/codeitems.yml";
-                    string path = Environment.CurrentDirectory + file;
-
-                    string readText = File.ReadAllText(path);
+                    string readText = GetText("codeitems");
 
                     var deserializer = new DeserializerBuilder()
                         .WithNamingConvention(CamelCaseNamingConvention.Instance)
