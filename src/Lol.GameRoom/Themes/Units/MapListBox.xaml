@@ -9,6 +9,18 @@
         <GradientStop Color="#A07C31" Offset="1"/>
     </LinearGradientBrush>
     
+    <LinearGradientBrush x:Key="BDR.MAP" StartPoint="0.5, 0" EndPoint="0.5, 1">
+        <GradientStop Color="#CABB8E" Offset="0"/>
+        <GradientStop Color="#9F8859" Offset="0.5"/>
+        <GradientStop Color="#795B2A" Offset="1"/>
+    </LinearGradientBrush>
+    
+    <LinearGradientBrush x:Key="BDR.MAP.OVER" StartPoint="0.5, 0" EndPoint="0.5, 1">
+        <GradientStop Color="#EFE4CD" Offset="0"/>
+        <GradientStop Color="#D8B977" Offset="0.5"/>
+        <GradientStop Color="#C89C3D" Offset="1"/>
+    </LinearGradientBrush>
+    
     <LinearGradientBrush x:Key="BDR.RADIO.OVER" StartPoint="0, 0" EndPoint="1, 1">
         <GradientStop Color="#EDE1C9" Offset="0"/>
         <GradientStop Color="#E6D3AD" Offset="0.5"/>
@@ -99,7 +111,20 @@
                             <RowDefinition Height="5.3*"/>
                         </Grid.RowDefinitions>
                         <Grid VerticalAlignment="Bottom">
-                            <StackPanel Margin="0 0 0 44">
+                            <StackPanel Margin="0 0 0 44" Background="Transparent" Cursor="Hand">
+                                <Border x:Name="bd3" Height="82" Width="82"
+                                        Background="#0A1428" 
+                                        BorderThickness="4"
+                                        CornerRadius="300"
+                                        BorderBrush="{StaticResource BDR.MAP}" 
+                                        Margin="0 0 0 30">
+                                    <Border x:Name="bd4"
+                                            CornerRadius="300"
+                                            Margin="4"
+                                            BorderThickness="2"
+                                            BorderBrush="{StaticResource BDR.MAP}"
+                                            Background="Transparent"/>
+                                </Border>
                                 <TextBlock x:Name="txb1" FontSize="15" Text="{Binding WarType}" Style="{StaticResource TXB.MAP}"/>
                                 <TextBlock x:Name="txb2" FontSize="24" Text="{Binding MapName}" Style="{StaticResource TXB.MAP}"/>
                             </StackPanel>
@@ -134,6 +159,8 @@
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="txb3" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="bd3" Property="BorderBrush" Value="{StaticResource BDR.MAP.OVER}"/>
+                            <Setter TargetName="bd4" Property="BorderBrush" Value="{StaticResource BDR.MAP.OVER}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
