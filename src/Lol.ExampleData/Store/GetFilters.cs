@@ -30,6 +30,8 @@ namespace Lol.ExampleData.Store
                 case "CHAMPIONS": source = filters.Where(x => x.IsChampionVisible).ToList(); break;
                 case "ETERNALS": source = filters.Where(x => x.IsEternalVisible).ToList(); break;
                 case "BUNDLES": source = filters.Where(x => x.IsBundleVisible).ToList(); break;
+                default:
+                    break;
             }
 
             return source;
