@@ -9,14 +9,14 @@
         public string Time { get; set; }
         public string ImageSource { get; set; }
 
-        public TierDetailModel(int seq, int parent_seq, string name, string sub_name, string time, string image_source)
+        public TierDetailModel(int seq, int parentSeq, string name, string subName, string time, string imageSource)
         {
             Seq = seq;
-            ParentSeq = parent_seq;
+            ParentSeq = parentSeq;
             Name = name;
-            SubName = sub_name;
+            SubName = subName;
             Time = time;
-            ImageSource = image_source;
+            ImageSource = imageSource;
         }
     }
 }

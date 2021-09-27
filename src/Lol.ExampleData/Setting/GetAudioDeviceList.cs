@@ -9,7 +9,7 @@ namespace Lol.ExampleData.Setting
         public static List<AudioDevice> GetAudioDeviceList()
         {
             List<AudioDevice> source = new();
-            var enumerator = new MMDeviceEnumerator();
+            MMDeviceEnumerator enumerator = new();
 
             foreach (MMDevice endpoint in enumerator.EnumerateAudioEndPoints(DataFlow.Render, DeviceState.Active))
             {
