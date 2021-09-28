@@ -9,6 +9,7 @@
                     <Grid Margin="36 0 36 0">
                         <units:MapListBox/>
                         <units:TrophyButton />
+                        <units:OkButton />
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
