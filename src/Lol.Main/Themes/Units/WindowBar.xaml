@@ -20,7 +20,8 @@
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type Button}">
 					<Border Background="Transparent">
-						<ctrls:RiotIcon Style="{StaticResource IN.ICON}" IconType="Help"/>
+						<ctrls:RiotIcon Style="{StaticResource IN.ICON}" 
+                                        IconType="Help"/>
 					</Border>
 					<ControlTemplate.Triggers>
 						<Trigger Property="IsMouseOver" Value="True">
@@ -42,7 +43,8 @@
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type Button}">
 					<Border Background="Transparent">
-						<ctrls:RiotIcon Style="{StaticResource IN.ICON}" IconType="Minimize"/>
+						<ctrls:RiotIcon Style="{StaticResource IN.ICON}" 
+                                        IconType="Minimize"/>
 					</Border>
 					<ControlTemplate.Triggers>
 						<Trigger Property="IsMouseOver" Value="True">
@@ -64,7 +66,8 @@
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type ToggleButton}">
 					<Border Background="Transparent">
-						<ctrls:RiotIcon Style="{StaticResource IN.ICON}" IconType="Setting"/>
+						<ctrls:RiotIcon Style="{StaticResource IN.ICON}" 
+                                        IconType="Setting"/>
 					</Border>
 					<ControlTemplate.Triggers>
 						<Trigger Property="IsMouseOver" Value="True">
@@ -86,7 +89,8 @@
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type Button}">
 					<Border Background="Transparent">
-						<ctrls:RiotIcon Style="{StaticResource IN.ICON}" IconType="Close"/>
+						<ctrls:RiotIcon Style="{StaticResource IN.ICON}"
+                                        IconType="Close"/>
 					</Border>
 					<ControlTemplate.Triggers>
 						<Trigger Property="IsMouseOver" Value="True">
@@ -103,7 +107,8 @@
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type units:WindowBar}">
-					<Grid Margin="5 5 5 5" VerticalAlignment="Top">
+					<Grid Margin="5 5 5 5" 
+                          VerticalAlignment="Top">
 						<Grid.ColumnDefinitions>
 							<ColumnDefinition Width="*"/>
 							<ColumnDefinition Width="Auto"/>
