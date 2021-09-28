@@ -101,10 +101,25 @@
                                 CornerRadius="1" 
                                 Width="11" 
                                 Height="11"/>
-						<ctrls:RiotIcon x:Name="check" Grid.Column="0" Visibility="Hidden" IconType="CheckBold" HorizontalAlignment="Left"
-										Fill="#A38137" Width="15" Height="15" Margin="0 0 0 2" Stroke="#000000" StrokeThickness="1"/>
-						<TextBlock x:Name="content" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="3 0 0 0"
-								   Foreground="#B0A480" FontWeight="Bold" Text="{Binding RelativeSource={RelativeSource AncestorType=CheckBox}, Path=Content}"/>
+						<ctrls:RiotIcon x:Name="check"
+                                        Grid.Column="0"
+                                        Visibility="Hidden"
+                                        IconType="CheckBold"
+                                        HorizontalAlignment="Left"
+										Fill="#A38137" 
+                                        Width="15" 
+                                        Height="15"
+                                        Margin="0 0 0 2"
+                                        Stroke="#000000" 
+                                        StrokeThickness="1"/>
+						<TextBlock x:Name="content" 
+                                   Grid.Column="1"
+                                   HorizontalAlignment="Left" 
+                                   VerticalAlignment="Center"
+                                   Margin="3 0 0 0"
+								   Foreground="#B0A480"
+                                   FontWeight="Bold" 
+                                   Text="{Binding RelativeSource={RelativeSource AncestorType=CheckBox}, Path=Content}"/>
 					</Grid>
 					<ControlTemplate.Triggers>
 						<Trigger Property="IsMouseOver" Value="True">
@@ -127,14 +142,30 @@
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type units:FriendsSortPopup}">
-					<Border Background="#070A0B" BorderBrush="{StaticResource VIEW.BDR}" BorderThickness="2" Width="223" Height="200">
+					<Border Background="#070A0B"
+                            BorderBrush="{StaticResource VIEW.BDR}" 
+                            BorderThickness="2"
+                            Width="223"
+                            Height="200">
 						<StackPanel>
 							<ListBox Style="{StaticResource LBX.SORT}"/>
-							<Border HorizontalAlignment="Center" VerticalAlignment="Bottom" Background="#3F3E39" Width="210" Height="1" UseLayoutRounding="True"/>
-							<CheckBox Style="{StaticResource CHK.BASE}" Content="Group Games &amp; Servers"/>
-							<TextBlock Text="Disables folders" Foreground="#3F3E39" FontSize="12" Margin="30 0 0 15"/>
-							<CheckBox Style="{StaticResource CHK.BASE}" Content="Group League+" Margin="0 0 0 5"/>
-							<CheckBox Style="{StaticResource CHK.BASE}" Content="Group Offline"/>
+							<Border HorizontalAlignment="Center"
+                                    VerticalAlignment="Bottom"
+                                    Background="#3F3E39"
+                                    Width="210"
+                                    Height="1"
+                                    UseLayoutRounding="True"/>
+							<CheckBox Style="{StaticResource CHK.BASE}"
+                                      Content="Group Games &amp; Servers"/>
+							<TextBlock Text="Disables folders" 
+                                       Foreground="#3F3E39" 
+                                       FontSize="12"
+                                       Margin="30 0 0 15"/>
+							<CheckBox Style="{StaticResource CHK.BASE}"
+                                      Content="Group League+"
+                                      Margin="0 0 0 5"/>
+							<CheckBox Style="{StaticResource CHK.BASE}" 
+                                      Content="Group Offline"/>
 						</StackPanel>
 					</Border>
 				</ControlTemplate>
