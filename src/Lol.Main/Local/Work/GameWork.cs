@@ -1,15 +1,24 @@
-﻿using Lol.Main.Local.ViewModel;
-using System;
+﻿using System;
+using Lol.Main.Local.ViewModel;
 
 namespace Lol.Main.Local.Work
 {
     public class GameWork
     {
+        #region Variables
+
         private readonly MainViewModel _vm;
+        #endregion
+
+        #region Constructor
+
         public GameWork(MainViewModel vm)
         {
             _vm = vm;
         }
+        #endregion
+
+        #region OpenGameRoom
 
         internal void OpenGameRoom(Type type)
         {
@@ -17,5 +26,6 @@ namespace Lol.Main.Local.Work
             _vm.MainMenu.CurrentMenu = _vm.MainMenu.Menus[8];
             _vm.MainMenu.MenuChanged(_vm.MainMenu.CurrentMenu);
         }
+        #endregion
     }
 }
