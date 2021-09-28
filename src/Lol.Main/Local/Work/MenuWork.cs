@@ -8,7 +8,10 @@ namespace Lol.Main.Local.Work
 {
     public class MenuWork : ObservableObject
     {
+        #region Variables
+
         private readonly Action<MainMenuModel, List<SubMenuModel>> _menuCommand;
+        #endregion
 
         #region Menus
 
@@ -23,7 +26,10 @@ namespace Lol.Main.Local.Work
 
         #endregion
 
+        #region TotalSubMenus
+
         public List<SubMenuModel> TotalSubMenus { get; }
+        #endregion
 
         #region Constructor
 
