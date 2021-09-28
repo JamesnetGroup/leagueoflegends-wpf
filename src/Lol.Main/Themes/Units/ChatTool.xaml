@@ -25,10 +25,19 @@
 				<ControlTemplate TargetType="{x:Type Control}">
 					<Border>
 						<Border.ToolTip>
-							<ctrls:BasicTooltip ToolTip="V11.1.351.8352" Placement="Top" HorizontalOffset="-5" VerticalOffset="-3"/>
+							<ctrls:BasicTooltip ToolTip="V11.1.351.8352" 
+                                                Placement="Top" 
+                                                HorizontalOffset="-5" 
+                                                VerticalOffset="-3"/>
 						</Border.ToolTip>
-						<TextBlock Background="Transparent" Text="V11.1" FontSize="13" Foreground="#3C3C41" HorizontalAlignment="Stretch"
-								   VerticalAlignment="Stretch" TextAlignment="Center" Padding="25 5 25 5"/>
+						<TextBlock Background="Transparent" 
+                                   Text="V11.1" 
+                                   FontSize="13" 
+                                   Foreground="#3C3C41" 
+                                   HorizontalAlignment="Stretch"
+								   VerticalAlignment="Stretch" 
+                                   TextAlignment="Center" 
+                                   Padding="25 5 25 5"/>
 					</Border>
 				</ControlTemplate>
 			</Setter.Value>
@@ -53,10 +62,17 @@
         <Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type Button}">
-                    <Border x:Name="border" Background="#1E2328" BorderThickness="1" BorderBrush="{StaticResource BTN.BDR}" 
-							SnapsToDevicePixels="True" ClipToBounds="True">
+                    <Border x:Name="border"
+                            Background="#1E2328"
+                            BorderThickness="1"
+                            BorderBrush="{StaticResource BTN.BDR}" 
+							SnapsToDevicePixels="True" 
+                            ClipToBounds="True">
                         <Grid Margin="0 0 0 0">
-                            <Border Background="Transparent" BorderThickness="1" BorderBrush="#CC091119" Margin="0">
+                            <Border Background="Transparent" 
+                                    BorderThickness="1" 
+                                    BorderBrush="#CC091119"
+                                    Margin="0">
                                 <ctrls:RiotIcon x:Name="path" Style="{StaticResource ICON.MENUS}"/>
                             </Border>
                         </Grid>
@@ -82,12 +98,25 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ToggleButton}">
-                    <Border x:Name="border" Background="#1E2328" BorderThickness="1" BorderBrush="{StaticResource BTN.BDR}" 
-							SnapsToDevicePixels="True" ClipToBounds="True">
+                    <Border x:Name="border"
+                            Background="#1E2328"
+                            BorderThickness="1" 
+                            BorderBrush="{StaticResource BTN.BDR}" 
+							SnapsToDevicePixels="True"
+                            ClipToBounds="True">
                         <Grid Margin="0 0 0 0">
-                            <Border Background="Transparent" BorderThickness="1" BorderBrush="#CC091119" Margin="0">
-                                <ctrls:RiotIcon x:Name="path" Style="{StaticResource ICON.MENUS}" Fill="#CDBE91" Width="18" Height="18"
-                                                HorizontalAlignment="Center" VerticalAlignment="Center" IconType="Chat"/>
+                            <Border Background="Transparent"
+                                    BorderThickness="1"
+                                    BorderBrush="#CC091119"
+                                    Margin="0">
+                                <ctrls:RiotIcon x:Name="path" 
+                                                Style="{StaticResource ICON.MENUS}"
+                                                Fill="#CDBE91"
+                                                Width="18"
+                                                Height="18"
+                                                HorizontalAlignment="Center"
+                                                VerticalAlignment="Center"
+                                                IconType="Chat"/>
                             </Border>
                         </Grid>
                     </Border>
@@ -133,8 +162,13 @@
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type units:ChatTool}">
 					<Grid>
-						<Border Grid.Row="2" Background="Transparent" BorderBrush="#1E282D" BorderThickness="0 1 0 0"/>
-						<StackPanel Grid.Row="2" Orientation="Horizontal" Margin="0 1 0 0">
+						<Border Grid.Row="2"
+                                Background="Transparent" 
+                                BorderBrush="#1E282D"
+                                BorderThickness="0 1 0 0"/>
+						<StackPanel Grid.Row="2" 
+                                    Orientation="Horizontal"
+                                    Margin="0 1 0 0">
                             <ToggleButton Style="{StaticResource TGL.CHAT}"/>
                             <Button Style="{StaticResource BTN.SCRIPT}"/>
 							<Button Style="{StaticResource BTN.MIC}"/>
