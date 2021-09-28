@@ -20,16 +20,21 @@
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type ToolTip}">
-					<Border Background="#010A13" BorderThickness="2">
+					<Border Background="#010A13"
+                            BorderThickness="2">
 						<Border.BorderBrush>
-							<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+							<LinearGradientBrush EndPoint="0.5,1" 
+                                                 StartPoint="0.5,0">
 								<GradientStop Color="#614a1f" Offset="0"/>
 								<GradientStop Color="#463714" Offset="1"/>
 							</LinearGradientBrush>
 						</Border.BorderBrush>
-						<ContentPresenter Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center">
+						<ContentPresenter Margin="5"
+                                          VerticalAlignment="Center"
+                                          HorizontalAlignment="Center">
 							<ContentPresenter.Content>
-								<TextBlock Text="{TemplateBinding ToolTip}" Padding="2 2 2 2"/>
+								<TextBlock Text="{TemplateBinding ToolTip}"
+                                           Padding="2 2 2 2"/>
 							</ContentPresenter.Content>
 						</ContentPresenter>
 					</Border>
@@ -118,8 +123,14 @@
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type units:Currency}">
 					<Grid>
-						<Border Height="60" Background="Transparent" BorderBrush="{StaticResource BDR.SEC}" BorderThickness="1 0 0 0" Margin="10 0 0 0"/>
-						<StackPanel VerticalAlignment="Center" HorizontalAlignment="Left" Margin="25 0 0 0">
+						<Border Height="60" 
+                                Background="Transparent"
+                                BorderBrush="{StaticResource BDR.SEC}"
+                                BorderThickness="1 0 0 0" 
+                                Margin="10 0 0 0"/>
+						<StackPanel VerticalAlignment="Center" 
+                                    HorizontalAlignment="Left" 
+                                    Margin="25 0 0 0">
 							<Button Style="{StaticResource BTN.CURRENCY}" Tag="01" Content="55"/>
 							<Button Style="{StaticResource BTN.CURRENCY}" Tag="02" Content="2109"/>
 						</StackPanel>
