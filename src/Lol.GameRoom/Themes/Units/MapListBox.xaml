@@ -8,6 +8,18 @@
         <GradientStop Color="#A88130" Offset="0.5"/>
         <GradientStop Color="#A07C31" Offset="1"/>
     </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="BG.MAP" StartPoint="0, 0" EndPoint="1, 1">
+        <GradientStop Color="#25CFDC" Offset="0"/>
+        <GradientStop Color="#02A9B7" Offset="0.5"/>
+        <GradientStop Color="#046E88" Offset="1"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="BG.MAP.OVER" StartPoint="0, 1" EndPoint="1, 0">
+        <GradientStop Color="#059DB5" Offset="0"/>
+        <GradientStop Color="#015078" Offset="0.5"/>
+        <GradientStop Color="#0B1C38" Offset="1"/>
+    </LinearGradientBrush>
     
     <LinearGradientBrush x:Key="BDR.MAP" StartPoint="0.5, 0" EndPoint="0.5, 1">
         <GradientStop Color="#CABB8E" Offset="0"/>
@@ -101,6 +113,7 @@
         </Setter>
     </Style>
 
+    <!--[TODO] Kevin: 코드수정 필요-->
     <Style TargetType="{x:Type ListBoxItem}" x:Key="LBXI.MAP">
         <Setter Property="Template">
             <Setter.Value>
@@ -112,19 +125,73 @@
                         </Grid.RowDefinitions>
                         <Grid VerticalAlignment="Bottom">
                             <StackPanel Margin="0 0 0 44" Background="Transparent" Cursor="Hand">
-                                <Border x:Name="bd3" Height="82" Width="82"
-                                        Background="#0A1428" 
-                                        BorderThickness="4"
-                                        CornerRadius="300"
-                                        BorderBrush="{StaticResource BDR.MAP}" 
-                                        Margin="0 0 0 30">
-                                    <Border x:Name="bd4"
+                                <Grid>
+                                    <Border x:Name="bdCircle" Height="82" Width="82"
+                                            Background="#0A1428" 
+                                            BorderThickness="4"
                                             CornerRadius="300"
-                                            Margin="4"
-                                            BorderThickness="2"
-                                            BorderBrush="{StaticResource BDR.MAP}"
-                                            Background="Transparent"/>
-                                </Border>
+                                            BorderBrush="{StaticResource BDR.MAP}" 
+                                            Margin="0 0 0 30">
+                                        <Border x:Name="bdCircleChild"
+                                                CornerRadius="300"
+                                                Margin="4"
+                                                BorderThickness="2"
+                                                BorderBrush="{StaticResource BDR.MAP}"
+                                                Background="Transparent"/>
+                                    </Border>
+                                    <Grid x:Name="gdTrapezoid" Visibility="Collapsed">
+                                        <Path x:Name="path1"
+                                              Data="M15,0 L60,0 75,30 0,30 z" 
+                                              Fill="#0A1428"
+                                              Height="82"
+                                              Width="82" 
+                                              StrokeThickness="4"
+                                              Stretch="Fill"
+                                              Stroke="{StaticResource BDR.MAP}"
+                                              Margin="0 0 0 30">
+                                        </Path>
+                                        <Path x:Name="path2"
+                                              Data="M15,0 L60,0 75,30 0,30 z" 
+                                              Fill="#0A1428"
+                                              Height="60"
+                                              Width="60" 
+                                              StrokeThickness="2"
+                                              Stretch="Fill"
+                                              Stroke="{StaticResource BDR.MAP}"
+                                              Margin="0 0 0 30">
+
+                                        </Path>
+                                    </Grid>
+                                    <Grid x:Name="gdHexagon" Visibility="Collapsed">
+                                        <Path x:Name="path3"
+                                              Width="82" Height="82"
+                                              Margin="0 0 0 30"
+                                              Stretch="Uniform" 
+                                              Fill="#0A1428"
+                                              StrokeThickness="4"
+                                              Stroke="{StaticResource BDR.MAP}"
+                                              Data="M8.660254,0 L17.320508,5 17.320508,15 8.660254,20 0,15 0,5 8.660254,0 Z" />
+                                        <Path x:Name="path4"
+                                              Width="60" Height="60"
+                                              Margin="0 0 0 30"
+                                              Stretch="Uniform" 
+                                              Fill="#0A1428"
+                                              StrokeThickness="2"
+                                              Stroke="{StaticResource BDR.MAP}"
+                                              Data="M8.660254,0 L17.320508,5 17.320508,15 8.660254,20 0,15 0,5 8.660254,0 Z" />
+                                    </Grid>
+                                    <Border x:Name="bdSquare" Height="82" Width="82" Visibility="Collapsed"
+                                            Background="#0A1428" 
+                                            BorderThickness="4"
+                                            BorderBrush="{StaticResource BDR.MAP}" 
+                                            Margin="0 0 0 30">
+                                        <Border x:Name="bdSquareChild"
+                                                BorderThickness="2"
+                                                Margin="4"
+                                                BorderBrush="{StaticResource BDR.MAP}"
+                                                Background="Transparent"/>
+                                    </Border>
+                                </Grid>
                                 <TextBlock x:Name="txb1" FontSize="15" Text="{Binding WarType}" Style="{StaticResource TXB.MAP}"/>
                                 <TextBlock x:Name="txb2" FontSize="24" Text="{Binding MapName}" Style="{StaticResource TXB.MAP}"/>
                             </StackPanel>
@@ -156,12 +223,46 @@
                             <Setter TargetName="bd1" Property="Visibility" Value="Visible"/>
                             <Setter TargetName="bd2" Property="Visibility" Value="Visible"/>
                             <Setter TargetName="lb" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="path2" Property="Fill" Value="{StaticResource BG.MAP.OVER}"/>
+                            <Setter TargetName="path4" Property="Fill" Value="{StaticResource BG.MAP.OVER}"/>
+                            <Setter TargetName="bdCircleChild" Property="Background" Value="{StaticResource BG.MAP.OVER}"/>
+                            <Setter TargetName="bdSquareChild" Property="Background" Value="{StaticResource BG.MAP.OVER}"/>
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="txb3" Property="Visibility" Value="Visible"/>
-                            <Setter TargetName="bd3" Property="BorderBrush" Value="{StaticResource BDR.MAP.OVER}"/>
-                            <Setter TargetName="bd4" Property="BorderBrush" Value="{StaticResource BDR.MAP.OVER}"/>
+                            <Setter TargetName="bdCircle" Property="BorderBrush" Value="{StaticResource BDR.MAP.OVER}"/>
+                            <Setter TargetName="bdCircleChild" Property="BorderBrush" Value="{StaticResource BDR.MAP.OVER}"/>
+                            <Setter TargetName="bdSquare" Property="BorderBrush" Value="{StaticResource BDR.MAP.OVER}"/>
+                            <Setter TargetName="bdSquareChild" Property="BorderBrush" Value="{StaticResource BDR.MAP.OVER}"/>
+                            
+                            <Setter TargetName="path1" Property="Stroke" Value="{StaticResource BDR.MAP.OVER}"/>
+                            <Setter TargetName="path2" Property="Stroke" Value="{StaticResource BDR.MAP.OVER}"/>
+                            <Setter TargetName="path3" Property="Stroke" Value="{StaticResource BDR.MAP.OVER}"/>
+                            <Setter TargetName="path4" Property="Stroke" Value="{StaticResource BDR.MAP.OVER}"/>
+                            
+                            <Setter TargetName="path2" Property="Fill" Value="{StaticResource BG.MAP.OVER}"/>
+                            <Setter TargetName="path4" Property="Fill" Value="{StaticResource BG.MAP.OVER}"/>
+                            <Setter TargetName="bdCircleChild" Property="Background" Value="{StaticResource BG.MAP.OVER}"/>
+                            <Setter TargetName="bdSquareChild" Property="Background" Value="{StaticResource BG.MAP.OVER}"/>
                         </Trigger>
+                        <DataTrigger Binding="{Binding MapName}" Value="전략적 팀 전투">
+                            <Setter TargetName="gdTrapezoid" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="gdHexagon" Property="Visibility" Value="Collapsed"/>
+                            <Setter TargetName="bdCircle" Property="Visibility" Value="Collapsed"/>
+                            <Setter TargetName="bdSquare" Property="Visibility" Value="Collapsed"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding MapName}" Value="무작위 총력전">
+                            <Setter TargetName="gdTrapezoid" Property="Visibility" Value="Collapsed"/>
+                            <Setter TargetName="gdHexagon" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="bdCircle" Property="Visibility" Value="Collapsed"/>
+                            <Setter TargetName="bdSquare" Property="Visibility" Value="Collapsed"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding MapName}" Value="소환사의 협곡">
+                            <Setter TargetName="gdTrapezoid" Property="Visibility" Value="Collapsed"/>
+                            <Setter TargetName="gdHexagon" Property="Visibility" Value="Collapsed"/>
+                            <Setter TargetName="bdCircle" Property="Visibility" Value="Collapsed"/>
+                            <Setter TargetName="bdSquare" Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
