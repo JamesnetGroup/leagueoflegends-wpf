@@ -168,10 +168,10 @@
 						<ToggleButton IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
 									  Style="{StaticResource TGL.OPTION}"/>
 						<Popup IsOpen="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" 
-								Placement="Bottom"
-								StaysOpen="False" 
-								HorizontalOffset="-168" 
-								VerticalOffset="10">	
+							   Placement="Bottom"
+							   StaysOpen="False" 
+							   HorizontalOffset="-168" 
+							   VerticalOffset="10">	
 							<units:FriendsSortPopup DataContext="{Binding Options}"/>
 						</Popup>
 					</Grid>
