@@ -54,8 +54,13 @@
 	
 	<!-- ProfileTemplate -->
 	<DataTemplate x:Key="PROFILE">
-		<Grid Grid.RowSpan="2" Grid.Column="1" Width="225" Height="81" VerticalAlignment="Top">
-			<Border Background="#FF010A13" IsHitTestVisible="False"/>
+		<Grid Grid.RowSpan="2"
+              Grid.Column="1" 
+              Width="225"
+              Height="81" 
+              VerticalAlignment="Top">
+			<Border Background="#FF010A13" 
+                    IsHitTestVisible="False"/>
 			<units:WindowBar/>
 			<units:Profile/>
 		</Grid>
@@ -65,13 +70,16 @@
 	<DataTemplate x:Key="CONTENT">
 		<Grid>
 			<ContentControl Content="{Binding CurrentUI}"/>
-			<units:SubMenu HorizontalAlignment="Left" VerticalAlignment="Top"/>
+			<units:SubMenu HorizontalAlignment="Left"
+                           VerticalAlignment="Top"/>
 		</Grid>
 	</DataTemplate>
 
 	<!-- FriendsTemplate -->
 	<DataTemplate x:Key="FRIENDS">
-		<Grid Grid.Row="1" Grid.Column="1" Background="#FF010A13">
+		<Grid Grid.Row="1"
+              Grid.Column="1" 
+              Background="#FF010A13">
 			<Grid.RowDefinitions>
 				<RowDefinition Height="Auto"/>
 				<RowDefinition Height="*"/>
@@ -92,10 +100,18 @@
 	<!--BackgroundTemplate-->
 	<DataTemplate x:Key="BACKGROUND">
 		<Grid>
-			<Image x:Name="img" Source="/Lol.Resources;component/Images/bg-main-05.png" Stretch="Fill"/>
-			<Rectangle Height="300" VerticalAlignment="Top" Fill="{StaticResource MAIN.TOP}"/>
-			<Rectangle x:Name="left" Width="500" HorizontalAlignment="Left" Fill="{StaticResource MAIN.LEFT}"/>
-			<Border x:Name="border" Background="Transparent"/>
+			<Image x:Name="img" 
+                   Source="/Lol.Resources;component/Images/bg-main-05.png" 
+                   Stretch="Fill"/>
+			<Rectangle Height="300" 
+                       VerticalAlignment="Top"
+                       Fill="{StaticResource MAIN.TOP}"/>
+			<Rectangle x:Name="left"
+                       Width="500"
+                       HorizontalAlignment="Left" 
+                       Fill="{StaticResource MAIN.LEFT}"/>
+			<Border x:Name="border"
+                    Background="Transparent"/>
 		</Grid>
         <DataTemplate.Triggers>
 
