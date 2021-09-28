@@ -22,16 +22,20 @@
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type ToolTip}">
-					<Border Background="#010A13" BorderThickness="2">
+					<Border Background="#010A13" 
+                            BorderThickness="2">
 						<Border.BorderBrush>
 							<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
 								<GradientStop Color="#614a1f" Offset="0"/>
 								<GradientStop Color="#463714" Offset="1"/>
 							</LinearGradientBrush>
 						</Border.BorderBrush>
-						<ContentPresenter Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center">
+						<ContentPresenter Margin="5" 
+                                          VerticalAlignment="Center" 
+                                          HorizontalAlignment="Center">
 							<ContentPresenter.Content>
-								<TextBlock Text="{TemplateBinding ToolTip}" Padding="2 2 2 2"/>
+								<TextBlock Text="{TemplateBinding ToolTip}"
+                                           Padding="2 2 2 2"/>
 							</ContentPresenter.Content>
 						</ContentPresenter>
 					</Border>
@@ -78,7 +82,9 @@
 							<Setter TargetName="path" Property="IconType" Value="Magnify"/>
 							<Setter TargetName="border" Property="ToolTip">
 								<Setter.Value>
-									<ToolTip ToolTip="Filter" Placement="Left" VerticalOffset="-5"/>
+									<ToolTip ToolTip="Filter"
+                                             Placement="Left"
+                                             VerticalOffset="-5"/>
 								</Setter.Value>
 							</Setter>
 						</Trigger>
@@ -133,11 +139,15 @@
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type ToggleButton}">
-					<Border x:Name="border" Background="Transparent">
+					<Border x:Name="border" 
+                            Background="Transparent">
 						<Border.ToolTip>
-							<ToolTip ToolTip="Options" HorizontalOffset="-20"/>
+							<ToolTip ToolTip="Options"
+                                     HorizontalOffset="-20"/>
 						</Border.ToolTip>
-						<ctrls:RiotIcon x:Name="path" Style="{StaticResource ICON.COMM}" IconType="Option"/>
+						<ctrls:RiotIcon x:Name="path" 
+                                        Style="{StaticResource ICON.COMM}"
+                                        IconType="Option"/>
 					</Border>
 					<ControlTemplate.Triggers>
 						<Trigger Property="IsMouseOver" Value="True">
