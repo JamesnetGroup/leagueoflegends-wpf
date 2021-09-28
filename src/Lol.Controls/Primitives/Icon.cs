@@ -83,8 +83,9 @@ namespace Lol.Controls.Primitives
                 case GeoIcon.ChevronRight: icon.Data = IconData.CHEVRON_RIGHT.ToGeometry(); break;
                 case GeoIcon.Unfold: icon.Data = IconData.UNFOLD.ToGeometry(); break;
                 case GeoIcon.Download: icon.Data = IconData.DOWNLOAD.ToGeometry(); break;
-                case GeoIcon.TEST: icon.Data = IconData.TEST.ToGeometry(); break;
+                case GeoIcon.ArrowLowLeft: icon.Data = IconData.ARROWLOWLEFT.ToGeometry(); break;
                 case GeoIcon.Trophy: icon.Data = IconData.TROPHY.ToGeometry(); break;
+                case GeoIcon.More: icon.Data = IconData.MORE.ToGeometry(); break;
 
                 case GeoIcon.None:
                     break;

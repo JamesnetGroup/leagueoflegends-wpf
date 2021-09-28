@@ -16,7 +16,7 @@
         <Setter Property="Width" Value="35"/>
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="Margin" Value="0 0 10 0"/>
-        <Setter Property="BorderBrush" Value="#443114"/>
+        <!--<Setter Property="BorderBrush" Value="#443114"/>-->
     </Style>
 
     <Style TargetType="{x:Type ListBoxItem}" x:Key="LBXI.HISTORY">
@@ -57,7 +57,7 @@
         </Setter>
     </Style>
     <Style TargetType="{x:Type units:ItemSetListBox}">
-        <Setter Property="ItemsSource" Value="{Binding ItemLists}"/>
+        <Setter Property="ItemsSource" Value="{Binding ItemLists, UpdateSourceTrigger=PropertyChanged}"/>
         <Setter Property="Margin" Value="40 20 0 0"/>
         <Setter Property="ItemContainerStyle" Value="{StaticResource LBXI.HISTORY}"/>
         <Setter Property="Template">
