@@ -90,8 +90,10 @@
 							<Setter Property="Height" Value="15"/>
 						</Style>
 					</ControlTemplate.Resources>
-					<Border x:Name="border1" Style="{StaticResource IN.BORDER.01}">
-						<Border x:Name="border2" Style="{StaticResource IN.BORDER.02}">
+					<Border x:Name="border1" 
+                            Style="{StaticResource IN.BORDER.01}">
+						<Border x:Name="border2"
+                                Style="{StaticResource IN.BORDER.02}">
 							<ctrls:RiotIcon Style="{StaticResource IN.ICON}"/>
 						</Border>
 					</Border>
