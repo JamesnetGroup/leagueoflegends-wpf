@@ -15,9 +15,9 @@
                             <RowDefinition Height="1.13*"/>
                         </Grid.RowDefinitions>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 50 0 0">
-                            <ctrls:RiotIconButton IconType="TEST" Margin="0 0 10 0" Width="28" Height="28" IconWidth="16" IconHeight="16" Command="{Binding ButtonTest}"/>
+                            <ctrls:RiotIconButton IconType="ArrowLowLeft" Margin="0 0 10 0" Width="28" Height="28" IconWidth="16" IconHeight="16" />
                             <ctrls:RiotIconButton IconType="ArrowTopRight" Margin="0 0 10 0" Width="28" Height="28" IconWidth="16" IconHeight="16"/>
-                            <ctrls:RiotIconButton IconType="Plus" Margin="0 0 10 0" Width="28" Height="28" IconWidth="16" IconHeight="16"/>
+                            <ctrls:RiotIconButton IconType="Plus" Margin="0 0 10 0" Width="28" Height="28" IconWidth="16" IconHeight="16" Command="{Binding ButtonTest}"/>
                             <ctrls:RiotTextBox x:Name="txtSearch" MinWidth="300"
                                            Height="30"
                                            HorizontalAlignment="Right"

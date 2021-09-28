@@ -19,8 +19,8 @@ namespace Lol.ExampleData.Collection
                     Seq = 0,
                     Name = "새로운 아이템 세트",
                     Champ = "모든 챔피언",
-                    MapType1 = ImgResource("Spell", "ignite"),
-                    MapType2 = ImgResource("Spell", "ignite"),
+                    MapType1 = ImgResource("Map", "Summoner's_rift"),
+                    MapType2 = ImgResource("Map", "Howling_Abyss"),
                     Option = ImgResource("Spell", "ignite")
                 },
                 new ItemListModel
@@ -28,8 +28,8 @@ namespace Lol.ExampleData.Collection
                     Seq = 1,
                     Name = "새로운 아이템 세트(1)",
                     Champ = "모든 챔피언",
-                    MapType1 = ImgResource("Spell", "ignite"),
-                    MapType2 = ImgResource("Spell", "ignite"),
+                    MapType1 = ImgResource("Map", "Summoner's_rift"),
+                    MapType2 = ImgResource("Map", "Howling_Abyss"),
                     Option = ImgResource("Spell", "ignite")
                 },
                 new ItemListModel
@@ -37,8 +37,8 @@ namespace Lol.ExampleData.Collection
                     Seq = 2,
                     Name = "새로운 아이템 세트(2)",
                     Champ = "모든 챔피언",
-                    MapType1 = ImgResource("Spell", "ignite"),
-                    MapType2 = ImgResource("Spell", "ignite"),
+                    MapType1 = ImgResource("Map", "Summoner's_rift"),
+                    MapType2 = ImgResource("Map", "Howling_Abyss"),
                     Option = ImgResource("Spell", "ignite")
                 },
                 new ItemListModel
@@ -46,8 +46,8 @@ namespace Lol.ExampleData.Collection
                     Seq = 3,
                     Name = "새로운 아이템 세트(3)",
                     Champ = "모든 챔피언",
-                    MapType1 = ImgResource("Spell", "ignite"),
-                    MapType2 = ImgResource("Spell", "ignite"),
+                    MapType1 = ImgResource("Map", "Summoner's_rift"),
+                    MapType2 = ImgResource("Map", "Howling_Abyss"),
                     Option = ImgResource("Spell", "ignite")
                 },
                 new ItemListModel
@@ -55,8 +55,8 @@ namespace Lol.ExampleData.Collection
                     Seq = 4,
                     Name = "새로운 아이템 세트(4)",
                     Champ = "모든 챔피언",
-                    MapType1 = ImgResource("Spell", "ignite"),
-                    MapType2 = ImgResource("Spell", "ignite"),
+                    MapType1 = ImgResource("Map", "Summoner's_rift"),
+                    MapType2 = ImgResource("Map", "Howling_Abyss"),
                     Option = ImgResource("Spell", "ignite")
                 }
             };
