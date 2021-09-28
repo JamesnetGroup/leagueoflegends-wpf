@@ -22,15 +22,31 @@
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type ListBoxItem}">
-					<Border x:Name="border" Background="Transparent" BorderBrush="Transparent" BorderThickness="0">
+					<Border x:Name="border" 
+                            Background="Transparent" 
+                            BorderBrush="Transparent"
+                            BorderThickness="0">
 						<Grid Margin="10">
 							<Grid.ColumnDefinitions>
 								<ColumnDefinition Width="Auto"/>
 								<ColumnDefinition Width="*"/>
 							</Grid.ColumnDefinitions>
-							<ctrls:RiotIcon x:Name="icon" Grid.Column="0" IconType="DiaEmpty" HorizontalAlignment="Center" VerticalAlignment="Center"
-											Fill="#A37D2F" Width="14" Height="14" Margin="0"/>
-							<TextBlock x:Name="text" Grid.Column="1" Margin="10 0 0 0" Foreground="#B0A480" FontSize="13" FontWeight="Bold" Text="{Binding DisplayName}"/>
+							<ctrls:RiotIcon x:Name="icon" 
+                                            Grid.Column="0"
+                                            IconType="DiaEmpty" 
+                                            HorizontalAlignment="Center" 
+                                            VerticalAlignment="Center"
+											Fill="#A37D2F"
+                                            Width="14" 
+                                            Height="14"
+                                            Margin="0"/>
+							<TextBlock x:Name="text" 
+                                       Grid.Column="1" 
+                                       Margin="10 0 0 0" 
+                                       Foreground="#B0A480" 
+                                       FontSize="13" 
+                                       FontWeight="Bold" 
+                                       Text="{Binding DisplayName}"/>
 						</Grid>
 					</Border>
 					<ControlTemplate.Triggers>
@@ -75,8 +91,16 @@
 							<ColumnDefinition Width="Auto"/>
 							<ColumnDefinition Width="*"/>
 						</Grid.ColumnDefinitions>
-						<Border x:Name="border" Grid.Column="0" Background="Transparent" HorizontalAlignment="Left" VerticalAlignment="Center"
-								BorderThickness="1" BorderBrush="#785A28" CornerRadius="1" Width="11" Height="11"/>
+						<Border x:Name="border" 
+                                Grid.Column="0" 
+                                Background="Transparent"
+                                HorizontalAlignment="Left" 
+                                VerticalAlignment="Center"
+								BorderThickness="1" 
+                                BorderBrush="#785A28" 
+                                CornerRadius="1" 
+                                Width="11" 
+                                Height="11"/>
 						<ctrls:RiotIcon x:Name="check" Grid.Column="0" Visibility="Hidden" IconType="CheckBold" HorizontalAlignment="Left"
 										Fill="#A38137" Width="15" Height="15" Margin="0 0 0 2" Stroke="#000000" StrokeThickness="1"/>
 						<TextBlock x:Name="content" Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="3 0 0 0"
