@@ -28,16 +28,25 @@
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type units:FriendsExpander}">
-					<Border x:Name="border" Background="Transparent" BorderBrush="Transparent">
+					<Border x:Name="border" 
+                            Background="Transparent" 
+                            BorderBrush="Transparent">
 						<Grid Margin="5 2 0 2">
 							<Grid.ColumnDefinitions>
 								<ColumnDefinition Width="Auto"/>
 								<ColumnDefinition/>
 							</Grid.ColumnDefinitions>
-							<ctrls:RiotIcon x:Name="path" Style="{StaticResource ICON.UNEXPAND}"/>
-							<StackPanel Grid.Column="1" Orientation="Horizontal">
-								<TextBlock x:Name="text" Style="{StaticResource TXB.FRIENDS}" Text="{Binding Header}"/>
-								<TextBlock x:Name="text2" Style="{StaticResource TXB.FRIENDS}" Visibility="Collapsed" Margin="5 0 0 0">
+							<ctrls:RiotIcon x:Name="path" 
+                                            Style="{StaticResource ICON.UNEXPAND}"/>
+							<StackPanel Grid.Column="1" 
+                                        Orientation="Horizontal">
+								<TextBlock x:Name="text" 
+                                           Style="{StaticResource TXB.FRIENDS}" 
+                                           Text="{Binding Header}"/>
+								<TextBlock x:Name="text2" 
+                                           Style="{StaticResource TXB.FRIENDS}" 
+                                           Visibility="Collapsed" 
+                                           Margin="5 0 0 0">
 									<TextBlock.Text>
 										<MultiBinding StringFormat="{}({0}/{1})">
 											<Binding RelativeSource="{RelativeSource AncestorType=views:MainView}" Path="DataContext.Friends.GeneralFriendsCount"/>
@@ -45,7 +54,10 @@
 										</MultiBinding>
 									</TextBlock.Text>
 								</TextBlock>
-								<TextBlock x:Name="text3" Style="{StaticResource TXB.FRIENDS}" Visibility="Collapsed" Margin="5 0 0 0">
+								<TextBlock x:Name="text3" 
+                                           Style="{StaticResource TXB.FRIENDS}" 
+                                           Visibility="Collapsed" 
+                                           Margin="5 0 0 0">
 									<TextBlock.Text>
 										<MultiBinding StringFormat="{}({0})">
 											<Binding RelativeSource="{RelativeSource AncestorType=views:MainView}" Path="DataContext.Friends.OfflineFriendsCount"/>

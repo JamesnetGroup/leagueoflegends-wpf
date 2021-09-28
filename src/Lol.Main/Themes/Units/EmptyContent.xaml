@@ -9,7 +9,9 @@
 					<Border Background="{TemplateBinding Background}"
                             BorderBrush="{TemplateBinding BorderBrush}"
                             BorderThickness="{TemplateBinding BorderThickness}">
-						<TextBlock Text="Empty Content" Foreground="#aaaaaa" Margin="50"/>
+						<TextBlock Text="Empty Content" 
+                                   Foreground="#aaaaaa"
+                                   Margin="50"/>
 					</Border>
 				</ControlTemplate>
 			</Setter.Value>
