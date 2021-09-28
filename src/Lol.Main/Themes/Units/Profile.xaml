@@ -38,16 +38,20 @@
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type ToolTip}">
-					<Border Background="#010A13" BorderThickness="2">
+					<Border Background="#010A13" 
+                            BorderThickness="2">
 						<Border.BorderBrush>
 							<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
 								<GradientStop Color="#614a1f" Offset="0"/>
 								<GradientStop Color="#463714" Offset="1"/>
 							</LinearGradientBrush>
 						</Border.BorderBrush>
-						<ContentPresenter Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center">
+						<ContentPresenter Margin="5" 
+                                          VerticalAlignment="Center" 
+                                          HorizontalAlignment="Center">
 							<ContentPresenter.Content>
-								<TextBlock Text="{TemplateBinding ToolTip}" Padding="2 2 2 2"/>
+								<TextBlock Text="{TemplateBinding ToolTip}" 
+                                           Padding="2 2 2 2"/>
 							</ContentPresenter.Content>
 						</ContentPresenter>
 					</Border>
@@ -80,9 +84,15 @@
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type Control}">
 					<Grid>
-						<ctrls:RiotIcon x:Name="path" Style="{StaticResource ICON.LABEL}"/>
-						<TextBlock Text="123" Foreground="#A09B8C" FontWeight="Bold" Panel.ZIndex="1" Margin="0 0 0 1.5" 
-								   HorizontalAlignment="Center" VerticalAlignment="Center"/>
+						<ctrls:RiotIcon x:Name="path" 
+                                        Style="{StaticResource ICON.LABEL}"/>
+						<TextBlock Text="123"
+                                   Foreground="#A09B8C"
+                                   FontWeight="Bold"
+                                   Panel.ZIndex="1" 
+                                   Margin="0 0 0 1.5" 
+								   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"/>
 					</Grid>
 					<ControlTemplate.Triggers>
 						<DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=Button}, Path=IsMouseOver}" Value="True">
@@ -101,9 +111,12 @@
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type Button}">
 					<Grid Width="60" Height="65">
-						<Border x:Name="border1" HorizontalAlignment="Center" VerticalAlignment="Top" BorderThickness="1"
+						<Border x:Name="border1" 
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Top" BorderThickness="1"
 								BorderBrush="#010A13" Background="{StaticResource IMG.BDR}" Width="60" Height="60" CornerRadius="60">
-							<Border x:Name="border2" Margin="2" Background="#0A323C" CornerRadius="60">
+							<Border x:Name="border2" Margin="2"
+                                    Background="#0A323C" CornerRadius="60">
 								<Border x:Name="border3" Margin="4" BorderThickness="2" BorderBrush="{StaticResource IMG.BDR}" Background="#01070D" CornerRadius="50">
 									<Ellipse Margin="2 2 1 1">
 										<Ellipse.Fill>

@@ -78,7 +78,9 @@
 							<Setter Property="Margin" Value="0 4 4 4"/>
 							<Setter Property="Effect">
 								<Setter.Value>
-									<DropShadowEffect BlurRadius="5" Opacity="1" ShadowDepth="2"/>
+									<DropShadowEffect BlurRadius="5"
+                                                      Opacity="1"
+                                                      ShadowDepth="2"/>
 								</Setter.Value>
 							</Setter>
 						</Style>
