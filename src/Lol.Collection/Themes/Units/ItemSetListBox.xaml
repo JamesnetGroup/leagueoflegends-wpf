@@ -20,6 +20,7 @@
     </Style>
 
     <Style TargetType="{x:Type ListBoxItem}" x:Key="LBXI.HISTORY">
+        <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListBoxItem}">
@@ -41,15 +42,14 @@
                                         <Image Source="{Binding MapType2}" />
                                     </Border>
                                 </StackPanel>
-                                <Border Style="{StaticResource BD.ITEM}" HorizontalAlignment="Right">
-                                    <Image Source="{Binding Option}" />
-                                </Border>
+                                <ctrls:RiotIcon x:Name="path" IconType="More" Margin="0 0 10 0" Width="20" Height="20" HorizontalAlignment="Right" Fill="#CDBE91"/>
                             </Grid>
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="bd" Property="Background" Value="#0F171D"/>
+                            <Setter TargetName="path" Property="Fill" Value="#FFEDB5"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -57,7 +57,7 @@
         </Setter>
     </Style>
     <Style TargetType="{x:Type units:ItemSetListBox}">
-        <Setter Property="ItemsSource" Value="{Binding ItemLists, UpdateSourceTrigger=PropertyChanged}"/>
+        <Setter Property="ItemsSource" Value="{Binding ItemLists}"/>
         <Setter Property="Margin" Value="40 20 0 0"/>
         <Setter Property="ItemContainerStyle" Value="{StaticResource LBXI.HISTORY}"/>
         <Setter Property="Template">
@@ -66,7 +66,7 @@
                     <Grid >
                         <Grid.RowDefinitions>
                             <RowDefinition Height="auto"/>
-                            <RowDefinition Height="6.5*"/>
+                            <RowDefinition Height="*"/>
                             <RowDefinition Height="auto"/>
                         </Grid.RowDefinitions>
                         <Border Background="#1E2328" Padding="8 6 0 6">
@@ -81,7 +81,9 @@
                                 <TextBlock Grid.Column="2" Foreground="#F0E6D2" FontWeight="Bold" Text="맵" FontSize="15"/>
                             </Grid>
                         </Border>
-                        <ItemsPresenter Grid.Row="1"/>
+                        <ctrls:BasicScroll Grid.Row="1">
+                            <ItemsPresenter/>
+                        </ctrls:BasicScroll>
                         <StackPanel Grid.Row="2">
                             <Border Style="{StaticResource BDR.TEMP}"/>
                         </StackPanel>

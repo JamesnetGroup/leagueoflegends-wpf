@@ -112,7 +112,10 @@
 							<RowDefinition Height="*"/>
 						</Grid.RowDefinitions>
 						<ListBox Style="{StaticResource LBX.TABS}"/>
-						<ContentPresenter x:Name="content" Grid.Row="1"/>
+                        <StackPanel Grid.Row="1">
+							<ContentPresenter x:Name="content"/>
+                            <TextBlock Text="테스트" Foreground="Green"/>
+                        </StackPanel>
 					</Grid>
 					<ControlTemplate.Triggers>
 						<DataTrigger Binding="{Binding CurrentTab.Seq}" Value="0">

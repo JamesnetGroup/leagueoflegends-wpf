@@ -9,10 +9,16 @@ namespace Lol.Collection.Local.ViewModel
     {
         #region ItemLists
 
-        public List<ItemListModel> ItemLists { get; set; }
+        private List<ItemListModel> _itemLists;
 
         public RelayCommand<object> ButtonTest { get; set; }
         #endregion
+
+        public List<ItemListModel> ItemLists
+        {
+            get { return _itemLists; }
+            set { _itemLists = value; OnPropertyChanged(); }
+        }
 
         #region Constructor
 
@@ -31,7 +37,7 @@ namespace Lol.Collection.Local.ViewModel
         {
             int cnt = ItemLists.Count + 1;
 
-            var source = new ItemListModel
+            var item = new ItemListModel
             {
                 Seq = cnt,
                 Name = $"새로운 아이템 세트({cnt})",
@@ -41,7 +47,18 @@ namespace Lol.Collection.Local.ViewModel
                 Option = ImgResource("Map", "ignite")
             };
 
-                ItemLists.Add(source);
+            List<ItemListModel> source = new List<ItemListModel>();
+
+            foreach(var i in ItemLists)
+            {
+                source.Add(i);
+            }
+
+            source.Add(item);
+
+            ItemLists = source;
+
+
 
         }
 
