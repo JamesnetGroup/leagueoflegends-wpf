@@ -49,7 +49,7 @@ namespace Lol.ExampleData.GameRoom
                 new GameRoomModel
                 {
                     Seq = 2,
-                    MapName = "전력적 팀 전투",
+                    MapName = "전략적 팀 전투",
                     WarType = "난투전",
                     Content = "챔피언들로 전략적인 팀을 구성해 결투장으로 진격시키세요. 총 7명의 상대와 겨루오 끝까지 살아남아야 합니다.",
                     GameTypes = new()
