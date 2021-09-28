@@ -1,5 +1,5 @@
-﻿using Lol.LayoutSupport.Controls;
-using System.Windows;
+﻿using System.Windows;
+using Lol.LayoutSupport.Controls;
 
 namespace Lol.Main.UI.Views
 {
