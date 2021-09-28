@@ -72,6 +72,7 @@
 <br />
 
 ## 구현된 화면 목록
+
 - [x] 메인 (Main)
 - [x] 친구목록 (Friends)
 - [x] 설정 (Settings)
