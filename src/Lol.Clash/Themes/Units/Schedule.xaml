@@ -112,10 +112,32 @@
 							<RowDefinition Height="*"/>
 						</Grid.RowDefinitions>
 						<ListBox Style="{StaticResource LBX.TABS}"/>
-                        <StackPanel Grid.Row="1">
-							<ContentPresenter x:Name="content"/>
-                            <TextBlock Text="테스트" Foreground="Green"/>
-                        </StackPanel>
+                        <Grid Grid.Row="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" >
+                                    <TextBlock Text="+"/>
+                                    <TextBlock Text="팀 생성하기"/>
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Center">
+                                    <TextBlock Text="월드 챔피언십 컵 1일차"/>
+                                    <TextBlock Text="토너먼트는 10.2 일부터"/>
+                                    <TextBlock Text="단계는 오후 7:00부터"/>
+                                </StackPanel>
+                            </Grid>
+                            <StackPanel Grid.Row="1">
+                                <!-- 리스트박스-->
+                                <ContentPresenter x:Name="content"/>
+                                <TextBlock Text="테스트" Foreground="Green"/>
+                            </StackPanel>
+                        </Grid>
 					</Grid>
 					<ControlTemplate.Triggers>
 						<DataTrigger Binding="{Binding CurrentTab.Seq}" Value="0">
