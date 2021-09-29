@@ -20,7 +20,6 @@ namespace Lol.Collection.Local.Model
         }
 
         private bool _isChecked;
-        private ItemListModel x;
 
         public MyItemListModel()
         { 
