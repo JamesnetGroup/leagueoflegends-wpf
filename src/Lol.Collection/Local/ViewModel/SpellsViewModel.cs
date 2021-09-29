@@ -14,7 +14,7 @@ namespace Lol.Collection.Local.ViewModel
         #region Variables 
         
         private SpellModel _currentSpell;
-        private Image BackgroundImage;
+        private readonly Image BackgroundImage;
         #endregion
 
         #region Spells

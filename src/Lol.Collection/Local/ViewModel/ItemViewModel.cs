@@ -57,7 +57,7 @@ namespace Lol.Collection.Local.ViewModel
                 MapType2 = ImgResource("Map", "Howling_Abyss"),
             };
 
-            List<MyItemListModel> source = new List<MyItemListModel>();
+            List<MyItemListModel> source = new();
 
             foreach(var i in ItemLists)
             {
@@ -71,7 +71,7 @@ namespace Lol.Collection.Local.ViewModel
 
         private void Checked(object value)
         {
-            ButtonUsed = ItemLists.Where(x => x.IsChecked).Count() > 0;
+            ButtonUsed = ItemLists.Where(x => x.IsChecked).Any();
         }
 
         private bool Test2(object obj)
