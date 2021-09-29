@@ -1,6 +1,8 @@
 ﻿using Lol.Data.Collection;
 using Lol.ExampleData.Collection;
 using Lol.Foundation.Mvvm;
+using Lol.YamlDatabase.Controller;
+using Lol.YamlDatabase.Entites.Schema;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,18 +15,18 @@ namespace Lol.Collection.Local.ViewModel
     {
         #region Variables 
         
-        private SpellModel _currentSpell;
+        private Spells _currentSpell;
         private readonly Image _backgroundImage;
         #endregion
 
         #region Spells
 
-        public List<SpellModel> Spells { get; set; }
+        public List<Spells> Spells { get; set; }
         #endregion
 
         #region CurrentSpell
 
-        public SpellModel CurrentSpell
+        public Spells CurrentSpell
         {
             get => _currentSpell;
             set { _currentSpell = value; OnPropertyChanged(); SpellChanged(value); }
@@ -35,7 +37,8 @@ namespace Lol.Collection.Local.ViewModel
 
         public SpellsViewModel(Image backgroundImage)
         {
-            Spells = ExamSpell.GetSpell();
+            //Spells = ExamSpell.GetSpell();
+            Spells = new SpellApi().GetSpells();
             _currentSpell = Spells.First();
             _backgroundImage = backgroundImage;
             
@@ -44,7 +47,7 @@ namespace Lol.Collection.Local.ViewModel
 
         #region SpellChanged
 
-        private void SpellChanged(SpellModel value)
+        private void SpellChanged(Spells value)
         {
             if (value.Name == "회복")
             {
