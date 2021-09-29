@@ -1,7 +1,8 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:units="clr-namespace:Lol.Collection.UI.Units"
-                    xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
+                    xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport"
+                    xmlns:tooltip="clr-namespace:System.Diagnostics.CodeAnalysis;assembly=System.Diagnostics.Tools">
 
     <Style TargetType="{x:Type Border}" x:Key="BDR.TEMP">
         <Setter Property="BorderThickness" Value="0.5"/>
@@ -31,7 +32,7 @@
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <CheckBox IsChecked="False" Margin="0 0 0 0 " Content="{Binding Name}" FontSize="14" FontWeight="Bold" Foreground="#A09B8C" VerticalAlignment="Center"/>
+                            <ctrls:CheckBox01 x:Name="ch" IsChecked="False" Margin="0 0 0 0 " Content="{Binding Name}" FontSize="14" FontWeight="Bold" Foreground="#A09B8C" VerticalAlignment="Center"/>
                             <TextBlock Grid.Column="1" Text="{Binding Champ}" FontSize="14" FontWeight="Bold" Foreground="#A09B8C" VerticalAlignment="Center"/>
                             <Grid Grid.Column="2">
                                 <StackPanel  Orientation="Horizontal" HorizontalAlignment="Left" Margin="30 0 0 0">
@@ -50,6 +51,13 @@
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="bd" Property="Background" Value="#0F171D"/>
                             <Setter TargetName="path" Property="Fill" Value="#FFEDB5"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="ch" Property="ToolTip">
+                                <Setter.Value>
+                                    <ctrls:BasicTooltip ToolTip="이 세트를 내보내기 하려면 체크하세요"/>
+                                </Setter.Value>
+                            </Setter>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -76,7 +84,7 @@
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
-                                <CheckBox  Grid.Column="0" IsChecked="False" VerticalAlignment="Center" Foreground="#F0E6D2" FontWeight="Bold" Content="이름" FontSize="15"/>
+                                <ctrls:CheckBox01 x:Name="ch" Grid.Column="0" IsChecked="False" VerticalAlignment="Center" Foreground="#F0E6D2" FontWeight="Bold" Content="이름" FontSize="15" />
                                 <TextBlock Grid.Column="1" Foreground="#F0E6D2" FontWeight="Bold" Text="챔피언" FontSize="15" Margin="10 0 0 0"/>
                                 <TextBlock Grid.Column="2" Foreground="#F0E6D2" FontWeight="Bold" Text="맵" FontSize="15" Margin="65 0 0 0"/>
                             </Grid>
@@ -88,6 +96,15 @@
                             <Border Style="{StaticResource BDR.TEMP}"/>
                         </StackPanel>
                     </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="ch" Property="ToolTip">
+                                <Setter.Value>
+                                    <ctrls:BasicTooltip ToolTip="모든 세트를 내보내기 하려면 체크하세요" />
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

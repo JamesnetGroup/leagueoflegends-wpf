@@ -44,7 +44,6 @@ namespace Lol.Collection.Local.ViewModel
                 Champ = "모든 챔피언",
                 MapType1 = ImgResource("Map", "Summoner's_rift"),
                 MapType2 = ImgResource("Map", "Howling_Abyss"),
-                Option = ImgResource("Map", "ignite")
             };
 
             List<ItemListModel> source = new List<ItemListModel>();
@@ -57,9 +56,6 @@ namespace Lol.Collection.Local.ViewModel
             source.Add(item);
 
             ItemLists = source;
-
-
-
         }
 
         private bool Test2(object obj)

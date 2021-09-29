@@ -50,14 +50,5 @@ namespace Lol.Data.Collection
         }
 
 
-        private string _Option;
-        public string Option
-        {
-            get { return _Option; }
-            set { _Option = value; OnPropertyChanged(); }
-        }
-
-
-
     }
 }

@@ -21,7 +21,6 @@ namespace Lol.ExampleData.Collection
                     Champ = "모든 챔피언",
                     MapType1 = ImgResource("Map", "Summoner's_rift"),
                     MapType2 = ImgResource("Map", "Howling_Abyss"),
-                    Option = ImgResource("Spell", "ignite")
                 },
                 new ItemListModel
                 {
@@ -30,7 +29,6 @@ namespace Lol.ExampleData.Collection
                     Champ = "모든 챔피언",
                     MapType1 = ImgResource("Map", "Summoner's_rift"),
                     MapType2 = ImgResource("Map", "Howling_Abyss"),
-                    Option = ImgResource("Spell", "ignite")
                 },
                 new ItemListModel
                 {
@@ -39,7 +37,6 @@ namespace Lol.ExampleData.Collection
                     Champ = "모든 챔피언",
                     MapType1 = ImgResource("Map", "Summoner's_rift"),
                     MapType2 = ImgResource("Map", "Howling_Abyss"),
-                    Option = ImgResource("Spell", "ignite")
                 },
                 new ItemListModel
                 {
@@ -48,7 +45,6 @@ namespace Lol.ExampleData.Collection
                     Champ = "모든 챔피언",
                     MapType1 = ImgResource("Map", "Summoner's_rift"),
                     MapType2 = ImgResource("Map", "Howling_Abyss"),
-                    Option = ImgResource("Spell", "ignite")
                 },
                 new ItemListModel
                 {
@@ -57,7 +53,6 @@ namespace Lol.ExampleData.Collection
                     Champ = "모든 챔피언",
                     MapType1 = ImgResource("Map", "Summoner's_rift"),
                     MapType2 = ImgResource("Map", "Howling_Abyss"),
-                    Option = ImgResource("Spell", "ignite")
                 }
             };
                 
