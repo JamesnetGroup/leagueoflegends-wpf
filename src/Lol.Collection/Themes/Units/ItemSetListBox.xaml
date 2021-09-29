@@ -32,7 +32,15 @@
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <ctrls:CheckBox01 x:Name="ch" IsChecked="False" Margin="0 0 0 0 " Content="{Binding Name}" FontSize="14" FontWeight="Bold" Foreground="#A09B8C" VerticalAlignment="Center"/>
+                            <ctrls:CheckBox01 x:Name="ch"
+                                              Margin="0 0 0 0 "
+                                              Content="{Binding Name}" 
+                                              Command="{Binding CheckCommand}"
+                                              IsChecked="{Binding IsChecked}"
+                                              FontSize="14" 
+                                              FontWeight="Bold"
+                                              Foreground="#A09B8C"
+                                              VerticalAlignment="Center"/>
                             <TextBlock Grid.Column="1" Text="{Binding Champ}" FontSize="14" FontWeight="Bold" Foreground="#A09B8C" VerticalAlignment="Center"/>
                             <Grid Grid.Column="2">
                                 <StackPanel  Orientation="Horizontal" HorizontalAlignment="Left" Margin="30 0 0 0">

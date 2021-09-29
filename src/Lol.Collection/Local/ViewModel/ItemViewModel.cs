@@ -1,7 +1,9 @@
-﻿using Lol.Data.Collection;
+﻿using Lol.Collection.Local.Model;
+using Lol.Data.Collection;
 using Lol.ExampleData.Collection;
 using Lol.Foundation.Mvvm;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Lol.Collection.Local.ViewModel
 {
@@ -9,12 +11,19 @@ namespace Lol.Collection.Local.ViewModel
     {
         #region ItemLists
 
-        private List<ItemListModel> _itemLists;
+        private List<MyItemListModel> _itemLists;
 
         public RelayCommand<object> ButtonTest { get; set; }
         #endregion
 
-        public List<ItemListModel> ItemLists
+        private bool _buttonUsed;
+        public bool ButtonUsed
+        {
+            get => _buttonUsed;
+            set { _buttonUsed = value; OnPropertyChanged(); }
+        }
+
+        public List<MyItemListModel> ItemLists
         {
             get { return _itemLists; }
             set { _itemLists = value; OnPropertyChanged(); }
@@ -24,7 +33,9 @@ namespace Lol.Collection.Local.ViewModel
 
         public ItemViewModel()
         {
-            ItemLists = ExamItemList.GetItemList();
+            var item = ExamItemList.GetItemList();
+
+            ItemLists = item.Select(x => new MyItemListModel(x, Checked)).ToList();
             ButtonTest = new RelayCommand<object>(Test1, Test2);
         }
 
@@ -37,16 +48,17 @@ namespace Lol.Collection.Local.ViewModel
         {
             int cnt = ItemLists.Count;
 
-            var item = new ItemListModel
+            var item = new MyItemListModel
             {
                 Seq = cnt,
                 Name = $"새로운 아이템 세트({cnt})",
                 Champ = "모든 챔피언",
+                CheckCommand = new RelayCommand<object>(Checked),
                 MapType1 = ImgResource("Map", "Summoner's_rift"),
                 MapType2 = ImgResource("Map", "Howling_Abyss"),
             };
 
-            List<ItemListModel> source = new List<ItemListModel>();
+            List<MyItemListModel> source = new List<MyItemListModel>();
 
             foreach(var i in ItemLists)
             {
@@ -56,6 +68,11 @@ namespace Lol.Collection.Local.ViewModel
             source.Add(item);
 
             ItemLists = source;
+        }
+
+        private void Checked(object value)
+        {
+            ButtonUsed = ItemLists.Where(x => x.IsChecked).Count() > 0;
         }
 
         private bool Test2(object obj)

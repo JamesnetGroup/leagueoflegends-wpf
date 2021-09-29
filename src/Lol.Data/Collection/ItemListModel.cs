@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Windows.Input;
 
 namespace Lol.Data.Collection
 {
@@ -14,6 +15,5 @@ namespace Lol.Data.Collection
         public string MapType1 { get; set; }
 
         public string MapType2 { get; set; }
-
     }
 }

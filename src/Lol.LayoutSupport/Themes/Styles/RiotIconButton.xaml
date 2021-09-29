@@ -39,6 +39,11 @@
                             <Setter TargetName="border1" Property="BorderBrush" Value="{StaticResource BTN.BDR.OVER}"/>
                             <Setter TargetName="icon" Property="Fill" Value="#FFEDB5"/>
                         </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter TargetName="border1" Property="BorderBrush" Value="#5B5A56"/>
+                            <Setter TargetName="border1" Property="Background" Value="#1E282D"/>
+                            <Setter TargetName="icon" Property="Fill" Value="#5B5A56"/>
+                        </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
