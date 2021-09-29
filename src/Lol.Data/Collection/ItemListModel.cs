@@ -1,8 +1,4 @@
-﻿using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Windows.Input;
-
-namespace Lol.Data.Collection
+﻿namespace Lol.Data.Collection
 {
     public class ItemListModel
     {

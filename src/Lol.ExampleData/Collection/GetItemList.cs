@@ -1,6 +1,4 @@
 ﻿using Lol.Data.Collection;
-using Lol.Foundation.Mvvm;
-using System;
 using System.Collections.Generic;
 
 namespace Lol.ExampleData.Collection

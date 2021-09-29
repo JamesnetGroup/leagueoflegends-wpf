@@ -1,9 +1,8 @@
-﻿using Lol.Collection.Local.Model;
-using Lol.Data.Collection;
+﻿using System.Linq;
+using System.Collections.Generic;
+using Lol.Collection.Local.Model;
 using Lol.ExampleData.Collection;
 using Lol.Foundation.Mvvm;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Lol.Collection.Local.ViewModel
 {
