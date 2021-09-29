@@ -34,15 +34,15 @@
                             <CheckBox IsChecked="False" Margin="0 0 0 0 " Content="{Binding Name}" FontSize="14" FontWeight="Bold" Foreground="#A09B8C" VerticalAlignment="Center"/>
                             <TextBlock Grid.Column="1" Text="{Binding Champ}" FontSize="14" FontWeight="Bold" Foreground="#A09B8C" VerticalAlignment="Center"/>
                             <Grid Grid.Column="2">
-                                <StackPanel  Orientation="Horizontal" Margin="0 0 0 0" HorizontalAlignment="Left">
-                                    <Border Style="{StaticResource BD.ITEM}">
+                                <StackPanel  Orientation="Horizontal" HorizontalAlignment="Left" Margin="30 0 0 0">
+                                    <Border Style="{StaticResource BD.ITEM}" Margin="0 0 15 0">
                                         <Image Source="{Binding MapType1}"/>
                                     </Border>
                                     <Border Style="{StaticResource BD.ITEM}">
                                         <Image Source="{Binding MapType2}" />
                                     </Border>
                                 </StackPanel>
-                                <ctrls:RiotIcon x:Name="path" IconType="More" Margin="0 0 10 0" Width="20" Height="20" HorizontalAlignment="Right" Fill="#CDBE91"/>
+                                <ctrls:RiotIcon x:Name="path" IconType="More" Margin="0 0 30 0" Width="20" Height="20" HorizontalAlignment="Right" Fill="#CDBE91"/>
                             </Grid>
                         </Grid>
                     </Border>
@@ -78,7 +78,7 @@
                                 </Grid.ColumnDefinitions>
                                 <CheckBox  Grid.Column="0" IsChecked="False" VerticalAlignment="Center" Foreground="#F0E6D2" FontWeight="Bold" Content="이름" FontSize="15"/>
                                 <TextBlock Grid.Column="1" Foreground="#F0E6D2" FontWeight="Bold" Text="챔피언" FontSize="15" Margin="10 0 0 0"/>
-                                <TextBlock Grid.Column="2" Foreground="#F0E6D2" FontWeight="Bold" Text="맵" FontSize="15" Margin="20 0 0 0"/>
+                                <TextBlock Grid.Column="2" Foreground="#F0E6D2" FontWeight="Bold" Text="맵" FontSize="15" Margin="65 0 0 0"/>
                             </Grid>
                         </Border>
                         <ctrls:BasicScroll Grid.Row="1">
