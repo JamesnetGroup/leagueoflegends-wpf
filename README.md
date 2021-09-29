@@ -71,18 +71,6 @@
 
 <br />
 
-## 구현된 화면 목록
-
-- [x] 메인 (Main)
-- [x] 친구목록 (Friends)
-- [x] 설정 (Settings)
-- [x] TFT (TFT)
-- [x] 전적 (Match)
-- [x] 스펠 (Spell)
-- [x] 격전 (Winning) 
-
-<br />
-
 ## 스크린샷 
 
 ![image](https://user-images.githubusercontent.com/52397976/124482513-526ba380-dde4-11eb-9b31-c3c1199987b6.png)
