@@ -132,7 +132,7 @@ namespace Lol.Main.Local.ViewModel
 
         public MainViewModel()
         {
-            _winWork = new(this);
+            _winWork = new();
             _modalWork = new(this);
             _gameWork = new(this);
 

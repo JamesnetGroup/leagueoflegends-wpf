@@ -5,11 +5,16 @@ namespace Lol.Main.Local.Work
 {
     public class WindowWork
     {
+        #region Variables
+
+        private object _ui;
+        #endregion
+
         #region Constructor
 
-        public WindowWork(MainViewModel view)
+        public WindowWork()
         {
-            _ = view;
+            _= _ui;
         }
         #endregion
 
@@ -17,6 +22,7 @@ namespace Lol.Main.Local.Work
 
         internal void DoClosing(object ui)
         {
+            _ui = ui;
             Window.GetWindow((UIElement)ui).Close();
         }
         #endregion
@@ -25,6 +31,7 @@ namespace Lol.Main.Local.Work
 
         internal void DoMinizing(object ui)
         {
+            _ui = ui;
             Window.GetWindow((UIElement)ui).WindowState = WindowState.Minimized;
         }
         #endregion

@@ -18,7 +18,7 @@ namespace Lol.GameRoom.Local
         public PVPViewModel()
         {
             PVPs = ExamGameRoom.GetGameRoom();
-            CurrentPVP = PVPs[0];
+            _currentPVP = PVPs[0];
         }
     }
 }

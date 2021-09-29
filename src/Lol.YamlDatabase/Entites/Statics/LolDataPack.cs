@@ -13,11 +13,11 @@ namespace Lol.YamlDatabase.Entites.Statics
             Instance = new LolDataPack();
         }
 
-        private List<Users> _users;
-        private List<Friends> _friends;
-        internal List<CodeItems> _codeItems;
+        private List<Users>? _users;
+        private List<Friends>? _friends;
+        internal List<CodeItems>? _codeItems;
 
-        private string GetText(string table)
+        private static string GetText(string table)
         {
             string file = $"/datas/{table}.yml";
             string path = Environment.CurrentDirectory + file;
