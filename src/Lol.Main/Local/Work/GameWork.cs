@@ -20,7 +20,7 @@ namespace Lol.Main.Local.Work
 
         #region OpenGameRoom
 
-        internal void OpenGameRoom(Type type)
+        internal void OpenGameRoom(Type _)
         {
             // TODO: [Kevin] 게임시작 버튼 클릭시 화면 변경 수정 필히 필요
             _vm.MainMenu.CurrentMenu = _vm.MainMenu.Menus[8];
