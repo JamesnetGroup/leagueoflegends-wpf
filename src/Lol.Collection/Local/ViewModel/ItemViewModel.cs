@@ -35,7 +35,7 @@ namespace Lol.Collection.Local.ViewModel
 
         private void Test1(object obj)
         {
-            int cnt = ItemLists.Count + 1;
+            int cnt = ItemLists.Count;
 
             var item = new ItemListModel
             {
