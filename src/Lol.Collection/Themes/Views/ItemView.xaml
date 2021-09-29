@@ -44,7 +44,7 @@
                             <Setter TargetName="icon" Property="Fill" Value="#FFEDB5"/>
                             <Setter Property="ToolTip">
                                 <Setter.Value>
-                                    <ctrls:BasicTooltip ToolTip="아이템 세트 가져오기"/>
+                                    <ctrls:BasicTooltip ToolTip="아이템 세트 가져오기"  VerticalOffset="-65" HorizontalOffset="-40"/>
                                 </Setter.Value>
                             </Setter>
                         </Trigger>
@@ -81,7 +81,7 @@
                             <Setter TargetName="icon" Property="Fill" Value="#FFEDB5"/>
                             <Setter Property="ToolTip">
                                 <Setter.Value>
-                                    <ctrls:BasicTooltip ToolTip="아이템 세트 내보내기"/>
+                                    <ctrls:BasicTooltip ToolTip="아이템 세트 내보내기"  VerticalOffset="-65" HorizontalOffset="-40"/>
                                 </Setter.Value>
                             </Setter>
                         </Trigger>
@@ -118,7 +118,7 @@
                             <Setter TargetName="icon" Property="Fill" Value="#FFEDB5"/>
                             <Setter Property="ToolTip">
                                 <Setter.Value>
-                                    <ctrls:BasicTooltip ToolTip="빈 세트 생성하기"/>
+                                    <ctrls:BasicTooltip ToolTip="빈 세트 생성하기" VerticalOffset="-65" HorizontalOffset="-40"/>
                                 </Setter.Value>
                             </Setter>
                         </Trigger>
