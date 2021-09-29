@@ -32,26 +32,5 @@ namespace Lol.Data.History
         public double ActivePercent { get; set; }
         public string Concept { get; set; }
         public string ConceptName { get; set; }
-
-
-
-        //public HistoryModel(int seq, string gametype, string maptype, string item, bool iswin, DateTime stdt, string gametime, int money, string cs, int k, int d, int a)
-        //{
-        //	Seq = seq;
-        //	GameType = gametype;
-        //	MapType = maptype;
-        //	Item = item;
-        //	IsWin = iswin;
-        //	StDt = stdt;
-        //	IsWin = iswin;
-        //	GameTime = gametime;
-        //	Money = money;
-        //	Cs = cs;
-        //	K = k;
-        //	D = d;
-        //	A = a;
-        //	Spells = new();
-        //	Items = new();
-        //}
     }
 }
