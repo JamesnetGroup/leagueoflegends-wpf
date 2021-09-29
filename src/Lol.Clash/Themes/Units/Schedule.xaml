@@ -119,17 +119,18 @@
                             </Grid.RowDefinitions>
                             <Grid>
                                 <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto"/>
-                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="4.5*"/>
+                                    <ColumnDefinition Width="5.5*"/>
                                 </Grid.ColumnDefinitions>
-                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" >
-                                    <TextBlock Text="+"/>
-                                    <TextBlock Text="팀 생성하기"/>
-                                </StackPanel>
-                                <StackPanel Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Center">
+                                <Border>
+									<StackPanel Orientation="Horizontal" HorizontalAlignment="Left" >
+										<TextBlock Text="+"/>
+										<TextBlock Text="팀 생성하기"/>
+									</StackPanel>
+                                </Border>
+                                <StackPanel Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Center" >
                                     <TextBlock Text="월드 챔피언십 컵 1일차"/>
-                                    <TextBlock Text="토너먼트는 10.2 일부터"/>
-                                    <TextBlock Text="단계는 오후 7:00부터"/>
+                                    <TextBlock Text="토너먼트는 10.2 일부터 단계는 오후 7:00부터"/>
                                 </StackPanel>
                             </Grid>
                             <StackPanel Grid.Row="1">

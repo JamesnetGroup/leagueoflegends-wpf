@@ -12,5 +12,9 @@ namespace Lol.Collection.UI.Units
             DefaultStyleKeyProperty.OverrideMetadata(typeof(ItemSetListBox), new FrameworkPropertyMetadata(typeof(ItemSetListBox)));
         }
         #endregion
+
+        // Dependency 1
+
+
     }
 }
