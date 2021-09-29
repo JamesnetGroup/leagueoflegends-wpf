@@ -1,5 +1,4 @@
-﻿using Lol.Main.Local.ViewModel;
-using System.Windows;
+﻿using System.Windows;
 
 namespace Lol.Main.Local.Work
 {
