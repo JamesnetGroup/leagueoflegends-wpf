@@ -9,7 +9,7 @@ namespace Lol.Collection.Local.Model
 {
     public class MyItemListModel : ItemListModel,  INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler? PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string? name = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
@@ -32,7 +32,7 @@ namespace Lol.Collection.Local.Model
             CheckCommand = new RelayCommand<object>(method);
         }
 
-        public ICommand CheckCommand { get; set; }
+        public ICommand? CheckCommand { get; set; }
         public bool IsChecked
         {
             get => _isChecked;

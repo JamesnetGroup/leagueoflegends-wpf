@@ -34,7 +34,7 @@ namespace Lol.Collection.Local.ViewModel
         {
             var item = ExamItemList.GetItemList();
 
-            ItemLists = item.Select(x => new MyItemListModel(x, Checked)).ToList();
+            _itemLists = item.Select(x => new MyItemListModel(x, Checked)).ToList();
             ButtonTest = new RelayCommand<object>(Test1, Test2);
         }
 

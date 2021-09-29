@@ -14,7 +14,7 @@ namespace Lol.Collection.Local.ViewModel
         #region Variables 
         
         private SpellModel _currentSpell;
-        private readonly Image BackgroundImage;
+        private readonly Image _backgroundImage;
         #endregion
 
         #region Spells
@@ -35,9 +35,10 @@ namespace Lol.Collection.Local.ViewModel
 
         public SpellsViewModel(Image backgroundImage)
         {
-            BackgroundImage = backgroundImage;
             Spells = ExamSpell.GetSpell();
-            CurrentSpell = Spells.First();
+            _currentSpell = Spells.First();
+            _backgroundImage = backgroundImage;
+            
         }
         #endregion
 
@@ -50,7 +51,7 @@ namespace Lol.Collection.Local.ViewModel
                 // TODO: [Lucas] 임시로 배경화면 변경 부분 처리
                 // (전체 구조가 보완되어야 함)
                 var uri = new Uri(@"/Lol.Resources;component/Images/leona.jpg", UriKind.RelativeOrAbsolute);
-                BackgroundImage.Source = new BitmapImage(uri);
+                _backgroundImage.Source = new BitmapImage(uri);
             }
         }
         #endregion

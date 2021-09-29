@@ -54,7 +54,7 @@ namespace Lol.Main.Local.Work
 
         #region GetMenus
 
-        private List<MainMenuModel> GetMenus()
+        private static List<MainMenuModel> GetMenus()
         {
             List<MainMenuModel> source = new()
             {
@@ -74,7 +74,7 @@ namespace Lol.Main.Local.Work
 
         #region GetSubMenus
 
-        private List<SubMenuModel> GetSubMenus()
+        private static List<SubMenuModel> GetSubMenus()
         {
             List<SubMenuModel> source = new()
             {
