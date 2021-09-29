@@ -16,8 +16,10 @@ namespace Lol.YamlDatabase.Entites.Statics
         private List<Users>? _users;
         private List<Friends>? _friends;
         internal List<CodeItems>? _codeItems;
+        internal List<Spells>? _spells;
+        internal List<PlayTypes>? _playTypes;
 
-        private static string GetText(string table)
+        private static string GetYamlData(string table)
         {
             string file = $"/datas/{table}.yml";
             string path = Environment.CurrentDirectory + file;
@@ -26,13 +28,15 @@ namespace Lol.YamlDatabase.Entites.Statics
             return text;
         }
 
+        #region Users
+
         internal List<Users> Users
         {
             get
             {
                 if (_users == null)
                 {
-                    string readText = GetText("users");
+                    string readText = GetYamlData("users");
 
                     var deserializer = new DeserializerBuilder()
                         .WithNamingConvention(CamelCaseNamingConvention.Instance)
@@ -42,6 +46,9 @@ namespace Lol.YamlDatabase.Entites.Statics
                 return _users;
             }
         }
+        #endregion
+
+        #region Friends
 
         internal List<Friends> Friends
         {
@@ -49,7 +56,7 @@ namespace Lol.YamlDatabase.Entites.Statics
             {
                 if (_friends == null)
                 {
-                    string readText = GetText("friends");
+                    string readText = GetYamlData("friends");
 
                     var deserializer = new DeserializerBuilder()
                         .WithNamingConvention(CamelCaseNamingConvention.Instance)
@@ -59,6 +66,9 @@ namespace Lol.YamlDatabase.Entites.Statics
                 return _friends;
             }
         }
+        #endregion
+
+        #region CodeItems
 
         internal List<CodeItems> CodeItems
         {
@@ -66,7 +76,7 @@ namespace Lol.YamlDatabase.Entites.Statics
             {
                 if (_codeItems == null)
                 {
-                    string readText = GetText("codeitems");
+                    string readText = GetYamlData("codeitems");
 
                     var deserializer = new DeserializerBuilder()
                         .WithNamingConvention(CamelCaseNamingConvention.Instance)
@@ -76,5 +86,46 @@ namespace Lol.YamlDatabase.Entites.Statics
                 return _codeItems;
             }
         }
+        #endregion
+
+        #region Spells
+
+        internal List<Spells> Spells
+        {
+            get
+            {
+                if (_spells == null)
+                {
+                    string readText = GetYamlData("spells");
+
+                    var deserializer = new DeserializerBuilder()
+                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .Build();
+                    _spells = deserializer.Deserialize<List<Spells>>(readText);
+                }
+                return _spells;
+            }
+        }
+        #endregion
+
+        #region PlayTypes
+
+        internal List<PlayTypes> PlayTypes
+        {
+            get
+            {
+                if (_playTypes == null)
+                {
+                    string readText = GetYamlData("playTypes");
+
+                    var deserializer = new DeserializerBuilder()
+                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .Build();
+                    _playTypes = deserializer.Deserialize<List<PlayTypes>>(readText);
+                }
+                return _playTypes;
+            }
+        }
+        #endregion
     }
 }
