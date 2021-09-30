@@ -13,6 +13,11 @@ namespace Lol.YamlDatabase.Entites.Statics
             Instance = new LolDataPack();
         }
 
+        public LolDataPack()
+        { 
+        
+        }
+
         private List<Users>? _users;
         private List<Friends>? _friends;
         internal List<CodeItems>? _codeItems;

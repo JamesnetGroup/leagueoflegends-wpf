@@ -35,7 +35,6 @@ namespace Lol.Collection.Local.ViewModel
 
         public SpellsViewModel(Image backgroundImage)
         {
-            //Spells = ExamSpell.GetSpell();
             Spells = new SpellApi().GetSpells();
             _currentSpell = Spells.First();
             _backgroundImage = backgroundImage;
