@@ -23,6 +23,7 @@ namespace Lol.YamlDatabase.Entites.Statics
         internal List<CodeItems>? _codeItems;
         internal List<Spells>? _spells;
         internal List<PlayTypes>? _playTypes;
+        internal List<Items>? _items;
 
         private static string GetYamlData(string table)
         {
@@ -109,6 +110,26 @@ namespace Lol.YamlDatabase.Entites.Statics
                     _spells = deserializer.Deserialize<List<Spells>>(readText);
                 }
                 return _spells;
+            }
+        }
+        #endregion
+
+        #region Items
+
+        internal List<Items> Items
+        {
+            get
+            {
+                if (_items == null)
+                {
+                    string readText = GetYamlData("items");
+
+                    var deserializer = new DeserializerBuilder()
+                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .Build();
+                    _items = deserializer.Deserialize<List<Items>>(readText);
+                }
+                return _items;
             }
         }
         #endregion
