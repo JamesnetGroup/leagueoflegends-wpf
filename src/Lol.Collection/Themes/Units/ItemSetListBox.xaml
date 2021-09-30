@@ -17,7 +17,6 @@
         <Setter Property="Width" Value="35"/>
         <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="Margin" Value="0 0 10 0"/>
-        <!--<Setter Property="BorderBrush" Value="#443114"/>-->
     </Style>
 
     <Style TargetType="{x:Type ListBoxItem}" x:Key="LBXI.HISTORY">
@@ -85,8 +84,8 @@
                             <RowDefinition Height="*"/>
                             <RowDefinition Height="auto"/>
                         </Grid.RowDefinitions>
-                        <Border Background="#1E2328" Padding="8 6 0 6">
-                            <Grid>
+                        <Border Padding="8 6 0 6">
+                            <Grid Background="#000A13" Opacity="0.7">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="*"/>

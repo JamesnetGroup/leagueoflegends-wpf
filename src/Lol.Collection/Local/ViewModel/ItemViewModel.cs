@@ -15,18 +15,24 @@ namespace Lol.Collection.Local.ViewModel
         public RelayCommand<object> ButtonTest { get; set; }
         #endregion
 
+        #region ButtonUsed
+
         private bool _buttonUsed;
         public bool ButtonUsed
         {
             get => _buttonUsed;
             set { _buttonUsed = value; OnPropertyChanged(); }
         }
+        #endregion
+
+        #region ItemLists
 
         public List<MyItemListModel> ItemLists
         {
             get { return _itemLists; }
             set { _itemLists = value; OnPropertyChanged(); }
         }
+        #endregion
 
         #region Constructor
 
