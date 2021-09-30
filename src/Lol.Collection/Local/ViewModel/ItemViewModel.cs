@@ -71,7 +71,7 @@ namespace Lol.Collection.Local.ViewModel
 
         private void Checked(object value)
         {
-            ButtonUsed = ItemLists.Where(x => x.IsChecked).Any();
+            ButtonUsed = ItemLists.Any(x => x.IsChecked);
         }
 
         private bool Test2(object obj)
