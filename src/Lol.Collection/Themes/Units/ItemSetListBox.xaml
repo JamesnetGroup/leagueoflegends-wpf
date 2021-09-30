@@ -93,8 +93,8 @@
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
                                 <ctrls:CheckBox01 x:Name="ch" Grid.Column="0" IsChecked="False" VerticalAlignment="Center" Foreground="#F0E6D2" FontWeight="Bold" Content="이름" FontSize="15" />
-                                <TextBlock Grid.Column="1" Foreground="#F0E6D2" FontWeight="Bold" Text="챔피언" FontSize="15" Margin="10 0 0 0"/>
-                                <TextBlock Grid.Column="2" Foreground="#F0E6D2" FontWeight="Bold" Text="맵" FontSize="15" Margin="65 0 0 0"/>
+                                <TextBlock Grid.Column="1" Foreground="#F0E6D2" FontWeight="Bold" Text="챔피언" FontSize="15" VerticalAlignment="Center" Margin="10 0 0 0"/>
+                                <TextBlock Grid.Column="2" Foreground="#F0E6D2" FontWeight="Bold" Text="맵" FontSize="15" VerticalAlignment="Center" Margin="65 0 0 0"/>
                             </Grid>
                         </Border>
                         <ctrls:BasicScroll Grid.Row="1">
