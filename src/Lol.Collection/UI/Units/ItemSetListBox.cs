@@ -13,8 +13,5 @@ namespace Lol.Collection.UI.Units
         }
         #endregion
 
-        // Dependency 1
-
-
     }
 }
