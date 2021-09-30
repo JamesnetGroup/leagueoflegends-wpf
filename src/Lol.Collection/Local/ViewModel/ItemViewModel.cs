@@ -25,7 +25,7 @@ namespace Lol.Collection.Local.ViewModel
         }
         #endregion
 
-        #region ItemLists
+        #region MyRegion
 
         public List<MyItemListModel> ItemLists
         {
