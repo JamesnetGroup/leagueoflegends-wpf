@@ -13,7 +13,7 @@ namespace Lol.YamlDatabase.Entites.Statics
             Instance = new LolDataPack();
         }
 
-        public LolDataPack()
+        private LolDataPack()
         { 
         
         }
@@ -24,6 +24,7 @@ namespace Lol.YamlDatabase.Entites.Statics
         internal List<Spells>? _spells;
         internal List<PlayTypes>? _playTypes;
         internal List<Items>? _items;
+        internal List<MapTypes>? _mapTypes;
 
         private static string GetYamlData(string table)
         {
@@ -130,6 +131,26 @@ namespace Lol.YamlDatabase.Entites.Statics
                     _items = deserializer.Deserialize<List<Items>>(readText);
                 }
                 return _items;
+            }
+        }
+        #endregion
+
+        #region MapTypes
+
+        internal List<MapTypes> MapTypes
+        {
+            get
+            {
+                if (_mapTypes == null)
+                {
+                    string readText = GetYamlData("mapTypes");
+
+                    var deserializer = new DeserializerBuilder()
+                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .Build();
+                    _mapTypes = deserializer.Deserialize<List<MapTypes>>(readText);
+                }
+                return _mapTypes;
             }
         }
         #endregion
