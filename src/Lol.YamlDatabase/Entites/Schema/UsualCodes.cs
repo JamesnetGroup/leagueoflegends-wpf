@@ -7,6 +7,8 @@
             Id = codes.Id;
             ItemName = codes.ItemName;
             ItemValue = codes.ItemValue;
+
+            // Deep Copy
         }
     }
 }

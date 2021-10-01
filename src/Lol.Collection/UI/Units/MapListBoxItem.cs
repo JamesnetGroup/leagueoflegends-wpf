@@ -15,19 +15,14 @@ using System.Windows.Shapes;
 
 namespace Lol.Collection.UI.Units
 {
-    public class ItemSetListBox : ListBox
+    public class MapListBoxItem : ListBox
     {
         #region DefaultStyleKey
 
-        static ItemSetListBox()
+        static MapListBoxItem()
         {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(ItemSetListBox), new FrameworkPropertyMetadata(typeof(ItemSetListBox)));
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(MapListBoxItem), new FrameworkPropertyMetadata(typeof(MapListBoxItem)));
         }
         #endregion
-
-        protected override DependencyObject GetContainerForItemOverride()
-        {
-            return new ItemSetListBoxItem();
-        }
     }
 }

@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using Lol.Collection.Local.Model;
 using Lol.ExampleData.Collection;
 using Lol.Foundation.Mvvm;
+using Lol.YamlDatabase.Controller;
+using Lol.YamlDatabase.Entites.Schema;
 
 namespace Lol.Collection.Local.ViewModel
 {
@@ -10,7 +12,7 @@ namespace Lol.Collection.Local.ViewModel
     {
         #region ItemLists
 
-        private List<MyItemListModel> _itemLists;
+        private List<Items> _itemLists;
 
         public RelayCommand<object> ButtonTest { get; set; }
         #endregion
@@ -27,7 +29,7 @@ namespace Lol.Collection.Local.ViewModel
 
         #region MyRegion
 
-        public List<MyItemListModel> ItemLists
+        public List<Items> ItemLists
         {
             get { return _itemLists; }
             set { _itemLists = value; OnPropertyChanged(); }
@@ -40,7 +42,9 @@ namespace Lol.Collection.Local.ViewModel
         {
             var item = ExamItemList.GetItemList();
 
-            _itemLists = item.Select(x => new MyItemListModel(x, Checked)).ToList();
+            //_itemLists = item.Select(x => new MyItemListModel(x, Checked)).ToList();
+            _itemLists = new ItemApi().GetItems();
+
             ButtonTest = new RelayCommand<object>(Test1, Test2);
         }
 
@@ -51,33 +55,33 @@ namespace Lol.Collection.Local.ViewModel
 
         private void Test1(object obj)
         {
-            int cnt = ItemLists.Count;
+            //int cnt = ItemLists.Count;
 
-            var item = new MyItemListModel
-            {
-                Seq = cnt,
-                Name = $"새로운 아이템 세트({cnt})",
-                Champ = "모든 챔피언",
-                CheckCommand = new RelayCommand<object>(Checked),
-                MapType1 = ImgResource("Map", "Summoner's_rift"),
-                MapType2 = ImgResource("Map", "Howling_Abyss"),
-            };
+            //var item = new MyItemListModel
+            //{
+            //    Seq = cnt,
+            //    Name = $"새로운 아이템 세트({cnt})",
+            //    Champ = "모든 챔피언",
+            //    CheckCommand = new RelayCommand<object>(Checked),
+            //    MapType1 = ImgResource("Map", "Summoner's_rift"),
+            //    MapType2 = ImgResource("Map", "Howling_Abyss"),
+            //};
 
-            List<MyItemListModel> source = new();
+            //List<MyItemListModel> source = new();
 
-            foreach(var i in ItemLists)
-            {
-                source.Add(i);
-            }
+            //foreach(var i in ItemLists)
+            //{
+            //    source.Add(i);
+            //}
 
-            source.Add(item);
+            //source.Add(item);
 
-            ItemLists = source;
+            //ItemLists = source;
         }
 
         private void Checked(object value)
         {
-            ButtonUsed = ItemLists.Any(x => x.IsChecked);
+            //ButtonUsed = ItemLists.Any(x => x.IsChecked);
         }
 
         private bool Test2(object obj)

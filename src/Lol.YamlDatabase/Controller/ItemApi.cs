@@ -18,9 +18,7 @@ namespace Lol.YamlDatabase.Controller
                             Seq = i.Seq,
                             Name = i.Name,
                             Champ = i.Champ,
-                            MapTypeStr1 = ImgResource(i.MapType1[0].ToString(), i.MapType1[1].ToString()),
-                            MapTypeStr2 = ImgResource(i.MapType2[0].ToString(), i.MapType2[1].ToString()),
-
+                            MapTypeItems = Db.MapTypes.Where(y => i.MapTypes.Contains(y.Id))
                         };
             return query.ToList();
         }

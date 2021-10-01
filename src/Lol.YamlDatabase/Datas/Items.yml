@@ -1,47 +1,28 @@
 ﻿- seq: 0
   name: 새로운 아이템 세트
   champ: 모든 챔피언
-  mapType1: 
-    - Map
-    - Summoner's_rift
-  mapType2: 
-    - Map
-    - Howling_Abyss
+  mapTypes: 
+    - 2
 - seq: 1
   name: 새로운 아이템 세트(1)
   champ: 모든 챔피언
-  mapType1: 
-    - Map
-    - Summoner's_rift
-  mapType2: 
-    - Map
-    - Howling_Abyss  
+  mapTypes: 
+    - 2
 - seq: 2
   name: 새로운 아이템 세트(2)
   champ: 모든 챔피언
-  mapType1: 
-    - Map
-    - Summoner's_rift
-  mapType2: 
-    - Map
-    - Howling_Abyss  
+  mapTypes: 
+    - 1
 - seq: 3
   name: 새로운 아이템 세트(3)
   champ: 모든 챔피언
-  mapType1: 
-    - Map
-    - Summoner's_rift
-  mapType2: 
-    - Map
-    - Howling_Abyss  
+  mapTypes: 
+    - 2
+    - 1
 - seq: 4
   name: 새로운 아이템 세트(4)
   champ: 모든 챔피언
-  mapType1: 
-    - Map
-    - Summoner's_rift
-  mapType2: 
-    - Map
-    - Howling_Abyss  
+  mapTypes: 
+    - 2 
 
 

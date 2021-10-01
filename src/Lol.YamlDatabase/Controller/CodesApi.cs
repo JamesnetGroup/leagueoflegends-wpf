@@ -13,7 +13,6 @@ namespace Lol.YamlDatabase.Controller
                 .Select(x => new UsualCodes(x))
                 .ToList();
 
-
             return items;
         }
     }

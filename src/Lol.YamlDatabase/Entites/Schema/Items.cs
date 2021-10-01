@@ -8,11 +8,8 @@
 
         public string Champ { get; set; }
 
-        public string[] MapType1 { get; set; }
-        public string MapTypeStr1 { get; set; }
+        public int[] MapTypes { get; set; }
 
-        public string[] MapType2 { get; set; }
-        public string MapTypeStr2 { get; set; }
-
+        public IEnumerable<MapTypes> MapTypeItems { get; set; }
     }
 }

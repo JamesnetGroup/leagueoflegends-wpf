@@ -34,7 +34,7 @@ namespace Lol.Settings.InGame.Local.ViewModels
         public GameSoundViewModel()
         {
             MusicTheme = new CodesApi().GetCodes("000002");
-
+            // >>
             ConfigModel config = RiotConfig.LoadConfig();
             Model = config.Settings.GameSound;
         }
