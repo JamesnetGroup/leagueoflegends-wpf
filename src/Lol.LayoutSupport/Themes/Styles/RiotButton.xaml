@@ -38,8 +38,13 @@
 								SnapsToDevicePixels="True" 
 								ClipToBounds="True">
 							<Grid Margin="0 0 0 0">
-								<ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Margin="{TemplateBinding ContentMargin}"/>
-								<Border Background="Transparent" BorderBrush="#CC091119" BorderThickness="1" Margin="0"/>
+								<ContentPresenter HorizontalAlignment="Center"
+                                                  VerticalAlignment="Center" 
+                                                  Margin="{TemplateBinding ContentMargin}"/>
+								<Border Background="Transparent" 
+                                        BorderBrush="#CC091119" 
+                                        BorderThickness="1"
+                                        Margin="0"/>
 							</Grid>
 						</Border>
 					</Grid>

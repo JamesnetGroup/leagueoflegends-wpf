@@ -8,7 +8,9 @@
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type ctrls:RiotComboBoxItem}">
-					<Border Background="#FF000000" BorderBrush="#1F2123" BorderThickness="0 0 0 1">
+					<Border Background="#FF000000"
+                            BorderBrush="#1F2123"
+                            BorderThickness="0 0 0 1">
 						<Grid>
 							<Grid.ColumnDefinitions>
 								<ColumnDefinition Width="Auto"/>
@@ -20,8 +22,14 @@
 									   Text="{Binding RelativeSource={RelativeSource AncestorType=ctrls:RiotComboBoxItem}, Path=Content}" 
 									   FontWeight="Bold" 
 									   FontSize="12"/>
-							<ctrls:RiotIcon x:Name="check" Grid.Column="2" IconType="Check" Fill="#CDBE91"
-											Width="15" Height="15" Margin="0 0 12 0" Visibility="Collapsed"/>
+							<ctrls:RiotIcon x:Name="check" 
+                                            Grid.Column="2" 
+                                            IconType="Check" 
+                                            Fill="#CDBE91"
+											Width="15" 
+                                            Height="15"
+                                            Margin="0 0 12 0" 
+                                            Visibility="Collapsed"/>
 						</Grid>
 					</Border>
 					<ControlTemplate.Triggers>

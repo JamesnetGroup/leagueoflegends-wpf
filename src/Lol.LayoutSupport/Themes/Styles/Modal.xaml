@@ -8,7 +8,8 @@
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type ctrls:Modal}">
 					<Border Background="#AA000000">
-						<ContentPresenter ContentSource="Content" ContentTemplate="{TemplateBinding ContentTemplate}"/>
+						<ContentPresenter ContentSource="Content" 
+                                          ContentTemplate="{TemplateBinding ContentTemplate}"/>
 					</Border>
 					<ControlTemplate.Triggers>
 						<Trigger Property="Content" Value="{x:Null}">

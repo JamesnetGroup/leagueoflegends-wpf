@@ -33,17 +33,34 @@
 				<ControlTemplate TargetType="{x:Type ctrls:CheckBox01}">
 					<Grid>
 						<Grid.ToolTip>
-							<ctrls:TooltipA x:Name="tooltip" Style="{StaticResource TOOLTIP}" ToolTip="{TemplateBinding Tag}" Visibility="Visible"/>
+							<ctrls:TooltipA x:Name="tooltip" 
+                                            Style="{StaticResource TOOLTIP}" 
+                                            ToolTip="{TemplateBinding Tag}"
+                                            Visibility="Visible"/>
 						</Grid.ToolTip>
 						<Grid.ColumnDefinitions>
 							<ColumnDefinition Width="Auto"/>
 							<ColumnDefinition Width="Auto"/>
 						</Grid.ColumnDefinitions>
-						<Border x:Name="border" Width="12" Height="12" Background="Transparent" BorderBrush="#705427" BorderThickness="1" Margin="0 0 8 0">
-							<ctrls:RiotIcon x:Name="icon" IconType="Mark" HorizontalAlignment="Center" VerticalAlignment="Center"
-											Fill="#705427" Width="12" Height="12" Margin="0" Visibility="Collapsed"/>
+						<Border x:Name="border"
+                                Width="12" 
+                                Height="12" 
+                                Background="Transparent"
+                                BorderBrush="#705427"
+                                BorderThickness="1"
+                                Margin="0 0 8 0">
+							<ctrls:RiotIcon x:Name="icon"
+                                            IconType="Mark"
+                                            HorizontalAlignment="Center" 
+                                            VerticalAlignment="Center"
+											Fill="#705427" 
+                                            Width="12" 
+                                            Height="12" 
+                                            Margin="0"
+                                            Visibility="Collapsed"/>
 						</Border>
-						<ContentPresenter Grid.Column="1" VerticalAlignment="Center"/>
+						<ContentPresenter Grid.Column="1" 
+                                          VerticalAlignment="Center"/>
 					</Grid>
 					<ControlTemplate.Triggers>
 						<Trigger Property="IsChecked" Value="True">
@@ -78,11 +95,25 @@
 							<ColumnDefinition Width="Auto"/>
 							<ColumnDefinition Width="Auto"/>
 						</Grid.ColumnDefinitions>
-						<Border x:Name="border" Width="12" Height="12" Background="Transparent" BorderBrush="#705427" BorderThickness="1" Margin="0 0 8 0">
-							<ctrls:RiotIcon x:Name="icon" IconType="Mark" HorizontalAlignment="Center" VerticalAlignment="Center"
-											Fill="#705427" Width="12" Height="12" Margin="0" Visibility="Collapsed"/>
+						<Border x:Name="border"
+                                Width="12" 
+                                Height="12" 
+                                Background="Transparent" 
+                                BorderBrush="#705427" 
+                                BorderThickness="1"
+                                Margin="0 0 8 0">
+							<ctrls:RiotIcon x:Name="icon" 
+                                            IconType="Mark" 
+                                            HorizontalAlignment="Center" 
+                                            VerticalAlignment="Center"
+											Fill="#705427"
+                                            Width="12" 
+                                            Height="12" 
+                                            Margin="0" 
+                                            Visibility="Collapsed"/>
 						</Border>
-						<ContentPresenter Grid.Column="1" VerticalAlignment="Center"/>
+						<ContentPresenter Grid.Column="1" 
+                                          VerticalAlignment="Center"/>
 					</Grid>
 					<ControlTemplate.Triggers>
 						<Trigger Property="IsChecked" Value="True">

@@ -13,14 +13,18 @@
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type ctrls:BasicTooltip}">
-					<Border Background="#010A13" BorderThickness="2">
+					<Border Background="#010A13"
+                            BorderThickness="2">
 						<Border.BorderBrush>
 							<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
 								<GradientStop Color="#614a1f" Offset="0"/>
 								<GradientStop Color="#463714" Offset="1"/>
 							</LinearGradientBrush>
 						</Border.BorderBrush>
-						<ContentPresenter Margin="5" Content="{TemplateBinding ToolTip}" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+						<ContentPresenter Margin="5" 
+                                          Content="{TemplateBinding ToolTip}"
+                                          HorizontalAlignment="Center"
+                                          VerticalAlignment="Center"/>
 					</Border>
 				</ControlTemplate>
 			</Setter.Value>
