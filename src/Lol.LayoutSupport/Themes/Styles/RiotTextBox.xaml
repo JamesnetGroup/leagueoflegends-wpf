@@ -23,8 +23,13 @@
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type Button}">
 					<Border Background="Transparent">
-						<ctrls:RiotIcon x:Name="icon" IconType="Close" HorizontalAlignment="Left" 
-										Fill="#CDBE91" Width="15" Height="15" Margin="10 0 0 0"/>
+						<ctrls:RiotIcon x:Name="icon" 
+                                        IconType="Close" 
+                                        HorizontalAlignment="Left" 
+										Fill="#CDBE91"
+                                        Width="15" 
+                                        Height="15" 
+                                        Margin="10 0 0 0"/>
 					</Border>
 					<ControlTemplate.Triggers>
 						<Trigger Property="IsMouseOver" Value="True">
@@ -56,13 +61,27 @@
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type ctrls:RiotTextBox}">
 					<Grid>
-						<Border x:Name="border" Background="#000407" BorderBrush="#785A28" BorderThickness="1"/>
-						<ctrls:RiotIcon IconType="Magnify" HorizontalAlignment="Left" 
-										Fill="#F0E6D2" Width="15" Height="15" Margin="10 0 0 0"/>
-						<ScrollViewer x:Name="PART_ContentHost" Margin="30 0 30 0" VerticalAlignment="Center"/>
-						<TextBlock x:Name="placeholder" Margin="32 0 10 0" VerticalAlignment="Center" Visibility="Collapsed"
-								   Foreground="#757575" Text="{Binding RelativeSource={RelativeSource AncestorType=ctrls:RiotTextBox}, Path=PlaceHolder}"/>
-						<Button x:Name="close" Style="{StaticResource BTN.CLOSE}"/>
+						<Border x:Name="border" 
+                                Background="#000407" 
+                                BorderBrush="#785A28" 
+                                BorderThickness="1"/>
+						<ctrls:RiotIcon IconType="Magnify"
+                                        HorizontalAlignment="Left" 
+										Fill="#F0E6D2" 
+                                        Width="15"
+                                        Height="15"
+                                        Margin="10 0 0 0"/>
+						<ScrollViewer x:Name="PART_ContentHost"
+                                      Margin="30 0 30 0" 
+                                      VerticalAlignment="Center"/>
+                        <TextBlock x:Name="placeholder"
+                                   Text="{Binding RelativeSource={RelativeSource AncestorType=ctrls:RiotTextBox}, Path=PlaceHolder}"
+                                   Margin="32 0 10 0"
+                                   VerticalAlignment="Center" 
+                                   Visibility="Collapsed"
+								   Foreground="#757575" />
+						<Button x:Name="close" 
+                                Style="{StaticResource BTN.CLOSE}"/>
 					</Grid>
 					<ControlTemplate.Triggers>
 						<Trigger Property="IsMouseOver" Value="True">
