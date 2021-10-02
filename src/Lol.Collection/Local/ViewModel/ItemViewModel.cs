@@ -1,6 +1,4 @@
-﻿using System.Linq;
-using System.Collections.Generic;
-using Lol.Collection.Local.Model;
+﻿using System.Collections.Generic;
 using Lol.ExampleData.Collection;
 using Lol.Foundation.Mvvm;
 using Lol.YamlDatabase.Controller;
