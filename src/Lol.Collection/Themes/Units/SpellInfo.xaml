@@ -8,11 +8,24 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:SpellInfo}">
                     <StackPanel HorizontalAlignment="Left">
-                        <TextBlock Text="{Binding Name}" FontSize="25" FontWeight="Bold" Foreground="#F0E6D2" />
-                        <TextBlock Text="{Binding Level, StringFormat={}소환사 레벨: {0}}" FontSize="14" FontWeight="Bold" Margin="0 1 0 0"/>
-                        <TextBlock Text="{Binding DisplayName}" FontSize="12" FontWeight="UltraLight" Margin="0 20 0 0"/>
-                        <TextBlock Text="{Binding Content}" Width="340" TextWrapping="Wrap" Margin="0 15 0 0"/>
-                        <TextBlock Text="{Binding Delay, StringFormat={}재사용 대기시간: {0}초}" Margin="0 14 0 0"/>
+                        <TextBlock Text="{Binding Name}" 
+                                   FontSize="25" 
+                                   FontWeight="Bold" 
+                                   Foreground="#F0E6D2"/>
+                        <TextBlock Text="{Binding Level, StringFormat={}소환사 레벨: {0}}" 
+                                   FontSize="14" 
+                                   FontWeight="Bold" 
+                                   Margin="0 1 0 0"/>
+                        <TextBlock Text="{Binding DisplayName}" 
+                                   FontSize="12" 
+                                   FontWeight="UltraLight" 
+                                   Margin="0 20 0 0"/>
+                        <TextBlock Text="{Binding Content}" 
+                                   Width="340" 
+                                   TextWrapping="Wrap" 
+                                   Margin="0 15 0 0"/>
+                        <TextBlock Text="{Binding Delay, StringFormat={}재사용 대기시간: {0}초}" 
+                                   Margin="0 14 0 0"/>
                     </StackPanel>
                 </ControlTemplate>
             </Setter.Value>
