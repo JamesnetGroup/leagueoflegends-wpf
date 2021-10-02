@@ -65,15 +65,19 @@
 							<RowDefinition Height="Auto"/>
 							<RowDefinition Height="Auto"/>
 						</Grid.RowDefinitions>
-						<StackPanel x:Name="header" Orientation="Horizontal" Visibility="Collapsed">
+						<StackPanel x:Name="header"
+                                    Orientation="Horizontal"
+                                    Visibility="Collapsed">
 							<TextBlock Text="{Binding RelativeSource={RelativeSource AncestorType=ctrls:RiotVolume}, Path=Header}"
 									   Foreground="#9B9688"
 									   Margin="0 0 0 0"/>
 							<TextBlock Text="{Binding RelativeSource={RelativeSource AncestorType=ctrls:RiotVolume}, Path=Value, StringFormat={}{0:N0}}"
 									   Foreground="#9B9688"/>
 						</StackPanel>
-						<ctrls:Slider01 x:Name="slider" Style="{StaticResource SLD.SOUND}"/>
-						<ToggleButton x:Name="toggle" Style="{StaticResource TGL.MUTE}"/>
+						<ctrls:Slider01 x:Name="slider"
+                                        Style="{StaticResource SLD.SOUND}"/>
+						<ToggleButton x:Name="toggle" 
+                                      Style="{StaticResource TGL.MUTE}"/>
 					</Grid>
 					<ControlTemplate.Triggers>
 						<Trigger Property="IsMute" Value="true">
