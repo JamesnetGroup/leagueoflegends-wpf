@@ -1,6 +1,7 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Lol.Clash;component/Themes/Units/ScheduleListBox.xaml"/>
         <ResourceDictionary Source="/Lol.Clash;component/Themes/Units/Manual.xaml"/>
         <ResourceDictionary Source="/Lol.Clash;component/Themes/Units/CityCup.xaml"/>
         <ResourceDictionary Source="/Lol.Clash;component/Themes/Units/OnOffButton.xaml"/>
