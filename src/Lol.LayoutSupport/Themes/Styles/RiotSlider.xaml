@@ -47,7 +47,9 @@
 					<GradientStop Color="#463714" Offset="1"/>
 				</LinearGradientBrush>
 			</Border.BorderBrush>
-			<ContentPresenter Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+			<ContentPresenter Margin="5" 
+                              VerticalAlignment="Center" 
+                              HorizontalAlignment="Center"/>
 		</Border>
 	</ControlTemplate>
 
@@ -105,14 +107,29 @@
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type ctrls:Slider01}">
-					<Border x:Name="border" Background="Transparent" SnapsToDevicePixels="True">
+					<Border x:Name="border" 
+                            Background="Transparent" 
+                            SnapsToDevicePixels="True">
 						<Grid Height="{Binding RelativeSource={RelativeSource AncestorType=ctrls:Slider01}, Path=MinHeight}">
 							<DockPanel LastChildFill="True">
-								<Border x:Name="PART_SelectionRange" Height="2.5" ClipToBounds="True" Visibility="Visible">
-									<Rectangle x:Name="sliderBar" Margin="4 0 -4 0" RadiusX="1" RadiusY="1" Fill="{StaticResource SLD.FILL}"/>
+								<Border x:Name="PART_SelectionRange" 
+                                        Height="2.5" 
+                                        ClipToBounds="True" 
+                                        Visibility="Visible">
+									<Rectangle x:Name="sliderBar" 
+                                               Margin="4 0 -4 0" 
+                                               RadiusX="1" 
+                                               RadiusY="1" 
+                                               Fill="{StaticResource SLD.FILL}"/>
 								</Border>
-								<Border Height="2.5" ClipToBounds="True" Visibility="Visible">
-									<Rectangle x:Name="PART_NegativeSelection" Margin="8 0 4 0" RadiusX="1" RadiusY="1" Fill="#1E2328"/>
+								<Border Height="2.5" 
+                                        ClipToBounds="True"
+                                        Visibility="Visible">
+									<Rectangle x:Name="PART_NegativeSelection" 
+                                               Margin="8 0 4 0" 
+                                               RadiusX="1" 
+                                               RadiusY="1" 
+                                               Fill="#1E2328"/>
 								</Border>
 							</DockPanel>
 							<Track x:Name="PART_Track">
