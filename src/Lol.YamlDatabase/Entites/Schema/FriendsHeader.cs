@@ -1,4 +1,7 @@
-﻿namespace Lol.YamlDatabase.Entites.Schema
+﻿using System;
+using System.Collections.Generic;
+
+namespace Lol.YamlDatabase.Entites.Schema
 {
     public class FriendsHeader : IFriendsList
     {
