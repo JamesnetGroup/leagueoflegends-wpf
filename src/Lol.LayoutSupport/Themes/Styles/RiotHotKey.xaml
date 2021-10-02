@@ -46,13 +46,18 @@
 									Padding="0 45 0 0"
 									VerticalAlignment="Center"/>
 							<TextBlock Text="{Binding RelativeSource={RelativeSource AncestorType=ctrls:RiotHotKey}, Path=Content}"
-										HorizontalAlignment="Center"
-										VerticalAlignment="Center"
-										Foreground="#FFFFFF"
-										FontSize="27"
-										Margin="0 0 0 20"/>
-							<ctrls:RiotIcon IconType="Lightning" HorizontalAlignment="Center" VerticalAlignment="Bottom"
-											Fill="#F0E6D2" Width="18" Height="18" Margin="0 0 0 2"/>
+									   HorizontalAlignment="Center"
+									   VerticalAlignment="Center"
+									   Foreground="#FFFFFF"
+									   FontSize="27"
+									   Margin="0 0 0 20"/>
+							<ctrls:RiotIcon IconType="Lightning"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Bottom"
+											Fill="#F0E6D2" 
+                                            Width="18" 
+                                            Height="18"
+                                            Margin="0 0 0 2"/>
 						</Grid>
 					</Border>
 					<ControlTemplate.Triggers>
