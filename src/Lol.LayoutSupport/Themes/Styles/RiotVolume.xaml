@@ -39,7 +39,11 @@
 							Background="{TemplateBinding Background}"
 							BorderBrush="{TemplateBinding BorderBrush}"
 							BorderThickness="{TemplateBinding BorderThickness}">
-						<ctrls:RiotIcon x:Name="path" IconType="VolumeON" Fill="#CDBE91" Width="20" Height="20"/>
+						<ctrls:RiotIcon x:Name="path" 
+                                        IconType="VolumeON" 
+                                        Fill="#CDBE91" 
+                                        Width="20" 
+                                        Height="20"/>
 					</Border>
 					<ControlTemplate.Triggers>
 						<Trigger Property="IsChecked" Value="True">
