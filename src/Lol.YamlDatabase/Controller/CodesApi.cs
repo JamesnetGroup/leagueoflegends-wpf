@@ -12,10 +12,9 @@ namespace Lol.YamlDatabase.Controller
             var items = Db.CodeItems
                 .Where(x => x.CodeId == codeId)
                 .OrderBy(x => x.Sort)
-                .Select(x => new UsualCodes(x))
-                .ToList();
+                .Select(x => new UsualCodes(x));
 
-            return items;
+            return items.ToList();
         }
     }
 }
