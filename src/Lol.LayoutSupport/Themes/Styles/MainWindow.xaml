@@ -72,7 +72,8 @@
 									UseLayoutRounding="True"
 									BorderThickness="0 0 0 1"/>
 
-							<ContentPresenter Grid.RowSpan="2" Grid.ColumnSpan="2"
+							<ContentPresenter Grid.RowSpan="2"
+                                              Grid.ColumnSpan="2"
 											  ContentSource="DataContext"
 											  ContentTemplate="{TemplateBinding ModalTemplate}"/>
 						</Grid>

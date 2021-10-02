@@ -29,10 +29,20 @@
 							<ColumnDefinition Width="*"/>
 							<ColumnDefinition Width="50" />
 						</Grid.ColumnDefinitions>
-						<Border x:Name="border" Grid.Column="0" Grid.ColumnSpan="2" Background="#0f1a20" 
-								BorderBrush="{StaticResource CBX.BDR}" BorderThickness="1"/>
-						<ctrls:RiotIcon x:Name="swap" Grid.Column="1" IconType="Menuswap" HorizontalAlignment="Right"
-										Fill="#a89060" Height="20" Width="20" Margin="0 0 6 0"/>
+						<Border x:Name="border"
+                                Grid.Column="0"
+                                Grid.ColumnSpan="2"
+                                Background="#0f1a20" 
+								BorderBrush="{StaticResource CBX.BDR}"
+                                BorderThickness="1"/>
+						<ctrls:RiotIcon x:Name="swap" 
+                                        Grid.Column="1" 
+                                        IconType="Menuswap"
+                                        HorizontalAlignment="Right"
+										Fill="#a89060"
+                                        Height="20" 
+                                        Width="20" 
+                                        Margin="0 0 6 0"/>
 					</Grid>
 					<ControlTemplate.Triggers>
 						<Trigger Property="IsMouseOver" Value="True">
@@ -121,11 +131,16 @@
 						</Style>
 					</ControlTemplate.Resources>
 					<Grid>
-						<ToggleButton Name="togglebutton" Style="{StaticResource IN.TGL}"/>
-						<ContentPresenter Name="contentsite" Style="{StaticResource IN.DISPLAY}"/>
-						<Popup Name="popup" Style="{StaticResource IN.POPUP}">
-							<Grid Name="dropdown" Style="{StaticResource IN.GRID}">
-								<Border Name="dropdownborder" Style="{StaticResource IN.BORDER}"/>
+						<ToggleButton Name="togglebutton"
+                                      Style="{StaticResource IN.TGL}"/>
+						<ContentPresenter Name="contentsite" 
+                                          Style="{StaticResource IN.DISPLAY}"/>
+						<Popup Name="popup" 
+                               Style="{StaticResource IN.POPUP}">
+							<Grid Name="dropdown" 
+                                  Style="{StaticResource IN.GRID}">
+								<Border x:Name="dropdownborder"
+                                        Style="{StaticResource IN.BORDER}"/>
 								<ctrls:BasicScroll Style="{StaticResource IN.SCROLL}">
 									<ItemsPresenter Style="{StaticResource IN.ITEMS}"/>
 								</ctrls:BasicScroll>
