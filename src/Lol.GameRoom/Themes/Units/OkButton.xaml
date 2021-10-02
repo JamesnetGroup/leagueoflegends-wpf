@@ -37,7 +37,7 @@
                             <Setter Property="Background" Value="#00070E"/>
                             <Setter Property="BorderBrush" Value="#34291E"/>
                             <Setter Property="BorderThickness" Value="1 1 1 1"/>
-                            <Setter Property="Margin" Value="-6 0 0 0"/>
+                            <Setter Property="Margin" Value="-4 0 0 0"/>
                             <Setter Property="CornerRadius" Value="20 0 0 20"/>
                         </Style>
                         <Style TargetType="{x:Type Border}" x:Key="IN.BORDER.02">
