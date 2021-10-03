@@ -14,10 +14,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Datas\teamFights.yml">
+    <None Update="Datas\mapTypes.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Datas\mapTypes.yml">
+    <None Update="Datas\gameRooms.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Datas\playTypes.yml">
