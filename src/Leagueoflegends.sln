@@ -63,6 +63,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lol.YamlDatabase", "Lol.Yam
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lol.GameRoom", "Lol.GameRoom\Lol.GameRoom.csproj", "{FB63380E-7202-48BA-8AEA-7E065E2368CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lol.Devices", "Lol.Devices\Lol.Devices.csproj", "{0217890B-CB38-4964-8F3D-428F68A30C6F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -161,6 +163,10 @@ Global
 		{FB63380E-7202-48BA-8AEA-7E065E2368CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB63380E-7202-48BA-8AEA-7E065E2368CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB63380E-7202-48BA-8AEA-7E065E2368CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0217890B-CB38-4964-8F3D-428F68A30C6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0217890B-CB38-4964-8F3D-428F68A30C6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0217890B-CB38-4964-8F3D-428F68A30C6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0217890B-CB38-4964-8F3D-428F68A30C6F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -190,6 +196,7 @@ Global
 		{2C040A44-098B-40F5-8746-3909600E6B12} = {A4696F9F-6D53-459D-BAB8-0FF6573C1A84}
 		{BD3B50FB-8C00-4ED0-91E7-8ED1AEDBCF34} = {393FC49D-D9C9-4171-B798-E8813C5A41B9}
 		{FB63380E-7202-48BA-8AEA-7E065E2368CF} = {A4696F9F-6D53-459D-BAB8-0FF6573C1A84}
+		{0217890B-CB38-4964-8F3D-428F68A30C6F} = {E2969795-6E49-42B6-AFC8-679F0398C5B7}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EB8A4E83-8ABD-40CF-B56A-559A49B51254}

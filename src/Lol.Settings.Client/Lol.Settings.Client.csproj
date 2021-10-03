@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Lol.Devices\Lol.Devices.csproj" />
     <ProjectReference Include="..\Lol.ExampleData\Lol.ExampleData.csproj" />
     <ProjectReference Include="..\Lol.Foundation\Lol.Foundation.csproj" />
     <ProjectReference Include="..\Lol.LayoutSupport\Lol.LayoutSupport.csproj" />
