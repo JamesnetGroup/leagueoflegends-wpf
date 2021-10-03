@@ -131,5 +131,52 @@
   isPremium: true
   mD5: lol-luckypig.png
   isFree: false
-  
-  
+- seq: 19
+  name: 여정의 시작 결투장
+  level: 20
+  explain: 출발할 시점을 결정하는 것이 가장 중요할 때도 있습니다.
+  isPremium: true
+  mD5: lol-luckypig.png
+  isFree: false
+- seq: 20
+  name: 만세
+  level: 21
+  explain: 멜리스마가 즐거운 비명을 지르고 있습니다.
+  isPremium: false
+  mD5: lol-luckypig.png
+  isFree: true
+- seq: 21
+  name: 3성 칸메이 폭발
+  level: 22
+  explain: 영혼의 불꽃으로 적을 날려버리세요. 유닛들이 함께 발사합니다.
+  isPremium: true
+  mD5: lol-luckypig.png
+  isFree: false
+- seq: 22
+  name: 작은 영웅 알
+  level: 23
+  explain: 작은 영웅 꼬마 전설이 아오 신, 배불뚝이, 크릉이 중 하나가 부화할 수 있습니다.
+  isPremium: true
+  mD5: lol-luckypig.png
+  isFree: false
+- seq: 23
+  name: 별 파편 30개
+  level: 24
+  explain: 별에서 얻은 이 파편으로 꼬마 전설이를 업그레이드하세요!
+  isPremium: true
+  mD5: lol-luckypig.png
+  isFree: false
+- seq: 24
+  name: 2성 그림자 낙서
+  level: 25
+  explain: 어두운 물감을 뿌려 적의 품위를 떨어트리세요. 유닛들이 함께 발사합니다.
+  isPremium: true
+  mD5: lol-luckypig.png
+  isFree: false
+- seq: 25
+  name: 꼬마 전설이 알(1~6탄 중 무작위)
+  level: 26
+  explain: 무작위 꼬마 전설이 1~6탄 중 하나가 부화할 수 있습니다.
+  isPremium: false
+  mD5: lol-luckypig.png
+  isFree: true
