@@ -2,9 +2,10 @@
 using Lol.Data.Config;
 using Lol.Data.Setting;
 using Lol.Data.Setting.Clients;
-using Lol.ExampleData.Setting;
 using Lol.Foundation.Mvvm;
 using Lol.Foundation.Riotbase;
+using Lol.YamlDatabase.Controller;
+using Lol.YamlDatabase.Entites.Schema;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Windows.Input;
@@ -15,7 +16,7 @@ namespace Lol.Settings.Client.Local.ViewModels
     {
         #region Variables
 
-        private List<WindowSizeCode> _sizeList;
+        private List<Resolutions> _sizeList;
         #endregion
 
         #region Commands 
@@ -30,7 +31,7 @@ namespace Lol.Settings.Client.Local.ViewModels
 
         #region SizeList
 
-        public List<WindowSizeCode> SizeList
+        public List<Resolutions> SizeList
         {
             get => _sizeList;
             set { _sizeList = value; OnPropertyChanged(); }
@@ -41,7 +42,7 @@ namespace Lol.Settings.Client.Local.ViewModels
 
         public GeneralViewModel()
         {
-            SizeList = ExamSettings.GetWinSizeList();
+            SizeList = new SettingsApi().GetResolutions();
 
             ConfigModel config = RiotConfig.LoadConfig();
             config.Settings ??= new SettingModel();
