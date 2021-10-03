@@ -1,7 +1,5 @@
 ﻿using System.Linq;
 using System.Collections.Generic;
-using Lol.Data.Clash;
-using Lol.ExampleData.Clash;
 using Lol.Foundation.Mvvm;
 using Lol.YamlDatabase.Controller;
 using Lol.YamlDatabase.Entites.Schema;
