@@ -15,8 +15,8 @@ namespace Lol.Clash.Local.ViewModel
         private List<ClashCups> _cups;
         private ClashCups _currentCup;
 
-        private List<BaseModel> _timerMenus;
-        private BaseModel _currentTierMenu;
+        private List<ClashTiers> _tierMenus;
+        private ClashTiers _currentTierMenu;
         private bool _isCupChanged;
         private int _lastSeq;
 
@@ -43,16 +43,16 @@ namespace Lol.Clash.Local.ViewModel
 
         #region TierMenus
 
-        public List<BaseModel> TierMenus
+        public List<ClashTiers> TierMenus
         {
-            get => _timerMenus;
-            set { _timerMenus = value; OnPropertyChanged(); }
+            get => _tierMenus;
+            set { _tierMenus = value; OnPropertyChanged(); }
         }
         #endregion
 
         #region CurrentTierMenu
 
-        public BaseModel CurrentTierMenu
+        public ClashTiers CurrentTierMenu
         {
             get => _currentTierMenu;
             set { _currentTierMenu = value; OnPropertyChanged(); TierMenuChanged(value); }
@@ -93,7 +93,7 @@ namespace Lol.Clash.Local.ViewModel
             Cups = new ClashCupApi().GetClashCups();
             CurrentCup = Cups.First();
 
-            TierMenus = ExamClash.GetTier();
+            TierMenus = new ClashCupApi().GetClashTiers();
             CurrentTierMenu = TierMenus.First();
         }
         #endregion
@@ -108,7 +108,7 @@ namespace Lol.Clash.Local.ViewModel
 
         #region TierMenuChanged
 
-        private void TierMenuChanged(BaseModel value)
+        private void TierMenuChanged(ClashTiers value)
         {
             if (value == null)
                 return;

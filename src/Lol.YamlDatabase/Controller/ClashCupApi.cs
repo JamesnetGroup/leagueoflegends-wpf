@@ -18,5 +18,16 @@ namespace Lol.YamlDatabase.Controller
 
             return items.ToList();
         }
+        public List<ClashTiers> GetClashTiers()
+        {
+            var items = from s in Db.ClashCups
+                        select new ClashTiers
+                        {
+                            Seq = s.Seq,
+                            Name = s.Name
+                        };
+
+            return items.ToList();
+        }
     }
 }
