@@ -14,6 +14,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Datas\clashCups.yml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Datas\mapTypes.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
