@@ -20,7 +20,7 @@ namespace Lol.Clash.Local.ViewModel
         private bool _isCupChanged;
         private int _lastSeq;
 
-        private List<TierDetailModel> _tierDetails;
+        private List<ClashTierDetails> _tierDetails;
         #endregion
 
         #region Cups
@@ -79,7 +79,7 @@ namespace Lol.Clash.Local.ViewModel
 
         #region TierDetails
 
-        public List<TierDetailModel> TierDetails
+        public List<ClashTierDetails> TierDetails
         {
             get => _tierDetails;
             set { _tierDetails = value; OnPropertyChanged(); }
@@ -113,7 +113,7 @@ namespace Lol.Clash.Local.ViewModel
             if (value == null)
                 return;
 
-            TierDetails = ExamClash.GetTierDetail().Where(x => x.ParentSeq == value.Seq).ToList();
+            TierDetails = new ClashCupApi().GetClashTierDetails(value.Seq);
             LastSeq = TierDetails.Any() ? TierDetails.OrderByDescending(x => x.Seq).First().Seq : 0;
         }
         #endregion

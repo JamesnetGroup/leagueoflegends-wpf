@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using Lol.Data.Clash;
 using Lol.ExampleData.Clash;
 using Lol.Foundation.Mvvm;
+using Lol.YamlDatabase.Controller;
+using Lol.YamlDatabase.Entites.Schema;
 
 namespace Lol.Clash.Local.ViewModel
 {
@@ -10,13 +12,13 @@ namespace Lol.Clash.Local.ViewModel
     {
         #region Variables
 
-        private List<BaseModel> _tabs;
-        private BaseModel _currentTab;
+        private List<ClashTabs> _tabs;
+        private ClashTabs _currentTab;
         #endregion
 
         #region Tabs
 
-        public List<BaseModel> Tabs
+        public List<ClashTabs> Tabs
         {
             get => _tabs;
             set { _tabs = value; OnPropertyChanged(); }
@@ -25,7 +27,7 @@ namespace Lol.Clash.Local.ViewModel
 
         #region CurrentTab
 
-        public BaseModel CurrentTab
+        public ClashTabs CurrentTab
         {
             get => _currentTab;
             set { _currentTab = value; OnPropertyChanged(); }
@@ -36,7 +38,7 @@ namespace Lol.Clash.Local.ViewModel
 
         public HubViewModel()
         {
-            Tabs = ExamClash.GetCategory();
+            Tabs = new ClashCupApi().GetClashTabs();
             CurrentTab = Tabs.First();
         }
         #endregion

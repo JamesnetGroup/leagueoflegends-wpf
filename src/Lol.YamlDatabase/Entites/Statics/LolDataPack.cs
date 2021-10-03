@@ -34,6 +34,9 @@ namespace Lol.YamlDatabase.Entites.Statics
         internal List<Histories> _historys;
         internal List<Histories> _activities;
         internal List<Histories> _playChampions;
+        internal List<ClashTabs> _clashTabs;
+        internal List<ClashTiers> _clashTiers;
+        internal List<ClashTierDetails> _clashTierDetails;
 
         private static string GetYamlData(string table)
         {
@@ -240,6 +243,66 @@ namespace Lol.YamlDatabase.Entites.Statics
                     _clashCups = deserializer.Deserialize<List<ClashCups>>(readText);
                 }
                 return _clashCups;
+            }
+        }
+        #endregion
+
+        #region ClashTabs
+
+        internal List<ClashTabs> ClashTabs
+        {
+            get
+            {
+                if (_clashTabs == null)
+                {
+                    string readText = GetYamlData("clashTabs");
+
+                    var deserializer = new DeserializerBuilder()
+                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .Build();
+                    _clashTabs = deserializer.Deserialize<List<ClashTabs>>(readText);
+                }
+                return _clashTabs;
+            }
+        }
+        #endregion
+
+        #region ClashTiers
+
+        internal List<ClashTiers> ClashTiers
+        {
+            get
+            {
+                if (_clashTiers == null)
+                {
+                    string readText = GetYamlData("clashTiers");
+
+                    var deserializer = new DeserializerBuilder()
+                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .Build();
+                    _clashTiers = deserializer.Deserialize<List<ClashTiers>>(readText);
+                }
+                return _clashTiers;
+            }
+        }
+        #endregion
+
+        #region ClashTabs
+
+        internal List<ClashTierDetails> ClashTierDetails
+        {
+            get
+            {
+                if (_clashTierDetails == null)
+                {
+                    string readText = GetYamlData("clashTierDetails");
+
+                    var deserializer = new DeserializerBuilder()
+                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .Build();
+                    _clashTierDetails = deserializer.Deserialize<List<ClashTierDetails>>(readText);
+                }
+                return _clashTierDetails;
             }
         }
         #endregion
