@@ -2,7 +2,6 @@
 using Lol.Data.Config;
 using Lol.Data.Setting.Clients;
 using Lol.Devices.Audio;
-using Lol.ExampleData.Setting;
 using Lol.Foundation.Mvvm;
 using Lol.Foundation.Riotbase;
 using Lol.YamlDatabase.Controller;
