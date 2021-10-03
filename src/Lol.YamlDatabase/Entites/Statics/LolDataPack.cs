@@ -34,6 +34,7 @@ namespace Lol.YamlDatabase.Entites.Statics
         internal List<Histories> _historys;
         internal List<Histories> _activities;
         internal List<Histories> _playChampions;
+        internal List<StoreMenus> _storeMenus;
 
         private static string GetYamlData(string table)
         {
@@ -300,6 +301,26 @@ namespace Lol.YamlDatabase.Entites.Statics
                 }
 
                 return _playChampions;
+            }
+        }
+        #endregion
+
+        #region StoreMenus
+
+        internal List<StoreMenus> StoreMenus
+        {
+            get
+            {
+                if (_storeMenus == null)
+                {
+                    string readText = GetYamlData("storeMenus");
+                    var deserializer = new DeserializerBuilder()
+                      .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                      .Build();
+                    _storeMenus = deserializer.Deserialize<List<StoreMenus>>(readText);
+                }
+
+                return _storeMenus;
             }
         }
         #endregion

@@ -1,6 +1,8 @@
 ﻿using Lol.Data.Store;
 using Lol.ExampleData.Store;
 using Lol.Foundation.Mvvm;
+using Lol.YamlDatabase.Controller;
+using Lol.YamlDatabase.Entites.Schema;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -10,18 +12,18 @@ namespace Lol.Store.Local.ViewModels
     {
         #region Variables
 
-        private List<StoreMenuModel> _champMenus;
+        private List<StoreMenus> _champMenus;
         private List<SortingModel> _sorting;
         private List<FilterModel> _filters;
 
-        private StoreMenuModel _currentChampMenu;
+        private StoreMenus _currentChampMenu;
         private SortingModel _currentSorting;
         private string _searchText;
         #endregion
 
         #region ChampMenus
 
-        public List<StoreMenuModel> ChampMenus
+        public List<StoreMenus> ChampMenus
         {
             get { return _champMenus; }
             set { _champMenus = value; OnPropertyChanged(); }
@@ -30,7 +32,7 @@ namespace Lol.Store.Local.ViewModels
 
         #region CurrentChampMenu
 
-        public StoreMenuModel CurrentChampMenu
+        public StoreMenus CurrentChampMenu
         {
             get { return _currentChampMenu; }
             set { _currentChampMenu = value; OnPropertyChanged(); MenuChanged(value); }
@@ -77,14 +79,14 @@ namespace Lol.Store.Local.ViewModels
 
         public ChampionsViewModel()
         {
-            ChampMenus = ExamStore.GetCategory();
-            CurrentChampMenu = ChampMenus.First();
+            ChampMenus = new StoreApi().GetCategory();
+            //CurrentChampMenu = ChampMenus.First();
         }
         #endregion
 
         #region MenuChanged
 
-        private void MenuChanged(StoreMenuModel value)
+        private void MenuChanged(StoreMenus value)
         {
             Filters = ExamStore.GetFilters(value.Name);
             Sorting = ExamStore.GetSorting(value.Name);
