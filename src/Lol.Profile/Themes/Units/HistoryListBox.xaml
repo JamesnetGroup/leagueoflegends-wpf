@@ -141,7 +141,7 @@
                                     <TextBlock Text="{Binding MapType}" Foreground="{StaticResource FG.DEFAULT}"/>
                                     <StackPanel Orientation="Horizontal" Margin="0 6 0 0">
                                         <TextBlock Text="{Binding GameTime}" Foreground="{StaticResource FG.DEFAULT}"/>
-                                        <TextBlock Text="{Binding StDt, StringFormat={}{0:yyyy/MM/dd}}" Foreground="{StaticResource FG.DEFAULT}" Margin="10 0 0 0"/>
+                                        <TextBlock Text="{Binding Created, StringFormat={}{0:yyyy/MM/dd}}" Foreground="{StaticResource FG.DEFAULT}" Margin="10 0 0 0"/>
                                     </StackPanel>
                                 </StackPanel>
                                 <ctrls:RiotIconButton Grid.Column="5" IconType="Download"/>

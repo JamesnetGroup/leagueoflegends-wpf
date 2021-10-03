@@ -1,0 +1,87 @@
+﻿- seq: 1
+  mapType: 소환사의 협곡
+  gameType: 개인/2인 랭크 게임
+  result: 승리
+  created: '2021-10-03T03:04:00'
+  gameTime: 25:13
+  money: 6633
+  cs: 30
+  k: 0
+  d: 8
+  a: 4
+  level: 18
+  champion: Square,1
+  spell1: Spell,6
+  spell2: Spell,7
+  item1: Items,doranring
+  item2: Items,zhonya
+  item3: Items,ionianshoes
+  item4: Items,rocketbelt
+  item6: Items,rabadon
+  item7: Items,oraclelens
+- seq: 2
+  mapType: 소환사의 협곡
+  gameType: 개인/2인 랭크 게임
+  result: 승리
+  created: '2021-10-03T03:04:00'
+  gameTime: 21:13
+  money: 6633
+  cs: 30
+  k: 3
+  d: 1
+  a: 6
+  level: 9
+  champion: Square,2
+  spell1: Spell,ignite
+  spell2: Spell,7
+  item1: Items,potion2
+  item2: Items,trinityforce
+  item3: Items,thecollector
+  item4: Items,dominik
+  item5: Items,infinityedge
+  item6: Items,ionianshoes
+  item7: Items,ward
+- seq: 3
+  mapType: 소환사의 협곡
+  gameType: 개인/2인 랭크 게임
+  result: 패배
+  created: '2021-10-03T03:04:00'
+  gameTime: 24:13
+  money: 6633
+  cs: 30
+  k: 12
+  d: 1
+  a: 5
+  level: 14
+  champion: Square,3
+  spell1: Spell,ignite
+  spell2: Spell,7
+  item1: Items,potion
+  item2: Items,solari
+  item4: Items,shoes
+  item5: Items,targon
+  item6: Items,shurelya
+  item7: Items,oraclelens
+- seq: 4
+  mapType: 소환사의 협곡
+  gameType: 개인/2인 랭크 게임
+  result: 패배
+  created: '2021-10-03T03:04:00'
+  gameTime: 30:13
+  money: 6633
+  cs: 30
+  k: 8
+  d: 8
+  a: 3
+  level: 7
+  champion: Square,3
+  spell1: Spell,8
+  spell2: Spell,7
+  item1: Items,galeforce
+  item2: Items,thecollector
+  item3: Items,mortalreminder
+  item4: Items,platedshoes
+  item5: Items,cloak
+  item7: Items,oraclelens
+
+
