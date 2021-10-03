@@ -13,11 +13,11 @@ namespace Lol.Store.Local.ViewModels
         #region Variables
 
         private List<StoreChampTypes> _champMenus;
-        private List<SortingModel> _sorting;
+        private List<StoreChampSortings> _sorting;
         private List<FilterModel> _filters;
 
         private StoreChampTypes _currentChampMenu;
-        private SortingModel _currentSorting;
+        private StoreChampSortings _currentSorting;
         private string _searchText;
         #endregion
 
@@ -41,7 +41,7 @@ namespace Lol.Store.Local.ViewModels
 
         #region Sorting
 
-        public List<SortingModel> Sorting
+        public List<StoreChampSortings> Sorting
         {
             get { return _sorting; }
             set { _sorting = value; OnPropertyChanged(); }
@@ -50,7 +50,7 @@ namespace Lol.Store.Local.ViewModels
 
         #region CurrentSorting
 
-        public SortingModel CurrentSorting
+        public StoreChampSortings CurrentSorting
         {
             get { return _currentSorting; }
             set { _currentSorting = value; OnPropertyChanged(); }
@@ -80,7 +80,7 @@ namespace Lol.Store.Local.ViewModels
         public ChampionsViewModel()
         {
             ChampMenus = new StoreApi().GetCategory();
-            //CurrentChampMenu = ChampMenus.First();
+            CurrentChampMenu = ChampMenus.First();
         }
         #endregion
 
@@ -88,8 +88,10 @@ namespace Lol.Store.Local.ViewModels
 
         private void MenuChanged(StoreChampTypes value)
         {
+            string id = value.Name == "BUNDLES" ? value.Name : "STANDARD";
+
             Filters = ExamStore.GetFilters(value.Name);
-            Sorting = ExamStore.GetSorting(value.Name);
+            Sorting = new StoreApi().GetSorting(id);
             CurrentSorting = Sorting.First();
         }
         #endregion
