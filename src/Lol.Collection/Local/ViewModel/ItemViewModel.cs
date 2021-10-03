@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using Lol.ExampleData.Collection;
 using Lol.Foundation.Mvvm;
 using Lol.YamlDatabase.Controller;
 using Lol.YamlDatabase.Entites.Schema;
@@ -38,13 +37,10 @@ namespace Lol.Collection.Local.ViewModel
 
         public ItemViewModel()
         {
-            var item = ExamItemList.GetItemList();
-
-            //_itemLists = item.Select(x => new MyItemListModel(x, Checked)).ToList();
             _itemLists = new ItemApi().GetItems();
-
             ButtonTest = new RelayCommand<object>(Test1, Test2);
         }
+        #endregion
 
         private static string ImgResource(string folder, string name)
         {
@@ -86,7 +82,5 @@ namespace Lol.Collection.Local.ViewModel
         {
             return true;
         }
-        #endregion
-
     }
 }
