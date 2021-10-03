@@ -1,0 +1,25 @@
+﻿- seq: 0
+  activePercent: 10
+  concept: Concepts,warrior
+  conceptName: 전사
+- seq: 1
+  activePercent: 55
+  concept: Concepts,tanker
+  conceptName: 탱커
+- seq: 2
+  activePercent: 32
+  concept: Concepts,wizard
+  conceptName: 마법사
+- seq: 3
+  activePercent: 64
+  concept: Concepts,assassin
+  conceptName: 암살자
+- seq: 4
+  activePercent: 22
+  concept: Concepts,support
+  conceptName: 서포터
+- seq: 5
+  activePercent: 11
+  concept: Concepts,dealer
+  conceptName: 원거리딜러
+

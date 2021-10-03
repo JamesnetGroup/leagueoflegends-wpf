@@ -5,6 +5,11 @@ namespace Lol.ExampleData.History
 {
     public partial class ExamHistory
     {
+        internal static string ImgResource(string folder, string name)
+        {
+            return $"/Lol.Resources;component/Images/{folder}/{name}.png";
+        }
+
         public static List<HistoryModel> GetPlayChampions()
         {
             List<HistoryModel> source = new()
