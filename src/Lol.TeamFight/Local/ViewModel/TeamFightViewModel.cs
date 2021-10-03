@@ -1,6 +1,4 @@
-﻿using Lol.Data.TeamFight;
-using Lol.ExampleData.TeamFight;
-using Lol.Foundation.Mvvm;
+﻿using Lol.Foundation.Mvvm;
 using Lol.YamlDatabase.Controller;
 using Lol.YamlDatabase.Entites.Schema;
 using System.Collections.Generic;
