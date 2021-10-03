@@ -1,5 +1,4 @@
-﻿using Lol.Data.Codes;
-using Lol.Data.Config;
+﻿using Lol.Data.Config;
 using Lol.Data.Setting;
 using Lol.Data.Setting.Clients;
 using Lol.Foundation.Mvvm;
