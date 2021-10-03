@@ -369,9 +369,29 @@ namespace Lol.YamlDatabase.Entites.Statics
         }
         #endregion
 
-        #region StoreMenus
+        #region StoreChampTypes
 
-        internal List<StoreChampSortings> StoreChampTypes
+        internal List<StoreChampTypes> StoreChampTypes
+        {
+            get
+            {
+                if (_storeChampTypes == null)
+                {
+                    string readText = GetYamlData("storeChampTypes");
+                    var deserializer = new DeserializerBuilder()
+                      .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                      .Build();
+                    _storeChampTypes = deserializer.Deserialize<List<StoreChampTypes>>(readText);
+                }
+
+                return _storeChampTypes;
+            }
+        }
+        #endregion
+
+        #region StoreChampTypes
+
+        internal List<StoreChampSortings> StoreChampSortings
         {
             get
             {

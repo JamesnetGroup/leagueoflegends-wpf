@@ -1,6 +1,6 @@
-﻿- seq: 0
+﻿- seq: 1
   name: CHAMPIONS
-- seq: 1
-  name: ETERNALS
 - seq: 2
+  name: ETERNALS
+- seq: 3
   name: BUNDLES
