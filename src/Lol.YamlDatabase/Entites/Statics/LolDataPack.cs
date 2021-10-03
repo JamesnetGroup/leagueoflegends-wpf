@@ -188,7 +188,7 @@ namespace Lol.YamlDatabase.Entites.Statics
             {
                 if (_teamFights == null)
                 {
-                    string readText = GetYamlData("teamfights");
+                    string readText = GetYamlData("teamFights");
 
                     var deserializer = new DeserializerBuilder()
                         .WithNamingConvention(CamelCaseNamingConvention.Instance)

@@ -44,6 +44,9 @@
     <None Update="Datas\skins.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Datas\teamFights.yml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Datas\users.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
