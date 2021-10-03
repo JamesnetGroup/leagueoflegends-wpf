@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lol.YamlDatabase.Entites.Schema
 {
-    public class Historys
+    public class Histories
     {
         public int Seq { get; set; }
         public string GameType { get; set; }

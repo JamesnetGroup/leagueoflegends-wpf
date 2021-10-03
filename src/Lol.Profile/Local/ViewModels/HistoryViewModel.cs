@@ -9,24 +9,24 @@ namespace Lol.Profile.Local.ViewModels
     {
         #region Historys
 
-        public List<Historys> Historys { get; set; }
+        public List<Histories> Historys { get; set; }
         #endregion
 
         #region PlayChampions
 
-        public List<Historys> PlayChampions { get; set; }
+        public List<Histories> PlayChampions { get; set; }
         #endregion
 
         #region Activities
 
-        public List<Historys> Activities { get; set; }
+        public List<Histories> Activities { get; set; }
         #endregion
 
         #region Constructor
 
         public HistoryViewModel()
         {
-            Historys = new HistoryApi().GetHistorys();
+            Historys = new HistoryApi().GetHistories();
             PlayChampions = new HistoryApi().GetPlayChampions();
             Activities = new HistoryApi().GetActivities();
         }
