@@ -4,16 +4,95 @@
                     xmlns:units="clr-namespace:Lol.Collection.UI.Units"
                     xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
 
+    <Style TargetType="{x:Type Border}" x:Key="BDR.TEMP">
+        <Setter Property="BorderThickness" Value="0.5"/>
+        <Setter Property="BorderBrush" Value="#41474E"/>
+        <Setter Property="Width" Value="1000"/>
+        <Setter Property="Margin" Value="35 31 0 0"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+    </Style>
+
+    <Style TargetType="{x:Type TextBlock}" x:Key="TXB.SUB">
+        <Setter Property="Foreground" Value="#C9BA8E"/>
+        <Setter Property="FontSize" Value="19"/>
+        <Setter Property="FontFamily" Value="Friz Quadrata Std"/>
+        <Setter Property="Text" Value="｜"/>
+        <Setter Property="Margin" Value="0 6 0 0"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <Style TargetType="{x:Type TextBlock}" x:Key="TXB.SUB2">
+        <Setter Property="Foreground" Value="#C9BA8E"/>
+        <Setter Property="FontSize" Value="19"/>
+        <Setter Property="FontFamily" Value="Friz Quadrata Std"/>
+        <Setter Property="Text" Value="11"/>
+        <Setter Property="Margin" Value="5 6 5 0"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+    </Style>
+
+    <Style TargetType="{x:Type TextBlock}" x:Key="TXB.SUB3">
+        <Setter Property="Foreground" Value="#272C2B"/>
+        <Setter Property="FontSize" Value="19"/>
+        <Setter Property="FontFamily" Value="Friz Quadrata Std"/>
+        <Setter Property="Text" Value="/"/>
+        <Setter Property="Margin" Value="10 6 10 0"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+    </Style>
+
+    <Style TargetType="{x:Type ctrls:RiotButton}" x:Key="BTN.CREATE">
+        <Setter Property="Width" Value="130"/>
+        <Setter Property="Height" Value="32"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="BorderThickness" Value="2 2 2 2"/>
+        <Setter Property="FontFamily" Value="Friz Quadrata Std"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="Content" Value="새로 만들기"/>
+        <Setter Property="Margin" Value="10 6 0 0"/>
+        <Setter Property="ContentMargin" Value="18 0 18 0"/>
+    </Style>
+
     <Style TargetType="{x:Type views:RuneView}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type views:RuneView}">
                     <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="300"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <TextBlock HorizontalAlignment="Center" Background="White" Foreground="Red" FontSize="20" Text="텍스트" VerticalAlignment="Center"/>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <StackPanel Orientation="Horizontal" Margin="35 60 0 0">
+                            <ctrls:RiotTextBox x:Name="txtSearch" MinWidth="200"
+                                           Height="30"
+                                           HorizontalAlignment="Right"
+                                           PlaceHolder="검색"
+                                           Margin="0 0 20 0"/>
+                            <TextBlock Text="문양들어갈자리" Width="220" Foreground="White" Margin="10 10 20 0"/>
+                            <TextBlock Style="{StaticResource TXB.SUB}"/>
+                            <ctrls:CheckBox01 x:Name="ch" 
+                                                  Grid.Column="0" 
+                                                  IsChecked="False" 
+                                                  VerticalAlignment="Center" 
+                                                  Foreground="#9E998A" 
+                                                  FontWeight="Bold" 
+                                                  Content="기본 설정 페이지 숨기기" 
+                                                  FontSize="12" 
+                                                  Margin="10 0 70 0"
+                                                  />
+                            <TextBlock Style="{StaticResource TXB.SUB2}"/>
+                            <TextBlock Style="{StaticResource TXB.SUB3}"/>
+                            <TextBlock Style="{StaticResource TXB.SUB2}"/>
+                            <ctrls:RiotButton Style="{StaticResource BTN.CREATE}"/>
+                            <units:RecycleBinButton HorizontalAlignment="Right"/>
+                        </StackPanel>
+                        
+                        
+                        
+                        <StackPanel Grid.Row="1">
+                            <Border Style="{StaticResource BDR.TEMP}"/>
+                        </StackPanel>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
