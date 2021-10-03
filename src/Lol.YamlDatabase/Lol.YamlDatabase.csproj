@@ -17,6 +17,12 @@
     <None Update="Datas\activities.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Datas\resolutions.yml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Datas\settingMenus.yml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Datas\clashTierDetails.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

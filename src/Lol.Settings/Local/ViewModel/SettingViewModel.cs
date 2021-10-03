@@ -5,7 +5,6 @@ using Lol.Data.Setting;
 using Lol.Foundation.Mvvm;
 using Lol.Foundation.Riotbase;
 using Lol.Foundation.Riotcore;
-using Lol.ExampleData.Setting;
 using Lol.LayoutSupport.Controls;
 using Lol.Settings.UI.Views;
 using Lol.Settings.Client.UI.Views;
@@ -14,6 +13,8 @@ using Lol.Settings.InGame.UI.Views;
 using Lol.Settings.InGame.Local.ViewModels;
 using Lol.Settings.About.UI.Views;
 using Lol.Settings.About.Local.ViewModels;
+using Lol.YamlDatabase.Controller;
+using Lol.YamlDatabase.Entites.Schema;
 
 namespace Lol.Settings.Local.ViewModel
 {
@@ -23,8 +24,8 @@ namespace Lol.Settings.Local.ViewModel
 
         private readonly Action<IRiotUI> ViewClosed;
         private IRiotUI _currentView;
-        private List<SettingMenuModel> _settingMenus;
-        private SettingMenuModel _currentSettingMenu;
+        private List<SettingMenus> _settingMenus;
+        private SettingMenus _currentSettingMenu;
 
         private readonly AlarmViewModel Alarm;
         private readonly ChatViewModel Chat;
@@ -45,13 +46,13 @@ namespace Lol.Settings.Local.ViewModel
 
         #region Menus
 
-        public List<SettingMenuModel> SettingMenus
+        public List<SettingMenus> SettingMenus
         {
             get => _settingMenus;
             set { _settingMenus = value; OnPropertyChanged(); }
         }
 
-        public SettingMenuModel CurrentSettingMenu
+        public SettingMenus CurrentSettingMenu
         {
             get => _currentSettingMenu;
             set { _currentSettingMenu = value; OnPropertyChanged(); SettingMenuChanged(value); }
@@ -83,14 +84,14 @@ namespace Lol.Settings.Local.ViewModel
             Interface = new InterfaceViewModel();
             Game = new GameViewModel();
 
-            SettingMenus = ExamSettings.GetSettingList();
+            SettingMenus = new SettingsApi().GetSettingMenus();
             CompleteCommand = new RelayCommand<Modal>(CompleteClick);
         }
         #endregion
 
         #region SettingMenuChanged
 
-        private void SettingMenuChanged(SettingMenuModel value)
+        private void SettingMenuChanged(SettingMenus value)
         {
             IRiotUI content;
             int key;
