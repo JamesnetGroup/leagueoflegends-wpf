@@ -1,8 +1,12 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Lol.Data.History
+namespace Lol.YamlDatabase.Entites.Schema
 {
-    public class HistoryModel
+    public class Historys
     {
         public int Seq { get; set; }
         public string GameType { get; set; }
@@ -11,7 +15,7 @@ namespace Lol.Data.History
         public string Spell { get; set; }
         public string Item { get; set; }
         public string Result { get; set; }
-        public DateTime StDt { get; set; }
+        public DateTime Created { get; set; }
         public string GameTime { get; set; }
         public int Money { get; set; }
         public int Cs { get; set; }
@@ -33,4 +37,5 @@ namespace Lol.Data.History
         public string Concept { get; set; }
         public string ConceptName { get; set; }
     }
+
 }

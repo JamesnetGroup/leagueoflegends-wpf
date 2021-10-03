@@ -1,0 +1,10 @@
+﻿- seq: 0
+  champion: Square,1
+  percent: 19%
+- seq: 1
+  champion: Square,2
+  percent: 14%
+- seq: 2
+  champion: Square,3
+  percent: 15%
+

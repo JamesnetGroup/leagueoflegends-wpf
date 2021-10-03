@@ -31,6 +31,9 @@ namespace Lol.YamlDatabase.Entites.Statics
         internal List<TeamFights>? _teamFights;
         internal List<GameRooms>? _gameRooms;
         internal List<ClashCups>? _clashCups;
+        internal List<Historys> _historys;
+        internal List<Historys> _activities;
+        internal List<Historys> _playChampions;
 
         private static string GetYamlData(string table)
         {
@@ -237,6 +240,66 @@ namespace Lol.YamlDatabase.Entites.Statics
                     _clashCups = deserializer.Deserialize<List<ClashCups>>(readText);
                 }
                 return _clashCups;
+            }
+        }
+        #endregion
+
+        #region Historys
+
+        internal List<Historys> Historys
+        {
+            get
+            {
+                if (_historys == null)
+                {
+                    string readText = GetYamlData("historys");
+                    var deserializer = new DeserializerBuilder()
+                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .Build();
+                    _historys = deserializer.Deserialize<List<Historys>>(readText);
+                }
+
+                return _historys;
+            }
+        }
+        #endregion
+
+        #region Activities
+
+        internal List<Historys> Activities
+        {
+            get
+            {
+                if (_activities == null)
+                {
+                    string readText = GetYamlData("activities");
+                    var deserializer = new DeserializerBuilder()
+                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .Build();
+                    _activities = deserializer.Deserialize<List<Historys>>(readText);
+                }
+
+                return _activities;
+            }
+        }
+        #endregion
+
+        #region PlayChampions
+
+        internal List<Historys> PlayChampions
+        {
+            get
+            {
+                if (_playChampions == null)
+                {
+                    string readText = GetYamlData("playChampions");
+                    var deserializer = new DeserializerBuilder()
+                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .Build();
+                    _playChampions = deserializer.Deserialize<List<Historys>>(readText);
+                }
+
+                return _playChampions;
             }
         }
         #endregion
