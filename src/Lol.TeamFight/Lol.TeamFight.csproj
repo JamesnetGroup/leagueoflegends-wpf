@@ -10,6 +10,7 @@
     <ProjectReference Include="..\Lol.ExampleData\Lol.ExampleData.csproj" />
     <ProjectReference Include="..\Lol.Foundation\Lol.Foundation.csproj" />
     <ProjectReference Include="..\Lol.LayoutSupport\Lol.LayoutSupport.csproj" />
+    <ProjectReference Include="..\Lol.YamlDatabase\Lol.YamlDatabase.csproj" />
   </ItemGroup>
 
   <ItemGroup>
