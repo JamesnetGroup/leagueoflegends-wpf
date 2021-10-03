@@ -23,7 +23,7 @@ namespace Lol.YamlDatabase.Controller
 
         public List<StoreChampSortings> GetSorting(string id)
         {
-            var query = from s in Db._storeChampSortings
+            var query = from s in Db.StoreChampSortings
                         where s.Id == id
                         select new StoreChampSortings
                         {
