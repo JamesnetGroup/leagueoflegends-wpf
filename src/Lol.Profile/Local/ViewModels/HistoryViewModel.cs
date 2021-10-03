@@ -21,7 +21,7 @@ namespace Lol.Profile.Local.ViewModels
 
         #region Activities
 
-        public List<HistoryModel> Activities { get; set; }
+        public List<Historys> Activities { get; set; }
         #endregion
 
         #region Constructor
@@ -30,10 +30,10 @@ namespace Lol.Profile.Local.ViewModels
         {
             // yaml 변경완료
             Historys = new HistoryApi().GetHistorys();
+            Activities = new HistoryApi().GetActivities();
 
             // TODO: [Kevin] yaml asd
             PlayChampions = ExamHistory.GetPlayChampions();
-            Activities = ExamHistory.GetActivities();
         }
         #endregion
 

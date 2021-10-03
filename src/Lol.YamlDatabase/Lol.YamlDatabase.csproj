@@ -17,6 +17,9 @@
     <None Update="Datas\historys.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Datas\activities.yml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Datas\mapTypes.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

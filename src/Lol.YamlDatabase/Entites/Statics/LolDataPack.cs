@@ -31,6 +31,7 @@ namespace Lol.YamlDatabase.Entites.Statics
         internal List<TeamFights>? _teamFights;
         internal List<GameRooms>? _gameRooms;
         internal List<Historys> _historys;
+        internal List<Historys> _activities;
 
         private static string GetYamlData(string table)
         {
@@ -221,6 +222,8 @@ namespace Lol.YamlDatabase.Entites.Statics
         }
         #endregion
 
+        #region Historys
+
         internal List<Historys> Historys
         {
             get
@@ -237,5 +240,26 @@ namespace Lol.YamlDatabase.Entites.Statics
                 return _historys;
             }
         }
+        #endregion
+
+        #region Activities
+
+        internal List<Historys> Activities
+        {
+            get
+            {
+                if (_activities == null)
+                {
+                    string readText = GetYamlData("activities");
+                    var deserializer = new DeserializerBuilder()
+                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .Build();
+                    _activities = deserializer.Deserialize<List<Historys>>(readText);
+                }
+
+                return _activities;
+            }
+        }
+        #endregion
     }
 }

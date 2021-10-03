@@ -1,4 +1,4 @@
-﻿- seq: 1
+﻿- seq: 0
   mapType: 소환사의 협곡
   gameType: 개인/2인 랭크 게임
   result: 승리
@@ -19,7 +19,7 @@
   item4: Items,rocketbelt
   item6: Items,rabadon
   item7: Items,oraclelens
-- seq: 2
+- seq: 1
   mapType: 소환사의 협곡
   gameType: 개인/2인 랭크 게임
   result: 승리
@@ -41,7 +41,7 @@
   item5: Items,infinityedge
   item6: Items,ionianshoes
   item7: Items,ward
-- seq: 3
+- seq: 2
   mapType: 소환사의 협곡
   gameType: 개인/2인 랭크 게임
   result: 패배
@@ -62,7 +62,7 @@
   item5: Items,targon
   item6: Items,shurelya
   item7: Items,oraclelens
-- seq: 4
+- seq: 3
   mapType: 소환사의 협곡
   gameType: 개인/2인 랭크 게임
   result: 패배
