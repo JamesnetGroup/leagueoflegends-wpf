@@ -41,7 +41,7 @@
     <None Update="Datas\playChampions.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Datas\Champ.yml">
+    <None Update="Datas\champ.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Datas\storeChampSortings.yml">
