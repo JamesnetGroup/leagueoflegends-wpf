@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using Lol.Foundation.Mvvm;
 using Lol.YamlDatabase.Controller;
 using Lol.YamlDatabase.Entites.Schema;
@@ -75,7 +76,10 @@ namespace Lol.Collection.Local.ViewModel
 
         private void Checked(object value)
         {
-            //ButtonUsed = ItemLists.Any(x => x.IsChecked);
+            ButtonUsed = true;
+            var dd = ItemLists.Where(x => x.IsChecked);
+
+            //ButtonUsed = ItemLists.Where(x => x.IsChecked);
         }
 
         private bool Test2(object obj)

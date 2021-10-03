@@ -10,6 +10,8 @@ namespace Lol.YamlDatabase.Entites.Schema
 
         public string Champ { get; set; }
 
+        public bool IsChecked { get; set; }
+
         public int[] MapTypes { get; set; }
 
         public IEnumerable<MapTypes> MapTypeItems { get; set; }
