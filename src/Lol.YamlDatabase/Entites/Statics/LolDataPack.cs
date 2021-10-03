@@ -37,6 +37,7 @@ namespace Lol.YamlDatabase.Entites.Statics
         internal List<ClashTabs> _clashTabs;
         internal List<ClashTiers> _clashTiers;
         internal List<ClashTierDetails> _clashTierDetails;
+        internal List<StoreMenus> _storeMenus;
 
         private static string GetYamlData(string table)
         {
@@ -363,6 +364,26 @@ namespace Lol.YamlDatabase.Entites.Statics
                 }
 
                 return _playChampions;
+            }
+        }
+        #endregion
+
+        #region StoreMenus
+
+        internal List<StoreMenus> StoreMenus
+        {
+            get
+            {
+                if (_storeMenus == null)
+                {
+                    string readText = GetYamlData("storeMenus");
+                    var deserializer = new DeserializerBuilder()
+                      .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                      .Build();
+                    _storeMenus = deserializer.Deserialize<List<StoreMenus>>(readText);
+                }
+
+                return _storeMenus;
             }
         }
         #endregion
