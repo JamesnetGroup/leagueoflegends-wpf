@@ -10,10 +10,10 @@ namespace Lol.YamlDatabase.Controller
 {
     public class StoreApi : LolDbContext
     {
-        public List<StoreMenus> GetCategory()
+        public List<StoreChampTypes> GetCategory()
         {
-            var query = from s in Db.StoreMenus
-                        select new StoreMenus
+            var query = from s in Db.StoreChampTypes
+                        select new StoreChampTypes
                         {
                             Seq = s.Seq,
                             Name = s.Name,

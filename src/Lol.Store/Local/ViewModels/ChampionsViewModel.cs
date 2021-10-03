@@ -12,18 +12,18 @@ namespace Lol.Store.Local.ViewModels
     {
         #region Variables
 
-        private List<StoreMenus> _champMenus;
+        private List<StoreChampTypes> _champMenus;
         private List<SortingModel> _sorting;
         private List<FilterModel> _filters;
 
-        private StoreMenus _currentChampMenu;
+        private StoreChampTypes _currentChampMenu;
         private SortingModel _currentSorting;
         private string _searchText;
         #endregion
 
         #region ChampMenus
 
-        public List<StoreMenus> ChampMenus
+        public List<StoreChampTypes> ChampMenus
         {
             get { return _champMenus; }
             set { _champMenus = value; OnPropertyChanged(); }
@@ -32,7 +32,7 @@ namespace Lol.Store.Local.ViewModels
 
         #region CurrentChampMenu
 
-        public StoreMenus CurrentChampMenu
+        public StoreChampTypes CurrentChampMenu
         {
             get { return _currentChampMenu; }
             set { _currentChampMenu = value; OnPropertyChanged(); MenuChanged(value); }
@@ -86,7 +86,7 @@ namespace Lol.Store.Local.ViewModels
 
         #region MenuChanged
 
-        private void MenuChanged(StoreMenus value)
+        private void MenuChanged(StoreChampTypes value)
         {
             Filters = ExamStore.GetFilters(value.Name);
             Sorting = ExamStore.GetSorting(value.Name);
