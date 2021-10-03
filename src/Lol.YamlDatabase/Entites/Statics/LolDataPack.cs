@@ -316,7 +316,7 @@ namespace Lol.YamlDatabase.Entites.Statics
             {
                 if (_historys == null)
                 {
-                    string readText = GetYamlData("historys");
+                    string readText = GetYamlData("histories");
                     var deserializer = new DeserializerBuilder()
                         .WithNamingConvention(CamelCaseNamingConvention.Instance)
                         .Build();
