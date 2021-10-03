@@ -3,22 +3,133 @@
   level: 1
   explain: 고귀한 초록색 친구와 함께 제국과 은하를 지배하세요. 패스+로 업그레이드하면 즉시 획득할 수 있습니다.
   isPremium: true
-  mD5: lol-goblin.jpg 
+  mD5: lol-goblin.jpg
   isFree: false
 - seq: 1
   name: 부탁이야
   level: 2
   explain: 살랑꼬리가 원하는 대로 해 줘도 나쁠 거 없잖아요?
   isPremium: false
-  mD5: lol-emoji-beg.jpg 
+  mD5: lol-emoji-beg.jpg
   isFree: true
 - seq: 2
   name: 1성 커튼 콜
   level: 3
   explain: 마지막 한 발로 적을 날려버리세요.
   isPremium: true
-  mD5: lol-curtaincall.jpg 
+  mD5: lol-curtaincall.png
   isFree: false
-
-
-
+- seq: 3
+  name: 별 파편 30개
+  level: 4
+  explain: 별에서 얻은 이 파편으로 꼬마 전설이를 업그레이드하세요!
+  isPremium: true
+  mD5: lol-star-item.jpg 
+  isFree: false
+- seq: 4
+  name: 작은 영웅 알
+  level: 5
+  explain: 작은 영웅 꼬마 전설이 아오 신, 배불뚝이, 크릉이 중 하나가 부화할 수 있습니다.
+  isPremium: true
+  mD5: lol-smallegg.png
+  isFree: false
+- seq: 5
+  name: 1성 칸메이 폭발
+  level: 6
+  explain: 영혼의 불꽃으로 적을 날려버리세요.
+  isPremium: true
+  mD5: lol-kanmei.png
+  isFree: false
+- seq: 6
+  name: 무작위 감정표현
+  level: 7
+  explain: 무작위 감정표현으로 기분을 나타내 보세요!
+  isPremium: false
+  mD5: lol-emoji-random.png
+  isFree: true
+- seq: 7
+  name: 별 파편 30개
+  level: 8
+  explain: 별에서 얻은 이 파편으로 꼬마 전설이를 업그레이드하세요!
+  isPremium: true
+  mD5: lol-star-item.jpg
+  isFree: false
+- seq: 8
+  name: 2성 커튼 콜
+  level: 9
+  explain: 마지막 한 발로 적을 날려버리세요. 유닛들이 함께 발사합니다.
+  isPremium: true
+  mD5: lol-curtaincall2.png
+  isFree: false
+- seq: 9
+  name: 별 파편 30개
+  level: 10
+  explain: 별에서 얻은 이 파편으로 꼬마 전설이를 업그레이드하세요!
+  isPremium: true
+  mD5: lol-star-item.jpg
+  isFree: false
+- seq: 10
+  name: 1성 행운의 꿀렁이
+  level: 11
+  explain: 행운과 미소를 가져다주는 황금색 친구입니다. 휘파람을 불면 반응하기도 하죠.
+  isPremium: true
+  mD5: lol-luckypig.png
+  isFree: false
+- seq: 11
+  name: 꼬마 전설이 알(1~6탄 중 무작위)
+  level: 12
+  explain: 무작위 꼬마 전설이 1~6탄 중 하나가 부화할 수 있습니다.
+  isPremium: false
+  mD5: lol-smallegg.png
+  isFree: true
+- seq: 12
+  name: 3성 커튼 콜
+  level: 13
+  explain: 멋진 마지막 한 발로 적을 날려버리세요. 유닛들이 함께 발사합니다.
+  isPremium: true
+  mD5: lol-luckypig.png
+  isFree: false
+- seq: 13
+  name: 별 파편 30개
+  level: 14
+  explain: 별에서 얻은 이 파편으로 꼬마 전설이를 업그레이드하세요!
+  isPremium: true
+  mD5: lol-luckypig.png
+  isFree: false
+- seq: 14
+  name: 2성 칸메이 폭발
+  level: 15
+  explain: 영혼의 불꽃으로 적을 날려버리세요. 유닛들이 함께 발사합니다.
+  isPremium: true
+  mD5: lol-luckypig.png
+  isFree: false
+- seq: 15
+  name: 무작위 감정표현
+  level: 16
+  explain: 무작위 감정표현으로 기분을 나타내 보세요!
+  isPremium: false
+  mD5: lol-luckypig.png
+  isFree: true
+- seq: 16
+  name: 별 파편 30개
+  level: 17
+  explain: 별에서 얻은 이 파편으로 꼬마 전설이를 업그레이드하세요!
+  isPremium: true
+  mD5: lol-luckypig.png
+  isFree: false
+- seq: 17
+  name: 1성 그림자 낙서
+  level: 18
+  explain: 어두운 물감을 뿌려 적의 품위를 떨어트리세요.
+  isPremium: true
+  mD5: lol-luckypig.png
+  isFree: false
+- seq: 18
+  name: 별 파편 30개
+  level: 19
+  explain: 별에서 얻은 이 파편으로 꼬마 전설이를 업그레이드하세요!
+  isPremium: true
+  mD5: lol-luckypig.png
+  isFree: false
+  
+  
