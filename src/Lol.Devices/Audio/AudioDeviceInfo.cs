@@ -1,12 +1,13 @@
-﻿using Lol.Data.Codes;
+﻿
+using Lol.Data.Codes;
 using NAudio.CoreAudioApi;
 using System.Collections.Generic;
 
-namespace Lol.ExampleData.Setting
+namespace Lol.Devices.Audio
 {
-    public partial class ExamSettings
+    public class AudioDeviceInfo
     {
-        public static List<AudioDevice> GetAudioDeviceList()
+        public List<AudioDevice> GetDevices()
         {
             List<AudioDevice> source = new();
             MMDeviceEnumerator enumerator = new();

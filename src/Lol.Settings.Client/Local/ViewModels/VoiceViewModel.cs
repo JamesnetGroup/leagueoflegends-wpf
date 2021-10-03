@@ -1,6 +1,7 @@
 ﻿using Lol.Data.Codes;
 using Lol.Data.Config;
 using Lol.Data.Setting.Clients;
+using Lol.Devices.Audio;
 using Lol.ExampleData.Setting;
 using Lol.Foundation.Mvvm;
 using Lol.Foundation.Riotbase;
@@ -45,7 +46,7 @@ namespace Lol.Settings.Client.Local.ViewModels
 
         public VoiceViewModel()
         {
-            DeviceList = ExamSettings.GetAudioDeviceList();
+            DeviceList = new AudioDeviceInfo().GetDevices();
             InputMode = new CodesApi().GetCodes("000001");
 
             ConfigModel config = RiotConfig.LoadConfig();
