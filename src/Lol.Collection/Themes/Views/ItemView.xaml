@@ -91,7 +91,7 @@
         </Setter>
     </Style>
 
-    <Style TargetType="{x:Type ctrls:RiotIconButton}" x:Key="bt3">
+    <Style TargetType="{x:Type ctrls:RiotIconButton}">
         <Setter Property="VerticalAlignment" Value="Top"/>
         <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Width" Value="34"/>
@@ -140,14 +140,21 @@
                             <RowDefinition Height="1.13*"/>
                         </Grid.RowDefinitions>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 50 0 0">
-                            <ctrls:RiotIconButton Style="{StaticResource bt1}" IconType="ArrowLowLeft" Margin="0 0 10 0" Width="28" Height="28" IconWidth="16" IconHeight="16" />
-                            <ctrls:RiotIconButton IconType="ArrowTopRight" Margin="0 0 10 0" Width="28" Height="28" IconWidth="16" IconHeight="16"
-                                                  IsEnabled="{Binding ButtonUsed}">
+                            <ctrls:RiotIconButton IconType="ArrowLowLeft" Margin="0 0 10 0" Width="28" Height="28" IconWidth="16" IconHeight="16">
+                                <ctrls:RiotIconButton.ToolTip>
+                                    <ctrls:BasicTooltip ToolTip="아이템 세트 가져오기" />
+                                </ctrls:RiotIconButton.ToolTip>
+                            </ctrls:RiotIconButton>
+                            <ctrls:RiotIconButton IconType="ArrowTopRight" Margin="0 0 10 0" Width="28" Height="28" IconWidth="16" IconHeight="16" IsEnabled="{Binding ButtonUsed}">
                                 <ctrls:RiotIconButton.ToolTip>
                                     <ctrls:BasicTooltip ToolTip="아이템 세트 내보내기"  VerticalOffset="-65" HorizontalOffset="-40"/>
                                 </ctrls:RiotIconButton.ToolTip>
                             </ctrls:RiotIconButton>
-                            <ctrls:RiotIconButton Style="{StaticResource bt3}" IconType="Plus" Margin="0 0 10 0" Width="28" Height="28" IconWidth="16" IconHeight="16" Command="{Binding ButtonTest}"/>
+                            <ctrls:RiotIconButton IconType="Plus" Margin="0 0 10 0" Width="28" Height="28" IconWidth="16" IconHeight="16" Command="{Binding ButtonTest}">
+                                <ctrls:RiotIconButton.ToolTip>
+                                    <ctrls:BasicTooltip ToolTip="빈 세트 생성하기" VerticalOffset="-65" HorizontalOffset="-40"/>
+                                </ctrls:RiotIconButton.ToolTip>
+                            </ctrls:RiotIconButton>
                             <ctrls:RiotTextBox x:Name="txtSearch" MinWidth="300"
                                            Height="30"
                                            HorizontalAlignment="Right"
