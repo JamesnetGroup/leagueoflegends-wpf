@@ -1,6 +1,8 @@
 ﻿using Lol.Data.TeamFight;
 using Lol.ExampleData.TeamFight;
 using Lol.Foundation.Mvvm;
+using Lol.YamlDatabase.Controller;
+using Lol.YamlDatabase.Entites.Schema;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -10,13 +12,13 @@ namespace Lol.TeamFight.Local.ViewModel
     {
         #region Variables
 
-        private List<TeamFightModel> _teamFightItem;
-        private TeamFightModel _currentTeamFightItem;
+        private List<TeamFights> _teamFightItem;
+        private TeamFights _currentTeamFightItem;
         #endregion
 
         #region TeamFightItem
 
-        public List<TeamFightModel> TeamFightItem
+        public List<TeamFights> TeamFightItem
         {
             get { return _teamFightItem; }
             set { _teamFightItem = value; OnPropertyChanged(); }
@@ -25,7 +27,7 @@ namespace Lol.TeamFight.Local.ViewModel
 
         #region CurrentTeamFightItem
 
-        public TeamFightModel CurrentTeamFightItem
+        public TeamFights CurrentTeamFightItem
         {
             get { return _currentTeamFightItem; }
             set { _currentTeamFightItem = value; OnPropertyChanged(); }
@@ -36,7 +38,7 @@ namespace Lol.TeamFight.Local.ViewModel
 
         public TeamFightViewModel()
         {
-            TeamFightItem = ExamTeamFight.GetItems();
+            TeamFightItem = new TeamFightApi().GetTeamFights();
             CurrentTeamFightItem = TeamFightItem.First();
         }
         #endregion
