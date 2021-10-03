@@ -14,6 +14,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Datas\clashTearDetails.yml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Datas\clashTabs.yml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Datas\clashTiers.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
