@@ -1,0 +1,24 @@
+﻿- seq: 0
+  name: 비취 황제 도깨비
+  level: 1
+  explain: 고귀한 초록색 친구와 함께 제국과 은하를 지배하세요. 패스+로 업그레이드하면 즉시 획득할 수 있습니다.
+  isPremium: true
+  mD5: lol-goblin.jpg 
+  isFree: false
+- seq: 1
+  name: 부탁이야
+  level: 2
+  explain: 살랑꼬리가 원하는 대로 해 줘도 나쁠 거 없잖아요?
+  isPremium: false
+  mD5: lol-emoji-beg.jpg 
+  isFree: true
+- seq: 2
+  name: 1성 커튼 콜
+  level: 3
+  explain: 마지막 한 발로 적을 날려버리세요.
+  isPremium: true
+  mD5: lol-curtaincall.jpg 
+  isFree: false
+
+
+
