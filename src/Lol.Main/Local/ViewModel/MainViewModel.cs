@@ -180,6 +180,7 @@ namespace Lol.Main.Local.ViewModel
                     14 => new WinnersView().SetVM(new WinnersViewModel()),
                     16 => new ChampionsView().SetVM(new ChampionsViewModel()),
                     32 => new HistoryView().SetVM(new HistoryViewModel()),
+                    19 => new RuneView().SetVM(new RuneViewModel()),
                     20 => new SpellsView().SetVM(new SpellsViewModel(BackgroundImage)),
                     21 => new ItemView().SetVM(new ItemViewModel()),
                     // TODO: [Elena] 클래스 이름 중복 관련 임시 처리 
