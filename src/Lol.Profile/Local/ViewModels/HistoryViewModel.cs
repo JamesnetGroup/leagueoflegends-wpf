@@ -2,6 +2,8 @@
 using Lol.Data.History;
 using Lol.ExampleData.History;
 using Lol.Foundation.Mvvm;
+using Lol.YamlDatabase.Controller;
+using Lol.YamlDatabase.Entites.Schema;
 
 namespace Lol.Profile.Local.ViewModels
 {
@@ -9,7 +11,7 @@ namespace Lol.Profile.Local.ViewModels
     {
         #region Historys
 
-        public List<HistoryModel> Historys { get; set; }
+        public List<Historys> Historys { get; set; }
         #endregion
 
         #region PlayChampions
@@ -26,7 +28,10 @@ namespace Lol.Profile.Local.ViewModels
 
         public HistoryViewModel()
         {
-            Historys = ExamHistory.GetHistory();
+            // yaml 변경완료
+            Historys = new HistoryApi().GetHistorys();
+
+            // TODO: [Kevin] yaml asd
             PlayChampions = ExamHistory.GetPlayChampions();
             Activities = ExamHistory.GetActivities();
         }

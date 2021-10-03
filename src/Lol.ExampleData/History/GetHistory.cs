@@ -38,7 +38,6 @@ namespace Lol.ExampleData.History
                     Item2 = imgResource("Items", "zhonya"),
                     Item3 = imgResource("Items", "ionianshoes"),
                     Item4 = imgResource("Items", "rocketbelt"),
-                    //Item5 = imgResource("Items", "warmog"),
                     Item6 = imgResource("Items", "rabadon"),
                     Item7 = imgResource("Items", "oraclelens"),
                 },
