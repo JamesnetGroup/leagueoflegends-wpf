@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Lol.Data.History;
-using Lol.ExampleData.History;
 using Lol.Foundation.Mvvm;
+using Lol.YamlDatabase.Controller;
+using Lol.YamlDatabase.Entites.Schema;
 
 namespace Lol.Profile.Local.ViewModels
 {
@@ -9,26 +9,26 @@ namespace Lol.Profile.Local.ViewModels
     {
         #region Historys
 
-        public List<HistoryModel> Historys { get; set; }
+        public List<Historys> Historys { get; set; }
         #endregion
 
         #region PlayChampions
 
-        public List<HistoryModel> PlayChampions { get; set; }
+        public List<Historys> PlayChampions { get; set; }
         #endregion
 
         #region Activities
 
-        public List<HistoryModel> Activities { get; set; }
+        public List<Historys> Activities { get; set; }
         #endregion
 
         #region Constructor
 
         public HistoryViewModel()
         {
-            Historys = ExamHistory.GetHistory();
-            PlayChampions = ExamHistory.GetPlayChampions();
-            Activities = ExamHistory.GetActivities();
+            Historys = new HistoryApi().GetHistorys();
+            PlayChampions = new HistoryApi().GetPlayChampions();
+            Activities = new HistoryApi().GetActivities();
         }
         #endregion
 
