@@ -20,7 +20,8 @@ namespace Lol.YamlDatabase.Controller
                             Seq = i.Seq,
                             Name = i.Name,
                             Champ = i.Champ,
-                            MapTypeItems = Db.MapTypes.Where(y => i.MapTypes.Contains(y.Id))
+                            MapTypeItems = Db.MapTypes.Where(y => i.MapTypes.Contains(y.Id)),
+                            IsChecked = false
                         };
             return query.ToList();
         }

@@ -2,8 +2,56 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:views="clr-namespace:Lol.Collection.UI.Views"
                     xmlns:units="clr-namespace:Lol.Collection.UI.Units"
-                    xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport"
-                    xmlns:tooltip="clr-namespace:System.Diagnostics.CodeAnalysis;assembly=System.Diagnostics.Tools">
+                    xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
+
+    <LinearGradientBrush x:Key="BTN.BDR" StartPoint="0.5, 0" EndPoint="0.5, 1">
+        <GradientStop Color="#B89959" Offset="0"/>
+        <GradientStop Color="#997B44" Offset="0.5"/>
+        <GradientStop Color="#70552A" Offset="1"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="BTN.BDR.OVER" StartPoint="0.5, 0" EndPoint="0.5, 1">
+        <GradientStop Color="#EFC574" Offset="0"/>
+        <GradientStop Color="#BA9652" Offset="0.5"/>
+        <GradientStop Color="#8C6A34" Offset="1"/>
+    </LinearGradientBrush>
+
+    <Style TargetType="{x:Type ctrls:RiotIconButton}" x:Key="bt1">
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Width" Value="34"/>
+        <Setter Property="Height" Value="34"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ctrls:RiotIconButton}">
+                    <Border x:Name="border1"
+                            Width="{TemplateBinding Width}" Height="{TemplateBinding Height}"
+                            CornerRadius="20" Background="#1E2328"  Grid.Column="5" BorderThickness="2.5" Margin="0 0 0 0"
+							BorderBrush="{StaticResource BTN.BDR}">
+                        <Border x:Name="border2" Background="Transparent" BorderBrush="#14171A" BorderThickness="1" CornerRadius="20">
+                            <ctrls:RiotIcon x:Name="icon" Fill="#CDBE91"                                         
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Center"
+                                            IconType="{TemplateBinding IconType}"
+                                            Width="{TemplateBinding IconWidth}"
+                                            Height="{TemplateBinding IconHeight}"/>
+                        </Border>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border1" Property="BorderBrush" Value="{StaticResource BTN.BDR.OVER}"/>
+                            <Setter TargetName="icon" Property="Fill" Value="#FFEDB5"/>
+                            <Setter Property="ToolTip">
+                                <Setter.Value>
+                                    <ctrls:BasicTooltip ToolTip="아이템 세트 내보내기"  VerticalOffset="-65" HorizontalOffset="-40"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
     <Style TargetType="{x:Type views:ItemView}">
         <Setter Property="Template">
@@ -16,19 +64,15 @@
                             <RowDefinition Height="1.13*"/>
                         </Grid.RowDefinitions>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 50 0 0">
-                            <ctrls:RiotIconButton IconType="ArrowLowLeft" Margin="0 0 10 0" Width="28" Height="28" IconWidth="16" IconHeight="16">
+                            <ctrls:RiotIconButton IconType="ArrowLowLeft" Margin="0 0 10 0" Width="28" Height="28" IconWidth="16" IconHeight="16" >
                                 <ctrls:RiotIconButton.ToolTip>
-                                    <ctrls:BasicTooltip ToolTip="아이템 세트 가져오기" VerticalOffset="-65" HorizontalOffset="-40"/>
+                                    <ctrls:BasicTooltip ToolTip="아이템 세트 가져오기"  VerticalOffset="-65" HorizontalOffset="-40"/>
                                 </ctrls:RiotIconButton.ToolTip>
                             </ctrls:RiotIconButton>
-                            <ctrls:RiotIconButton IconType="ArrowTopRight" Margin="0 0 10 0" Width="28" Height="28" IconWidth="16" IconHeight="16" IsEnabled="{Binding ButtonUsed}">
-                                <ctrls:RiotIconButton.ToolTip>
-                                    <ctrls:BasicTooltip ToolTip="아이템 세트 내보내기"  VerticalOffset="-65" HorizontalOffset="-40"/>
-                                </ctrls:RiotIconButton.ToolTip>
-                            </ctrls:RiotIconButton>
+                            <ctrls:RiotIconButton Style="{StaticResource bt1}" IconType="ArrowTopRight" Margin="0 0 10 0" Width="28" Height="28" IconWidth="16" IconHeight="16" IsEnabled="{Binding ButtonUsed}"/>
                             <ctrls:RiotIconButton IconType="Plus" Margin="0 0 10 0" Width="28" Height="28" IconWidth="16" IconHeight="16" Command="{Binding ButtonTest}">
                                 <ctrls:RiotIconButton.ToolTip>
-                                    <ctrls:BasicTooltip ToolTip="빈 세트 생성하기" VerticalOffset="-65" HorizontalOffset="-40"/>
+                                    <ctrls:BasicTooltip ToolTip="빈 세트 생성하기"  VerticalOffset="-65" HorizontalOffset="-40"/>
                                 </ctrls:RiotIconButton.ToolTip>
                             </ctrls:RiotIconButton>
                             <ctrls:RiotTextBox x:Name="txtSearch" MinWidth="300"
