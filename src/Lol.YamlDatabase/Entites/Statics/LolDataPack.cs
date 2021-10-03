@@ -30,6 +30,7 @@ namespace Lol.YamlDatabase.Entites.Statics
         internal List<MapTypes>? _mapTypes;
         internal List<TeamFights>? _teamFights;
         internal List<GameRooms>? _gameRooms;
+        internal List<ClashCups>? _clashCups;
 
         private static string GetYamlData(string table)
         {
@@ -216,6 +217,26 @@ namespace Lol.YamlDatabase.Entites.Statics
                     _gameRooms = deserializer.Deserialize<List<GameRooms>>(readText);
                 }
                 return _gameRooms;
+            }
+        }
+        #endregion
+
+        #region ClashCups
+
+        internal List<ClashCups> ClashCups
+        {
+            get
+            {
+                if (_clashCups == null)
+                {
+                    string readText = GetYamlData("clashCups");
+
+                    var deserializer = new DeserializerBuilder()
+                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .Build();
+                    _clashCups = deserializer.Deserialize<List<ClashCups>>(readText);
+                }
+                return _clashCups;
             }
         }
         #endregion

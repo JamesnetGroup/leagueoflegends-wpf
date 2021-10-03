@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using Lol.Data.Clash;
 using Lol.ExampleData.Clash;
 using Lol.Foundation.Mvvm;
+using Lol.YamlDatabase.Controller;
+using Lol.YamlDatabase.Entites.Schema;
 
 namespace Lol.Clash.Local.ViewModel
 {
@@ -10,8 +12,8 @@ namespace Lol.Clash.Local.ViewModel
     {
         #region Variables
 
-        private List<BaseModel> _cups;
-        private BaseModel _currentCup;
+        private List<ClashCups> _cups;
+        private ClashCups _currentCup;
 
         private List<BaseModel> _timerMenus;
         private BaseModel _currentTierMenu;
@@ -23,7 +25,7 @@ namespace Lol.Clash.Local.ViewModel
 
         #region Cups
 
-        public List<BaseModel> Cups
+        public List<ClashCups> Cups
         {
             get => _cups;
             set { _cups = value; OnPropertyChanged(); }
@@ -32,7 +34,7 @@ namespace Lol.Clash.Local.ViewModel
 
         #region CurrentCup
 
-        public BaseModel CurrentCup
+        public ClashCups CurrentCup
         {
             get => _currentCup;
             set { _currentCup = value; OnPropertyChanged(); CupChanged(); }
@@ -88,7 +90,7 @@ namespace Lol.Clash.Local.ViewModel
 
         public WinnersViewModel()
         {
-            Cups = ExamClash.GetCup();
+            Cups = new ClashCupApi().GetClashCups();
             CurrentCup = Cups.First();
 
             TierMenus = ExamClash.GetTier();
