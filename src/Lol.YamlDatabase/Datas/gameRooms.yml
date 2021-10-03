@@ -1,4 +1,4 @@
-﻿- seq: 1
+﻿- seq: 0
   mapName: 소환사의 협곡
   warType: 5대5
   content: 공격로에서 상대를 격파하고 5:5 팀 전투에 뛰어들어 적 넥서스를 파괴해 보세요.
@@ -6,13 +6,13 @@
     - { name: 비공개 선택} 
     - { name: 개인/2인 랭크 게임} 
     - { name: 자유 랭크 게임, content: 4인 파티로는 참여가 불가능합니다.} 
-- seq: 2
+- seq: 1
   mapName: 무작위 총력전
   warType: 5대5
   content: 얻어붙은 땅, 좁은 다리 위에서 무작위 챔피언 5:5 팀 전투가 벌어집니다. 모든것을 파괴하며 상대 진영으로 진격해 보세요.
   gameTypes: 
     - { name: 무작위 총력전} 
-- seq: 3
+- seq: 2
   mapName: 전략적 팀 전투
   warType: 난투전
   content: 챔피언들로 전략적인 팀을 구성해 결투장으로 진격시키세요. 총 7명의 상대와 겨루오 끝까지 살아남아야 합니다.
@@ -20,7 +20,7 @@
     - { name: 일반} 
     - { name: 랭크} 
     - { name: 초고속 모드} 
-- seq: 4
+- seq: 3
   mapName: U.R.F
   warType: 5대5
   content: U.R.F 모드에서 쉴 새 없이 스킬을 난사해 보세요.
