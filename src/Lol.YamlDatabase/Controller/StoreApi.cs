@@ -20,5 +20,19 @@ namespace Lol.YamlDatabase.Controller
                         };
             return query.ToList();
         }
+
+        public List<StoreChampSortings> GetSorting(string id)
+        {
+            var query = from s in Db._storeChampSortings
+                        where s.Id == id
+                        select new StoreChampSortings
+                        {
+                            Seq = s.Seq,
+                            Id = s.Id,
+                            Name = s.Name,
+                            Option = s.Option
+                        };
+            return query.ToList();
+        }
     }
 }
