@@ -11,6 +11,8 @@ namespace Lol.YamlDatabase.Controller
 {
     public class HistoryApi : LolDbContext
     {
+        #region GetHistorys
+
         public List<Historys> GetHistorys()
         {
             var query = from i in Db.Historys
@@ -42,6 +44,9 @@ namespace Lol.YamlDatabase.Controller
 
             return query.ToList();
         }
+        #endregion
+
+        #region GetActivities
 
         public List<Historys> GetActivities()
         {
@@ -55,5 +60,21 @@ namespace Lol.YamlDatabase.Controller
                         };
             return query.ToList();
         }
+        #endregion
+
+        #region GetPlayChampions
+
+        public List<Historys> GetPlayChampions()
+        {
+            var query = from i in Db.PlayChampions
+                        select new Historys
+                        {
+                            Seq = i.Seq,
+                            Champion = ResourceHelper.ImgResource(i.Champion),
+                            Percent = i.Percent,
+                        };
+            return query.ToList();
+        }
+        #endregion
     }
 }

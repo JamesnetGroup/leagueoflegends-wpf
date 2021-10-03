@@ -14,6 +14,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Datas\playChampions.yml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Datas\historys.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
