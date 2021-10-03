@@ -13,10 +13,10 @@ namespace Lol.YamlDatabase.Controller
     {
         #region GetHistorys
 
-        public List<Historys> GetHistorys()
+        public List<Histories> GetHistories()
         {
             var query = from i in Db.Historys
-                        select new Historys
+                        select new Histories
                         {
                             Seq = i.Seq,
                             MapType = i.MapType,
@@ -48,10 +48,10 @@ namespace Lol.YamlDatabase.Controller
 
         #region GetActivities
 
-        public List<Historys> GetActivities()
+        public List<Histories> GetActivities()
         {
             var query = from i in Db.Activities
-                        select new Historys
+                        select new Histories
                         {
                             Seq = i.Seq,
                             ActivePercent = i.ActivePercent,
@@ -64,10 +64,10 @@ namespace Lol.YamlDatabase.Controller
 
         #region GetPlayChampions
 
-        public List<Historys> GetPlayChampions()
+        public List<Histories> GetPlayChampions()
         {
             var query = from i in Db.PlayChampions
-                        select new Historys
+                        select new Histories
                         {
                             Seq = i.Seq,
                             Champion = ResourceHelper.ImgResource(i.Champion),
