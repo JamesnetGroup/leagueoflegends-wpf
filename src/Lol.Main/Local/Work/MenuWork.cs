@@ -116,6 +116,7 @@ namespace Lol.Main.Local.Work
                 new SubMenuModel(33, 8, "훈련"),
                 new SubMenuModel(34, 8, "사용자 설정 게임 생성"),
                 new SubMenuModel(35, 8, "사용자 설정 게임 참가"),
+                new SubMenuModel(36, 8, ""),
 
             };
             return source;

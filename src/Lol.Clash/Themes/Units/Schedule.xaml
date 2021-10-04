@@ -67,7 +67,7 @@
 				<RowDefinition Height="*"/>
 			</Grid.RowDefinitions>
             <TextBlock Text="다음 토너먼트" Margin="26 15 0 0" Foreground="#F0E6D2" FontWeight="Bold" FontSize="13"/>
-            <!--<units:ScheduleListBox Grid.Row="1"/>-->
+            <units:ScheduleListBox Grid.Row="1"/>
             <!--<StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0 10 0 0" HorizontalAlignment="Left" VerticalAlignment="Top">
                 <Grid>
                     <Path StrokeThickness="1" Stroke="#3A3A3F" Fill="#09151F">
@@ -113,8 +113,7 @@
 							<RowDefinition Height="*"/>
 						</Grid.RowDefinitions>
 						<ListBox Style="{StaticResource LBX.TABS}"/>
-                        <ContentPresenter x:Name="content" Grid.Row="1"/>
-                        <units:ScheduleListBox Grid.Row="1" Margin="0 34 0 0"/>
+                        <ContentPresenter x:Name="content" Grid.Row="1" ContentSource="DataContext"/>
 					</Grid>
 					<ControlTemplate.Triggers>
 						<DataTrigger Binding="{Binding CurrentTab.Seq}" Value="0">

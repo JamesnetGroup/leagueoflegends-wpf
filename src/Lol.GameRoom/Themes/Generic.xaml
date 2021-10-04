@@ -5,5 +5,6 @@
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/MapListBox.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/TrophyButton.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Views/PVPView.xaml"/>
+        <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Views/PVPView.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
