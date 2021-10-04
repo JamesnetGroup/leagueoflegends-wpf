@@ -34,6 +34,7 @@ namespace Lol.YamlDatabase.Entites.Statics
         internal List<ClashTabs> _clashTabs;
         internal List<ClashTiers> _clashTiers;
         internal List<ClashTierDetails> _clashTierDetails;
+        internal List<ClashSchedules> _clashSchedules;
         internal List<StoreChampTypes> _storeChampTypes;
         internal List<StoreChampSortings> _storeChampSortings;
         internal List<SettingMenus> _settingMenus;
@@ -465,6 +466,26 @@ namespace Lol.YamlDatabase.Entites.Statics
                 }
 
                 return _champs;
+            }
+        }
+        #endregion
+
+        #region ClashSchedules
+
+        internal List<ClashSchedules> ClashSchedules
+        {
+            get
+            {
+                if (_clashSchedules == null)
+                {
+                    string readText = GetYamlData("clashSchedules");
+                    var deserializer = new DeserializerBuilder()
+                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .Build();
+                    _clashSchedules = deserializer.Deserialize<List<ClashSchedules>>(readText);
+                }
+
+                return _clashSchedules;
             }
         }
         #endregion
