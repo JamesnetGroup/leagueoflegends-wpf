@@ -5,11 +5,6 @@ namespace Lol.YamlDatabase.Controller
 {
     public class ItemApi : LolDbContext
     {
-        private static string ImgResource(string folder, string name)
-        {
-            return $"/Lol.Resources;component/Images/{folder}/{name}.png";
-        }
-
         public List<Items> GetItems()
         {
             var query = from i in Db.Items
