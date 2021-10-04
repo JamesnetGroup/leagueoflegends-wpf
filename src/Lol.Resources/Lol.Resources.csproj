@@ -221,6 +221,7 @@
     <None Remove="Images\Map\2.png" />
     <None Remove="Images\profile-01.png" />
 	<None Remove="Images\bg-winningteam.png" />
+	<None Remove="Images\Rune\environment.png" />
 	<None Remove="Images\Spell\0.png" />
 	<None Remove="Images\Spell\1.png" />
 	<None Remove="Images\Spell\10.png" />
@@ -371,6 +372,7 @@
     <Resource Include="Images\leona.jpg" />
     <Resource Include="Images\Map\2.png" />
     <Resource Include="Images\Map\1.png" />
+    <Resource Include="Images\Rune\environment.png" />
     <Resource Include="Images\Spell\2.png">
       <CopyToOutputDirectory></CopyToOutputDirectory>
     </Resource>

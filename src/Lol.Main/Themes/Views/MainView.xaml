@@ -138,6 +138,13 @@
                 <Setter TargetName="border" Property="Background" Value="{StaticResource LGB.BG.LEFT}"/>
             </DataTrigger>
 
+            <!--Collection/Runes-->
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.CurrentSeq}" Value="19">
+                <Setter TargetName="img" Property="Source" Value="/Lol.Resources;component/Images/Rune/environment.png"/>
+                <Setter TargetName="border" Property="Background" Value="{StaticResource LGB.BG.LEFT}"/>
+                <Setter TargetName="border" Property="Opacity" Value="0.5"/>
+            </DataTrigger>
+
             <!--Clash-->
             <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.ParentSeq}" Value="2">
                 <Setter TargetName="img" Property="Source" Value="/Lol.Resources;component/Images/bg-winningteam.png"/>
@@ -160,9 +167,12 @@
 
             <!--Store-->
             <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.ParentSeq}" Value="7">
-				<Setter TargetName="border" Property="Background" Value="#070A0B"/>
+                <Setter TargetName="border" Property="Background" Value="#070A0B"/>
             </DataTrigger>
         </DataTemplate.Triggers>
+        
+        
+        
 	</DataTemplate>
 
 	<!-- MainView -->
