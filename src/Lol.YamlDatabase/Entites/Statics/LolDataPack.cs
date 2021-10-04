@@ -39,6 +39,7 @@ namespace Lol.YamlDatabase.Entites.Statics
         internal List<SettingMenus> _settingMenus;
         internal List<Champs> _champs;
         internal List<Resolutions> _resolutions;
+        internal List<Runes> _runes;
 
         private static string GetYamlData(string table)
         {
@@ -465,6 +466,26 @@ namespace Lol.YamlDatabase.Entites.Statics
                 }
 
                 return _champs;
+            }
+        }
+        #endregion
+
+        #region Runes
+
+        internal List<Runes> Runes
+        {
+            get
+            {
+                if (_runes == null)
+                {
+                    string readText = GetYamlData("runes");
+                    var deserializer = new DeserializerBuilder()
+                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .Build();
+                    _runes = deserializer.Deserialize<List<Runes>>(readText);
+                }
+
+                return _runes;
             }
         }
         #endregion
