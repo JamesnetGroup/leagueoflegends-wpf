@@ -12,6 +12,8 @@ namespace Lol.Clash.Local.ViewModel
 
         private List<ClashTabs> _tabs;
         private ClashTabs _currentTab;
+        private List<ClashSchedules> _schedules;
+
         #endregion
 
         #region Tabs
@@ -20,6 +22,15 @@ namespace Lol.Clash.Local.ViewModel
         {
             get => _tabs;
             set { _tabs = value; OnPropertyChanged(); }
+        }
+        #endregion
+
+        #region Schedules
+
+        public List<ClashSchedules> Schedules
+        {
+            get => _schedules;
+            set { _schedules = value; OnPropertyChanged(); }
         }
         #endregion
 
@@ -38,6 +49,8 @@ namespace Lol.Clash.Local.ViewModel
         {
             Tabs = new ClashCupApi().GetClashTabs();
             CurrentTab = Tabs.First();
+
+            Schedules = new ClashCupApi().GetClashSchedules();
         }
         #endregion
     }

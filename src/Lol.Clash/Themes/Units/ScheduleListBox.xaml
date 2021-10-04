@@ -2,35 +2,58 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:units="clr-namespace:Lol.Clash.UI.Units"
                     xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
-    <Style TargetType="{x:Type ListBoxItem}" x:Key="L>I.SCHEDULE">
+    <Style TargetType="{x:Type ListBoxItem}" x:Key="LBXI.SCHEDULE">
+        <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListBoxItem}">
-                    
+                    <Border Padding="35 20 35 20" Background="{TemplateBinding Background}">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Border Height="46" Width="34" Background="#C89B3C" Margin="0 0 32 0" VerticalAlignment="Center"/>
+                            <StackPanel VerticalAlignment="Center" Grid.Column="1">
+                                <TextBlock Text="{Binding Name}" Foreground="#E8DFCC" FontWeight="Bold" FontSize="18"/>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Created, StringFormat={}{0:MM월 dd일 ◇ 오후 HH:mm - }}" Foreground="#5B5A56" FontWeight="Bold" FontSize="15"/>
+                                    <TextBlock Text="{Binding EndDate, StringFormat={}{0:오후 HH:mm}}" Foreground="#5B5A56" FontWeight="Bold" FontSize="15"/>
+                                </StackPanel>
+                            </StackPanel>
+                            <ctrls:RiotButton Grid.Column="2" Content="일정 보기" Width="100" Height="34" FontWeight="Bold" FontSize="14" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#5516232C"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
     
     <Style TargetType="{x:Type units:ScheduleListBox}">
+        <Setter Property="ItemsSource" Value="{Binding Schedules}"/>
         <Setter Property="ItemContainerStyle" Value="{StaticResource LBXI.SCHEDULE}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:ScheduleListBox}">
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition/>
-                        </Grid.RowDefinitions>
-                        <TextBlock Text="다음 토너먼트" Foreground="White" FontWeight="Bold"/>
-                        <ctrls:BasicScroll Grid.Row="1" 
-                                       Margin="0"
+                    <ctrls:BasicScroll Margin="0"
 									   ScrollViewer.VerticalScrollBarVisibility="Auto" 
 									   ScrollViewer.HorizontalScrollBarVisibility="Disabled">
-                            <ItemsPresenter Margin="0 0 15 60"/>
-                        </ctrls:BasicScroll>
-                    </Grid>
+                        <ItemsPresenter/>
+                    </ctrls:BasicScroll>
                 </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="ItemsPanel">
+            <Setter.Value>
+                <ItemsPanelTemplate>
+                    <StackPanel/>
+                </ItemsPanelTemplate>
             </Setter.Value>
         </Setter>
     </Style>

@@ -57,5 +57,19 @@ namespace Lol.YamlDatabase.Controller
 
             return items.ToList();
         }
+
+        public List<ClashSchedules> GetClashSchedules()
+        {
+            var items = from s in Db.ClashSchedules
+                        select new ClashSchedules
+                        {
+                            Seq = s.Seq,
+                            Name = s.Name,
+                            Created = s.Created,
+                            EndDate = s.EndDate,
+                        };
+
+            return items.ToList();
+        }
     }
 }
