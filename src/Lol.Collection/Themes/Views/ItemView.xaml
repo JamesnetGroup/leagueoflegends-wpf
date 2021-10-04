@@ -69,7 +69,7 @@
                                     <ctrls:BasicTooltip ToolTip="아이템 세트 가져오기"  VerticalOffset="-65" HorizontalOffset="-40"/>
                                 </ctrls:RiotIconButton.ToolTip>
                             </ctrls:RiotIconButton>
-                            <ctrls:RiotIconButton Style="{StaticResource bt1}" IconType="ArrowTopRight" Margin="0 0 10 0" Width="28" Height="28" IconWidth="16" IconHeight="16" IsEnabled="{Binding ButtonUsed}"/>
+                            <ctrls:RiotIconButton IconType="ArrowTopRight" Margin="0 0 10 0" Width="28" Height="28" IconWidth="16" IconHeight="16" IsEnabled="{Binding ButtonUsed}"/>
                             <ctrls:RiotIconButton IconType="Plus" Margin="0 0 10 0" Width="28" Height="28" IconWidth="16" IconHeight="16" Command="{Binding ButtonTest}">
                                 <ctrls:RiotIconButton.ToolTip>
                                     <ctrls:BasicTooltip ToolTip="빈 세트 생성하기"  VerticalOffset="-65" HorizontalOffset="-40"/>
