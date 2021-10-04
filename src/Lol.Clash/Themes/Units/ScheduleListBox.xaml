@@ -2,6 +2,32 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:units="clr-namespace:Lol.Clash.UI.Units"
                     xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
+    <Style TargetType="{x:Type ctrls:RiotButton}" x:Key="BTN.SCHEDULE">
+        <Setter Property="Grid.Column" Value="2"/>
+        <Setter Property="Content" Value="일정 보기"/>
+        <Setter Property="Width" Value="100"/>
+        <Setter Property="Height" Value="34"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <Style TargetType="{x:Type ctrls:RiotIcon}" x:Key="ICON.TROPHY">
+        <Setter Property="Height" Value="50"/>
+        <Setter Property="Width" Value="50"/>
+        <Setter Property="Fill" Value="#C89B3C"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="IconType" Value="Trophy"/>
+        <Setter Property="Margin" Value="0 0 32 0"/>
+    </Style>
+
+    <Style TargetType="{x:Type TextBlock}" x:Key="TXB.DATE">
+        <Setter Property="Foreground" Value="#5B5A56"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="FontSize" Value="15"/>
+    </Style>
+    
     <Style TargetType="{x:Type ListBoxItem}" x:Key="LBXI.SCHEDULE">
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="Template">
@@ -14,15 +40,15 @@
                                 <ColumnDefinition Width="Auto"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <Border Height="46" Width="34" Background="#C89B3C" Margin="0 0 32 0" VerticalAlignment="Center"/>
+                            <ctrls:RiotIcon Style="{StaticResource ICON.TROPHY}"/>
                             <StackPanel VerticalAlignment="Center" Grid.Column="1">
                                 <TextBlock Text="{Binding Name}" Foreground="#E8DFCC" FontWeight="Bold" FontSize="18"/>
                                 <StackPanel Orientation="Horizontal">
-                                    <TextBlock Text="{Binding Created, StringFormat={}{0:MM월 dd일 ◇ 오후 HH:mm - }}" Foreground="#5B5A56" FontWeight="Bold" FontSize="15"/>
-                                    <TextBlock Text="{Binding EndDate, StringFormat={}{0:오후 HH:mm}}" Foreground="#5B5A56" FontWeight="Bold" FontSize="15"/>
+                                    <TextBlock Text="{Binding Created, StringFormat={}{0:MM월 dd일 ◇ 오후 HH:mm - }}" Style="{StaticResource TXB.DATE}"/>
+                                    <TextBlock Text="{Binding EndDate, StringFormat={}{0:오후 HH:mm}}" Style="{StaticResource TXB.DATE}"/>
                                 </StackPanel>
                             </StackPanel>
-                            <ctrls:RiotButton Grid.Column="2" Content="일정 보기" Width="100" Height="34" FontWeight="Bold" FontSize="14" HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                            <ctrls:RiotButton Style="{StaticResource BTN.SCHEDULE}"/>
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
