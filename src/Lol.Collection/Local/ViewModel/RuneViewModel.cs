@@ -27,8 +27,6 @@ namespace Lol.Collection.Local.ViewModel
             get => _currentRune;
             set { _currentRune = value; OnPropertyChanged(); RuneChanged(value); }
         }
-
-
         #endregion
 
 

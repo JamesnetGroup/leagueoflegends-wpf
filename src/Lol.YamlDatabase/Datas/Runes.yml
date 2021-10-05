@@ -1,2 +1,12 @@
 ﻿- seq: 0  
-  name: Items,doranring
+  name: Rune,Rune
+- seq: 1
+  name: Rune,precision
+- seq: 2  
+  name: Rune,domination
+- seq: 3  
+  name: Rune,sorcery
+- seq: 4  
+  name: Rune,resolve
+- seq: 5  
+  name: Rune,inspiration
