@@ -15,19 +15,11 @@ using System.Windows.Shapes;
 
 namespace Lol.Collection.UI.Units
 {
-    public class RuneListBox : ListBox
+    public class RuneListBoxItem : ListBoxItem
     {
-        #region DefaultStyleKey
-
-        static RuneListBox()
+        static RuneListBoxItem()
         {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(RuneListBox), new FrameworkPropertyMetadata(typeof(RuneListBox)));
-        }
-        #endregion
-
-        protected override DependencyObject GetContainerForItemOverride()
-        {
-            return new RuneListBoxItem();
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(RuneListBoxItem), new FrameworkPropertyMetadata(typeof(RuneListBoxItem)));
         }
     }
 }
