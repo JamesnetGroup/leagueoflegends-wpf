@@ -74,7 +74,8 @@
 - 스펠
 - TFT
 - 격전
-- 설전
+- 전적
+- 설정
 
 ![image](https://user-images.githubusercontent.com/52397976/124482513-526ba380-dde4-11eb-9b31-c3c1199987b6.png)
 
