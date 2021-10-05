@@ -2,6 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:units="clr-namespace:Lol.GameRoom.UI.Units"
                     xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
+    
     <LinearGradientBrush x:Key="LGB.GEO.OVER" EndPoint="0.5,1" StartPoint="0.5,0">
         <GradientStop Color="#FF1D3B4A" Offset="0"/>
         <GradientStop Color="#FF082734" Offset="1"/>
