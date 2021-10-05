@@ -11,7 +11,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:RuneListBox}">
-                    <Border BorderBrush="White">
+                    <Border>
                         <ItemsPresenter/>
                     </Border>
                 </ControlTemplate>

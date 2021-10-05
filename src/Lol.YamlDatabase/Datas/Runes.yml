@@ -1,12 +1,12 @@
-﻿- seq: 0  
-  name: Rune,Rune
-- seq: 1
+﻿- seq: 1  
+  name: Rune,Runes
+- seq: 2
   name: Rune,precision
-- seq: 2  
-  name: Rune,domination
 - seq: 3  
-  name: Rune,sorcery
+  name: Rune,domination
 - seq: 4  
-  name: Rune,resolve
+  name: Rune,sorcery
 - seq: 5  
+  name: Rune,resolve
+- seq: 6  
   name: Rune,inspiration
