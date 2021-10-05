@@ -5,7 +5,7 @@
 
     <Style TargetType="{x:Type units:RuneListBox}">
         <Setter Property="ItemsSource" Value="{Binding Runes}"/>
-        <!--<Setter Property="SelectedItem" Value="{Binding CurrentRune}"/>-->
+        <Setter Property="SelectedItem" Value="{Binding CurrentRune}"/>
         <Setter Property="HorizontalAlignment" Value="Left"/>
         <Setter Property="VerticalAlignment" Value="Top"/>
         <Setter Property="Template">
