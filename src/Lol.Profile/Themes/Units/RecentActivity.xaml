@@ -29,33 +29,44 @@
     <Style TargetType="{x:Type ListBoxItem}" x:Key="LBXI.ACTIVITY">
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate>
+                <ControlTemplate TargetType="{x:Type ListBoxItem}">
                     <StackPanel>
-                        <ProgressBar Value="{Binding ActivePercent}" Style="{StaticResource PGB.ACTIVITY}">
+                        <ProgressBar Style="{StaticResource PGB.ACTIVITY}"
+                                     Value="{Binding ActivePercent}">
                             <ProgressBar.ToolTip>
-                                <ctrls:BasicTooltip ToolTip="{Binding ConceptName}" Placement="Top" HorizontalOffset="13" VerticalOffset="-3"/>
+                                <ctrls:BasicTooltip ToolTip="{Binding ConceptName}" 
+                                                    Placement="Top" 
+                                                    HorizontalOffset="13" 
+                                                    VerticalOffset="-3"/>
                             </ProgressBar.ToolTip>
                         </ProgressBar>
                         <!-- TODO: [Kevin] 이미지 추후 교체예정 -->
-                        <Image Source="{Binding Concept}" Height="20" Width="20" Margin="0 10 0 0"/>
+                        <Image Source="{Binding Concept}" 
+                               Height="20" 
+                               Width="20" 
+                               Margin="0 10 0 0"/>
                     </StackPanel>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
 
-    <Style TargetType="{x:Type units:RecentActivityListBox}">
+    <Style TargetType="{x:Type units:RecentActivity}">
         <Setter Property="ItemsSource" Value="{Binding Activities}"/>
         <Setter Property="ItemContainerStyle" Value="{StaticResource LBXI.ACTIVITY}"/>
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type units:RecentActivityListBox}">
+                <ControlTemplate TargetType="{x:Type units:RecentActivity}">
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
-                        <TextBlock Text="최근 활동" Foreground="#F0E2BE" FontWeight="Bold" Margin="0 0 0 10" HorizontalAlignment="Center"/>
+                        <TextBlock Text="최근 활동" 
+                                   Foreground="#F0E2BE" 
+                                   FontWeight="Bold" 
+                                   Margin="0 0 0 10" 
+                                   HorizontalAlignment="Center"/>
                         <ItemsPresenter Grid.Row="1"/>
                     </Grid>
                 </ControlTemplate>

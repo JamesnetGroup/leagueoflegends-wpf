@@ -3,14 +3,7 @@
                     xmlns:views="clr-namespace:Lol.Profile.UI.Views"
                     xmlns:units="clr-namespace:Lol.Profile.UI.Units"
                     xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
-    <SolidColorBrush Color="#1E2328" x:Key="BDR.TEMP"/>
 
-    <Style TargetType="{x:Type Border}" x:Key="BORDER.TEMP">
-        <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="BorderBrush" Value="{StaticResource BDR.TEMP}"/>
-        <Setter Property="BorderThickness" Value="0 0.5 0 0"/>
-        <Setter Property="Margin" Value="0 22 0 22"/>
-    </Style>
     <Style TargetType="{x:Type views:HistoryView}">
         <Setter Property="Template">
             <Setter.Value>
@@ -30,11 +23,10 @@
                                 <ColumnDefinition Width="760"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
-                            <units:HistoryListBox/>
+                            <units:GameHistory/>
                             <StackPanel Grid.Column="1" Margin="16 0 0 0">
-                                <units:RecentChampion/>
-                                <Border Style="{StaticResource BORDER.TEMP}"/>
-                                <units:RecentActivityListBox/>
+                                <units:PlayedChampList/>
+                                <units:RecentActivity/>
                             </StackPanel>
                         </Grid>
                     </Grid>
