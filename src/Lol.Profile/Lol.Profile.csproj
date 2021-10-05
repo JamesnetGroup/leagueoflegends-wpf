@@ -17,11 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Page Update="Themes\Units\PlayChampListBox.xaml">
-      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Themes\Units\RecentChampion.xaml">
+    <Page Update="Themes\Units\PlayedChampList.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
