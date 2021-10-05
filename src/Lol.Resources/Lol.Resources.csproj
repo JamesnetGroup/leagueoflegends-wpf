@@ -408,7 +408,7 @@
     <Resource Include="Images\lol-thumb-05.png" />
     <Resource Include="Images\profile-01.png" />
 	<Resource Include="Images\bg-winningteam.png" />
-	<Resource Include="Images\Spell\10.png">
+	<Resource Include="Images\Spell\8.png">
 	  <CopyToOutputDirectory></CopyToOutputDirectory>
 	</Resource>
 	<Resource Include="Images\Spell\9.png">
@@ -417,7 +417,7 @@
 	<Resource Include="Images\Spell\3.png">
 	  <CopyToOutputDirectory></CopyToOutputDirectory>
 	</Resource>
-	<Resource Include="Images\Spell\7.png">
+	<Resource Include="Images\Spell\6.png">
 	  <CopyToOutputDirectory></CopyToOutputDirectory>
 	</Resource>
 	<Resource Include="Images\Spell\0.png">
@@ -430,13 +430,13 @@
 	<Resource Include="Images\Spell\4.png">
 	  <CopyToOutputDirectory></CopyToOutputDirectory>
 	</Resource>
-	<Resource Include="Images\Spell\8.png">
+	<Resource Include="Images\Spell\10.png">
 	  <CopyToOutputDirectory></CopyToOutputDirectory>
 	</Resource>
 	<Resource Include="Images\Spell\5.png">
 	  <CopyToOutputDirectory></CopyToOutputDirectory>
 	</Resource>
-	<Resource Include="Images\Spell\6.png">
+	<Resource Include="Images\Spell\7.png">
 	  <CopyToOutputDirectory></CopyToOutputDirectory>
 	</Resource>
     <Resource Include="Images\Square\0.png" />
