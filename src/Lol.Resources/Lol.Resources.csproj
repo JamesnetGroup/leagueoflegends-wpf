@@ -226,7 +226,6 @@
 	<None Remove="Images\Rune\Inspiration.png" />
 	<None Remove="Images\Rune\Precision.png" />
 	<None Remove="Images\Rune\Resolve.png" />
-	<None Remove="Images\Rune\Rune.png" />
 	<None Remove="Images\Rune\Runes.png" />
 	<None Remove="Images\Rune\Sorcery.png" />
 	<None Remove="Images\Spell\0.png" />
@@ -345,7 +344,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\Rune\Rune.png" />
     <Resource Include="Images\Rune\Runes.png" />
     <Resource Include="Images\Rune\Sorcery.png" />
   </ItemGroup>

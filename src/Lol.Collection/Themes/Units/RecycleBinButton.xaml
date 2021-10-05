@@ -36,7 +36,7 @@
 
     <Style TargetType="{x:Type Border}" x:Key="BDR.OFF">
         <Setter Property="Width" Value="38"/>
-        <Setter Property="Height" Value="20"/>
+        <Setter Property="Height" Value="22"/>
         <Setter Property="CornerRadius" Value="8"/>
         <Setter Property="Background" Value="{StaticResource TGL.OFF.BG}"/>
         <Setter Property="BorderBrush" Value="{StaticResource TGL.BDR}"/>
@@ -46,7 +46,7 @@
 
     <Style TargetType="{x:Type Border}" x:Key="BDR.THUMB">
         <Setter Property="Width" Value="26"/>
-        <Setter Property="Height" Value="26"/>
+        <Setter Property="Height" Value="28"/>
         <Setter Property="Background" Value="#1E2328"/>
         <Setter Property="BorderBrush" Value="{StaticResource THUMB.BDR}"/>
         <Setter Property="BorderThickness" Value="2 2 2 2"/>
@@ -89,7 +89,7 @@
                             <ctrls:RiotIcon Width="13" Height="13" Fill="#20432A" IconType="Check" Margin="3 0 0 0"/>
                         </Border>
                         <Border x:Name="Thumb" Style="{StaticResource BDR.THUMB}">
-                            <ctrls:RiotIcon x:Name="icon" Fill="#CDBE91" Width="15" Height="15" HorizontalAlignment="Center" IconType="AccountSupervisor"/>
+                            <ctrls:RiotIcon x:Name="icon" Fill="#CDBE91" Width="20" Height="20" HorizontalAlignment="Center" IconType="Trash"/>
                             <Border.RenderTransform>
                                 <TransformGroup>
                                     <TranslateTransform X="0" Y="0"/>

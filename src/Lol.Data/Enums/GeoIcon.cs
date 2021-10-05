@@ -56,6 +56,7 @@
         Download,
         ArrowLowLeft,
         Trophy,
-        More
+        More,
+        Trash
     }
 }
