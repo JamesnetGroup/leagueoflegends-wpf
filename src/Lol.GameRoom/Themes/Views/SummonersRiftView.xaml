@@ -5,9 +5,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type views:SummonersRiftView}">
-                    <Border Background="{TemplateBinding Background}"
-                            BorderBrush="{TemplateBinding BorderBrush}"
-                            BorderThickness="{TemplateBinding BorderThickness}">
+                    <Border>
+                        <TextBlock Text="테스트" FontSize="30" Foreground="GreenYellow" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
