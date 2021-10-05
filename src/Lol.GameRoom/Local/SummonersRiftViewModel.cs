@@ -1,5 +1,4 @@
 ﻿using Lol.Foundation.Mvvm;
-using System;
 
 namespace Lol.GameRoom.Local
 {

@@ -1,12 +1,18 @@
 ﻿- seq: 1  
   name: Rune,Runes
+  test: Rune,RUNETEST
 - seq: 2
   name: Rune,precision
+  test: Rune,RUNETEST
 - seq: 3  
   name: Rune,domination
+  test: Rune,RUNETEST
 - seq: 4  
   name: Rune,sorcery
+  test: Rune,RUNETEST
 - seq: 5  
   name: Rune,resolve
+  test: Rune,RUNETEST
 - seq: 6  
   name: Rune,inspiration
+  test: Rune,RUNETEST

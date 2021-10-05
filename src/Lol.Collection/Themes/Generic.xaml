@@ -2,7 +2,9 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/RecycleBinButton.xaml"/>
+        <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/RuneDetailListBoxItem.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/RuneListBoxItem.xaml"/>
+        <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/RuneDetailListBox.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/RuneListBox.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Views/RuneView.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/SpellInfo.xaml"/>
