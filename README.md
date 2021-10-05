@@ -70,6 +70,11 @@
 <br />
 
 ## 스크린샷 
+- 메인
+-
+-
+-
+
 
 ![image](https://user-images.githubusercontent.com/52397976/124482513-526ba380-dde4-11eb-9b31-c3c1199987b6.png)
 
