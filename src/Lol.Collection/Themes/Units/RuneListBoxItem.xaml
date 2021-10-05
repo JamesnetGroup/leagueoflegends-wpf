@@ -8,7 +8,7 @@
         <Setter Property="Width" Value="35"/>
         <Setter Property="BorderThickness" Value="0 1 1 1"/>
         <Setter Property="Margin" Value="0 0 7 0"/>
-        
+        <Setter Property="Opacity" Value="0.7"/>
     </Style>
 
     <Style TargetType="{x:Type units:RuneListBoxItem}">
@@ -17,11 +17,15 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:RuneListBoxItem}">
                     <StackPanel Orientation="Horizontal">
-                        <Border Style="{StaticResource BDR.ITEM.01}">
+                        <Border x:Name="bd" Style="{StaticResource BDR.ITEM.01}">
                             <Image Source="{Binding Name}"/>
                         </Border>
                     </StackPanel>
-
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="bd" Property="Opacity" Value="1.0"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
