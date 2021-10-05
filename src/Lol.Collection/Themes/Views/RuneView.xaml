@@ -29,27 +29,30 @@
         <Setter Property="Text" Value="11"/>
         <Setter Property="Margin" Value="5 6 5 0"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
     </Style>
 
     <Style TargetType="{x:Type TextBlock}" x:Key="TXB.SUB3">
-        <Setter Property="Foreground" Value="#272C2B"/>
+        <Setter Property="Foreground" Value="#020D16"/>
         <Setter Property="FontSize" Value="19"/>
         <Setter Property="FontFamily" Value="Friz Quadrata Std"/>
         <Setter Property="Text" Value="/"/>
-        <Setter Property="Margin" Value="10 6 10 0"/>
+        <Setter Property="Margin" Value="5 6 8 0"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
     </Style>
 
     <Style TargetType="{x:Type ctrls:RiotButton}" x:Key="BTN.CREATE">
-        <Setter Property="Width" Value="130"/>
+        <Setter Property="Width" Value="115"/>
         <Setter Property="Height" Value="32"/>
         <Setter Property="FontSize" Value="14"/>
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="BorderThickness" Value="2 2 2 2"/>
         <Setter Property="FontFamily" Value="Friz Quadrata Std"/>
-        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="Content" Value="새로 만들기"/>
-        <Setter Property="Margin" Value="10 6 0 0"/>
+        <Setter Property="Margin" Value="20 6 0 0"/>
         <Setter Property="ContentMargin" Value="18 0 18 0"/>
     </Style>
 
@@ -64,12 +67,12 @@
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
                         <StackPanel Orientation="Horizontal" Margin="35 60 0 0">
-                            <ctrls:RiotTextBox x:Name="txtSearch" MinWidth="200"
+                            <ctrls:RiotTextBox x:Name="txtSearch" MinWidth="195"
                                            Height="30"
                                            HorizontalAlignment="Right"
                                            PlaceHolder="검색"
-                                           Margin="0 0 20 0"/>
-                            <units:RuneListBox x:Name="lbx" Margin="10"/>
+                                           Margin="0 0 15 0"/>
+                            <units:RuneListBox x:Name="lbx" Margin="0 0 2 0" />
                             <TextBlock Style="{StaticResource TXB.SUB}"/>
                             <ctrls:CheckBox01 x:Name="ch" 
                                                   Grid.Column="0" 
@@ -79,7 +82,7 @@
                                                   FontWeight="Bold" 
                                                   Content="기본 설정 페이지 숨기기" 
                                                   FontSize="12" 
-                                                  Margin="10 0 70 0"
+                                                  Margin="10 0 80 0"
                                                   />
                             <TextBlock Style="{StaticResource TXB.SUB2}"/>
                             <TextBlock Style="{StaticResource TXB.SUB3}"/>
