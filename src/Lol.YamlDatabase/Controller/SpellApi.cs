@@ -12,6 +12,7 @@ namespace Lol.YamlDatabase.Controller
                         {
                             Seq = s.Seq,
                             Name = s.Name,
+                            DisplayName = s.DisplayName,
                             Content = s.Content,
                             PlayTypeItems = Db.PlayTypes.Where(y => s.PlayTypes.Contains(y.Id)),
                             Delay = s.Delay,

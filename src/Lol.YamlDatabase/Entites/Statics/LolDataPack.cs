@@ -119,7 +119,7 @@ namespace Lol.YamlDatabase.Entites.Statics
             {
                 if (_spells == null)
                 {
-                    string readText = GetYamlData("spells");
+                    string readText = GetYamlData("spells-en");
 
                     var deserializer = new DeserializerBuilder()
                         .WithNamingConvention(CamelCaseNamingConvention.Instance)
