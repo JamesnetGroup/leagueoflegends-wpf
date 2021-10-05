@@ -4,14 +4,14 @@
                     xmlns:cnvts="clr-namespace:Lol.Converter;assembly=Lol.Converter">
 
     <Style TargetType="{x:Type units:RuneListBox}">
-        <Setter Property="ItemsSource" Value="{Binding Spells}"/>
-        <Setter Property="SelectedItem" Value="{Binding CurrentSpell}"/>
+        <Setter Property="ItemsSource" Value="{Binding Runes}"/>
+        <!--<Setter Property="SelectedItem" Value="{Binding CurrentRune}"/>-->
         <Setter Property="HorizontalAlignment" Value="Left"/>
         <Setter Property="VerticalAlignment" Value="Top"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:RuneListBox}">
-                    <Border>
+                    <Border BorderBrush="White">
                         <ItemsPresenter/>
                     </Border>
                 </ControlTemplate>

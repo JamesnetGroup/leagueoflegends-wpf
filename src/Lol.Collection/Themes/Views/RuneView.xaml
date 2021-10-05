@@ -69,7 +69,7 @@
                                            HorizontalAlignment="Right"
                                            PlaceHolder="검색"
                                            Margin="0 0 20 0"/>
-                            <TextBlock Text="문양들어갈자리" Width="220" Foreground="White" Margin="10 10 20 0"/>
+                            <units:RuneListBox x:Name="lbx" Margin="10"/>
                             <TextBlock Style="{StaticResource TXB.SUB}"/>
                             <ctrls:CheckBox01 x:Name="ch" 
                                                   Grid.Column="0" 

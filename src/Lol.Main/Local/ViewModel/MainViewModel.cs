@@ -48,7 +48,6 @@ namespace Lol.Main.Local.ViewModel
         private FriendsCollection _friends;
         private int _currentSeq;
         private int _parentSeq;
-        private PVPViewModel _pvpViewModel;
 
         private Image BackgroundImage;
 
@@ -144,9 +143,6 @@ namespace Lol.Main.Local.ViewModel
             ModalCommand = new RelayCommand<Type>(_modalWork.SwitchModal);
             GameCommand = new RelayCommand<Type>(_gameWork.OpenGameRoom);
 
-            if (_pvpViewModel != null)
-                _pvpViewModel.CreateButtonClicked += _pvpViewModel_CreateButtonClicked;
-
             MainMenu = new(MenuSelected);
             Options = new();
 
@@ -189,7 +185,7 @@ namespace Lol.Main.Local.ViewModel
                     21 => new ItemView().SetVM(new ItemViewModel()),
                     // TODO: [Elena] 클래스 이름 중복 관련 임시 처리 
                     26 => new store.ChampionsView().SetVM(new storeVM.ChampionsViewModel()),
-                    31 => new PVPView().SetVM(_pvpViewModel = new PVPViewModel()),
+                    31 => new PVPView().SetVM(new PVPViewModel()),
                     36 => new SummonersRiftView().SetVM(new SummonersRiftViewModel()),
                     _ => new EmptyContent()
                 };
@@ -228,13 +224,6 @@ namespace Lol.Main.Local.ViewModel
             {
                 BackgroundImage = win.BackgroundImage;
             }
-        }
-        #endregion
-
-        #region CreateButtonClicked
-
-        private void _pvpViewModel_CreateButtonClicked(object sender, EventArgs e)
-        {
         }
         #endregion
     }
