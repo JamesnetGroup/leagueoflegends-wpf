@@ -8,7 +8,7 @@
         <Setter Property="Width" Value="35"/>
         <Setter Property="BorderThickness" Value="0 1 1 1"/>
         <Setter Property="Margin" Value="0 0 0 0"/>
-        <Setter Property="BorderBrush" Value="#443114"/>
+        
     </Style>
 
     <Style TargetType="{x:Type units:RuneListBoxItem}">
@@ -18,7 +18,7 @@
                 <ControlTemplate TargetType="{x:Type units:RuneListBoxItem}">
                     <StackPanel Orientation="Horizontal">
                         <Border Style="{StaticResource BDR.ITEM.01}">
-                            <Image Source="{Binding Name}" />
+                            <Image Source="{Binding Name}"/>
                         </Border>
                     </StackPanel>
 

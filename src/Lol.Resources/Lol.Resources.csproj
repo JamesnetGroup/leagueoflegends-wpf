@@ -221,13 +221,14 @@
     <None Remove="Images\Map\2.png" />
     <None Remove="Images\profile-01.png" />
 	<None Remove="Images\bg-winningteam.png" />
-	<None Remove="Images\Rune\domination.png" />
+	<None Remove="Images\Rune\Domination.png" />
 	<None Remove="Images\Rune\environment.png" />
-	<None Remove="Images\Rune\inspiration.png" />
-	<None Remove="Images\Rune\precision.png" />
-	<None Remove="Images\Rune\resolve.png" />
+	<None Remove="Images\Rune\Inspiration.png" />
+	<None Remove="Images\Rune\Precision.png" />
+	<None Remove="Images\Rune\Resolve.png" />
 	<None Remove="Images\Rune\Rune.png" />
-	<None Remove="Images\Rune\sorcery.png" />
+	<None Remove="Images\Rune\Runes.png" />
+	<None Remove="Images\Rune\Sorcery.png" />
 	<None Remove="Images\Spell\0.png" />
 	<None Remove="Images\Spell\1.png" />
 	<None Remove="Images\Spell\10.png" />
@@ -344,11 +345,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\Rune\inspiration.png" />
+    <Resource Include="Images\Rune\Rune.png" />
+    <Resource Include="Images\Rune\Runes.png" />
+    <Resource Include="Images\Rune\Sorcery.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\Rune\domination.png" />
+    <Resource Include="Images\Rune\Domination.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -387,10 +390,9 @@
     <Resource Include="Images\Map\2.png" />
     <Resource Include="Images\Map\1.png" />
     <Resource Include="Images\Rune\environment.png" />
-    <Resource Include="Images\Rune\precision.png" />
-    <Resource Include="Images\Rune\resolve.png" />
-    <Resource Include="Images\Rune\Rune.png" />
-    <Resource Include="Images\Rune\sorcery.png" />
+    <Resource Include="Images\Rune\Inspiration.png" />
+    <Resource Include="Images\Rune\Precision.png" />
+    <Resource Include="Images\Rune\Resolve.png" />
     <Resource Include="Images\Spell\2.png">
       <CopyToOutputDirectory></CopyToOutputDirectory>
     </Resource>
