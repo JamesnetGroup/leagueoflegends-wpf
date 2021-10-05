@@ -3,12 +3,13 @@ using Lol.YamlDatabase.Controller;
 using Lol.YamlDatabase.Entites.Schema;
 using System;
 using System.Collections.Generic;
+using System.Windows;
 
 namespace Lol.GameRoom.Local
 {
     public class PVPViewModel : ObservableObject
     {
-        public Action CreateButtonClicked;
+        public event EventHandler CreateButtonClicked;
         private GameRooms _currentPVP;
         public List<GameRooms> PVPs { get; set; }
         public RelayCommand<object> ButtonRoomCreate { get; set; }
@@ -34,7 +35,8 @@ namespace Lol.GameRoom.Local
 
         private void ButtonRoomCreateCmd(object obj)
         {
-            CreateButtonClicked = OnCloseButtonClicked;
+            RoutedEventArgs a = new RoutedEventArgs();
+            OnCloseButtonClicked(a);
         }
 
         private bool CanButtonRoomCreateCmd(object obj)
@@ -42,9 +44,9 @@ namespace Lol.GameRoom.Local
             return true;
         }
 
-        protected virtual void OnCloseButtonClicked()
+        protected virtual void OnCloseButtonClicked(EventArgs e)
         {
-            CreateButtonClicked?.Invoke();
+            CreateButtonClicked?.Invoke(this, e);
         }
     }
 }

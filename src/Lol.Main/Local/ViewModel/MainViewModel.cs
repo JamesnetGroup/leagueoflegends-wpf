@@ -231,7 +231,7 @@ namespace Lol.Main.Local.ViewModel
         }
         #endregion
 
-        private void _pvpViewModel_CreateButtonClicked()
+        private void _pvpViewModel_CreateButtonClicked(object obj, EventArgs e)
         {
         }
     }
