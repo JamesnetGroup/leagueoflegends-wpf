@@ -28,9 +28,9 @@ namespace Lol.YamlDatabase.Entites.Statics
         internal List<TeamFights>? _teamFights;
         internal List<GameRooms>? _gameRooms;
         internal List<ClashCups>? _clashCups;
-        internal List<Histories> _historys;
-        internal List<Histories> _activities;
-        internal List<Histories> _playChampions;
+        internal List<History> _historys;
+        internal List<History> _activities;
+        internal List<History> _playChampions;
         internal List<ClashTabs> _clashTabs;
         internal List<ClashTiers> _clashTiers;
         internal List<ClashTierDetails> _clashTierDetails;
@@ -119,7 +119,7 @@ namespace Lol.YamlDatabase.Entites.Statics
             {
                 if (_spells == null)
                 {
-                    string readText = GetYamlData("spells");
+                    string readText = GetYamlData("spells-en");
 
                     var deserializer = new DeserializerBuilder()
                         .WithNamingConvention(CamelCaseNamingConvention.Instance)
@@ -313,7 +313,7 @@ namespace Lol.YamlDatabase.Entites.Statics
 
         #region Historys
 
-        internal List<Histories> Historys
+        internal List<History> History
         {
             get
             {
@@ -323,7 +323,7 @@ namespace Lol.YamlDatabase.Entites.Statics
                     var deserializer = new DeserializerBuilder()
                         .WithNamingConvention(CamelCaseNamingConvention.Instance)
                         .Build();
-                    _historys = deserializer.Deserialize<List<Histories>>(readText);
+                    _historys = deserializer.Deserialize<List<History>>(readText);
                 }
 
                 return _historys;
@@ -333,7 +333,7 @@ namespace Lol.YamlDatabase.Entites.Statics
 
         #region Activities
 
-        internal List<Histories> Activities
+        internal List<History> Activities
         {
             get
             {
@@ -343,7 +343,7 @@ namespace Lol.YamlDatabase.Entites.Statics
                     var deserializer = new DeserializerBuilder()
                         .WithNamingConvention(CamelCaseNamingConvention.Instance)
                         .Build();
-                    _activities = deserializer.Deserialize<List<Histories>>(readText);
+                    _activities = deserializer.Deserialize<List<History>>(readText);
                 }
 
                 return _activities;
@@ -353,7 +353,7 @@ namespace Lol.YamlDatabase.Entites.Statics
 
         #region PlayChampions
 
-        internal List<Histories> PlayChampions
+        internal List<History> PlayChampions
         {
             get
             {
@@ -363,7 +363,7 @@ namespace Lol.YamlDatabase.Entites.Statics
                     var deserializer = new DeserializerBuilder()
                         .WithNamingConvention(CamelCaseNamingConvention.Instance)
                         .Build();
-                    _playChampions = deserializer.Deserialize<List<Histories>>(readText);
+                    _playChampions = deserializer.Deserialize<List<History>>(readText);
                 }
 
                 return _playChampions;

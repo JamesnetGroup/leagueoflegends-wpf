@@ -65,24 +65,43 @@
 **리그오브레전드 WPF**는 클래식 **RDB** 대신 **YAML**을 데이터베이스로 사용하고 있습니다.
 
 > YAML은 JSON과 함께 널리 사용되는 데이터 양식입니다.  
-> 이 기술에 대한 내용은 **[The Easiest Yaml](https://github.com/devncore/the-easiest-yaml)** 에서 더 자세히 학습할 수 있습니다.
+> 이 기술에 대한 내용은 **[The Easiest Yaml](https://github.com/devncore/the-easiest-yaml)** 에서 더 자세히 학습할 수 있습니다.  
 
 <br />
 
 ## 스크린샷 
 
+### `Home`
 ![image](https://user-images.githubusercontent.com/52397976/124482513-526ba380-dde4-11eb-9b31-c3c1199987b6.png)
 
+<br />
+
+### `TFT`
 ![image](https://user-images.githubusercontent.com/52397976/133445360-29ced456-994a-4f10-a669-0355bd1dee00.png)
 
+<br />
+
+### `Setting`
 ![image](https://user-images.githubusercontent.com/74305823/126187790-d6d3332e-694c-4318-b556-66e1df34a4be.png)
 
+<br />
+
+### `Clash`
+![image](https://user-images.githubusercontent.com/68521148/135798131-1b1d8281-5f07-4012-9863-9feb97beea62.PNG)
 ![image](https://user-images.githubusercontent.com/52397976/133266434-97659a57-284d-4207-bfab-ac2684c16f04.png)
 
-![image](https://user-images.githubusercontent.com/52397976/133893151-4abdc7bb-db3f-448e-ab2f-e134674768a2.png)
+<br />
 
-![image](https://user-images.githubusercontent.com/68521148/134799432-efb2715e-f0ca-465e-b0b6-7d446f65b13e.PNG)
+### `Spell`
+![image](https://user-images.githubusercontent.com/74305823/136051245-cd0d9c3f-507e-4e0f-b659-1a1253d3db74.png)
 
+<br />
+
+### `Profile`
+![image](https://user-images.githubusercontent.com/74305823/136051365-b82be44d-318d-4ac4-81cc-02ba6c306776.png)
+
+<br />
+
+### `Game`
 ![image](https://user-images.githubusercontent.com/68521148/135717017-87970f9f-f260-42c0-8f07-58f10bf2725d.PNG)
 
-![image](https://user-images.githubusercontent.com/68521148/135798131-1b1d8281-5f07-4012-9863-9feb97beea62.PNG)

@@ -6,12 +6,12 @@ namespace Lol.YamlDatabase.Controller
 {
     public class HistoryApi : LolDbContext
     {
-        #region GetHistorys
+        #region GetHistories
 
-        public List<Histories> GetHistories()
+        public List<History> GetHistory()
         {
-            var query = from i in Db.Historys
-                        select new Histories
+            var query = from i in Db.History
+                        select new History
                         {
                             Seq = i.Seq,
                             MapType = i.MapType,
@@ -19,6 +19,7 @@ namespace Lol.YamlDatabase.Controller
                             Result = i.Result,
                             Created = i.Created,
                             GameTime = i.GameTime,
+                            GameDate = i.GameDate,
                             Money = i.Money,
                             Cs = i.Cs,
                             K = i.K,
@@ -43,10 +44,10 @@ namespace Lol.YamlDatabase.Controller
 
         #region GetActivities
 
-        public List<Histories> GetActivities()
+        public List<History> GetActivities()
         {
             var query = from i in Db.Activities
-                        select new Histories
+                        select new History
                         {
                             Seq = i.Seq,
                             ActivePercent = i.ActivePercent,
@@ -59,10 +60,10 @@ namespace Lol.YamlDatabase.Controller
 
         #region GetPlayChampions
 
-        public List<Histories> GetPlayChampions()
+        public List<History> GetPlayChampions()
         {
             var query = from i in Db.PlayChampions
-                        select new Histories
+                        select new History
                         {
                             Seq = i.Seq,
                             Champion = ResourceHelper.ImgResource(i.Champion),
