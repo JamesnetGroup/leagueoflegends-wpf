@@ -221,12 +221,14 @@
     <None Remove="Images\Map\2.png" />
     <None Remove="Images\profile-01.png" />
 	<None Remove="Images\bg-winningteam.png" />
+	<None Remove="Images\Rune\asdf.png" />
 	<None Remove="Images\Rune\Domination.png" />
 	<None Remove="Images\Rune\environment.png" />
 	<None Remove="Images\Rune\Inspiration.png" />
 	<None Remove="Images\Rune\Precision.png" />
 	<None Remove="Images\Rune\Resolve.png" />
 	<None Remove="Images\Rune\Runes.png" />
+	<None Remove="Images\Rune\RUNETEST.png" />
 	<None Remove="Images\Rune\Sorcery.png" />
 	<None Remove="Images\Spell\0.png" />
 	<None Remove="Images\Spell\1.png" />
@@ -344,7 +346,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\Rune\asdf.png" />
     <Resource Include="Images\Rune\Runes.png" />
+    <Resource Include="Images\Rune\RUNETEST.png" />
     <Resource Include="Images\Rune\Sorcery.png" />
   </ItemGroup>
 

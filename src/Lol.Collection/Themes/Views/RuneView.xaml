@@ -63,7 +63,7 @@
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="auto"/>
-                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="auto"/>
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
                         <StackPanel Orientation="Horizontal" Margin="35 60 0 0">
@@ -90,12 +90,10 @@
                             <ctrls:RiotButton Style="{StaticResource BTN.CREATE}"/>
                             <units:RecycleBinButton HorizontalAlignment="Right"/>
                         </StackPanel>
-                        
-                        
-                        
                         <StackPanel Grid.Row="1">
                             <Border Style="{StaticResource BDR.TEMP}"/>
                         </StackPanel>
+                        <units:RuneDetailListBox Grid.Row="2"/>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>

@@ -3,19 +3,19 @@ using System.Windows.Controls;
 
 namespace Lol.Collection.UI.Units
 {
-    public class RuneListBox : ListBox
+    public class RuneDetailListBox : ListBox
     {
         #region DefaultStyleKey
 
-        static RuneListBox()
+        static RuneDetailListBox()
         {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(RuneListBox), new FrameworkPropertyMetadata(typeof(RuneListBox)));
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(RuneDetailListBox), new FrameworkPropertyMetadata(typeof(RuneDetailListBox)));
         }
         #endregion
 
         protected override DependencyObject GetContainerForItemOverride()
         {
-            return new RuneListBoxItem();
+            return new RuneDetailListBoxItem();
         }
     }
 }
