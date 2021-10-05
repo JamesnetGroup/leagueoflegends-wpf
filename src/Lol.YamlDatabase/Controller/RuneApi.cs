@@ -1,4 +1,5 @@
-﻿using Lol.YamlDatabase.Entites.Core;
+﻿using Lol.YamlDatabase.Common;
+using Lol.YamlDatabase.Entites.Core;
 using Lol.YamlDatabase.Entites.Schema;
 
 namespace Lol.YamlDatabase.Controller
@@ -11,7 +12,7 @@ namespace Lol.YamlDatabase.Controller
                         select new Runes
                         {
                             Seq = r.Seq,
-                            Name = r.Name
+                            Name = ResourceHelper.ImgResource(r.Name)
                         };
             return query.ToList();
         }

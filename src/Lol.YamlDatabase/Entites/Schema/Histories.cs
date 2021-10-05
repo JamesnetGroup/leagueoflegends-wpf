@@ -1,6 +1,6 @@
 ﻿namespace Lol.YamlDatabase.Entites.Schema
 {
-    public class Histories
+    public class History
     {
         public int Seq { get; set; }
         public string GameType { get; set; }
@@ -11,6 +11,7 @@
         public string Result { get; set; }
         public DateTime Created { get; set; }
         public string GameTime { get; set; }
+        public string GameDate { get; set; }
         public int Money { get; set; }
         public int Cs { get; set; }
         public int K { get; set; }
@@ -30,6 +31,8 @@
         public double ActivePercent { get; set; }
         public string Concept { get; set; }
         public string ConceptName { get; set; }
+
+        public string KDA => string.Format("{0} / {1} / {2}", K, D, A);
     }
 
 }

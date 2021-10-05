@@ -221,7 +221,13 @@
     <None Remove="Images\Map\2.png" />
     <None Remove="Images\profile-01.png" />
 	<None Remove="Images\bg-winningteam.png" />
+	<None Remove="Images\Rune\Domination.png" />
 	<None Remove="Images\Rune\environment.png" />
+	<None Remove="Images\Rune\Inspiration.png" />
+	<None Remove="Images\Rune\Precision.png" />
+	<None Remove="Images\Rune\Resolve.png" />
+	<None Remove="Images\Rune\Runes.png" />
+	<None Remove="Images\Rune\Sorcery.png" />
 	<None Remove="Images\Spell\0.png" />
 	<None Remove="Images\Spell\1.png" />
 	<None Remove="Images\Spell\10.png" />
@@ -338,6 +344,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\Rune\Runes.png" />
+    <Resource Include="Images\Rune\Sorcery.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Rune\Domination.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Images\bg-ezreal.jpg" />
     <Resource Include="Images\bg-map.jpg" />
     <Resource Include="Images\Concepts\assassin.png" />
@@ -373,6 +388,9 @@
     <Resource Include="Images\Map\2.png" />
     <Resource Include="Images\Map\1.png" />
     <Resource Include="Images\Rune\environment.png" />
+    <Resource Include="Images\Rune\Inspiration.png" />
+    <Resource Include="Images\Rune\Precision.png" />
+    <Resource Include="Images\Rune\Resolve.png" />
     <Resource Include="Images\Spell\2.png">
       <CopyToOutputDirectory></CopyToOutputDirectory>
     </Resource>
@@ -408,7 +426,7 @@
     <Resource Include="Images\lol-thumb-05.png" />
     <Resource Include="Images\profile-01.png" />
 	<Resource Include="Images\bg-winningteam.png" />
-	<Resource Include="Images\Spell\10.png">
+	<Resource Include="Images\Spell\8.png">
 	  <CopyToOutputDirectory></CopyToOutputDirectory>
 	</Resource>
 	<Resource Include="Images\Spell\9.png">
@@ -417,7 +435,7 @@
 	<Resource Include="Images\Spell\3.png">
 	  <CopyToOutputDirectory></CopyToOutputDirectory>
 	</Resource>
-	<Resource Include="Images\Spell\7.png">
+	<Resource Include="Images\Spell\6.png">
 	  <CopyToOutputDirectory></CopyToOutputDirectory>
 	</Resource>
 	<Resource Include="Images\Spell\0.png">
@@ -430,13 +448,13 @@
 	<Resource Include="Images\Spell\4.png">
 	  <CopyToOutputDirectory></CopyToOutputDirectory>
 	</Resource>
-	<Resource Include="Images\Spell\8.png">
+	<Resource Include="Images\Spell\10.png">
 	  <CopyToOutputDirectory></CopyToOutputDirectory>
 	</Resource>
 	<Resource Include="Images\Spell\5.png">
 	  <CopyToOutputDirectory></CopyToOutputDirectory>
 	</Resource>
-	<Resource Include="Images\Spell\6.png">
+	<Resource Include="Images\Spell\7.png">
 	  <CopyToOutputDirectory></CopyToOutputDirectory>
 	</Resource>
     <Resource Include="Images\Square\0.png" />

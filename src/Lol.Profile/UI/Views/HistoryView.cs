@@ -3,7 +3,6 @@ using System.Windows;
 
 namespace Lol.Profile.UI.Views
 {
-
     public class HistoryView : View
     {
         #region DefaultStyleKey

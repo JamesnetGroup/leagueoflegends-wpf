@@ -1,12 +1,15 @@
 ﻿- seq: 1
   id: 1
-  name: 무작위 총력전
+  korName: 무작위 총력전
+  engName: ARAM
   sort: 1
 - seq: 2
   id: 2
-  name: 클래식
+  korName: 클래식
+  engName: Classic
   sort: 2
 - seq: 3
   id: 3
-  name: 튜토리얼
+  korName: 튜토리얼
+  engName: Tutorial
   sort: 3

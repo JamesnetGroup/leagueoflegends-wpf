@@ -4,8 +4,9 @@
   result: 승리
   created: '2021-10-03T03:04:00'
   gameTime: 25:13
-  money: 6633
-  cs: 30
+  gameDate: 2021/08/25
+  money: 14231
+  cs: 32
   k: 0
   d: 8
   a: 4
@@ -25,8 +26,9 @@
   result: 승리
   created: '2021-10-03T03:04:00'
   gameTime: 21:13
-  money: 6633
-  cs: 30
+  gameDate: 2021/09/03
+  money: 6334
+  cs: 25
   k: 3
   d: 1
   a: 6
@@ -47,8 +49,9 @@
   result: 패배
   created: '2021-10-03T03:04:00'
   gameTime: 24:13
-  money: 6633
-  cs: 30
+  gameDate: 2021/09/16
+  money: 7311
+  cs: 33
   k: 12
   d: 1
   a: 5
@@ -68,8 +71,9 @@
   result: 패배
   created: '2021-10-03T03:04:00'
   gameTime: 30:13
-  money: 6633
-  cs: 30
+  gameDate: 2021/09/22
+  money: 6131
+  cs: 16
   k: 8
   d: 8
   a: 3
