@@ -97,13 +97,14 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListBoxItem}">
-                    <RadioButton Style="{StaticResource RDO.TYPE}" Margin="8 16 0 0" GroupName="radio"/>
+                    <RadioButton Style="{StaticResource RDO.TYPE}" Margin="0 16 0 0" GroupName="radio"/>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
 
     <Style TargetType="{x:Type ListBox}" x:Key="LBX.MAPTYPE">
+        <Setter Property="Margin" Value="0 0 0 0"/>
         <Setter Property="ItemsSource" Value="{Binding GameTypes}"/>
         <Setter Property="ItemContainerStyle" Value="{StaticResource LBXI.MAPTYPE}"/>
         <Setter Property="Template">
@@ -265,21 +266,23 @@
                         </Grid.RowDefinitions>
                         <Control Style="{StaticResource CTL.TITLE}"/>
                         <Border Style="{StaticResource BDR.SECTION}"/>
-                        <TextBlock x:Name="txb"
+                        <StackPanel Grid.Row="2" Margin="10 0 10 0">
+                            <TextBlock x:Name="txb"
                                    Grid.Row="1" 
                                    TextWrapping="Wrap" 
                                    Text="{Binding Content}" 
                                    FontSize="13" 
                                    Margin="0 12 0 0" 
-                                   Padding="5 0 7 0" 
+                                   Padding="0 0 0 0" 
                                    Visibility="Collapsed"/>
-                        <StackPanel x:Name="stack" 
+                            <StackPanel x:Name="stack" 
                                     Grid.Row="2" 
                                     Visibility="Collapsed">
-                            <Border BorderThickness="0 1 0 0" 
+                                <Border BorderThickness="0 1 0 0" 
                                     BorderBrush="#576260" 
-                                    Margin="3 15 3 3"/>
-                            <ListBox Style="{StaticResource LBX.MAPTYPE}"/>
+                                    Margin="0 15 0 3"/>
+                                <ListBox Style="{StaticResource LBX.MAPTYPE}"/>
+                            </StackPanel>
                         </StackPanel>
                     </Grid>
                     <ControlTemplate.Triggers>
