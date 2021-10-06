@@ -1,7 +1,7 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/OkButton.xaml"/>
+        <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/ConfirmButton.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/MapListBox.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/TrophyButton.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Views/PVPView.xaml"/>

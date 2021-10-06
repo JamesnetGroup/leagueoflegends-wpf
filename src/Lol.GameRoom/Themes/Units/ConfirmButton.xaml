@@ -24,8 +24,8 @@
 
     <Geometry x:Key="PATH.LOL.PLAY">M26.209747,0.50054082 L29.419775,3.7105691 26.211681,6.918663 0.56522596,6.9227533 0.57565898,6.9094772 C1.2333483,6.0300493 1.6228278,4.938385 1.6228276,3.7557535 1.6228278,2.573122 1.2333483,1.4814577 0.57565898,0.60203022 L0.5,0.50575346 z</Geometry>
 
-    <Style TargetType="{x:Type units:OkButton}">
-        <Setter Property="Command" Value="{Binding ButtonRoomCreate}"/>
+    <Style TargetType="{x:Type units:ConfirmButton}">
+        <Setter Property="Command" Value="{Binding ConfirmCommand}"/>
         <Setter Property="Grid.Column" Value="0"/>
         <Setter Property="VerticalAlignment" Value="Bottom"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
@@ -34,7 +34,7 @@
         <Setter Property="Padding" Value="6 6 6 6"/>
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type units:OkButton}">
+                <ControlTemplate TargetType="{x:Type units:ConfirmButton}">
                     <ControlTemplate.Resources>
                         <Style TargetType="{x:Type Border}" x:Key="IN.BORDER.01">
                             <Setter Property="Grid.ColumnSpan" Value="2"/>
@@ -62,9 +62,10 @@
                             <Setter Property="Text" Value="확인"/>
                             <Setter Property="HorizontalAlignment" Value="Center"/>
                             <Setter Property="VerticalAlignment" Value="Center"/>
-                            <Setter Property="Margin" Value="0 0 4 0"/>
+                            <Setter Property="Margin" Value="0 2 4 0"/>
                             <Setter Property="Padding" Value="6 6 6 6"/>
-                            <Setter Property="FontSize" Value="15"/>
+                            <Setter Property="FontSize" Value="14"/>
+                            <Setter Property="Foreground" Value="#95b6b6"/>
                             <Setter Property="FontWeight" Value="Bold"/>
                             <Setter Property="FontFamily" Value="Friz Quadrata Std"/>
                         </Style>
@@ -91,7 +92,6 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <Border Style="{StaticResource IN.BORDER.01}"/>
-                        <!--<Image Style="{StaticResource IN.IMG}"/>-->
                         <ctrls:RiotIconButton IconType="Close" VerticalAlignment="Center" />
                         <Border Style="{StaticResource IN.BORDER.02}"/>
                         <Path x:Name="path" Style="{StaticResource IN.ICON}"/>
