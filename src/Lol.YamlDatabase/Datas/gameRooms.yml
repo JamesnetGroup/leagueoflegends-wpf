@@ -21,8 +21,8 @@
     - { name: 랭크} 
     - { name: 초고속 모드} 
 - seq: 3
-  mapName: U.R.F
+  mapName: URF
   warType: 5대5
   content: U.R.F 모드에서 쉴 새 없이 스킬을 난사해 보세요.
   gameTypes: 
-    - { name: U.R.F} 
+    - { name: ULTRA RAPID FIRE} 
