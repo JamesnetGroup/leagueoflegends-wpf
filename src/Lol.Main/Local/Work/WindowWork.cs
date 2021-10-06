@@ -13,7 +13,7 @@ namespace Lol.Main.Local.Work
 
         public WindowWork()
         {
-            _= _ui;
+            _ = _ui;
         }
         #endregion
 

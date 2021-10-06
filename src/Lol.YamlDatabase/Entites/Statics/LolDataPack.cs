@@ -14,8 +14,8 @@ namespace Lol.YamlDatabase.Entites.Statics
         }
 
         private LolDataPack()
-        { 
-            
+        {
+
         }
 
         private List<Users>? _users;

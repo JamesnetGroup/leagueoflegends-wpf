@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace Lol.Collection.Local.Model
 {
-    public class MyItemListModel : ItemListModel,  INotifyPropertyChanged
+    public class MyItemListModel : ItemListModel, INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler? PropertyChanged;
         protected void OnPropertyChanged([CallerMemberName] string? name = null)
@@ -18,8 +18,8 @@ namespace Lol.Collection.Local.Model
         private bool _isChecked;
 
         public MyItemListModel()
-        { 
-        
+        {
+
         }
 
         public MyItemListModel(ItemListModel x, Action<object> method)
