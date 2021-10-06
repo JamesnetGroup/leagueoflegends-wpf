@@ -126,23 +126,23 @@
                 <Setter TargetName="border" Property="Background" Value="#06111D"/>
             </DataTrigger>
 
-            <!--Collection/Spell-->
+            <!--Collection/Runes-->
             <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.CurrentSeq}" Value="20">
+                <Setter TargetName="img" Property="Source" Value="/Lol.Resources;component/Images/Rune/environment.png"/>
+                <Setter TargetName="border" Property="Background" Value="{StaticResource LGB.BG.LEFT}"/>
+                <Setter TargetName="border" Property="Opacity" Value="0.5"/>
+            </DataTrigger>
+
+            <!--Collection/Spell-->
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.CurrentSeq}" Value="21">
                 <Setter TargetName="img" Property="Source" Value="/Lol.Resources;component/Images/bg-spell.png"/>
                 <Setter TargetName="border" Property="Background" Value="{StaticResource LGB.BG.LEFT}"/>
             </DataTrigger>
             
             <!--Collection/Item-->
-            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.CurrentSeq}" Value="21">
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.CurrentSeq}" Value="22">
                 <Setter TargetName="img" Property="Source" Value="/Lol.Resources;component/Images/leona.jpg"/>
                 <Setter TargetName="border" Property="Background" Value="{StaticResource LGB.BG.LEFT}"/>
-            </DataTrigger>
-
-            <!--Collection/Runes-->
-            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.CurrentSeq}" Value="19">
-                <Setter TargetName="img" Property="Source" Value="/Lol.Resources;component/Images/Rune/environment.png"/>
-                <Setter TargetName="border" Property="Background" Value="{StaticResource LGB.BG.LEFT}"/>
-                <Setter TargetName="border" Property="Opacity" Value="0.5"/>
             </DataTrigger>
 
             <!--Clash-->
@@ -159,15 +159,15 @@
                 <Setter TargetName="border" Property="Opacity" Value="0.9"/>
             </DataTrigger>
 
+            <!--Store-->
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.ParentSeq}" Value="7">
+                <Setter TargetName="border" Property="Background" Value="#070A0B"/>
+            </DataTrigger>
+
             <!--GameRoom-->
             <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.ParentSeq}" Value="8">
                 <Setter TargetName="img" Property="Source" Value="/Lol.Resources;component/Images/bg-map.jpg"/>
                 <Setter TargetName="border" Property="Background" Value="{StaticResource LGB.BG.TOP}"/>
-            </DataTrigger>
-
-            <!--Store-->
-            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.ParentSeq}" Value="7">
-                <Setter TargetName="border" Property="Background" Value="#070A0B"/>
             </DataTrigger>
         </DataTemplate.Triggers>
         

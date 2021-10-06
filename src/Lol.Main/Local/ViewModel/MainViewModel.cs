@@ -26,7 +26,7 @@ using Lol.Profile.Local.ViewModels;
 using store = Lol.Store.UI.Views;
 using storeVM = Lol.Store.Local.ViewModels;
 using Lol.GameRoom.UI.Views;
-using Lol.GameRoom.Local;
+using Lol.GameRoom.Local.ViewModels;
 using Lol.YamlDatabase.Controller;
 using Lol.YamlDatabase.Entites.Schema;
 
@@ -179,18 +179,18 @@ namespace Lol.Main.Local.ViewModel
                 key = value.Seq;
                 content = value.Seq switch
                 {
-                    8 => new Overview().SetVM(new OverviewModel()),
-                    11 => new HubView().SetVM(new HubViewModel()),
-                    14 => new WinnersView().SetVM(new WinnersViewModel()),
-                    16 => new ChampionsView().SetVM(new ChampionsViewModel()),
-                    32 => new HistoryView().SetVM(new HistoryViewModel()),
-                    19 => new RuneView().SetVM(new RuneViewModel()),
-                    20 => new SpellsView().SetVM(new SpellsViewModel(BackgroundImage)),
-                    21 => new ItemView().SetVM(new ItemViewModel()),
+                    9 => new Overview().SetVM(new OverviewModel()),
+                    12 => new HubView().SetVM(new HubViewModel()),
+                    15 => new WinnersView().SetVM(new WinnersViewModel()),
+                    17 => new ChampionsView().SetVM(new ChampionsViewModel()),
+                    20 => new RuneView().SetVM(new RuneViewModel()),
+                    21 => new SpellsView().SetVM(new SpellsViewModel(BackgroundImage)),
+                    22 => new ItemView().SetVM(new ItemViewModel()),
                     // TODO: [Elena] 클래스 이름 중복 관련 임시 처리 
-                    26 => new store.ChampionsView().SetVM(new storeVM.ChampionsViewModel()),
-                    31 => new PVPView().SetVM(_pvpViewModel = new PVPViewModel()),
-                    36 => new SummonersRiftView().SetVM(new SummonersRiftViewModel()),
+                    27 => new store.ChampionsView().SetVM(new storeVM.ChampionsViewModel()),
+                    33 => new HistoryView().SetVM(new HistoryViewModel()),
+                    37 => new PVPView().SetVM(_pvpViewModel = new PVPViewModel()),
+                    42 => new SummonersRiftView().SetVM(new SummonersRiftViewModel()),
                     _ => new EmptyContent()
                 };
 

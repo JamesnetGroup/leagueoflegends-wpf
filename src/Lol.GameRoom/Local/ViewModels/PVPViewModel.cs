@@ -1,11 +1,11 @@
-﻿using Lol.Foundation.Mvvm;
+﻿using System;
+using System.Windows;
+using System.Collections.Generic;
+using Lol.Foundation.Mvvm;
 using Lol.YamlDatabase.Controller;
 using Lol.YamlDatabase.Entites.Schema;
-using System;
-using System.Collections.Generic;
-using System.Windows;
 
-namespace Lol.GameRoom.Local
+namespace Lol.GameRoom.Local.ViewModels
 {
     public class PVPViewModel : ObservableObject
     {
@@ -23,7 +23,7 @@ namespace Lol.GameRoom.Local
         }
         #endregion
 
-        #region Contructor
+        #region Constructor
 
         public PVPViewModel()
         {
@@ -35,7 +35,7 @@ namespace Lol.GameRoom.Local
 
         private void ButtonRoomCreateCmd(object obj)
         {
-            RoutedEventArgs a = new RoutedEventArgs();
+            RoutedEventArgs a = new();
             OnCloseButtonClicked(a);
         }
 
