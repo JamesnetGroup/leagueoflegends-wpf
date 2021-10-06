@@ -12,7 +12,7 @@ namespace Lol.Collection.Local.ViewModel
     public class SpellsViewModel : ObservableObject
     {
         #region Variables 
-        
+
         private Spells _currentSpell;
         private readonly Image _backgroundImage;
         #endregion
@@ -38,7 +38,7 @@ namespace Lol.Collection.Local.ViewModel
             Spells = new SpellApi().GetSpells();
             _currentSpell = Spells.First();
             _backgroundImage = backgroundImage;
-            
+
         }
         #endregion
 

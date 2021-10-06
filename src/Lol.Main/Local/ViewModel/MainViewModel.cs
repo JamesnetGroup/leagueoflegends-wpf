@@ -189,7 +189,7 @@ namespace Lol.Main.Local.ViewModel
                     21 => new ItemView().SetVM(new ItemViewModel()),
                     // TODO: [Elena] 클래스 이름 중복 관련 임시 처리 
                     26 => new store.ChampionsView().SetVM(new storeVM.ChampionsViewModel()),
-                    31 => new PVPView().SetVM(_pvpViewModel =  new PVPViewModel()),
+                    31 => new PVPView().SetVM(_pvpViewModel = new PVPViewModel()),
                     36 => new SummonersRiftView().SetVM(new SummonersRiftViewModel()),
                     _ => new EmptyContent()
                 };

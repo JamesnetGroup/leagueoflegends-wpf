@@ -43,7 +43,7 @@ namespace Lol.Collection.Local.ViewModel
 
         private void RuneChanged(Runes value)
         {
-            
+
         }
         #endregion
     }

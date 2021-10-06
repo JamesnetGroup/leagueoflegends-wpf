@@ -16,7 +16,7 @@ namespace Lol.Foundation.Mvvm
         }
 
         protected virtual void OnLoaded(Window window)
-        { 
+        {
             //   asdasd
         }
 

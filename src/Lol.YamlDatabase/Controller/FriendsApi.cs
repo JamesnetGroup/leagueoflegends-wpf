@@ -35,7 +35,7 @@ namespace Lol.YamlDatabase.Controller
             var friends = Db.Friends.Where(x => x.UserSeq == mySeq)
                 .Select(x => new MyFriends(users.First(u => x.FriendsSeq == u.Seq)))
                 .OrderBy(x => x.Status)
-                .ToList(); 
+                .ToList();
 
             var requests = friends
                 .Select(x => new RequestUsers(x))

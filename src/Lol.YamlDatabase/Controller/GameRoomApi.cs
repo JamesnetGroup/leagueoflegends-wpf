@@ -3,7 +3,7 @@ using Lol.YamlDatabase.Entites.Schema;
 
 namespace Lol.YamlDatabase.Controller
 {
-    public  class GameRoomApi : LolDbContext
+    public class GameRoomApi : LolDbContext
     {
         public List<GameRooms> GetGameRooms()
         {

@@ -52,7 +52,7 @@ namespace Lol.YamlDatabase.Controller
                             Seq = i.Seq,
                             ActivePercent = i.ActivePercent,
                             Concept = ResourceHelper.ImgResource(i.Concept),
-                            ConceptName =i.ConceptName,
+                            ConceptName = i.ConceptName,
                         };
             return query.ToList();
         }
