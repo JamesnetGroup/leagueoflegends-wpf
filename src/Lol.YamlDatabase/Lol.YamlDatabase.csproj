@@ -92,7 +92,7 @@
     <None Update="Datas\skins.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Datas\teamFights.yml">
+    <None Update="Datas\teamfights.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Datas\users.yml">
