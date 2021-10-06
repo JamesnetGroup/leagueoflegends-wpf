@@ -14,7 +14,6 @@ namespace Lol.Converter
             int currentParam = System.Convert.ToInt32(parameter);
 
             return selectedValue == currentParam ? Visibility.Visible : Visibility.Collapsed;
-            //return value.Equals(parameter) ? Visibility.Visible : Visibility.Collapsed;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
