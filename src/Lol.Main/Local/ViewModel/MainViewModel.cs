@@ -145,7 +145,7 @@ namespace Lol.Main.Local.ViewModel
             GameCommand = new RelayCommand<Type>(_gameWork.OpenGameRoom);
 
             if (_pvpViewModel != null)
-                _pvpViewModel.CreateButtonClicked += _pvpViewModel_CreateButtonClicked;
+                _pvpViewModel.ConfirmButtonClicked += _pvpViewModel_ConfirmButtonClicked;
 
             MainMenu = new(MenuSelected);
             Options = new();
@@ -231,8 +231,9 @@ namespace Lol.Main.Local.ViewModel
         }
         #endregion
 
-        private void _pvpViewModel_CreateButtonClicked(object obj, EventArgs e)
+        private void _pvpViewModel_ConfirmButtonClicked(object sender, EventArgs e)
         {
+            
         }
     }
 }

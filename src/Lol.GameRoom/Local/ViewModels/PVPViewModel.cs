@@ -9,10 +9,21 @@ namespace Lol.GameRoom.Local.ViewModels
 {
     public class PVPViewModel : ObservableObject
     {
-        public event EventHandler CreateButtonClicked;
+        #region Variables
+
         private GameRooms _currentPVP;
         public List<GameRooms> PVPs { get; set; }
-        public RelayCommand<object> ButtonRoomCreate { get; set; }
+        #endregion
+
+        #region ICommand
+
+        public RelayCommand<object> ConfirmCommand { get; set; }
+        #endregion
+
+        #region EventHandler
+
+        public event EventHandler ConfirmButtonClicked;
+        #endregion
 
         #region CurrentPVP
 
@@ -28,25 +39,34 @@ namespace Lol.GameRoom.Local.ViewModels
         public PVPViewModel()
         {
             PVPs = new GameRoomApi().GetGameRooms();
-            _currentPVP = PVPs[0];
-            ButtonRoomCreate = new RelayCommand<object>(ButtonRoomCreateCmd, CanButtonRoomCreateCmd);
+            CurrentPVP = PVPs[0];
+            ConfirmCommand = new RelayCommand<object>(RoomCreateCommand, CanRoomCreateCommand);
         }
         #endregion
 
-        private void ButtonRoomCreateCmd(object obj)
+        #region RoomCreateCommand
+
+        private void RoomCreateCommand(object obj)
         {
             RoutedEventArgs a = new();
-            OnCloseButtonClicked(a);
+            OnConfirmButtonClicked(a);
         }
+        #endregion
 
-        private bool CanButtonRoomCreateCmd(object obj)
+        #region CanRoomCreateCommand
+
+        private bool CanRoomCreateCommand(object obj)
         {
             return true;
         }
+        #endregion
 
-        protected virtual void OnCloseButtonClicked(EventArgs e)
+        #region OnConfirmButtonClicked
+
+        protected virtual void OnConfirmButtonClicked(EventArgs e)
         {
-            CreateButtonClicked?.Invoke(this, e);
+            ConfirmButtonClicked?.Invoke(this, e);
         }
+        #endregion
     }
 }
