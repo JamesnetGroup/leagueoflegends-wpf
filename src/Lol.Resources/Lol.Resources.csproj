@@ -291,8 +291,9 @@
     <None Remove="Images\TFT\lol-emoji-random.png" />
     <None Remove="Images\TFT\lol-goblin.jpg" />
     <None Remove="Images\TFT\lol-kanmei.png" />
+    <None Remove="Images\TFT\lol-legend-egg.png" />
     <None Remove="Images\TFT\lol-luckypig.png" />
-    <None Remove="Images\TFT\lol-smallegg.png" />
+    <None Remove="Images\TFT\lol-small-egg.png" />
     <None Remove="Images\TFT\lol-star-item.jpg" />
     <None Remove="Images\WinIcons\1 - Copy.png" />
     <None Remove="Images\WinIcons\1.png" />
@@ -510,8 +511,9 @@
 	<Resource Include="Images\TFT\lol-emoji-random.png" />
 	<Resource Include="Images\TFT\lol-goblin.jpg" />
 	<Resource Include="Images\TFT\lol-kanmei.png" />
+	<Resource Include="Images\TFT\lol-legend-egg.png" />
 	<Resource Include="Images\TFT\lol-luckypig.png" />
-	<Resource Include="Images\TFT\lol-smallegg.png" />
+	<Resource Include="Images\TFT\lol-small-egg.png" />
 	<Resource Include="Images\TFT\lol-star-item.jpg" />
 	<Resource Include="Images\WinIcons\1.png">
 	  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
