@@ -93,7 +93,6 @@
 						<Border Style="{StaticResource IN.BORDER.01}"/>
 						<Image Style="{StaticResource IN.IMG}"/>
 						<Border Style="{StaticResource IN.BORDER.02}"/>
-
 						<Path x:Name="path" Style="{StaticResource IN.ICON}"/>
 						<TextBlock Style="{StaticResource IN.CONTENT}"/>
 					</Grid>
@@ -104,6 +103,12 @@
 							<Setter TargetName="path" Property="Stroke" Value="{StaticResource LGB.GEO.BDR.OVER}"/>
 							<Setter Property="Foreground" Value="#FFFCF1DC"/>
 						</Trigger>
+                        <DataTrigger Binding="{Binding ParentSeq}" Value="8">
+                            <Setter Property="Foreground" Value="#3C3C41"/>
+                            <Setter TargetName="path" Property="Fill" Value="#1E2328"/>
+                            <Setter TargetName="path" Property="Stroke" Value="#5C5B57"/>
+                            <Setter Property="IsHitTestVisible" Value="False"/>
+                        </DataTrigger>
 					</ControlTemplate.Triggers>
 				</ControlTemplate>
 			</Setter.Value>
