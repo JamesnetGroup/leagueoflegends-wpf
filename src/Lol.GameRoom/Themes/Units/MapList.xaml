@@ -39,20 +39,10 @@
         <GradientStop Color="#C89C3D" Offset="1"/>
     </LinearGradientBrush>
 
-    <SolidColorBrush Color="#F0E6D2" x:Key="FG.SELECT"/>
-
     <Style TargetType="{x:Type Border}" x:Key="BDR.SECTION">
         <Setter Property="BorderThickness" Value="0 1 0 0"/>
         <Setter Property="BorderBrush" Value="#606F6E"/>
         <Setter Property="VerticalAlignment" Value="Bottom"/>
-    </Style>
-
-    <Style TargetType="{x:Type TextBlock}" x:Key="TXB.MAP">
-        <Setter Property="VerticalAlignment" Value="Center"/>
-        <Setter Property="HorizontalAlignment" Value="Center"/>
-        <Setter Property="Foreground" Value="#CDBE8E"/>
-        <Setter Property="FontWeight" Value="Bold"/>
-        <Setter Property="FontFamily" Value="Friz Quadrata Std"/>
     </Style>
 
     <Style TargetType="{x:Type RadioButton}" x:Key="RDO.TYPE">
@@ -252,6 +242,7 @@
     </Style>
     
     <!--[TODO] Kevin: 코드수정 필요, 상단영역만 MouseOver필요-->
+    <!--[TODO] Elena: 상단영역 MouseOver 수정함-->
     <Style TargetType="{x:Type ListBoxItem}" x:Key="LBXI.MAP">
         <Setter Property="Margin" Value="0 90 0 0"/>
         <Setter Property="Foreground" Value="#A09B8C"/>
