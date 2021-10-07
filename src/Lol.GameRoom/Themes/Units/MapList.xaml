@@ -90,44 +90,6 @@
             </Setter.Value>
         </Setter>
     </Style>
-
-    <Style TargetType="{x:Type Control}" x:Key="CTL.TITLE">
-        <Setter Property="VerticalAlignment" Value="Bottom"/>
-        <Setter Property="Foreground" Value="#CDBE8E"/>
-        <Setter Property="FontWeight" Value="Bold"/>
-        <Setter Property="FontFamily" Value="Friz Quadrata Std"/>
-        <Setter Property="Cursor" Value="Hand"/>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Control}">
-                    <Grid>
-                        <StackPanel Margin="0 0 0 20">
-                            <units:MapSymbol/>
-                            <TextBlock FontSize="15" Text="{Binding WarType}" HorizontalAlignment="Center"/>
-                            <TextBlock FontSize="24" Text="{Binding MapName}" HorizontalAlignment="Center" Margin="0 8 0 0"/>
-                        </StackPanel>
-                        <Border Height="20" 
-                                Width="150"
-                                Background="#ACFFFFFF"
-                                CornerRadius="10"
-                                HorizontalAlignment="Center"
-                                VerticalAlignment="Bottom"
-                                Visibility="{Binding RelativeSource={RelativeSource AncestorType=ListBoxItem}, Path=IsSelected, Converter={cnvts:BooleanToVisibilityConverter}}"
-                                Margin="0 0 0 10">
-                            <Border.Effect>
-                                <BlurEffect Radius="100" KernelType="Gaussian"/>
-                            </Border.Effect>
-                        </Border>
-                    </Grid>
-                    <ControlTemplate.Triggers>
-                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=ListBoxItem}, Path=IsSelected}" Value="True">
-                            <Setter Property="Foreground" Value="#F0E6D2"/>
-                        </DataTrigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
     
     <!--[TODO] Kevin: 코드수정 필요, 상단영역만 MouseOver필요-->
     <!--[TODO] Elena: 상단영역 MouseOver 수정함-->
@@ -143,7 +105,7 @@
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
-                        <Control Style="{StaticResource CTL.TITLE}"/>
+                        <units:MapTitle/>
                         <Border Style="{StaticResource BDR.SECTION}"/>
                         <StackPanel Grid.Row="2" Margin="10 0 10 0">
                             <TextBlock x:Name="txb"
