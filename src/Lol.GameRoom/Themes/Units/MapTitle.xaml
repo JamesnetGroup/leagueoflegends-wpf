@@ -10,10 +10,15 @@
     </Style>
 
     <Style TargetType="{x:Type TextBlock}" x:Key="TXB.NAME">
-        <Setter Property="FontSize" Value="24"/>
+        <Setter Property="FontSize" Value="25"/>
         <Setter Property="Text" Value="{Binding MapName}"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
-        <Setter Property="Margin" Value="0 8 0 0"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="Margin" Value="0 10 0 0"/>
+        <Setter Property="Width" Value="165"/>
+        <Setter Property="Height" Value="60"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
     </Style>
 
     <Style TargetType="{x:Type Border}" x:Key="BDR.SELECT">
@@ -28,7 +33,6 @@
     </Style>
     
     <Style TargetType="{x:Type units:MapTitle}">
-        <Setter Property="VerticalAlignment" Value="Bottom"/>
         <Setter Property="Foreground" Value="#CDBE8E"/>
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="FontFamily" Value="Friz Quadrata Std"/>
@@ -36,8 +40,8 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:MapTitle}">
-                    <Grid>
-                        <StackPanel Margin="0 0 0 20">
+                    <Grid Background="Transparent">
+                        <StackPanel Margin="0 0 0 15">
                             <units:MapSymbol/>
                             <TextBlock Style="{StaticResource TXB.TYPE}"/>
                             <TextBlock Style="{StaticResource TXB.NAME}"/>
