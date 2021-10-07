@@ -11,6 +11,7 @@ namespace Lol.GameRoom.Local.ViewModels
     {
         #region Variables
 
+        private Action<object> _pvpConfirm;
         private GameRooms _currentPVP;
         public List<GameRooms> PVPs { get; set; }
         #endregion
@@ -18,11 +19,6 @@ namespace Lol.GameRoom.Local.ViewModels
         #region ICommand
 
         public RelayCommand<object> ConfirmCommand { get; set; }
-        #endregion
-
-        #region EventHandler
-
-        public event EventHandler ConfirmButtonClicked;
         #endregion
 
         #region CurrentPVP
@@ -36,8 +32,9 @@ namespace Lol.GameRoom.Local.ViewModels
 
         #region Constructor
 
-        public PVPViewModel()
+        public PVPViewModel(Action<object> pvpConfirm)
         {
+            _pvpConfirm = pvpConfirm;
             PVPs = new GameRoomApi().GetGameRooms();
             CurrentPVP = PVPs[0];
             ConfirmCommand = new RelayCommand<object>(RoomCreateCommand, CanRoomCreateCommand);
@@ -48,8 +45,7 @@ namespace Lol.GameRoom.Local.ViewModels
 
         private void RoomCreateCommand(object obj)
         {
-            RoutedEventArgs a = new();
-            OnConfirmButtonClicked(a);
+            _pvpConfirm.Invoke(obj);
         }
         #endregion
 
@@ -58,14 +54,6 @@ namespace Lol.GameRoom.Local.ViewModels
         private bool CanRoomCreateCommand(object obj)
         {
             return true;
-        }
-        #endregion
-
-        #region OnConfirmButtonClicked
-
-        protected virtual void OnConfirmButtonClicked(EventArgs e)
-        {
-            ConfirmButtonClicked?.Invoke(this, e);
         }
         #endregion
     }
