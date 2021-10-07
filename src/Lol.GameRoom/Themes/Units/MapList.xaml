@@ -15,30 +15,6 @@
         <GradientStop Color="#C99D41" Offset="1"/>
     </LinearGradientBrush>
 
-    <LinearGradientBrush x:Key="BG.MAP" StartPoint="0, 0" EndPoint="1, 1">
-        <GradientStop Color="#25CFDC" Offset="0"/>
-        <GradientStop Color="#02A9B7" Offset="0.5"/>
-        <GradientStop Color="#046E88" Offset="1"/>
-    </LinearGradientBrush>
-
-    <LinearGradientBrush x:Key="BG.MAP.OVER" StartPoint="0, 1" EndPoint="1, 0">
-        <GradientStop Color="#059DB5" Offset="0"/>
-        <GradientStop Color="#015078" Offset="0.5"/>
-        <GradientStop Color="#0B1C38" Offset="1"/>
-    </LinearGradientBrush>
-    
-    <LinearGradientBrush x:Key="BDR.MAP" StartPoint="0.5, 0" EndPoint="0.5, 1">
-        <GradientStop Color="#CABB8E" Offset="0"/>
-        <GradientStop Color="#9F8859" Offset="0.5"/>
-        <GradientStop Color="#795B2A" Offset="1"/>
-    </LinearGradientBrush>
-    
-    <LinearGradientBrush x:Key="BDR.MAP.OVER" StartPoint="0.5, 0" EndPoint="0.5, 1">
-        <GradientStop Color="#EFE4CD" Offset="0"/>
-        <GradientStop Color="#D8B977" Offset="0.5"/>
-        <GradientStop Color="#C89C3D" Offset="1"/>
-    </LinearGradientBrush>
-
     <Style TargetType="{x:Type Border}" x:Key="BDR.SECTION">
         <Setter Property="BorderThickness" Value="0 1 0 0"/>
         <Setter Property="BorderBrush" Value="#606F6E"/>
@@ -115,92 +91,6 @@
         </Setter>
     </Style>
 
-    <Style TargetType="{x:Type Control}" x:Key="CTL.SHAPE">
-        <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="BorderBrush" Value="{StaticResource BDR.MAP}"/>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Control}">
-                    <Grid>
-                        <Border Height="82" 
-                                Width="82" 
-                                Visibility="{Binding Seq, Converter={cnvts:EqualsToVisibilityConverter}, ConverterParameter=0}"
-                                Background="#0A1428" 
-                                BorderBrush="{TemplateBinding BorderBrush}" 
-                                BorderThickness="4 4 4 4"
-                                Margin="0 0 0 30">
-                            <Border BorderThickness="2 2 2 2"
-                                    Margin="4 4 4 4"
-                                    Background="{TemplateBinding Background}"
-                                    BorderBrush="{TemplateBinding BorderBrush}"/>
-                        </Border>
-                        <Grid Visibility="{Binding Seq, Converter={cnvts:EqualsToVisibilityConverter}, ConverterParameter=1}">
-                            <Path Width="82" 
-                                  Height="82"
-                                  Margin="0 0 0 30"
-                                  Stretch="Uniform" 
-                                  Fill="#0A1428"
-                                  Stroke="{TemplateBinding BorderBrush}"
-                                  StrokeThickness="4"
-                                  Data="M8.660254,0 L17.320508,5 17.320508,15 8.660254,20 0,15 0,5 8.660254,0 Z" />
-                            <Path Width="60" 
-                                  Height="60"
-                                  Margin="0 0 0 30"
-                                  Stretch="Uniform" 
-                                  Fill="{TemplateBinding Background}"
-                                  Stroke="{TemplateBinding BorderBrush}"
-                                  StrokeThickness="2"
-                                  Data="M8.660254,0 L17.320508,5 17.320508,15 8.660254,20 0,15 0,5 8.660254,0 Z" />
-                        </Grid>
-                        <Grid Visibility="{Binding Seq, Converter={cnvts:EqualsToVisibilityConverter}, ConverterParameter=2}">
-                            <Path Height="82"
-                                  Width="82" 
-                                  Margin="0 0 0 30"
-                                  Stretch="Fill"
-                                  Fill="#0A1428"
-                                  Stroke="{TemplateBinding BorderBrush}"
-                                  StrokeThickness="4"
-                                  Data="M15,0 L60,0 75,30 0,30 z" >
-                            </Path>
-                            <Path Width="60" 
-                                  Height="60"
-                                  Margin="0 0 0 30"
-                                  Stretch="Fill"
-                                  Fill="{TemplateBinding Background}"
-                                  Stroke="{TemplateBinding BorderBrush}"
-                                  StrokeThickness="2"
-                                  Data="M15,0 L60,0 75,30 0,30 z">
-                            </Path>
-                        </Grid>
-                        <Border Height="82" 
-                                Width="82"
-                                Background="#0A1428" 
-                                BorderBrush="{TemplateBinding BorderBrush}" 
-                                BorderThickness="4 4 4 4"
-                                CornerRadius="100"
-                                Margin="0 0 0 30"
-                                Visibility="{Binding Seq, Converter={cnvts:EqualsToVisibilityConverter}, ConverterParameter=3}">
-                            <Border CornerRadius="100"
-                                    Background="{TemplateBinding Background}"
-                                    BorderBrush="{TemplateBinding BorderBrush}"
-                                    BorderThickness="2 2 2 2"
-                                    Margin="4 4 4 4"/>
-                        </Border>
-                    </Grid>
-                    <ControlTemplate.Triggers>
-                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsMouseOver}" Value="True">
-                            <Setter Property="Background" Value="{StaticResource BG.MAP.OVER}"/>
-                            <Setter Property="BorderBrush" Value="{StaticResource BDR.MAP.OVER}"/>
-                        </DataTrigger>
-                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=ListBoxItem}, Path=IsSelected}" Value="True">
-                            <Setter Property="Background" Value="{StaticResource BG.MAP.OVER}"/>
-                        </DataTrigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-
     <Style TargetType="{x:Type Control}" x:Key="CTL.TITLE">
         <Setter Property="VerticalAlignment" Value="Bottom"/>
         <Setter Property="Foreground" Value="#CDBE8E"/>
@@ -212,7 +102,7 @@
                 <ControlTemplate TargetType="{x:Type Control}">
                     <Grid>
                         <StackPanel Margin="0 0 0 20">
-                            <Control Style="{StaticResource CTL.SHAPE}"/>
+                            <units:MapSymbol/>
                             <TextBlock FontSize="15" Text="{Binding WarType}" HorizontalAlignment="Center"/>
                             <TextBlock FontSize="24" Text="{Binding MapName}" HorizontalAlignment="Center" Margin="0 8 0 0"/>
                         </StackPanel>
