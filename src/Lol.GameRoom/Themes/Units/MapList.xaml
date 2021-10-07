@@ -47,10 +47,12 @@
 
     <Style TargetType="{x:Type RadioButton}" x:Key="RDO.TYPE">
         <Setter Property="BorderBrush" Value="{StaticResource BDR.RDO}"/>
+        <Setter Property="Margin" Value="0 16 0 0"/>
+        <Setter Property="GroupName" Value="radio"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type RadioButton}">
-                    <StackPanel Orientation="Horizontal" Background="Transparent">
+                    <StackPanel Orientation="Horizontal">
                         <Border Height="13" 
                                 Width="13" 
                                 RenderTransformOrigin="0.5, 0.5" 
@@ -60,7 +62,7 @@
                             <Border.RenderTransform>
                                 <RotateTransform Angle="45"/>
                             </Border.RenderTransform>
-                            <Border Margin="2" 
+                            <Border Margin="2 2 2 2" 
                                     Background="#F0E6D2" 
                                     Visibility="{Binding RelativeSource={RelativeSource AncestorType=RadioButton}, Path=IsChecked, Converter={cnvts:BooleanToVisibilityConverter}}"/>
                         </Border>
@@ -87,7 +89,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListBoxItem}">
-                    <RadioButton Style="{StaticResource RDO.TYPE}" Margin="0 16 0 0" GroupName="radio"/>
+                    <RadioButton Style="{StaticResource RDO.TYPE}"/>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
@@ -120,21 +122,19 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Control}">
                     <Grid>
-                        <Border x:Name="square" 
-                                Height="82" 
+                        <Border Height="82" 
                                 Width="82" 
                                 Visibility="{Binding Seq, Converter={cnvts:EqualsToVisibilityConverter}, ConverterParameter=0}"
                                 Background="#0A1428" 
                                 BorderBrush="{TemplateBinding BorderBrush}" 
-                                BorderThickness="4"
+                                BorderThickness="4 4 4 4"
                                 Margin="0 0 0 30">
-                            <Border BorderThickness="2"
-                                    Margin="4"
+                            <Border BorderThickness="2 2 2 2"
+                                    Margin="4 4 4 4"
                                     Background="{TemplateBinding Background}"
                                     BorderBrush="{TemplateBinding BorderBrush}"/>
                         </Border>
-                        <Grid x:Name="hexagon" 
-                              Visibility="{Binding Seq, Converter={cnvts:EqualsToVisibilityConverter}, ConverterParameter=1}">
+                        <Grid Visibility="{Binding Seq, Converter={cnvts:EqualsToVisibilityConverter}, ConverterParameter=1}">
                             <Path Width="82" 
                                   Height="82"
                                   Margin="0 0 0 30"
@@ -152,8 +152,7 @@
                                   StrokeThickness="2"
                                   Data="M8.660254,0 L17.320508,5 17.320508,15 8.660254,20 0,15 0,5 8.660254,0 Z" />
                         </Grid>
-                        <Grid x:Name="trapezoid" 
-                              Visibility="{Binding Seq, Converter={cnvts:EqualsToVisibilityConverter}, ConverterParameter=2}">
+                        <Grid Visibility="{Binding Seq, Converter={cnvts:EqualsToVisibilityConverter}, ConverterParameter=2}">
                             <Path Height="82"
                                   Width="82" 
                                   Margin="0 0 0 30"
@@ -173,20 +172,19 @@
                                   Data="M15,0 L60,0 75,30 0,30 z">
                             </Path>
                         </Grid>
-                        <Border x:Name="circle" 
-                                Height="82" 
+                        <Border Height="82" 
                                 Width="82"
                                 Background="#0A1428" 
                                 BorderBrush="{TemplateBinding BorderBrush}" 
-                                BorderThickness="4"
+                                BorderThickness="4 4 4 4"
                                 CornerRadius="100"
                                 Margin="0 0 0 30"
                                 Visibility="{Binding Seq, Converter={cnvts:EqualsToVisibilityConverter}, ConverterParameter=3}">
                             <Border CornerRadius="100"
                                     Background="{TemplateBinding Background}"
                                     BorderBrush="{TemplateBinding BorderBrush}"
-                                    BorderThickness="2"
-                                    Margin="4"/>
+                                    BorderThickness="2 2 2 2"
+                                    Margin="4 4 4 4"/>
                         </Border>
                     </Grid>
                     <ControlTemplate.Triggers>
@@ -213,7 +211,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Control}">
                     <Grid>
-                        <StackPanel Margin="0 0 0 20" Background="Transparent">
+                        <StackPanel Margin="0 0 0 20">
                             <Control Style="{StaticResource CTL.SHAPE}"/>
                             <TextBlock FontSize="15" Text="{Binding WarType}" HorizontalAlignment="Center"/>
                             <TextBlock FontSize="24" Text="{Binding MapName}" HorizontalAlignment="Center" Margin="0 8 0 0"/>
@@ -259,19 +257,19 @@
                         <Border Style="{StaticResource BDR.SECTION}"/>
                         <StackPanel Grid.Row="2" Margin="10 0 10 0">
                             <TextBlock x:Name="txb"
-                                   Grid.Row="1" 
-                                   TextWrapping="Wrap" 
-                                   Text="{Binding Content}" 
-                                   FontSize="13" 
-                                   Margin="0 12 0 0" 
-                                   Padding="0 0 0 0" 
-                                   Visibility="Collapsed"/>
+                                       Grid.Row="1" 
+                                       TextWrapping="Wrap" 
+                                       Text="{Binding Content}" 
+                                       FontSize="13" 
+                                       Margin="0 12 0 0" 
+                                       Padding="0 0 0 0" 
+                                       Visibility="Collapsed"/>
                             <StackPanel x:Name="stack" 
-                                    Grid.Row="2" 
-                                    Visibility="Collapsed">
+                                        Grid.Row="2" 
+                                        Visibility="Collapsed">
                                 <Border BorderThickness="0 1 0 0" 
-                                    BorderBrush="#576260" 
-                                    Margin="0 15 0 3"/>
+                                        BorderBrush="#576260" 
+                                        Margin="0 15 0 3"/>
                                 <ListBox Style="{StaticResource LBX.MAPTYPE}"/>
                             </StackPanel>
                         </StackPanel>
