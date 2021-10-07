@@ -5,6 +5,7 @@
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/MapList.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/MapTitle.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/MapSymbol.xaml"/>
+        <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/GameType.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/TrophyButton.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Views/PVPView.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Views/PVPView.xaml"/>

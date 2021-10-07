@@ -17,6 +17,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Page Update="Themes\Units\GameType.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Themes\Units\MapTitle.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
