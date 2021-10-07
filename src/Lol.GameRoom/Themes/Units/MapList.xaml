@@ -6,6 +6,7 @@
         <Setter Property="BorderThickness" Value="0 1 0 0"/>
         <Setter Property="BorderBrush" Value="#606F6E"/>
         <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="Grid.Row" Value="1"/>
     </Style>
 
     <Style TargetType="{x:Type TextBlock}" x:Key="TXB.CONTENT">
@@ -28,11 +29,12 @@
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
                         <units:MapTitle/>
                         <Border Style="{StaticResource BDR.SECTION}"/>
-                        <StackPanel Grid.Row="1" Margin="0 0 10 0">
+                        <StackPanel Grid.Row="2" Margin="0 0 10 0">
                             <TextBlock x:Name="txb"
                                        Style="{StaticResource TXB.CONTENT}"/>
                             <StackPanel x:Name="stack" 
