@@ -17,6 +17,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Page Update="Themes\Units\MapSymbol.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Themes\Units\MapList.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
