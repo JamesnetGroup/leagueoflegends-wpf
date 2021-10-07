@@ -103,5 +103,5 @@
 <br />
 
 ### `Game`
-![image](https://user-images.githubusercontent.com/74305823/136186082-9fb538b2-96c9-402f-8a30-68af3f4ff6d5.png)
+![image](https://user-images.githubusercontent.com/74305823/136380449-ea229fbb-6db7-412c-828b-16d6f7af83d8.png)
 
