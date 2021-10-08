@@ -95,12 +95,12 @@
 ### `Spell`
 ![image](https://user-images.githubusercontent.com/74305823/136051245-cd0d9c3f-507e-4e0f-b659-1a1253d3db74.png)
 
-<br />
+<br>
 
 ### `Profile`
 ![image](https://user-images.githubusercontent.com/74305823/136051365-b82be44d-318d-4ac4-81cc-02ba6c306776.png)
 
-<br />
+<br>
 
 ### `Game`
 ![image](https://user-images.githubusercontent.com/74305823/136380449-ea229fbb-6db7-412c-828b-16d6f7af83d8.png)
