@@ -18,7 +18,7 @@
                 <ControlTemplate TargetType="{x:Type units:RuneListBoxItem}">
                     <StackPanel Orientation="Horizontal">
                         <Border x:Name="bd" Style="{StaticResource BDR.ITEM.01}">
-                            <Image Source="{Binding Name}"/>
+                            <Image Source="{Binding RuneStone}"/>
                         </Border>
                     </StackPanel>
                     <ControlTemplate.Triggers>

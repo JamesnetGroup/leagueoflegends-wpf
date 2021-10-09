@@ -1,30 +1,36 @@
 ﻿- seq: 1  
-  name: Rune,Runes
-  test: Rune,RUNETEST
-  mark1 : Rune,Test
-  mark2 : Rune,RUNETEST
+  runeStone: Rune,Runes
+  rune: Rune,Domination_Loading
+  keystone : Rune,Dark_Harvest_rune
+  paths : Rune,Precision
+  runType : 1
 - seq: 2
-  name: Rune,Precision
-  test: Rune,RUNETEST
-  mark1 : Rune,Test
-  mark2 : Rune,RUNETEST
+  runeStone: Rune,Precision
+  rune: Rune,Precision_Loading
+  keystone : Rune,Glacial_Augment_rune
+  paths : Rune,Domination
+  runType : 2
 - seq: 3  
-  name: Rune,Domination
-  test: Rune,RUNETEST
-  mark1 : Rune,Test
-  mark2 : Rune,RUNETEST
+  runeStone: Rune,Domination
+  rune: Rune,Resolve_Loading
+  keystone : Rune,Grasp_of_the_Undying_rune
+  paths : Rune,Sorcery
+  runType : 3
 - seq: 4  
-  name: Rune,Sorcery
-  test: Rune,RUNETEST
-  mark1 : Rune,Test
-  mark2 : Rune,RUNETEST
+  runeStone: Rune,Sorcery
+  rune: Rune,Sorcery_Loading
+  keystone : Rune,Guardian_rune
+  paths : Rune,Resolve
+  runType : 4
 - seq: 5  
-  name: Rune,Resolve
-  test: Rune,RUNETEST
-  mark1 : Rune,Test
-  mark2 : Rune,RUNETEST
+  runeStone: Rune,Resolve
+  rune: Rune,Inspiration_Loading
+  keystone : Rune,Glacial_Augment_rune
+  paths : Rune,Resolve
+  runType : 5
 - seq: 6  
-  name: Rune,Inspiration
-  test: Rune,RUNETEST
-  mark1 : Rune,Test
-  mark2 : Rune,RUNETEST
+  runeStone: Rune,Inspiration
+  rune: Rune,Domination_Loading
+  keystone : Rune,Electrocute_rune
+  paths : Rune,Inspiration
+  runType : 1
