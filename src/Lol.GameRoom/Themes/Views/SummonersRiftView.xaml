@@ -8,6 +8,13 @@
         <Setter Property="Height" Value="35"/>
         <Setter Property="VerticalAlignment" Value="Bottom"/>
         <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="IconVisibility" Value="Collapsed"/>
+    </Style>
+
+    <Style TargetType="{x:Type ctrls:RiotGameButtonn}" x:Key="RIOT.GAMEBTN">
+        <Setter Property="Content" Value="대전 찾기"/>
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
     </Style>
     
     <Style TargetType="{x:Type views:SummonersRiftView}">
@@ -17,8 +24,8 @@
                     <Grid Margin="40 0 20 20">
                         <units:RoomTitle/>
                         <units:TopRightContent/>
-                        <ctrls:RiotTextBox Style="{StaticResource RIOT.TXB}" IconVisibility="Collapsed"/>
-                        <ctrls:RiotGameButtonn VerticalAlignment="Bottom" HorizontalAlignment="Center" Content="대전 찾기"/>
+                        <ctrls:RiotTextBox Style="{StaticResource RIOT.TXB}"/>
+                        <ctrls:RiotGameButtonn Style="{StaticResource RIOT.GAMEBTN}"/>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
