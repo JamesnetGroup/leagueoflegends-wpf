@@ -1,0 +1,31 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:units="clr-namespace:Lol.GameRoom.UI.Units"
+                    xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
+
+    <Style TargetType="{x:Type ctrls:RiotButton}" x:Key="RIOT.BTN.MODE">
+        <Setter Property="Width" Value="130"/>
+        <Setter Property="Height" Value="34"/>
+        <Setter Property="Content" Value="모드 변경"/>
+        <Setter Property="Margin" Value="0 0 20 0"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="FontSize" Value="14"/>
+    </Style>
+
+    <Style TargetType="{x:Type units:TopRightContent}">
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="Margin" Value="0 10 0 0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type units:TopRightContent}">
+                    <StackPanel Orientation="Horizontal">
+                        <ctrls:RiotButton Style="{StaticResource RIOT.BTN.MODE}"/>
+                        <units:OnOffButton VerticalAlignment="Center"/>
+                    </StackPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
