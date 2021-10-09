@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Windows;
 using System.Collections.Generic;
 using Lol.Foundation.Mvvm;
 using Lol.YamlDatabase.Controller;
