@@ -116,7 +116,7 @@ namespace Lol.Main.Local.Work
                 new SubMenuModel(39, 8, "TRAINING"),
                 new SubMenuModel(40, 8, "CREATE CUSTOM"),
                 new SubMenuModel(41, 8, "JOIN CUSTOM"),
-                new SubMenuModel(42, 8, ""),
+                new SubMenuModel(42, 8, "RIFT"),
             };
             return source;
         }
