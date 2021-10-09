@@ -35,6 +35,9 @@
 							<Setter TargetName="text" Property="Foreground" Value="#F0E6D2"/>
 							<Setter TargetName="border" Property="BorderBrush" Value="{StaticResource LGB.LBXI.BDR.SEL}"/>
 						</Trigger>
+                        <DataTrigger Binding="{Binding Seq}" Value="42">
+                            <Setter Property="Visibility" Value="Collapsed"/>
+                        </DataTrigger>
 					</ControlTemplate.Triggers>
 				</ControlTemplate>
 			</Setter.Value>

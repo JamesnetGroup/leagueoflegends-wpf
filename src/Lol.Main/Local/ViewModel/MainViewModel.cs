@@ -229,7 +229,8 @@ namespace Lol.Main.Local.ViewModel
 
         private void PvpConfirm(object value)
         {
-            
+            // TODO: [Kevin] 게임시작 > 확인 버튼 클릭시 화면 Change, 변경 필히 필요
+            SubMenuChanged(MainMenu.TotalSubMenus[33]);
         }
     }
 }
