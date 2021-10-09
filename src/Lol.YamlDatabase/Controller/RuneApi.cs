@@ -13,7 +13,9 @@ namespace Lol.YamlDatabase.Controller
                         {
                             Seq = r.Seq,
                             Name = ResourceHelper.ImgResource(r.Name),
-                            Test = ResourceHelper.ImgResource(r.Test)
+                            Test = ResourceHelper.ImgResource(r.Test),
+                            Mark1 = ResourceHelper.ImgResourceJpg(r.Mark1),
+                            Mark2 = ResourceHelper.ImgResource(r.Mark2)
 
                         };
             return query.ToList();

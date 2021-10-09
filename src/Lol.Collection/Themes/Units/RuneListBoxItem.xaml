@@ -10,7 +10,7 @@
         <Setter Property="Margin" Value="0 0 7 0"/>
         <Setter Property="Opacity" Value="0.3"/>
     </Style>
-
+ 
     <Style TargetType="{x:Type units:RuneListBoxItem}">
         <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
@@ -23,6 +23,9 @@
                     </StackPanel>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="bd" Property="Opacity" Value="1.0"/>
+                        </Trigger>
+                        <Trigger Property="IsSelected" Value="True">
                             <Setter TargetName="bd" Property="Opacity" Value="1.0"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
