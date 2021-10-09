@@ -4,27 +4,27 @@
   mark1 : Rune,Test
   mark2 : Rune,RUNETEST
 - seq: 2
-  name: Rune,precision
+  name: Rune,Precision
   test: Rune,RUNETEST
   mark1 : Rune,Test
   mark2 : Rune,RUNETEST
 - seq: 3  
-  name: Rune,domination
+  name: Rune,Domination
   test: Rune,RUNETEST
   mark1 : Rune,Test
   mark2 : Rune,RUNETEST
 - seq: 4  
-  name: Rune,sorcery
+  name: Rune,Sorcery
   test: Rune,RUNETEST
   mark1 : Rune,Test
   mark2 : Rune,RUNETEST
 - seq: 5  
-  name: Rune,resolve
+  name: Rune,Resolve
   test: Rune,RUNETEST
   mark1 : Rune,Test
   mark2 : Rune,RUNETEST
 - seq: 6  
-  name: Rune,inspiration
+  name: Rune,Inspiration
   test: Rune,RUNETEST
   mark1 : Rune,Test
   mark2 : Rune,RUNETEST

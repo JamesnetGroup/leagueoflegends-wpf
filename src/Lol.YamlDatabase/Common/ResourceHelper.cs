@@ -1,41 +1,33 @@
-﻿namespace Lol.YamlDatabase.Common
+﻿using System.Reflection;
+
+namespace Lol.YamlDatabase.Common
 {
     internal class ResourceHelper
     {
-        internal static string ImgResource(string folder, string name)
-        {
-            return $"/Lol.Resources;component/Images/{folder}/{name}.png";
-        }
-
-        internal static string ImgResourceJpg(string folder, string name)
-        {
-            return $"/Lol.Resources;component/Images/{folder}/{name}.jpg";
-        }
-
-        internal static string ImgResource(string pullName)
+        internal static string ImgResource(string fullName)
         {
             string folder = "";
             string name = "";
-            if (pullName != null)
-            {
-                string[] strs = pullName.Split(',');
-                folder = strs[0];
-                name = strs[1];
-            }
-            return ImgResource(folder, name);
-        }
 
-        internal static string ImgResourceJpg(string pullName)
-        {
-            string folder = "";
-            string name = "";
-            if (pullName != null)
+            if (fullName != null)
             {
-                string[] strs = pullName.Split(',');
+                string[] strs = fullName.Split(',');
                 folder = strs[0];
                 name = strs[1];
             }
-            return ImgResourceJpg(folder, name);
+
+            string[] folderPath = System.Environment.CurrentDirectory.Split("Leagueoflegends");
+            string imagePath = Path.Combine(folderPath[0], @"Lol.Resources\Images", folder);
+            DirectoryInfo di = new DirectoryInfo(imagePath);
+
+            foreach (FileInfo row in di.GetFiles())
+            {
+                if (name == Path.GetFileNameWithoutExtension(row.Name))
+                    return $"/Lol.Resources;component/Images/{folder}/{row.Name}";
+            }
+
+            return "";
+
         }
     }
 }
