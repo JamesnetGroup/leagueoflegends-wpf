@@ -4,23 +4,69 @@
                     xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
 
     <Style TargetType="{x:Type Border}" x:Key="BDR.ITEM.01">
-        <Setter Property="Height" Value="240"/>
-        <Setter Property="Width" Value="180"/>
-        <Setter Property="BorderThickness" Value="0 1 1 1"/>
-        <Setter Property="Margin" Value="20 0 7 0"/>
+        <Setter Property="Height" Value="270"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="BorderBrush" Value="GreenYellow"/>
+        <Setter Property="Margin" Value="0 40 30 0"/>
     </Style>
+
+    <Style TargetType="{x:Type Border}" x:Key="BDR.TEMP">
+        <Setter Property="BorderThickness" Value="0.5"/>
+        <Setter Property="BorderBrush" Value="#474C45"/>
+        <Setter Property="Margin" Value="10 0 0 0"/>
+    </Style>
+
 
     <Style TargetType="{x:Type units:RuneDetailListBoxItem}">
         <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:RuneDetailListBoxItem}">
-                    <StackPanel Orientation="Horizontal">
+                    <Grid>
                         <Border Style="{StaticResource BDR.ITEM.01}">
-                            <Image Source="{Binding Name}"/>
+                            <Grid>
+                                <Image Source="{Binding Name}" Stretch="Fill"/>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto"/>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <StackPanel>
+                                        <TextBlock Text="트위스티드페이트" FontWeight="Bold" FontSize="10" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10 180 0 0"/>
+                                        <Border Style="{StaticResource BDR.TEMP}"/>
+                                    </StackPanel>
+                                    <StackPanel Grid.Row="1" Orientation="Horizontal">
+                                        <Image Source="{Binding Mark1}" Width="50" Height="50" Margin="10 0 10 0"/>
+                                        <Image Source="{Binding Mark2}" Width="30" Height="30"/>
+                                    </StackPanel>
+                                </Grid>
+                            </Grid>
                         </Border>
-
-                    </StackPanel>
+                        <Border Height="270" Margin="0 40 30 0"  Visibility="Collapsed" x:Name="bd">
+                            <Border.Background>
+                                <SolidColorBrush Color="Black" Opacity="0.6"/>
+                            </Border.Background>
+                            <Grid>
+                                <StackPanel VerticalAlignment="Top">
+                                    <TextBlock Text="태ㅔ스트" Foreground="GreenYellow" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    <TextBlock Text="태ㅔ스트" Foreground="GreenYellow" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    <TextBlock Text="태ㅔ스트" Foreground="GreenYellow" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    <TextBlock Text="태ㅔ스트" Foreground="GreenYellow" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                </StackPanel>
+                                <Border VerticalAlignment="Bottom" BorderBrush="#eeeeee" Margin="10 0 0 0" BorderThickness="0 1 0 0">
+                                    <StackPanel Grid.Row="1" Orientation="Horizontal">
+                                        <Image Source="{Binding Mark1}" Width="50" Height="50" Margin="10 0 10 0"/>
+                                        <Image Source="{Binding Mark2}" Width="30" Height="30"/>
+                                    </StackPanel>
+                                </Border>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="bd" Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
