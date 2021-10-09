@@ -15,9 +15,11 @@
 		<ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Styles/RiotVolume.xaml"/>
 		<ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Styles/BasicTooltip.xaml"/>
 		<ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Styles/RiotTextBox.xaml"/>
-		<ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Styles/RiotTooltip.xaml"/>
-		<ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Styles/Modal.xaml"/>
+        <ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Styles/RiotTooltip.xaml"/>
+        <ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Styles/RiotGameButtonn.xaml"/>
+        <ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Styles/Modal.xaml"/>
 		<ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Styles/MainWindow.xaml"/>
 	</ResourceDictionary.MergedDictionaries>
+
 
 </ResourceDictionary>

@@ -18,6 +18,7 @@ namespace Lol.LayoutSupport.Controls
 
         public static readonly DependencyProperty CommandProperty = DependencyProperty.Register("Command", typeof(ICommand), typeof(RiotTextBox));
         public static readonly DependencyProperty PlaceHolderProperty = DependencyProperty.Register("PlaceHolder", typeof(string), typeof(RiotTextBox), new PropertyMetadata(""));
+        public static readonly DependencyProperty IconVisibilityProperty = DependencyProperty.Register("IconVisibility", typeof(Visibility), typeof(RiotTextBox), new PropertyMetadata(Visibility.Visible));
         #endregion
 
         #region Command
@@ -35,6 +36,15 @@ namespace Lol.LayoutSupport.Controls
         {
             get { return (string)this.GetValue(PlaceHolderProperty); }
             set { this.SetValue(PlaceHolderProperty, value); }
+        }
+        #endregion
+
+        #region IconVisibility
+
+        public Visibility IconVisibility
+        {
+            get { return (Visibility)this.GetValue(IconVisibilityProperty); }
+            set { this.SetValue(IconVisibilityProperty, value); }
         }
         #endregion
 
