@@ -81,14 +81,14 @@
 
 <br />
 
-### `Setting`
-![image](https://user-images.githubusercontent.com/74305823/126187790-d6d3332e-694c-4318-b556-66e1df34a4be.png)
-
-<br />
-
 ### `Clash`
 ![image](https://user-images.githubusercontent.com/68521148/135798131-1b1d8281-5f07-4012-9863-9feb97beea62.PNG)
 ![image](https://user-images.githubusercontent.com/52397976/133266434-97659a57-284d-4207-bfab-ac2684c16f04.png)
+
+<br />
+
+### `Setting`
+![image](https://user-images.githubusercontent.com/74305823/126187790-d6d3332e-694c-4318-b556-66e1df34a4be.png)
 
 <br />
 
