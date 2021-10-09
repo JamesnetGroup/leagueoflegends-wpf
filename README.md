@@ -92,7 +92,7 @@
 
 <br />
 
-### `Spells`
+### `Collection`
 ![image](https://user-images.githubusercontent.com/74305823/136051245-cd0d9c3f-507e-4e0f-b659-1a1253d3db74.png)
 
 <br>
