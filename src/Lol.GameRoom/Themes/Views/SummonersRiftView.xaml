@@ -17,12 +17,6 @@
         <Setter Property="HorizontalAlignment" Value="Center"/>
     </Style>
 
-    <Style TargetType="{x:Type StackPanel}" x:Key="SP.BOTTOMRIGHT">
-        <Setter Property="VerticalAlignment" Value="Bottom"/>
-        <Setter Property="HorizontalAlignment" Value="Right"/>
-        <Setter Property="Orientation" Value="Horizontal"/>
-    </Style>
-    
     <Style TargetType="{x:Type views:SummonersRiftView}">
         <Setter Property="Template">
             <Setter.Value>
@@ -32,9 +26,7 @@
                         <units:TopRightContent/>
                         <ctrls:RiotTextBox Style="{StaticResource RIOT.TXB}"/>
                         <ctrls:RiotGameButtonn Style="{StaticResource RIOT.GAMEBTN}"/>
-                        <StackPanel Style="{StaticResource SP.BOTTOMRIGHT}">
-                            <units:StateBox/>
-                        </StackPanel>
+                        <units:StateBox />
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
