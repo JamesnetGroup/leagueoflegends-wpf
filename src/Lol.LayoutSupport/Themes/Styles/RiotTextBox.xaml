@@ -53,7 +53,7 @@
 		<Setter Property="Foreground" Value="#F1F1F1"/>
 		<Setter Property="FontSize" Value="13"/>
 		<Setter Property="FocusVisualStyle" Value="{x:Null}"/>
-		<Setter Property="MinWidth" Value="500"/>
+		<Setter Property="MinWidth" Value="300"/>
 		<Setter Property="Height" Value="35"/>
 		<Setter Property="Margin" Value="0 12 0 0"/>
 		<Setter Property="Padding" Value="0 5 0 5"/>
@@ -70,7 +70,8 @@
 										Fill="#F0E6D2" 
                                         Width="15"
                                         Height="15"
-                                        Margin="10 0 0 0"/>
+                                        Margin="10 0 0 0"
+                                        Visibility="{TemplateBinding IconVisibility}"/>
 						<ScrollViewer x:Name="PART_ContentHost"
                                       Margin="30 0 30 0" 
                                       VerticalAlignment="Center"/>
@@ -86,8 +87,11 @@
 					<ControlTemplate.Triggers>
 						<Trigger Property="IsMouseOver" Value="True">
 							<Setter Property="Cursor" Value="IBeam"/>
-						</Trigger>
-						<DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Text}" Value="">
+                        </Trigger>
+                        <Trigger Property="IconVisibility" Value="Collapsed">
+                            <Setter TargetName="PART_ContentHost" Property="Margin" Value="10 0 10 0"/>
+                        </Trigger>
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Text}" Value="">
 							<Setter TargetName="placeholder" Property="Visibility" Value="Visible"/>
 							<Setter TargetName="close" Property="Visibility" Value="Collapsed"/>
 						</DataTrigger>
