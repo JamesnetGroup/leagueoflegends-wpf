@@ -26,6 +26,9 @@
                         <units:TopRightContent/>
                         <ctrls:RiotTextBox Style="{StaticResource RIOT.TXB}"/>
                         <ctrls:RiotGameButtonn Style="{StaticResource RIOT.GAMEBTN}"/>
+                        <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" HorizontalAlignment="Right">
+                            <units:StateHeader/>
+                        </StackPanel>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
