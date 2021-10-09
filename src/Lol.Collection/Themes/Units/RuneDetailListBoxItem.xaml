@@ -6,7 +6,7 @@
     <Style TargetType="{x:Type Border}" x:Key="BDR.ITEM.01">
         <Setter Property="Height" Value="270"/>
         <Setter Property="BorderThickness" Value="2"/>
-        <Setter Property="BorderBrush" Value="GreenYellow"/>
+        <!--<Setter Property="BorderBrush" Value="GreenYellow"/>-->
         <Setter Property="Margin" Value="0 40 30 0"/>
     </Style>
 
@@ -25,7 +25,7 @@
                     <Grid>
                         <Border Style="{StaticResource BDR.ITEM.01}">
                             <Grid>
-                                <Image Source="{Binding Name}" Stretch="Fill"/>
+                                <Image Source="{Binding Rune}" Stretch="Fill"/>
                                 <Grid>
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="auto"/>
@@ -36,8 +36,8 @@
                                         <Border Style="{StaticResource BDR.TEMP}"/>
                                     </StackPanel>
                                     <StackPanel Grid.Row="1" Orientation="Horizontal">
-                                        <Image Source="{Binding Mark1}" Width="50" Height="50" Margin="10 0 10 0"/>
-                                        <Image Source="{Binding Mark2}" Width="30" Height="30"/>
+                                        <Image Source="{Binding Keystone}" Width="50" Height="50" Margin="10 0 10 0"/>
+                                        <Image Source="{Binding Paths}" Width="30" Height="30"/>
                                     </StackPanel>
                                 </Grid>
                             </Grid>
@@ -48,15 +48,15 @@
                             </Border.Background>
                             <Grid>
                                 <StackPanel VerticalAlignment="Top">
+                                    <TextBlock Text="" Foreground="GreenYellow" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    <!--<TextBlock Text="태ㅔ스트" Foreground="GreenYellow" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                                     <TextBlock Text="태ㅔ스트" Foreground="GreenYellow" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                                    <TextBlock Text="태ㅔ스트" Foreground="GreenYellow" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                                    <TextBlock Text="태ㅔ스트" Foreground="GreenYellow" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                                    <TextBlock Text="태ㅔ스트" Foreground="GreenYellow" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    <TextBlock Text="태ㅔ스트" Foreground="GreenYellow" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>-->
                                 </StackPanel>
                                 <Border VerticalAlignment="Bottom" BorderBrush="#eeeeee" Margin="10 0 0 0" BorderThickness="0 1 0 0">
                                     <StackPanel Grid.Row="1" Orientation="Horizontal">
-                                        <Image Source="{Binding Mark1}" Width="50" Height="50" Margin="10 0 10 0"/>
-                                        <Image Source="{Binding Mark2}" Width="30" Height="30"/>
+                                        <Image Source="{Binding Keystone}" Width="50" Height="50" Margin="10 0 10 0"/>
+                                        <Image Source="{Binding Paths}" Width="30" Height="30"/>
                                     </StackPanel>
                                 </Border>
                             </Grid>

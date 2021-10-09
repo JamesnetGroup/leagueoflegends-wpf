@@ -221,15 +221,35 @@
     <None Remove="Images\Map\2.png" />
     <None Remove="Images\profile-01.png" />
 	<None Remove="Images\bg-winningteam.png" />
+	<None Remove="Images\Rune\Aftershock_rune.png" />
+	<None Remove="Images\Rune\Arcane_Comet_rune.png" />
+	<None Remove="Images\Rune\Conqueror_rune.png" />
+	<None Remove="Images\Rune\Dark_Harvest_rune.png" />
 	<None Remove="Images\Rune\Domination.png" />
+	<None Remove="Images\Rune\Domination_Loading.jpg" />
+	<None Remove="Images\Rune\Electrocute_rune.png" />
 	<None Remove="Images\Rune\environment.png" />
+	<None Remove="Images\Rune\Fleet_Footwork_rune.png" />
+	<None Remove="Images\Rune\Glacial_Augment_rune.png" />
+	<None Remove="Images\Rune\Grasp_of_the_Undying_rune.png" />
+	<None Remove="Images\Rune\Guardian_rune.png" />
+	<None Remove="Images\Rune\Hail_of_Blades_rune.png" />
 	<None Remove="Images\Rune\Inspiration.png" />
+	<None Remove="Images\Rune\Inspiration_Loading.jpg" />
+	<None Remove="Images\Rune\Lethal_Tempo_rune.png" />
+	<None Remove="Images\Rune\Phase_Rush_rune.png" />
 	<None Remove="Images\Rune\Precision.png" />
+	<None Remove="Images\Rune\Precision_Loading.jpg" />
+	<None Remove="Images\Rune\Predator_rune.png" />
+	<None Remove="Images\Rune\Press_the_Attack_rune.png" />
+	<None Remove="Images\Rune\Prototype-_Omnistone_rune.png" />
 	<None Remove="Images\Rune\Resolve.png" />
+	<None Remove="Images\Rune\Resolve_Loading.jpg" />
 	<None Remove="Images\Rune\Runes.png" />
-	<None Remove="Images\Rune\RUNETEST.png" />
 	<None Remove="Images\Rune\Sorcery.png" />
-	<None Remove="Images\Rune\Test.jpg" />
+	<None Remove="Images\Rune\Sorcery_Loading.jpg" />
+	<None Remove="Images\Rune\Summon_Aery_rune.png" />
+	<None Remove="Images\Rune\Unsealed_Spellbook_rune.png" />
 	<None Remove="Images\Spell\0.png" />
 	<None Remove="Images\Spell\1.png" />
 	<None Remove="Images\Spell\10.png" />
@@ -347,8 +367,29 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\Rune\Aftershock_rune.png" />
+    <Resource Include="Images\Rune\Arcane_Comet_rune.png" />
+    <Resource Include="Images\Rune\Conqueror_rune.png" />
+    <Resource Include="Images\Rune\Dark_Harvest_rune.png" />
+    <Resource Include="Images\Rune\Domination_Loading.jpg" />
+    <Resource Include="Images\Rune\Electrocute_rune.png" />
+    <Resource Include="Images\Rune\Fleet_Footwork_rune.png" />
+    <Resource Include="Images\Rune\Glacial_Augment_rune.png" />
+    <Resource Include="Images\Rune\Grasp_of_the_Undying_rune.png" />
+    <Resource Include="Images\Rune\Guardian_rune.png" />
+    <Resource Include="Images\Rune\Hail_of_Blades_rune.png" />
+    <Resource Include="Images\Rune\Inspiration_Loading.jpg" />
+    <Resource Include="Images\Rune\Lethal_Tempo_rune.png" />
+    <Resource Include="Images\Rune\Phase_Rush_rune.png" />
+    <Resource Include="Images\Rune\Precision_Loading.jpg" />
+    <Resource Include="Images\Rune\Predator_rune.png" />
+    <Resource Include="Images\Rune\Press_the_Attack_rune.png" />
+    <Resource Include="Images\Rune\Prototype-_Omnistone_rune.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Rune\Resolve_Loading.jpg" />
     <Resource Include="Images\Rune\Runes.png" />
-    <Resource Include="Images\Rune\RUNETEST.png" />
     <Resource Include="Images\Rune\Sorcery.png" />
   </ItemGroup>
 
@@ -395,7 +436,9 @@
     <Resource Include="Images\Rune\Inspiration.png" />
     <Resource Include="Images\Rune\Precision.png" />
     <Resource Include="Images\Rune\Resolve.png" />
-    <Resource Include="Images\Rune\Test.jpg" />
+    <Resource Include="Images\Rune\Sorcery_Loading.jpg" />
+    <Resource Include="Images\Rune\Summon_Aery_rune.png" />
+    <Resource Include="Images\Rune\Unsealed_Spellbook_rune.png" />
     <Resource Include="Images\Spell\2.png">
       <CopyToOutputDirectory></CopyToOutputDirectory>
     </Resource>

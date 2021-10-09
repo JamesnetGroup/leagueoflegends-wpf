@@ -12,10 +12,11 @@ namespace Lol.YamlDatabase.Controller
                         select new Runes
                         {
                             Seq = r.Seq,
-                            Name = ResourceHelper.ImgResource(r.Name),
-                            Test = ResourceHelper.ImgResource(r.Test),
-                            Mark1 = ResourceHelper.ImgResource(r.Mark1),
-                            Mark2 = ResourceHelper.ImgResource(r.Mark2)
+                            RuneStone = ResourceHelper.ImgResource(r.RuneStone),
+                            Rune = ResourceHelper.ImgResource(r.Rune),
+                            Keystone = ResourceHelper.ImgResource(r.Keystone),
+                            Paths = ResourceHelper.ImgResource(r.Paths),
+                            RunType = r.RunType
 
                         };
             return query.ToList();

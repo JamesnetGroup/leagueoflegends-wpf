@@ -3,9 +3,10 @@
     public class Runes
     {
         public int Seq { get; set; }
-        public string Name { get; set; }
-        public string Test { get; set; }
-        public string Mark1 { get; set; }
-        public string Mark2 { get; set; }
+        public string RuneStone { get; set; }
+        public string Rune { get; set; }
+        public string Keystone { get; set; }
+        public string Paths { get; set; }
+        public string RunType { get; set; }
     }
 }
