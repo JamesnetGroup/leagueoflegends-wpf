@@ -8,14 +8,14 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:ArrowTogglebutton}">
                     <Border Background="Transparent">
-                        <ctrls:RiotIcon x:Name="path" IconType="MenuLeft" Height="12" Width="12" Fill="#9F9A8B"/>
+                        <ctrls:RiotIcon x:Name="path" IconType="EXPAND" Height="26" Width="26" Fill="#9F9A8B"/>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="path" Property="Fill" Value="#EFE5D1"/>
                         </Trigger>
                         <Trigger Property="IsChecked" Value="True">
-                            <Setter TargetName="path" Property="IconType" Value="EXPAND"/>
+                            <Setter TargetName="path" Property="IconType" Value="MenuLeft"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

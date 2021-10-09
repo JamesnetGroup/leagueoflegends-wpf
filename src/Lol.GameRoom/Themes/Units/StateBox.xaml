@@ -27,28 +27,37 @@
                     <StackPanel>
                         <Border Width="320" Height="36" Background="{TemplateBinding Background}" BorderThickness="0 0 0 0.5" BorderBrush="#3C3C41" x:Name="bd">
                             <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <units:StateRadioButton x:Name="r1" GroupName="radio" Content="추천 현황" IsChecked="True"/>
-                                    <units:StateRadioButton x:Name="r2" GroupName="radio" Grid.Column="1" Content="초대 현황(1)"/>
-                                    <Border x:Name="bdBottom"
-                                            Height="3"
-                                            Background="#775A28"
-                                            Grid.ColumnSpan="2"
-                                            Width="160"
-                                            HorizontalAlignment="Left"
-                                            VerticalAlignment="Bottom">
-                                        <Border.RenderTransform>
-                                            <TransformGroup>
-                                                <TranslateTransform X="0" Y="0"/>
-                                            </TransformGroup>
-                                        </Border.RenderTransform>
-                                    </Border>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <units:StateRadioButton x:Name="r1"
+                                                        GroupName="radio"
+                                                        Content="추천 현황"
+                                                        IsChecked="True"/>
+                                <Grid Grid.Column="1">
+                                    <units:StateRadioButton x:Name="r2" GroupName="radio" Content="초대 현황(1)"/>
+                                    <units:ArrowTogglebutton x:Name="t1"
+                                                             HorizontalAlignment="Right"
+                                                             VerticalAlignment="Center"
+                                                             Margin="0 0 4 0"/>
                                 </Grid>
+                                <Border x:Name="bdBottom"
+                                        Height="2.5"
+                                        Background="#775A28"
+                                        Grid.ColumnSpan="2"
+                                        Width="160"
+                                        HorizontalAlignment="Left"
+                                        VerticalAlignment="Bottom">
+                                    <Border.RenderTransform>
+                                        <TransformGroup>
+                                            <TranslateTransform X="0" Y="0"/>
+                                        </TransformGroup>
+                                    </Border.RenderTransform>
+                                </Border>
+                            </Grid>
                         </Border>
-                        <Border Height="104" BorderThickness="0 0 0 1" BorderBrush="#775A28" Padding="6 6 0 6">
+                        <Border x:Name="bdContent" Height="104" BorderThickness="0 0 0 1" BorderBrush="#775A28" Padding="6 6 0 6">
                             <ctrls:BasicScroll>
                                 <StackPanel>
                                     <TextBlock Text="테스트" Foreground="GreenYellow"/>
@@ -67,11 +76,7 @@
                                     <TextBlock Text="테스트" Foreground="GreenYellow"/>
                                     <TextBlock Text="테스트" Foreground="GreenYellow"/>
                                     <TextBlock Text="테스트" Foreground="GreenYellow"/>
-                                    <TextBlock Text="테스트" Foreground="GreenYellow"/>
-                                    <TextBlock Text="테스트" Foreground="GreenYellow"/>
-                                    <TextBlock Text="테스트" Foreground="GreenYellow"/>
-                                    <TextBlock Text="테스트" Foreground="GreenYellow"/>
-                                    <TextBlock Text="테스트" Foreground="GreenYellow"/>
+                                    
                                 </StackPanel>
                             </ctrls:BasicScroll>
                         </Border>
@@ -84,6 +89,9 @@
                             <DataTrigger.EnterActions>
                                 <BeginStoryboard Storyboard="{StaticResource OnChecking}"/>
                             </DataTrigger.EnterActions>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=t1, Path=IsChecked}" Value="True">
+                            <Setter TargetName="bdContent" Property="Visibility" Value="Collapsed"/>
                         </DataTrigger>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="Background" Value="#11CCBD90"/>
