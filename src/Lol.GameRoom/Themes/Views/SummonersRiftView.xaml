@@ -1,13 +1,15 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:views="clr-namespace:Lol.GameRoom.UI.Views">
+                    xmlns:views="clr-namespace:Lol.GameRoom.UI.Views"
+                    xmlns:units="clr-namespace:Lol.GameRoom.UI.Units">
     <Style TargetType="{x:Type views:SummonersRiftView}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type views:SummonersRiftView}">
-                    <Border>
-                        <TextBlock Text="테스트" FontSize="30" Foreground="GreenYellow" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                    </Border>
+                    <Grid Margin="20 0 20 20">
+                        <units:RoomTitle/>
+                        <units:TopRightContent/>
+                    </Grid>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
