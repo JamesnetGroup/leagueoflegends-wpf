@@ -92,13 +92,13 @@
 
 <br />
 
-### `Collection`
-![image](https://user-images.githubusercontent.com/74305823/136051245-cd0d9c3f-507e-4e0f-b659-1a1253d3db74.png)
+### `Profile`
+![image](https://user-images.githubusercontent.com/74305823/136051365-b82be44d-318d-4ac4-81cc-02ba6c306776.png)
 
 <br>
 
-### `Profile`
-![image](https://user-images.githubusercontent.com/74305823/136051365-b82be44d-318d-4ac4-81cc-02ba6c306776.png)
+### `Collection`
+![image](https://user-images.githubusercontent.com/74305823/136051245-cd0d9c3f-507e-4e0f-b659-1a1253d3db74.png)
 
 <br>
 
