@@ -23,7 +23,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:RuneDetailListBoxItem}">
                     <Grid>
-                        <Border Style="{StaticResource BDR.ITEM.01}">
+                        <Border Style="{StaticResource BDR.ITEM.01}" x:Name="bd2">
                             <Grid>
                                 <Image Source="{Binding Rune}" Stretch="Fill" Opacity="0.8"/>
                                 <Grid>
@@ -32,40 +32,51 @@
                                         <RowDefinition Height="*"/>
                                     </Grid.RowDefinitions>
                                     <StackPanel>
-                                        <TextBlock Text="트위스티드페이트" FontWeight="Bold" FontSize="12" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10 180 0 0"/>
+                                        <TextBlock Text="{Binding Name}" FontWeight="Bold" FontSize="12" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10 180 0 0"/>
                                         <Border Style="{StaticResource BDR.TEMP}"/>
                                     </StackPanel>
                                     <StackPanel Grid.Row="1" Orientation="Horizontal">
-                                        <Image Source="{Binding Keystone}" Width="40" Height="45" Margin="2 2 5 2"/>
-                                        <Image Source="{Binding Paths}" Width="30" Height="30"/>
+                                        <Image Source="{Binding Keystone}" Width="40" Height="45" />
+                                        <Image Source="{Binding Paths}" Width="25" Height="25"/>
                                     </StackPanel>
                                 </Grid>
                             </Grid>
                         </Border>
-                        <Border Height="270" Margin="0 40 30 0"  Visibility="Collapsed" x:Name="bd">
+                        <Border Height="270" BorderBrush="Wheat" Margin="0 40 30 0"  Visibility="Collapsed" x:Name="bd">
                             <Border.Background>
                                 <SolidColorBrush Color="Black" Opacity="0.6"/>
                             </Border.Background>
                             <Grid>
-                                <StackPanel VerticalAlignment="Top">
-                                    <TextBlock Text="정밀" Foreground="#7D6F56" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                                    <TextBlock Text="정밀" Foreground="#7D6F56" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                                    <!--<TextBlock Text="태ㅔ스트" Foreground="GreenYellow" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                                    <TextBlock Text="태ㅔ스트" Foreground="GreenYellow" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                                    <TextBlock Text="태ㅔ스트" Foreground="GreenYellow" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>-->
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="9.4*"/>
+                                    <RowDefinition Height="0.6*"/>
+                                </Grid.RowDefinitions>
+                                <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
+                                    <TextBlock Text="{Binding Infor1}" Foreground="#C6A86E" FontSize="10" FontWeight="Bold" VerticalAlignment="Center" Margin="15 15 0 10"/>
+                                    <TextBlock Text="{Binding Infor2}" Foreground="#746F6F" FontSize="12" VerticalAlignment="Center"  Margin="15 0 0 0"/>
+                                    <TextBlock Text="{Binding Infor3}" Foreground="#746F6F" FontSize="10" VerticalAlignment="Center"  Margin="15 0 0 0"/>
+                                    <TextBlock Text="{Binding Infor4}" Foreground="#746F6F" FontSize="10" VerticalAlignment="Center" Margin="15 0 0 0"/>
+                                    <TextBlock Text="{Binding Infor5}" Foreground="#746F6F" FontSize="10" VerticalAlignment="Center" Margin="15 0 0 0"/>
+                                    <TextBlock Text="{Binding Infor6}" Foreground="#C6A86E" FontSize="10" VerticalAlignment="Center" Margin="15 10 0 10"/>
+                                    <TextBlock Text="{Binding Infor7}" Foreground="#746F6F" FontSize="10" VerticalAlignment="Center" Margin="15 0 0 0"/>
+                                    <TextBlock Text="{Binding Infor8}" Foreground="#746F6F" FontSize="10" VerticalAlignment="Center" Margin="15 0 0 0"/>
                                 </StackPanel>
                                 <Border VerticalAlignment="Bottom" BorderBrush="#eeeeee" Margin="10 0 0 0" BorderThickness="0 1 0 0">
                                     <StackPanel Grid.Row="1" Orientation="Horizontal">
-                                        <Image Source="{Binding Keystone}" Width="50" Height="50" Margin="10 0 10 0"/>
-                                        <Image Source="{Binding Paths}" Width="30" Height="30"/>
+                                        <Image Source="{Binding Keystone}" Width="40" Height="45" />
+                                        <Image Source="{Binding Paths}" Width="25" Height="25"/>
                                     </StackPanel>
                                 </Border>
+                                
                             </Grid>
                         </Border>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="bd" Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="bd2" Property="Visibility" Value="Collapsed"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

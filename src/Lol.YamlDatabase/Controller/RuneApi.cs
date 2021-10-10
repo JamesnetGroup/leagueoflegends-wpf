@@ -27,8 +27,16 @@ namespace Lol.YamlDatabase.Controller
                             Rune = ResourceHelper.ImgResource(r.Rune),
                             Keystone = ResourceHelper.ImgResource(r.Keystone),
                             Paths = ResourceHelper.ImgResource(r.Paths),
-                            RunType = r.RunType
-
+                            RunType = r.RunType,
+                            Name = r.Name,
+                            Infor1 = r.Infor1,
+                            Infor2 = r.Infor2,
+                            Infor3 = r.Infor3,
+                            Infor4 = r.Infor4,
+                            Infor5 = r.Infor5,
+                            Infor6 = r.Infor6,
+                            Infor7 = r.Infor7,
+                            Infor8= r.Infor8
                         };
             return query.ToList();
         }
