@@ -182,7 +182,7 @@
 		<Setter Property="ProfileTemplate" Value="{StaticResource PROFILE}"/>
 		<Setter Property="ContentTemplate" Value="{StaticResource CONTENT}"/>
 		<Setter Property="FriendsTemplate" Value="{StaticResource FRIENDS}"/>
-		<Setter Property="ModalTemplate" Value="{StaticResource MODAL}"/>
-	</Style>
+        <Setter Property="ModalTemplate" Value="{StaticResource MODAL}"/>
+    </Style>
 	
 </ResourceDictionary>
