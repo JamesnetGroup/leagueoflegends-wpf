@@ -2,6 +2,13 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:units="clr-namespace:Lol.GameRoom.UI.Units"
                     xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
+    <DataTemplate x:Key="LBX.FRIENDS">
+        <units:FriendList/>
+    </DataTemplate>
+    <DataTemplate x:Key="LBX.GUEST">
+        <units:GuestList/>
+    </DataTemplate>
+
     <Style TargetType="{x:Type units:StateBox}">
         <Setter Property="VerticalAlignment" Value="Bottom"/>
         <Setter Property="HorizontalAlignment" Value="Right"/>
@@ -46,7 +53,7 @@
                                                         Content="추천 현황"
                                                         IsChecked="True"/>
                                 <Grid Grid.Column="1">
-                                    <units:StateRadioButton x:Name="r2" GroupName="radio" Content="초대 현황(1)"/>
+                                    <units:StateRadioButton x:Name="r2" GroupName="radio" Content="초대 현황 (1)"/>
                                     <units:ArrowTogglebutton x:Name="t1"
                                                              HorizontalAlignment="Right"
                                                              VerticalAlignment="Center"
@@ -67,38 +74,13 @@
                                 </Border>
                             </Grid>
                         </Border>
-                        <Border x:Name="bdContent" Height="104" BorderThickness="0 0 0 1" BorderBrush="#775A28" Padding="6 6 0 6">
-                            <Border.RenderTransform>
-                                <TransformGroup>
-                                    <TranslateTransform X="0" Y="0"/>
-                                </TransformGroup>
-                            </Border.RenderTransform>
-                            <ctrls:BasicScroll>
-                                <StackPanel>
-                                    <TextBlock Text="테스트" Foreground="GreenYellow"/>
-                                    <TextBlock Text="테스트" Foreground="GreenYellow"/>
-                                    <TextBlock Text="테스트" Foreground="GreenYellow"/>
-                                    <TextBlock Text="테스트" Foreground="GreenYellow"/>
-                                    <TextBlock Text="테스트" Foreground="GreenYellow"/>
-                                    <TextBlock Text="테스트" Foreground="GreenYellow"/>
-                                    <TextBlock Text="테스트" Foreground="GreenYellow"/>
-                                    <TextBlock Text="테스트" Foreground="GreenYellow"/>
-                                    <TextBlock Text="테스트" Foreground="GreenYellow"/>
-                                    <TextBlock Text="테스트" Foreground="GreenYellow"/>
-                                    <TextBlock Text="테스트" Foreground="GreenYellow"/>
-                                    <TextBlock Text="테스트" Foreground="GreenYellow"/>
-                                    <TextBlock Text="테스트" Foreground="GreenYellow"/>
-                                    <TextBlock Text="테스트" Foreground="GreenYellow"/>
-                                    <TextBlock Text="테스트" Foreground="GreenYellow"/>
-                                    <TextBlock Text="테스트" Foreground="GreenYellow"/>
-                                    
-                                </StackPanel>
-                            </ctrls:BasicScroll>
-
+                        <Border x:Name="bdContent" Height="104" BorderThickness="0 0 0 1" BorderBrush="#775A28" Padding="0 2 0 6">
+                            <ContentPresenter x:Name="content" ContentSource="DataContext"/>
                         </Border>
                     </StackPanel>
                     <ControlTemplate.Triggers>
                         <DataTrigger Binding="{Binding ElementName=r1, Path=IsChecked}" Value="True">
+                            <Setter TargetName="content" Property="ContentTemplate" Value="{StaticResource LBX.FRIENDS}"/>
                             <DataTrigger.ExitActions>
                                 <BeginStoryboard Storyboard="{StaticResource OnUnchecking}"/>
                             </DataTrigger.ExitActions>
@@ -106,8 +88,10 @@
                                 <BeginStoryboard Storyboard="{StaticResource OnChecking}"/>
                             </DataTrigger.EnterActions>
                         </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=r2, Path=IsChecked}" Value="True">
+                            <Setter TargetName="content" Property="ContentTemplate" Value="{StaticResource LBX.GUEST}"/>
+                        </DataTrigger>
                         <DataTrigger Binding="{Binding ElementName=t1, Path=IsChecked}" Value="True">
-                            <!--<Setter TargetName="bdContent" Property="Visibility" Value="Collapsed"/>-->
                             <DataTrigger.ExitActions>
                                 <BeginStoryboard Storyboard="{StaticResource TOnUnchecking}"/>
                             </DataTrigger.ExitActions>

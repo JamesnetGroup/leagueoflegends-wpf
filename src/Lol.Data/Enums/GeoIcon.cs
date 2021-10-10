@@ -57,6 +57,7 @@
         ArrowLowLeft,
         Trophy,
         More,
-        Trash
+        Trash,
+        PlusThick
     }
 }

@@ -26,7 +26,7 @@
                         <units:TopRightContent/>
                         <ctrls:RiotTextBox Style="{StaticResource RIOT.TXB}"/>
                         <ctrls:RiotGameButtonn Style="{StaticResource RIOT.GAMEBTN}"/>
-                        <units:StateBox />
+                        <units:StateBox Margin="0 0 16 0"/>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
