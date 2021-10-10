@@ -12,8 +12,8 @@
 
     <Style TargetType="{x:Type Border}" x:Key="BDR.TEMP">
         <Setter Property="BorderThickness" Value="0.5"/>
-        <Setter Property="BorderBrush" Value="#474C45"/>
-        <Setter Property="Margin" Value="10 0 0 0"/>
+        <Setter Property="BorderBrush" Value="#7D6F56"/>
+        <Setter Property="Margin" Value="10 10 0 0"/>
     </Style>
 
 
@@ -25,18 +25,18 @@
                     <Grid>
                         <Border Style="{StaticResource BDR.ITEM.01}">
                             <Grid>
-                                <Image Source="{Binding Rune}" Stretch="Fill"/>
+                                <Image Source="{Binding Rune}" Stretch="Fill" Opacity="0.8"/>
                                 <Grid>
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="auto"/>
                                         <RowDefinition Height="*"/>
                                     </Grid.RowDefinitions>
                                     <StackPanel>
-                                        <TextBlock Text="트위스티드페이트" FontWeight="Bold" FontSize="10" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10 180 0 0"/>
+                                        <TextBlock Text="트위스티드페이트" FontWeight="Bold" FontSize="12" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10 180 0 0"/>
                                         <Border Style="{StaticResource BDR.TEMP}"/>
                                     </StackPanel>
                                     <StackPanel Grid.Row="1" Orientation="Horizontal">
-                                        <Image Source="{Binding Keystone}" Width="50" Height="50" Margin="10 0 10 0"/>
+                                        <Image Source="{Binding Keystone}" Width="40" Height="45" Margin="2 2 5 2"/>
                                         <Image Source="{Binding Paths}" Width="30" Height="30"/>
                                     </StackPanel>
                                 </Grid>
@@ -48,7 +48,8 @@
                             </Border.Background>
                             <Grid>
                                 <StackPanel VerticalAlignment="Top">
-                                    <TextBlock Text="" Foreground="GreenYellow" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    <TextBlock Text="정밀" Foreground="#7D6F56" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                                    <TextBlock Text="정밀" Foreground="#7D6F56" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                                     <!--<TextBlock Text="태ㅔ스트" Foreground="GreenYellow" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                                     <TextBlock Text="태ㅔ스트" Foreground="GreenYellow" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                                     <TextBlock Text="태ㅔ스트" Foreground="GreenYellow" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center"/>-->

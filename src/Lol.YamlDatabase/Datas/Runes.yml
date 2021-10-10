@@ -1,36 +1,12 @@
-﻿- seq: 1  
+﻿- seq: 0  
   runeStone: Rune,Runes
-  rune: Rune,Domination_Loading
-  keystone : Rune,Dark_Harvest_rune
-  paths : Rune,Precision
-  runType : 1
-- seq: 2
+- seq: 1
   runeStone: Rune,Precision
-  rune: Rune,Precision_Loading
-  keystone : Rune,Glacial_Augment_rune
-  paths : Rune,Domination
-  runType : 2
-- seq: 3  
+- seq: 2  
   runeStone: Rune,Domination
-  rune: Rune,Resolve_Loading
-  keystone : Rune,Grasp_of_the_Undying_rune
-  paths : Rune,Sorcery
-  runType : 3
-- seq: 4  
+- seq: 3  
   runeStone: Rune,Sorcery
-  rune: Rune,Sorcery_Loading
-  keystone : Rune,Guardian_rune
-  paths : Rune,Resolve
-  runType : 4
-- seq: 5  
+- seq: 4  
   runeStone: Rune,Resolve
-  rune: Rune,Inspiration_Loading
-  keystone : Rune,Glacial_Augment_rune
-  paths : Rune,Resolve
-  runType : 5
-- seq: 6  
+- seq: 5  
   runeStone: Rune,Inspiration
-  rune: Rune,Domination_Loading
-  keystone : Rune,Electrocute_rune
-  paths : Rune,Inspiration
-  runType : 1

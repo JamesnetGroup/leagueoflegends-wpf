@@ -16,6 +16,7 @@ namespace Lol.Collection.Local.ViewModel
         #region Runes
 
         public List<Runes> Runes { get; set; }
+        public List<RunesDetail> RunesDetail { get; set; }
         #endregion
 
 
@@ -34,6 +35,7 @@ namespace Lol.Collection.Local.ViewModel
         public RuneViewModel()
         {
             Runes = new RuneApi().GetRunes();
+            RunesDetail = new RuneApi().GetRunesDetail();
             _currentRune = Runes.First();
 
         }
