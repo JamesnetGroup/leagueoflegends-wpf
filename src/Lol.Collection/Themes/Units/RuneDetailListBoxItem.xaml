@@ -3,6 +3,12 @@
                     xmlns:units="clr-namespace:Lol.Collection.UI.Units"
                     xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
 
+    <LinearGradientBrush x:Key="BDR.PARENT" StartPoint="0.5, 0" EndPoint="0.5, 1">
+        <GradientStop Color="#FDFDFD" Offset="0"/>
+        <GradientStop Color="#E4D6BA" Offset="0.5"/>
+        <GradientStop Color="#C8AA6E" Offset="1"/>
+    </LinearGradientBrush>
+
     <Style TargetType="{x:Type Border}" x:Key="BDR.ITEM.01">
         <Setter Property="Height" Value="270"/>
         <Setter Property="BorderThickness" Value="2"/>
@@ -21,59 +27,35 @@
         <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type units:RuneDetailListBoxItem}">    
-                    <Grid>
-                        <Border Style="{StaticResource BDR.ITEM.01}">
-                            <Grid>
-                                <Image Source="{Binding Rune}" Stretch="Fill" Opacity="0.8"/>
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="auto"/>
-                                        <RowDefinition Height="*"/>
-                                    </Grid.RowDefinitions>
-                                    <StackPanel>
-                                        <TextBlock Text="{Binding Name}" FontWeight="Bold" FontSize="12" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10 180 0 0"/>
-                                        <Border Style="{StaticResource BDR.TEMP}"/>
-                                    </StackPanel>
-                                    <StackPanel Grid.Row="1" Orientation="Horizontal">
-                                        <Image Source="{Binding Keystone}" Width="40" Height="45" />
-                                        <Image Source="{Binding Paths}" Width="25" Height="25"/>
-                                    </StackPanel>
-                                </Grid>
-                            </Grid>
-                        </Border>
-                        <Border Height="270" BorderBrush="#C6A86E" Margin="0 40 30 0"  Visibility="Collapsed" x:Name="bd">
+                <ControlTemplate TargetType="{x:Type units:RuneDetailListBoxItem}">
+                    <Grid Margin="0 40 30 0" Height="270">
+                        <Image Source="{Binding Rune}" Stretch="UniformToFill" Opacity="0.8"/>
+                        <Border Height="270" BorderBrush="{StaticResource BDR.PARENT}" Visibility="Collapsed" x:Name="bd1" BorderThickness="1">
                             <Border.Background>
                                 <SolidColorBrush Color="Black" Opacity="0.6"/>
                             </Border.Background>
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="9.4*"/>
-                                    <RowDefinition Height="0.6*"/>
-                                </Grid.RowDefinitions>
-                                <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
-                                    <TextBlock Text="{Binding Infor1}" x:Name="text1" Foreground="#C6A86E" FontSize="10" FontWeight="Bold" VerticalAlignment="Center" Margin="15 15 0 10"/>
-                                    <TextBlock Text="{Binding Infor2}" Foreground="#746F6F" FontSize="12" VerticalAlignment="Center"  Margin="15 0 0 0"/>
-                                    <TextBlock Text="{Binding Infor3}" Foreground="#746F6F" FontSize="10" VerticalAlignment="Center"  Margin="15 0 0 0"/>
-                                    <TextBlock Text="{Binding Infor4}" Foreground="#746F6F" FontSize="10" VerticalAlignment="Center" Margin="15 0 0 0"/>
-                                    <TextBlock Text="{Binding Infor5}" Foreground="#746F6F" FontSize="10" VerticalAlignment="Center" Margin="15 0 0 0"/>
-                                    <TextBlock Text="{Binding Infor6}" x:Name="text2" Foreground="#C6A86E" FontSize="10" VerticalAlignment="Center" Margin="15 10 0 10"/>
-                                    <TextBlock Text="{Binding Infor7}" Foreground="#746F6F" FontSize="10" VerticalAlignment="Center" Margin="15 0 0 0"/>
-                                    <TextBlock Text="{Binding Infor8}" Foreground="#746F6F" FontSize="10" VerticalAlignment="Center" Margin="15 0 0 0"/>
-                                </StackPanel>
-                                <Border VerticalAlignment="Bottom" BorderBrush="#eeeeee" Margin="10 0 0 0" BorderThickness="0 1 0 0">
-                                    <StackPanel Grid.Row="1" Orientation="Horizontal">
-                                        <Image Source="{Binding Keystone}" Width="40" Height="45" />
-                                        <Image Source="{Binding Paths}" Width="25" Height="25"/>
-                                    </StackPanel>
-                                </Border>
-                                
-                            </Grid>
+                            <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
+                                <TextBlock Text="{Binding Infor1}" x:Name="text1" Foreground="#C6A86E" FontSize="10" FontWeight="Bold" VerticalAlignment="Center" Margin="15 15 0 10"/>
+                                <TextBlock Text="{Binding Infor2}" Foreground="#746F6F" FontSize="12" VerticalAlignment="Center"  Margin="15 0 0 0"/>
+                                <TextBlock Text="{Binding Infor3}" Foreground="#746F6F" FontSize="10" VerticalAlignment="Center"  Margin="15 0 0 0"/>
+                                <TextBlock Text="{Binding Infor4}" Foreground="#746F6F" FontSize="10" VerticalAlignment="Center" Margin="15 0 0 0"/>
+                                <TextBlock Text="{Binding Infor5}" Foreground="#746F6F" FontSize="10" VerticalAlignment="Center" Margin="15 0 0 0"/>
+                                <TextBlock Text="{Binding Infor6}" x:Name="text2" Foreground="#C6A86E" FontSize="10" VerticalAlignment="Center" Margin="15 10 0 10"/>
+                                <TextBlock Text="{Binding Infor7}" Foreground="#746F6F" FontSize="10" VerticalAlignment="Center" Margin="15 0 0 0"/>
+                                <TextBlock Text="{Binding Infor8}" Foreground="#746F6F" FontSize="10" VerticalAlignment="Center" Margin="15 0 0 0"/>
+                            </StackPanel>
+                        </Border>
+                        <Border x:Name="bd2" VerticalAlignment="Bottom" BorderBrush="#4A4B50" Margin="10 0 0 0" BorderThickness="0 1 0 0">
+                            <StackPanel Grid.Row="1" Orientation="Horizontal">
+                                <Image Source="{Binding Keystone}" Width="40" Height="45" />
+                                <Image Source="{Binding Paths}" Width="25" Height="25"/>
+                            </StackPanel>
                         </Border>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="bd" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="bd1" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="bd2" Property="BorderBrush" Value="#756C54"/>
                         </Trigger>
                         <DataTrigger Binding="{Binding Seq}" Value="0">
                             <Setter TargetName="text1" Property="Foreground" Value="Red"/>
