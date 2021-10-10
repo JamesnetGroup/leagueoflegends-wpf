@@ -36,9 +36,14 @@ namespace Lol.YamlDatabase.Controller
                             Infor5 = r.Infor5,
                             Infor6 = r.Infor6,
                             Infor7 = r.Infor7,
-                            Infor8= r.Infor8
+                            Infor8 = r.Infor8
                         };
             return query.ToList();
+        }
+
+        public List<RunesDetail> GetRunesDetail(int seq)
+        {
+            return GetRunesDetail().Where(x=>x.RunType == seq.ToString()).ToList();
         }
     }
 }

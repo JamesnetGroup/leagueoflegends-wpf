@@ -21,11 +21,11 @@
             foreach (FileInfo row in di.GetFiles())
             {
                 if (name == Path.GetFileNameWithoutExtension(row.Name))
+                {
                     return $"/Lol.Resources;component/Images/{folder}/{row.Name}";
+                }
             }
-
             return "";
-
         }
     }
 }
