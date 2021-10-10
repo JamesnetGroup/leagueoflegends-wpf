@@ -27,6 +27,7 @@
                         <ctrls:RiotTextBox Style="{StaticResource RIOT.TXB}"/>
                         <ctrls:RiotGameButtonn Style="{StaticResource RIOT.GAMEBTN}"/>
                         <units:StateBox Margin="0 0 16 0"/>
+                        <units:InviteButtonGrid/>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
