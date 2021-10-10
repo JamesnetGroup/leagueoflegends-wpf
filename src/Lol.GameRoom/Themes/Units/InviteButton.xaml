@@ -39,11 +39,13 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:InviteButton}">
-                    <Border x:Name="bd" Style="{StaticResource BD.PARENT}"
-                            Background="{TemplateBinding Background}"
-                            BorderBrush="{TemplateBinding BorderBrush}">
-                        <ctrls:RiotIcon Style="{StaticResource RIOT.ICON}"/>
-                    </Border>
+                    <Grid>
+                        <Border x:Name="bd" Style="{StaticResource BD.PARENT}"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}">
+                            <ctrls:RiotIcon Style="{StaticResource RIOT.ICON}"/>
+                        </Border>
+                    </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="Background" Value="{StaticResource BG.PARENT.OVER}"/>
