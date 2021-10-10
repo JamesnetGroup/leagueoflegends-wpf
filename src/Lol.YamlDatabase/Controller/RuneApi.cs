@@ -13,6 +13,17 @@ namespace Lol.YamlDatabase.Controller
                         {
                             Seq = r.Seq,
                             RuneStone = ResourceHelper.ImgResource(r.RuneStone),
+
+                        };
+            return query.ToList();
+        }
+
+        public List<RunesDetail> GetRunesDetail()
+        {
+            var query = from r in Db.RunesDetail
+                        select new RunesDetail
+                        {
+                            Seq = r.Seq,
                             Rune = ResourceHelper.ImgResource(r.Rune),
                             Keystone = ResourceHelper.ImgResource(r.Keystone),
                             Paths = ResourceHelper.ImgResource(r.Paths),
