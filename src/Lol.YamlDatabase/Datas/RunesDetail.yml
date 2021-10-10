@@ -72,7 +72,7 @@
   rune: Rune,Domination_Loading
   keystone : Rune,Electrocute_rune
   paths : Rune,Inspiration
-  runType : 6
+  runType : 5
   name : AP
   infor1 : 마법
   infor2 : ◆ 신비로운 유성

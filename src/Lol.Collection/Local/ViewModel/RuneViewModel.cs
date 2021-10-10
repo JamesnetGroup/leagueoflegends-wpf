@@ -1,6 +1,7 @@
 ﻿using Lol.Foundation.Mvvm;
 using Lol.YamlDatabase.Controller;
 using Lol.YamlDatabase.Entites.Schema;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -11,6 +12,7 @@ namespace Lol.Collection.Local.ViewModel
         #region Variables 
 
         private Runes _currentRune;
+        private List<RunesDetail> _currentRuneDetail;
         #endregion
 
         #region Runes
@@ -19,7 +21,6 @@ namespace Lol.Collection.Local.ViewModel
         public List<RunesDetail> RunesDetail { get; set; }
         #endregion
 
-
         #region CurrentRune
 
         public Runes CurrentRune
@@ -27,8 +28,13 @@ namespace Lol.Collection.Local.ViewModel
             get => _currentRune;
             set { _currentRune = value; OnPropertyChanged(); RuneChanged(value); }
         }
+        
+        public List<RunesDetail> CurrentRuneDetail
+        {
+            get => _currentRuneDetail;
+            set { _currentRuneDetail = value; OnPropertyChanged(); RuneDetailChanged(value); }
+        }
         #endregion
-
 
         #region Constructor
 
@@ -44,6 +50,20 @@ namespace Lol.Collection.Local.ViewModel
         #region RuneChanged
 
         private void RuneChanged(Runes value)
+        {
+            int s = value.Seq;
+
+            List<RunesDetail> dd = RunesDetail.Where(x => x.RunType == s.ToString()).ToList();
+
+            RunesDetail = dd;
+            OnPropertyChanged();
+
+        }
+        #endregion
+
+        #region RuneDetailChanged
+
+        private void RuneDetailChanged(List<RunesDetail> value)
         {
 
         }
