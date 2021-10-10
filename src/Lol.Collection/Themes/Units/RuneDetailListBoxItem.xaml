@@ -21,9 +21,9 @@
         <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type units:RuneDetailListBoxItem}">
+                <ControlTemplate TargetType="{x:Type units:RuneDetailListBoxItem}">    
                     <Grid>
-                        <Border Style="{StaticResource BDR.ITEM.01}" x:Name="bd2">
+                        <Border Style="{StaticResource BDR.ITEM.01}">
                             <Grid>
                                 <Image Source="{Binding Rune}" Stretch="Fill" Opacity="0.8"/>
                                 <Grid>
@@ -42,7 +42,7 @@
                                 </Grid>
                             </Grid>
                         </Border>
-                        <Border Height="270" BorderBrush="Wheat" Margin="0 40 30 0"  Visibility="Collapsed" x:Name="bd">
+                        <Border Height="270" BorderBrush="#C6A86E" Margin="0 40 30 0"  Visibility="Collapsed" x:Name="bd">
                             <Border.Background>
                                 <SolidColorBrush Color="Black" Opacity="0.6"/>
                             </Border.Background>
@@ -74,9 +74,6 @@
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="bd" Property="Visibility" Value="Visible"/>
-                        </Trigger>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="bd2" Property="Visibility" Value="Collapsed"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
