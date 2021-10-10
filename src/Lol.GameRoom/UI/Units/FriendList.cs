@@ -3,7 +3,7 @@ using System.Windows.Controls;
 
 namespace Lol.GameRoom.UI.Units
 {
-    public class FriendList : Control
+    public class FriendList : ListBox
     {
         #region DefaultStyleKey
 
