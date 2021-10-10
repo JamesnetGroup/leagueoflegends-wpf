@@ -217,6 +217,7 @@
     <None Remove="Images\lol-thumb-03.png" />
     <None Remove="Images\lol-thumb-04.png" />
     <None Remove="Images\lol-thumb-05.png" />
+    <None Remove="Images\map-icon.png" />
     <None Remove="Images\Map\1.png" />
     <None Remove="Images\Map\2.png" />
     <None Remove="Images\profile-01.png" />
@@ -367,6 +368,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\map-icon.png" />
     <Resource Include="Images\Rune\Aftershock_rune.png" />
     <Resource Include="Images\Rune\Arcane_Comet_rune.png" />
     <Resource Include="Images\Rune\Conqueror_rune.png" />

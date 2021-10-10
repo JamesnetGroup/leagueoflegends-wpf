@@ -58,6 +58,9 @@
         Trophy,
         More,
         Trash,
-        PlusThick
+        PlusThick,
+        NumericFiveCircle,
+        Fire,
+        Shield,
     }
 }
