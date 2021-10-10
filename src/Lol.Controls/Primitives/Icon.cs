@@ -88,6 +88,9 @@ namespace Lol.Controls.Primitives
                 case GeoIcon.More: icon.Data = IconData.MORE.ToGeometry(); break;
                 case GeoIcon.Trash: icon.Data = IconData.TRASH.ToGeometry(); break;
                 case GeoIcon.PlusThick: icon.Data = IconData.PLUS_THICK.ToGeometry(); break;
+                case GeoIcon.NumericFiveCircle: icon.Data = IconData.NUMERIC_FIVE_CIRCLE.ToGeometry(); break;
+                case GeoIcon.Fire: icon.Data = IconData.FIRE.ToGeometry(); break;
+                case GeoIcon.Shield: icon.Data = IconData.SHIELD.ToGeometry(); break;
 
                 case GeoIcon.None:
                     break;
