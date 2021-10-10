@@ -11,13 +11,17 @@ namespace Lol.Collection.Local.ViewModel
         #region Variables 
 
         private Runes _currentRune;
-        private List<RunesDetail> _currentRuneDetail;
+        private List<RunesDetail> _runesDetail;
         #endregion
 
         #region Runes
 
         public List<Runes> Runes { get; set; }
-        public List<RunesDetail> RunesDetail { get; set; }
+        public List<RunesDetail> RunesDetail
+        {
+            get => _runesDetail;
+            set { _runesDetail = value; OnPropertyChanged(); }
+        }
         #endregion
 
         #region CurrentRune
@@ -27,12 +31,7 @@ namespace Lol.Collection.Local.ViewModel
             get => _currentRune;
             set { _currentRune = value; OnPropertyChanged(); RuneChanged(value); }
         }
-        
-        public List<RunesDetail> CurrentRuneDetail
-        {
-            get => _currentRuneDetail;
-            set { _currentRuneDetail = value; OnPropertyChanged(); RuneDetailChanged(value); }
-        }
+
         #endregion
 
         #region Constructor
@@ -42,7 +41,6 @@ namespace Lol.Collection.Local.ViewModel
             Runes = new RuneApi().GetRunes();
             RunesDetail = new RuneApi().GetRunesDetail();
             _currentRune = Runes.First();
-
         }
         #endregion
 
@@ -50,13 +48,14 @@ namespace Lol.Collection.Local.ViewModel
 
         private void RuneChanged(Runes value)
         {
-            int s = value.Seq;
-
-            List<RunesDetail> dd = RunesDetail.Where(x => x.RunType == s.ToString()).ToList();
-
-            RunesDetail = dd;
-            OnPropertyChanged();
-
+            if (value.Seq == 0)
+            {
+                RunesDetail = new RuneApi().GetRunesDetail();
+            }
+            else
+            {
+                RunesDetail = new RuneApi().GetRunesDetail(value.Seq);
+            }
         }
         #endregion
 

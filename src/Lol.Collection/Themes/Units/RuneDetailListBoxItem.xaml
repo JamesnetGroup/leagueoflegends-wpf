@@ -52,12 +52,12 @@
                                     <RowDefinition Height="0.6*"/>
                                 </Grid.RowDefinitions>
                                 <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
-                                    <TextBlock Text="{Binding Infor1}" Foreground="#C6A86E" FontSize="10" FontWeight="Bold" VerticalAlignment="Center" Margin="15 15 0 10"/>
+                                    <TextBlock Text="{Binding Infor1}" x:Name="text1" Foreground="#C6A86E" FontSize="10" FontWeight="Bold" VerticalAlignment="Center" Margin="15 15 0 10"/>
                                     <TextBlock Text="{Binding Infor2}" Foreground="#746F6F" FontSize="12" VerticalAlignment="Center"  Margin="15 0 0 0"/>
                                     <TextBlock Text="{Binding Infor3}" Foreground="#746F6F" FontSize="10" VerticalAlignment="Center"  Margin="15 0 0 0"/>
                                     <TextBlock Text="{Binding Infor4}" Foreground="#746F6F" FontSize="10" VerticalAlignment="Center" Margin="15 0 0 0"/>
                                     <TextBlock Text="{Binding Infor5}" Foreground="#746F6F" FontSize="10" VerticalAlignment="Center" Margin="15 0 0 0"/>
-                                    <TextBlock Text="{Binding Infor6}" Foreground="#C6A86E" FontSize="10" VerticalAlignment="Center" Margin="15 10 0 10"/>
+                                    <TextBlock Text="{Binding Infor6}" x:Name="text2" Foreground="#C6A86E" FontSize="10" VerticalAlignment="Center" Margin="15 10 0 10"/>
                                     <TextBlock Text="{Binding Infor7}" Foreground="#746F6F" FontSize="10" VerticalAlignment="Center" Margin="15 0 0 0"/>
                                     <TextBlock Text="{Binding Infor8}" Foreground="#746F6F" FontSize="10" VerticalAlignment="Center" Margin="15 0 0 0"/>
                                 </StackPanel>
@@ -75,6 +75,10 @@
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="bd" Property="Visibility" Value="Visible"/>
                         </Trigger>
+                        <DataTrigger Binding="{Binding Seq}" Value="0">
+                            <Setter TargetName="text1" Property="Foreground" Value="Red"/>
+                            <Setter TargetName="text2" Property="Foreground" Value="Red"/>
+                        </DataTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
