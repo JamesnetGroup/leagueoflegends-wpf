@@ -23,6 +23,16 @@
                                 <SplineDoubleKeyFrame KeyTime="00:00:0.3" Value="160" />
                             </DoubleAnimationUsingKeyFrames>
                         </Storyboard>
+                        <Storyboard x:Key="TOnChecking" Storyboard.TargetName="bdContent">
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Height">
+                                <SplineDoubleKeyFrame KeyTime="00:00:0.15" Value="0" />
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                        <Storyboard x:Key="TOnUnchecking" Storyboard.TargetName="bdContent">
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Height">
+                                <SplineDoubleKeyFrame KeyTime="00:00:0.15" Value="104" />
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
                     </ControlTemplate.Resources>
                     <StackPanel>
                         <Border Width="320" Height="36" Background="{TemplateBinding Background}" BorderThickness="0 0 0 0.5" BorderBrush="#3C3C41" x:Name="bd">
@@ -58,6 +68,11 @@
                             </Grid>
                         </Border>
                         <Border x:Name="bdContent" Height="104" BorderThickness="0 0 0 1" BorderBrush="#775A28" Padding="6 6 0 6">
+                            <Border.RenderTransform>
+                                <TransformGroup>
+                                    <TranslateTransform X="0" Y="0"/>
+                                </TransformGroup>
+                            </Border.RenderTransform>
                             <ctrls:BasicScroll>
                                 <StackPanel>
                                     <TextBlock Text="테스트" Foreground="GreenYellow"/>
@@ -79,6 +94,7 @@
                                     
                                 </StackPanel>
                             </ctrls:BasicScroll>
+
                         </Border>
                     </StackPanel>
                     <ControlTemplate.Triggers>
@@ -91,7 +107,13 @@
                             </DataTrigger.EnterActions>
                         </DataTrigger>
                         <DataTrigger Binding="{Binding ElementName=t1, Path=IsChecked}" Value="True">
-                            <Setter TargetName="bdContent" Property="Visibility" Value="Collapsed"/>
+                            <!--<Setter TargetName="bdContent" Property="Visibility" Value="Collapsed"/>-->
+                            <DataTrigger.ExitActions>
+                                <BeginStoryboard Storyboard="{StaticResource TOnUnchecking}"/>
+                            </DataTrigger.ExitActions>
+                            <DataTrigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource TOnChecking}"/>
+                            </DataTrigger.EnterActions>
                         </DataTrigger>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="Background" Value="#11CCBD90"/>

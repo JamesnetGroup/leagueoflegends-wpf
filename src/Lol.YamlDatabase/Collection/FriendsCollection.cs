@@ -1,8 +1,10 @@
 ﻿using Lol.YamlDatabase.Entites.Schema;
 using System.Collections.Generic;
 
-namespace Lol.Main.Local.Collection
+namespace Lol.YamlDatabase.Collection
 {
+    //TODO: [Kevin] Lol.Main.Local.Collection 에서 변경 방생성 할 때 FriendsCollection 데이터가 필요
+    //              일단 Lol.YamlDatabase에 옮겨놓긴 했으나 여기에 놓고 사용해야 하는지는 추후 협의
     public class FriendsCollection : List<IFriendsList>
     {
         #region GeneralFriendsCount

@@ -8,7 +8,6 @@ using Lol.Data.Main;
 using Lol.Foundation.Mvvm;
 using Lol.Foundation.Riotcore;
 using Lol.LayoutSupport.Controls;
-using Lol.Main.Local.Collection;
 using Lol.Main.Local.Work;
 using Lol.Main.UI.Units;
 using Lol.MyShop.UI.Views;
@@ -29,6 +28,7 @@ using Lol.GameRoom.UI.Views;
 using Lol.GameRoom.Local.ViewModels;
 using Lol.YamlDatabase.Controller;
 using Lol.YamlDatabase.Entites.Schema;
+using Lol.YamlDatabase.Collection;
 
 namespace Lol.Main.Local.ViewModel
 {
@@ -186,7 +186,7 @@ namespace Lol.Main.Local.ViewModel
                     27 => new store.ChampionsView().SetVM(new storeVM.ChampionsViewModel()),
                     33 => new HistoryView().SetVM(new HistoryViewModel()),
                     37 => new PVPView().SetVM(new PVPViewModel(PvpConfirm)),
-                    42 => new SummonersRiftView().SetVM(new SummonersRiftViewModel()),
+                    42 => new SummonersRiftView().SetVM(new SummonersRiftViewModel(Friends)),
                     _ => new EmptyContent()
                 };
 
