@@ -11,16 +11,20 @@ namespace Lol.Collection.Local.ViewModel
         #region Variables 
 
         private Runes _currentRune;
-        private List<RunesDetail> _runesDetail;
+        private List<RuneDetail> _runeDetail;
         #endregion
 
         #region Runes
 
         public List<Runes> Runes { get; set; }
-        public List<RunesDetail> RunesDetail
+        #endregion
+
+        #region RuneDetail
+
+        public List<RuneDetail> RuneDetail
         {
-            get => _runesDetail;
-            set { _runesDetail = value; OnPropertyChanged(); }
+            get => _runeDetail;
+            set { _runeDetail = value; OnPropertyChanged(); }
         }
         #endregion
 
@@ -39,7 +43,7 @@ namespace Lol.Collection.Local.ViewModel
         public RuneViewModel()
         {
             Runes = new RuneApi().GetRunes();
-            RunesDetail = new RuneApi().GetRunesDetail();
+            RuneDetail = new RuneApi().GetRuneDetail();
             _currentRune = Runes.First();
         }
         #endregion
@@ -50,21 +54,14 @@ namespace Lol.Collection.Local.ViewModel
         {
             if (value.Seq == 0)
             {
-                RunesDetail = new RuneApi().GetRunesDetail();
+                RuneDetail = new RuneApi().GetRuneDetail();
             }
             else
             {
-                RunesDetail = new RuneApi().GetRunesDetail(value.Seq);
+                RuneDetail = new RuneApi().GetRunesDetail(value.Seq);
             }
         }
         #endregion
 
-        #region RuneDetailChanged
-
-        private void RuneDetailChanged(List<RunesDetail> value)
-        {
-
-        }
-        #endregion
     }
 }

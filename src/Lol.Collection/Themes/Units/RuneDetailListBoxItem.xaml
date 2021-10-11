@@ -12,7 +12,6 @@
     <Style TargetType="{x:Type Border}" x:Key="BDR.ITEM.01">
         <Setter Property="Height" Value="270"/>
         <Setter Property="BorderThickness" Value="2"/>
-        <!--<Setter Property="BorderBrush" Value="GreenYellow"/>-->
         <Setter Property="Margin" Value="0 40 30 0"/>
     </Style>
 
@@ -29,20 +28,20 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:RuneDetailListBoxItem}">
                     <Grid Margin="0 40 30 0" Height="270">
-                        <Image Source="{Binding Rune}" Stretch="UniformToFill" Opacity="0.8"/>
+                        <Image Source="{Binding Rune}" Stretch="UniformToFill" Opacity="0.8" Margin="0 0 0 0"/>
                         <Border Height="270" BorderBrush="{StaticResource BDR.PARENT}" Visibility="Collapsed" x:Name="bd1" BorderThickness="1">
                             <Border.Background>
-                                <SolidColorBrush Color="Black" Opacity="0.6"/>
+                                <SolidColorBrush Color="#BB000000"/>
                             </Border.Background>
                             <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
                                 <TextBlock Text="{Binding Infor1}" x:Name="text1" Foreground="#C6A86E" FontSize="10" FontWeight="Bold" VerticalAlignment="Center" Margin="15 15 0 10"/>
-                                <TextBlock Text="{Binding Infor2}" Foreground="#746F6F" FontSize="12" VerticalAlignment="Center"  Margin="15 0 0 0"/>
-                                <TextBlock Text="{Binding Infor3}" Foreground="#746F6F" FontSize="10" VerticalAlignment="Center"  Margin="15 0 0 0"/>
-                                <TextBlock Text="{Binding Infor4}" Foreground="#746F6F" FontSize="10" VerticalAlignment="Center" Margin="15 0 0 0"/>
-                                <TextBlock Text="{Binding Infor5}" Foreground="#746F6F" FontSize="10" VerticalAlignment="Center" Margin="15 0 0 0"/>
-                                <TextBlock Text="{Binding Infor6}" x:Name="text2" Foreground="#C6A86E" FontSize="10" VerticalAlignment="Center" Margin="15 10 0 10"/>
-                                <TextBlock Text="{Binding Infor7}" Foreground="#746F6F" FontSize="10" VerticalAlignment="Center" Margin="15 0 0 0"/>
-                                <TextBlock Text="{Binding Infor8}" Foreground="#746F6F" FontSize="10" VerticalAlignment="Center" Margin="15 0 0 0"/>
+                                <TextBlock Text="{Binding Infor2}" Foreground="#FFFFFF" FontSize="12" VerticalAlignment="Center"  Margin="15 0 0 0"/>
+                                <TextBlock Text="{Binding Infor3}" Foreground="#FFFFFF" FontSize="10" VerticalAlignment="Center"  Margin="15 0 0 0"/>
+                                <TextBlock Text="{Binding Infor4}" Foreground="#FFFFFF" FontSize="10" VerticalAlignment="Center" Margin="15 0 0 0"/>
+                                <TextBlock Text="{Binding Infor5}" Foreground="#FFFFFF" FontSize="10" VerticalAlignment="Center" Margin="15 0 0 0"/>
+                                <TextBlock Text="{Binding Infor6}" x:Name="text2" Foreground="#FFFFFF" FontSize="10" VerticalAlignment="Center" Margin="15 10 0 10"/>
+                                <TextBlock Text="{Binding Infor7}" Foreground="#FFFFFF" FontSize="10" VerticalAlignment="Center" Margin="15 0 0 0"/>
+                                <TextBlock Text="{Binding Infor8}" Foreground="#FFFFFF" FontSize="10" VerticalAlignment="Center" Margin="15 0 0 0"/>
                             </StackPanel>
                         </Border>
                         <Border x:Name="bd2" VerticalAlignment="Bottom" BorderBrush="#4A4B50" Margin="10 0 0 0" BorderThickness="0 1 0 0">

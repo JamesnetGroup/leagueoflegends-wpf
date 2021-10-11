@@ -227,7 +227,7 @@
 	<None Remove="Images\Rune\Conqueror_rune.png" />
 	<None Remove="Images\Rune\Dark_Harvest_rune.png" />
 	<None Remove="Images\Rune\Domination.png" />
-	<None Remove="Images\Rune\Domination_Loading.jpg" />
+	<None Remove="Images\Rune\Domination_Loading.png" />
 	<None Remove="Images\Rune\Electrocute_rune.png" />
 	<None Remove="Images\Rune\environment.png" />
 	<None Remove="Images\Rune\Fleet_Footwork_rune.png" />
@@ -240,7 +240,7 @@
 	<None Remove="Images\Rune\Lethal_Tempo_rune.png" />
 	<None Remove="Images\Rune\Phase_Rush_rune.png" />
 	<None Remove="Images\Rune\Precision.png" />
-	<None Remove="Images\Rune\Precision_Loading.jpg" />
+	<None Remove="Images\Rune\Precision_Loading.png" />
 	<None Remove="Images\Rune\Predator_rune.png" />
 	<None Remove="Images\Rune\Press_the_Attack_rune.png" />
 	<None Remove="Images\Rune\Prototype-_Omnistone_rune.png" />
@@ -373,7 +373,7 @@
     <Resource Include="Images\Rune\Arcane_Comet_rune.png" />
     <Resource Include="Images\Rune\Conqueror_rune.png" />
     <Resource Include="Images\Rune\Dark_Harvest_rune.png" />
-    <Resource Include="Images\Rune\Domination_Loading.jpg" />
+    <Resource Include="Images\Rune\Domination_Loading.png" />
     <Resource Include="Images\Rune\Electrocute_rune.png" />
     <Resource Include="Images\Rune\Fleet_Footwork_rune.png" />
     <Resource Include="Images\Rune\Glacial_Augment_rune.png" />
@@ -383,7 +383,7 @@
     <Resource Include="Images\Rune\Inspiration_Loading.jpg" />
     <Resource Include="Images\Rune\Lethal_Tempo_rune.png" />
     <Resource Include="Images\Rune\Phase_Rush_rune.png" />
-    <Resource Include="Images\Rune\Precision_Loading.jpg" />
+    <Resource Include="Images\Rune\Precision_Loading.png" />
     <Resource Include="Images\Rune\Predator_rune.png" />
     <Resource Include="Images\Rune\Press_the_Attack_rune.png" />
     <Resource Include="Images\Rune\Prototype-_Omnistone_rune.png" />
