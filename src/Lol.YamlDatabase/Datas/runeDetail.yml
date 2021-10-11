@@ -2,7 +2,7 @@
   rune: Rune,Domination_Loading
   keystone : Rune,Dark_Harvest_rune
   paths : Rune,Precision
-  runType : 1
+  runeType : 1
   name : 루시안
   infor1 : 지배
   infor2 : ◆ 어둠의 수확
@@ -16,7 +16,7 @@
   rune: Rune,Precision_Loading
   keystone : Rune,Glacial_Augment_rune
   paths : Rune,Domination
-  runType : 2
+  runeType : 2
   name : 이렐리아
   infor1 : 결의
   infor2 : ◆ 여진
@@ -30,7 +30,7 @@
   rune: Rune,Resolve_Loading
   keystone : Rune,Grasp_of_the_Undying_rune
   paths : Rune,Sorcery
-  runType : 3
+  runeType : 3
   name : 이즈리얼
   infor1 : 정밀
   infor2 : ◆ 치명적 속도
@@ -44,7 +44,7 @@
   rune: Rune,Sorcery_Loading
   keystone : Rune,Guardian_rune
   paths : Rune,Resolve
-  runType : 4
+  runeType : 4
   name : 문도
   infor1 : 지배
   infor2 : ◆ 여진
@@ -58,7 +58,7 @@
   rune: Rune,Inspiration_Loading
   keystone : Rune,Glacial_Augment_rune
   paths : Rune,Resolve
-  runType : 5
+  runeType : 5
   name : 카이사
   infor1 : 정밀
   infor2 : ◆ 기민한 발놀림
@@ -72,7 +72,7 @@
   rune: Rune,Domination_Loading
   keystone : Rune,Electrocute_rune
   paths : Rune,Inspiration
-  runType : 5
+  runeType : 6
   name : AP
   infor1 : 마법
   infor2 : ◆ 신비로운 유성

@@ -1,12 +1,12 @@
 ﻿namespace Lol.YamlDatabase.Entites.Schema
 {
-    public class RunesDetail
+    public class RuneDetail
     {
         public int Seq { get; set; }
         public string Rune { get; set; }
         public string Keystone { get; set; }
         public string Paths { get; set; }
-        public string RunType { get; set; }
+        public string RuneType { get; set; }
         public string Name { get; set; }
         public string Infor1 { get; set; }
         public string Infor2 {  get; set;}

@@ -18,16 +18,16 @@ namespace Lol.YamlDatabase.Controller
             return query.ToList();
         }
 
-        public List<RunesDetail> GetRunesDetail()
+        public List<RuneDetail> GetRuneDetail()
         {
-            var query = from r in Db.RunesDetail
-                        select new RunesDetail
+            var query = from r in Db.RuneDetail
+                        select new RuneDetail
                         {
                             Seq = r.Seq,
                             Rune = ResourceHelper.ImgResource(r.Rune),
                             Keystone = ResourceHelper.ImgResource(r.Keystone),
                             Paths = ResourceHelper.ImgResource(r.Paths),
-                            RunType = r.RunType,
+                            RuneType = r.RuneType,
                             Name = r.Name,
                             Infor1 = r.Infor1,
                             Infor2 = r.Infor2,
@@ -41,9 +41,9 @@ namespace Lol.YamlDatabase.Controller
             return query.ToList();
         }
 
-        public List<RunesDetail> GetRunesDetail(int seq)
+        public List<RuneDetail> GetRunesDetail(int seq)
         {
-            return GetRunesDetail().Where(x=>x.RunType == seq.ToString()).ToList();
+            return GetRuneDetail().Where(x=>x.RuneType == seq.ToString()).ToList();
         }
     }
 }
