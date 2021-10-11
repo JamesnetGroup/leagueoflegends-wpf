@@ -1,4 +1,5 @@
 ﻿using Lol.DBEntity.Common;
+using System;
 
 namespace Lol.YamlDatabase.Entites.Schema
 {
