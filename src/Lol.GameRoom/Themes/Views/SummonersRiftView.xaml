@@ -28,6 +28,7 @@
                         <ctrls:RiotGameButtonn Style="{StaticResource RIOT.GAMEBTN}" Command="{Binding CloseCommand}"/>
                         <units:StateBox Margin="0 0 16 0"/>
                         <units:InviteButtonGrid/>
+                        <units:MyDetail/>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
