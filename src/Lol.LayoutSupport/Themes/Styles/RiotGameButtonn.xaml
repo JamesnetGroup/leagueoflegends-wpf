@@ -84,7 +84,7 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <Border Style="{StaticResource IN.BORDER.01}"/>
-                        <ctrls:RiotIconButton IconType="Close" VerticalAlignment="Center" />
+                        <ctrls:RiotIconButton IconType="Close" VerticalAlignment="Center" Command="{TemplateBinding Command}"/>
                         <Border Style="{StaticResource IN.BORDER.02}"/>
                         <Path x:Name="path" Style="{StaticResource IN.ICON}"/>
                         <TextBlock Style="{StaticResource IN.CONTENT}" Text="{TemplateBinding Content}"/>
