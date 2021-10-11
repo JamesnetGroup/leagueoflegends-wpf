@@ -186,7 +186,7 @@ namespace Lol.Main.Local.ViewModel
                     27 => new store.ChampionsView().SetVM(new storeVM.ChampionsViewModel()),
                     33 => new HistoryView().SetVM(new HistoryViewModel()),
                     37 => new PVPView().SetVM(new PVPViewModel(PvpConfirm)),
-                    42 => new SummonersRiftView().SetVM(new SummonersRiftViewModel(Friends)),
+                    42 => new SummonersRiftView().SetVM(new SummonersRiftViewModel(Friends, GoHome)),
                     _ => new EmptyContent()
                 };
 
@@ -227,10 +227,18 @@ namespace Lol.Main.Local.ViewModel
         }
         #endregion
 
+        #region PvpConfirm
+
         private void PvpConfirm(object value)
         {
             // TODO: [Kevin] 게임시작 > 확인 버튼 클릭시 화면 Change, 변경 필히 필요
             SubMenuChanged(MainMenu.TotalSubMenus[33]);
+        }
+        #endregion
+
+        private void GoHome()
+        {
+            SubMenuChanged(MainMenu.TotalSubMenus[0]);
         }
     }
 }

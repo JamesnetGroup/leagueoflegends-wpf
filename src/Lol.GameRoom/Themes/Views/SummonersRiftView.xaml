@@ -25,7 +25,7 @@
                         <units:RoomTitle/>
                         <units:TopRightContent/>
                         <ctrls:RiotTextBox Style="{StaticResource RIOT.TXB}"/>
-                        <ctrls:RiotGameButtonn Style="{StaticResource RIOT.GAMEBTN}"/>
+                        <ctrls:RiotGameButtonn Style="{StaticResource RIOT.GAMEBTN}" Command="{Binding CloseCommand}"/>
                         <units:StateBox Margin="0 0 16 0"/>
                         <units:InviteButtonGrid/>
                     </Grid>
