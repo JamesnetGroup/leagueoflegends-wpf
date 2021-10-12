@@ -19,5 +19,32 @@ namespace Lol.YamlDatabase.Controller
             return query.ToList();
         }
 
+        public List<ChampCb> GetChampCb1()
+        {
+            var query = from c in Db.ChampCb
+                        where c.Type == 0
+                        select new ChampCb
+                        {
+                            Seq = c.Seq,
+                            Content = c.Content,
+                            Type = c.Type
+                            
+                        };
+            return query.ToList();
+        }
+
+        public List<ChampCb> GetChampCb2()
+        {
+            var query = from c in Db.ChampCb
+                        where c.Type == 1
+                        select new ChampCb
+                        {
+                            Seq = c.Seq,
+                            Content = c.Content,
+                            Type = c.Type
+                        };
+            return query.ToList();
+        }
+
     }
 }

@@ -42,6 +42,7 @@ namespace Lol.YamlDatabase.Entites.Statics
         internal List<StoreChampSortings> _storeChampSortings;
         internal List<SettingMenus> _settingMenus;
         internal List<Champs> _champs;
+        internal List<ChampCb> _champCb;
         internal List<Resolutions> _resolutions;
         internal List<Runes> _runes;
         internal List<RuneDetail> _runeDetail;
@@ -471,6 +472,26 @@ namespace Lol.YamlDatabase.Entites.Statics
                 }
 
                 return _champs;
+            }
+        }
+        #endregion
+
+        #region ChampCb
+
+        internal List<ChampCb> ChampCb
+        {
+            get
+            {
+                if (_champCb == null)
+                {
+                    string readText = GetYamlData("champCb");
+                    var deserializer = new DeserializerBuilder()
+                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .Build();
+                    _champCb = deserializer.Deserialize<List<ChampCb>>(readText);
+                }
+
+                return _champCb;
             }
         }
         #endregion
