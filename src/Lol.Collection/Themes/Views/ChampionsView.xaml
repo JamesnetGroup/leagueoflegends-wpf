@@ -5,7 +5,7 @@
                     xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
 
     <Style TargetType="{x:Type ctrls:RiotComboBoxItem}" x:Key="IN.CBXI">
-        <Setter Property="Content" Value="{Binding Name}"/>
+        <Setter Property="Content" Value="{Binding Content}"/>
     </Style>
 
     <Style TargetType="{x:Type ctrls:RiotComboBox}" x:Key="CBX.DEVICE">
@@ -13,10 +13,10 @@
         <Setter Property="Height" Value="30"/>
         <Setter Property="Margin" Value="10 10 0 0"/>
         <Setter Property="ItemContainerStyle" Value="{StaticResource IN.CBXI}"/>
-        <Setter Property="ItemsSource" Value="{Binding DeviceList}"/>
+        <Setter Property="ItemsSource" Value="{Binding ChampCb1}"/>
         <Setter Property="SelectedValue" Value="{Binding Model.InputDevice}"/>
         <Setter Property="SelectedValuePath" Value="Name"/>
-        <Setter Property="Content" Value="{Binding RelativeSource={RelativeSource Self}, Path=SelectedItem.Name}"/>
+        <Setter Property="Content" Value="{Binding RelativeSource={RelativeSource Self}, Path=SelectedItem.Content}"/>
     </Style>
 
     <Style TargetType="{x:Type ctrls:RiotComboBox}" x:Key="CBX.DEVICE2">
@@ -24,10 +24,10 @@
         <Setter Property="Height" Value="30"/>
         <Setter Property="Margin" Value="10 10 0 0"/>
         <Setter Property="ItemContainerStyle" Value="{StaticResource IN.CBXI}"/>
-        <Setter Property="ItemsSource" Value="{Binding DeviceList}"/>
+        <Setter Property="ItemsSource" Value="{Binding ChampCb2}"/>
         <Setter Property="SelectedValue" Value="{Binding Model.InputDevice}"/>
         <Setter Property="SelectedValuePath" Value="Name"/>
-        <Setter Property="Content" Value="{Binding RelativeSource={RelativeSource Self}, Path=SelectedItem.Name}"/>
+        <Setter Property="Content" Value="{Binding RelativeSource={RelativeSource Self}, Path=SelectedItem.Content}"/>
     </Style>
 
     <Geometry x:Key="GEO.FRAME">M73.479167,6.4879167 L73.42115,83.273088 72.912406,84.002032 C70.050467,84.892122 67.912185,87.424602 67.60015,90.496932 L67.599357,90.512622 6.5652928,90.512622 6.5645002,90.496932 C6.2264661,87.168582 3.7451176,84.473782 0.52231627,83.814342 L0.50000002,83.376928 0.52083335,7.7738529 0.55016022,7.5572561 C3.2771481,6.9992703 5.4732712,4.9840263 6.2892464,2.3607517 L6.4277128,0.67162255 66.625,0.5 66.737466,1.3009875 C66.664269,4.4888962 70.108169,7.1286855 73.39635,6.9803701</Geometry>
@@ -54,12 +54,6 @@
                                         <Path x:Name="path1" Data="{StaticResource GEO.FRAME}" 
 									          Stroke="{StaticResource PATH.BDR}" 
 									          StrokeThickness="2">
-                                            <Path.Effect>
-                                                <DropShadowEffect BlurRadius="5"
-                                                          Opacity="1" 
-                                                          ShadowDepth="2" 
-                                                          Color="#000000"/>
-                                            </Path.Effect>
                                         </Path>
                                         <StackPanel>
                                             <TextBlock  Margin="10 2 10 0" HorizontalAlignment="Center" FontSize="20"  Text="355" Foreground="#CBB582"/>
@@ -67,7 +61,6 @@
                                             <TextBlock  Margin="10 2 10 0" HorizontalAlignment="Center" FontSize="20" Text="94" Foreground="#CBB582"/>
                                             <TextBlock  Margin="10 0 10 0" HorizontalAlignment="Center" FontSize="7" FontWeight="Bold" Text="달성한 업적" Foreground="#A09B8C"/>
                                         </StackPanel>
-
                                     </Grid>
                                 </Viewbox>
                             </Border>
