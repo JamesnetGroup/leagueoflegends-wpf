@@ -4,54 +4,38 @@
                     xmlns:units="clr-namespace:Lol.Collection.UI.Units"
                     xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
 
-    <!--<Style TargetType="{x:Type units:SortComboBox}" x:Key="CBX.SORT">
-        <Setter Property="ItemsSource" Value="{Binding Sorting}"/>
-        <Setter Property="SelectedValue" Value="{Binding CurrentSorting}"/>
-    </Style>-->
-    <Geometry x:Key="GEO.FRAME.OUT">M6.9158878,1 L68.225112,1 68.391426,1.6467668 C69.133224,4.0315618 71.015632,5.9138522 73.400581,6.6556005 L74.047996,6.8220577 74.047996,152.70395 73.400581,152.87041 C70.538642,153.7605 68.40036,156.29298 68.088325,159.36531 L68.087532,159.381 7.0534678,159.381 7.0526752,159.36531 C6.7146411,156.03696 4.2332926,153.34216 1.0104913,152.68272 L1,152.68112 1,6.8448715 1.0104889,6.8432712 C3.7374768,6.2852854 5.9335999,4.2700414 6.7495751,1.6467668 z</Geometry>
-    <Geometry x:Key="GEO.FRAME.RIGHT">M3.4696212,0.35 L3.9349995,0.35 3.9349995,79.949997 3.8786197,79.949997 0.35,76.421379 0.35,3.4696212 z</Geometry>
-    <Geometry x:Key="GEO.FRAME.LEFT">M0.35,0.35 L0.85725257,0.35 3.9349997,3.427747 3.9349997,76.437027 0.54256186,79.949997 0.35,79.949997 z</Geometry>
-    <Geometry x:Key="GEO.FRAME.BOTTOM">M2.9213299,0.25 L3.1259238,0.25 8.9433534,6.0674314 9.1017854,5.9089985 62.838726,5.9089985 62.981998,6.0522718 68.439552,0.59471366 70.75,2.9051568 70.75,37.22158 70.730758,37.224838 C70.078308,37.350441 69.425682,37.567036 68.79277,37.880043 66.683075,38.923408 65.291778,40.791103 64.906372,42.775887 L64.857383,43.066997 55.574337,43.066997 52.427646,39.920303 52.240955,40.106995 17.786884,40.106995 17.632,39.95211 14.517111,43.066997 5.7534181,43.066997 5.6943995,42.765633 C5.0781853,39.955585 2.9673817,37.86359 0.4836888,37.472092 L0.25,37.441879 0.25,2.9213276 z</Geometry>
+    <Style TargetType="{x:Type ctrls:RiotComboBoxItem}" x:Key="IN.CBXI">
+        <Setter Property="Content" Value="{Binding Name}"/>
+    </Style>
+
+    <Style TargetType="{x:Type ctrls:RiotComboBox}" x:Key="CBX.DEVICE">
+        <Setter Property="Width" Value="190"/>
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Margin" Value="10 10 0 0"/>
+        <Setter Property="ItemContainerStyle" Value="{StaticResource IN.CBXI}"/>
+        <Setter Property="ItemsSource" Value="{Binding DeviceList}"/>
+        <Setter Property="SelectedValue" Value="{Binding Model.InputDevice}"/>
+        <Setter Property="SelectedValuePath" Value="Name"/>
+        <Setter Property="Content" Value="{Binding RelativeSource={RelativeSource Self}, Path=SelectedItem.Name}"/>
+    </Style>
+
+    <Style TargetType="{x:Type ctrls:RiotComboBox}" x:Key="CBX.DEVICE2">
+        <Setter Property="Width" Value="190"/>
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Margin" Value="10 10 0 0"/>
+        <Setter Property="ItemContainerStyle" Value="{StaticResource IN.CBXI}"/>
+        <Setter Property="ItemsSource" Value="{Binding DeviceList}"/>
+        <Setter Property="SelectedValue" Value="{Binding Model.InputDevice}"/>
+        <Setter Property="SelectedValuePath" Value="Name"/>
+        <Setter Property="Content" Value="{Binding RelativeSource={RelativeSource Self}, Path=SelectedItem.Name}"/>
+    </Style>
+
+    <Geometry x:Key="GEO.FRAME">M73.479167,6.4879167 L73.42115,83.273088 72.912406,84.002032 C70.050467,84.892122 67.912185,87.424602 67.60015,90.496932 L67.599357,90.512622 6.5652928,90.512622 6.5645002,90.496932 C6.2264661,87.168582 3.7451176,84.473782 0.52231627,83.814342 L0.50000002,83.376928 0.52083335,7.7738529 0.55016022,7.5572561 C3.2771481,6.9992703 5.4732712,4.9840263 6.2892464,2.3607517 L6.4277128,0.67162255 66.625,0.5 66.737466,1.3009875 C66.664269,4.4888962 70.108169,7.1286855 73.39635,6.9803701</Geometry>
 
     <LinearGradientBrush x:Key="PATH.BDR" StartPoint="0.5, 0" EndPoint="0.5, 1">
         <GradientStop Color="#9B8246" Offset="0"/>
         <GradientStop Color="#615138" Offset="0.5"/>
         <GradientStop Color="#59462B" Offset="1"/>
-    </LinearGradientBrush>
-
-    <LinearGradientBrush x:Key="PATH.BDR.OVER" StartPoint="0.5, 0" EndPoint="0.5, 1">
-        <GradientStop Color="#CEAC5A" Offset="0"/>
-        <GradientStop Color="#856F4C" Offset="0.5"/>
-        <GradientStop Color="#7D623C" Offset="1"/>
-    </LinearGradientBrush>
-
-    <LinearGradientBrush x:Key="PATH2.BG" StartPoint="0.5, 0" EndPoint="0.5, 1">
-        <GradientStop Color="#070706" Offset="0"/>
-        <GradientStop Color="#0D0D0B" Offset="0.5"/>
-        <GradientStop Color="#171713" Offset="1"/>
-    </LinearGradientBrush>
-
-    <LinearGradientBrush x:Key="PATH2.BDR" StartPoint="0.5, 0" EndPoint="0.5, 1">
-        <GradientStop Color="#44403A" Offset="0"/>
-        <GradientStop Color="#7E774B" Offset="0.1"/>
-        <GradientStop Color="#4F4A38" Offset="0.85"/>
-        <GradientStop Color="#44403A" Offset="1"/>
-    </LinearGradientBrush>
-
-    <LinearGradientBrush x:Key="PATH3.BDR" StartPoint="0.5, 0" EndPoint="0.5, 1">
-        <GradientStop Color="#9E8664" Offset="0"/>
-        <GradientStop Color="#F4F4F3" Offset="0.2"/>
-        <GradientStop Color="#978060" Offset="0.5"/>
-        <GradientStop Color="#675842" Offset="0.8"/>
-        <GradientStop Color="#9E8664" Offset="1"/>
-    </LinearGradientBrush>
-
-    <LinearGradientBrush x:Key="PATH4.BDR" StartPoint="0.5, 0" EndPoint="0.5, 1">
-        <GradientStop Color="#9E8664" Offset="0"/>
-        <GradientStop Color="#675842" Offset="0.2"/>
-        <GradientStop Color="#978060" Offset="0.5"/>
-        <GradientStop Color="#F4F4F3" Offset="0.65"/>
-        <GradientStop Color="#9E8664" Offset="0.8"/>
     </LinearGradientBrush>
 
     <Style TargetType="{x:Type views:ChampionsView}">
@@ -65,24 +49,23 @@
                         </Grid.ColumnDefinitions>
                         <StackPanel Margin="20 50 30 0 ">
                             <Border>
-                                <Viewbox Width="100" Height="200">
+                                <Viewbox Width="200" Height="200">
                                     <Grid>
-                                        <Path x:Name="path1" Data="{StaticResource GEO.FRAME.OUT}" 
-									  Stroke="{StaticResource PATH.BDR}" 
-									  StrokeThickness="2">
+                                        <Path x:Name="path1" Data="{StaticResource GEO.FRAME}" 
+									          Stroke="{StaticResource PATH.BDR}" 
+									          StrokeThickness="2">
                                             <Path.Effect>
                                                 <DropShadowEffect BlurRadius="5"
                                                           Opacity="1" 
                                                           ShadowDepth="2" 
                                                           Color="#000000"/>
                                             </Path.Effect>
-
                                         </Path>
                                         <StackPanel>
-                                            <TextBlock  Margin="10 10 10 0" HorizontalAlignment="Center" FontSize="20" Text="355" Foreground="#CBB582"/>
-                                            <TextBlock  Margin="10 0 10 0" HorizontalAlignment="Center" FontSize="9" Text="숙련도 총점" Foreground="#A09B8C"/>
-                                            <TextBlock  Margin="10 10 10 0" HorizontalAlignment="Center" FontSize="20" Text="94" Foreground="#CBB582"/>
-                                            <TextBlock  Margin="10 0 10 0" HorizontalAlignment="Center" FontSize="9" Text="달성한 업적" Foreground="#A09B8C"/>
+                                            <TextBlock  Margin="10 2 10 0" HorizontalAlignment="Center" FontSize="20"  Text="355" Foreground="#CBB582"/>
+                                            <TextBlock  Margin="10 0 10 0" HorizontalAlignment="Center" FontSize="7" FontWeight="Bold" Text="숙련도 총점" Foreground="#A09B8C"/>
+                                            <TextBlock  Margin="10 2 10 0" HorizontalAlignment="Center" FontSize="20" Text="94" Foreground="#CBB582"/>
+                                            <TextBlock  Margin="10 0 10 0" HorizontalAlignment="Center" FontSize="7" FontWeight="Bold" Text="달성한 업적" Foreground="#A09B8C"/>
                                         </StackPanel>
 
                                     </Grid>
@@ -93,18 +76,17 @@
                                                HorizontalAlignment="Center"
                                                PlaceHolder="검색"/>
                             <ctrls:CheckBox01 x:Name="ch" 
-                                              IsChecked="False" 
+                                              IsChecked="True" 
                                               VerticalAlignment="Center"
                                               Foreground="#9E998A" 
                                               FontWeight="Bold" 
                                               Content="미보유 상품보기" 
                                               FontSize="12"
                                               Margin="12 15 0 0"/>
-                            <!--<units:SortComboBox Style="{StaticResource CBX.SORT}"/>-->
-
+                            <ctrls:RiotComboBox Style="{StaticResource CBX.DEVICE}"/>
+                            <ctrls:RiotComboBox Style="{StaticResource CBX.DEVICE2}"/>
                         </StackPanel>
-                        
-                        <TextBlock Grid.Column="1" Background="red"/>
+                        <TextBlock Grid.Column="1" />
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>

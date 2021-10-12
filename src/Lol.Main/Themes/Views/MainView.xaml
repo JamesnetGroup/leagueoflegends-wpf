@@ -130,7 +130,7 @@
             <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.CurrentSeq}" Value="17">
                 <Setter TargetName="img" Property="Source" Value="/Lol.Resources;component/Images/Champ/Banner.png"/>
                 <Setter TargetName="border" Property="Background" Value="{StaticResource LGB.BG.LEFT}"/>
-                <Setter TargetName="border" Property="Opacity" Value="0.5"/>
+                <Setter TargetName="border" Property="Opacity" Value="1"/>
             </DataTrigger>
 
             <!--Collection/Runes-->
