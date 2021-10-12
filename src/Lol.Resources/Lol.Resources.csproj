@@ -27,6 +27,7 @@
     <None Remove="Images\Champ\Ashe.jpg" />
     <None Remove="Images\Champ\AurelionSol.jpg" />
     <None Remove="Images\Champ\Azir.jpg" />
+    <None Remove="Images\Champ\Banner.png" />
     <None Remove="Images\Champ\Bard.jpg" />
     <None Remove="Images\Champ\Blitzcrank.jpg" />
     <None Remove="Images\Champ\Brand.jpg" />
@@ -368,6 +369,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\Champ\Banner.png" />
     <Resource Include="Images\map-icon.png" />
     <Resource Include="Images\Rune\Aftershock_rune.png" />
     <Resource Include="Images\Rune\Arcane_Comet_rune.png" />
