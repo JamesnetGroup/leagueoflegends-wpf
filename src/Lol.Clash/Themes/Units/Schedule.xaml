@@ -2,7 +2,6 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:units="clr-namespace:Lol.Clash.UI.Units">
 
-	<!--[0823 Elena] 라디오버튼 리스트박스로 작업-->	
 	<Style TargetType="{x:Type RadioButton}" x:Key="RDO.CATEGORY">
 		<Setter Property="Cursor" Value="Hand"/>
 		<Setter Property="Template">

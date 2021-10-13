@@ -12,12 +12,12 @@
     </Style>
     
     <Style TargetType="{x:Type units:ItemSetListBox}">
-        <Setter Property="ItemsSource" Value="{Binding ItemLists}"/>
+        <Setter Property="ItemsSource" Value="{Binding ItemList}"/>
         <Setter Property="Margin" Value="40 20 0 0"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:ItemSetListBox}">
-                    <Grid >
+                    <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="auto"/>
                             <RowDefinition Height="*"/>
