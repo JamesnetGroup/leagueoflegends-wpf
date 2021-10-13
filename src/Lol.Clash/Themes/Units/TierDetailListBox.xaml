@@ -14,9 +14,6 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListBoxItem}">
-                    <!-- TODO: [Kevin] 3번째 Bordethickness 지우기 DataTrigger 사용 데이터로 제어 되지만 더 좋은방법 찾는중-->
-                    <!-- TODO: [Kevin] 컨버터 사용 진행중 현재 ListBoxItem 부모 인덱스 얻어야함(미완료)-->
-                    <!-- TODO: [Elena] IndexToThicknessConverter 부모 인덱스 처리 완료 & 마지막 아이템 MultiValueEqualityConverter 추가함-->
                     <Border x:Name="bd" 
                             Background="Transparent"
                             BorderThickness="{Binding RelativeSource={RelativeSource TemplatedParent}, Converter={cnvts:IndexToThicknessConverter},

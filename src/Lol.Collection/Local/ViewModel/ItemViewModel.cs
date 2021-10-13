@@ -8,16 +8,13 @@ namespace Lol.Collection.Local.ViewModel
 {
     public class ItemViewModel : ObservableObject
     {
-        #region ItemLists
-
-        private List<Items> _itemLists;
-
         public RelayCommand<object> ButtonTest { get; set; }
-        #endregion
+
+        private bool _buttonUsed;
+        private List<Items> _itemList;
 
         #region ButtonUsed
 
-        private bool _buttonUsed;
         public bool ButtonUsed
         {
             get => _buttonUsed;
@@ -25,12 +22,12 @@ namespace Lol.Collection.Local.ViewModel
         }
         #endregion
 
-        #region MyRegion
+        #region ItemList
 
-        public List<Items> ItemLists
+        public List<Items> ItemList
         {
-            get { return _itemLists; }
-            set { _itemLists = value; OnPropertyChanged(); }
+            get { return _itemList; }
+            set { _itemList = value; OnPropertyChanged(); }
         }
         #endregion
 
@@ -38,7 +35,7 @@ namespace Lol.Collection.Local.ViewModel
 
         public ItemViewModel()
         {
-            _itemLists = new ItemApi().GetItems();
+            ItemList = new ItemApi().GetItems();
             ButtonTest = new RelayCommand<object>(Test1, Test2);
         }
         #endregion
@@ -77,7 +74,7 @@ namespace Lol.Collection.Local.ViewModel
         private void Checked(object value)
         {
             ButtonUsed = true;
-            var dd = ItemLists.Where(x => x.IsChecked);
+            var dd = ItemList.Where(x => x.IsChecked);
 
             //ButtonUsed = ItemLists.Where(x => x.IsChecked);
         }
