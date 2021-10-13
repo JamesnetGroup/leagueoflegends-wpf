@@ -23,16 +23,16 @@ namespace Lol.YamlDatabase.Entites.Statics
 
         #region Variables
 
-        private List<Users>? _users;
-        private List<Friends>? _friends;
-        internal List<CodeItems>? _codeItems;
-        internal List<Spells>? _spells;
-        internal List<PlayTypes>? _playTypes;
-        internal List<Items>? _items;
-        internal List<MapTypes>? _mapTypes;
-        internal List<TeamFights>? _teamFights;
-        internal List<GameRooms>? _gameRooms;
-        internal List<ClashCups>? _clashCups;
+        private List<Users> _users;
+        private List<Friends> _friends;
+        internal List<CodeItems> _codeItems;
+        internal List<Spells> _spells;
+        internal List<PlayTypes> _playTypes;
+        internal List<Items> _items;
+        internal List<MapTypes> _mapTypes;
+        internal List<TeamFights> _teamFights;
+        internal List<GameRooms> _gameRooms;
+        internal List<ClashCups> _clashCups;
         internal List<History> _historys;
         internal List<History> _activities;
         internal List<History> _playChampions;
