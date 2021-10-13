@@ -1,4 +1,6 @@
-﻿namespace Lol.YamlDatabase.Entites.Schema
+﻿using System;
+
+namespace Lol.YamlDatabase.Entites.Schema
 {
     public class Users
     {
