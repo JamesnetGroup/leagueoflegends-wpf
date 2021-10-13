@@ -1,12 +1,12 @@
 ﻿using Lol.YamlDatabase.Entites.Core;
 using Lol.YamlDatabase.Entites.Schema;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Lol.YamlDatabase.Controller
 {
     public class CodesApi : LolDbContext
     {
+        #region GetCodes
+
         public List<UsualCodes> GetCodes(string codeId)
         {
             var items = Db.CodeItems
@@ -16,5 +16,6 @@ namespace Lol.YamlDatabase.Controller
 
             return items.ToList();
         }
+        #endregion
     }
 }

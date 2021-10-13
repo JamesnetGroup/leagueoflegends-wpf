@@ -1,12 +1,12 @@
 ﻿using Lol.YamlDatabase.Entites.Core;
 using Lol.YamlDatabase.Entites.Schema;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Lol.YamlDatabase.Controller
 {
     public class ChampApi : LolDbContext
     {
+        #region GetChamps
+
         public List<Champs> GetChamps()
         {
             var query = from c in Db.Champs
@@ -18,6 +18,9 @@ namespace Lol.YamlDatabase.Controller
                         };
             return query.ToList();
         }
+        #endregion
+
+        #region GetChampCb1
 
         public List<ChampCb> GetChampCb1()
         {
@@ -28,10 +31,12 @@ namespace Lol.YamlDatabase.Controller
                             Seq = c.Seq,
                             Content = c.Content,
                             Type = c.Type
-                            
                         };
             return query.ToList();
         }
+        #endregion
+
+        #region GetChampCb2
 
         public List<ChampCb> GetChampCb2()
         {
@@ -45,6 +50,6 @@ namespace Lol.YamlDatabase.Controller
                         };
             return query.ToList();
         }
-
+        #endregion
     }
 }

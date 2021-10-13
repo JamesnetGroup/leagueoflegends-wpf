@@ -3,6 +3,6 @@
     public class Runes
     {
         public int Seq { get; set; }
-        public string RuneStone { get; set; }
+        public string? RuneStone { get; set; }
     }
 }

@@ -1,12 +1,12 @@
 ﻿using Lol.YamlDatabase.Entites.Core;
 using Lol.YamlDatabase.Entites.Schema;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Lol.YamlDatabase.Controller
 {
     public class ClashCupApi : LolDbContext
     {
+        #region GetClashTabs
+
         public List<ClashTabs> GetClashTabs()
         {
             var items = from s in Db.ClashTabs
@@ -18,6 +18,9 @@ namespace Lol.YamlDatabase.Controller
 
             return items.ToList();
         }
+        #endregion
+
+        #region GetClashCups
 
         public List<ClashCups> GetClashCups()
         {
@@ -30,6 +33,9 @@ namespace Lol.YamlDatabase.Controller
 
             return items.ToList();
         }
+        #endregion
+
+        #region GetClashTiers
 
         public List<ClashTiers> GetClashTiers()
         {
@@ -42,6 +48,9 @@ namespace Lol.YamlDatabase.Controller
 
             return items.ToList();
         }
+        #endregion
+
+        #region GetClashTierDetails
 
         public List<ClashTierDetails> GetClashTierDetails(int seq)
         {
@@ -59,6 +68,9 @@ namespace Lol.YamlDatabase.Controller
 
             return items.ToList();
         }
+        #endregion
+
+        #region GetClashSchedules
 
         public List<ClashSchedules> GetClashSchedules()
         {
@@ -73,5 +85,6 @@ namespace Lol.YamlDatabase.Controller
 
             return items.ToList();
         }
+        #endregion
     }
 }

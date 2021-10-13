@@ -1,12 +1,12 @@
 ﻿using Lol.YamlDatabase.Entites.Core;
 using Lol.YamlDatabase.Entites.Schema;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Lol.YamlDatabase.Controller
 {
     public class StoreApi : LolDbContext
     {
+        #region GetCategory
+
         public List<StoreChampTypes> GetCategory()
         {
             var query = from s in Db.StoreChampTypes
@@ -17,6 +17,9 @@ namespace Lol.YamlDatabase.Controller
                         };
             return query.ToList();
         }
+        #endregion
+
+        #region GetSorting
 
         public List<StoreChampSortings> GetSorting(string id)
         {
@@ -31,5 +34,6 @@ namespace Lol.YamlDatabase.Controller
                         };
             return query.ToList();
         }
+        #endregion
     }
 }

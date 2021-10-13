@@ -1,12 +1,12 @@
 ﻿using Lol.YamlDatabase.Entites.Core;
 using Lol.YamlDatabase.Entites.Schema;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Lol.YamlDatabase.Controller
 {
     public class SpellApi : LolDbContext
     {
+        #region GetSpells
+
         public List<Spells> GetSpells()
         {
             var query = from s in Db.Spells
@@ -22,6 +22,7 @@ namespace Lol.YamlDatabase.Controller
                         };
             return query.ToList();
         }
+        #endregion
     }
 }
 
