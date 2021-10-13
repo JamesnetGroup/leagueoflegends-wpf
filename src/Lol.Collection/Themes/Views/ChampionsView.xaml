@@ -81,7 +81,7 @@
                             <ctrls:RiotComboBox Style="{StaticResource CBX.DEVICE}"/>
                             <ctrls:RiotComboBox Style="{StaticResource CBX.DEVICE2}"/>
                         </StackPanel>
-                        <TextBlock Grid.Column="1" />
+                        <units:ChampListBox Grid.Column="1"/>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>

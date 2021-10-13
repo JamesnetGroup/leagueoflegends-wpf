@@ -1,4 +1,5 @@
-﻿using Lol.YamlDatabase.Entites.Core;
+﻿using Lol.YamlDatabase.Common;
+using Lol.YamlDatabase.Entites.Core;
 using Lol.YamlDatabase.Entites.Schema;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,8 @@ namespace Lol.YamlDatabase.Controller
                         {
                             Seq = c.Seq,
                             Champ = c.Champ,
-                            Name = c.Name
+                            Name = c.Name,
+                            Img = ResourceHelper.ImgResource(c.Img)
                         };
             return query.ToList();
         }
