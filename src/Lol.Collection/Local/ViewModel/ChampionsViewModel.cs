@@ -10,11 +10,22 @@ namespace Lol.Collection.Local.ViewModel
     {
         #region Variables
 
+        private List<Champs> _champsLists;
         private List<ChampCb> _champCb1;
         private List<ChampCb> _champCb2;
+
+        private Champs _currentChamp;
         private ChampCb _currentChampCb1;
         private ChampCb _currentChampCb2;
         private string _searchText;
+        #endregion
+
+        #region Champs
+        public List<Champs> Champs
+        {
+            get { return _champsLists; }
+            set { _champsLists = value; OnPropertyChanged(); }
+        }
         #endregion
 
         #region ChampCb1
@@ -32,6 +43,14 @@ namespace Lol.Collection.Local.ViewModel
         {
             get { return _champCb2; }
             set { _champCb2 = value; OnPropertyChanged(); }
+        }
+        #endregion
+
+        #region CurrentChamp
+        public Champs CurrentChamp
+        {
+            get { return _currentChamp; }
+            set { _currentChamp = value; OnPropertyChanged(); }
         }
         #endregion
 
@@ -66,6 +85,8 @@ namespace Lol.Collection.Local.ViewModel
 
         public ChampionsViewModel()
         {
+            Champs = new ChampApi().GetChamps(); 
+
             ChampCb1 = new ChampApi().GetChampCb1();
             ChampCb2 = new ChampApi().GetChampCb2();
 

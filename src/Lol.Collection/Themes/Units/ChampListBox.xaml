@@ -4,8 +4,8 @@
                     xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
 
     <Style TargetType="{x:Type units:ChampListBox}">
-        <Setter Property="ItemsSource" Value="{Binding Runes}"/>
-        <Setter Property="SelectedItem" Value="{Binding CurrentRune}"/>
+        <Setter Property="ItemsSource" Value="{Binding Champs}"/>
+        <Setter Property="SelectedItem" Value="{Binding CurrentChamp}"/>
         <Setter Property="HorizontalAlignment" Value="Left"/>
         <Setter Property="VerticalAlignment" Value="Top"/>
         <Setter Property="Template">
