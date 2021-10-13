@@ -1,10 +1,8 @@
-﻿using Lol.Data.Store;
+﻿using System.Linq;
+using System.Collections.Generic;
 using Lol.Foundation.Mvvm;
 using Lol.YamlDatabase.Controller;
 using Lol.YamlDatabase.Entites.Schema;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Lol.Collection.Local.ViewModel
 {
@@ -91,8 +89,5 @@ namespace Lol.Collection.Local.ViewModel
             
         }
         #endregion
-
-
-
     }
 }

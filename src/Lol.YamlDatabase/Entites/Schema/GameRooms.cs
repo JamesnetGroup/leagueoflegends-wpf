@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Lol.YamlDatabase.Entites.Schema
+﻿namespace Lol.YamlDatabase.Entites.Schema
 {
     public class GameRooms
     {
