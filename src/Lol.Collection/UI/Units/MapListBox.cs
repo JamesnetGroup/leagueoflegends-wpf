@@ -13,9 +13,12 @@ namespace Lol.Collection.UI.Units
         }
         #endregion
 
+        #region GetContainerForItemOverride
+
         protected override DependencyObject GetContainerForItemOverride()
         {
             return new MapListBoxItem();
         }
+        #endregion
     }
 }
