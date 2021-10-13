@@ -6,13 +6,13 @@
     <Style TargetType="{x:Type units:ChampListBox}">
         <Setter Property="ItemsSource" Value="{Binding Champs}"/>
         <!--<Setter Property="SelectedItem" Value="{Binding CurrentChamp}"/>-->
-        <Setter Property="Margin" Value="20 40 0 0"/>
+        <Setter Property="Margin" Value="0 0 0 0"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:ChampListBox}">
-                    <Border>
+                    <ctrls:BasicScroll>
                         <ItemsPresenter/>
-                    </Border>
+                    </ctrls:BasicScroll>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
@@ -22,7 +22,7 @@
                     <UniformGrid Columns="5"/>
                 </ItemsPanelTemplate>
             </Setter.Value>
-        </Setter>
+        </Setter> 
     </Style>
 
 </ResourceDictionary>

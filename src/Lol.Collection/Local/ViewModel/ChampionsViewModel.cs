@@ -85,7 +85,10 @@ namespace Lol.Collection.Local.ViewModel
 
         public ChampionsViewModel()
         {
-            Champs = new ChampApi().GetChamps(); 
+            Champs = new ChampApi().GetChamps();
+            var source = new List<Champs>();
+            source = Champs.OrderBy(x => x.Name).ToList();
+            Champs = source;
 
             ChampCb1 = new ChampApi().GetChampCb1();
             ChampCb2 = new ChampApi().GetChampCb2();
