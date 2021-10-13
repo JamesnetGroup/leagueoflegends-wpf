@@ -3,7 +3,7 @@
     public class Users
     {
         public int Seq { get; set; }
-        public string Name { get; set; } = string.Empty;
+        public string? Name { get; set; }
         public DateTime Created { get; set; }
         public DateTime Updated { get; set; }
     }
