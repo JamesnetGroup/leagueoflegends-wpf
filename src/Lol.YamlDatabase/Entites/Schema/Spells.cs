@@ -1,7 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-
-namespace Lol.YamlDatabase.Entites.Schema
+﻿namespace Lol.YamlDatabase.Entites.Schema
 {
     public class Spells
     {

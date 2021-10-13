@@ -1,12 +1,12 @@
 ﻿using Lol.YamlDatabase.Entites.Core;
 using Lol.YamlDatabase.Entites.Schema;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Lol.YamlDatabase.Controller
 {
     public class SettingsApi : LolDbContext
     {
+        #region GetSettingMenus
+
         public List<SettingMenus> GetSettingMenus()
         {
             var items = from s in Db.SettingMenus
@@ -19,6 +19,10 @@ namespace Lol.YamlDatabase.Controller
 
             return items.ToList();
         }
+        #endregion
+
+        #region GetResolutions
+
         public List<Resolutions> GetResolutions()
         {
             var items = from s in Db.Resolutions
@@ -30,5 +34,6 @@ namespace Lol.YamlDatabase.Controller
 
             return items.ToList();
         }
+        #endregion
     }
 }
