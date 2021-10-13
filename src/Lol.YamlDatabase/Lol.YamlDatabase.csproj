@@ -53,7 +53,7 @@
     <None Update="Datas\playChampions.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Datas\champ.yml">
+    <None Update="Datas\champs.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Datas\spells-en.yml">
