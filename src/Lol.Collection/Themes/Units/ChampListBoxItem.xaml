@@ -3,19 +3,33 @@
                     xmlns:units="clr-namespace:Lol.Collection.UI.Units"
                     xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
 
+    <LinearGradientBrush x:Key="BDR.PARENT" StartPoint="0.5, 0" EndPoint="0.5, 1">
+        <GradientStop Color="#FDFDFD" Offset="0"/>
+        <GradientStop Color="#E4D6BA" Offset="0.5"/>
+        <GradientStop Color="#C8AA6E" Offset="1"/>
+    </LinearGradientBrush>
+
     <Style TargetType="{x:Type units:ChampListBoxItem}">
         <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:ChampListBoxItem}">
-                    <StackPanel Orientation="Horizontal">
-                        <Border>
-                            <Image Source="{Binding Img}"/>
-                        </Border>
-                    </StackPanel>
+                    <Grid Margin="0 50 20 0">
+                        <StackPanel>
+                            <Border x:Name="bd" BorderThickness="1" BorderBrush="#1E2328">
+                                <Image Source="{Binding Img}" Stretch="Uniform" Width="200" Height="200"/>
+                            </Border>
+                            <TextBlock Grid.Row="1" Text="{Binding Name}" FontSize="12" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#999487" Margin="0 10 0 0"/>
+                        </StackPanel>
+                        
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="bd" Property="BorderBrush" Value="{StaticResource BDR.PARENT}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
-
 </ResourceDictionary>
