@@ -3,6 +3,6 @@
     public class ClashTiers
     {
         public int Seq { get; set; }
-        public string? Name { get; set; }
+        public string Name { get; set; }
     }
 }
