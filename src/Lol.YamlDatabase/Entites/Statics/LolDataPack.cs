@@ -18,6 +18,8 @@ namespace Lol.YamlDatabase.Entites.Statics
 
         }
 
+        #region Variables
+
         private List<Users>? _users;
         private List<Friends>? _friends;
         internal List<CodeItems>? _codeItems;
@@ -43,6 +45,9 @@ namespace Lol.YamlDatabase.Entites.Statics
         internal List<Resolutions> _resolutions;
         internal List<Runes> _runes;
         internal List<RuneDetail> _runeDetail;
+        #endregion
+
+        #region GetYamlData
 
         private static string GetYamlData(string table)
         {
@@ -52,6 +57,7 @@ namespace Lol.YamlDatabase.Entites.Statics
 
             return text;
         }
+        #endregion
 
         #region Users
 
