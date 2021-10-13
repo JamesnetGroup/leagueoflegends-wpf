@@ -1,12 +1,12 @@
 ﻿using Lol.YamlDatabase.Entites.Core;
 using Lol.YamlDatabase.Entites.Schema;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Lol.YamlDatabase.Controller
 {
     public class TeamFightApi : LolDbContext
     {
+        #region GetTeamFights
+
         public List<TeamFights> GetTeamFights()
         {
             var items = from s in Db.TeamFights
@@ -20,8 +20,8 @@ namespace Lol.YamlDatabase.Controller
                             IsFree = s.IsFree,
                             IsPremium = s.IsPremium
                         };
-
             return items.ToList();
         }
+        #endregion
     }
 }

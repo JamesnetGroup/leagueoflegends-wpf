@@ -3,11 +3,11 @@
     public class CodeItems
     {
         public int Seq { get; set; }
-        public string Id { get; set; } = string.Empty;
-        public string CodeId { get; set; } = string.Empty;
-        public string ItemName { get; set; } = string.Empty;
-        public string ItemValue { get; set; } = string.Empty;
-        public string Explain { get; set; } = string.Empty;
+        public string? Id { get; set; }
+        public string? CodeId { get; set; }
+        public string? ItemName { get; set; }
+        public string? ItemValue { get; set; }
+        public string? Explain { get; set; }
         public int Sort { get; set; }
     }
 }

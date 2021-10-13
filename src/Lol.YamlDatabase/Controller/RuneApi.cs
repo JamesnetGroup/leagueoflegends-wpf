@@ -1,13 +1,13 @@
 ﻿using Lol.YamlDatabase.Common;
 using Lol.YamlDatabase.Entites.Core;
 using Lol.YamlDatabase.Entites.Schema;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Lol.YamlDatabase.Controller
 {
     public class RuneApi : LolDbContext
     {
+        #region GetRunes
+
         public List<Runes> GetRunes()
         {
             var query = from r in Db.Runes
@@ -15,10 +15,12 @@ namespace Lol.YamlDatabase.Controller
                         {
                             Seq = r.Seq,
                             RuneStone = ResourceHelper.ImgResource(r.RuneStone),
-
                         };
             return query.ToList();
         }
+        #endregion
+
+        #region GetRuneDetail
 
         public List<RuneDetail> GetRuneDetail()
         {
@@ -45,7 +47,8 @@ namespace Lol.YamlDatabase.Controller
 
         public List<RuneDetail> GetRunesDetail(int seq)
         {
-            return GetRuneDetail().Where(x=>x.RuneType == seq.ToString()).ToList();
+            return GetRuneDetail().Where(x => x.RuneType == seq.ToString()).ToList();
         }
+        #endregion
     }
 }

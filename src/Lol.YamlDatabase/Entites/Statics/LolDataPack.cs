@@ -1,7 +1,4 @@
 ﻿using Lol.YamlDatabase.Entites.Schema;
-using System;
-using System.Collections.Generic;
-using System.IO;
 using YamlDotNet.Serialization;
 using YamlDotNet.Serialization.NamingConventions;
 
@@ -20,6 +17,8 @@ namespace Lol.YamlDatabase.Entites.Statics
         {
 
         }
+
+        #region Variables
 
         private List<Users>? _users;
         private List<Friends>? _friends;
@@ -46,6 +45,9 @@ namespace Lol.YamlDatabase.Entites.Statics
         internal List<Resolutions> _resolutions;
         internal List<Runes> _runes;
         internal List<RuneDetail> _runeDetail;
+        #endregion
+
+        #region GetYamlData
 
         private static string GetYamlData(string table)
         {
@@ -55,6 +57,7 @@ namespace Lol.YamlDatabase.Entites.Statics
 
             return text;
         }
+        #endregion
 
         #region Users
 

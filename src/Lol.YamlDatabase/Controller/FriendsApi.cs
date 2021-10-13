@@ -1,15 +1,14 @@
 ﻿using Lol.YamlDatabase.Entites.Core;
 using Lol.YamlDatabase.Entites.Schema;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Lol.YamlDatabase.Controller
 {
     public class FriendsApi : LolDbContext
     {
+        #region GetMyFriends
+
         public List<IFriendsList> GetMyFriends(int mySeq)
         {
-            // TODO: [Elena] Yaml DB 임시 작업중!
             var users = Db.Users;
 
             var friends = Db.Friends.Where(x => x.UserSeq == mySeq)
@@ -29,6 +28,9 @@ namespace Lol.YamlDatabase.Controller
 
             return list;
         }
+        #endregion
+
+        #region GetFriendRequests
 
         public List<RequestUsers> GetFriendRequests(int mySeq)
         {
@@ -45,5 +47,6 @@ namespace Lol.YamlDatabase.Controller
 
             return requests;
         }
+        #endregion
     }
 }
