@@ -246,7 +246,7 @@
 	<None Remove="Images\Rune\Press_the_Attack_rune.png" />
 	<None Remove="Images\Rune\Prototype-_Omnistone_rune.png" />
 	<None Remove="Images\Rune\Resolve.png" />
-	<None Remove="Images\Rune\Resolve_Loading.jpg" />
+	<None Remove="Images\Rune\Resolve_Loading.png" />
 	<None Remove="Images\Rune\Runes.png" />
 	<None Remove="Images\Rune\Sorcery.png" />
 	<None Remove="Images\Rune\Sorcery_Loading.jpg" />
@@ -392,7 +392,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\Rune\Resolve_Loading.jpg" />
+    <Resource Include="Images\Rune\Resolve_Loading.png" />
     <Resource Include="Images\Rune\Runes.png" />
     <Resource Include="Images\Rune\Sorcery.png" />
   </ItemGroup>
