@@ -17,9 +17,13 @@
     <None Remove="Images\bg-spell.png" />
     <None Remove="Images\card-kaisa.png" />
     <None Remove="Images\Champ\Ahri.jpg" />
+    <None Remove="Images\Champ\Ahri.png" />
     <None Remove="Images\Champ\Akali.jpg" />
+    <None Remove="Images\Champ\Akali.png" />
     <None Remove="Images\Champ\Akshan.jpg" />
+    <None Remove="Images\Champ\Akshan.png" />
     <None Remove="Images\Champ\Alistar.jpg" />
+    <None Remove="Images\Champ\Alistar.png" />
     <None Remove="Images\Champ\Amumu.jpg" />
     <None Remove="Images\Champ\Anivia.jpg" />
     <None Remove="Images\Champ\Annie.jpg" />
@@ -366,6 +370,13 @@
     <None Remove="Images\WinIcons\7.png" />
     <None Remove="Images\WinIcons\8.png" />
     <None Remove="Images\WinIcons\9.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Champ\Ahri.png" />
+    <Resource Include="Images\Champ\Akali.png" />
+    <Resource Include="Images\Champ\Akshan.png" />
+    <Resource Include="Images\Champ\Alistar.png" />
   </ItemGroup>
 
   <ItemGroup>

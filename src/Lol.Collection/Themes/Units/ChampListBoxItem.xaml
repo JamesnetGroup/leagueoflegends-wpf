@@ -3,32 +3,16 @@
                     xmlns:units="clr-namespace:Lol.Collection.UI.Units"
                     xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
 
-    <Style TargetType="{x:Type Border}" x:Key="BDR.ITEM.01">
-        <Setter Property="Height" Value="35"/>
-        <Setter Property="Width" Value="35"/>
-        <Setter Property="BorderThickness" Value="0 1 1 1"/>
-        <Setter Property="Margin" Value="0 0 7 0"/>
-        <Setter Property="Opacity" Value="0.3"/>
-    </Style>
-
     <Style TargetType="{x:Type units:ChampListBoxItem}">
         <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:ChampListBoxItem}">
                     <StackPanel Orientation="Horizontal">
-                        <Border x:Name="bd" Style="{StaticResource BDR.ITEM.01}">
-                            <Image Source="{Binding RuneStone}"/>
+                        <Border>
+                            <Image Source="{Binding Img}"/>
                         </Border>
                     </StackPanel>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="bd" Property="Opacity" Value="1.0"/>
-                        </Trigger>
-                        <Trigger Property="IsSelected" Value="True">
-                            <Setter TargetName="bd" Property="Opacity" Value="1.0"/>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

@@ -1,39 +1,51 @@
 ﻿- seq: 1
   champ: Ahri
   name: 아리
+  img: Rune,Glacial_Augment_rune
 - seq: 2
   champ: Akali
   name: 아칼리
+  img: Rune,Glacial_Augment_rune
 - seq: 3
   champ: Akshan
   name: 아크샨
+  img: Champ,Ahri
 - seq: 4
   champ: Alistar
   name: 알리스타
+  img: Champ,Ahri
 - seq: 5
   champ: Amumu
   name: 아무무
+  img: Champ,Ahri
 - seq: 6
   champ: Anivia
   name: 애니비아
+  img: Champ,Ahri
 - seq: 7
   champ: Annie
   name: 애니
+  img: Champ,Ahri
 - seq: 8
   champ: Aphelios
   name: 아펠리오스
+  img: Champ,Ahri
 - seq: 9
   champ: Ashe
   name: 애쉬
+  img: Champ,Ahri
 - seq: 10
   champ: AurelionSol
   name: 아우렐리온솔
+  img: Champ,Ahri
 - seq: 11
   champ: Azir
   name: 아지르
+  img: Champ,Ahri
 - seq: 12
   champ: Bard
   name: 바드
+  img: Champ,Ahri
 - seq: 13
   champ: Blitzcrank
   name: 블리츠크랭크
