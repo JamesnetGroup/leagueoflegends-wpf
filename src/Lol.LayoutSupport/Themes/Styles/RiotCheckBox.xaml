@@ -37,6 +37,8 @@
                                             Style="{StaticResource TOOLTIP}" 
                                             ToolTip="{TemplateBinding Tag}"
                                             Padding="{TemplateBinding TooltipPadding}"
+                                            HorizontalOffset="{TemplateBinding ToolTipHorizonOffset}"
+                                            VerticalOffset="{TemplateBinding ToolTipVerticalOffset}"
                                             Visibility="Visible"/>
 						</Grid.ToolTip>
 						<Grid.ColumnDefinitions>

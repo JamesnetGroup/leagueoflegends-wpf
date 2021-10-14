@@ -17,6 +17,12 @@ namespace Lol.LayoutSupport.Controls
 
         public static readonly DependencyProperty TooltipPaddingProperty = DependencyProperty.Register(
             "TooltipPadding", typeof(Thickness), typeof(CheckBox01), new PropertyMetadata(default(Thickness)));
+
+        public static readonly DependencyProperty ToolTipVerticalOffsetProperty = DependencyProperty.Register(
+            "ToolTipVerticalOffset", typeof(double), typeof(CheckBox01), new PropertyMetadata(0.0));
+
+        public static readonly DependencyProperty ToolTipHorizonOffsetProperty = DependencyProperty.Register(
+            "ToolTipHorizonOffset", typeof(double), typeof(CheckBox01), new PropertyMetadata(0.0));
         #endregion
 
         #region TooltipPadding
@@ -27,5 +33,17 @@ namespace Lol.LayoutSupport.Controls
             set { SetValue(TooltipPaddingProperty, value); }
         }
         #endregion
+
+        public double ToolTipVerticalOffset
+        {
+            get { return (double)this.GetValue(ToolTipVerticalOffsetProperty); }
+            set { this.SetValue(ToolTipVerticalOffsetProperty, value); }
+        }
+
+        public double ToolTipHorizonOffset
+        {
+            get { return (double)this.GetValue(ToolTipHorizonOffsetProperty); }
+            set { this.SetValue(ToolTipHorizonOffsetProperty, value); }
+        }
     }
 }
