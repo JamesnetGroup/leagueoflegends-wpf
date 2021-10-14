@@ -8,7 +8,7 @@
         <Setter Property="BorderThickness" Value="0.5"/>
         <Setter Property="BorderBrush" Value="#41474E"/>
         <Setter Property="Width" Value="1000"/>
-        <Setter Property="Margin" Value="35 31 0 0"/>
+        <Setter Property="Margin" Value="35 0 0 0"/>
         <Setter Property="HorizontalAlignment" Value="Left"/>
     </Style>
 
@@ -17,7 +17,7 @@
         <Setter Property="FontSize" Value="19"/>
         <Setter Property="FontFamily" Value="Friz Quadrata Std"/>
         <Setter Property="Text" Value="｜"/>
-        <Setter Property="Margin" Value="0 6 0 0"/>
+        <Setter Property="Margin" Value="0 6 0 31"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
     </Style>
@@ -27,7 +27,7 @@
         <Setter Property="FontSize" Value="19"/>
         <Setter Property="FontFamily" Value="Friz Quadrata Std"/>
         <Setter Property="Text" Value="11"/>
-        <Setter Property="Margin" Value="5 6 5 0"/>
+        <Setter Property="Margin" Value="5 6 5 31"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
     </Style>
@@ -37,7 +37,7 @@
         <Setter Property="FontSize" Value="19"/>
         <Setter Property="FontFamily" Value="Friz Quadrata Std"/>
         <Setter Property="Text" Value="/"/>
-        <Setter Property="Margin" Value="5 6 8 0"/>
+        <Setter Property="Margin" Value="5 6 8 31"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
     </Style>
@@ -52,7 +52,7 @@
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
         <Setter Property="Content" Value="새로 만들기"/>
-        <Setter Property="Margin" Value="20 6 0 0"/>
+        <Setter Property="Margin" Value="20 6 0 31"/>
         <Setter Property="ContentMargin" Value="18 0 18 0"/>
     </Style>
 
@@ -71,8 +71,8 @@
                                            Height="30"
                                            HorizontalAlignment="Right"
                                            PlaceHolder="검색"
-                                           Margin="0 0 15 0"/>
-                            <units:RuneListBox x:Name="lbx" Margin="0 0 2 0" />
+                                           Margin="0 0 15 31"/>
+                            <units:RuneListBox x:Name="lbx" Margin="0 0 2 0" VerticalAlignment="Stretch"/>
                             <TextBlock Style="{StaticResource TXB.SUB}"/>
                             <ctrls:CheckBox01 x:Name="ch" 
                                                   Grid.Column="0" 
@@ -82,13 +82,13 @@
                                                   FontWeight="Bold" 
                                                   Content="기본 설정 페이지 숨기기" 
                                                   FontSize="12" 
-                                                  Margin="10 0 80 0"
+                                                  Margin="10 0 80 31"
                                                   />
                             <TextBlock Style="{StaticResource TXB.SUB2}"/>
                             <TextBlock Style="{StaticResource TXB.SUB3}"/>
                             <TextBlock Style="{StaticResource TXB.SUB2}"/>
                             <ctrls:RiotButton Style="{StaticResource BTN.CREATE}"/>
-                            <units:RecycleBinButton HorizontalAlignment="Right"/>
+                            <units:RecycleBinButton HorizontalAlignment="Right" Margin="16 0 0 28"/>
                         </StackPanel>
                         <StackPanel Grid.Row="1">
                             <Border Style="{StaticResource BDR.TEMP}"/>

@@ -7,7 +7,6 @@
         <Setter Property="ItemsSource" Value="{Binding Runes}"/>
         <Setter Property="SelectedItem" Value="{Binding CurrentRune}"/>
         <Setter Property="HorizontalAlignment" Value="Left"/>
-        <Setter Property="VerticalAlignment" Value="Top"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:RuneListBox}">

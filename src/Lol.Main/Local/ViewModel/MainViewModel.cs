@@ -237,14 +237,20 @@ namespace Lol.Main.Local.ViewModel
         }
         #endregion
 
+        #region GoHome: SummonersRiftView "X" 버튼 클릭
+
         private void GoHome()
         {
             SubMenuChanged(MainMenu.TotalSubMenus[0]);
         }
+        #endregion
+
+        #region ModeChange: SummonersRiftViewModel "모드 변경" 버튼 클릭
 
         private void ModeChange()
         {
             SubMenuChanged(MainMenu.TotalSubMenus[28]);
         }
+        #endregion
     }
 }
