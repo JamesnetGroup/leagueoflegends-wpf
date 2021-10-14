@@ -7,12 +7,11 @@
   WPF로 만든 리그오브레전드 입니다.
  
   <br />
+  <br />
   
   
   이 레포지토리는 DevNcore팀이 관리하고 있습니다.
   
-  <br />
-
   <a href="https://github.com/devncore/devncore"><strong>더 알아보기 »</strong></a>
  
   <br />
@@ -63,7 +62,7 @@
 <br />
 
 ## 데이터베이스
-**리그오브레전드 WPF**는 클래식 **RDB** 대신 **YAML**을 데이터베이스로 사용하고 있습니다.
+**WPF League of Legends**는 클래식 **RDB** 대신 **YAML**을 데이터베이스로 사용하고 있습니다.
 
 > YAML은 JSON과 함께 널리 사용되는 데이터 양식입니다.  
 > 이 기술에 대한 내용은 **[The Easiest Yaml](https://github.com/devncore/the-easiest-yaml)** 에서 더 자세히 학습할 수 있습니다.  
