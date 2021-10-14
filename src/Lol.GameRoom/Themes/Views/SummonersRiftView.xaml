@@ -21,7 +21,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type views:SummonersRiftView}">
-                    <Grid Margin="40 0 20 20">
+                    <Grid Margin="20 0 20 20">
                         <units:RoomTitle/>
                         <units:TopRightContent/>
                         <ctrls:RiotTextBox Style="{StaticResource RIOT.TXB}"/>

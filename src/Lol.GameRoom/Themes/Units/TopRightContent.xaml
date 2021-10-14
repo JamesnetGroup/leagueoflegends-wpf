@@ -4,6 +4,7 @@
                     xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
 
     <Style TargetType="{x:Type ctrls:RiotButton}" x:Key="RIOT.BTN.MODE">
+        <Setter Property="Command" Value="{Binding ModeChangeCommand}"/>
         <Setter Property="Width" Value="130"/>
         <Setter Property="Height" Value="34"/>
         <Setter Property="Content" Value="모드 변경"/>
