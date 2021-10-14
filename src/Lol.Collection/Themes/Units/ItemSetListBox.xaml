@@ -7,8 +7,27 @@
         <Setter Property="BorderThickness" Value="0.5"/>
         <Setter Property="BorderBrush" Value="#463714"/>
         <Setter Property="Width" Value="1000"/>
-        <Setter Property="Margin" Value="40 0 0 0"/>
+        <Setter Property="Margin" Value="0 70 0 0"/>
         <Setter Property="HorizontalAlignment" Value="Left"/>
+    </Style>
+
+    <Style TargetType="{x:Type ctrls:CheckBox01}" x:Key="CHK.EXPORT">
+        <Setter Property="Grid.Column" Value="0"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="#F0E6D2"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Content" Value="이름"/>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="Tag" Value="모든 세트를 내보내기 하려면 체크하세요"/>
+        <Setter Property="TooltipPadding" Value="8 8 8 8"/>
+        <Setter Property="Margin" Value="8 6 0 6"/>
+    </Style>
+
+    <Style TargetType="{x:Type TextBlock}" x:Key="TXB.COLUMN">
+        <Setter Property="Foreground" Value="#F0E6D2"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
     </Style>
     
     <Style TargetType="{x:Type units:ItemSetListBox}">
@@ -17,59 +36,28 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:ItemSetListBox}">
-                    <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="*"/>
-                            <RowDefinition Height="auto"/>
-                        </Grid.RowDefinitions>
-                        <Border Padding="8 6 0 6">
-                            <Grid Background="#000A13" Opacity="0.7">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
-                                <ctrls:CheckBox01 x:Name="ch" 
-                                                  Grid.Column="0" 
-                                                  IsChecked="False" 
-                                                  VerticalAlignment="Center" 
-                                                  Foreground="#F0E6D2" 
-                                                  FontWeight="Bold" 
-                                                  Content="이름" 
-                                                  FontSize="15" />
-                                <TextBlock Grid.Column="1"
-                                           Foreground="#F0E6D2" 
-                                           FontWeight="Bold" 
-                                           Text="챔피언"
-                                           FontSize="15" 
-                                           VerticalAlignment="Center"
-                                           Margin="10 0 0 0"/>
-                                <TextBlock Grid.Column="2" 
-                                           Foreground="#F0E6D2" 
-                                           FontWeight="Bold"
-                                           Text="맵"
-                                           FontSize="15"
-                                           VerticalAlignment="Center" 
-                                           Margin="65 0 0 0"/>
-                            </Grid>
-                        </Border>
-                        <ctrls:BasicScroll Grid.Row="1">
+                    <StackPanel>
+                        <Grid Background="#000A13" Opacity="0.7" Margin="0 6 0 6">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <ctrls:CheckBox01 Style="{StaticResource CHK.EXPORT}"/>
+                            <TextBlock Style="{StaticResource TXB.COLUMN}" 
+                                       Grid.Column="1"
+                                       Text="챔피언"
+                                       Margin="10 0 0 0"/>
+                            <TextBlock Style="{StaticResource TXB.COLUMN}" 
+                                       Grid.Column="2" 
+                                       Text="맵"
+                                       Margin="65 0 0 0"/>
+                        </Grid>
+                        <ctrls:BasicScroll>
                             <ItemsPresenter/>
                         </ctrls:BasicScroll>
-                        <StackPanel Grid.Row="2">
-                            <Border Style="{StaticResource BDR.TEMP}"/>
-                        </StackPanel>
-                    </Grid>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="ch" Property="ToolTip">
-                                <Setter.Value>
-                                    <ctrls:BasicTooltip ToolTip="모든 세트를 내보내기 하려면 체크하세요" />
-                                </Setter.Value>
-                            </Setter>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
+                        <Border Style="{StaticResource BDR.TEMP}"/>
+                    </StackPanel>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
