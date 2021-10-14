@@ -7,7 +7,7 @@
         <Setter Property="BorderThickness" Value="0.5"/>
         <Setter Property="BorderBrush" Value="#463714"/>
         <Setter Property="Width" Value="1000"/>
-        <Setter Property="Margin" Value="0 70 0 0"/>
+        <Setter Property="Margin" Value="0 10 0 0"/>
         <Setter Property="HorizontalAlignment" Value="Left"/>
     </Style>
 
@@ -20,7 +20,9 @@
         <Setter Property="FontSize" Value="15"/>
         <Setter Property="Tag" Value="모든 세트를 내보내기 하려면 체크하세요"/>
         <Setter Property="TooltipPadding" Value="8 8 8 8"/>
-        <Setter Property="Margin" Value="8 6 0 6"/>
+        <Setter Property="ToolTipHorizonOffset" Value="175"/>
+        <Setter Property="ToolTipVerticalOffset" Value="-40"/>
+        <Setter Property="Margin" Value="8 0 0 0"/>
     </Style>
 
     <Style TargetType="{x:Type TextBlock}" x:Key="TXB.COLUMN">
@@ -31,13 +33,19 @@
     </Style>
     
     <Style TargetType="{x:Type units:ItemSetListBox}">
+        <Setter Property="Background" Value="Transparent"/>
         <Setter Property="ItemsSource" Value="{Binding ItemList}"/>
         <Setter Property="Margin" Value="40 20 0 0"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:ItemSetListBox}">
-                    <StackPanel>
-                        <Grid Background="#000A13" Opacity="0.7" Margin="0 6 0 6">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="35"/>
+                            <RowDefinition Height="0.7*"/>
+                            <RowDefinition Height="0.1*"/>
+                        </Grid.RowDefinitions>
+                        <Grid Background="#000A13" Opacity="0.7">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="*"/>
@@ -45,19 +53,21 @@
                             </Grid.ColumnDefinitions>
                             <ctrls:CheckBox01 Style="{StaticResource CHK.EXPORT}"/>
                             <TextBlock Style="{StaticResource TXB.COLUMN}" 
-                                       Grid.Column="1"
-                                       Text="챔피언"
-                                       Margin="10 0 0 0"/>
+                                        Grid.Column="1"
+                                        Text="챔피언"
+                                        Margin="10 0 0 0"/>
                             <TextBlock Style="{StaticResource TXB.COLUMN}" 
-                                       Grid.Column="2" 
-                                       Text="맵"
-                                       Margin="65 0 0 0"/>
+                                        Grid.Column="2" 
+                                        Text="맵"
+                                        Margin="65 0 0 0"/>
                         </Grid>
-                        <ctrls:BasicScroll>
-                            <ItemsPresenter/>
+                        <ctrls:BasicScroll Margin="0" Grid.Row="1"
+									        ScrollViewer.VerticalScrollBarVisibility="Auto" 
+									        ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                            <ItemsPresenter Margin="0 0 10 0"/>
                         </ctrls:BasicScroll>
-                        <Border Style="{StaticResource BDR.TEMP}"/>
-                    </StackPanel>
+                        <Border Style="{StaticResource BDR.TEMP}" Grid.Row="2" VerticalAlignment="Bottom"/>
+                    </Grid>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

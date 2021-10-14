@@ -24,5 +24,18 @@
   champ: 모든 챔피언
   mapTypes: 
     - 2 
-
-
+- seq: 5
+  name: 새로운 아이템 세트(5)
+  champ: 모든 챔피언
+  mapTypes: 
+    - 2 
+- seq: 6
+  name: 새로운 아이템 세트(6)
+  champ: 모든 챔피언
+  mapTypes: 
+    - 2 
+- seq: 7
+  name: 새로운 아이템 세트(7)
+  champ: 모든 챔피언
+  mapTypes: 
+    - 2 
