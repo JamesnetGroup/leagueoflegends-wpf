@@ -16,7 +16,6 @@
 		<Setter Property="TextAlignment" Value="Center"/>
 		<Setter Property="HorizontalAlignment" Value="Center"/>
 		<Setter Property="VerticalAlignment" Value="Center"/>
-		<Setter Property="Padding" Value="22 12 22 12"/>
 	</Style>
 	
 	<Style TargetType="{x:Type ctrls:CheckBox01}">
@@ -27,7 +26,8 @@
 		<Setter Property="Foreground" Value="#A09B8C"/>
 		<Setter Property="FontSize" Value="12"/>
 		<Setter Property="Margin" Value="0 8 0 8"/>
-		<Setter Property="Tag" Value=""/>
+        <Setter Property="TooltipPadding" Value="22 12 22 12"/>
+        <Setter Property="Tag" Value=""/>
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type ctrls:CheckBox01}">
@@ -36,6 +36,7 @@
 							<ctrls:TooltipA x:Name="tooltip" 
                                             Style="{StaticResource TOOLTIP}" 
                                             ToolTip="{TemplateBinding Tag}"
+                                            Padding="{TemplateBinding TooltipPadding}"
                                             Visibility="Visible"/>
 						</Grid.ToolTip>
 						<Grid.ColumnDefinitions>
@@ -48,7 +49,7 @@
                                 Background="Transparent"
                                 BorderBrush="#705427"
                                 BorderThickness="1"
-                                Margin="0 0 8 0">
+                                Margin="0 0 0 0">
 							<ctrls:RiotIcon x:Name="icon"
                                             IconType="Mark"
                                             HorizontalAlignment="Center" 
@@ -59,8 +60,11 @@
                                             Margin="0"
                                             Visibility="Collapsed"/>
 						</Border>
-						<ContentPresenter Grid.Column="1" 
-                                          VerticalAlignment="Center"/>
+                        <Border Grid.Column="1" 
+                                Background="Transparent">
+                            <ContentPresenter VerticalAlignment="Center"
+                                              Margin="8 0 0 0"/>
+                        </Border>
 					</Grid>
 					<ControlTemplate.Triggers>
 						<Trigger Property="IsChecked" Value="True">
