@@ -186,7 +186,7 @@ namespace Lol.Main.Local.ViewModel
                     27 => new store.ChampionsView().SetVM(new storeVM.ChampionsViewModel()),
                     33 => new HistoryView().SetVM(new HistoryViewModel()),
                     37 => new PVPView().SetVM(new PVPViewModel(PvpConfirm)),
-                    42 => new SummonersRiftView().SetVM(new SummonersRiftViewModel(Friends, GoHome)),
+                    42 => new SummonersRiftView().SetVM(new SummonersRiftViewModel(Friends, GoHome, ModeChange)),
                     _ => new EmptyContent()
                 };
 
@@ -240,6 +240,11 @@ namespace Lol.Main.Local.ViewModel
         private void GoHome()
         {
             SubMenuChanged(MainMenu.TotalSubMenus[0]);
+        }
+
+        private void ModeChange()
+        {
+            SubMenuChanged(MainMenu.TotalSubMenus[28]);
         }
     }
 }

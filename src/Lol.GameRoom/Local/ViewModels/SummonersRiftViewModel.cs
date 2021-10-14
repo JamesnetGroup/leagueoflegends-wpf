@@ -15,10 +15,12 @@ namespace Lol.GameRoom.Local.ViewModels
         private List<MyFriends> _friends;
         private List<GuestModel> _guests;
         private Action _riftClose;
+        private Action _modeChange;
         #endregion
 
         #region ICommand
 
+        public RelayCommand<object> ModeChangeCommand { get; set; }
         public RelayCommand<object> CloseCommand { get; set; }
         #endregion
 
@@ -42,11 +44,14 @@ namespace Lol.GameRoom.Local.ViewModels
 
         #region Constructor
 
-        public SummonersRiftViewModel(FriendsCollection friends, Action riftClose)
+        public SummonersRiftViewModel(FriendsCollection friends, Action riftClose, Action modeChange)
         {
             CloseCommand = new RelayCommand<object>(RoomCloseCommand, CanRoomCloseCommand);
+            ModeChangeCommand = new RelayCommand<object>(ModeChangeCommandExe, CanModeChangeCommand);
 
             _riftClose = riftClose;
+            _modeChange = modeChange;
+
             Friends = friends.GeneralList.Children.Where(x => x.Status == 3).ToList();
 
             List<GuestModel> source = new List<GuestModel>();
@@ -68,5 +73,18 @@ namespace Lol.GameRoom.Local.ViewModels
             return true;
         }
         #endregion
+
+        #region ModeChangeCommandExe
+
+        #endregion
+        private void ModeChangeCommandExe(object obj)
+        {
+            _modeChange?.Invoke();
+        }
+
+        private bool CanModeChangeCommand(object obj)
+        {
+            return true;
+        }
     }
 }
