@@ -1,616 +1,616 @@
 ﻿- seq: 1
   champ: Ahri
   name: 아리
-  img: Champ,Ahri
+  img: Champ,Ahri_0
 - seq: 2
   champ: Akali
   name: 아칼리
-  img: Champ,Akali
+  img: Champ,Akali_0
 - seq: 3
   champ: Akshan
   name: 아크샨
-  img: Champ,Akshan
+  img: Champ,Akshan_0
 - seq: 4
   champ: Alistar
   name: 알리스타
-  img: Champ,Alistar
+  img: Champ,Alistar_0
 - seq: 5
   champ: Amumu
   name: 아무무
-  img: Champ,Amumu
+  img: Champ,Amumu_0
 - seq: 6
   champ: Anivia
   name: 애니비아
-  img: Champ,Anivia
+  img: Champ,Anivia_0
 - seq: 7
   champ: Annie
   name: 애니
-  img: Champ,Annie
+  img: Champ,Annie_0
 - seq: 8
   champ: Aphelios
   name: 아펠리오스
-  img: Champ,Aphelios
+  img: Champ,Aphelios_0
 - seq: 9
   champ: Ashe
   name: 애쉬
-  img: Champ,Ashe
+  img: Champ,Ashe_0
 - seq: 10
   champ: AurelionSol
   name: 아우렐리온솔
-  img: Champ,AurelionSol
+  img: Champ,AurelionSol_0
 - seq: 11
   champ: Azir
   name: 아지르
-  img: Champ,Azir
+  img: Champ,Azir_0
 - seq: 12
   champ: Bard
   name: 바드
-  img: Champ,Bard
+  img: Champ,Bard_0
 - seq: 13
   champ: Blitzcrank
   name: 블리츠크랭크
-  img: Champ,Blitzcrank
+  img: Champ,Blitzcrank_0
 - seq: 14
   champ: Brand
   name: 브랜드
-  img: Champ,Brand
+  img: Champ,Brand_0
 - seq: 15
   champ: Braum
   name: 브라움
-  img: Champ,Braum
+  img: Champ,Braum_0
 - seq: 16
   champ: Caitlyn
   name: 케이틀린
-  img: Champ,Caitlyn
+  img: Champ,Caitlyn_0
 - seq: 17
   champ: Camille
   name: 카밀
-  img: Champ,Camille
+  img: Champ,Camille_0
 - seq: 18
   champ: Cassiopeia
   name: 카시오페아
-  img: Champ,Cassiopeia
+  img: Champ,Cassiopeia_0
 - seq: 19
   champ: Chogath
   name: 초가스
-  img: Champ,Chogath
+  img: Champ,Chogath_0
 - seq: 20
   champ: Corki
   name: 코르키
-  img: Champ,Corki
+  img: Champ,Corki_0
 - seq: 21
   champ: Darius
-  img: Champ,Darius
+  img: Champ,Darius_0
   name: 다리우스
 - seq: 22
   champ: Diana
   name: 다이애나
-  img: Champ,Diana
+  img: Champ,Diana_0
 - seq: 23
   champ: Draven
   name: 드레이븐
-  img: Champ,Draven
+  img: Champ,Draven_0
 - seq: 24
   champ: DrMundo
   name: 문도
-  img: Champ,DrMundo
+  img: Champ,DrMundo_0
 - seq: 25
   champ: Ekko
   name: 에코
-  img: Champ,Ekko
+  img: Champ,Ekko_0
 - seq: 26
   champ: Elise
   name: 엘리스
-  img: Champ,Elise
+  img: Champ,Elise_0
 - seq: 27
   champ: Evelynn
   name: 이블린
-  img: Champ,Evelynn
+  img: Champ,Evelynn_0
 - seq: 28
   champ: Ezreal
   name: 이즈리얼
-  img: Champ,Ezreal
+  img: Champ,Ezreal_0
 - seq: 29
   champ: FiddleSticks
   name: 피들스틱
-  img: Champ,FiddleSticks
+  img: Champ,FiddleSticks_0
 - seq: 30
   champ: Fiora
   name: 피오라
-  img: Champ,Fiora
+  img: Champ,Fiora_0
 - seq: 31
   champ: Fizz
   name: 피즈
-  img: Champ,Fizz
+  img: Champ,Fizz_0
 - seq: 32
   champ: Galio
   name: 갈리오
-  img: Champ,Galio
+  img: Champ,Galio_0
 - seq: 33
   champ: Gangplank
   name: 갱플랭크
-  img: Champ,Gangplank
+  img: Champ,Gangplank_0
 - seq: 34
   champ: Garen
   name: 가렌
-  img: Champ,Garen
+  img: Champ,Garen_0
 - seq: 35
   champ: Gnar
   name: 나르
-  img: Champ,Gnar
+  img: Champ,Gnar_0
 - seq: 36
   champ: Gragas
   name: 그라가스
-  img: Champ,Gragas
+  img: Champ,Gragas_0
 - seq: 37
   champ: Graves
   name: 그레이브즈
-  img: Champ,Graves
+  img: Champ,Graves_0
 - seq: 38
   champ: Gwen
   name: 그웬
-  img: Champ,Gwen
+  img: Champ,Gwen_0
 - seq: 39
   champ: Hecarim
   name: 헤카림
-  img: Champ,Hecarim
+  img: Champ,Hecarim_0
 - seq: 40
   champ: Heimerdinger
   name: 하이머딩거
-  img: Champ,Heimerdinger
+  img: Champ,Heimerdinger_0
 - seq: 41
   champ: Illaoi
   name: 일라오이
-  img: Champ,Illaoi
+  img: Champ,Illaoi_0
 - seq: 42
   champ: Irelia
   name: 이렐리아
-  img: Champ,Irelia
+  img: Champ,Irelia_0
 - seq: 43
   champ: Ivern
   name: 아이번
-  img: Champ,Ivern
+  img: Champ,Ivern_0
 - seq: 44
   champ: Janna
   name: 잔나
-  img: Champ,Janna
+  img: Champ,Janna_0
 - seq: 45
   champ: JarvanIV
   name: 자르반4세
-  img: Champ,JarvanIV
+  img: Champ,JarvanIV_0
 - seq: 46
   champ: Jax
   name: 잭스
-  img: Champ,Jax
+  img: Champ,Jax_0
 - seq: 47
   champ: Jayce
   name: 제이스
-  img: Champ,Jayce
+  img: Champ,Jayce_0
 - seq: 48
   champ: Jhin
   name: 진
-  img: Champ,Jhin
+  img: Champ,Jhin_0
 - seq: 49
   champ: Jinx
   name: 징크스
-  img: Champ,Jinx
+  img: Champ,Jinx_0
 - seq: 50
   champ: Kaisa
   name: 카이사
-  img: Champ,Kaisa
+  img: Champ,Kaisa_0
 - seq: 51
   champ: Kalista
   name: 칼리스타
-  img: Champ,Kalista
+  img: Champ,Kalista_0
 - seq: 52
   champ: Karma
   name: 카르마
-  img: Champ,Karma
+  img: Champ,Karma_0
 - seq: 53
   champ: Karthus
   name: 카서스
-  img: Champ,Karthus
+  img: Champ,Karthus_0
 - seq: 54
   champ: Kassadin
   name: 카사딘
-  img: Champ,Kassadin
+  img: Champ,Kassadin_0
 - seq: 55
   champ: Katarina
   name: 카타리나
-  img: Champ,Katarina
+  img: Champ,Katarina_0
 - seq: 56
   champ: Kayle
   name: 케일
-  img: Champ,Kayle
+  img: Champ,Kayle_0
 - seq: 57
   champ: Kayn
   name: 케인
-  img: Champ,Kayn
+  img: Champ,Kayn_0
 - seq: 58
   champ: Kennen
   name: 케넨
-  img: Champ,Kennen
+  img: Champ,Kennen_0
 - seq: 59
   champ: Khazix
   name: 카직스
-  img: Champ,Khazix
+  img: Champ,Khazix_0
 - seq: 60
   champ: Kindred
   name: 킨드레드
-  img: Champ,Kindred
+  img: Champ,Kindred_0
 - seq: 61
   champ: Kled
   name: 클레드
-  img: Champ,Kled
+  img: Champ,Kled_0
 - seq: 62
   champ: KogMaw
   name: 코그모
-  img: Champ,KogMaw
+  img: Champ,KogMaw_0
 - seq: 63
   champ: Leblanc
   name: 르블랑
-  img: Champ,Leblanc
+  img: Champ,Leblanc_0
 - seq: 64
   champ: LeeSin
   name: 리신
-  img: Champ,LeeSin
+  img: Champ,LeeSin_0
 - seq: 65
   champ: Leona
   name: 레오나
-  img: Champ,Leona
+  img: Champ,Leona_0
 - seq: 66
   champ: Lillia
   name: 릴리아
-  img: Champ,Lillia
+  img: Champ,Lillia_0
 - seq: 67
   champ: Lissandra
   name: 리산드라
-  img: Champ,Lissandra
+  img: Champ,Lissandra_0
 - seq: 68
   champ: Lucian
   name: 루시안
-  img: Champ,Lucian
+  img: Champ,Lucian_0
 - seq: 69
   champ: Lulu
   name: 룰루
-  img: Champ,Lulu
+  img: Champ,Lulu_0
 - seq: 70
   champ: Lux
   name: 럭스
-  img: Champ,Lux
+  img: Champ,Lux_0
 - seq: 71
   champ: Malphite
   name: 말파이트
-  img: Champ,Malphite
+  img: Champ,Malphite_0
 - seq: 72
   champ: Malzahar
   name: 말자하
-  img: Champ,Malzahar
+  img: Champ,Malzahar_0
 - seq: 73
   champ: Maokai
   name: 마오카이
-  img: Champ,Maokai
+  img: Champ,Maokai_0
 - seq: 74
   champ: MasterYi
   name: 마스터이
-  img: Champ,MasterYi
+  img: Champ,MasterYi_0
 - seq: 75
   champ: MissFortune
   name: 미스포춘
-  img: Champ,MissFortune
+  img: Champ,MissFortune_0
 - seq: 76
   champ: MonkeyKing
   name: 오공
-  img: Champ,MonkeyKing
+  img: Champ,MonkeyKing_0
 - seq: 77
   champ: Mordekaiser
   name: 모데카이저
-  img: Champ,Mordekaiser
+  img: Champ,Mordekaiser_0
 - seq: 78
   champ: Morgana
   name: 모르가나
-  img: Champ,Morgana
+  img: Champ,Morgana_0
 - seq: 79
   champ: Nami
   name: 나미
-  img: Champ,Nami
+  img: Champ,Nami_0
 - seq: 80
   champ: Nasus
   name: 나서스
-  img: Champ,Nasus
+  img: Champ,Nasus_0
 - seq: 81
   champ: Nautilus
   name: 노틸러스
-  img: Champ,Nautilus
+  img: Champ,Nautilus_0
 - seq: 82
   champ: Neeko
   name: 니코
-  img: Champ,Neeko
+  img: Champ,Neeko_0
 - seq: 83
   champ: Nidalee
   name: 니달리
-  img: Champ,Nidalee
+  img: Champ,Nidalee_0
 - seq: 84
   champ: Nocturne
   name: 녹턴
-  img: Champ,Nocturne
+  img: Champ,Nocturne_0
 - seq: 85
   champ: Nunu
   name: 누누
-  img: Champ,Nunu
+  img: Champ,Nunu_0
 - seq: 86
   champ: Olaf
   name: 올라프
-  img: Champ,Olaf
+  img: Champ,Olaf_0
 - seq: 87
   champ: Orianna
   name: 오리아나
-  img: Champ,Orianna
+  img: Champ,Orianna_0
 - seq: 88
   champ: Ornn
   name: 오른
-  img: Champ,Ornn
+  img: Champ,Ornn_0
 - seq: 89
   champ: Pantheon
   name: 판테온
-  img: Champ,Pantheon
+  img: Champ,Pantheon_0
 - seq: 90
   champ: Poppy
   name: 뽀삐
-  img: Champ,Poppy
+  img: Champ,Poppy_0
 - seq: 91
   champ: Pyke
   name: 파이크
-  img: Champ,Pyke
+  img: Champ,Pyke_0
 - seq: 92
   champ: Qiyana
   name: 키아나
-  img: Champ,Qiyana
+  img: Champ,Qiyana_0
 - seq: 93
   champ: Quinn
   name: 퀸
-  img: Champ,Quinn
+  img: Champ,Quinn_0
 - seq: 94
   champ: Rakan
   name: 라칸
-  img: Champ,Rakan
+  img: Champ,Rakan_0
 - seq: 95
   champ: Rammus
   name: 람머스
-  img: Champ,Rammus
+  img: Champ,Rammus_0
 - seq: 96
   champ: RekSai
   name: 렉사이
-  img: Champ,RekSai
+  img: Champ,RekSai_0
 - seq: 97
   champ: Rell
   name: 렐
-  img: Champ,Rell
+  img: Champ,Rell_0
 - seq: 98
   champ: Renekton
   name: 레넥톤
-  img: Champ,Renekton
+  img: Champ,Renekton_0
 - seq: 99
   champ: Rengar
   name: 렝가
-  img: Champ,Rengar
+  img: Champ,Rengar_0
 - seq: 100
   champ: Riven
   name: 리븐
-  img: Champ,Riven
+  img: Champ,Riven_0
 - seq: 101
   champ: Rumble
   name: 럼블
-  img: Champ,Rumble
+  img: Champ,Rumble_0
 - seq: 102
   champ: Ryze
   name: 라이즈
-  img: Champ,Ryze
+  img: Champ,Ryze_0
 - seq: 103
   champ: Samira
   name: 사미라
-  img: Champ,Samira
+  img: Champ,Samira_0
 - seq: 104
   champ: Sejuani
   name: 세주아니
-  img: Champ,Sejuani
+  img: Champ,Sejuani_0
 - seq: 105
   champ: Senna
   name: 세나
-  img: Champ,Senna
+  img: Champ,Senna_0
 - seq: 106
   champ: Seraphine
   name: 세라핀
-  img: Champ,Seraphine
+  img: Champ,Seraphine_0
 - seq: 107
   champ: Sett
   name: 세트
-  img: Champ,Sett
+  img: Champ,Sett_0
 - seq: 108
   champ: Shaco
   name: 샤코
-  img: Champ,Shaco
+  img: Champ,Shaco_0
 - seq: 109
   champ: Shen
   name: 쉔
-  img: Champ,Shen
+  img: Champ,Shen_0
 - seq: 110
   champ: Shyvana
   name: 쉬바나
-  img: Champ,Shyvana
+  img: Champ,Shyvana_0
 - seq: 111
   champ: Singed
   name: 신지드
-  img: Champ,Singed
+  img: Champ,Singed_0
 - seq: 112
   champ: Sion
   name: 사이온
-  img: Champ,Sion
+  img: Champ,Sion_0
 - seq: 113
   champ: Sivir
   name: 시비르
-  img: Champ,Sivir
+  img: Champ,Sivir_0
 - seq: 114
   champ: Skarner
   name: 스카너
-  img: Champ,Skarner
+  img: Champ,Skarner_0
 - seq: 115
   champ: Sona
   name: 소나
-  img: Champ,Sona
+  img: Champ,Sona_0
 - seq: 116
   champ: Soraka
   name: 소라카
-  img: Champ,Soraka
+  img: Champ,Soraka_0
 - seq: 117
   champ: Swain
   name: 스웨인
-  img: Champ,Swain
+  img: Champ,Swain_0
 - seq: 118
   champ: Sylas
   name: 사일러스
-  img: Champ,Sylas
+  img: Champ,Sylas_0
 - seq: 119
   champ: Syndra
   name: 신드라
-  img: Champ,Syndra
+  img: Champ,Syndra_0
 - seq: 120
   champ: TahmKench
   name: 탐켄치
-  img: Champ,TahmKench
+  img: Champ,TahmKench_0
 - seq: 121
   champ: Taliyah
   name: 탈리야
-  img: Champ,Taliyah
+  img: Champ,Taliyah_0
 - seq: 122
   champ: Talon
   name: 탈론
-  img: Champ,Talon
+  img: Champ,Talon_0
 - seq: 123
   champ: Taric
   name: 타릭
-  img: Champ,Taric
+  img: Champ,Taric_0
 - seq: 124
   champ: Teemo
   name: 티모
-  img: Champ,Teemo
+  img: Champ,Teemo_0
 - seq: 125
   champ: Thresh
   name: 쓰레쉬
-  img: Champ,Thresh
+  img: Champ,Thresh_0
 - seq: 126
   champ: Tristana
   name: 트리스타나
-  img: Champ,Tristana
+  img: Champ,Tristana_0
 - seq: 127
   champ: Trundle
   name: 트런들
-  img: Champ,Trundle
+  img: Champ,Trundle_0
 - seq: 128
   champ: Tryndamere
   name: 트런들
-  img: Champ,Tryndamere
+  img: Champ,Tryndamere_0
 - seq: 129
   champ: TwistedFate
   name: 트위스티트페이트
-  img: Champ,TwistedFate
+  img: Champ,TwistedFate_0
 - seq: 130
   champ: Twitch
   name: 트위치
-  img: Champ,Twitch
+  img: Champ,Twitch_0
 - seq: 131
   champ: Udyr
   name: 우디르
-  img: Champ,Udyr
+  img: Champ,Udyr_0
 - seq: 132
   champ: Urgot
   name: 우르곳
-  img: Champ,Urgot
+  img: Champ,Urgot_0
 - seq: 133
   champ: Varus
   name: 바루스
-  img: Champ,Varus
+  img: Champ,Varus_0
 - seq: 134
   champ: Vayne
   name: 베인
-  img: Champ,Vayne
+  img: Champ,Vayne_0
 - seq: 135
   champ: Veigar
   name: 베이가
-  img: Champ,Veigar
+  img: Champ,Veigar_0
 - seq: 136
   champ: Velkoz
   name: 벨코즈
-  img: Champ,Velkoz
+  img: Champ,Velkoz_0
 - seq: 137
   champ: Vi
   name: 바이
-  img: Champ,Vi
+  img: Champ,Vi_0
 - seq: 138
   champ: Viego
   name: 비에고
-  img: Champ,Viego
+  img: Champ,Viego_0
 - seq: 139
   champ: Vladimir
   name: 블라디미르
-  img: Champ,Vladimir
+  img: Champ,Vladimir_0
 - seq: 140
   champ: Volibear
   name: 볼리베어
-  img: Champ,Volibear
+  img: Champ,Volibear_0
 - seq: 141
   champ: Warwick
   name: 워윅
-  img: Champ,Warwick
+  img: Champ,Warwick_0
 - seq: 142
   champ: Xayah
   name: 자야
-  img: Champ,Xayah
+  img: Champ,Xayah_0
 - seq: 143
   champ: Xerath
   name: 제라스
-  img: Champ,Xerath
+  img: Champ,Xerath_0
 - seq: 144
   champ: XinZhao
   name: 신짜오
-  img: Champ,XinZhao
+  img: Champ,XinZhao_0
 - seq: 145
   champ: Yasuo
   name: 야스오
-  img: Champ,Yasuo
+  img: Champ,Yasuo_0
 - seq: 146
   champ: Yone
   name: 요네
-  img: Champ,Yone
+  img: Champ,Yone_0
 - seq: 147
   champ: Yorick
   name: 요릭
-  img: Champ,Yorick
+  img: Champ,Yorick_0
 - seq: 148
   champ: Yuumi
   name: 유미
-  img: Champ,Yuumi
+  img: Champ,Yuumi_0
 - seq: 149
   champ: Zac
   name: 자크
-  img: Champ,Zac
+  img: Champ,Zac_0
 - seq: 150
   champ: Zed
   name: 제드
-  img: Champ,Zed
+  img: Champ,Zed_0
 - seq: 151
   champ: Ziggs
   name: 직스
-  img: Champ,Ziggs
+  img: Champ,Ziggs_0
 - seq: 152
   champ: Zilean
   name: 질리언
-  img: Champ,Zilean
+  img: Champ,Zilean_0
 - seq: 153
   champ: Zoe
   name: 조이
-  img: Champ,Zoe
+  img: Champ,Zoe_0
 - seq: 154
   champ: Zyra
   name: 자이라
-  img: Champ,Zyra
+  img: Champ,Zyra_0
