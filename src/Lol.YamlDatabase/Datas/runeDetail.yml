@@ -57,7 +57,7 @@
 - seq: 4  
   rune: Rune,Inspiration_Loading
   keystone : Rune,Glacial_Augment_rune
-  paths : Rune,Resolve
+  paths : Rune,Inspiration
   runeType : 5
   name : 카이사
   infor1 : 정밀
@@ -71,7 +71,7 @@
 - seq: 5  
   rune: Rune,Domination_Loading
   keystone : Rune,Electrocute_rune
-  paths : Rune,Inspiration
+  paths : Rune,Resolve
   runeType : 6
   name : AP
   infor1 : 마법

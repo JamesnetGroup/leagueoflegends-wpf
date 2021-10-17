@@ -35,13 +35,13 @@
                             </Border.Background>
                             <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
                                 <TextBlock Text="{Binding Infor1}" x:Name="text1" Foreground="#C6A86E" FontSize="10" FontWeight="Bold" VerticalAlignment="Center" Margin="15 15 0 10"/>
-                                <TextBlock Text="{Binding Infor2}" Foreground="#FFFFFF" FontSize="12" VerticalAlignment="Center"  Margin="15 0 0 0"/>
-                                <TextBlock Text="{Binding Infor3}" Foreground="#FFFFFF" FontSize="10" VerticalAlignment="Center"  Margin="15 0 0 0"/>
-                                <TextBlock Text="{Binding Infor4}" Foreground="#FFFFFF" FontSize="10" VerticalAlignment="Center" Margin="15 0 0 0"/>
-                                <TextBlock Text="{Binding Infor5}" Foreground="#FFFFFF" FontSize="10" VerticalAlignment="Center" Margin="15 0 0 0"/>
+                                <TextBlock Text="{Binding Infor2}" Foreground="#A8A8A8" FontSize="12" VerticalAlignment="Center"  Margin="15 0 0 0"/>
+                                <TextBlock Text="{Binding Infor3}" Foreground="#A8A8A8" FontSize="10" VerticalAlignment="Center"  Margin="15 0 0 0"/>
+                                <TextBlock Text="{Binding Infor4}" Foreground="#A8A8A8" FontSize="10" VerticalAlignment="Center" Margin="15 0 0 0"/>
+                                <TextBlock Text="{Binding Infor5}" Foreground="#A8A8A8" FontSize="10" VerticalAlignment="Center" Margin="15 0 0 0"/>
                                 <TextBlock Text="{Binding Infor6}" x:Name="text2" Foreground="#FFFFFF" FontSize="10" VerticalAlignment="Center" Margin="15 10 0 10"/>
-                                <TextBlock Text="{Binding Infor7}" Foreground="#FFFFFF" FontSize="10" VerticalAlignment="Center" Margin="15 0 0 0"/>
-                                <TextBlock Text="{Binding Infor8}" Foreground="#FFFFFF" FontSize="10" VerticalAlignment="Center" Margin="15 0 0 0"/>
+                                <TextBlock Text="{Binding Infor7}" Foreground="#A8A8A8" FontSize="10" VerticalAlignment="Center" Margin="15 0 0 0"/>
+                                <TextBlock Text="{Binding Infor8}" Foreground="#A8A8A8" FontSize="10" VerticalAlignment="Center" Margin="15 0 0 0"/>
                             </StackPanel>
                         </Border>
                         <Border x:Name="bd2" VerticalAlignment="Bottom" BorderBrush="#4A4B50" Margin="10 0 0 0" BorderThickness="0 1 0 0">
@@ -57,7 +57,23 @@
                             <Setter TargetName="bd2" Property="BorderBrush" Value="#756C54"/>
                         </Trigger>
                         <DataTrigger Binding="{Binding Seq}" Value="0">
-                            <Setter TargetName="text1" Property="Foreground" Value="Red"/>
+                            <Setter TargetName="text1" Property="Foreground" Value="#C33F40"/>
+                            <Setter TargetName="text2" Property="Foreground" Value="#AB9160"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Seq}" Value="1">
+                            <Setter TargetName="text1" Property="Foreground" Value="#AB9160"/>
+                            <Setter TargetName="text2" Property="Foreground" Value="Red"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Seq}" Value="2">
+                            <Setter TargetName="text1" Property="Foreground" Value="#80A372"/>
+                            <Setter TargetName="text2" Property="Foreground" Value="Red"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Seq}" Value="3">
+                            <Setter TargetName="text1" Property="Foreground" Value="#5B63CB"/>
+                            <Setter TargetName="text2" Property="Foreground" Value="#9CC888"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Seq}" Value="4">
+                            <Setter TargetName="text1" Property="Foreground" Value="#48B2BC"/>
                             <Setter TargetName="text2" Property="Foreground" Value="Red"/>
                         </DataTrigger>
                     </ControlTemplate.Triggers>
