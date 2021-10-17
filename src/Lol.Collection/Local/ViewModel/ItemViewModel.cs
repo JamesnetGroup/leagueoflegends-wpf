@@ -40,11 +40,6 @@ namespace Lol.Collection.Local.ViewModel
         }
         #endregion
 
-        private static string ImgResource(string folder, string name)
-        {
-            return $"/Lol.Resources;component/Images/{folder}/{name}.png";
-        }
-
         private void Test1(object obj)
         {
             //int cnt = ItemLists.Count;

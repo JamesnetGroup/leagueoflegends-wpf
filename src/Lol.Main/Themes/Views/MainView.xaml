@@ -122,7 +122,7 @@
             </DataTrigger>
 
             <!--Loot-->
-            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.CurrentSeq}" Value="65">
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.CurrentSeq}" Value="5">
                 <Setter TargetName="border" Property="Background" Value="#06111D"/>
             </DataTrigger>
 
