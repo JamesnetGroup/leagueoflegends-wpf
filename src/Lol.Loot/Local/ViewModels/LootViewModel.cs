@@ -10,6 +10,7 @@ namespace Lol.Loot.Local.ViewModels
         #region Variables
 
         private List<Loots> _menus;
+        private List<Loots> _items;
         private List<ChampCb> _cbxSource;
         private Loots _currentMneu;
         private ChampCb _currentCbx;
@@ -21,6 +22,15 @@ namespace Lol.Loot.Local.ViewModels
         {
             get { return _menus; }
             set { _menus = value; OnPropertyChanged(); }
+        }
+        #endregion
+
+        #region Items
+
+        public List<Loots> Items
+        {
+            get { return _items; }
+            set { _items = value; OnPropertyChanged(); }
         }
         #endregion
 
@@ -57,6 +67,7 @@ namespace Lol.Loot.Local.ViewModels
         {
             CbxSource = new LootApi().GetComboBox();
             //CurrentCbx = CbxSource[0];
+            Items = new LootApi().GetLootItems();
             Menus = new LootApi().GetLoots();
             CurrentMenu = Menus[0];
         }

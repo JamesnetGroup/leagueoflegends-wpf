@@ -45,11 +45,9 @@
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto"/>
                                     <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
                                 <units:PlusButton/>
+                                <units:ItemList Grid.Column="1"/>
                             </Grid>
                         </Border>
                     </Grid>
