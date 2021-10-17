@@ -22,3 +22,15 @@
 - seq: 7
   content: 상자 획득 가능
   type: 1
+- seq: 8
+  content: 가나다순
+  type: 3
+- seq: 9
+  content: 등급
+  type: 3
+- seq: 10
+  content: 가격
+  type: 3
+- seq: 11
+  content: 대여 가능
+  type: 3

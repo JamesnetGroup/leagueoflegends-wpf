@@ -19,5 +19,21 @@ namespace Lol.YamlDatabase.Controller
             return query.ToList();
         }
         #endregion
+
+        #region GetComboBox
+
+        public List<ChampCb> GetComboBox()
+        {
+            var query = from c in Db.ChampCb
+                        where c.Type == 3
+                        select new ChampCb
+                        {
+                            Seq = c.Seq,
+                            Content = c.Content,
+                            Type = c.Type
+                        };
+            return query.ToList();
+        }
+        #endregion
     }
 }

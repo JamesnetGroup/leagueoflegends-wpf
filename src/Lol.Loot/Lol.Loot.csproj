@@ -12,6 +12,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Page Update="Themes\Units\RightContent.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Themes\Units\LootLeftMenuItem.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>

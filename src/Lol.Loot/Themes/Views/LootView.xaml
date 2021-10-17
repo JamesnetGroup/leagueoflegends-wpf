@@ -35,6 +35,7 @@
                             <Border Style="{StaticResource BD.LINE}"/>
                             <ctrls:RiotIconButton Style="{StaticResource RIOT.ICON}"/>
                         </StackPanel>
+                        <units:RightContent Grid.Column="1"/>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
