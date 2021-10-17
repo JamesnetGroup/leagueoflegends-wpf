@@ -1,10 +1,45 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:units="clr-namespace:Lol.Loot.UI.Units">
+                    xmlns:units="clr-namespace:Lol.Loot.UI.Units"
+                    xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
+    <Style TargetType="{x:Type ctrls:RiotIcon}" x:Key="RIOT.ICON">
+        <Setter Property="Fill" Value="#535a5e"/>
+        <Setter Property="Width" Value="24"/>
+        <Setter Property="Height" Value="24"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+    </Style>
+
+    <Style TargetType="{x:Type Border}" x:Key="BDR.SELECT">
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="Height" Value="4"/>
+        <Setter Property="Visibility" Value="Hidden"/>
+        <Setter Property="Margin" Value="0 0 0 9"/>
+        <Setter Property="Background" Value="#c89b3c"/>
+    </Style>
+    
     <Style TargetType="{x:Type units:LootLeftMenuItem}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:LootLeftMenuItem}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Border x:Name="bd" Style="{StaticResource BDR.SELECT}"/>
+                        <ctrls:RiotIcon x:Name="path" Grid.Column="1" Style="{StaticResource RIOT.ICON}" IconType="{Binding Type}"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="path" Property="Fill" Value="#787d7d"/>
+                            <Setter Property="Cursor" Value="Hand"/>
+                        </Trigger>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter TargetName="path" Property="Fill" Value="#a8a69e"/>
+                            <Setter TargetName="bd" Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
