@@ -10,6 +10,7 @@ namespace Lol.Loot.Local.ViewModels
         #region Variables
 
         private List<Loots> _menus;
+        private Loots _currentMneu;
         #endregion
 
         #region Menus
@@ -21,11 +22,21 @@ namespace Lol.Loot.Local.ViewModels
         }
         #endregion
 
+        #region CurrentMenu
+
+        public Loots CurrentMenu
+        {
+            get { return _currentMneu; }
+            set { _currentMneu = value; OnPropertyChanged(); }
+        }
+        #endregion
+
         #region Constructor
 
         public LootViewModel()
         {
             Menus = new LootApi().GetLoots();
+            CurrentMenu = Menus[0];
         }
         #endregion
     }
