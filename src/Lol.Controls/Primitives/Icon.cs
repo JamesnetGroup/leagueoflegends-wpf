@@ -91,6 +91,13 @@ namespace Lol.Controls.Primitives
                 case GeoIcon.NumericFiveCircle: icon.Data = IconData.NUMERIC_FIVE_CIRCLE.ToGeometry(); break;
                 case GeoIcon.Fire: icon.Data = IconData.FIRE.ToGeometry(); break;
                 case GeoIcon.Shield: icon.Data = IconData.SHIELD.ToGeometry(); break;
+                case GeoIcon.AlphaQ: icon.Data = IconData.ALPHA_Q.ToGeometry(); break;
+                case GeoIcon.Alien: icon.Data = IconData.ALIEN.ToGeometry(); break;
+                case GeoIcon.Mask: icon.Data = IconData.MASK.ToGeometry(); break;
+                case GeoIcon.Egg: icon.Data = IconData.EGG.ToGeometry(); break;
+                case GeoIcon.Apps: icon.Data = IconData.APPS.ToGeometry(); break;
+                case GeoIcon.Smile: icon.Data = IconData.SMILE.ToGeometry(); break;
+                case GeoIcon.Spa: icon.Data = IconData.SPA.ToGeometry(); break;
 
                 case GeoIcon.None:
                     break;

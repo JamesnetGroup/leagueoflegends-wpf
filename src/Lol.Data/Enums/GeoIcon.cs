@@ -62,5 +62,12 @@
         NumericFiveCircle,
         Fire,
         Shield,
+        AlphaQ,
+        Alien,
+        Mask,
+        Egg,
+        Apps,
+        Smile,
+        Spa,
     }
 }
