@@ -29,6 +29,8 @@ using Lol.GameRoom.Local.ViewModels;
 using Lol.YamlDatabase.Controller;
 using Lol.YamlDatabase.Entites.Schema;
 using Lol.YamlDatabase.Collection;
+using Lol.Loot.UI.Views;
+using Lol.Loot.Local.ViewModels;
 
 namespace Lol.Main.Local.ViewModel
 {
@@ -199,6 +201,7 @@ namespace Lol.Main.Local.ViewModel
                 content = _mainMenu.Seq switch
                 {
                     1 => new TeamFightView().SetVM(new TeamFightViewModel()),
+                    5 => new LootView().SetVM(new LootViewModel()),
                     6 => new MyShopView().SetVM(new MyShopViewModel()),
                     _ => new EmptyContent()
                 };
