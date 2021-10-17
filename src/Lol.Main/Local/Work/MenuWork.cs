@@ -52,6 +52,14 @@ namespace Lol.Main.Local.Work
         }
         #endregion
 
+        public List<SubMenuModel> MenuChangedbyButtonClick(int seq)
+        {
+            CurrentMenu = Menus[seq];
+            List<SubMenuModel> subMenus = TotalSubMenus.Where(x => x.MainSeq == CurrentMenu.Seq).ToList();
+
+            return subMenus;
+        }
+
         #region GetMenus
 
         private static List<MainMenuModel> GetMenus()
