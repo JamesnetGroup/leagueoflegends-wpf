@@ -1,6 +1,4 @@
-﻿using System.IO;
-
-namespace Lol.YamlDatabase.Common
+﻿namespace Lol.YamlDatabase.Common
 {
     internal class ResourceHelper
     {
