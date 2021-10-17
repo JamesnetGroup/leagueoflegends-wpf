@@ -46,6 +46,7 @@ namespace Lol.YamlDatabase.Entites.Statics
         internal List<Runes> _runes;
         internal List<RuneDetail> _runeDetail;
         internal List<Loots> _loots;
+        internal List<Loots> _lootItems;
         #endregion
 
         #region GetYamlData
@@ -576,6 +577,26 @@ namespace Lol.YamlDatabase.Entites.Statics
                 }
 
                 return _loots;
+            }
+        }
+        #endregion
+
+        #region LootItems
+
+        internal List<Loots> LootItems
+        {
+            get
+            {
+                if (_lootItems == null)
+                {
+                    string readText = GetYamlData("lootItems");
+                    var deserializer = new DeserializerBuilder()
+                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .Build();
+                    _lootItems = deserializer.Deserialize<List<Loots>>(readText);
+                }
+
+                return _lootItems;
             }
         }
         #endregion
