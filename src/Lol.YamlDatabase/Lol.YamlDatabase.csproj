@@ -19,6 +19,9 @@
     <None Update="Datas\clashSchedules.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Datas\lootItems.yml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Datas\loots.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

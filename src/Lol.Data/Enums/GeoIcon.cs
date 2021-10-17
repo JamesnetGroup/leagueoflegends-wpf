@@ -69,5 +69,8 @@
         Apps,
         Smile,
         Spa,
+        Diamond,
+        DiamondOut,
+        Key,
     }
 }
