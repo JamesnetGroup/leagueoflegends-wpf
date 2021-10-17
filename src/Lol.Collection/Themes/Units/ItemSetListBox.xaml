@@ -3,12 +3,14 @@
                     xmlns:units="clr-namespace:Lol.Collection.UI.Units"
                     xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
 
-    <Style TargetType="{x:Type Border}" x:Key="BDR.TEMP">
+    <Style TargetType="{x:Type Border}" x:Key="BDR.BOTTOM">
+        <Setter Property="Grid.Row" Value="2"/>
         <Setter Property="BorderThickness" Value="0.5"/>
         <Setter Property="BorderBrush" Value="#463714"/>
         <Setter Property="Width" Value="1000"/>
         <Setter Property="Margin" Value="0 10 0 0"/>
         <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
     </Style>
 
     <Style TargetType="{x:Type ctrls:CheckBox01}" x:Key="CHK.EXPORT">
@@ -33,6 +35,7 @@
     </Style>
     
     <Style TargetType="{x:Type units:ItemSetListBox}">
+        <Setter Property="Grid.Row" Value="1"/>
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="ItemsSource" Value="{Binding ItemList}"/>
         <Setter Property="Margin" Value="40 20 0 0"/>
@@ -66,7 +69,7 @@
 									        ScrollViewer.HorizontalScrollBarVisibility="Disabled">
                             <ItemsPresenter Margin="0 0 10 0"/>
                         </ctrls:BasicScroll>
-                        <Border Style="{StaticResource BDR.TEMP}" Grid.Row="2" VerticalAlignment="Bottom"/>
+                        <Border Style="{StaticResource BDR.BOTTOM}"/>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
