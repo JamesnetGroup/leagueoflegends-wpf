@@ -242,17 +242,23 @@ namespace Lol.Main.Local.ViewModel
 
         #region GoHome: SummonersRiftView "X" 버튼 클릭
 
+        // TODO: [Elena] Menu, Submenu가 제대로 표시되지 않아 수정함
         private void GoHome()
         {
-            SubMenuChanged(MainMenu.TotalSubMenus[0]);
+            //SubMenuChanged(MainMenu.TotalSubMenus[0]);
+            SubMenus = MainMenu.MenuChangedbyButtonClick(0);
+            CurrentSubMenu = SubMenus[0];
         }
         #endregion
 
         #region ModeChange: SummonersRiftViewModel "모드 변경" 버튼 클릭
 
+        // TODO: [Elena] Menu, Submenu가 제대로 표시되지 않아 수정함
         private void ModeChange()
         {
-            SubMenuChanged(MainMenu.TotalSubMenus[28]);
+            //SubMenuChanged(MainMenu.TotalSubMenus[28]);
+            SubMenus = MainMenu.MenuChangedbyButtonClick(8);
+            CurrentSubMenu = SubMenus[0];
         }
         #endregion
     }
