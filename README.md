@@ -7,8 +7,7 @@
   WPF로 만든 리그오브레전드 입니다.
  
   <br />
-  <br />
-  
+  <br />  
   
   이 레포지토리는 DevNcore팀이 관리하고 있습니다.
   
@@ -95,12 +94,12 @@
 ### `Profile`
 ![image](https://user-images.githubusercontent.com/74305823/136051365-b82be44d-318d-4ac4-81cc-02ba6c306776.png)
 
-<br>
+<br />
 
 ### `Collection`
 ![image](https://user-images.githubusercontent.com/74305823/136051245-cd0d9c3f-507e-4e0f-b659-1a1253d3db74.png)
 
-<br>
+<br />
 
 ### `Game`
 ![image](https://user-images.githubusercontent.com/74305823/136380449-ea229fbb-6db7-412c-828b-16d6f7af83d8.png)
