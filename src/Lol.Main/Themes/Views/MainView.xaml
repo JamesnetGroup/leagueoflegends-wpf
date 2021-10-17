@@ -121,6 +121,11 @@
                 <Setter TargetName="left" Property="Fill" Value="{StaticResource TFT.LEFT}"/>
             </DataTrigger>
 
+            <!--Loot-->
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.CurrentSeq}" Value="65">
+                <Setter TargetName="border" Property="Background" Value="#06111D"/>
+            </DataTrigger>
+
             <!--MyShop-->
             <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.CurrentSeq}" Value="6">
                 <Setter TargetName="border" Property="Background" Value="#06111D"/>

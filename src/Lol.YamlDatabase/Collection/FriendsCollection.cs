@@ -1,5 +1,4 @@
 ﻿using Lol.YamlDatabase.Entites.Schema;
-using System.Collections.Generic;
 
 namespace Lol.YamlDatabase.Collection
 {

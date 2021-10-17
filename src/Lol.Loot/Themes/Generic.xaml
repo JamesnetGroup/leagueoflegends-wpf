@@ -2,6 +2,8 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Lol.Loot;component/Themes/Units/LootLeftMenuItem.xaml"/>
+        <ResourceDictionary Source="/Lol.Loot;component/Themes/Units/LootLeftMenu.xaml"/>
         <ResourceDictionary Source="/Lol.Loot;component/Themes/Views/LootView.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

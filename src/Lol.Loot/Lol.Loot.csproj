@@ -7,12 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Themes\Units\" />
-    <Folder Include="UI\Units\" />
+    <ProjectReference Include="..\Lol.LayoutSupport\Lol.LayoutSupport.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Lol.LayoutSupport\Lol.LayoutSupport.csproj" />
+    <Page Update="Themes\Units\LootLeftMenuItem.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\LootLeftMenu.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
 
 </Project>
