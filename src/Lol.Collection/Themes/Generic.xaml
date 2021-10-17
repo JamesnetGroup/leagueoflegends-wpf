@@ -6,18 +6,19 @@
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/RuneListBoxItem.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/RuneDetailListBox.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/RuneListBox.xaml"/>
-        <ResourceDictionary Source="/Lol.Collection;component/Themes/Views/RuneView.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/SpellInfo.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/SpellListBox.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/ChampListBoxItem.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/ChampListBox.xaml"/>
-        <ResourceDictionary Source="/Lol.Collection;component/Themes/Views/ChampionsView.xaml"/>
-        <ResourceDictionary Source="/Lol.Collection;component/Themes/Views/SpellsView.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/MapListBoxItem.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/MapListBox.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/ItemSetListBoxItem.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/ItemSetListBox.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/ItemQuickMenu.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Views/ItemView.xaml"/>
+        <ResourceDictionary Source="/Lol.Collection;component/Themes/Views/SkinView.xaml"/>
+        <ResourceDictionary Source="/Lol.Collection;component/Themes/Views/RuneView.xaml"/>
+        <ResourceDictionary Source="/Lol.Collection;component/Themes/Views/SpellsView.xaml"/>
+        <ResourceDictionary Source="/Lol.Collection;component/Themes/Views/ChampionsView.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
