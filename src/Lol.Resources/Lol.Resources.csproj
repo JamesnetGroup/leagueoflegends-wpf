@@ -1827,6 +1827,18 @@
 	<None Remove="Images\Rune\Sorcery_Loading.jpg" />
 	<None Remove="Images\Rune\Summon_Aery_rune.png" />
 	<None Remove="Images\Rune\Unsealed_Spellbook_rune.png" />
+	<None Remove="Images\Skin\0.png" />
+	<None Remove="Images\Skin\1.png" />
+	<None Remove="Images\Skin\2.png" />
+	<None Remove="Images\Skin\3.png" />
+	<None Remove="Images\Skin\4.png" />
+	<None Remove="Images\Skin\5.png" />
+	<None Remove="Images\Skin\skin_chroma.png" />
+	<None Remove="Images\Skin\skin_epic.png" />
+	<None Remove="Images\Skin\skin_legend.png" />
+	<None Remove="Images\Skin\skin_limit.png" />
+	<None Remove="Images\Skin\skin_myth.png" />
+	<None Remove="Images\Skin\skin_transcend.png" />
 	<None Remove="Images\Spell\0.png" />
 	<None Remove="Images\Spell\1.png" />
 	<None Remove="Images\Spell\10.png" />
@@ -3605,6 +3617,18 @@
     <Resource Include="Images\Rune\Sorcery_Loading.jpg" />
     <Resource Include="Images\Rune\Summon_Aery_rune.png" />
     <Resource Include="Images\Rune\Unsealed_Spellbook_rune.png" />
+    <Resource Include="Images\Skin\0.png" />
+    <Resource Include="Images\Skin\1.png" />
+    <Resource Include="Images\Skin\2.png" />
+    <Resource Include="Images\Skin\3.png" />
+    <Resource Include="Images\Skin\4.png" />
+    <Resource Include="Images\Skin\5.png" />
+    <Resource Include="Images\Skin\skin_chroma.png" />
+    <Resource Include="Images\Skin\skin_epic.png" />
+    <Resource Include="Images\Skin\skin_legend.png" />
+    <Resource Include="Images\Skin\skin_limit.png" />
+    <Resource Include="Images\Skin\skin_myth.png" />
+    <Resource Include="Images\Skin\skin_transcend.png" />
     <Resource Include="Images\Spell\2.png">
       <CopyToOutputDirectory></CopyToOutputDirectory>
     </Resource>
