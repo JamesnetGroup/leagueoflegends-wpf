@@ -10,11 +10,12 @@
         <Setter Property="HorizontalAlignment" Value="Center"/>
     </Style>
 
-    <Style TargetType="{x:Type Border}" x:Key="BDR.SELECT">
+    <Style TargetType="{x:Type Border}" x:Key="BD.SELECT">
         <Setter Property="HorizontalAlignment" Value="Left"/>
-        <Setter Property="Height" Value="4"/>
+        <Setter Property="Height" Value="32"/>
+        <Setter Property="Width" Value="4"/>
         <Setter Property="Visibility" Value="Hidden"/>
-        <Setter Property="Margin" Value="0 0 0 9"/>
+        <Setter Property="Margin" Value="0 0 16 0"/>
         <Setter Property="Background" Value="#c89b3c"/>
     </Style>
     
@@ -22,12 +23,12 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:LootLeftMenuItem}">
-                    <Grid>
+                    <Grid Margin="0 0 0 10" Background="Transparent">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="auto"/>
                             <ColumnDefinition Width="auto"/>
                         </Grid.ColumnDefinitions>
-                        <Border x:Name="bd" Style="{StaticResource BDR.SELECT}"/>
+                        <Border x:Name="bd" Style="{StaticResource BD.SELECT}"/>
                         <ctrls:RiotIcon x:Name="path" Grid.Column="1" Style="{StaticResource RIOT.ICON}" IconType="{Binding Type}"/>
                     </Grid>
                     <ControlTemplate.Triggers>
