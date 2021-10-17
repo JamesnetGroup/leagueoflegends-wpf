@@ -17,6 +17,7 @@
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/MapListBox.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/ItemSetListBoxItem.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/ItemSetListBox.xaml"/>
+        <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/ItemQuickMenu.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Views/ItemView.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
