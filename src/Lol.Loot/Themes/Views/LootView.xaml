@@ -16,7 +16,7 @@
         <Setter Property="Width" Value="22"/>
         <Setter Property="IconType" Value="Help"/>
         <Setter Property="IconHeight" Value="11"/>
-        <Setter Property="IconWidth" Value="Help"/>
+        <Setter Property="IconWidth" Value="11"/>
         <Setter Property="Margin" Value="18 0 0 0"/>
     </Style>
     
