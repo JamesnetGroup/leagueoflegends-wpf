@@ -3,6 +3,7 @@
                     xmlns:units="clr-namespace:Lol.Loot.UI.Units">
     <Style TargetType="{x:Type units:LootLeftMenu}">
         <Setter Property="ItemsSource" Value="{Binding Menus}"/>
+        <Setter Property="SelectedItem" Value="{Binding CurrentMenu}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:LootLeftMenu}">
