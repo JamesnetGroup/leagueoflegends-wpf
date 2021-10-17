@@ -98,6 +98,9 @@ namespace Lol.Controls.Primitives
                 case GeoIcon.Apps: icon.Data = IconData.APPS.ToGeometry(); break;
                 case GeoIcon.Smile: icon.Data = IconData.SMILE.ToGeometry(); break;
                 case GeoIcon.Spa: icon.Data = IconData.SPA.ToGeometry(); break;
+                case GeoIcon.Diamond: icon.Data = IconData.DIAMOND.ToGeometry(); break;
+                case GeoIcon.DiamondOut: icon.Data = IconData.DIAMOND_OUT.ToGeometry(); break;
+                case GeoIcon.Key: icon.Data = IconData.KEY.ToGeometry(); break;
 
                 case GeoIcon.None:
                     break;

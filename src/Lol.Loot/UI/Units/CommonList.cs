@@ -3,13 +3,13 @@ using System.Windows.Controls;
 
 namespace Lol.Loot.UI.Units
 {
-    public class ItemList : ListBox
+    public class CommonList : ListBox
     {
         #region DefaultStyleKey
 
-        static ItemList()
+        static CommonList()
         {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(ItemList), new FrameworkPropertyMetadata(typeof(ItemList)));
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(CommonList), new FrameworkPropertyMetadata(typeof(CommonList)));
         }
         #endregion
 
@@ -17,7 +17,7 @@ namespace Lol.Loot.UI.Units
 
         protected override DependencyObject GetContainerForItemOverride()
         {
-            return new ItemListBoxItem();
+            return new CommonListBoxItem();
         }
         #endregion
     }

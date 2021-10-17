@@ -20,6 +20,22 @@ namespace Lol.YamlDatabase.Controller
         }
         #endregion
 
+        #region GetLoots
+
+        public List<Loots> GetLootItems()
+        {
+            var query = from i in Db.LootItems
+                        select new Loots
+                        {
+                            Seq = i.Seq,
+                            Name = i.Name,
+                            Type = i.Type,
+                            Value = i.Value,
+                        };
+            return query.ToList();
+        }
+        #endregion
+
         #region GetComboBox
 
         public List<ChampCb> GetComboBox()
