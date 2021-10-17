@@ -39,7 +39,7 @@
                                 <TextBlock Text="{Binding Infor3}" Foreground="#A8A8A8" FontSize="10" VerticalAlignment="Center"  Margin="15 0 0 0"/>
                                 <TextBlock Text="{Binding Infor4}" Foreground="#A8A8A8" FontSize="10" VerticalAlignment="Center" Margin="15 0 0 0"/>
                                 <TextBlock Text="{Binding Infor5}" Foreground="#A8A8A8" FontSize="10" VerticalAlignment="Center" Margin="15 0 0 0"/>
-                                <TextBlock Text="{Binding Infor6}" x:Name="text2" Foreground="#FFFFFF" FontSize="10" VerticalAlignment="Center" Margin="15 10 0 10"/>
+                                <TextBlock Text="{Binding Infor6}" x:Name="text2" Foreground="#AB9160" FontSize="10" VerticalAlignment="Center" Margin="15 10 0 10"/>
                                 <TextBlock Text="{Binding Infor7}" Foreground="#A8A8A8" FontSize="10" VerticalAlignment="Center" Margin="15 0 0 0"/>
                                 <TextBlock Text="{Binding Infor8}" Foreground="#A8A8A8" FontSize="10" VerticalAlignment="Center" Margin="15 0 0 0"/>
                             </StackPanel>
@@ -55,26 +55,37 @@
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="bd1" Property="Visibility" Value="Visible"/>
                             <Setter TargetName="bd2" Property="BorderBrush" Value="#756C54"/>
+                            <Setter TargetName="bd2" Property="Opacity" Value="0.7"/>
                         </Trigger>
-                        <DataTrigger Binding="{Binding Seq}" Value="0">
+                        <DataTrigger Binding="{Binding Infor1}" Value="지배">
                             <Setter TargetName="text1" Property="Foreground" Value="#C33F40"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Infor1}" Value="정밀">
+                            <Setter TargetName="text1" Property="Foreground" Value="#AB9160"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Infor1}" Value="결의">
+                            <Setter TargetName="text1" Property="Foreground" Value="#80A372"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Infor1}" Value="마법">
+                            <Setter TargetName="text1" Property="Foreground" Value="#5B63CB"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Infor1}" Value="영감">
+                            <Setter TargetName="text1" Property="Foreground" Value="#48B2BC"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Infor6}" Value="지배">
+                            <Setter TargetName="text2" Property="Foreground" Value="#C33F40"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Infor6}" Value="정밀">
                             <Setter TargetName="text2" Property="Foreground" Value="#AB9160"/>
                         </DataTrigger>
-                        <DataTrigger Binding="{Binding Seq}" Value="1">
-                            <Setter TargetName="text1" Property="Foreground" Value="#AB9160"/>
-                            <Setter TargetName="text2" Property="Foreground" Value="Red"/>
+                        <DataTrigger Binding="{Binding Infor6}" Value="결의">
+                            <Setter TargetName="text2" Property="Foreground" Value="#80A372"/>
                         </DataTrigger>
-                        <DataTrigger Binding="{Binding Seq}" Value="2">
-                            <Setter TargetName="text1" Property="Foreground" Value="#80A372"/>
-                            <Setter TargetName="text2" Property="Foreground" Value="Red"/>
+                        <DataTrigger Binding="{Binding Infor6}" Value="마법">
+                            <Setter TargetName="text2" Property="Foreground" Value="#5B63CB"/>
                         </DataTrigger>
-                        <DataTrigger Binding="{Binding Seq}" Value="3">
-                            <Setter TargetName="text1" Property="Foreground" Value="#5B63CB"/>
-                            <Setter TargetName="text2" Property="Foreground" Value="#9CC888"/>
-                        </DataTrigger>
-                        <DataTrigger Binding="{Binding Seq}" Value="4">
-                            <Setter TargetName="text1" Property="Foreground" Value="#48B2BC"/>
-                            <Setter TargetName="text2" Property="Foreground" Value="Red"/>
+                        <DataTrigger Binding="{Binding Infor6}" Value="영감">
+                            <Setter TargetName="text2" Property="Foreground" Value="#48B2BC"/>
                         </DataTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
