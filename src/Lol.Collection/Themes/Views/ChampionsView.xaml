@@ -79,7 +79,7 @@
                                               FontSize="12"
                                               Margin="12 15 0 0"/>
                             <ctrls:RiotComboBox Style="{StaticResource CBX.DEVICE}"/>
-                            <ctrls:RiotComboBox Style="{StaticResource CBX.DEVICE2}"/>
+                            <ctrls:RiotComboBox Style="{StaticResource CBX.DEVICE2}" SelectedItem="{Binding Champs}"/>
                         </StackPanel>
                         <units:ChampListBox Grid.Column="1"/>
                     </Grid>
