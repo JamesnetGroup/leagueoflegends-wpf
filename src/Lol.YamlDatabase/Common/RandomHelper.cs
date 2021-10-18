@@ -1,4 +1,7 @@
-﻿namespace Lol.DBEntity.Common
+﻿using System;
+using System.Collections.Generic;
+
+namespace Lol.DBEntity.Common
 {
     internal class RandomHelper
     {
