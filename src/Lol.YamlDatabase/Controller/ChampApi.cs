@@ -19,7 +19,8 @@ namespace Lol.YamlDatabase.Controller
                             Champ = c.Champ,
                             Name = c.Name,
                             Img = ResourceHelper.ImgResource(c.Img),
-                            Insignia = ResourceHelper.ImgResource(c.Insignia)
+                            Insignia = ResourceHelper.ImgResource(c.Insignia),
+                            영원석 = c.영원석
                         };
             return query.ToList();
         }

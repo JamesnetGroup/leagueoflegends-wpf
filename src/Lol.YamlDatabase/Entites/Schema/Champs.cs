@@ -7,5 +7,6 @@
         public string Name { get; set; }
         public string Img { get; set; }
         public string Insignia { get; set; }
+        public string 영원석 { get; set; }
     }
 }
