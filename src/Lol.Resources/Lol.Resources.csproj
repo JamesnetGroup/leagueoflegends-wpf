@@ -506,6 +506,7 @@
     <None Remove="Images\Champ\Illaoi_1.jpg" />
     <None Remove="Images\Champ\Illaoi_10.jpg" />
     <None Remove="Images\Champ\Illaoi_2.jpg" />
+    <None Remove="Images\Champ\Insignia_0.png" />
     <None Remove="Images\Champ\Irelia.jpg" />
     <None Remove="Images\Champ\Irelia.png" />
     <None Remove="Images\Champ\Irelia_0.jpg" />
@@ -2363,6 +2364,7 @@
     <Resource Include="Images\Champ\Illaoi_1.jpg" />
     <Resource Include="Images\Champ\Illaoi_10.jpg" />
     <Resource Include="Images\Champ\Illaoi_2.jpg" />
+    <Resource Include="Images\Champ\Insignia_0.png" />
     <Resource Include="Images\Champ\Irelia_0.jpg" />
     <Resource Include="Images\Champ\Irelia_1.jpg" />
     <Resource Include="Images\Champ\Irelia_15.jpg" />
