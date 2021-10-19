@@ -19,25 +19,26 @@
                                 <Border x:Name="bd" BorderThickness="1" BorderBrush="#1E2328">
                                     <Image Source="{Binding Img}" Stretch="Fill"  Height="220"/>
                                 </Border>
-                                <Grid Height="37" Background="Black" Margin="0 0 1 1" Opacity="0.7" VerticalAlignment="Bottom">
+                                <Grid Height="34" Background="Black" Margin="0 0 1 1" Opacity="0.7" VerticalAlignment="Bottom">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="60"/>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
-                                <TextBlock Grid.Column="1" Text="1" FontSize="13"  Foreground="#A09B8C" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                <TextBlock x:Name="txt" Grid.Column="1" Text="{Binding 영원석}" FontSize="13"  Foreground="#B09B8C" HorizontalAlignment="Center" VerticalAlignment="Center"/>
                                     
                                 </Grid>
                             </Grid>
-                        <Image Source="{Binding Insignia}" Height="45" Margin="-10 -40 -2 0"  HorizontalAlignment="Left"/>
+                        <Image Source="{Binding Insignia}" Height="38" Margin="0 -35 -2 0"  HorizontalAlignment="Left"/>
                         <TextBlock Grid.Row="1" Text="{Binding Name}" FontSize="13" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#999487" Margin="0 10 0 0"/>    
                         </StackPanel>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="bd" Property="BorderBrush" Value="{StaticResource BDR.PARENT}"/>
+                            <Setter TargetName="txt" Property="Foreground" Value="#C8AA6E"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
-        </Setter>
+        </Setter> 
     </Style>
 </ResourceDictionary>
