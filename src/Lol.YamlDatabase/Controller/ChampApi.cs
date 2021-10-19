@@ -20,7 +20,6 @@ namespace Lol.YamlDatabase.Controller
                             Name = c.Name,
                             Img = ResourceHelper.ImgResource(c.Img),
                             Insignia = ResourceHelper.ImgResource(c.Insignia)
-
                         };
             return query.ToList();
         }
