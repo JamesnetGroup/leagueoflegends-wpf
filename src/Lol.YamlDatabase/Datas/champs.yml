@@ -3,73 +3,73 @@
   name: 아리
   img: Champ,Ahri_0
   insignia: Champ,Insignia_1
-  영원석: 1
+  영원석: 3
 - seq: 2
   champ: Akali
   name: 아칼리
   img: Champ,Akali_0
   insignia: Champ,Insignia_1
-  영원석: 1
+  영원석: 2
 - seq: 3
   champ: Akshan
   name: 아크샨
   img: Champ,Akshan_0
   insignia: Champ,Insignia_1
-  영원석: 1
+  영원석: 5
 - seq: 4
   champ: Alistar
   name: 알리스타
   img: Champ,Alistar_0
   insignia: Champ,Insignia_1
-  영원석: 1
+  영원석: 6
 - seq: 5
   champ: Amumu
   name: 아무무
   img: Champ,Amumu_0
   insignia: Champ,Insignia_0
-  영원석: 1
+  영원석: 7
 - seq: 6
   champ: Anivia
   name: 애니비아
   img: Champ,Anivia_0
   insignia: Champ,Insignia_1
-  영원석: 1
+  영원석: 8
 - seq: 7
   champ: Annie
   name: 애니
   img: Champ,Annie_0
   insignia: Champ,Insignia_0
-  영원석: 1
+  영원석: 9
 - seq: 8
   champ: Aphelios
   name: 아펠리오스
   img: Champ,Aphelios_0
   insignia: Champ,Insignia_0
-  영원석: 1
+  영원석: 11
 - seq: 9
   champ: Ashe
   name: 애쉬
   img: Champ,Ashe_0
   insignia: Champ,Insignia_1
-  영원석: 1
+  영원석: 12
 - seq: 10
   champ: AurelionSol
   name: 아우렐리온솔
   img: Champ,AurelionSol_0
   insignia: Champ,Insignia_0
-  영원석: 1
+  영원석: 0
 - seq: 11
   champ: Azir
   name: 아지르
   img: Champ,Azir_0
   insignia: Champ,Insignia_0
-  영원석: 1
+  영원석: 2
 - seq: 12
   champ: Bard
   name: 바드
   img: Champ,Bard_0
   insignia: Champ,Insignia_1
-  영원석: 1
+  영원석: 3
 - seq: 13
   champ: Blitzcrank
   name: 블리츠크랭크
@@ -81,7 +81,7 @@
   name: 브랜드
   img: Champ,Brand_0
   insignia: Champ,Insignia_0
-  영원석: 1
+  영원석: 5
 - seq: 15
   champ: Braum
   name: 브라움
@@ -99,7 +99,7 @@
   name: 카밀
   img: Champ,Camille_0
   insignia: Champ,Insignia_0
-  영원석: 1
+  영원석: 6
 - seq: 18
   champ: Cassiopeia
   name: 카시오페아
@@ -111,19 +111,19 @@
   name: 초가스
   img: Champ,Chogath_0
   insignia: Champ,Insignia_0
-  영원석: 1
+  영원석: 0
 - seq: 20
   champ: Corki
   name: 코르키
   img: Champ,Corki_0
   insignia: Champ,Insignia_0
-  영원석: 1
+  영원석: 2
 - seq: 21
   champ: Darius
   name: 다리우스
   img: Champ,Darius_0
   insignia: Champ,Insignia_0
-  영원석: 1
+  영원석: 6
 - seq: 22
   champ: Diana
   name: 다이애나
@@ -153,7 +153,7 @@
   name: 엘리스
   img: Champ,Elise_0
   insignia: Champ,Insignia_0
-  영원석: 1
+  영원석: 9
 - seq: 27
   champ: Evelynn
   name: 이블린
@@ -165,7 +165,7 @@
   name: 이즈리얼
   img: Champ,Ezreal_0
   insignia: Champ,Insignia_0
-  영원석: 1
+  영원석: 8
 - seq: 29
   champ: FiddleSticks
   name: 피들스틱
@@ -248,25 +248,25 @@
   champ: Irelia
   name: 이렐리아
   img: Champ,Irelia_0
-  insignia: Champ,Insignia_0
+  insignia: Champ,Insignia_1
   영원석: 8
 - seq: 43
   champ: Ivern
   name: 아이번
   img: Champ,Ivern_0
-  insignia: Champ,Insignia_0
+  insignia: Champ,Insignia_1
   영원석: 1
 - seq: 44
   champ: Janna
   name: 잔나
   img: Champ,Janna_0
-  insignia: Champ,Insignia_0
+  insignia: Champ,Insignia_1
   영원석: 1
 - seq: 45
   champ: JarvanIV
   name: 자르반4세
   img: Champ,JarvanIV_0
-  insignia: Champ,Insignia_0
+  insignia: Champ,Insignia_1
   영원석: 2
 - seq: 46
   champ: Jax
@@ -344,19 +344,19 @@
   champ: Kennen
   name: 케넨
   img: Champ,Kennen_0
-  insignia: Champ,Insignia_0
+  insignia: Champ,Insignia_1
   영원석: 12
 - seq: 59
   champ: Khazix
   name: 카직스
   img: Champ,Khazix_0
-  insignia: Champ,Insignia_0
+  insignia: Champ,Insignia_1
   영원석: 6
 - seq: 60
   champ: Kindred
   name: 킨드레드
   img: Champ,Kindred_0
-  insignia: Champ,Insignia_0
+  insignia: Champ,Insignia_1
   영원석: 2
 - seq: 61
   champ: Kled
@@ -410,19 +410,19 @@
   champ: Lulu
   name: 룰루
   img: Champ,Lulu_0
-  insignia: Champ,Insignia_0
+  insignia: Champ,Insignia_1
   영원석: 1
 - seq: 70
   champ: Lux
   name: 럭스
   img: Champ,Lux_0
-  insignia: Champ,Insignia_0
+  insignia: Champ,Insignia_1
   영원석: 1
 - seq: 71
   champ: Malphite
   name: 말파이트
   img: Champ,Malphite_0
-  insignia: Champ,Insignia_0
+  insignia: Champ,Insignia_1
   영원석: 1
 - seq: 72
   champ: Malzahar
