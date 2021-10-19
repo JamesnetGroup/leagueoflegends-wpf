@@ -44,7 +44,7 @@
 ## 개발 정보
 
 - .NET 6.0  
-- C# 9.0  
+- C# 10.0  
 - [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/ko/vs/preview/vs2022/)
 
 <br />
