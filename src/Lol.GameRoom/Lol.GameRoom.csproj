@@ -6,10 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Windows.Interactivity.WPF" Version="2.0.20525" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Lol.Converter\Lol.Converter.csproj" />
     <ProjectReference Include="..\Lol.LayoutSupport\Lol.LayoutSupport.csproj" />
     <ProjectReference Include="..\Lol.YamlDatabase\Lol.YamlDatabase.csproj" />
