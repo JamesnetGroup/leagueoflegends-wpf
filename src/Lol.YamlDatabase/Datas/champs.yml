@@ -7,7 +7,7 @@
   champ: Akali
   name: 아칼리
   img: Champ,Akali_0
-  insignia: Champ,Insignia_0
+  insignia: Champ,Insignia_1
 - seq: 3
   champ: Akshan
   name: 아크샨
@@ -17,7 +17,7 @@
   champ: Alistar
   name: 알리스타
   img: Champ,Alistar_0
-  insignia: Champ,Insignia_0
+  insignia: Champ,Insignia_1
 - seq: 5
   champ: Amumu
   name: 아무무
@@ -27,7 +27,7 @@
   champ: Anivia
   name: 애니비아
   img: Champ,Anivia_0
-  insignia: Champ,Insignia_0
+  insignia: Champ,Insignia_1
 - seq: 7
   champ: Annie
   name: 애니
@@ -42,7 +42,7 @@
   champ: Ashe
   name: 애쉬
   img: Champ,Ashe_0
-  insignia: Champ,Insignia_0
+  insignia: Champ,Insignia_1
 - seq: 10
   champ: AurelionSol
   name: 아우렐리온솔
@@ -57,7 +57,7 @@
   champ: Bard
   name: 바드
   img: Champ,Bard_0
-  insignia: Champ,Insignia_0
+  insignia: Champ,Insignia_1
 - seq: 13
   champ: Blitzcrank
   name: 블리츠크랭크

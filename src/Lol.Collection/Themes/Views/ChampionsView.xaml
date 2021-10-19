@@ -49,7 +49,7 @@
                             <ColumnDefinition Width="2.5*"/>
                             <ColumnDefinition Width="7.5*"/>
                         </Grid.ColumnDefinitions>
-                        <StackPanel Margin="20 50 30 0 ">
+                        <StackPanel Margin="20 60 30 0 ">
                             <Border>
                                 <Viewbox Width="200" Height="200">
                                     <Grid>
@@ -81,7 +81,7 @@
                             <ctrls:RiotComboBox Style="{StaticResource CBX.DEVICE}"/>
                             <ctrls:RiotComboBox Style="{StaticResource CBX.DEVICE2}" SelectedItem="{Binding Champs}"/>
                         </StackPanel>
-                        <units:ChampListBox Grid.Column="1"/>
+                        <units:ChampListBox Grid.Column="1" Margin="0 15 0 0"/>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
