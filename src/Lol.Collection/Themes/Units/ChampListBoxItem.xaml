@@ -20,8 +20,9 @@
                                     <Image Source="{Binding Img}" Stretch="Fill"  Height="220"/>
                                 </Border>
                                 <StackPanel Height="34" Background="Black" Margin="0 0 1 1" Opacity="0.7" VerticalAlignment="Bottom" Orientation="Horizontal">
-                                    <TextBlock Text="로고" Foreground="Red" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="70 0 10 0"/>
-                                    <TextBlock x:Name="txt"  Text="{Binding 영원석}" FontSize="13"  Foreground="#B09B8C" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                <ctrls:RiotIcon x:Name="icon" Width="18" Height="18" Fill="#B09B8C" HorizontalAlignment="Right" VerticalAlignment="Center" IconType="Fire" Margin="75 0 10 0"
+                                                Opacity="0.7"/>
+                                    <TextBlock x:Name="txt"  Text="{Binding 영원석}" FontSize="13"  Foreground="#B09B8C" HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0.7"/>
                                 </StackPanel>
                             </Grid>
                         <Image Source="{Binding Insignia}" Height="38" Margin="0 -35 -2 0"  HorizontalAlignment="Left"/>
@@ -30,7 +31,10 @@
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="bd" Property="BorderBrush" Value="{StaticResource BDR.PARENT}"/>
-                            <Setter TargetName="txt" Property="Foreground" Value="#C8AA6E"/>
+                            <Setter TargetName="txt" Property="Foreground" Value="#CDBE91"/>
+                            <Setter TargetName="txt" Property="Opacity" Value="1"/>
+                            <Setter TargetName="icon" Property="Fill" Value="#CDBE91"/>
+                            <Setter TargetName="icon" Property="Opacity" Value="1"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
