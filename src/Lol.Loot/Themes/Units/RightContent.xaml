@@ -37,8 +37,8 @@
                             <ctrls:RiotTextBox Height="34" MinWidth="200" Margin="0 0 2.5 0" PlaceHolder="검색"/>
                             <ctrls:RiotComboBox Grid.Column="1" Style="{StaticResource CBX.FILTER}"/>
                         </Grid>
-                        <Grid Grid.Row="1" Margin="0 22 0 0">
-                            
+                        <Grid Grid.Row="1" Margin="0 0 0 0">
+                            <units:CommonList/>
                         </Grid>
                         <Border Grid.Row="2" Height="64" Padding="0 18 0 0" BorderThickness="0 1 0 0" BorderBrush="#5C461E">
                             <Grid >
