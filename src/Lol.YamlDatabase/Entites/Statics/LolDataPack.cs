@@ -50,6 +50,7 @@ namespace Lol.YamlDatabase.Entites.Statics
         internal List<RuneDetail> _runeDetail;
         internal List<Loots> _loots;
         internal List<Loots> _lootItems;
+        internal List<PlantHeaders> _plantHeaders;
         internal List<PlantItems> _plantItems;
         #endregion
 
@@ -601,6 +602,26 @@ namespace Lol.YamlDatabase.Entites.Statics
                 }
 
                 return _lootItems;
+            }
+        }
+        #endregion
+
+        #region PlantHeaders
+
+        internal List<PlantHeaders> PlantHeaders
+        {
+            get
+            {
+                if (_plantHeaders == null)
+                {
+                    string readText = GetYamlData("plantHeaders");
+                    var deserializer = new DeserializerBuilder()
+                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .Build();
+                    _plantHeaders = deserializer.Deserialize<List<PlantHeaders>>(readText);
+                }
+
+                return _plantHeaders;
             }
         }
         #endregion
