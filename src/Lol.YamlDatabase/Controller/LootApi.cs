@@ -22,7 +22,7 @@ namespace Lol.YamlDatabase.Controller
         }
         #endregion
 
-        #region GetLoots
+        #region GetLootItems
 
         public List<Loots> GetLootItems()
         {
@@ -33,6 +33,20 @@ namespace Lol.YamlDatabase.Controller
                             Name = i.Name,
                             Type = i.Type,
                             Value = i.Value,
+                        };
+            return query.ToList();
+        }
+        #endregion
+
+        #region GetPlantItems
+
+        public List<Loots> GetPlantItems()
+        {
+            var query = from i in Db.PlantItems
+                        select new Loots
+                        {
+                            Seq = i.Seq,
+                            
                         };
             return query.ToList();
         }
