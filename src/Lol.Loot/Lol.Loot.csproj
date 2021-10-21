@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Page Update="Themes\Units\CommonListBoxItem.xaml">
+    <Page Update="Themes\Units\CommonListItem.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>

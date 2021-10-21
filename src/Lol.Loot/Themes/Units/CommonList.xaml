@@ -2,12 +2,55 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:units="clr-namespace:Lol.Loot.UI.Units"
                     xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
+    <LinearGradientBrush x:Key="BDR.ITEM" StartPoint="0.5, 0" EndPoint="0.5, 1">
+        <GradientStop Color="#B4995F" Offset="0"/>
+        <GradientStop Color="#916C29" Offset="0.5"/>
+        <GradientStop Color="#6C5128" Offset="1"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="BDR.ITEM.OVER" StartPoint="0.5, 0" EndPoint="0.5, 1">
+        <GradientStop Color="#E4C88F" Offset="0"/>
+        <GradientStop Color="#B7985B" Offset="0.5"/>
+        <GradientStop Color="#8A6A2A" Offset="1"/>
+    </LinearGradientBrush>
+
+    <Style TargetType="{x:Type TreeViewItem}" x:Key="TRVI.ITEM">
+        <Setter Property="Margin" Value="0 12 0 0"/>
+        <Setter Property="Background" Value="#010F1D"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TreeViewItem}">
+                    <StackPanel>
+                        <Border Background="Transparent" BorderThickness="0 0 0 1" BorderBrush="#785A28">
+                            <TextBlock HorizontalAlignment="Left" Text="재료" Foreground="#A09B8C"/>
+                        </Border>
+                        <Border BorderThickness="1.5"
+                            Height="70" Width="70"
+                            BorderBrush="{StaticResource BDR.ITEM}"
+                            Background="{TemplateBinding Background}">
+
+                        </Border>
+                    </StackPanel>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#02101D"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource BDR.ITEM.OVER}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
     <Style TargetType="{x:Type units:CommonList}">
         <Setter Property="Margin" Value="0 20 0 0"/>
+        <Setter Property="ItemContainerStyle" Value="{StaticResource TRVI.ITEM}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:CommonList}">
-                    <ItemsPresenter Grid.Row="1"/>
+                    <ctrls:BasicScroll>
+                        <ItemsPresenter/>
+                    </ctrls:BasicScroll>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
