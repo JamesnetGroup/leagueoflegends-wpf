@@ -3,7 +3,7 @@ using System.Windows.Controls;
 
 namespace Lol.Loot.UI.Units
 {
-    public class CommonList : ListBox
+    public class CommonList : TreeView
     {
         #region DefaultStyleKey
 
@@ -13,12 +13,5 @@ namespace Lol.Loot.UI.Units
         }
         #endregion
 
-        #region GetContainerForItemOverride
-
-        protected override DependencyObject GetContainerForItemOverride()
-        {
-            return new CommonListBoxItem();
-        }
-        #endregion
     }
 }

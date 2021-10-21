@@ -2,7 +2,6 @@
 
   <PropertyGroup>
 	<TargetFramework>net6.0-windows</TargetFramework>
-	<Nullable>disable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,6 +13,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Datas\plantItems.yml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Datas\champCb.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
