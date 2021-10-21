@@ -1,18 +1,29 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:units="clr-namespace:Lol.Loot.UI.Units">
+                    xmlns:units="clr-namespace:Lol.Loot.UI.Units"
+                    xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
     <Style TargetType="{x:Type units:CommonList}">
+        <Setter Property="Margin" Value="0 20 0 0"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:CommonList}">
-                    <ItemsPresenter/>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Border Background="Transparent" BorderThickness="0 0 0 1" BorderBrush="#785A28">
+                            <TextBlock HorizontalAlignment="Left" Text="재료" Foreground="#A09B8C"/>
+                        </Border>
+                        <ItemsPresenter Grid.Row="1"/>
+                    </Grid>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
         <Setter Property="ItemsPanel">
             <Setter.Value>
                 <ItemsPanelTemplate>
-                    <StackPanel/>
+                    <UniformGrid Columns="4"/>
                 </ItemsPanelTemplate>
             </Setter.Value>
         </Setter>
