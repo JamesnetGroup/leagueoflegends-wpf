@@ -10,6 +10,7 @@ namespace Lol.Loot.Local.ViewModels
         #region Variables
 
         private List<Loots> _menus;
+        private List<PlantHeaders> _treeSource;
         private List<Loots> _items;
         private List<ChampCb> _cbxSource;
         private Loots _currentMneu;
@@ -22,6 +23,15 @@ namespace Lol.Loot.Local.ViewModels
         {
             get { return _menus; }
             set { _menus = value; OnPropertyChanged(); }
+        }
+        #endregion
+
+        #region TreeSource
+
+        public List<PlantHeaders> TreeSource
+        {
+            get { return _treeSource; }
+            set { _treeSource = value; OnPropertyChanged(); }
         }
         #endregion
 
@@ -70,6 +80,7 @@ namespace Lol.Loot.Local.ViewModels
             Items = new LootApi().GetLootItems();
             Menus = new LootApi().GetLoots();
             CurrentMenu = Menus[0];
+            TreeSource = new LootApi().GetPlantHeaders();
         }
         #endregion
     }

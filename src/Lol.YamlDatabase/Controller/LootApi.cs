@@ -45,7 +45,8 @@ namespace Lol.YamlDatabase.Controller
             var query = from i in Db.PlantHeaders
                         select new PlantHeaders
                         {
-                            //Seq = i.Seq,
+                            IsExpanded = i.IsExpanded,
+                            Header = i.Header,
                         };
             return query.ToList();
         }
