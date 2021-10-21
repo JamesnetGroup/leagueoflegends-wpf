@@ -19,14 +19,10 @@
                                 <Border x:Name="bd" BorderThickness="1" BorderBrush="#1E2328">
                                     <Image Source="{Binding Img}" Stretch="Fill"  Height="220"/>
                                 </Border>
-                                <Grid Height="34" Background="Black" Margin="0 0 1 1" Opacity="0.7" VerticalAlignment="Bottom">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="60"/>
-                                    <ColumnDefinition Width="*"/>
-                                </Grid.ColumnDefinitions>
-                                <TextBlock x:Name="txt" Grid.Column="1" Text="{Binding 영원석}" FontSize="13"  Foreground="#B09B8C" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                    
-                                </Grid>
+                                <StackPanel Height="34" Background="Black" Margin="0 0 1 1" Opacity="0.7" VerticalAlignment="Bottom" Orientation="Horizontal">
+                                    <TextBlock Text="로고" Foreground="Red" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="70 0 10 0"/>
+                                    <TextBlock x:Name="txt"  Text="{Binding 영원석}" FontSize="13"  Foreground="#B09B8C" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                </StackPanel>
                             </Grid>
                         <Image Source="{Binding Insignia}" Height="38" Margin="0 -35 -2 0"  HorizontalAlignment="Left"/>
                         <TextBlock Grid.Row="1" Text="{Binding Name}" FontSize="13" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#999487" Margin="0 10 0 0"/>    
