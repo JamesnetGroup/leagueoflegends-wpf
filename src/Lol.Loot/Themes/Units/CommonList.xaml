@@ -21,15 +21,13 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TreeViewItem}">
                     <StackPanel>
-                        <Border Background="Transparent" BorderThickness="0 0 0 1" BorderBrush="#785A28">
+                        <Border Background="Transparent" BorderThickness="0 0 0 1" BorderBrush="#785A28" Margin="0 20 0 0">
                             <TextBlock HorizontalAlignment="Left" Text="재료" Foreground="#A09B8C"/>
                         </Border>
-                        <Border BorderThickness="1.5"
-                            Height="70" Width="70"
-                            BorderBrush="{StaticResource BDR.ITEM}"
-                            Background="{TemplateBinding Background}">
-
-                        </Border>
+                        <UniformGrid Columns="4" Margin="0 10 0 0">
+                            <units:CommonListItem/>
+                        </UniformGrid>
+                        <ItemsPresenter x:Name="items"/>
                     </StackPanel>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
@@ -43,7 +41,6 @@
     </Style>
 
     <Style TargetType="{x:Type units:CommonList}">
-        <Setter Property="Margin" Value="0 20 0 0"/>
         <Setter Property="ItemContainerStyle" Value="{StaticResource TRVI.ITEM}"/>
         <Setter Property="Template">
             <Setter.Value>

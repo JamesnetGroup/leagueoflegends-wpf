@@ -6,6 +6,13 @@ using System.Threading.Tasks;
 
 namespace Lol.YamlDatabase.Entites.Schema
 {
+    public class PlantHeaders
+    {
+        public bool IsExpanded { get; set; } = true;
+        public List<PlantItems> Children { get; set; }
+        public string Header { get; set; }
+    }
+
     public class PlantItems
     {
         public int Seq { get; set; }

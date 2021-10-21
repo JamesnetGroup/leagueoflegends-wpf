@@ -38,15 +38,14 @@ namespace Lol.YamlDatabase.Controller
         }
         #endregion
 
-        #region GetPlantItems
+        #region GetPlantHeaders
 
-        public List<Loots> GetPlantItems()
+        public List<PlantHeaders> GetPlantHeaders()
         {
-            var query = from i in Db.PlantItems
-                        select new Loots
+            var query = from i in Db.PlantHeaders
+                        select new PlantHeaders
                         {
-                            Seq = i.Seq,
-                            
+                            //Seq = i.Seq,
                         };
             return query.ToList();
         }
