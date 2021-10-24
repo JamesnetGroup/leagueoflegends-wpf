@@ -12,6 +12,7 @@ namespace Lol.YamlDatabase.Entites.Schema
         public bool IsExpanded { get; set; } = true;
         public List<PlantItems> Children { get; set; }
         public string Header { get; set; }
+        public Type Type => GetType();
     }
 
     public class PlantItems
@@ -19,5 +20,6 @@ namespace Lol.YamlDatabase.Entites.Schema
         public int Seq { get; set; }
         public int HeaderSeq { get; set; }
         public string Content { get; set; }
+        public Type Type => GetType();
     }
 }
