@@ -15,6 +15,7 @@
         <GradientStop Color="#8A6A2A" Offset="1"/>
     </LinearGradientBrush>
 
+    <!--김혁인-->
     <Style TargetType="{x:Type TreeViewItem}" x:Key="TRVI.ITEM">
         <Setter Property="ItemsSource" Value="{Binding Children}"/>
         <Setter Property="Margin" Value="0 0 0 0"/>

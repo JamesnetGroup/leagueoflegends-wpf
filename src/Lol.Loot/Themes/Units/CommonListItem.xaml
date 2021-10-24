@@ -14,41 +14,15 @@
     </LinearGradientBrush>
 
     <DataTemplate x:Key="DT.FIRST">
-        <!--<Border BorderThickness="2.5"
-                                Margin="0 14 0 0"
-                                Height="70"
-                                Width="70"
-                                BorderBrush="{TemplateBinding BorderBrush}"
-                                Background="{TemplateBinding Background}"
-                                HorizontalAlignment="Stretch"
-                                x:Name="bd1">
-            <Grid>
-                <Image Source="{Binding Content}" Height="60" x:Name="img"/>
-                <Border Background="Transparent" x:Name="transbd"/>
-            </Grid>
-        </Border>-->
+
     </DataTemplate>
     
     <DataTemplate x:Key="DT.CHAMP">
-        <!--<Border BorderThickness="2.5"
-                                Margin="0 14 0 0"
-                                Height="70"
-                                Width="70"
-                                BorderBrush="{TemplateBinding BorderBrush}"
-                                Background="{TemplateBinding Background}"
-                                HorizontalAlignment="Stretch"
-                                x:Name="">
-            <Grid>
-                <Image Source="{Binding Content}" Height="60" x:Name="img"/>
-                <Border Background="Transparent" x:Name="transbd"/>
-            </Grid>
-        </Border>-->
+
     </DataTemplate>
 
     <Style TargetType="{x:Type units:CommonListItem}">
         <Setter Property="Cursor" Value="Hand"/>
-        <Setter Property="BorderBrush" Value="{StaticResource BDR.ITEM}"/>
-        <Setter Property="Background" Value="#010F1D"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:CommonListItem}">
@@ -57,8 +31,8 @@
                                 Margin="0 14 0 0"
                                 Height="70"
                                 Width="70"
-                                BorderBrush="{TemplateBinding BorderBrush}"
-                                Background="{TemplateBinding Background}"
+                                BorderBrush="{StaticResource BDR.ITEM}"
+                                Background="#010F1D"
                                 HorizontalAlignment="Stretch"
                                 x:Name="bd1">
                             <Grid>
@@ -73,6 +47,7 @@
                                 BorderBrush="{TemplateBinding BorderBrush}"
                                 Background="{TemplateBinding Background}"
                                 HorizontalAlignment="Stretch"
+                                Visibility="Collapsed"
                                 x:Name="bd2">
                             <Grid>
                                 <Image Source="{Binding Content}" Height="60" x:Name="img2"/>
