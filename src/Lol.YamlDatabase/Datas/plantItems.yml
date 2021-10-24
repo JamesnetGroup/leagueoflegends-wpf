@@ -15,7 +15,37 @@
   content: Hextech,ward-token
 - seq: 5
   headerSeq: 1
-  content: Items
+  content: Champ,Nunu
+- seq: 6
+  headerSeq: 1
+  content: Champ,Nidalee
 - seq: 7
+  headerSeq: 1
+  content: Champ,Neeko
+- seq: 8
+  headerSeq: 1
+  content: Champ,Draven
+- seq: 9
+  headerSeq: 1
+  content: Champ,Riven
+- seq: 10
+  headerSeq: 1
+  content: Champ,Lissandra
+- seq: 11
+  headerSeq: 1
+  content: Champ,Mordekaiser
+- seq: 12
+  headerSeq: 1
+  content: Champ,Vayne
+- seq: 13
+  headerSeq: 1
+  content: Champ,Braum
+- seq: 14
+  headerSeq: 1
+  content: Champ,Brand
+- seq: 15
+  headerSeq: 1
+  content: Champ,Sona
+- seq: 16
   headerSeq: 2
-  content: Items
+  content: Champ,Malzahar

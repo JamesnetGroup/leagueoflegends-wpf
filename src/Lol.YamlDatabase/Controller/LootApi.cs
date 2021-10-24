@@ -50,6 +50,7 @@ namespace Lol.YamlDatabase.Controller
                         {
                             Seq = i.Seq,
                             IsExpanded = i.IsExpanded,
+                            LootSeq = i.LootSeq,
                             Children = Db.PlantItems.Where(x => x.HeaderSeq == i.Seq).ToList(),
                             Header = i.Header,
                         };
