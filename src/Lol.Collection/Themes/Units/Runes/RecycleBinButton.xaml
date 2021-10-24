@@ -16,10 +16,10 @@
     </LinearGradientBrush>
 
     <LinearGradientBrush x:Key="TGL.ON.BG" StartPoint="0,0.5" EndPoint="1,0.5">
-        <GradientStop Color="#2C5138" Offset="0"/>
-        <GradientStop Color="#327E3F" Offset="0.3"/>
-        <GradientStop Color="#349C44" Offset="0.5"/>
-        <GradientStop Color="#349C44" Offset="1"/>
+        <GradientStop Color="#381416" Offset="0"/>
+        <GradientStop Color="#712427" Offset="0.3"/>
+        <GradientStop Color="#8f282f" Offset="0.5"/>
+        <GradientStop Color="#96262e" Offset="1"/>
     </LinearGradientBrush>
 
     <LinearGradientBrush x:Key="THUMB.BDR" StartPoint="0.5,0" EndPoint="0.5,1">
@@ -35,31 +35,32 @@
     </LinearGradientBrush>
 
     <Style TargetType="{x:Type Border}" x:Key="BDR.OFF">
-        <Setter Property="Width" Value="38"/>
-        <Setter Property="Height" Value="22"/>
-        <Setter Property="CornerRadius" Value="8"/>
+        <Setter Property="Width" Value="48"/>
+        <Setter Property="Height" Value="24"/>
+        <Setter Property="CornerRadius" Value="10"/>
         <Setter Property="Background" Value="{StaticResource TGL.OFF.BG}"/>
         <Setter Property="BorderBrush" Value="{StaticResource TGL.BDR}"/>
         <Setter Property="BorderThickness" Value="2 2 2 2"/>
         <Setter Property="UseLayoutRounding" Value="True"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
     </Style>
 
     <Style TargetType="{x:Type Border}" x:Key="BDR.THUMB">
-        <Setter Property="Width" Value="26"/>
-        <Setter Property="Height" Value="28"/>
+        <Setter Property="Width" Value="28"/>
+        <Setter Property="Height" Value="30"/>
         <Setter Property="Background" Value="#1E2328"/>
         <Setter Property="BorderBrush" Value="{StaticResource THUMB.BDR}"/>
         <Setter Property="BorderThickness" Value="2 2 2 2"/>
-        <Setter Property="CornerRadius" Value="20"/>
+        <Setter Property="CornerRadius" Value="30"/>
         <Setter Property="HorizontalAlignment" Value="Left"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
-        <Setter Property="Margin" Value="-8 0 0 0"/>
+        <Setter Property="Margin" Value="0 0 0 0"/>
     </Style>
 
     <Style TargetType="{x:Type units:RecycleBinButton}">
         <Setter Property="Cursor" Value="Hand"/>
-        <Setter Property="Margin" Value="14 0 0 0"/>
-        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="10 2 0 0"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -69,7 +70,7 @@
                             <DoubleAnimationUsingKeyFrames BeginTime="00:00:00" 
 														   Storyboard.TargetName="Thumb"
                                                            Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.X)">
-                                <SplineDoubleKeyFrame KeyTime="00:00:00.2" Value="30"/>
+                                <SplineDoubleKeyFrame KeyTime="00:00:00.2" Value="25"/>
                             </DoubleAnimationUsingKeyFrames>
                         </Storyboard>
                         <Storyboard x:Key="OnUnchecking">
@@ -86,7 +87,7 @@
                             <ColumnDefinition Width="Auto"/>
                         </Grid.ColumnDefinitions>
                         <Border x:Name="RangeBorder" Style="{StaticResource BDR.OFF}">
-                            <ctrls:RiotIcon Width="13" Height="13" Fill="#20432A" IconType="Check" Margin="3 0 0 0"/>
+                            <ctrls:RiotIcon Width="18" Height="18" Fill="#7820432A" IconType="Close" Margin="5 0 0 0"/>
                         </Border>
                         <Border x:Name="Thumb" Style="{StaticResource BDR.THUMB}">
                             <ctrls:RiotIcon x:Name="icon" Fill="#CDBE91" Width="20" Height="20" HorizontalAlignment="Center" IconType="Trash"/>
