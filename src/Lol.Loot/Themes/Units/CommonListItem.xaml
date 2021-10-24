@@ -23,7 +23,7 @@
                             Height="70" Width="70"
                             BorderBrush="{StaticResource BDR.ITEM}"
                             Background="{TemplateBinding Background}">
-                        
+                        <Image Source="{Binding Content}"/>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">

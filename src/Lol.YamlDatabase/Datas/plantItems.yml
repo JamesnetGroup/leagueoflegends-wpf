@@ -1,18 +1,18 @@
 ﻿- seq: 0
   headerSeq: 1
-  content: Hextech, capsule
+  content: Hextech,capsule
 - seq: 1
   headerSeq: 1
-  content: Hextech, egg
+  content: Hextech,egg
 - seq: 2
   headerSeq: 1
-  content: Hextech, magicbox
+  content: Hextech,magicbox
 - seq: 3
   headerSeq: 1
-  content: Hextech, prestige
+  content: Hextech,prestige
 - seq: 4
   headerSeq: 1
-  content: Hextech, ward-token
+  content: Hextech,ward-token
 - seq: 5
   headerSeq: 2
   content: Items
