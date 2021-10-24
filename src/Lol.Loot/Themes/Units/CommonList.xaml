@@ -83,7 +83,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:CommonList}">
-                    <ctrls:BasicScroll>
+                    <ctrls:BasicScroll Padding="0 0 20 0">
                         <ItemsPresenter/>
                     </ctrls:BasicScroll>
                 </ControlTemplate>
