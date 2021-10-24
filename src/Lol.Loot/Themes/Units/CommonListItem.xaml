@@ -14,22 +14,38 @@
     </LinearGradientBrush>
 
     <Style TargetType="{x:Type units:CommonListItem}">
-        <Setter Property="Margin" Value="0 12 0 0"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="BorderBrush" Value="{StaticResource BDR.ITEM}"/>
         <Setter Property="Background" Value="#010F1D"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:CommonListItem}">
-                    <Border BorderThickness="1.5"
-                            Height="70" Width="70"
-                            BorderBrush="{StaticResource BDR.ITEM}"
-                            Background="{TemplateBinding Background}">
-                        <Image Source="{Binding Content}"/>
+                    <Border BorderThickness="2.5"
+                            Margin="0 14 0 0"
+                            Height="70"
+                            Width="70"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            Background="{TemplateBinding Background}"
+                            HorizontalAlignment="Stretch">
+                        <Grid>
+                            <Image Source="{Binding Content}" Height="60" x:Name="img"/>
+                            <Border Background="Transparent" x:Name="transbd"/>
+                        </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="#02101D"/>
                             <Setter Property="BorderBrush" Value="{StaticResource BDR.ITEM.OVER}"/>
+                            <Setter TargetName="transbd" Property="Background" Value="#55010F1D"/>
                         </Trigger>
+                        <DataTrigger Binding="{Binding Seq}" Value="0">
+                            <Setter TargetName="img" Property="Height" Value="45"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Seq}" Value="1">
+                            <Setter TargetName="img" Property="Height" Value="80"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Seq}" Value="2">
+                            <Setter TargetName="img" Property="Height" Value="55"/>
+                        </DataTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
