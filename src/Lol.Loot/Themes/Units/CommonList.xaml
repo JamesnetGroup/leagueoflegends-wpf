@@ -2,7 +2,8 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:units="clr-namespace:Lol.Loot.UI.Units"
                     xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport"
-                    xmlns:extnd="clr-namespace:Lol.YamlDatabase.Entites.Schema;assembly=Lol.YamlDatabase">
+                    xmlns:extnd="clr-namespace:Lol.YamlDatabase.Entites.Schema;assembly=Lol.YamlDatabase"
+                    xmlns:views="clr-namespace:Lol.Loot.UI.Views">
     <LinearGradientBrush x:Key="BDR.ITEM" StartPoint="0.5, 0" EndPoint="0.5, 1">
         <GradientStop Color="#B4995F" Offset="0"/>
         <GradientStop Color="#916C29" Offset="0.5"/>
@@ -27,7 +28,7 @@
                         <Border Background="Transparent" 
                                 BorderThickness="0 0 0 1" 
                                 BorderBrush="#785A28" 
-                                Margin="0 22 0 0"
+                                Margin="0 0 0 0"
                                 Padding="0 0 0 5"
                                 HorizontalAlignment="Stretch"
                                 x:Name="header">
@@ -51,6 +52,14 @@
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
                                 <Condition Binding="{Binding Type}" Value="{x:Type extnd:PlantHeaders}"/>
+                                <Condition Binding="{Binding RelativeSource={RelativeSource AncestorType=views:LootView}, Path=DataContext.CurrentMenu.Seq}" Value="0"/>
+                            </MultiDataTrigger.Conditions>
+                            <Setter TargetName="header" Property="Margin" Value="0 22 0 0"/>
+                        </MultiDataTrigger>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding Type}" Value="{x:Type extnd:PlantHeaders}"/>
+                                <Condition Binding="{Binding RelativeSource={RelativeSource AncestorType=views:LootView}, Path=DataContext.CurrentMenu.Seq}" Value="0"/>
                                 <Condition Binding="{Binding Seq}" Value="0"/>
                             </MultiDataTrigger.Conditions>
                             <Setter TargetName="header" Property="Margin" Value="0 0 0 0"/>
@@ -74,7 +83,7 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:CommonList}">
-                    <ctrls:BasicScroll>
+                    <ctrls:BasicScroll Padding="0 0 20 0">
                         <ItemsPresenter/>
                     </ctrls:BasicScroll>
                 </ControlTemplate>

@@ -9,6 +9,7 @@ namespace Lol.YamlDatabase.Entites.Schema
     public class PlantHeaders
     {
         public int Seq { get; set; }
+        public int LootSeq { get; set; }
         public bool IsExpanded { get; set; } = true;
         public List<PlantItems> Children { get; set; }
         public string Header { get; set; }

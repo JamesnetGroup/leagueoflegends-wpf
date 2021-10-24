@@ -13,14 +13,6 @@
         <GradientStop Color="#8A6A2A" Offset="1"/>
     </LinearGradientBrush>
 
-    <DataTemplate x:Key="DT.FIRST">
-
-    </DataTemplate>
-    
-    <DataTemplate x:Key="DT.CHAMP">
-
-    </DataTemplate>
-
     <Style TargetType="{x:Type units:CommonListItem}">
         <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
@@ -34,6 +26,7 @@
                                 BorderBrush="{StaticResource BDR.ITEM}"
                                 Background="#010F1D"
                                 HorizontalAlignment="Stretch"
+                                Visibility="Collapsed"
                                 x:Name="bd1">
                             <Grid>
                                 <Image Source="{Binding Content}" Height="60" x:Name="img1"/>
@@ -44,21 +37,23 @@
                                 Margin="0 14 0 0"
                                 Height="70"
                                 Width="70"
-                                BorderBrush="{TemplateBinding BorderBrush}"
-                                Background="{TemplateBinding Background}"
+                                BorderBrush="#23464E"
+                                Background="Black"
                                 HorizontalAlignment="Stretch"
                                 Visibility="Collapsed"
                                 x:Name="bd2">
-                            <Grid>
-                                <Image Source="{Binding Content}" Height="60" x:Name="img2"/>
-                                <Border Background="Transparent" x:Name="transbd2"/>
+                            <Grid Margin="1">
+                                <Image Source="{Binding Content}" x:Name="img2"/>
+                                <Border Background="#7723464E" x:Name="transbd2"/>
                             </Grid>
                         </Border>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="bd1" Property="BorderBrush" Value="{StaticResource BDR.ITEM.OVER}"/>
+                            <Setter TargetName="bd2" Property="BorderBrush" Value="#237F8D"/>
                             <Setter TargetName="transbd1" Property="Background" Value="#55010F1D"/>
+                            <Setter TargetName="transbd2" Property="Background" Value="#9923464E"/>
                         </Trigger>
                         <DataTrigger Binding="{Binding Seq}" Value="0">
                             <Setter TargetName="img1" Property="Height" Value="45"/>
@@ -68,6 +63,15 @@
                         </DataTrigger>
                         <DataTrigger Binding="{Binding Seq}" Value="2">
                             <Setter TargetName="img1" Property="Height" Value="55"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding HeaderSeq}" Value="0">
+                            <Setter TargetName="bd1" Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding HeaderSeq}" Value="1">
+                            <Setter TargetName="bd2" Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding HeaderSeq}" Value="2">
+                            <Setter TargetName="bd2" Property="Visibility" Value="Visible"/>
                         </DataTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

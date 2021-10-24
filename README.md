@@ -109,4 +109,11 @@
 
 ![image](https://user-images.githubusercontent.com/74305823/137628858-65458b3c-5a3d-4263-9dda-65595a98965d.png)
 
+<br />
 
+### `Loot`
+![image](https://user-images.githubusercontent.com/68521148/138593391-44e3dec7-433c-4422-a7a2-cc8a109ad10b.png)
+
+![image](https://user-images.githubusercontent.com/68521148/138593397-214a7382-9812-4435-a251-38f29b47823b.png)
+
+![image](https://user-images.githubusercontent.com/68521148/138593401-dd28993a-0320-48e2-a69c-8b524264200f.png)
