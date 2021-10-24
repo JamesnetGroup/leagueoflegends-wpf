@@ -1,4 +1,5 @@
-﻿using Lol.YamlDatabase.Entites.Core;
+﻿using Lol.YamlDatabase.Common;
+using Lol.YamlDatabase.Entites.Core;
 using Lol.YamlDatabase.Entites.Schema;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,10 +43,14 @@ namespace Lol.YamlDatabase.Controller
 
         public List<PlantHeaders> GetPlantHeaders()
         {
+            Db.PlantItems.ForEach(x => x.Content = ResourceHelper.ImgResource(x.Content));
+
             var query = from i in Db.PlantHeaders
                         select new PlantHeaders
                         {
+                            Seq = i.Seq,
                             IsExpanded = i.IsExpanded,
+                            Children = Db.PlantItems.Where(x => x.HeaderSeq == i.Seq).ToList(),
                             Header = i.Header,
                         };
             return query.ToList();

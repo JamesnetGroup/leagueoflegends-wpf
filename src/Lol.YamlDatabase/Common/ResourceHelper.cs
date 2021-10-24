@@ -12,6 +12,10 @@ namespace Lol.YamlDatabase.Common
             if (fullName != null)
             {
                 string[] strs = fullName.Split(',');
+
+                if (strs.Count() < 2)
+                    return "";
+
                 folder = strs[0];
                 name = strs[1];
             }

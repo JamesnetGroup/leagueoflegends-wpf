@@ -1,16 +1,24 @@
-﻿- isExpanded: true
+﻿- seq: 0
+  isExpanded: true
   header: 재료
-- isExpanded: true
+- seq: 1
+  isExpanded: true
   header: 챔피언
-- isExpanded: true
+- seq: 2
+  isExpanded: true
   header: 스킨
-- isExpanded: true
+- seq: 3
+  isExpanded: true
   header: 꼬마 전설이
-- isExpanded: true
+- seq: 4
+  isExpanded: true
   header: 영원석
-- isExpanded: true
+- seq: 5
+  isExpanded: true
   header: 감정표현
-- isExpanded: true
+- seq: 6
+  isExpanded: true
   header: 와드 스킨
-- isExpanded: true
+- seq: 7
+  isExpanded: true
   header: 아이콘
