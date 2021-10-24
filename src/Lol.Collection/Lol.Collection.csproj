@@ -11,6 +11,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Remove="UI\Units\SortComboBox.cs" />
+    <Compile Remove="UI\Units\SortComboBoxItem.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Lol.LayoutSupport\Lol.LayoutSupport.csproj" />
     <ProjectReference Include="..\Lol.YamlDatabase\Lol.YamlDatabase.csproj" />
   </ItemGroup>
@@ -20,18 +25,18 @@
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Units\MapListBoxItem.xaml">
+    <Page Update="Themes\Units\Items\MapListBoxItem.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Units\MapListBox.xaml">
+    <Page Update="Themes\Units\Items\MapListBox.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Units\ItemSetListBoxItem.xaml">
+    <Page Update="Themes\Units\Items\ItemSetListBoxItem.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
     </Page>
-    <Page Update="Themes\Units\ItemQuickMenu.xaml">
+    <Page Update="Themes\Units\Items\ItemQuickMenu.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
     </Page>
     <Page Update="Themes\Views\RuneView.xaml">

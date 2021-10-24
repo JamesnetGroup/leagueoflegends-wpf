@@ -7,7 +7,12 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type views:SkinView}">
                     <Grid>
-                        <TextBlock Text="."/>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <!--<Control Style="{StaticResource CTL.SKIN.LEFT}"/>-->
+                        <!--<ListBox Style="{StaticResource LBX.SKIN}"/>-->
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
