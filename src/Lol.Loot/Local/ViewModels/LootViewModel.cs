@@ -1,7 +1,9 @@
 ﻿using Lol.Foundation.Mvvm;
 using Lol.YamlDatabase.Controller;
 using Lol.YamlDatabase.Entites.Schema;
+using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Lol.Loot.Local.ViewModels
 {
@@ -49,7 +51,7 @@ namespace Lol.Loot.Local.ViewModels
         public Loots CurrentMenu
         {
             get { return _currentMneu; }
-            set { _currentMneu = value; OnPropertyChanged(); }
+            set { _currentMneu = value; OnPropertyChanged(); MenuChanged(value.Seq); }
         }
         #endregion
 
@@ -79,8 +81,20 @@ namespace Lol.Loot.Local.ViewModels
             //CurrentCbx = CbxSource[0];
             Items = new LootApi().GetLootItems();
             Menus = new LootApi().GetLoots();
-            CurrentMenu = Menus[0];
-            TreeSource = new LootApi().GetPlantHeaders();
+            CurrentMenu = Menus[0];            
+        }
+        #endregion
+
+        #region MenuChanged
+
+        private void MenuChanged(int seq)
+        {
+            var treeSource = new LootApi().GetPlantHeaders();
+
+            if (seq != 0)
+                treeSource = treeSource.Where(x => x.LootSeq == seq).ToList();
+
+            TreeSource = treeSource;
         }
         #endregion
     }
