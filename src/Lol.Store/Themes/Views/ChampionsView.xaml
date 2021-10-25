@@ -12,7 +12,6 @@
 							<ColumnDefinition Width="200"/>
 							<ColumnDefinition Width="*"/>
 						</Grid.ColumnDefinitions>
-
 						<units:ItemMenu/>
 					</Grid>
 				</ControlTemplate>
