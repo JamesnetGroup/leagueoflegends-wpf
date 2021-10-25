@@ -13,7 +13,8 @@
 							<ColumnDefinition Width="*"/>
 						</Grid.ColumnDefinitions>
 						<units:ItemMenu/>
-					</Grid>
+                        <units:ChampList Grid.Column="1"/>
+                    </Grid>
 				</ControlTemplate>
 			</Setter.Value>
 		</Setter>
