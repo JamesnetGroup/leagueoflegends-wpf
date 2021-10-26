@@ -13,7 +13,14 @@
 							<ColumnDefinition Width="*"/>
 						</Grid.ColumnDefinitions>
 						<units:ItemMenu/>
-                        <units:ChampList Grid.Column="1"/>
+                        <Grid Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <units:TopRightContent/>
+                            <units:ChampList Grid.Row="1"/>
+                        </Grid>
                     </Grid>
 				</ControlTemplate>
 			</Setter.Value>
