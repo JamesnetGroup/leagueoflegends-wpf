@@ -72,5 +72,7 @@
         Diamond,
         DiamondOut,
         Key,
+        Gift,
+        AccountCog,
     }
 }

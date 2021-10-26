@@ -2,14 +2,48 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 					xmlns:units="clr-namespace:Lol.Store.UI.Units"
 					xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
+    <Style TargetType="{x:Type ctrls:RiotButton}" x:Key="RIOT.BTN">
+        <Setter Property="Height" Value="32"/>
+        <Setter Property="Width" Value="94"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Margin" Value="0 0 20 0"/>
+        <Setter Property="Content" Value="RP 충전"/>
+    </Style>
 
-	<Style TargetType="{x:Type units:Category}">
-		<Setter Property="Template">
+    <Style TargetType="{x:Type ctrls:RiotIconButton}" x:Key="RIOT.ICONBTN.BASE">
+        <Setter Property="Height" Value="28"/>
+        <Setter Property="Width" Value="28"/>
+        <Setter Property="IconHeight" Value="16"/>
+        <Setter Property="IconWidth" Value="16"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <Style TargetType="{x:Type ctrls:RiotIconButton}" x:Key="RIOT.ICONBTN.GIFT" BasedOn="{StaticResource RIOT.ICONBTN.BASE}">
+        <Setter Property="IconHeight" Value="14"/>
+        <Setter Property="IconWidth" Value="14"/>
+        <Setter Property="IconType" Value="Gift"/>
+        <Setter Property="Margin" Value="0 0 20 0"/>
+    </Style>
+    
+    <Style TargetType="{x:Type ctrls:RiotIconButton}" x:Key="RIOT.ICONBTN.COG" BasedOn="{StaticResource RIOT.ICONBTN.BASE}">
+        <Setter Property="IconHeight" Value="18"/>
+        <Setter Property="IconWidth" Value="18"/>
+        <Setter Property="IconType" Value="AccountCog"/>
+    </Style>
+
+    <Style TargetType="{x:Type units:TopRightContent}">
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="Margin" Value="0 10 30 30"/>
+        <Setter Property="Template">
 			<Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:TopRightContent}">
-                    <Grid>
-                        
-                    </Grid>
+                    <StackPanel Orientation="Horizontal">
+                        <ctrls:RiotButton Style="{StaticResource RIOT.BTN}"/>
+                        <ctrls:RiotIconButton Style="{StaticResource RIOT.ICONBTN.GIFT}"/>
+                        <ctrls:RiotIconButton Style="{StaticResource RIOT.ICONBTN.COG}"/>
+                    </StackPanel>
 				</ControlTemplate>
 			</Setter.Value>
 		</Setter>
