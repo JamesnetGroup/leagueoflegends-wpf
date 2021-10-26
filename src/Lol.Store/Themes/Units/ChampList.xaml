@@ -2,27 +2,70 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:units="clr-namespace:Lol.Store.UI.Units"
                     xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
+    
     <LinearGradientBrush x:Key="BDR.PARENT.OVER" StartPoint="0.5, 0" EndPoint="0.5, 1">
         <GradientStop Color="#F0E6D2" Offset="0"/>
         <GradientStop Color="#DCC188" Offset="0.5"/>
         <GradientStop Color="#C89B3C" Offset="1"/>
     </LinearGradientBrush>
     
+    <LinearGradientBrush x:Key="BDR.LOCK" StartPoint="0, 0" EndPoint="01, 1">
+        <GradientStop Color="#FFFFE4" Offset="0"/>
+        <GradientStop Color="#EDCC86" Offset="0.5"/>
+        <GradientStop Color="#A67F31" Offset="1"/>
+    </LinearGradientBrush>
+    
     <Style TargetType="{x:Type ListBoxItem}" x:Key="LBXI.CHAMP">
         <Setter Property="BorderBrush" Value="#3C3C41"/>
+        <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListBoxItem}">
                     <Border Height="192"
                             Width="192"
                             BorderThickness="1"
-                            BorderBrush="{TemplateBinding BorderBrush}">
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            Margin="0 12 0 0">
                         <Grid>
                             <Image Source="{Binding ImgSource}"/>
+                            <Border Background="#44000000" x:Name="shadowBd"/>
+                            <Border x:Name="overBd"
+                                    Height="40" Width="40"                                   
+                                    Visibility="Collapsed"
+                                    BorderBrush="{StaticResource BDR.LOCK}" 
+                                    BorderThickness="1.5" 
+                                    Background="#55C89C3D"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    RenderTransformOrigin="0.5, 0.5">
+                                <Border.RenderTransform>
+                                    <RotateTransform Angle="45"/>
+                                </Border.RenderTransform>
+                            </Border>
+                            <ctrls:RiotIcon x:Name="overIcon"
+                                            IconType="LockOpen"
+                                            Fill="#85632B"
+                                            StrokeThickness="0.5"
+                                            Stroke="#2A2924"
+                                            HorizontalAlignment="Center"
+                                            VerticalAlignment="Center"
+                                            Visibility="Collapsed"
+                                            Height="26"
+                                            Width="26"/>
+                             <Border x:Name="overBd2"
+                                     Height="6" 
+                                     Width="6"
+                                     Margin="0 6 0 0"
+                                     CornerRadius="30"
+                                     Background="Black"
+                                     VerticalAlignment="Center"
+                                     Visibility="Collapsed"
+                                     HorizontalAlignment="Center"/>
                             <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center">
                                 <TextBlock Text="{Binding Name}" 
                                            FontWeight="Bold"
                                            Foreground="#F0E6D2"
+                                           FontSize="15"
                                            Margin="0 0 0 20"/>
                             </StackPanel>
                         </Grid>
@@ -30,6 +73,10 @@
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="BorderBrush" Value="{StaticResource BDR.PARENT.OVER}"/>
+                            <Setter TargetName="shadowBd" Property="Background" Value="#00000000"/>
+                            <Setter TargetName="overBd" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="overBd2" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="overIcon" Property="Visibility" Value="Visible"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -43,7 +90,8 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:ChampList}">
                     <ctrls:BasicScroll VerticalScrollBarVisibility="Auto"
-                                       HorizontalScrollBarVisibility="Disabled">
+                                       HorizontalScrollBarVisibility="Disabled"
+                                       Padding="0 0 20 0">
                         <ItemsPresenter/>
                     </ctrls:BasicScroll>
                 </ControlTemplate>

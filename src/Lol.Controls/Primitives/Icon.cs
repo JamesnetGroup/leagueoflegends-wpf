@@ -103,6 +103,7 @@ namespace Lol.Controls.Primitives
                 case GeoIcon.Key: icon.Data = IconData.KEY.ToGeometry(); break;
                 case GeoIcon.Gift: icon.Data = IconData.GIFT.ToGeometry(); break;
                 case GeoIcon.AccountCog: icon.Data = IconData.ACCOUNT_COG.ToGeometry(); break;
+                case GeoIcon.LockOpen: icon.Data = IconData.LOCK_OPEN.ToGeometry(); break;
 
                 case GeoIcon.None:
                     break;

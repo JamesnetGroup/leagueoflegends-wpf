@@ -74,5 +74,6 @@
         Key,
         Gift,
         AccountCog,
+        LockOpen,
     }
 }
