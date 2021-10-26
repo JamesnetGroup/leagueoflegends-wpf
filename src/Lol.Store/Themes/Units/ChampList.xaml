@@ -2,17 +2,43 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:units="clr-namespace:Lol.Store.UI.Units"
                     xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
+    <LinearGradientBrush x:Key="BDR.PARENT.OVER" StartPoint="0.5, 0" EndPoint="0.5, 1">
+        <GradientStop Color="#F0E6D2" Offset="0"/>
+        <GradientStop Color="#DCC188" Offset="0.5"/>
+        <GradientStop Color="#C89B3C" Offset="1"/>
+    </LinearGradientBrush>
+    
     <Style TargetType="{x:Type ListBoxItem}" x:Key="LBXI.CHAMP">
+        <Setter Property="BorderBrush" Value="#3C3C41"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListBoxItem}">
-                    
+                    <Border Height="192"
+                            Width="192"
+                            BorderThickness="1"
+                            BorderBrush="{TemplateBinding BorderBrush}">
+                        <Grid>
+                            <Image Source="{Binding ImgSource}"/>
+                            <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center">
+                                <TextBlock Text="{Binding Name}" 
+                                           FontWeight="Bold"
+                                           Foreground="#F0E6D2"
+                                           Margin="0 0 0 20"/>
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="{StaticResource BDR.PARENT.OVER}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
     <Style TargetType="{x:Type units:ChampList}">
         <Setter Property="ItemContainerStyle" Value="{StaticResource LBXI.CHAMP}"/>
+        <Setter Property="ItemsSource" Value="{Binding StoreChamps}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:ChampList}">

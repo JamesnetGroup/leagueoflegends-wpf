@@ -1,4 +1,5 @@
-﻿using Lol.YamlDatabase.Entites.Core;
+﻿using Lol.YamlDatabase.Common;
+using Lol.YamlDatabase.Entites.Core;
 using Lol.YamlDatabase.Entites.Schema;
 
 namespace Lol.YamlDatabase.Controller
@@ -31,6 +32,23 @@ namespace Lol.YamlDatabase.Controller
                             Id = s.Id,
                             Name = s.Name,
                             Option = s.Option
+                        };
+            return query.ToList();
+        }
+        #endregion
+
+        #region GetChamps
+
+        public List<StoreChamps> GetChamps()
+        {
+            var query = from s in Db.StoreChamps
+                        select new StoreChamps
+                        {
+                            Seq = s.Seq,
+                            Name = s.Name,
+                            ImgSource = ResourceHelper.ImgResource(s.ImgSource),
+                            RP = s.RP,
+                            BE = s.BE,
                         };
             return query.ToList();
         }
