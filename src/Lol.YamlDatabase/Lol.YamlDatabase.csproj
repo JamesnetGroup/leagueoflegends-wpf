@@ -13,6 +13,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Datas\storeChamps.yml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Datas\plantHeaders.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
