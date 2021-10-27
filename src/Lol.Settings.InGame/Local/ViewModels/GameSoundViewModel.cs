@@ -1,10 +1,10 @@
 ﻿using Lol.Data.Config;
 using Lol.Data.Setting.InGame;
-using Lol.YamlDatabase.Entites.Schema;
+using Lol.Database.Entites.Schema;
 using Lol.Foundation.Mvvm;
 using Lol.Foundation.Riotbase;
 using System.Collections.Generic;
-using Lol.YamlDatabase.Controller;
+using Lol.Database.Controller;
 
 namespace Lol.Settings.InGame.Local.ViewModels
 {

@@ -1,0 +1,12 @@
+﻿- seq: 1
+  id: 1
+  name: 소환사의협곡
+  sort: 1
+- seq: 2
+  id: 2
+  name: 칼바람나락
+  sort: 2
+- seq: 3
+  id: 3
+  name: 칼바람나락
+  sort: 3

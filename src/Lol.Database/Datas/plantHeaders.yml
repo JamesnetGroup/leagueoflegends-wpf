@@ -1,0 +1,32 @@
+﻿- seq: 0
+  lootSeq: 1
+  isExpanded: true
+  header: 재료
+- seq: 1
+  lootSeq: 2
+  isExpanded: true
+  header: 챔피언
+- seq: 2
+  lootSeq: 3
+  isExpanded: true
+  header: 스킨
+- seq: 3
+  lootSeq: 4
+  isExpanded: true
+  header: 꼬마 전설이
+- seq: 4
+  lootSeq: 5
+  isExpanded: true
+  header: 영원석
+- seq: 5
+  lootSeq: 6
+  isExpanded: true
+  header: 감정표현
+- seq: 6
+  lootSeq: 7
+  isExpanded: true
+  header: 와드 스킨
+- seq: 7
+  lootSeq: 8
+  isExpanded: true
+  header: 아이콘

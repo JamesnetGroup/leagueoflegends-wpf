@@ -1,4 +1,4 @@
-﻿using Lol.YamlDatabase.Entites.Schema;
+﻿using Lol.Database.Entites.Schema;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;

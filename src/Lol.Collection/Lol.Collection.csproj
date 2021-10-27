@@ -16,8 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Lol.Database\Lol.Database.csproj" />
     <ProjectReference Include="..\Lol.LayoutSupport\Lol.LayoutSupport.csproj" />
-    <ProjectReference Include="..\Lol.YamlDatabase\Lol.YamlDatabase.csproj" />
   </ItemGroup>
 
   <ItemGroup>

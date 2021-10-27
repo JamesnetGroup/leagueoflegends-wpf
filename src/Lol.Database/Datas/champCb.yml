@@ -1,0 +1,36 @@
+﻿- seq: 0
+  content: 모든 챔피언
+  type: 0
+- seq: 1
+  content: 가장 인기 있는 포지션
+  type: 0
+- seq: 2
+  content: 역할군
+  type: 0
+- seq: 3
+  content: 보유 여부
+  type: 0
+- seq: 4
+  content: 가나다순 ▲
+  type: 1
+- seq: 5
+  content: 챔피언 숙련도순
+  type: 1
+- seq: 6
+  content: 달성한 업적
+  type: 1
+- seq: 7
+  content: 상자 획득 가능
+  type: 1
+- seq: 8
+  content: 가나다순
+  type: 3
+- seq: 9
+  content: 등급
+  type: 3
+- seq: 10
+  content: 가격
+  type: 3
+- seq: 11
+  content: 대여 가능
+  type: 3

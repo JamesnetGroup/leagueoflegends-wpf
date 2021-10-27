@@ -13,8 +13,8 @@ using Lol.Settings.InGame.UI.Views;
 using Lol.Settings.InGame.Local.ViewModels;
 using Lol.Settings.About.UI.Views;
 using Lol.Settings.About.Local.ViewModels;
-using Lol.YamlDatabase.Controller;
-using Lol.YamlDatabase.Entites.Schema;
+using Lol.Database.Controller;
+using Lol.Database.Entites.Schema;
 
 namespace Lol.Settings.Local.ViewModel
 {
