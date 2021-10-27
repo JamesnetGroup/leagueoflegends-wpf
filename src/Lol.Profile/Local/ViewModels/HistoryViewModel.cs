@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Lol.Foundation.Mvvm;
-using Lol.YamlDatabase.Controller;
-using Lol.YamlDatabase.Entites.Schema;
+using Lol.Database.Controller;
+using Lol.Database.Entites.Schema;
 
 namespace Lol.Profile.Local.ViewModels
 {

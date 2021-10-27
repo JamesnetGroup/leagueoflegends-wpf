@@ -1,8 +1,8 @@
 ﻿using Lol.Data.Enums;
 using Lol.Data.Store;
 using Lol.Foundation.Mvvm;
-using Lol.YamlDatabase.Controller;
-using Lol.YamlDatabase.Entites.Schema;
+using Lol.Database.Controller;
+using Lol.Database.Entites.Schema;
 using System.Collections.Generic;
 using System.Linq;
 

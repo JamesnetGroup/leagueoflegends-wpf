@@ -4,8 +4,8 @@ using Lol.Foundation.Mvvm;
 using Lol.Foundation.Riotcore;
 using Lol.Friends.Local.Collection;
 using Lol.LayoutSupport.Controls;
-using Lol.YamlDatabase.Controller;
-using Lol.YamlDatabase.Entites.Schema;
+using Lol.Database.Controller;
+using Lol.Database.Entites.Schema;
 
 namespace Lol.Friends.Local.ViewModel
 {

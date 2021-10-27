@@ -1,0 +1,84 @@
+﻿- seq: 0  
+  rune: Rune,Domination_Loading
+  keystone : Rune,Dark_Harvest_rune
+  paths : Rune,Precision
+  runeType : 1
+  name : 루시안
+  infor1 : 지배
+  infor2 : ◆ 어둠의 수확
+  infor3 : ◆ 돌발일격
+  infor4 : ◆ 사냥의 증표
+  infor5 : ◆ 궁극의 사냥꾼
+  infor6 : 정밀
+  infor7 : ◆ 승전보
+  infor8 : ◆ 최후의 일격
+- seq: 1
+  rune: Rune,Precision_Loading
+  keystone : Rune,Glacial_Augment_rune
+  paths : Rune,Domination
+  runeType : 2
+  name : 이렐리아
+  infor1 : 결의
+  infor2 : ◆ 여진
+  infor3 : ◆ 보호막 강타
+  infor4 : ◆ 뼈 방패
+  infor5 : ◆ 소생
+  infor6 : 정밀
+  infor7 : ◆ 우주적 통찰력
+  infor8 : ◆ 마법의 신발
+- seq: 2  
+  rune: Rune,Resolve_Loading
+  keystone : Rune,Grasp_of_the_Undying_rune
+  paths : Rune,Sorcery
+  runeType : 3
+  name : 이즈리얼
+  infor1 : 정밀
+  infor2 : ◆ 치명적 속도
+  infor3 : ◆ 침착
+  infor4 : ◆ 전설 핏빛 길
+  infor5 : ◆ 최후의일격
+  infor6 : 마법
+  infor7 : ◆ 깨달음
+  infor8 : ◆ 마나순환 팔찌
+- seq: 3  
+  rune: Rune,Sorcery_Loading
+  keystone : Rune,Guardian_rune
+  paths : Rune,Resolve
+  runeType : 4
+  name : 문도
+  infor1 : 지배
+  infor2 : ◆ 여진
+  infor3 : ◆ 보호막 강타
+  infor4 : ◆ 뼈 방패
+  infor5 : ◆ 소생
+  infor6 : 영감
+  infor7 : ◆ 마법의 신발
+  infor8 : ◆ 우주적 통찰력
+- seq: 4  
+  rune: Rune,Inspiration_Loading
+  keystone : Rune,Glacial_Augment_rune
+  paths : Rune,Inspiration
+  runeType : 5
+  name : 카이사
+  infor1 : 정밀
+  infor2 : ◆ 기민한 발놀림
+  infor3 : ◆ 승전보
+  infor4 : ◆ 전설 핏빛 길
+  infor5 : ◆ 최후의 일격
+  infor6 : 영감
+  infor7 : ◆ 마법의 신발
+  infor8 : ◆ 비스킷 배달
+- seq: 5  
+  rune: Rune,Domination_Loading
+  keystone : Rune,Electrocute_rune
+  paths : Rune,Resolve
+  runeType : 5
+  name : AP
+  infor1 : 마법
+  infor2 : ◆ 신비로운 유성
+  infor3 : ◆ 마나순환 팔찌
+  infor4 : ◆ 깨달음
+  infor5 : ◆ 주문 작열
+  infor6 : 정밀
+  infor7 : ◆ 침착
+  infor8 : ◆ 최후의 일격

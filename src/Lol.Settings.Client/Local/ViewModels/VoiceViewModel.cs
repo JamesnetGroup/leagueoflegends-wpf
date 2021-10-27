@@ -4,8 +4,8 @@ using Lol.Data.Setting.Clients;
 using Lol.Devices.Audio;
 using Lol.Foundation.Mvvm;
 using Lol.Foundation.Riotbase;
-using Lol.YamlDatabase.Controller;
-using Lol.YamlDatabase.Entites.Schema;
+using Lol.Database.Controller;
+using Lol.Database.Entites.Schema;
 using System.Collections.Generic;
 
 namespace Lol.Settings.Client.Local.ViewModels

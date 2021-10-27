@@ -26,9 +26,9 @@ using store = Lol.Store.UI.Views;
 using storeVM = Lol.Store.Local.ViewModels;
 using Lol.GameRoom.UI.Views;
 using Lol.GameRoom.Local.ViewModels;
-using Lol.YamlDatabase.Controller;
-using Lol.YamlDatabase.Entites.Schema;
-using Lol.YamlDatabase.Collection;
+using Lol.Database.Controller;
+using Lol.Database.Entites.Schema;
+using Lol.Database.Collection;
 using Lol.Loot.UI.Views;
 using Lol.Loot.Local.ViewModels;
 
