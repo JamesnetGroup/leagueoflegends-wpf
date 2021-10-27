@@ -77,7 +77,7 @@ namespace Lol.Loot.Local.ViewModels
         public LootViewModel()
         {
             CbxSource = new LootApi().GetComboBox();
-            //CurrentCbx = CbxSource[0];
+            CurrentCbx = CbxSource[0];
             Items = new LootApi().GetLootItems();
             Menus = new LootApi().GetLoots();
             CurrentMenu = Menus[0];            
