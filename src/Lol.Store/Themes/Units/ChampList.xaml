@@ -34,6 +34,12 @@
                             <Setter Property="Width" Value="16"/>
                             <Setter Property="Height" Value="16"/>
                         </Style>
+                        <Style TargetType="{x:Type TextBlock}" x:Key="TXB.VALUE">
+                            <Setter Property="Margin" Value="4 0 0 0"/>
+                            <Setter Property="FontSize" Value="13"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="Foreground" Value="#C8AA6E"/>
+                        </Style>
                     </ControlTemplate.Resources>
                     <Border Height="192"
                             Width="192"
@@ -48,7 +54,7 @@
                                     Visibility="Collapsed"
                                     BorderBrush="{StaticResource BDR.LOCK}" 
                                     BorderThickness="1.5" 
-                                    Background="#55C89C3D"
+                                    Background="#77C89C3D"
                                     HorizontalAlignment="Center"
                                     VerticalAlignment="Center"
                                     RenderTransformOrigin="0.5, 0.5">
@@ -89,11 +95,11 @@
                                     </Grid.ColumnDefinitions>
                                     <StackPanel Orientation="Horizontal" Margin="0 0 6 0 ">
                                         <Image Style="{StaticResource IN.IMG}" VerticalAlignment="Center"/>
-                                        <TextBlock Text="{Binding RP}" Margin="4 0 0 0" FontSize="13" VerticalAlignment="Center" Foreground="#C8AA6E"/>
+                                        <TextBlock Text="{Binding RP}" Style="{StaticResource TXB.VALUE}"/>
                                     </StackPanel>
                                     <StackPanel Orientation="Horizontal" Grid.Column="1" Margin="6 0 0 0">
                                         <Image Style="{StaticResource IN.IMG2}" VerticalAlignment="Center"/>
-                                        <TextBlock Text="{Binding BE}" Margin="4 0 0 0" FontSize="13" VerticalAlignment="Center" Foreground="#C8AA6E"/>
+                                        <TextBlock Text="{Binding BE}" Style="{StaticResource TXB.VALUE}"/>
                                     </StackPanel>
                                 </Grid>
                             </StackPanel>
