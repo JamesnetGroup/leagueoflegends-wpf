@@ -55,5 +55,25 @@ namespace Lol.Database.Controller
             return query.ToList();
         }
         #endregion
+
+        public List<ChampHeaders> GetChampHeaders()
+        {
+            Db.ChampItems.ForEach(x => x.Img = ResourceHelper.ImgResource(x.Img));
+
+            var query = from c in Db.ChampHeaders
+                        select new ChampHeaders
+                        {
+                            Seq = c.Seq,
+                            ChampCbSeq = c.ChampCbSeq,
+                            Children = Db.ChampItems.Where(x => x.HeaderSeq == c.Seq).ToList(),
+                            Header = c.Header,
+                            IsExpanded =  c.IsExpanded
+                        };
+
+            return query.ToList();
+        }
+
+
+
     }
 }

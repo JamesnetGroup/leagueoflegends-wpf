@@ -50,6 +50,8 @@ namespace Lol.Database.Entites.Statics
         internal List<PlantHeaders> _plantHeaders;
         internal List<PlantItems> _plantItems;
         internal List<StoreChamps> _storeChamps;
+        internal List<ChampHeaders> _champHeaders;
+        internal List<ChampItems> _champItems;
         #endregion
 
         #region GetYamlData
@@ -662,6 +664,47 @@ namespace Lol.Database.Entites.Statics
                 return _storeChamps;
             }
         }
+        #endregion
+
+        #region ChampHeaders
+
+        internal List<ChampHeaders> ChampHeaders
+        {
+            get
+            {
+                if (_champHeaders == null)
+                {
+                    string readText = GetYamlData("champHeaders");
+                    var deserializer = new DeserializerBuilder()
+                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .Build();
+                    _champHeaders = deserializer.Deserialize<List<ChampHeaders>>(readText);
+                }
+
+                return _champHeaders;
+            }
+        }
+        #endregion
+
+        #region ChampItems
+
+        internal List<ChampItems> ChampItems
+        {
+            get
+            {
+                if (_champItems == null)
+                {
+                    string readText = GetYamlData("champItems");
+                    var deserializer = new DeserializerBuilder()
+                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .Build();
+                    _champItems = deserializer.Deserialize<List<ChampItems>>(readText);
+                }
+
+                return _champItems;
+            }
+        }
+
         #endregion
     }
 }
