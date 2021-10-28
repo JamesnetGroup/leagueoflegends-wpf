@@ -17,7 +17,9 @@ namespace Lol.Collection.Local.ViewModel
         private Champs _currentChamp;
         private ChampCb _currentChampCb1;
         private ChampCb _currentChampCb2;
+        private List<ChampHeaders> _treeSource;
         private string _searchText;
+
         #endregion
 
         #region Champs
@@ -54,12 +56,22 @@ namespace Lol.Collection.Local.ViewModel
         }
         #endregion
 
+
+        #region TreeSource
+
+        public List<ChampHeaders> TreeSource
+        {
+            get { return _treeSource; }
+            set { _treeSource = value; OnPropertyChanged(); }
+        }
+        #endregion
+
         #region CurrentChampCb1
 
         public ChampCb CurrentChampCb1
         {
             get { return _currentChampCb1; }
-            set { _currentChampCb1 = value; OnPropertyChanged(); MenuChanged(value); }
+            set { _currentChampCb1 = value; OnPropertyChanged(); MenuChanged1(value); }
         }
         #endregion
 
@@ -68,7 +80,7 @@ namespace Lol.Collection.Local.ViewModel
         public ChampCb CurrentChampCb2
         {
             get { return _currentChampCb2; }
-            set { _currentChampCb2 = value; OnPropertyChanged(); MenuChanged(value); }
+            set { _currentChampCb2 = value; OnPropertyChanged(); MenuChanged2(value); }
         }
         #endregion
 
@@ -98,11 +110,28 @@ namespace Lol.Collection.Local.ViewModel
         }
         #endregion
 
-        #region MenuChanged
+        #region MenuChanged1
 
-        private void MenuChanged(ChampCb value)
+        private void MenuChanged1(ChampCb value)
         {
-            int seq = value.Seq == 0 ? value.Seq : 1;
+            int seq = value.Seq;
+            var treeSource = new ChampApi().GetChampHeaders();
+
+            if (seq != 0)
+            {
+                treeSource = treeSource.Where(x => x.ChampCbSeq == seq).ToList();
+            }
+
+            TreeSource = treeSource;
+        }
+        #endregion
+
+
+        #region MenuChanged2
+
+        private void MenuChanged2(ChampCb value)
+        {
+            
         }
         #endregion
 
@@ -114,6 +143,11 @@ namespace Lol.Collection.Local.ViewModel
         }
         #endregion
 
+        
+        public void TestData()
+        {
+            //var data = new ChampApi().
+        }
         
     }
 }
