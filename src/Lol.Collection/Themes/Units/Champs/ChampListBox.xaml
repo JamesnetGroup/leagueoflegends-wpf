@@ -3,6 +3,80 @@
                     xmlns:units="clr-namespace:Lol.Collection.UI.Units"
                     xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
 
+    <!--<Style TargetType="{x:Type TreeViewItem}" x:Key="TRVI.ITEM">
+        <Setter Property="ItemsSource" Value="{Binding Children}"/>
+        <Setter Property="Margin" Value="0 0 0 0"/>
+        <Setter Property="Background" Value="#010F1D"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TreeViewItem}">
+                    <StackPanel Margin="0 0 0 0" x:Name="parent">
+                        <Border Background="Transparent" 
+                                BorderThickness="0 0 0 1" 
+                                BorderBrush="#785A28" 
+                                Margin="0 0 0 0"
+                                Padding="0 0 0 5"
+                                HorizontalAlignment="Stretch"
+                                x:Name="header">
+                            <TextBlock HorizontalAlignment="Left"
+                                       Text="{Binding Header}"
+                                       Foreground="#A09B8C" 
+                                       FontWeight="Bold"/>
+                        </Border>
+                        <units:CommonListItem x:Name="content"/>
+                        <ItemsPresenter x:Name="items"/>
+                    </StackPanel>
+                    <ControlTemplate.Triggers>
+                        <DataTrigger Binding="{Binding Type}" Value="{x:Type extnd:PlantHeaders}">
+                            <Setter TargetName="header" Property="Visibility" Value="Visible"/>
+                            <Setter TargetName="content" Property="Visibility" Value="Collapsed"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Type}" Value="{x:Type extnd:PlantItems}">
+                            <Setter TargetName="header" Property="Visibility" Value="Collapsed"/>
+                            <Setter TargetName="content" Property="Visibility" Value="Visible"/>
+                        </DataTrigger>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding Type}" Value="{x:Type extnd:PlantHeaders}"/>
+                                <Condition Binding="{Binding RelativeSource={RelativeSource AncestorType=views:LootView}, Path=DataContext.CurrentMenu.Seq}" Value="0"/>
+                            </MultiDataTrigger.Conditions>
+                            <Setter TargetName="header" Property="Margin" Value="0 22 0 0"/>
+                        </MultiDataTrigger>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding Type}" Value="{x:Type extnd:PlantHeaders}"/>
+                                <Condition Binding="{Binding RelativeSource={RelativeSource AncestorType=views:LootView}, Path=DataContext.CurrentMenu.Seq}" Value="0"/>
+                                <Condition Binding="{Binding Seq}" Value="0"/>
+                            </MultiDataTrigger.Conditions>
+                            <Setter TargetName="header" Property="Margin" Value="0 0 0 0"/>
+                        </MultiDataTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="ItemsPanel">
+            <Setter.Value>
+                <ItemsPanelTemplate>
+                    <UniformGrid Columns="4"/>
+                </ItemsPanelTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>-->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     <Style TargetType="{x:Type units:ChampListBox}">
         <Setter Property="ItemsSource" Value="{Binding Champs}"/>
         <!--<Setter Property="SelectedItem" Value="{Binding CurrentChamp}"/>-->
