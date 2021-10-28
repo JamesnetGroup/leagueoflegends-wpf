@@ -3,7 +3,7 @@ using System.Windows.Controls;
 
 namespace Lol.Collection.UI.Units
 {
-    public class ChampListBox : ListBox
+    public class ChampListBox : TreeView
     {
         #region DefaultStyleKey
 

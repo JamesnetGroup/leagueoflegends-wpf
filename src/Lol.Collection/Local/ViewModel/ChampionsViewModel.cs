@@ -113,5 +113,7 @@ namespace Lol.Collection.Local.ViewModel
             
         }
         #endregion
+
+        
     }
 }
