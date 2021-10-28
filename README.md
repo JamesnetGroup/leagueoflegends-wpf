@@ -118,7 +118,7 @@
 ### `Store`
 ![image](https://user-images.githubusercontent.com/68521148/139064074-130eb6da-6093-4fe2-b813-d1133d4c1857.PNG)
 
-
+<br />
 <br />
 
 ### `Game`
