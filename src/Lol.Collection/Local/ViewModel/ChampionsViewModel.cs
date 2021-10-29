@@ -143,5 +143,11 @@ namespace Lol.Collection.Local.ViewModel
         }
         #endregion
 
+        
+        public void TestData()
+        {
+            //var data = new ChampApi().
+        }
+        
     }
 }
