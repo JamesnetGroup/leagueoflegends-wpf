@@ -4,6 +4,14 @@
                     xmlns:units="clr-namespace:Lol.Profile.UI.Units"
                     xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
 
+    <Style TargetType="{x:Type TextBlock}" x:Key="TXB.INFO">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontWeight" Value="Light"/>
+        <Setter Property="Foreground" Value="#A09B8C"/>
+        <Setter Property="Margin" Value="0 0 0 9"/>
+        <Setter Property="FontFamily" Value="Friz Quadrata Std"/>
+    </Style>
+
     <Style TargetType="{x:Type views:HighlightView}">
         <Setter Property="Template">
             <Setter.Value>
@@ -17,7 +25,7 @@
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="3*"/>
                             <ColumnDefinition Width="3*"/>
-                            <ColumnDefinition Width="4*"/>
+                            <ColumnDefinition Width="3*"/>
                         </Grid.ColumnDefinitions>
                         <ctrls:RiotTextBox Grid.ColumnSpan="3" MinWidth="220"
                                            Height="30"
@@ -25,28 +33,40 @@
                                            PlaceHolder="소환사 검색"
                                            Margin="0 14 66 0"/>
                         <StackPanel Grid.Row="1" Grid.ColumnSpan="3" VerticalAlignment="Center">
-                            <TextBlock Foreground="#B68E38" HorizontalAlignment="Center" Margin="0 0 0 -5"
+                            <TextBlock Foreground="#B68E38" FontWeight="Black" HorizontalAlignment="Center" Margin="0 0 0 -5"
                                        Text="하이라이트 영상을 찾지 못했습니다. 하이라이트 영상 녹화 후 영상 저장 경로를 변경하셨다면 변경된 폴더로 영상을 이동해 주세요."/>
                             <TextBlock Foreground="#E7DECB" FontSize="30" FontWeight="UltraBold" Text="하이라이트 영상 감상하기" HorizontalAlignment="Center"/>
-                            <TextBlock Foreground="#A09B8C" FontSize="11" FontWeight="ExtraLight" HorizontalAlignment="Center" Text="리플레이를 이용해 하이라이트 영상을 만들 수 있습니다. 나만의 슈퍼플레이 장면을 오래오래 간직해 보세요." />
+                            <TextBlock Foreground="#A09B8C" FontSize="11" FontWeight="Black" HorizontalAlignment="Center" Text="리플레이를 이용해 하이라이트 영상을 만들 수 있습니다. 나만의 슈퍼플레이 장면을 오래오래 간직해 보세요." />
                         </StackPanel>
-                        <StackPanel Grid.Row="2" Orientation="Vertical">
-                            <TextBlock Text="1" Foreground="#B68E38"  HorizontalAlignment="Center"/>
-                            <TextBlock Text="녹화 영상 보기" Foreground="#B68E38"  HorizontalAlignment="Center"/>
-                            <TextBlock Text="게임을 플레이한 후, 게임 종료 화면 우측 상단에 있는 버튼을 누르면 리플레이 영상을 다운로드하실 수 있습니다. 현재 패치의 다른 리플레이 영상은 대전기록 페이지에서 다운로드 및 감상 가능합니다. 단, AI 상대 대전 게임은 리플레이 영상 녹화가 되지 않으니 이 점 참고 부탁드립니다." 
-                                       Foreground="#B68E38"  HorizontalAlignment="Center" TextWrapping="WrapWithOverflow"/>
+                        <StackPanel Grid.Row="2" Orientation="Vertical" Margin="40 0 10 0">
+                            <TextBlock Text="1" FontSize="35" FontWeight="Bold" FontStyle="Italic" Foreground="#CDBE91"  HorizontalAlignment="Center" />
+                            <TextBlock Text="녹화 영상 보기" FontSize="18" FontWeight="Bold" Foreground="#EFE5D1"  HorizontalAlignment="Center" Margin="0 0 0 10"/>
+                            <TextBlock Text="게임을 플레이한 후, 게임 종료 화면 우측 상단에 있는 버" 
+                                       Style="{StaticResource TXB.INFO}"/>
+                            <TextBlock Text="튼을 누르면 리플레이 영상을 다운로드하실 수 있습니다. 현재" 
+                                       Style="{StaticResource TXB.INFO}"/>
+                            <TextBlock Text="패치의 다른 리플레이 영상은 대전기록 페이지에서 다운로드" 
+                                       Style="{StaticResource TXB.INFO}"/>
+                            <TextBlock Text="및 감상 가능합니다. 단, AI 상대 대전 게임은 리플레이 영상" 
+                                       Style="{StaticResource TXB.INFO}"/>
+                            <TextBlock Text="녹화가 되지 않으니 이 점 참고 부탁드립니다." 
+                                       Style="{StaticResource TXB.INFO}"/>
                         </StackPanel>
-                        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Vertical">
-                            <TextBlock Text="2" Foreground="#B68E38"  HorizontalAlignment="Center"/>
-                            <TextBlock Text="하이라이트 녹화하기" Foreground="#B68E38"  HorizontalAlignment="Center"/>
-                            <TextBlock Text="리플레이 영상 다운로드 후 버튼을 클릭해 재생해 주세요. 화면 하단 재생 메뉴 근처의 버튼 또는 Ctrl + V 키를 사용해 하이라이트 영상을 저장하실 수 있습니다." 
-                                       Foreground="#B68E38"  HorizontalAlignment="Center" TextWrapping="WrapWithOverflow" />
+                        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Vertical" Margin="20 0 20 0">
+                            <TextBlock Text="2" FontSize="35" FontWeight="Bold" FontStyle="Italic" Foreground="#CDBE91"  HorizontalAlignment="Center"/>
+                            <TextBlock Text="하이라이트 녹화하기" FontSize="18" FontWeight="ExtraBold" Foreground="#EFE5D1"  HorizontalAlignment="Center" Margin="0 0 0 10"/>
+                            <TextBlock Text="리플레이 영상 다운로드 후 버튼을 클릭해 재생해 주세요." 
+                                       Style="{StaticResource TXB.INFO}"/>
+                            <TextBlock Text="화면 하단 재생 메뉴 근처의 버튼 또는 Ctrl + V 키를 사" 
+                                       Style="{StaticResource TXB.INFO}"/>
+                            <TextBlock Text="용해 하이라이트 영상을 저장하실 수 있습니다." 
+                                       Style="{StaticResource TXB.INFO}"/>
                         </StackPanel>
-                        <StackPanel Grid.Row="2" Grid.Column="2" Orientation="Vertical">
-                            <TextBlock Text="3" Foreground="#B68E38"  HorizontalAlignment="Center"/>
-                            <TextBlock Text="하이라이트 감상하기" Foreground="#B68E38"  HorizontalAlignment="Center"/>
+                        <StackPanel Grid.Row="2" Grid.Column="2" Orientation="Vertical"  Margin="0 0 40 0">
+                            <TextBlock Text="3"  FontSize="35" FontWeight="Bold" FontStyle="Italic" Foreground="#CDBE91"  HorizontalAlignment="Center"/>
+                            <TextBlock Text="하이라이트 감상하기" FontSize="18" FontWeight="ExtraBold" Foreground="#EFE5D1"  HorizontalAlignment="Center" Margin="0 0 0 5"/>
                             <TextBlock Text="본 화면에서 하이라이트 영상 감상, 삭제, 파일 이름 변경이 가능합니다. 영상을 공유하시려면 버튼을 눌러 저장 경로를 확인해 주세요." 
-                                       Foreground="#B68E38"  HorizontalAlignment="Center" TextWrapping="WrapWithOverflow"/>
+                                       Foreground="#A09B8C" FontSize="11" HorizontalAlignment="Center" TextWrapping="WrapWithOverflow" />
                         </StackPanel>
                     </Grid>
                 </ControlTemplate>
