@@ -9,7 +9,16 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type views:HighlightView}">
                     <Grid>
-                        <TextBlock Text="테스트입니다" FontSize="20" Foreground="Wheat"/>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="2*"/>
+                            <RowDefinition Height="8*"/>
+                        </Grid.RowDefinitions>
+                        <ctrls:RiotTextBox MinWidth="220"
+                                           Height="30"
+                                           HorizontalAlignment="Right"
+                                           PlaceHolder="소환사 검색"
+                                           Margin="0 14 66 0"/>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
