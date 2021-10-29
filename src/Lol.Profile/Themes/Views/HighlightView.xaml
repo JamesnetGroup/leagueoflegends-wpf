@@ -14,11 +14,23 @@
                             <RowDefinition Height="2*"/>
                             <RowDefinition Height="8*"/>
                         </Grid.RowDefinitions>
-                        <ctrls:RiotTextBox MinWidth="220"
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="4*"/>
+                        </Grid.ColumnDefinitions>
+                        <ctrls:RiotTextBox Grid.ColumnSpan="3" MinWidth="220"
                                            Height="30"
                                            HorizontalAlignment="Right"
                                            PlaceHolder="소환사 검색"
                                            Margin="0 14 66 0"/>
+                        <StackPanel Grid.Row="1" Grid.ColumnSpan="3" VerticalAlignment="Center">
+                            <TextBlock Foreground="#C89B3C" HorizontalAlignment="Center" Margin="0 0 0 -5"
+                                       Text="하이라이트 영상을 찾지 못했습니다. 하이라이트 영상 녹화 후 영상 저장 경로를 변경하셨다면 변경된 폴더로 영상을 이동해 주세요."/>
+                            <TextBlock Foreground="White" FontSize="30" FontWeight="UltraBold" Text="하이라이트 영상 감상하기" HorizontalAlignment="Center"/>
+                            <TextBlock Foreground="Wheat" FontSize="11" FontWeight="ExtraLight" HorizontalAlignment="Center" Text="리플레이를 이용해 하이라이트 영상을 만들 수 있습니다. 나만의 슈퍼플레이 장면을 오래오래 간직해 보세요." />
+                        </StackPanel>
+                        
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
