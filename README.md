@@ -110,8 +110,6 @@
 ### `Loot`
 ![image](https://user-images.githubusercontent.com/68521148/138593391-44e3dec7-433c-4422-a7a2-cc8a109ad10b.png)
 
-![image](https://user-images.githubusercontent.com/68521148/138593401-dd28993a-0320-48e2-a69c-8b524264200f.png)
-
 <br />
 
 ### `Store`
