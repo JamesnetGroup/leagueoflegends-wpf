@@ -187,6 +187,7 @@ namespace Lol.Main.Local.ViewModel
                     // TODO: [Elena] 클래스 이름 중복 관련 임시 처리 
                     27 => new store.ChampionsView().SetVM(new storeVM.ChampionsViewModel()),
                     33 => new HistoryView().SetVM(new HistoryViewModel()),
+                    35 => new HighlightView().SetVM(new HighlightViewModel()),
                     37 => new PVPView().SetVM(new PVPViewModel(PvpConfirm)),
                     42 => new SummonersRiftView().SetVM(new SummonersRiftViewModel(Friends, GoHome, ModeChange)),
                     _ => new EmptyContent()

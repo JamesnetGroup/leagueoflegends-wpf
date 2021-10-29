@@ -171,6 +171,13 @@
                 <Setter TargetName="border" Property="Opacity" Value="0.9"/>
             </DataTrigger>
 
+            <!--Profile/Highlight-->
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.ParentSeq}" Value="3">
+                <Setter TargetName="img" Property="Source" Value="/Lol.Resources;component/Images/bg-ezreal.jpg"/>
+                <Setter TargetName="border" Property="Background" Value="#000000"/>
+                <Setter TargetName="border" Property="Opacity" Value="0.9"/>
+            </DataTrigger>
+
             <!--Store-->
             <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.ParentSeq}" Value="7">
                 <Setter TargetName="border" Property="Background" Value="#070A0B"/>
