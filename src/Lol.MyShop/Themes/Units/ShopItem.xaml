@@ -49,7 +49,6 @@
 	</LinearGradientBrush>
 
 	<Style TargetType="{x:Type units:ShopItem}">
-		<Setter Property="Grid.Row" Value="1"/>
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type units:ShopItem}">
@@ -109,7 +108,7 @@
                                     </Grid>
                                 </Viewbox>
                             </Border>
-                            <Border Margin="0 0 50 0">
+                            <!--<Border Margin="0 0 50 0">
                                 <Viewbox Width="120" Height="250">
                                     <Grid>
                                         <Path x:Name="path2" Data="{StaticResource GEO.FRAME.OUT}" 
@@ -358,14 +357,14 @@
                                                    Foreground="#C89B3C"/>
                                     </Grid>
                                 </Viewbox>
-                            </Border>
+                            </Border>-->
                         </StackPanel>
                     </Grid>
                         
 					<ControlTemplate.Triggers>
 						<Trigger Property="IsMouseOver" Value="True">
-							<Setter TargetName="path1" Property="Stroke" Value="{StaticResource PATH.BDR.OVER}"/>
-						</Trigger>
+                            <Setter TargetName="path1" Property="Stroke" Value="{StaticResource PATH.BDR.OVER}"/>
+                        </Trigger>
 					</ControlTemplate.Triggers>
 				</ControlTemplate>
 			</Setter.Value>
