@@ -58,7 +58,10 @@ namespace Lol.Database.Controller
 
         public List<ChampHeaders> GetChampHeaders()
         {
-            Db.ChampItems.ForEach(x => x.Img = ResourceHelper.ImgResource(x.Img));
+            Db.ChampItems.ForEach(x => {
+                x.Img = ResourceHelper.ImgResource(x.Img);
+                x.Insignia = ResourceHelper.ImgResource(x.Insignia);
+            });
 
             var query = from c in Db.ChampHeaders
                         select new ChampHeaders

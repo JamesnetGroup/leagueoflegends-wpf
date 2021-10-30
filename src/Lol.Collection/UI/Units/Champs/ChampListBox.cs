@@ -12,13 +12,5 @@ namespace Lol.Collection.UI.Units
             DefaultStyleKeyProperty.OverrideMetadata(typeof(ChampListBox), new FrameworkPropertyMetadata(typeof(ChampListBox)));
         }
         #endregion
-
-        #region GetContainerForItemOverride
-
-        protected override DependencyObject GetContainerForItemOverride()
-        {
-            return new ChampListBoxItem();
-        }
-        #endregion
     }
 }
