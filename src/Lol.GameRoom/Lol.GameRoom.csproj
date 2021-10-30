@@ -12,55 +12,55 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Page Update="Themes\Units\GameType.xaml">
+    <Page Update="Themes\Units\PVP\GameType.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Units\FriendList.xaml">
+    <Page Update="Themes\Units\Summoners\FriendList.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Units\InviteButtonGrid.xaml">
+    <Page Update="Themes\Units\Summoners\InviteButtonGrid.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Units\MapTitle.xaml">
+    <Page Update="Themes\Units\PVP\MapTitle.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Units\MapSymbol.xaml">
+    <Page Update="Themes\Units\PVP\MapSymbol.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Units\MapList.xaml">
+    <Page Update="Themes\Units\PVP\MapList.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Units\StateBox.xaml">
+    <Page Update="Themes\Units\Summoners\StateBox.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Units\ArrowTogglebutton.xaml">
+    <Page Update="Themes\Units\Summoners\ArrowTogglebutton.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Units\GuestList.xaml">
+    <Page Update="Themes\Units\Summoners\GuestList.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Units\InviteButton.xaml">
+    <Page Update="Themes\Units\Summoners\InviteButton.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Units\TopRightContent.xaml">
+    <Page Update="Themes\Units\Summoners\TopRightContent.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Units\StateRadioButton.xaml">
+    <Page Update="Themes\Units\Summoners\StateRadioButton.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Units\TrophyButton.xaml">
+    <Page Update="Themes\Units\PVP\TrophyButton.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
