@@ -68,7 +68,7 @@ namespace Lol.Database.Controller
                         {
                             Seq = c.Seq,
                             ChampCbSeq = c.ChampCbSeq,
-                            Children = Db.ChampItems.Where(x => x.HeaderSeq == c.Seq).ToList(),
+                            Children = Db.ChampItems.Where(x => x.HeaderSeq == c.Seq).OrderBy(y => y.Name).ToList(),
                             Header = c.Header,
                             IsExpanded =  c.IsExpanded
                         };
