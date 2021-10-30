@@ -8,6 +8,7 @@
 		<Setter Property="Template">
 			<Setter.Value>
                 <ControlTemplate TargetType="{x:Type views:ChampionsView}">
+           
 					<Grid>
 						<Grid.ColumnDefinitions>
 							<ColumnDefinition Width="200"/>
