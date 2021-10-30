@@ -20,35 +20,35 @@
     <Page Update="Themes\Generic.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Units\TopRightContent.xaml">
+    <Page Update="Themes\Units\Champions\TopRightContent.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Units\Category.xaml">
+    <Page Update="Themes\Units\Champions\Category.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Units\CategoryItem.xaml">
+    <Page Update="Themes\Units\Champions\CategoryItem.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Units\FilterList.xaml">
+    <Page Update="Themes\Units\Champions\FilterList.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Units\FilterListItem.xaml">
+    <Page Update="Themes\Units\Champions\FilterListItem.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Units\ItemMenu.xaml">
+    <Page Update="Themes\Units\Champions\ItemMenu.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Units\SearchTextBox.xaml">
+    <Page Update="Themes\Units\Champions\SearchTextBox.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Units\SortComboBox.xaml">
+    <Page Update="Themes\Units\Champions\SortComboBox.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Units\SortComboBoxItem.xaml">
+    <Page Update="Themes\Units\Champions\SortComboBoxItem.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Units\StoreCheckBox.xaml">
+    <Page Update="Themes\Units\Champions\StoreCheckBox.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Themes\Views\ChampionsView.xaml">
