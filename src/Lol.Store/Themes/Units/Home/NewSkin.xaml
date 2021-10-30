@@ -11,6 +11,7 @@
 
     <Style TargetType="{x:Type units:NewSkin}">
         <Setter Property="BorderBrush" Value="#3C3C41"/>
+        <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
 			<Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:NewSkin}">
@@ -22,7 +23,7 @@
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="BorderBrush" Value="{StaticResource BDR.PARENT.OVER}"/>
-                            <Setter TargetName="btnLock" Property="Visibility" Value="Collapsed"/>
+                            <Setter TargetName="btnLock" Property="Visibility" Value="Visible"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
 				</ControlTemplate>

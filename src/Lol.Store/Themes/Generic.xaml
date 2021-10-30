@@ -5,6 +5,7 @@
         <ResourceDictionary Source="/Lol.Store;component/Themes/Commons/LockButton.xaml"/>
         <ResourceDictionary Source="/Lol.Store;component/Themes/Commons/TopRightContent.xaml"/>
         <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Home/NewSkin.xaml"/>
+        <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Home/NewSkinList.xaml"/>
         <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Champions/ChampList.xaml"/>
         <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Champions/Category.xaml"/>
         <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Champions/CategoryItem.xaml"/>
