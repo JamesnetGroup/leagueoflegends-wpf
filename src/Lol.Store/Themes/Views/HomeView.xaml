@@ -21,6 +21,7 @@
                                 <ColumnDefinition Width="4.2*"/>
                             </Grid.ColumnDefinitions>
                             <units:NewSkin/>
+                            <units:SetList Grid.Column="1"/>
                         </Grid>
                     </Grid>
 				</ControlTemplate>
