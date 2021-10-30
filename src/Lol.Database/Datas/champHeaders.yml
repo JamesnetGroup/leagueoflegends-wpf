@@ -9,11 +9,11 @@
 - seq: 2
   champCbSeq: 3
   isExpanded: true
-  header: 미드
+  header: 중단 (미드)
 - seq: 3
   champCbSeq: 4
   isExpanded: true
-  header: 봇
+  header: 하단 (봇)
 - seq: 4
   champCbSeq: 5
   isExpanded: true
