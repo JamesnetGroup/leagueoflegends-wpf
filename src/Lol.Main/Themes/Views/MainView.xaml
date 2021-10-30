@@ -180,7 +180,7 @@
 
             <!--Store-->
             <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.ParentSeq}" Value="7">
-                <Setter TargetName="border" Property="Background" Value="#070A0B"/>
+                <Setter TargetName="border" Property="Background" Value="#020D16"/>
             </DataTrigger>
 
             <!--GameRoom-->
