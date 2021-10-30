@@ -54,12 +54,13 @@
 				<ControlTemplate TargetType="{x:Type units:ShopItem2}">
                     <Grid>
                         <StackPanel Orientation="Horizontal">
-                            <Border Margin="20 0 20 0">
+                            <Border Margin="20 0 25 0">
                                 <Viewbox Width="120" Height="250">
                                     <Grid>
                                         <Path x:Name="path1" Data="{StaticResource GEO.FRAME.OUT}" 
 									  Stroke="{StaticResource PATH.BDR}" 
-									  StrokeThickness="2">
+									  StrokeThickness="2"
+                                      Opacity="0.8">
                                             <Path.Effect>
                                                 <DropShadowEffect BlurRadius="5"
                                                           Opacity="1" 
@@ -68,7 +69,7 @@
                                             </Path.Effect>
                                             <Path.Fill>
                                                 <ImageBrush ImageSource="/Lol.Resources;component/Images/Champ/KogMaw_9.jpg"
-                                                    Stretch="UniformToFill"/>
+                                                    Stretch="UniformToFill" Opacity="0.8"/>
                                             </Path.Fill>
                                         </Path>
                                         <Path 
@@ -109,6 +110,7 @@
 					<ControlTemplate.Triggers>
 						<Trigger Property="IsMouseOver" Value="True">
                             <Setter TargetName="path1" Property="Stroke" Value="{StaticResource PATH.BDR.OVER}"/>
+                            <Setter TargetName="path1" Property="Opacity" Value="1"/>
                         </Trigger>
 					</ControlTemplate.Triggers>
 				</ControlTemplate>
