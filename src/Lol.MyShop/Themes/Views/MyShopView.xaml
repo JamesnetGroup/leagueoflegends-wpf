@@ -14,7 +14,14 @@
 							<RowDefinition Height="Auto"/>
 						</Grid.RowDefinitions>
 						<units:Title/>
-						<units:ShopItem/>
+                        <StackPanel Orientation="Horizontal" Grid.Row="1">
+                            <units:ShopItem/>
+                            <units:ShopItem/>
+                            <units:ShopItem/>
+                            <units:ShopItem/>
+                            <units:ShopItem/>
+                            <units:ShopItem/>
+                        </StackPanel>
 						<units:EventInfo/>
 					</Grid>
 				</ControlTemplate>

@@ -38,23 +38,24 @@
                             <TextBlock Foreground="#E7DECB" FontSize="30" FontWeight="UltraBold" Margin="0 0 0 5" Text="하이라이트 영상 감상하기" HorizontalAlignment="Center"/>
                             <TextBlock Foreground="#A09B8C" FontSize="11" FontWeight="Black" HorizontalAlignment="Center" Text="리플레이를 이용해 하이라이트 영상을 만들 수 있습니다. 나만의 슈퍼플레이 장면을 오래오래 간직해 보세요." />
                         </StackPanel>
-                        <StackPanel Grid.Row="2" Orientation="Vertical" Margin="40 0 10 0">
-                            <TextBlock Text="1" FontSize="35" FontWeight="Bold" FontStyle="Italic" Foreground="#CDBE91"  HorizontalAlignment="Center" />
-                            <TextBlock Text="녹화 영상 보기" FontSize="18" FontWeight="Bold" Foreground="#EFE5D1"  HorizontalAlignment="Center" Margin="0 0 0 10"/>
-                            <TextBlock Text="게임을 플레이한 후, 게임 종료 화면 우측 상단에 있는 버" 
-                                       Style="{StaticResource TXB.INFO}"/>
-                            <TextBlock Text="튼을 누르면 리플레이 영상을 다운로드하실 수 있습니다. 현재" 
-                                       Style="{StaticResource TXB.INFO}"/>
-                            <TextBlock Text="패치의 다른 리플레이 영상은 대전기록 페이지에서 다운로드" 
-                                       Style="{StaticResource TXB.INFO}"/>
-                            <TextBlock Text="및 감상 가능합니다. 단, AI 상대 대전 게임은 리플레이 영상" 
-                                       Style="{StaticResource TXB.INFO}"/>
-                            <TextBlock Text="녹화가 되지 않으니 이 점 참고 부탁드립니다." 
-                                       Style="{StaticResource TXB.INFO}"/>
-                            <ctrls:RiotIconButton IconType="Download" IconWidth="13" Width="20" Height="20"/>
+                        <Grid Grid.Row="2" Margin="40 0 10 0">
+                            <StackPanel Orientation="Vertical">
+                                <TextBlock Text="1" FontSize="35" FontWeight="Bold" FontStyle="Italic" Foreground="#CDBE91"  HorizontalAlignment="Center" />
+                                <TextBlock Text="녹화 영상 보기" FontSize="18" FontWeight="Bold" Foreground="#EFE5D1"  HorizontalAlignment="Center" Margin="0 0 0 10"/>
+                                <TextBlock Text="게임을 플레이한 후, 게임 종료 화면 우측 상단에 있는 버" 
+                                           Style="{StaticResource TXB.INFO}"/>
+                                <TextBlock Text="튼을 누르면 리플레이 영상을 다운로드하실 수 있습니다. 현재" 
+                                           Style="{StaticResource TXB.INFO}"/>
+                                <TextBlock Text="패치의 다른 리플레이 영상은 대전기록 페이지에서 다운로드" 
+                                           Style="{StaticResource TXB.INFO}"/>
+                                <TextBlock Text="및 감상 가능합니다. 단, AI 상대 대전 게임은 리플레이 영상" 
+                                           Style="{StaticResource TXB.INFO}"/>
+                                <TextBlock Text="녹화가 되지 않으니 이 점 참고 부탁드립니다." 
+                                           Style="{StaticResource TXB.INFO}"/>
+                            </StackPanel>
+                            <ctrls:RiotIconButton IconType="Download" IconWidth="13" Width="20" Height="20" HorizontalAlignment="Right"/>
                             <ctrls:RiotIconButton IconType="AddFolder" IconWidth="13" Width="20" Height="20"/>
-                            
-                        </StackPanel>
+                        </Grid>
                         <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Vertical" Margin="20 0 20 0">
                             <TextBlock Text="2" FontSize="35" FontWeight="Bold" FontStyle="Italic" Foreground="#CDBE91"  HorizontalAlignment="Center"/>
                             <TextBlock Text="하이라이트 녹화하기" FontSize="18" FontWeight="ExtraBold" Foreground="#EFE5D1"  HorizontalAlignment="Center" Margin="0 0 0 10"/>
