@@ -20,8 +20,8 @@
                                 <ColumnDefinition Width="5.8*"/>
                                 <ColumnDefinition Width="4.2*"/>
                             </Grid.ColumnDefinitions>
-                            <units:NewSkin/>
-                            <units:SetList Grid.Column="1"/>
+                            <units:NewSkin />
+                            <units:SetList Grid.Column="1" Margin="10 0 0 0"/>
                         </Grid>
                     </Grid>
 				</ControlTemplate>
