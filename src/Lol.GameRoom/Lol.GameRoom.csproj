@@ -12,6 +12,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Page Update="Themes\Units\JoinCustom\ConfirmButton2.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
     <Page Update="Themes\Units\PVP\GameType.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
@@ -67,7 +70,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Themes\Units\JoinCustom\" />
     <Folder Include="Themes\Units\CreateCustom\" />
   </ItemGroup>
 

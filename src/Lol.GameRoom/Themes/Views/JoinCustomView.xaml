@@ -7,8 +7,9 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type views:JoinCustomView}">
-                    <Grid>
-                        <TextBlock Text="테스트입니다" Foreground="Red" FontSize="20"/>
+                    <Grid Margin="36 0 36 0">
+                        <units:TrophyButton/>
+                        <units:ConfirmButton2/>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
