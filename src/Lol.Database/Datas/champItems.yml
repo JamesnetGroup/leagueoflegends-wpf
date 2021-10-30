@@ -1,33 +1,33 @@
 ﻿- seq: 1
-  headerSeq: 1
+  headerSeq: 2
   champ: Ahri
   name: 아리
   img: Champ,Ahri_0
   insignia: Champ,Insignia_1
   영원석: 3
 - seq: 2
-  headerSeq: 1
+  headerSeq: 0
   champ: Akali
   name: 아칼리
   img: Champ,Akali_0
   insignia: Champ,Insignia_1
   영원석: 2
 - seq: 3
-  headerSeq: 1
+  headerSeq: 2
   champ: Akshan
   name: 아크샨
   img: Champ,Akshan_0
   insignia: Champ,Insignia_1
   영원석: 5
 - seq: 4
-  headerSeq: 1
+  headerSeq: 4
   champ: Alistar
   name: 알리스타
   img: Champ,Alistar_0
   insignia: Champ,Insignia_1
   영원석: 6
 - seq: 5
-  headerSeq: 0
+  headerSeq: 1
   champ: Amumu
   name: 아무무
   img: Champ,Amumu_0
@@ -41,7 +41,7 @@
   insignia: Champ,Insignia_1
   영원석: 8
 - seq: 7
-  headerSeq: 3
+  headerSeq: 2
   champ: Annie
   name: 애니
   img: Champ,Annie_0
@@ -55,7 +55,7 @@
   insignia: Champ,Insignia_0
   영원석: 11
 - seq: 9
-  headerSeq: 0
+  headerSeq: 3
   champ: Ashe
   name: 애쉬
   img: Champ,Ashe_0
@@ -64,54 +64,54 @@
 - seq: 10
   headerSeq: 2
   champ: AurelionSol
-  name: 아우렐리온솔
+  name: 아우렐리온 솔
   img: Champ,AurelionSol_0
   insignia: Champ,Insignia_0
   영원석: 0
 - seq: 11
-  headerSeq: 0
+  headerSeq: 2
   champ: Azir
   name: 아지르
   img: Champ,Azir_0
   insignia: Champ,Insignia_0
   영원석: 2
 - seq: 12
-  headerSeq: 1
+  headerSeq: 4
   champ: Bard
   name: 바드
   img: Champ,Bard_0
   insignia: Champ,Insignia_1
   영원석: 3
 - seq: 13
-  headerSeq: 2
+  headerSeq: 4
   champ: Blitzcrank
   name: 블리츠크랭크
   img: Champ,Blitzcrank_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 14
-  headerSeq: 3
+  headerSeq: 4
   champ: Brand
   name: 브랜드
   img: Champ,Brand_0
   insignia: Champ,Insignia_0
   영원석: 5
 - seq: 15
-  headerSeq: 2
+  headerSeq: 4
   champ: Braum
   name: 브라움
   img: Champ,Braum_0
   insignia: Champ,Insignia_0
   영원석: 8
 - seq: 16
-  headerSeq: 0
+  headerSeq: 3
   champ: Caitlyn
   name: 케이틀린
   img: Champ,Caitlyn_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 17
-  headerSeq: 1
+  headerSeq: 0
   champ: Camille
   name: 카밀
   img: Champ,Camille_0
@@ -125,35 +125,35 @@
   insignia: Champ,Insignia_0
   영원석: 7
 - seq: 19
-  headerSeq: 2
+  headerSeq: 0
   champ: Chogath
   name: 초가스
   img: Champ,Chogath_0
   insignia: Champ,Insignia_0
   영원석: 0
 - seq: 20
-  headerSeq: 3
+  headerSeq: 2
   champ: Corki
   name: 코르키
   img: Champ,Corki_0
   insignia: Champ,Insignia_0
   영원석: 2
 - seq: 21
-  headerSeq: 3
+  headerSeq: 0
   champ: Darius
   name: 다리우스
   img: Champ,Darius_0
   insignia: Champ,Insignia_0
   영원석: 6
 - seq: 22
-  headerSeq: 2
+  headerSeq: 1
   champ: Diana
   name: 다이애나
   img: Champ,Diana_0
   insignia: Champ,Insignia_0
   영원석: 6
 - seq: 23
-  headerSeq: 1
+  headerSeq: 3
   champ: Draven
   name: 드레이븐
   img: Champ,Draven_0
@@ -162,12 +162,12 @@
 - seq: 24
   headerSeq: 0
   champ: DrMundo
-  name: 문도
+  name: 문도 박사
   img: Champ,DrMundo_0
   insignia: Champ,Insignia_0
   영원석: 4
 - seq: 25
-  headerSeq: 2
+  headerSeq: 1
   champ: Ekko
   name: 에코
   img: Champ,Ekko_0
@@ -188,28 +188,28 @@
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 28
-  headerSeq: 2
+  headerSeq: 3
   champ: Ezreal
   name: 이즈리얼
   img: Champ,Ezreal_0
   insignia: Champ,Insignia_0
   영원석: 8
 - seq: 29
-  headerSeq: 3
+  headerSeq: 1
   champ: FiddleSticks
   name: 피들스틱
   img: Champ,FiddleSticks_0
   insignia: Champ,Insignia_0
   영원석: 2
 - seq: 30
-  headerSeq: 1
+  headerSeq: 0
   champ: Fiora
   name: 피오라
   img: Champ,Fiora_0
   insignia: Champ,Insignia_0
   영원석: 3
 - seq: 31
-  headerSeq: 1
+  headerSeq: 2
   champ: Fizz
   name: 피즈
   img: Champ,Fizz_0
@@ -223,21 +223,21 @@
   insignia: Champ,Insignia_0
   영원석: 0
 - seq: 33
-  headerSeq: 1
+  headerSeq: 0
   champ: Gangplank
   name: 갱플랭크
   img: Champ,Gangplank_0
   insignia: Champ,Insignia_0
   영원석: 2
 - seq: 34
-  headerSeq: 3
+  headerSeq: 0
   champ: Garen
   name: 가렌
   img: Champ,Garen_0
   insignia: Champ,Insignia_0
   영원석: 3
 - seq: 35
-  headerSeq: 1
+  headerSeq: 0
   champ: Gnar
   name: 나르
   img: Champ,Gnar_0
@@ -258,7 +258,7 @@
   insignia: Champ,Insignia_0
   영원석: 10
 - seq: 38
-  headerSeq: 1
+  headerSeq: 0
   champ: Gwen
   name: 그웬
   img: Champ,Gwen_0
@@ -272,21 +272,21 @@
   insignia: Champ,Insignia_0
   영원석: 5
 - seq: 40
-  headerSeq: 1
+  headerSeq: 0
   champ: Heimerdinger
   name: 하이머딩거
   img: Champ,Heimerdinger_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 41
-  headerSeq: 1
+  headerSeq: 0
   champ: Illaoi
   name: 일라오이
   img: Champ,Illaoi_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 42
-  headerSeq: 1
+  headerSeq: 0
   champ: Irelia
   name: 이렐리아
   img: Champ,Irelia_0
@@ -300,7 +300,7 @@
   insignia: Champ,Insignia_1
   영원석: 1
 - seq: 44
-  headerSeq: 1
+  headerSeq: 4
   champ: Janna
   name: 잔나
   img: Champ,Janna_0
@@ -309,54 +309,54 @@
 - seq: 45
   headerSeq: 1
   champ: JarvanIV
-  name: 자르반4세
+  name: 자르반 4세
   img: Champ,JarvanIV_0
   insignia: Champ,Insignia_1
   영원석: 2
 - seq: 46
-  headerSeq: 1
+  headerSeq: 0
   champ: Jax
   name: 잭스
   img: Champ,Jax_0
   insignia: Champ,Insignia_0
   영원석: 3
 - seq: 47
-  headerSeq: 1
+  headerSeq: 0
   champ: Jayce
   name: 제이스
   img: Champ,Jayce_0
   insignia: Champ,Insignia_0
   영원석: 4
 - seq: 48
-  headerSeq: 1
+  headerSeq: 3
   champ: Jhin
   name: 진
   img: Champ,Jhin_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 49
-  headerSeq: 1
+  headerSeq: 3
   champ: Jinx
   name: 징크스
   img: Champ,Jinx_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 50
-  headerSeq: 1
+  headerSeq: 3
   champ: Kaisa
   name: 카이사
   img: Champ,Kaisa_0
   insignia: Champ,Insignia_0
   영원석: 12
 - seq: 51
-  headerSeq: 1
+  headerSeq: 3
   champ: Kalista
   name: 칼리스타
   img: Champ,Kalista_0
   insignia: Champ,Insignia_0
   영원석: 11
 - seq: 52
-  headerSeq: 1
+  headerSeq: 4
   champ: Karma
   name: 카르마
   img: Champ,Karma_0
@@ -370,21 +370,21 @@
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 54
-  headerSeq: 1
+  headerSeq: 2
   champ: Kassadin
   name: 카사딘
   img: Champ,Kassadin_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 55
-  headerSeq: 1
+  headerSeq: 2
   champ: Katarina
   name: 카타리나
   img: Champ,Katarina_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 56
-  headerSeq: 1
+  headerSeq: 0
   champ: Kayle
   name: 케일
   img: Champ,Kayle_0
@@ -398,7 +398,7 @@
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 58
-  headerSeq: 1
+  headerSeq: 0
   champ: Kennen
   name: 케넨
   img: Champ,Kennen_0
@@ -419,21 +419,21 @@
   insignia: Champ,Insignia_1
   영원석: 2
 - seq: 61
-  headerSeq: 1
+  headerSeq: 0
   champ: Kled
   name: 클레드
   img: Champ,Kled_0
   insignia: Champ,Insignia_0
   영원석: 0
 - seq: 62
-  headerSeq: 1
+  headerSeq: 3
   champ: KogMaw
   name: 코그모
   img: Champ,KogMaw_0
   insignia: Champ,Insignia_0
   영원석: 5
 - seq: 63
-  headerSeq: 1
+  headerSeq: 2
   champ: Leblanc
   name: 르블랑
   img: Champ,Leblanc_0
@@ -447,7 +447,7 @@
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 65
-  headerSeq: 1
+  headerSeq: 4
   champ: Leona
   name: 레오나
   img: Champ,Leona_0
@@ -461,49 +461,49 @@
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 67
-  headerSeq: 1
+  headerSeq: 2
   champ: Lissandra
   name: 리산드라
   img: Champ,Lissandra_0
   insignia: Champ,Insignia_0
   영원석: 6
 - seq: 68
-  headerSeq: 1
+  headerSeq: 3
   champ: Lucian
   name: 루시안
   img: Champ,Lucian_0
   insignia: Champ,Insignia_1
   영원석: 13
 - seq: 69
-  headerSeq: 1
+  headerSeq: 4
   champ: Lulu
   name: 룰루
   img: Champ,Lulu_0
   insignia: Champ,Insignia_1
   영원석: 1
 - seq: 70
-  headerSeq: 1
+  headerSeq: 4
   champ: Lux
   name: 럭스
   img: Champ,Lux_0
   insignia: Champ,Insignia_1
   영원석: 1
 - seq: 71
-  headerSeq: 1
+  headerSeq: 0
   champ: Malphite
   name: 말파이트
   img: Champ,Malphite_0
   insignia: Champ,Insignia_1
   영원석: 1
 - seq: 72
-  headerSeq: 1
+  headerSeq: 2
   champ: Malzahar
   name: 말자하
   img: Champ,Malzahar_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 73
-  headerSeq: 1
+  headerSeq: 4
   champ: Maokai
   name: 마오카이
   img: Champ,Maokai_0
@@ -517,56 +517,56 @@
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 75
-  headerSeq: 1
+  headerSeq: 3
   champ: MissFortune
-  name: 미스포춘
+  name: 미스 포춘
   img: Champ,MissFortune_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 76
-  headerSeq: 1
+  headerSeq: 0
   champ: MonkeyKing
   name: 오공
   img: Champ,MonkeyKing_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 77
-  headerSeq: 1
+  headerSeq: 0
   champ: Mordekaiser
   name: 모데카이저
   img: Champ,Mordekaiser_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 78
-  headerSeq: 1
+  headerSeq: 4
   champ: Morgana
   name: 모르가나
   img: Champ,Morgana_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 79
-  headerSeq: 1
+  headerSeq: 4
   champ: Nami
   name: 나미
   img: Champ,Nami_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 80
-  headerSeq: 1
+  headerSeq: 0
   champ: Nasus
   name: 나서스
   img: Champ,Nasus_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 81
-  headerSeq: 1
+  headerSeq: 4
   champ: Nautilus
   name: 노틸러스
   img: Champ,Nautilus_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 82
-  headerSeq: 1
+  headerSeq: 2
   champ: Neeko
   name: 니코
   img: Champ,Neeko_0
@@ -601,21 +601,21 @@
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 87
-  headerSeq: 1
+  headerSeq: 2
   champ: Orianna
   name: 오리아나
   img: Champ,Orianna_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 88
-  headerSeq: 1
+  headerSeq: 0
   champ: Ornn
   name: 오른
   img: Champ,Ornn_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 89
-  headerSeq: 1
+  headerSeq: 2
   champ: Pantheon
   name: 판테온
   img: Champ,Pantheon_0
@@ -629,7 +629,7 @@
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 91
-  headerSeq: 1
+  headerSeq: 4
   champ: Pyke
   name: 파이크
   img: Champ,Pyke_0
@@ -643,14 +643,14 @@
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 93
-  headerSeq: 1
+  headerSeq: 0
   champ: Quinn
   name: 퀸
   img: Champ,Quinn_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 94
-  headerSeq: 1
+  headerSeq: 4
   champ: Rakan
   name: 라칸
   img: Champ,Rakan_0
@@ -671,14 +671,14 @@
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 97
-  headerSeq: 1
+  headerSeq: 4
   champ: Rell
   name: 렐
   img: Champ,Rell_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 98
-  headerSeq: 1
+  headerSeq: 0
   champ: Renekton
   name: 레넥톤
   img: Champ,Renekton_0
@@ -692,28 +692,28 @@
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 100
-  headerSeq: 1
+  headerSeq: 0
   champ: Riven
   name: 리븐
   img: Champ,Riven_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 101
-  headerSeq: 1
+  headerSeq: 0
   champ: Rumble
   name: 럼블
   img: Champ,Rumble_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 102
-  headerSeq: 1
+  headerSeq: 2
   champ: Ryze
   name: 라이즈
   img: Champ,Ryze_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 103
-  headerSeq: 1
+  headerSeq: 3
   champ: Samira
   name: 사미라
   img: Champ,Samira_0
@@ -727,21 +727,21 @@
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 105
-  headerSeq: 1
+  headerSeq: 4
   champ: Senna
   name: 세나
   img: Champ,Senna_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 106
-  headerSeq: 1
+  headerSeq: 4
   champ: Seraphine
   name: 세라핀
   img: Champ,Seraphine_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 107
-  headerSeq: 1
+  headerSeq: 0
   champ: Sett
   name: 세트
   img: Champ,Sett_0
@@ -755,7 +755,7 @@
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 109
-  headerSeq: 1
+  headerSeq: 0
   champ: Shen
   name: 쉔
   img: Champ,Shen_0
@@ -769,21 +769,21 @@
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 111
-  headerSeq: 1
+  headerSeq: 0
   champ: Singed
   name: 신지드
   img: Champ,Singed_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 112
-  headerSeq: 1
+  headerSeq: 0
   champ: Sion
   name: 사이온
   img: Champ,Sion_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 113
-  headerSeq: 1
+  headerSeq: 3
   champ: Sivir
   name: 시비르
   img: Champ,Sivir_0
@@ -797,44 +797,44 @@
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 115
-  headerSeq: 1
+  headerSeq: 4
   champ: Sona
   name: 소나
   img: Champ,Sona_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 116
-  headerSeq: 1
+  headerSeq: 4
   champ: Soraka
   name: 소라카
   img: Champ,Soraka_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 117
-  headerSeq: 1
+  headerSeq: 4
   champ: Swain
   name: 스웨인
   img: Champ,Swain_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 118
-  headerSeq: 1
+  headerSeq: 0
   champ: Sylas
   name: 사일러스
   img: Champ,Sylas_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 119
-  headerSeq: 1
+  headerSeq: 2
   champ: Syndra
   name: 신드라
   img: Champ,Syndra_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 120
-  headerSeq: 1
+  headerSeq: 0
   champ: TahmKench
-  name: 탐켄치
+  name: 탐 켄치
   img: Champ,TahmKench_0
   insignia: Champ,Insignia_0
   영원석: 1
@@ -846,35 +846,35 @@
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 122
-  headerSeq: 1
+  headerSeq: 2
   champ: Talon
   name: 탈론
   img: Champ,Talon_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 123
-  headerSeq: 1
+  headerSeq: 4
   champ: Taric
   name: 타릭
   img: Champ,Taric_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 124
-  headerSeq: 1
+  headerSeq: 0
   champ: Teemo
   name: 티모
   img: Champ,Teemo_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 125
-  headerSeq: 1
+  headerSeq: 4
   champ: Thresh
   name: 쓰레쉬
   img: Champ,Thresh_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 126
-  headerSeq: 1
+  headerSeq: 3
   champ: Tristana
   name: 트리스타나
   img: Champ,Tristana_0
@@ -890,19 +890,19 @@
 - seq: 128
   headerSeq: 1
   champ: Tryndamere
-  name: 트런들
+  name: 트린다미어
   img: Champ,Tryndamere_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 129
-  headerSeq: 1
+  headerSeq: 2
   champ: TwistedFate
   name: 트위스티트페이트
   img: Champ,TwistedFate_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 130
-  headerSeq: 1
+  headerSeq: 3
   champ: Twitch
   name: 트위치
   img: Champ,Twitch_0
@@ -916,35 +916,35 @@
   insignia: Champ,Insignia_1
   영원석: 1
 - seq: 132
-  headerSeq: 1
+  headerSeq: 0
   champ: Urgot
   name: 우르곳
   img: Champ,Urgot_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 133
-  headerSeq: 1
+  headerSeq: 3
   champ: Varus
   name: 바루스
   img: Champ,Varus_0
   insignia: Champ,Insignia_1
   영원석: 1
 - seq: 134
-  headerSeq: 1
+  headerSeq: 0
   champ: Vayne
   name: 베인
   img: Champ,Vayne_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 135
-  headerSeq: 4
+  headerSeq: 2
   champ: Veigar
   name: 베이가
   img: Champ,Veigar_0
   insignia: Champ,Insignia_1
   영원석: 1
 - seq: 136
-  headerSeq: 1
+  headerSeq: 4
   champ: Velkoz
   name: 벨코즈
   img: Champ,Velkoz_0
@@ -965,14 +965,14 @@
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 139
-  headerSeq: 1
+  headerSeq: 2
   champ: Vladimir
   name: 블라디미르
   img: Champ,Vladimir_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 140
-  headerSeq: 1
+  headerSeq: 0
   champ: Volibear
   name: 볼리베어
   img: Champ,Volibear_0
@@ -986,14 +986,14 @@
   insignia: Champ,Insignia_1
   영원석: 1
 - seq: 142
-  headerSeq: 1
+  headerSeq: 3
   champ: Xayah
   name: 자야
   img: Champ,Xayah_0
   insignia: Champ,Insignia_1
   영원석: 1
 - seq: 143
-  headerSeq: 1
+  headerSeq: 4
   champ: Xerath
   name: 제라스
   img: Champ,Xerath_0
@@ -1002,33 +1002,33 @@
 - seq: 144
   headerSeq: 1
   champ: XinZhao
-  name: 신짜오
+  name: 신 짜오
   img: Champ,XinZhao_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 145
-  headerSeq: 1
+  headerSeq: 0
   champ: Yasuo
   name: 야스오
   img: Champ,Yasuo_0
   insignia: Champ,Insignia_1
   영원석: 1
 - seq: 146
-  headerSeq: 1
+  headerSeq: 2
   champ: Yone
   name: 요네
   img: Champ,Yone_0
   insignia: Champ,Insignia_1
   영원석: 1
 - seq: 147
-  headerSeq: 1
+  headerSeq: 0
   champ: Yorick
   name: 요릭
   img: Champ,Yorick_0
   insignia: Champ,Insignia_1
   영원석: 1
 - seq: 148
-  headerSeq: 1
+  headerSeq: 4
   champ: Yuumi
   name: 유미
   img: Champ,Yuumi_0
@@ -1049,28 +1049,28 @@
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 151
-  headerSeq: 1
+  headerSeq: 3
   champ: Ziggs
   name: 직스
   img: Champ,Ziggs_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 152
-  headerSeq: 1
+  headerSeq: 4
   champ: Zilean
   name: 질리언
   img: Champ,Zilean_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 153
-  headerSeq: 1
+  headerSeq: 2
   champ: Zoe
   name: 조이
   img: Champ,Zoe_0
   insignia: Champ,Insignia_0
   영원석: 1
 - seq: 154
-  headerSeq: 1
+  headerSeq: 4
   champ: Zyra
   name: 자이라
   img: Champ,Zyra_0
