@@ -14,7 +14,7 @@
 							<RowDefinition Height="Auto"/>
 						</Grid.RowDefinitions>
 						<units:Title/>
-                        <StackPanel Orientation="Horizontal" Grid.Row="1">
+                        <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="40 0 0 0">
                             <units:ShopItem1/>
                             <units:ShopItem2/>
                             <units:ShopItem3/>
