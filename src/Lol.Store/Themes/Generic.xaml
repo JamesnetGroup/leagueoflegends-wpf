@@ -3,6 +3,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Common/TopRightContent.xaml"/>
+        <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Home/NewSkin.xaml"/>
         <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Champions/ChampList.xaml"/>
         <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Champions/Category.xaml"/>
         <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Champions/CategoryItem.xaml"/>
