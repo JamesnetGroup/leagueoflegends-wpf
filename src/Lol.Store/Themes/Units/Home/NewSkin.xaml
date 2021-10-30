@@ -18,6 +18,7 @@
                     <Border BorderThickness="1" BorderBrush="{TemplateBinding BorderBrush}" Background="Transparent">
 					    <Grid>
                             <commons:LockButton x:Name="btnLock" Visibility="Collapsed"/>
+                            <units:NewSkinList/>
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
