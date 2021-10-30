@@ -18,7 +18,7 @@
                     <Border BorderThickness="1" BorderBrush="{TemplateBinding BorderBrush}" Background="Transparent">
 					    <Grid>
                             <Grid.Background>
-                                <ImageBrush ImageSource="{Binding CurrentSkin.ImgSource}"/>
+                                <ImageBrush ImageSource="{Binding CurrentSkin.ImgSource}" Stretch="UniformToFill"/>
                             </Grid.Background>
                             <Grid x:Name="gdShadow" Background="#22000000"/>
                             <commons:LockButton x:Name="btnLock" Visibility="Collapsed"/>
