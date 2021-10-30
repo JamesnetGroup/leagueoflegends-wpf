@@ -3,7 +3,12 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 	<ResourceDictionary.MergedDictionaries>
 		<ResourceDictionary Source="/Lol.MyShop;component/Themes/Units/Title.xaml"/>
-		<ResourceDictionary Source="/Lol.MyShop;component/Themes/Units/ShopItem.xaml"/>
+		<ResourceDictionary Source="/Lol.MyShop;component/Themes/Units/ShopItem1.xaml"/>
+        <ResourceDictionary Source="/Lol.MyShop;component/Themes/Units/ShopItem2.xaml"/>
+        <ResourceDictionary Source="/Lol.MyShop;component/Themes/Units/ShopItem3.xaml"/>
+        <ResourceDictionary Source="/Lol.MyShop;component/Themes/Units/ShopItem4.xaml"/>
+        <ResourceDictionary Source="/Lol.MyShop;component/Themes/Units/ShopItem5.xaml"/>
+        <ResourceDictionary Source="/Lol.MyShop;component/Themes/Units/ShopItem6.xaml"/>
 		<ResourceDictionary Source="/Lol.MyShop;component/Themes/Units/EventInfo.xaml"/>
 		<ResourceDictionary Source="/Lol.MyShop;component/Themes/Views/MyShopView.xaml"/>
 	</ResourceDictionary.MergedDictionaries>

@@ -4,6 +4,14 @@
                     xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport"
                     xmlns:types="clr-namespace:Lol.Database.Entites.Schema;assembly=Lol.Database">
 
+    <Style TargetType="{x:Type Border}" x:Key="BDR.TEMP">
+        <Setter Property="BorderThickness" Value="0.5"/>
+        <Setter Property="BorderBrush" Value="#474C45"/>
+        <Setter Property="Width" Value="400"/>
+        <Setter Property="Margin" Value="0 20 0 15"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+    </Style>
+
     <LinearGradientBrush x:Key="BDR.PARENT" StartPoint="0.5, 0" EndPoint="0.5, 1">
         <GradientStop Color="#FDFDFD" Offset="0"/>
         <GradientStop Color="#E4D6BA" Offset="0.5"/>
@@ -17,8 +25,16 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TreeViewItem}">
                     <StackPanel Margin="0 0 20 0">
-                        <TextBlock Text="{Binding Header}" Foreground="GreenYellow" FontSize="20" x:Name="header"/>
-                        <StackPanel x:Name="content">
+                        <StackPanel x:Name="header" Orientation="Horizontal" Margin="0 0 0 20">
+                            <TextBlock Text="{Binding Header}" Foreground="#F0E6D2" FontSize="20" FontWeight="UltraBold"/>
+                            <TextBlock Text="{Binding Children.Count}" Foreground="#C0A267" FontSize="20" FontWeight="Thin" FontStyle="Italic" Margin="40 0 0 0"/>
+                            <TextBlock Text="/" Foreground="#C0A267" FontSize="20" FontWeight="UltraLight" Margin="10 0 0 0"/>
+                            <TextBlock Text="{Binding Children.Count}" Foreground="#C0A267" FontSize="20" FontWeight="UltraLight" FontStyle="Italic" Margin="10 0 0 0"/>
+                            <TextBlock Text="(" Foreground="#C0A267" FontSize="20" FontWeight="UltraLight"  FontStyle="Italic" Margin="20 0 0 0"/>
+                            <TextBlock Text="{Binding Children.Count}" Foreground="#C0A267" FontSize="20" FontWeight="UltraLight" FontStyle="Italic" Margin="2 0 2 0"/>
+                            <TextBlock Text=")" Foreground="#C0A267" FontSize="20" FontWeight="UltraLight" FontStyle="Italic" />
+                        </StackPanel>
+                        <StackPanel x:Name="content" Margin="0 0 0 20">
                             <Grid>
                                 <Border x:Name="bd" BorderThickness="1" BorderBrush="#1E2328">
                                     <Image Source="{Binding Img}" Stretch="Fill"  Height="220"/>
@@ -66,8 +82,6 @@
             </Setter.Value>
         </Setter>
     </Style>
-
-
 
     <Style TargetType="{x:Type units:ChampListBox}">
         <Setter Property="ItemContainerStyle" Value="{StaticResource TRVI.CHILD}"/>

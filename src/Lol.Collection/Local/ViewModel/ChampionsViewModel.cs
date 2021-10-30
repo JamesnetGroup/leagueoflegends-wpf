@@ -116,15 +116,15 @@ namespace Lol.Collection.Local.ViewModel
 
         private void MenuChanged1(ChampCb value)
         {
-            int seq = value.Seq;
-            var treeSource = new ChampApi().GetChampHeaders();
+            //int seq = value.Seq;
+            //var treeSource = new ChampApi().GetChampHeaders();
 
-            if (seq != 0)
-            {
-                treeSource = treeSource.Where(x => x.ChampCbSeq == seq).ToList();
-            }
+            //if (seq != 0)
+            //{
+            //    treeSource = treeSource.Where(x => x.ChampCbSeq == seq).ToList();
+            //}
 
-            TreeSource = treeSource;
+            //TreeSource = treeSource;
         }
         #endregion
 
