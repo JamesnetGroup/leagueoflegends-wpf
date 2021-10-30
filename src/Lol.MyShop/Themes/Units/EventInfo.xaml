@@ -10,7 +10,7 @@
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type units:EventInfo}">
 					<StackPanel>
-						<TextBlock Text="종료 일시: 1월 19일 02:00 GMT+9" 
+						<TextBlock Text="종료 일시: 11월 9일 02:00 GMT+9" 
                                    Foreground="#C8AA6E" 
                                    FontSize="16" 
                                    HorizontalAlignment="Center"/>

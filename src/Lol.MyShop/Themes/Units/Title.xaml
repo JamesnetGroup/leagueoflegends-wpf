@@ -22,7 +22,7 @@
 				<ControlTemplate TargetType="{x:Type units:Title}">
 					<StackPanel HorizontalAlignment="Center">
 						<TextBlock Text="나만의 상점" 
-                                   FontSize="16" 
+                                   FontSize="18" 
                                    FontWeight="Bold"
                                    Foreground="#F0E6D2" 
                                    HorizontalAlignment="Center" 
