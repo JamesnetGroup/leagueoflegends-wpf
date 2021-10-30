@@ -51,6 +51,10 @@
     <Page Update="Themes\Units\Champions\StoreCheckBox.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Themes\Views\HomeView.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Themes\Views\ChampionsView.xaml">
       <SubType>Designer</SubType>
     </Page>
