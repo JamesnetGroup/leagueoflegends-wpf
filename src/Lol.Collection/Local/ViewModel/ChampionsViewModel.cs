@@ -107,6 +107,8 @@ namespace Lol.Collection.Local.ViewModel
 
             CurrentChampCb1 = ChampCb1.First();
             CurrentChampCb2 = ChampCb2.First();
+
+            TreeSource = new ChampApi().GetChampHeaders();
         }
         #endregion
 

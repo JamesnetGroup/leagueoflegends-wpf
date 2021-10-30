@@ -26,8 +26,5 @@ namespace Lol.Database.Entites.Schema
         public string Insignia { get; set; }
         public string 영원석 { get; set; }
         public Type Type => GetType();
-
-
-
     }
 }
