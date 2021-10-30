@@ -2,9 +2,51 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:units="clr-namespace:Lol.Store.UI.Units">
     <Style TargetType="{x:Type units:SetListItem}">
+        <Setter Property="BorderBrush" Value="#3C3C41"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:SetListItem}">
+                    <ControlTemplate.Resources>
+                        <Style TargetType="{x:Type Image}" x:Key="IN.IMG">
+                            <Setter Property="Source" Value="/Lol.Resources;component/Images/lol-rp-icon.png"/>
+                            <Setter Property="Width" Value="15"/>
+                            <Setter Property="Height" Value="15"/>
+                            <Setter Property="RenderOptions.BitmapScalingMode" Value="Fant"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                        </Style>
+                    </ControlTemplate.Resources>
+                    <Border BorderThickness="1" Background="Transparent" BorderBrush="{TemplateBinding BorderBrush}" >
+                        <Grid>
+                            <StackPanel VerticalAlignment="Bottom" Margin="0 0 0 4">
+                                <TextBlock Text="{Binding Name}"
+                                           TextWrapping="Wrap" 
+                                           Foreground="#F0E6D2"
+                                           FontSize="14" 
+                                           FontWeight="Bold"
+                                           Margin="0 0 0 4"/>
+                                <StackPanel x:Name="spValue" 
+                                            Orientation="Horizontal" 
+                                            HorizontalAlignment="Center"
+                                            Margin="0 0 0 0">
+                                    <Image Style="{StaticResource IN.IMG}" VerticalAlignment="Center"/>
+                                    <TextBlock Text="{Binding Value}" Foreground="#C8AA6E" Margin="4 0 0 0" VerticalAlignment="Bottom"/>
+                                </StackPanel>
+                                <TextBlock x:Name="textValue"
+                                           Text="RP 잔액부족"
+                                           Foreground="#DD2D38" 
+                                           Margin="0 0 0 0"
+                                           Visibility="Collapsed" 
+                                           HorizontalAlignment="Center"/>
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#F0E6D2"/>
+                            <Setter TargetName="spValue" Property="Visibility" Value="Collapsed"/>
+                            <Setter TargetName="textValue" Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

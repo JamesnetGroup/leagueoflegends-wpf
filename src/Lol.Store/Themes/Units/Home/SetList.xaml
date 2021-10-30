@@ -2,6 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:units="clr-namespace:Lol.Store.UI.Units">
     <Style TargetType="{x:Type units:SetList}">
+        <Setter Property="ItemsSource" Value="{Binding SkinSets}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:SetList}">

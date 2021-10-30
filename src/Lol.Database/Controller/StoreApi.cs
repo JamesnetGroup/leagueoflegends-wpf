@@ -71,5 +71,21 @@ namespace Lol.Database.Controller
             return query.ToList();
         }
         #endregion
+
+        #region GetSkinSets
+
+        public List<SkinSets> GetSkinSets()
+        {
+            var query = from s in Db.SkinSets
+                        select new SkinSets
+                        {
+                            Seq = s.Seq,
+                            Name = s.Name,
+                            Value = s.Value,
+                        };
+
+            return query.ToList();
+        }
+        #endregion
     }
 }

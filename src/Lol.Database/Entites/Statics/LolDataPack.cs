@@ -53,6 +53,7 @@ namespace Lol.Database.Entites.Statics
         internal List<ChampHeaders> _champHeaders;
         internal List<ChampItems> _champItems;
         internal List<NewSkins> _newSkins;
+        internal List<SkinSets> _skinSets;
         #endregion
 
         #region GetYamlData
@@ -724,6 +725,27 @@ namespace Lol.Database.Entites.Statics
                 }
 
                 return _newSkins;
+            }
+        }
+
+        #endregion
+
+        #region NewSkins
+
+        internal List<SkinSets> SkinSets
+        {
+            get
+            {
+                if (_skinSets == null)
+                {
+                    string readText = GetYamlData("skinSets");
+                    var deserializer = new DeserializerBuilder()
+                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .Build();
+                    _skinSets = deserializer.Deserialize<List<SkinSets>>(readText);
+                }
+
+                return _skinSets;
             }
         }
 

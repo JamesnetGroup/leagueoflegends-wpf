@@ -11,6 +11,7 @@ namespace Lol.Store.Local.ViewModels
         #region Variables
 
         private List<NewSkins> _newSkins;
+        private List<SkinSets> _skinSets;
         private NewSkins _currentSkin;
         #endregion
 
@@ -32,12 +33,24 @@ namespace Lol.Store.Local.ViewModels
         }
         #endregion
 
+        #region SkinSets
+
+        public List<SkinSets> SkinSets
+        {
+            get { return _skinSets; }
+            set { _skinSets = value; OnPropertyChanged(); }
+        }
+        #endregion
+
+
         #region Constructor
 
         public HomeViewModel()
         {
-            NewSkins = new StoreApi().GetNewSkins();
+            StoreApi storeApi = new StoreApi();
+            NewSkins = storeApi.GetNewSkins();
             CurrentSkin = NewSkins[0];
+            SkinSets = storeApi.GetSkinSets();
 
             Thread thread = new Thread(() =>
             {
