@@ -18,6 +18,7 @@
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/MapSymbol.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/GameType.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/TrophyButton.xaml"/>
+        <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Views/JoinCustomView.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Views/PVPView.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Views/SummonersRiftView.xaml"/>
     </ResourceDictionary.MergedDictionaries>
