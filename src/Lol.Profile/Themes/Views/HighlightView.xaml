@@ -5,8 +5,7 @@
                     xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
 
     <Style TargetType="{x:Type TextBlock}" x:Key="TXB.INFO">
-        <Setter Property="FontSize" Value="12"/>
-        <Setter Property="FontWeight" Value="Light"/>
+        <Setter Property="FontSize" Value="11"/>
         <Setter Property="Foreground" Value="#A09B8C"/>
         <Setter Property="Margin" Value="0 0 0 9"/>
         <Setter Property="FontFamily" Value="Friz Quadrata Std"/>
@@ -23,9 +22,9 @@
                             <RowDefinition Height="8*"/>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="3*"/>
-                            <ColumnDefinition Width="3*"/>
-                            <ColumnDefinition Width="3*"/>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
+                            <ColumnDefinition Width="1*"/>
                         </Grid.ColumnDefinitions>
                         <ctrls:RiotTextBox Grid.ColumnSpan="3" MinWidth="220"
                                            Height="30"
@@ -38,11 +37,11 @@
                             <TextBlock Foreground="#E7DECB" FontSize="30" FontWeight="UltraBold" Margin="0 0 0 5" Text="하이라이트 영상 감상하기" HorizontalAlignment="Center"/>
                             <TextBlock Foreground="#A09B8C" FontSize="11" FontWeight="Black" HorizontalAlignment="Center" Text="리플레이를 이용해 하이라이트 영상을 만들 수 있습니다. 나만의 슈퍼플레이 장면을 오래오래 간직해 보세요." />
                         </StackPanel>
-                        <Grid Grid.Row="2" Margin="40 0 10 0">
+                        <Canvas Grid.Row="2" Margin="40 0 0 0">
                             <StackPanel Orientation="Vertical">
                                 <TextBlock Text="1" FontSize="35" FontWeight="Bold" FontStyle="Italic" Foreground="#CDBE91"  HorizontalAlignment="Center" />
                                 <TextBlock Text="녹화 영상 보기" FontSize="18" FontWeight="Bold" Foreground="#EFE5D1"  HorizontalAlignment="Center" Margin="0 0 0 10"/>
-                                <TextBlock Text="게임을 플레이한 후, 게임 종료 화면 우측 상단에 있는 버" 
+                                <TextBlock Text="게임을 플레이한 후, 게임 종료 화면 우측 상단에 있는         버" 
                                            Style="{StaticResource TXB.INFO}"/>
                                 <TextBlock Text="튼을 누르면 리플레이 영상을 다운로드하실 수 있습니다. 현재" 
                                            Style="{StaticResource TXB.INFO}"/>
@@ -53,29 +52,36 @@
                                 <TextBlock Text="녹화가 되지 않으니 이 점 참고 부탁드립니다." 
                                            Style="{StaticResource TXB.INFO}"/>
                             </StackPanel>
-                            <ctrls:RiotIconButton IconType="Download" IconWidth="13" Width="20" Height="20" HorizontalAlignment="Right"/>
-                            <ctrls:RiotIconButton IconType="AddFolder" IconWidth="13" Width="20" Height="20"/>
-                        </Grid>
-                        <StackPanel Grid.Row="2" Grid.Column="1" Orientation="Vertical" Margin="20 0 20 0">
-                            <TextBlock Text="2" FontSize="35" FontWeight="Bold" FontStyle="Italic" Foreground="#CDBE91"  HorizontalAlignment="Center"/>
-                            <TextBlock Text="하이라이트 녹화하기" FontSize="18" FontWeight="ExtraBold" Foreground="#EFE5D1"  HorizontalAlignment="Center" Margin="0 0 0 10"/>
-                            <TextBlock Text="리플레이 영상 다운로드 후 버튼을 클릭해 재생해 주세요." 
-                                       Style="{StaticResource TXB.INFO}"/>
-                            <TextBlock Text="화면 하단 재생 메뉴 근처의 버튼 또는 Ctrl + V 키를 사" 
-                                       Style="{StaticResource TXB.INFO}"/>
-                            <TextBlock Text="용해 하이라이트 영상을 저장하실 수 있습니다." 
-                                       Style="{StaticResource TXB.INFO}"/>
-                        </StackPanel>
-                        <StackPanel Grid.Row="2" Grid.Column="2" Orientation="Vertical"  Margin="0 0 40 0">
-                            <TextBlock Text="3"  FontSize="35" FontWeight="Bold" FontStyle="Italic" Foreground="#CDBE91"  HorizontalAlignment="Center"/>
-                            <TextBlock Text="하이라이트 감상하기" FontSize="18" FontWeight="ExtraBold" Foreground="#EFE5D1"  HorizontalAlignment="Center" Margin="0 0 0 10"/>
-                            <TextBlock Text="본 화면에서 하이라이트 영상 감상, 삭제, 파일 이름 변경이 가" 
-                                       Style="{StaticResource TXB.INFO}"/>
-                            <TextBlock Text="능합니다. 영상을 공유하시려면 버튼을 눌러 저장 경로를" 
-                                       Style="{StaticResource TXB.INFO}"/>
-                            <TextBlock Text="확인해 주세요." 
-                                       Style="{StaticResource TXB.INFO}"/>
-                        </StackPanel>
+                            <ctrls:RiotIconButton IconType="Download" IconWidth="13" Width="20" Height="20" Margin="260 76 0 0"/>
+                            
+                        </Canvas>
+                        <Canvas Grid.Row="2" Grid.Column="1" Margin="20 0 10 0">
+                            <StackPanel  Orientation="Vertical"  >
+                                <TextBlock Text="2" FontSize="35" FontWeight="Bold" FontStyle="Italic" Foreground="#CDBE91"  HorizontalAlignment="Center"/>
+                                <TextBlock Text="하이라이트 녹화하기" FontSize="18" FontWeight="ExtraBold" Foreground="#EFE5D1"  HorizontalAlignment="Center" Margin="0 0 0 10"/>
+                                <TextBlock Text="리플레이 영상 다운로드 후         버튼을 클릭해 재생해 주세요." 
+                                           Style="{StaticResource TXB.INFO}"/>
+                                <TextBlock Text="화면 하단 재생 메뉴 근처의         버튼 또는 Ctrl + V 키를 사" 
+                                           Style="{StaticResource TXB.INFO}"/>
+                                <TextBlock Text="용해 하이라이트 영상을 저장하실 수 있습니다." 
+                                           Style="{StaticResource TXB.INFO}"/>
+                            </StackPanel>
+                            <ctrls:RiotIconButton IconType="AddFolder" IconWidth="13" Width="20" Height="20" Margin="133 75 0 0"/>
+                            <ctrls:RiotIconButton IconType="AddFolder" IconWidth="13" Width="20" Height="20" Margin="136 98 0 0"/>
+                        </Canvas>
+                        <Canvas Grid.Row="2" Grid.Column="2">
+                            <StackPanel  Orientation="Vertical"  Margin="0 0 0 0">
+                                <TextBlock Text="3"  FontSize="35" FontWeight="Bold" FontStyle="Italic" Foreground="#CDBE91"  HorizontalAlignment="Center"/>
+                                <TextBlock Text="하이라이트 감상하기" FontSize="18" FontWeight="ExtraBold" Foreground="#EFE5D1"  HorizontalAlignment="Center" Margin="0 0 0 10"/>
+                                <TextBlock Text="본 화면에서 하이라이트 영상 감상, 삭제, 파일 이름 변경이 가" 
+                                           Style="{StaticResource TXB.INFO}"/>
+                                <TextBlock Text="능합니다. 영상을 공유하시려면         버튼을 눌러 저장 경로를" 
+                                           Style="{StaticResource TXB.INFO}"/>
+                                <TextBlock Text="확인해 주세요." 
+                                           Style="{StaticResource TXB.INFO}"/>
+                            </StackPanel>
+                            <ctrls:RiotIconButton IconType="AddFolder" IconWidth="13" Width="20" Height="20" Margin="155 98 0 0"/>
+                        </Canvas>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
