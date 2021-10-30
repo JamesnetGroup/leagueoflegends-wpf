@@ -66,4 +66,9 @@
     </Page>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Themes\Units\JoinCustom\" />
+    <Folder Include="Themes\Units\CreateCustom\" />
+  </ItemGroup>
+
 </Project>

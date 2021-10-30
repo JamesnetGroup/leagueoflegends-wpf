@@ -190,6 +190,7 @@ namespace Lol.Main.Local.ViewModel
                     33 => new HistoryView().SetVM(new HistoryViewModel()),
                     35 => new HighlightView().SetVM(new HighlightViewModel()),
                     37 => new PVPView().SetVM(new PVPViewModel(PvpConfirm)),
+                    40 => new CreateCustomView().SetVM(new CreateCustomViewModel()),
                     41 => new JoinCustomView().SetVM(new JoinCustomViewModel()),
                     42 => new SummonersRiftView().SetVM(new SummonersRiftViewModel(Friends, GoHome, ModeChange)),
                     _ => new EmptyContent()
