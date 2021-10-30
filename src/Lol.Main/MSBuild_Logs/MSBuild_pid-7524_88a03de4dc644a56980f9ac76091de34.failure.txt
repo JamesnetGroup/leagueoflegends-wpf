@@ -1,0 +1,15 @@
+UNHANDLED EXCEPTIONS FROM PROCESS 7524:
+=====================
+2021-10-30 오후 8:37:01
+System.UnauthorizedAccessException: 'C:\WINDOWS\System32\MSBuild_Logs' 경로에 대한 액세스가 거부되었습니다.
+   위치: System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   위치: System.IO.Directory.InternalCreateDirectory(String fullPath, String path, Object dirSecurityObj, Boolean checkHost)
+   위치: System.IO.Directory.InternalCreateDirectoryHelper(String path, Boolean checkHost)
+   위치: Microsoft.Build.Shared.ExceptionHandling.DumpExceptionToFile(Exception ex)
+   위치: Microsoft.Build.BackEnd.NodeEndpointOutOfProcBase.RunReadLoop(Stream localReadPipe, Stream localWritePipe, ConcurrentQueue`1 localPacketQueue, AutoResetEvent localPacketAvailable, AutoResetEvent localTerminatePacketPump)
+   위치: Microsoft.Build.BackEnd.NodeEndpointOutOfProcBase.PacketPumpProc()
+   위치: System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   위치: System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   위치: System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   위치: System.Threading.ThreadHelper.ThreadStart()
+===================

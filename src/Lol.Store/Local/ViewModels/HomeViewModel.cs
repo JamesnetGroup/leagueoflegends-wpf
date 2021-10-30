@@ -10,6 +10,7 @@ namespace Lol.Store.Local.ViewModels
         #region Variables
 
         private List<NewSkins> _newSkins;
+        private NewSkins _currentSkin;
         #endregion
 
         #region NewSkins
@@ -21,11 +22,21 @@ namespace Lol.Store.Local.ViewModels
         }
         #endregion
 
+        #region CurrentSkin
+
+        public NewSkins CurrentSkin
+        {
+            get { return _currentSkin; }
+            set { _currentSkin = value; OnPropertyChanged(); }
+        }
+        #endregion
+
         #region Constructor
 
         public HomeViewModel()
         {
             NewSkins = new StoreApi().GetNewSkins();
+            CurrentSkin = NewSkins[0];
         }
         #endregion
     }

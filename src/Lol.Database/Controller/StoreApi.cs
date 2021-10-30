@@ -64,6 +64,7 @@ namespace Lol.Database.Controller
                             Seq = s.Seq,
                             SkinValue = s.SkinValue,
                             Name = s.Name,
+                            ImgSource = ResourceHelper.ImgResource(s.ImgSource),
                             Content = s.Content,
                         };
 

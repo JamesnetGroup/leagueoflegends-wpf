@@ -383,6 +383,7 @@
     <None Remove="Images\Champ\Fiora_5.jpg" />
     <None Remove="Images\Champ\Fiora_50.jpg" />
     <None Remove="Images\Champ\Fiora_51.jpg" />
+    <None Remove="Images\Champ\Fiora_60.jpg" />
     <None Remove="Images\Champ\Fizz.jpg" />
     <None Remove="Images\Champ\Fizz.png" />
     <None Remove="Images\Champ\Fizz_0.jpg" />
@@ -550,6 +551,7 @@
     <None Remove="Images\Champ\JarvanIV_2.jpg" />
     <None Remove="Images\Champ\JarvanIV_21.jpg" />
     <None Remove="Images\Champ\JarvanIV_3.jpg" />
+    <None Remove="Images\Champ\JarvanIV_30.jpg" />
     <None Remove="Images\Champ\JarvanIV_4.jpg" />
     <None Remove="Images\Champ\JarvanIV_5.jpg" />
     <None Remove="Images\Champ\JarvanIV_6.jpg" />
@@ -612,6 +614,7 @@
     <None Remove="Images\Champ\Kaisa_17.jpg" />
     <None Remove="Images\Champ\Kaisa_26.jpg" />
     <None Remove="Images\Champ\Kaisa_27.jpg" />
+    <None Remove="Images\Champ\Kaisa_30.jpg" />
     <None Remove="Images\Champ\Kalista.jpg" />
     <None Remove="Images\Champ\Kalista.png" />
     <None Remove="Images\Champ\Kalista_0.jpg" />
@@ -939,6 +942,7 @@
     <None Remove="Images\Champ\Morgana_2.jpg" />
     <None Remove="Images\Champ\Morgana_26.jpg" />
     <None Remove="Images\Champ\Morgana_3.jpg" />
+    <None Remove="Images\Champ\Morgana_30.jpg" />
     <None Remove="Images\Champ\Morgana_4.jpg" />
     <None Remove="Images\Champ\Morgana_5.jpg" />
     <None Remove="Images\Champ\Morgana_6.jpg" />
@@ -950,6 +954,7 @@
     <None Remove="Images\Champ\Nami_2.jpg" />
     <None Remove="Images\Champ\Nami_24.jpg" />
     <None Remove="Images\Champ\Nami_3.jpg" />
+    <None Remove="Images\Champ\Nami_30.jpg" />
     <None Remove="Images\Champ\Nami_7.jpg" />
     <None Remove="Images\Champ\Nami_8.jpg" />
     <None Remove="Images\Champ\Nami_9.jpg" />
@@ -1074,6 +1079,7 @@
     <None Remove="Images\Champ\Poppy_16.jpg" />
     <None Remove="Images\Champ\Poppy_2.jpg" />
     <None Remove="Images\Champ\Poppy_3.jpg" />
+    <None Remove="Images\Champ\Poppy_30.jpg" />
     <None Remove="Images\Champ\Poppy_4.jpg" />
     <None Remove="Images\Champ\Poppy_5.jpg" />
     <None Remove="Images\Champ\Poppy_6.jpg" />
@@ -1430,6 +1436,7 @@
     <None Remove="Images\Champ\Thresh_2.jpg" />
     <None Remove="Images\Champ\Thresh_27.jpg" />
     <None Remove="Images\Champ\Thresh_3.jpg" />
+    <None Remove="Images\Champ\Thresh_30.jpg" />
     <None Remove="Images\Champ\Thresh_4.jpg" />
     <None Remove="Images\Champ\Thresh_5.jpg" />
     <None Remove="Images\Champ\Thresh_6.jpg" />
@@ -1613,6 +1620,7 @@
     <None Remove="Images\Champ\Volibear_4.jpg" />
     <None Remove="Images\Champ\Volibear_5.jpg" />
     <None Remove="Images\Champ\Volibear_6.jpg" />
+    <None Remove="Images\Champ\Volibear_7.jpg" />
     <None Remove="Images\Champ\Warwick.jpg" />
     <None Remove="Images\Champ\Warwick.png" />
     <None Remove="Images\Champ\Warwick_0.jpg" />
@@ -1669,6 +1677,8 @@
     <None Remove="Images\Champ\Yasuo_3.jpg" />
     <None Remove="Images\Champ\Yasuo_35.jpg" />
     <None Remove="Images\Champ\Yasuo_36.jpg" />
+    <None Remove="Images\Champ\Yasuo_40.jpg" />
+    <None Remove="Images\Champ\Yasuo_41.jpg" />
     <None Remove="Images\Champ\Yasuo_9.jpg" />
     <None Remove="Images\Champ\Yone.jpg" />
     <None Remove="Images\Champ\Yone.png" />
@@ -1690,6 +1700,7 @@
     <None Remove="Images\Champ\Yuumi_1.jpg" />
     <None Remove="Images\Champ\Yuumi_11.jpg" />
     <None Remove="Images\Champ\Yuumi_19.jpg" />
+    <None Remove="Images\Champ\Yuumi_30.jpg" />
     <None Remove="Images\Champ\Zac.jpg" />
     <None Remove="Images\Champ\Zac.png" />
     <None Remove="Images\Champ\Zac_0.jpg" />
@@ -1901,6 +1912,8 @@
     <None Remove="Images\Square\7.png" />
     <None Remove="Images\Square\8.png" />
     <None Remove="Images\Square\9.png" />
+    <None Remove="Images\TFT\JarvanIV_30.jpg" />
+    <None Remove="Images\TFT\Kaisa_30.jpg" />
     <None Remove="Images\TFT\lol-curtaincall.png" />
     <None Remove="Images\TFT\lol-curtaincall2.png" />
     <None Remove="Images\TFT\lol-emoji-beg.jpg" />
@@ -1911,6 +1924,15 @@
     <None Remove="Images\TFT\lol-luckypig.png" />
     <None Remove="Images\TFT\lol-small-egg.png" />
     <None Remove="Images\TFT\lol-star-item.jpg" />
+    <None Remove="Images\TFT\Morgana_30.jpg" />
+    <None Remove="Images\TFT\Nami_30.jpg" />
+    <None Remove="Images\TFT\Nami_60.jpg" />
+    <None Remove="Images\TFT\Poppy_30.jpg" />
+    <None Remove="Images\TFT\Thresh_30.jpg" />
+    <None Remove="Images\TFT\Volibear_7.jpg" />
+    <None Remove="Images\TFT\Yasuo_40.jpg" />
+    <None Remove="Images\TFT\Yasuo_41.jpg" />
+    <None Remove="Images\TFT\Yuumi_30.jpg" />
     <None Remove="Images\WinIcons\1 - Copy.png" />
     <None Remove="Images\WinIcons\1.png" />
     <None Remove="Images\WinIcons\10.png" />
@@ -2464,6 +2486,7 @@
     <Resource Include="Images\Champ\JarvanIV_2.jpg" />
     <Resource Include="Images\Champ\JarvanIV_21.jpg" />
     <Resource Include="Images\Champ\JarvanIV_3.jpg" />
+    <Resource Include="Images\Champ\JarvanIV_30.jpg" />
     <Resource Include="Images\Champ\JarvanIV_4.jpg" />
     <Resource Include="Images\Champ\JarvanIV_5.jpg" />
     <Resource Include="Images\Champ\JarvanIV_6.jpg" />
@@ -2521,6 +2544,7 @@
     <Resource Include="Images\Champ\Kaisa_17.jpg" />
     <Resource Include="Images\Champ\Kaisa_26.jpg" />
     <Resource Include="Images\Champ\Kaisa_27.jpg" />
+    <Resource Include="Images\Champ\Kaisa_30.jpg" />
     <Resource Include="Images\Champ\Kalista.png" />
     <Resource Include="Images\Champ\Kalista_0.jpg" />
     <Resource Include="Images\Champ\Kalista_1.jpg" />
@@ -2820,6 +2844,7 @@
     <Resource Include="Images\Champ\Morgana_2.jpg" />
     <Resource Include="Images\Champ\Morgana_26.jpg" />
     <Resource Include="Images\Champ\Morgana_3.jpg" />
+    <Resource Include="Images\Champ\Morgana_30.jpg" />
     <Resource Include="Images\Champ\Morgana_4.jpg" />
     <Resource Include="Images\Champ\Morgana_5.jpg" />
     <Resource Include="Images\Champ\Morgana_6.jpg" />
@@ -2830,6 +2855,8 @@
     <Resource Include="Images\Champ\Nami_2.jpg" />
     <Resource Include="Images\Champ\Nami_24.jpg" />
     <Resource Include="Images\Champ\Nami_3.jpg" />
+    <Resource Include="Images\Champ\Nami_30.jpg" />
+    <Resource Include="Images\Champ\Fiora_60.jpg" />
     <Resource Include="Images\Champ\Nami_7.jpg" />
     <Resource Include="Images\Champ\Nami_8.jpg" />
     <Resource Include="Images\Champ\Nami_9.jpg" />
@@ -2943,6 +2970,7 @@
     <Resource Include="Images\Champ\Poppy_16.jpg" />
     <Resource Include="Images\Champ\Poppy_2.jpg" />
     <Resource Include="Images\Champ\Poppy_3.jpg" />
+    <Resource Include="Images\Champ\Poppy_30.jpg" />
     <Resource Include="Images\Champ\Poppy_4.jpg" />
     <Resource Include="Images\Champ\Poppy_5.jpg" />
     <Resource Include="Images\Champ\Poppy_6.jpg" />
@@ -3264,6 +3292,7 @@
     <Resource Include="Images\Champ\Thresh_2.jpg" />
     <Resource Include="Images\Champ\Thresh_27.jpg" />
     <Resource Include="Images\Champ\Thresh_3.jpg" />
+    <Resource Include="Images\Champ\Thresh_30.jpg" />
     <Resource Include="Images\Champ\Thresh_4.jpg" />
     <Resource Include="Images\Champ\Thresh_5.jpg" />
     <Resource Include="Images\Champ\Thresh_6.jpg" />
@@ -3432,6 +3461,7 @@
     <Resource Include="Images\Champ\Volibear_4.jpg" />
     <Resource Include="Images\Champ\Volibear_5.jpg" />
     <Resource Include="Images\Champ\Volibear_6.jpg" />
+    <Resource Include="Images\Champ\Volibear_7.jpg" />
     <Resource Include="Images\Champ\Warwick.png" />
     <Resource Include="Images\Champ\Warwick_0.jpg" />
     <Resource Include="Images\Champ\Warwick_1.jpg" />
@@ -3483,6 +3513,8 @@
     <Resource Include="Images\Champ\Yasuo_3.jpg" />
     <Resource Include="Images\Champ\Yasuo_35.jpg" />
     <Resource Include="Images\Champ\Yasuo_36.jpg" />
+    <Resource Include="Images\Champ\Yasuo_40.jpg" />
+    <Resource Include="Images\Champ\Yasuo_41.jpg" />
     <Resource Include="Images\Champ\Yasuo_9.jpg" />
     <Resource Include="Images\Champ\Yone.png" />
     <Resource Include="Images\Champ\Yone_0.jpg" />
@@ -3501,6 +3533,7 @@
     <Resource Include="Images\Champ\Yuumi_1.jpg" />
     <Resource Include="Images\Champ\Yuumi_11.jpg" />
     <Resource Include="Images\Champ\Yuumi_19.jpg" />
+    <Resource Include="Images\Champ\Yuumi_30.jpg" />
     <Resource Include="Images\Champ\Zac.png" />
     <Resource Include="Images\Champ\Zac_0.jpg" />
     <Resource Include="Images\Champ\Zac_1.jpg" />
