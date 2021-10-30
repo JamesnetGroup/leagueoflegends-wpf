@@ -81,6 +81,7 @@ namespace Lol.Database.Controller
                         {
                             Seq = s.Seq,
                             Name = s.Name,
+                            ImgSource = ResourceHelper.ImgResource(s.ImgSource),
                             Value = s.Value,
                         };
 

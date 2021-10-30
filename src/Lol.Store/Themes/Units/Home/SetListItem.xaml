@@ -29,7 +29,7 @@
                         </Style>
                     </ControlTemplate.Resources>
                     <Border BorderThickness="1"
-                            Padding="10 0 10 0"
+                            Padding="0 0 0 0"
                             Margin="0 0 0 0" 
                             Background="Transparent"
                             BorderBrush="{TemplateBinding BorderBrush}"
@@ -37,7 +37,10 @@
                             HorizontalAlignment="Left"
                             VerticalAlignment="{TemplateBinding VerticalAlignment}">
                         <Grid>
-                            <Grid x:Name="gdShadow" Background="Transparent"/>
+                            <Grid.Background>
+                                <ImageBrush ImageSource="{Binding ImgSource}" Stretch="UniformToFill"/>
+                            </Grid.Background>
+                            <Grid x:Name="gdShadow" Background="#00000000"/>
                             <ctrls:RiotIcon x:Name="path" Style="{StaticResource RIOT.ICON}"/>
                             <StackPanel VerticalAlignment="Bottom" Margin="0 0 0 6">
                                 <TextBlock Text="{Binding Name}"
@@ -74,7 +77,7 @@
                             <Setter TargetName="spValue" Property="Visibility" Value="Collapsed"/>
                             <Setter TargetName="textValue" Property="Visibility" Value="Visible"/>
                             <Setter TargetName="path" Property="Visibility" Value="Visible"/>
-                            <Setter TargetName="gdShadow" Property="Background" Value="#22000000"/>
+                            <Setter TargetName="gdShadow" Property="Background" Value="#55000000"/>
                         </Trigger>
                         <DataTrigger Binding="{Binding Seq}" Value="2">
                             <Setter Property="VerticalAlignment" Value="Bottom"/>
