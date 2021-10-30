@@ -48,13 +48,13 @@
 		<GradientStop Color="#9E8664" Offset="0.8"/>
 	</LinearGradientBrush>
 
-	<Style TargetType="{x:Type units:ShopItem}">
+	<Style TargetType="{x:Type units:ShopItem1}">
 		<Setter Property="Template">
 			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type units:ShopItem}">
+				<ControlTemplate TargetType="{x:Type units:ShopItem1}">
                     <Grid>
                         <StackPanel Orientation="Horizontal">
-                            <Border Margin="50 0 50 0">
+                            <Border Margin="20 0 20 0">
                                 <Viewbox Width="120" Height="250">
                                     <Grid>
                                         

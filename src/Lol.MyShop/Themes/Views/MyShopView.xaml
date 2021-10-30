@@ -15,12 +15,12 @@
 						</Grid.RowDefinitions>
 						<units:Title/>
                         <StackPanel Orientation="Horizontal" Grid.Row="1">
-                            <units:ShopItem/>
-                            <units:ShopItem/>
-                            <units:ShopItem/>
-                            <units:ShopItem/>
-                            <units:ShopItem/>
-                            <units:ShopItem/>
+                            <units:ShopItem1/>
+                            <units:ShopItem2/>
+                            <units:ShopItem3/>
+                            <units:ShopItem4/>
+                            <units:ShopItem5/>
+                            <units:ShopItem6/>
                         </StackPanel>
 						<units:EventInfo/>
 					</Grid>
