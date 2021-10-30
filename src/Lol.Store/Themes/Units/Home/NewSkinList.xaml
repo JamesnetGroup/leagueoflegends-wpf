@@ -40,10 +40,11 @@
     
     <Style TargetType="{x:Type units:NewSkinList}">
         <Setter Property="ItemsSource" Value="{Binding NewSkins}"/>
+        <Setter Property="SelectedItem" Value="{Binding CurrentSkin}"/>
+        <Setter Property="ItemContainerStyle" Value="{StaticResource LBXI.NUMBER}"/>
         <Setter Property="HorizontalAlignment" Value="Right"/>
         <Setter Property="VerticalAlignment" Value="Bottom"/>
         <Setter Property="Margin" Value="0 0 12 14"/>
-        <Setter Property="ItemContainerStyle" Value="{StaticResource LBXI.NUMBER}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:NewSkinList}">
