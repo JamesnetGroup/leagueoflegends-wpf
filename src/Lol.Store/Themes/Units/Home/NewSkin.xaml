@@ -1,18 +1,12 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 					xmlns:units="clr-namespace:Lol.Store.UI.Units"
-                    xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
+                    xmlns:commons="clr-namespace:Lol.Store.UI.Commons">
 
     <LinearGradientBrush x:Key="BDR.PARENT.OVER" StartPoint="0.5, 0" EndPoint="0.5, 1">
         <GradientStop Color="#FFFFFF" Offset="0"/>
         <GradientStop Color="#FFF1A9" Offset="0.5"/>
         <GradientStop Color="#FAC24B" Offset="1"/>
-    </LinearGradientBrush>
-
-    <LinearGradientBrush x:Key="BDR.LOCK" StartPoint="0, 0" EndPoint="01, 1">
-        <GradientStop Color="#FFFFE4" Offset="0"/>
-        <GradientStop Color="#EDCC86" Offset="0.5"/>
-        <GradientStop Color="#A67F31" Offset="1"/>
     </LinearGradientBrush>
 
     <Style TargetType="{x:Type units:NewSkin}">
@@ -22,32 +16,13 @@
                 <ControlTemplate TargetType="{x:Type units:NewSkin}">
                     <Border BorderThickness="1" BorderBrush="{TemplateBinding BorderBrush}" Background="Transparent">
 					    <Grid>
-                            <Border x:Name="overBd"
-                                    Height="50" Width="50"                                   
-                                    BorderBrush="{StaticResource BDR.LOCK}" 
-                                    BorderThickness="1.5" 
-                                    Background="#77C89C3D"
-                                    HorizontalAlignment="Center"
-                                    VerticalAlignment="Center"
-                                    RenderTransformOrigin="0.5, 0.5">
-                                <Border.RenderTransform>
-                                    <RotateTransform Angle="45"/>
-                                </Border.RenderTransform>
-                            </Border>
-                            <ctrls:RiotIcon x:Name="overIcon"
-                                            IconType="LockOpen"
-                                            Fill="#85632B"
-                                            StrokeThickness="0.5"
-                                            Stroke="#2A2924"
-                                            HorizontalAlignment="Center"
-                                            VerticalAlignment="Center"
-                                            Height="36"
-                                            Width="36"/>
+                            <commons:LockButton x:Name="btnLock" Visibility="Collapsed"/>
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="BorderBrush" Value="{StaticResource BDR.PARENT.OVER}"/>
+                            <Setter TargetName="btnLock" Property="Visibility" Value="Collapsed"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
 				</ControlTemplate>
