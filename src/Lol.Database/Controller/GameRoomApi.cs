@@ -37,5 +37,23 @@ namespace Lol.Database.Controller
         }
 
         #endregion
+
+        #region MyRegion
+
+        public List<LobbyLists> GetLobbyLists()
+        {
+            var query = from i in Db.LobbyLists
+                        select new LobbyLists
+                        {
+                            Seq = i.Seq,
+                            Host = i.Host,
+                            Lobby = i.Lobby,
+                            Map = i.Map,
+                            Spectator = i.Spectator,
+                            TotalNumber = i.TotalNumber
+                        };
+            return query.ToList();
+        }
+        #endregion
     }
 }
