@@ -25,20 +25,13 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListBoxItem}">
                     <Grid>
-                        
-                    
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="*"/>
-                            </Grid.RowDefinitions>
-                            <units:MapTitle/>
-                            <Border Style="{StaticResource BDR.SECTION}"/>
-                            <StackPanel Grid.Row="2" Margin="0 0 10 0">
-                            
-                            </StackPanel>
-                        </Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <units:MapTitle_Custom/>
+                        <Border Style="{StaticResource BDR.SECTION}"/>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsSelected" Value="True">
@@ -64,7 +57,7 @@
         <Setter Property="ItemsPanel">
             <Setter.Value>
                 <ItemsPanelTemplate>
-                    <UniformGrid Columns="4"/>
+                    <UniformGrid Columns="2"/>
                 </ItemsPanelTemplate>
             </Setter.Value>
         </Setter>
