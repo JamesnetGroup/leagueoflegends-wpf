@@ -12,7 +12,6 @@ namespace Lol.GameRoom.Local.ViewModels
 
         private Action<object> _customConfirm;
         private GameRoomsCustom _currentCusTom;
-
         public List<GameRoomsCustom> Customs { get; set; }
 
         #endregion

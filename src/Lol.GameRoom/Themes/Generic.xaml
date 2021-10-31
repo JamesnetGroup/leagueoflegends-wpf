@@ -4,7 +4,7 @@
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/CreateCustom/MapTitle_Custom.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/CreateCustom/GameType_Custom.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/CreateCustom/MapList_Custom.xaml"/>
-        <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/JoinCustom/ConfirmButton2.xaml"/>
+        <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/JoinCustom/ConfirmButton_Join.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/Summoners/InviteButton.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/Summoners/FriendList.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/Summoners/StateRadioButton.xaml"/>
