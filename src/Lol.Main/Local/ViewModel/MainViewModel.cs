@@ -193,6 +193,7 @@ namespace Lol.Main.Local.ViewModel
                     40 => new CreateCustomView().SetVM(new CreateCustomViewModel(CustomConfirm)),
                     41 => new JoinCustomView().SetVM(new JoinCustomViewModel()),
                     42 => new SummonersRiftView().SetVM(new SummonersRiftViewModel(Friends, GoHome, ModeChange)),
+                    43 => new CustomGameRoomView().SetVM(new CustomGameRoomViewModel()),
                     _ => new EmptyContent()
                 };
 
@@ -250,7 +251,7 @@ namespace Lol.Main.Local.ViewModel
         {
             // TODO: [Lucas] 사용자설정게임 -> 확인 버튼시 게임구성 화면 작업예정
             SubMenus = null;
-            SubMenuChanged(MainMenu.TotalSubMenus[26]);
+            SubMenuChanged(MainMenu.TotalSubMenus[34]);
         }
         #endregion
 

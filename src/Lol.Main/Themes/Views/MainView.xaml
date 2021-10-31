@@ -201,6 +201,12 @@
                 <Setter TargetName="border" Property="Background" Value="{StaticResource LGB.BG.TOP}"/>
             </DataTrigger>
 
+            <!--GameRoom/CUSTOM GAMEROOM-->
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=DataContext.CurrentSeq}" Value="43">
+                <Setter TargetName="img" Property="Source" Value="/Lol.Resources;component/Images/bg-map.jpg"/>
+                <Setter TargetName="border" Property="Background" Value="{StaticResource LGB.BG.TOP}"/>
+            </DataTrigger>
+
 
         </DataTemplate.Triggers>
         

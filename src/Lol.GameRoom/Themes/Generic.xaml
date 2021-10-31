@@ -20,6 +20,7 @@
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/PVP/MapList.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/PVP/ConfirmButton.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/PVP/TrophyButton.xaml"/>
+        <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Views/CustomGameRoomView.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Views/CreateCustomView.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Views/JoinCustomView.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Views/PVPView.xaml"/>
