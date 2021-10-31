@@ -77,6 +77,8 @@
     </Style>
 
     <Style TargetType="{x:Type units:CommonList}">
+        <Setter Property="Grid.Row" Value="1"/>
+        <Setter Property="Margin" Value="0 22 0 0"/>
         <Setter Property="ItemsSource" Value="{Binding TreeSource}"/>
         <Setter Property="ItemContainerStyle" Value="{StaticResource TRVI.ITEM}"/>
         <Setter Property="Template">

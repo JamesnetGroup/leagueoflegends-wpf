@@ -14,7 +14,7 @@
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <units:Category/>
-                        <units:RightContent/>
+                        <units:LootItems/>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
