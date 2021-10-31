@@ -11,19 +11,29 @@ namespace Lol.Loot.Local.ViewModels
         #region Variables
 
         private List<Loots> _menus;
+        private List<LootItemSortings> _filters;
         private List<PlantHeaders> _treeSource;
         private List<Loots> _items;
-        private List<ChampCb> _cbxSource;
-        private Loots _currentMneu;
-        private ChampCb _currentCbx;
+
+        private Loots _currentMenu;
+        private LootItemSortings _currentFilter;
         #endregion
 
         #region Menus
 
         public List<Loots> Menus
         {
-            get { return _menus; }
+            get => _menus;
             set { _menus = value; OnPropertyChanged(); }
+        }
+        #endregion
+
+        #region CurrentMenu
+
+        public Loots CurrentMenu
+        {
+            get => _currentMenu;
+            set { _currentMenu = value; OnPropertyChanged(); MenuChanged(value.Seq); }
         }
         #endregion
 
@@ -45,30 +55,21 @@ namespace Lol.Loot.Local.ViewModels
         }
         #endregion
 
-        #region CurrentMenu
+        #region Filters
 
-        public Loots CurrentMenu
+        public List<LootItemSortings> Filters
         {
-            get { return _currentMneu; }
-            set { _currentMneu = value; OnPropertyChanged(); MenuChanged(value.Seq); }
-        }
-        #endregion
-
-        #region CbxSource
-
-        public List<ChampCb> CbxSource
-        {
-            get { return _cbxSource; }
-            set { _cbxSource = value; OnPropertyChanged(); }
+            get { return _filters; }
+            set { _filters = value; OnPropertyChanged(); }
         }
         #endregion
 
         #region CurrentCbx
 
-        public ChampCb CurrentCbx
+        public LootItemSortings CurrentFilter
         {
-            get { return _currentCbx; }
-            set { _currentCbx = value; OnPropertyChanged(); }
+            get { return _currentFilter; }
+            set { _currentFilter = value; OnPropertyChanged(); }
         }
         #endregion
 
@@ -76,11 +77,13 @@ namespace Lol.Loot.Local.ViewModels
 
         public LootViewModel()
         {
-            CbxSource = new LootApi().GetComboBox();
-            CurrentCbx = CbxSource[0];
+            Menus = new LootApi().GetCategory();
+            CurrentMenu = Menus.First();
+
+            Filters = new LootApi().GetFilters();
+            CurrentFilter = Filters.First();
+
             Items = new LootApi().GetLootItems();
-            Menus = new LootApi().GetLoots();
-            CurrentMenu = Menus[0];            
         }
         #endregion
 

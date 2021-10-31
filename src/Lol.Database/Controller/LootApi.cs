@@ -6,9 +6,9 @@ namespace Lol.Database.Controller
 {
     public class LootApi : LolDbContext
     {
-        #region GetLoots
+        #region GetCategory
 
-        public List<Loots> GetLoots()
+        public List<Loots> GetCategory()
         {
             var query = from i in Db.Loots
                         select new Loots
@@ -56,17 +56,15 @@ namespace Lol.Database.Controller
         }
         #endregion
 
-        #region GetComboBox
+        #region GetFilters
 
-        public List<ChampCb> GetComboBox()
+        public List<LootItemSortings> GetFilters()
         {
-            var query = from c in Db.ChampCb
-                        where c.Type == 3
-                        select new ChampCb
+            var query = from c in Db.LootItemSortings
+                        select new LootItemSortings
                         {
                             Seq = c.Seq,
-                            Content = c.Content,
-                            Type = c.Type
+                            Content = c.Content
                         };
             return query.ToList();
         }

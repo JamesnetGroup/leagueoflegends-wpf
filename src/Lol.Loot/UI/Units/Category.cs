@@ -3,13 +3,13 @@ using System.Windows.Controls;
 
 namespace Lol.Loot.UI.Units
 {
-    public class LootLeftMenu : ListBox
+    public class Category : ListBox
     {
         #region DefaultStyleKey
 
-        static LootLeftMenu()
+        static Category()
         {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(LootLeftMenu), new FrameworkPropertyMetadata(typeof(LootLeftMenu)));
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(Category), new FrameworkPropertyMetadata(typeof(Category)));
         }
         #endregion
 
@@ -17,7 +17,7 @@ namespace Lol.Loot.UI.Units
 
         protected override DependencyObject GetContainerForItemOverride()
         {
-            return new LootLeftMenuItem();
+            return new CategoryItem();
         }
         #endregion
     }
