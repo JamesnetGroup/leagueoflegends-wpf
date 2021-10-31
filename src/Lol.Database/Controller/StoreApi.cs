@@ -88,5 +88,20 @@ namespace Lol.Database.Controller
             return query.ToList();
         }
         #endregion
+
+        #region GetPopularities
+
+        public List<Popularities> GetPopularities()
+        {
+            var query = from s in Db.Popularities
+                        select new Popularities
+                        {
+                            Seq = s.Seq,
+                            Header = s.Header,
+                        };
+
+            return query.ToList();
+        }
+        #endregion
     }
 }

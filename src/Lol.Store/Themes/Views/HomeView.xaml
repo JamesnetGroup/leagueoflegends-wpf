@@ -23,6 +23,7 @@
                             <units:NewSkin />
                             <units:SetList Grid.Column="1" Margin="10 0 0 0"/>
                         </Grid>
+                        <units:PopularityList Grid.Row="2"/>
                     </Grid>
 				</ControlTemplate>
 			</Setter.Value>
