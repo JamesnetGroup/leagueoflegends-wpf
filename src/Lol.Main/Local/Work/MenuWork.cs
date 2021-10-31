@@ -125,6 +125,7 @@ namespace Lol.Main.Local.Work
                 new SubMenuModel(40, 8, "CREATE CUSTOM"),
                 new SubMenuModel(41, 8, "JOIN CUSTOM"),
                 new SubMenuModel(42, 8, "RIFT"),
+                new SubMenuModel(43, 8, "CUSTOM GAMEROOM")
             };
             return source;
         }
