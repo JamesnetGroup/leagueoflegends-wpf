@@ -52,15 +52,27 @@
                                               FontSize="12" Margin="15 0 0 0"/>
                             </StackPanel>
                             <Border Grid.Row="1" Style="{StaticResource BDR.SECTION}"/>
-                            <DataGrid Grid.Row="2" Background="Transparent" BorderThickness="0" HeadersVisibility="None">
+                            <DataGrid Grid.Row="2" 
+                                      Background="Transparent" 
+                                      RowBackground="Transparent"
+                                      BorderThickness="0"
+                                      BorderBrush="Transparent"
+                                      ColumnHeaderHeight="25"                                      
+                                      AutoGenerateColumns="False" 
+                                      HeadersVisibility="Column"
+                                      GridLinesVisibility="None"
+                                      IsReadOnly="true"
+                                      ScrollViewer.CanContentScroll="True" 
+                                      ScrollViewer.VerticalScrollBarVisibility="Auto"
+                                      ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                                      ItemsSource="{Binding LobbyLists}">
                                 <DataGrid.Columns>
-                                    <DataGridTextColumn Header="로비이름"/>
-                                    <DataGridTextColumn Header="방장"/>
-                                    <DataGridTextColumn Header="맵"/>
-                                    <DataGridTextColumn Header="사람"/>
-                                    <DataGridTextColumn Header="관전"/>
+                                    <DataGridTextColumn Header="로비이름" Binding="{Binding Lobby}" Foreground="#9E998B" Width="4*"/>
+                                    <DataGridTextColumn Header="방장" Binding="{Binding Host}" Foreground="#9E998B" Width="2*"/>
+                                    <DataGridTextColumn Header="맵" Binding="{Binding Map}" Foreground="#9E998B" Width="2*"/>
+                                    <DataGridTextColumn Header="사람" Binding="{Binding TotalNumber}" Foreground="#9E998B" Width="1*"/>
+                                    <DataGridTextColumn Header="관전" Binding="{Binding Spectator}" Foreground="#9E998B" Width="1*"/>
                                 </DataGrid.Columns>
-                                
                             </DataGrid>
                         </Grid>
                     </Grid>
