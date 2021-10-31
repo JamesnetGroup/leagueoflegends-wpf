@@ -12,6 +12,5 @@ namespace Lol.Loot.UI.Units
             DefaultStyleKeyProperty.OverrideMetadata(typeof(CommonList), new FrameworkPropertyMetadata(typeof(CommonList)));
         }
         #endregion
-
     }
 }
