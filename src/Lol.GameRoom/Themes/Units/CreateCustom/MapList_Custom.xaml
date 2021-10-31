@@ -2,12 +2,12 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:units="clr-namespace:Lol.GameRoom.UI.Units">
 
-    <Style TargetType="{x:Type Border}" x:Key="BDR.SECTION">
+    <!--<Style TargetType="{x:Type Border}" x:Key="BDR.SECTION">
         <Setter Property="BorderThickness" Value="0 1 0 0"/>
         <Setter Property="BorderBrush" Value="#606F6E"/>
         <Setter Property="VerticalAlignment" Value="Bottom"/>
         <Setter Property="Grid.Row" Value="1"/>
-    </Style>
+    </Style>-->
 
     <Style TargetType="{x:Type TextBlock}" x:Key="TXB.CONTENT">
         <Setter Property="Text" Value="{Binding Content}"/>
@@ -31,7 +31,7 @@
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
                         <units:MapTitle_Custom/>
-                        <Border Style="{StaticResource BDR.SECTION}"/>
+                        <!--<Border Style="{StaticResource BDR.SECTION}"/>-->
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsSelected" Value="True">
@@ -56,8 +56,9 @@
         </Setter>
         <Setter Property="ItemsPanel">
             <Setter.Value>
+                
                 <ItemsPanelTemplate>
-                    <UniformGrid Columns="2"/>
+                    <UniformGrid Columns="3" Margin="150 0 -100 0"/>
                 </ItemsPanelTemplate>
             </Setter.Value>
         </Setter>
