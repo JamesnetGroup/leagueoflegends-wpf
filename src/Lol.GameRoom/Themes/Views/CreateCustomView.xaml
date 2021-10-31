@@ -51,10 +51,9 @@
                                 <ctrls:RiotTextBox MinWidth="300"
                                                Height="30"
                                                IconVisibility="Collapsed"/>
-                                
                             </StackPanel>
                             <StackPanel Grid.Column="1">
-
+                                
                             </StackPanel>
                             
                         </Grid>
