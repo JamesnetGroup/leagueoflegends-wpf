@@ -5,7 +5,20 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:PopularityListItem}">
-                    <ItemsPresenter/>
+                    <Grid Margin="0 20 0 0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Border BorderThickness="0 0 0 1" BorderBrush="#785A28" Padding="0 0 0 8" Margin="0 0 0 8">
+                            <TextBlock Text="{Binding Header}" 
+                                       FontWeight="Bold"
+                                       FontSize="18" 
+                                       Foreground="#F0E6D2"
+                                       HorizontalAlignment="Left"/>
+                        </Border>
+                        <units:PopularityInList Grid.Row="1"/>
+                    </Grid>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

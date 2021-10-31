@@ -12,6 +12,7 @@ namespace Lol.Store.Local.ViewModels
 
         private List<NewSkins> _newSkins;
         private List<SkinSets> _skinSets;
+        private List<Popularities> _popularities;
         private NewSkins _currentSkin;
         #endregion
 
@@ -42,6 +43,15 @@ namespace Lol.Store.Local.ViewModels
         }
         #endregion
 
+        #region Popularities
+
+        public List<Popularities> Popularities
+        {
+            get { return _popularities; }
+            set { _popularities = value; OnPropertyChanged(); }
+        }
+        #endregion
+
 
         #region Constructor
 
@@ -51,6 +61,7 @@ namespace Lol.Store.Local.ViewModels
             NewSkins = storeApi.GetNewSkins();
             CurrentSkin = NewSkins[0];
             SkinSets = storeApi.GetSkinSets();
+            Popularities = storeApi.GetPopularities();
 
             Thread thread = new Thread(() =>
             {

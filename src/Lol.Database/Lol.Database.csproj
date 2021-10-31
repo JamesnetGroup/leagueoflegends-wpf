@@ -11,6 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Datas\popularities.yml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Datas\gameRoomsCustom.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

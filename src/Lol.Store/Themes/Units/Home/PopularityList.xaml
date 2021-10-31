@@ -2,6 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:units="clr-namespace:Lol.Store.UI.Units">
     <Style TargetType="{x:Type units:PopularityList}">
+        <Setter Property="ItemsSource" Value="{Binding Popularities}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:PopularityList}">
