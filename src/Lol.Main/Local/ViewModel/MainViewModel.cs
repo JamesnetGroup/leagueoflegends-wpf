@@ -190,7 +190,7 @@ namespace Lol.Main.Local.ViewModel
                     33 => new HistoryView().SetVM(new HistoryViewModel()),
                     35 => new HighlightView().SetVM(new HighlightViewModel()),
                     37 => new PVPView().SetVM(new PVPViewModel(PvpConfirm)),
-                    40 => new CreateCustomView().SetVM(new CreateCustomViewModel()),
+                    40 => new CreateCustomView().SetVM(new CreateCustomViewModel(CustomConfirm)),
                     41 => new JoinCustomView().SetVM(new JoinCustomViewModel()),
                     42 => new SummonersRiftView().SetVM(new SummonersRiftViewModel(Friends, GoHome, ModeChange)),
                     _ => new EmptyContent()
@@ -241,6 +241,16 @@ namespace Lol.Main.Local.ViewModel
             // TODO: [Kevin] 게임시작 > 확인 버튼 클릭시 화면 Change, 변경 필히 필요
             SubMenus = null;
             SubMenuChanged(MainMenu.TotalSubMenus[33]);
+        }
+        #endregion
+
+        #region CustomConfirm
+
+        private void CustomConfirm(object value)
+        {
+            // TODO: [Lucas] 사용자설정게임 -> 확인 버튼시 게임구성 화면 작업예정
+            SubMenus = null;
+            SubMenuChanged(MainMenu.TotalSubMenus[26]);
         }
         #endregion
 
