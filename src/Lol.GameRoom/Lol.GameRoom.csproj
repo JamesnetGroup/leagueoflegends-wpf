@@ -12,7 +12,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Page Update="Themes\Units\CreateCustom\MapList2.xaml">
+    <Page Update="Themes\Units\CreateCustom\GameType_Custom.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\CreateCustom\MapList_Custom.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>

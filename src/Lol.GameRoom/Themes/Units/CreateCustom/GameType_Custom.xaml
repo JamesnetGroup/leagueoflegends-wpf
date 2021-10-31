@@ -1,0 +1,88 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:units="clr-namespace:Lol.GameRoom.UI.Units"
+                    xmlns:cnvts="clr-namespace:Lol.Converter;assembly=Lol.Converter">
+
+    <LinearGradientBrush x:Key="BDR.RDO" StartPoint="0, 0" EndPoint="1, 1">
+        <GradientStop Color="#A27D30" Offset="0"/>
+        <GradientStop Color="#A88130" Offset="0.5"/>
+        <GradientStop Color="#A07C31" Offset="1"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="BDR.RDO.OVER" StartPoint="0, 0" EndPoint="1, 1">
+        <GradientStop Color="#EDE1C9" Offset="0"/>
+        <GradientStop Color="#E6D3AD" Offset="0.5"/>
+        <GradientStop Color="#C99D41" Offset="1"/>
+    </LinearGradientBrush>
+
+    <Style TargetType="{x:Type RadioButton}" x:Key="RDO.TYPE">
+        <Setter Property="BorderBrush" Value="{StaticResource BDR.RDO}"/>
+        <Setter Property="Margin" Value="0 16 0 0"/>
+        <Setter Property="GroupName" Value="radio"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <StackPanel Orientation="Horizontal">
+                        <Border Height="13" 
+                                Width="13" 
+                                RenderTransformOrigin="0.5, 0.5" 
+                                BorderThickness="2" 
+                                BorderBrush="{TemplateBinding BorderBrush}" 
+                                VerticalAlignment="Center">
+                            <Border.RenderTransform>
+                                <RotateTransform Angle="45"/>
+                            </Border.RenderTransform>
+                            <Border Margin="2 2 2 2" 
+                                    Background="#F0E6D2" 
+                                    Visibility="{Binding RelativeSource={RelativeSource AncestorType=RadioButton}, Path=IsChecked, Converter={cnvts:BooleanToVisibilityConverter}}"/>
+                        </Border>
+                        <StackPanel VerticalAlignment="Center" Margin="10 0 0 0">
+                            <TextBlock Text="{Binding Name}" FontWeight="Bold" Foreground="#CBBC90" VerticalAlignment="Center" FontSize="14"/>
+                            <TextBlock x:Name="text" Text="{Binding Content}" Foreground="#A09B8C" VerticalAlignment="Center" FontSize="11" Visibility="Visible"/>
+                        </StackPanel>
+                    </StackPanel>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="{StaticResource BDR.RDO.OVER}"/>
+                        </Trigger>
+                        <DataTrigger Binding="{Binding Content}" Value="{x:Null}">
+                            <Setter TargetName="text" Property="Visibility" Value="Collapsed"/>
+                        </DataTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type ListBoxItem}" x:Key="LBXI.MAPTYPE">
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                    <RadioButton Style="{StaticResource RDO.TYPE}"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type units:GameType_Custom}">
+        <Setter Property="Margin" Value="5 0 0 0"/>
+        <Setter Property="ItemsSource" Value="{Binding GameTypes}"/>
+        <Setter Property="ItemContainerStyle" Value="{StaticResource LBXI.MAPTYPE}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type units:GameType_Custom}">
+                    <ItemsPresenter/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="ItemsPanel">
+            <Setter.Value>
+                <ItemsPanelTemplate>
+                    <StackPanel/>
+                </ItemsPanelTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+</ResourceDictionary>
