@@ -83,7 +83,7 @@
     <None Update="Datas\Items.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Datas\lootItems.yml">
+    <None Update="Datas\lootSummary.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Datas\loots.yml">
