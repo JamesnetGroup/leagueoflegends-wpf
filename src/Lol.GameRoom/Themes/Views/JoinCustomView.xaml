@@ -9,7 +9,7 @@
                 <ControlTemplate TargetType="{x:Type views:JoinCustomView}">
                     <Grid Margin="36 0 36 0">
                         <units:TrophyButton/>
-                        <units:ConfirmButton2/>
+                        <units:ConfirmButton_Join/>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>

@@ -190,8 +190,8 @@ namespace Lol.Main.Local.ViewModel
                     33 => new HistoryView().SetVM(new HistoryViewModel()),
                     35 => new HighlightView().SetVM(new HighlightViewModel()),
                     37 => new PVPView().SetVM(new PVPViewModel(PvpConfirm)),
-                    40 => new CreateCustomView().SetVM(new CreateCustomViewModel(CustomConfirm)),
-                    41 => new JoinCustomView().SetVM(new JoinCustomViewModel()),
+                    40 => new CreateCustomView().SetVM(new CreateCustomViewModel(CreateCustomConfirm)),
+                    41 => new JoinCustomView().SetVM(new JoinCustomViewModel(JoinCustomConfirm)),
                     42 => new SummonersRiftView().SetVM(new SummonersRiftViewModel(Friends, GoHome, ModeChange)),
                     43 => new CustomGameRoomView().SetVM(new CustomGameRoomViewModel(Friends, GoHome, ModeChange)),
                     _ => new EmptyContent()
@@ -248,6 +248,26 @@ namespace Lol.Main.Local.ViewModel
         #region CustomConfirm
 
         private void CustomConfirm(object value)
+        {
+            // TODO: [Lucas] 사용자설정게임 -> 확인 버튼시 게임구성 화면 작업예정
+            SubMenus = null;
+            SubMenuChanged(MainMenu.TotalSubMenus[34]);
+        }
+        #endregion
+
+        #region CreateCustomConfirm
+
+        private void CreateCustomConfirm(object value)
+        {
+            // TODO: [Lucas] 사용자설정게임 -> 확인 버튼시 게임구성 화면 작업예정
+            SubMenus = null;
+            SubMenuChanged(MainMenu.TotalSubMenus[34]);
+        }
+        #endregion
+
+        #region JoinCustomConfirm
+
+        private void JoinCustomConfirm(object value)
         {
             // TODO: [Lucas] 사용자설정게임 -> 확인 버튼시 게임구성 화면 작업예정
             SubMenus = null;

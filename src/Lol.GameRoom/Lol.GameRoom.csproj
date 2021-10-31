@@ -20,7 +20,7 @@
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Units\JoinCustom\ConfirmButton2.xaml">
+    <Page Update="Themes\Units\JoinCustom\ConfirmButton_Join.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
     </Page>
     <Page Update="Themes\Units\PVP\GameType.xaml">
