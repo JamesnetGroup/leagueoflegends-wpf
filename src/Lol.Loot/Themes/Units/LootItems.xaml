@@ -15,7 +15,7 @@
                             <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
                         <units:ItemsFilter/>
-                        <units:CommonList/>
+                        <units:Materials/>
                         <Border Grid.Row="2" Padding="0 18 0 0" BorderThickness="0 1 0 0" BorderBrush="#5C461E"/>
                         <units:ItemsSummary/>
                     </Grid>
