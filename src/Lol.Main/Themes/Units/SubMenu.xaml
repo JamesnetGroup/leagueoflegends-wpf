@@ -38,6 +38,9 @@
                         <DataTrigger Binding="{Binding Seq}" Value="42">
                             <Setter Property="Visibility" Value="Collapsed"/>
                         </DataTrigger>
+                        <DataTrigger Binding="{Binding Seq}" Value="43">
+                            <Setter Property="Visibility" Value="Collapsed"/>
+                        </DataTrigger>
 					</ControlTemplate.Triggers>
 				</ControlTemplate>
 			</Setter.Value>
