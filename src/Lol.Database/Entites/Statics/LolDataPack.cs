@@ -29,6 +29,7 @@ namespace Lol.Database.Entites.Statics
         internal List<MapTypes> _mapTypes;
         internal List<TeamFights> _teamFights;
         internal List<GameRooms> _gameRooms;
+        internal List<GameRoomsCustom> _gameRoomsCustom;
         internal List<ClashCups> _clashCups;
         internal List<History> _historys;
         internal List<History> _activities;
@@ -244,6 +245,26 @@ namespace Lol.Database.Entites.Statics
                     _gameRooms = deserializer.Deserialize<List<GameRooms>>(readText);
                 }
                 return _gameRooms;
+            }
+        }
+        #endregion
+
+        #region GameRoomsCustom
+
+        internal List<GameRoomsCustom> GameRoomsCustom
+        {
+            get
+            {
+                if (_gameRoomsCustom == null)
+                {
+                    string readText = GetYamlData("gameRoomsCustom");
+
+                    var deserializer = new DeserializerBuilder()
+                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .Build();
+                    _gameRoomsCustom = deserializer.Deserialize<List<GameRoomsCustom>>(readText);
+                }
+                return _gameRoomsCustom;
             }
         }
         #endregion
