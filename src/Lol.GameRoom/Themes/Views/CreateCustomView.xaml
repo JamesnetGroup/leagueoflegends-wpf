@@ -8,6 +8,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type views:CreateCustomView}">
                     <Grid Margin="36 0 36 0">
+                        <units:MapList2/>
                         <units:TrophyButton/>
                         <units:ConfirmButton/>
                     </Grid>
