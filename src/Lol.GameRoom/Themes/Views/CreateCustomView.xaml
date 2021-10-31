@@ -133,7 +133,7 @@
                                         </Grid.RowDefinitions>
                                         <TextBlock Text="게임 종류" Foreground="#F0E6D2" FontSize="14" FontWeight="Bold" Margin="0 25 0 20"/>
                                         <RadioButton Grid.Row="1" Style="{StaticResource IN.RDO}" 
-                                                     Content="비공개 선택" Margin="0" 
+                                                     Content="비공개 선택" Margin="5 0 0 0" 
                                                      IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsSelected}"/>
                                         <RadioButton Grid.Row="1" Style="{StaticResource IN.RDO}" 
                                                      Content="교차 선택" Margin="170 0 0 0"
@@ -142,7 +142,7 @@
                                                      Content="모두 무작위" Margin="330 0 0 0"
                                                      IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsSelected}"/>
                                          <RadioButton Grid.Row="2" Style="{StaticResource IN.RDO}" 
-                                                     Content="토너먼트 드래프트"
+                                                     Content="토너먼트 드래프트" Margin="5 20 0 0 "
                                                      IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsSelected}"/>   
                                     </Grid>
                                     <Grid Grid.Row="1">
@@ -153,7 +153,7 @@
                                         </Grid.RowDefinitions>
                                         <TextBlock Text="관전 허용" Foreground="#F0E6D2" FontSize="14" FontWeight="Bold" Margin="0 25 0 20"/>
                                         <RadioButton Grid.Row="1" Style="{StaticResource IN.RDO}" 
-                                                    Content="로비 관전자 공개" Margin="0"
+                                                    Content="로비 관전자 공개" Margin="5 0 0 0"
                                                     IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsSelected}"/>
                                         <RadioButton Grid.Row="1" Style="{StaticResource IN.RDO}" 
                                                     Content="친구 공개" Margin="170 0 0 0"
@@ -162,7 +162,7 @@
                                                     Content="전체 공개" Margin="330 0 0 0"
                                                     IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsSelected}"/>
                                         <RadioButton Grid.Row="2" Style="{StaticResource IN.RDO}" 
-                                                    Content="비공개"
+                                                    Content="비공개" Margin="5 20 0 0"
                                                     IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsSelected}"/>
                                     </Grid>
                                 </Grid>
