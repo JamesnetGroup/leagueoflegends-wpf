@@ -2,29 +2,32 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 					xmlns:views="clr-namespace:Lol.Store.UI.Views"
                     xmlns:commons="clr-namespace:Lol.Store.UI.Commons"
-					xmlns:units="clr-namespace:Lol.Store.UI.Units">
+					xmlns:units="clr-namespace:Lol.Store.UI.Units"
+                    xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
 
     <Style TargetType="{x:Type views:HomeView}">
 		<Setter Property="Template">
 			<Setter.Value>
                 <ControlTemplate TargetType="{x:Type views:HomeView}">
-                    <Grid Margin="40 0 0 0">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="390"/>
-                            <RowDefinition Height="*"/>
-                        </Grid.RowDefinitions>
-                        <commons:TopRightContent/>
-                        <Grid Grid.Row="1">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="5.8*"/>
-                                <ColumnDefinition Width="4.2*"/>
-                            </Grid.ColumnDefinitions>
-                            <units:NewSkin />
-                            <units:SetList Grid.Column="1" Margin="10 0 0 0"/>
+                    <ctrls:BasicScroll Padding="0 0 30 0">
+                        <Grid Margin="40 0 0 0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="390"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <commons:TopRightContent/>
+                            <Grid Grid.Row="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="5.8*"/>
+                                    <ColumnDefinition Width="4.2*"/>
+                                </Grid.ColumnDefinitions>
+                                <units:NewSkin />
+                                <units:SetList Grid.Column="1" Margin="10 0 0 0"/>
+                            </Grid>
+                            <units:PopularityList Grid.Row="2"/>
                         </Grid>
-                        <units:PopularityList Grid.Row="2"/>
-                    </Grid>
+                    </ctrls:BasicScroll>
 				</ControlTemplate>
 			</Setter.Value>
 		</Setter>

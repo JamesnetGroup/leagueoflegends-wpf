@@ -1,0 +1,31 @@
+﻿- seq: 0
+  parentSeq: 0
+  name: 바다용 카이사 테두리 세트
+  value: 1900
+  imgSource: Champ,Yasuo_41
+- seq: 1
+  parentSeq: 0
+  name: 강철용 쓰레쉬 테두리 세트
+  value: 2340
+  imgSource: Champ,Yasuo_41
+- seq: 2
+  parentSeq: 0
+  name: 평온용 카르마 테두리 세트
+  value: 1900
+  imgSource: Champ,Yasuo_41
+- seq: 3
+  parentSeq: 0
+  name: 이중용 볼리베어 테두리 세트
+  value: 1900
+  imgSource: Champ,Yasuo_41
+- seq: 4
+  parentSeq: 0
+  name: 바다용 카이사 크로마 세트
+  value: 2795
+  imgSource: Champ,Yasuo_41
+- seq: 5
+  parentSeq: 0
+  name: 바다용 쓰레쉬 크로마 세트
+  value: 3235
+  imgSource: Champ,Yasuo_41
+

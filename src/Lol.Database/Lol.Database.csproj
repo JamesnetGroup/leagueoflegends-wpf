@@ -17,6 +17,9 @@
     <None Update="Datas\gameRoomsCustom.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Datas\popularityDetails.yml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Datas\skinSets.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
