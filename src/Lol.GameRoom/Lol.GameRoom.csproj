@@ -12,6 +12,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Page Update="Themes\Units\CreateCustom\MapList2.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Themes\Units\JoinCustom\ConfirmButton2.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
     </Page>
@@ -67,10 +71,6 @@
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Themes\Units\CreateCustom\" />
   </ItemGroup>
 
 </Project>
