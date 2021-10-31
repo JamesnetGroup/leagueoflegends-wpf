@@ -23,9 +23,9 @@ namespace Lol.Database.Controller
 
         #region GetLootItems
 
-        public List<Loots> GetLootItems()
+        public List<Loots> GetLootSummary()
         {
-            var query = from i in Db.LootItems
+            var query = from i in Db.LootSummary
                         select new Loots
                         {
                             Seq = i.Seq,
