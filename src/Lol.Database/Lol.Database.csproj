@@ -11,6 +11,15 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Entites\Schema\LobbyLists.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="Datas\lobbyLists.yml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Datas\lootItemSortings.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

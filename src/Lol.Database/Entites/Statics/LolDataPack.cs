@@ -58,6 +58,7 @@ namespace Lol.Database.Entites.Statics
         internal List<SkinSets> _skinSets;
         internal List<Popularities> _popularities;
         internal List<PopularityDetails> _popularityDetails;
+        internal List<LobbyLists> _lobbyLists;
         #endregion
 
         #region GetYamlData
@@ -835,6 +836,26 @@ namespace Lol.Database.Entites.Statics
             }
         }
 
+        #endregion
+
+        #region LobbyLists
+
+        internal List<LobbyLists> LobbyLists
+        {
+            get
+            {
+                if (_lobbyLists == null)
+                {
+                    string readText = GetYamlData("lobbyLists");
+                    var deserializer = new DeserializerBuilder()
+                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .Build();
+                    _lobbyLists = deserializer.Deserialize<List<LobbyLists>>(readText);
+                }
+
+                return _lobbyLists;
+            }
+        }
         #endregion
     }
 }

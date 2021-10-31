@@ -1,5 +1,8 @@
-﻿using Lol.Foundation.Mvvm;
+﻿using Lol.Database.Controller;
+using Lol.Database.Entites.Schema;
+using Lol.Foundation.Mvvm;
 using System;
+using System.Collections.Generic;
 
 namespace Lol.GameRoom.Local.ViewModels
 {
@@ -8,7 +11,7 @@ namespace Lol.GameRoom.Local.ViewModels
         #region Variables
 
         private Action<object> _customConfirm;
-
+        public List<LobbyLists> LobbyLists { get; set; }
         #endregion
 
         #region ICommand
@@ -20,6 +23,7 @@ namespace Lol.GameRoom.Local.ViewModels
         public JoinCustomViewModel(Action<object> customConfirm)
         {
             _customConfirm = customConfirm;
+            LobbyLists = new GameRoomApi().GetLobbyLists();
 
             ConfirmCommand = new RelayCommand<object>(RoomCreateCommand, CanRoomCreateCommand);
         }
