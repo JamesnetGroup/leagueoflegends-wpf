@@ -33,7 +33,7 @@
                             Margin="0 0 0 0" 
                             Background="Transparent"
                             BorderBrush="{TemplateBinding BorderBrush}"
-                            Width="200" Height="190"
+                            Width="192" Height="190"
                             HorizontalAlignment="Left"
                             VerticalAlignment="{TemplateBinding VerticalAlignment}">
                         <Grid>

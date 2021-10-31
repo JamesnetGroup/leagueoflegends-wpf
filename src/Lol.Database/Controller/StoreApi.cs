@@ -93,11 +93,16 @@ namespace Lol.Database.Controller
 
         public List<Popularities> GetPopularities()
         {
+            Db.PopularityDetails.ForEach(x => {
+                x.ImgSource = ResourceHelper.ImgResource(x.ImgSource);
+            });
+
             var query = from s in Db.Popularities
                         select new Popularities
                         {
                             Seq = s.Seq,
                             Header = s.Header,
+                            Details = Db.PopularityDetails.Where(x => x.ParentSeq == s.Seq).ToList(),
                         };
 
             return query.ToList();
