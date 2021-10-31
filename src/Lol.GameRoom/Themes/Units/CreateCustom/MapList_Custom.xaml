@@ -25,33 +25,24 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListBoxItem}">
                     <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="*"/>
-                        </Grid.RowDefinitions>
-                        <units:MapTitle/>
-                        <Border Style="{StaticResource BDR.SECTION}"/>
-                        <StackPanel Grid.Row="2" Margin="0 0 10 0">
-                            <TextBlock x:Name="txb"
-                                       Style="{StaticResource TXB.CONTENT}"/>
-                            <StackPanel x:Name="stack" 
-                                        Visibility="Collapsed">
-                                <Border BorderThickness="0 1 0 0" 
-                                        BorderBrush="#576260" 
-                                        Margin="0 15 0 3"/>
-                                <units:GameType/>
+                        
+                    
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <units:MapTitle/>
+                            <Border Style="{StaticResource BDR.SECTION}"/>
+                            <StackPanel Grid.Row="2" Margin="0 0 10 0">
+                            
                             </StackPanel>
-                        </StackPanel>
+                        </Grid>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsSelected" Value="True">
                             <Setter Property="Foreground" Value="#F0E6D2"/>
-                            <Setter TargetName="txb" Property="Visibility" Value="Visible"/>
-                            <Setter TargetName="stack" Property="Visibility" Value="Visible"/>
-                        </Trigger>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="txb" Property="Visibility" Value="Visible"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -59,13 +50,13 @@
         </Setter>
     </Style>
 
-    <Style TargetType="{x:Type units:GameType_Custom}">
+    <Style TargetType="{x:Type units:MapList_Custom}">
         <Setter Property="ItemContainerStyle" Value="{StaticResource LBXI.MAP}"/>
         <Setter Property="ItemsSource" Value="{Binding Customs}"/>
         <Setter Property="SelectedItem" Value="{Binding CurrentCustom}"/>
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type units:GameType_Custom}">
+                <ControlTemplate TargetType="{x:Type units:MapList_Custom}">
                     <ItemsPresenter/>
                 </ControlTemplate>
             </Setter.Value>

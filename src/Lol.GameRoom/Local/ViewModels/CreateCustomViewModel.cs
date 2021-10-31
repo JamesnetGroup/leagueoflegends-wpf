@@ -11,9 +11,9 @@ namespace Lol.GameRoom.Local.ViewModels
         #region Variables
 
         private Action<object> _customConfirm;
-        private GameRooms _currentCusTom;
+        private GameRoomsCustom _currentCusTom;
 
-        public List<GameRooms> Customs { get; set; }
+        public List<GameRoomsCustom> Customs { get; set; }
 
         #endregion
 
@@ -23,7 +23,7 @@ namespace Lol.GameRoom.Local.ViewModels
 
         #region CurrentCustom
 
-        public GameRooms CurrentCustom
+        public GameRoomsCustom CurrentCustom
         {
             get { return _currentCusTom; }
             set { _currentCusTom = value; OnPropertyChanged(); }
@@ -35,7 +35,7 @@ namespace Lol.GameRoom.Local.ViewModels
         public CreateCustomViewModel(Action<object> customConfirm)
         {
             _customConfirm = customConfirm;
-            Customs = new GameRoomApi().GetGameRooms();
+            Customs = new GameRoomApi().GetGameRoomsCustom();
 
             CurrentCustom = Customs[0];
             ConfirmCommand = new RelayCommand<object>(RoomCreateCommand, CanRoomCreateCommand);

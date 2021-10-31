@@ -1,8 +1,9 @@
 <ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
     <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/CreateCustom/MapList_Custom.xaml"/>
+        <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/CreateCustom/MapTitle_Custom.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/CreateCustom/GameType_Custom.xaml"/>
+        <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/CreateCustom/MapList_Custom.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/JoinCustom/ConfirmButton2.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/Summoners/InviteButton.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/Summoners/FriendList.xaml"/>
