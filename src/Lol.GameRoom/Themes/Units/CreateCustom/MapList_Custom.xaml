@@ -59,13 +59,13 @@
         </Setter>
     </Style>
 
-    <Style TargetType="{x:Type units:MapList2}">
+    <Style TargetType="{x:Type units:GameType_Custom}">
         <Setter Property="ItemContainerStyle" Value="{StaticResource LBXI.MAP}"/>
         <Setter Property="ItemsSource" Value="{Binding Customs}"/>
         <Setter Property="SelectedItem" Value="{Binding CurrentCustom}"/>
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type units:MapList2}">
+                <ControlTemplate TargetType="{x:Type units:GameType_Custom}">
                     <ItemsPresenter/>
                 </ControlTemplate>
             </Setter.Value>
