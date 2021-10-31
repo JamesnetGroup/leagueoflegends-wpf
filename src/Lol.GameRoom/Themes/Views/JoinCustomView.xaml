@@ -30,7 +30,7 @@
                             </Grid.RowDefinitions>
                             <TextBlock Text="사용자 설정 게임 로비" FontSize="20" FontWeight="Black" Foreground="#F0E6D2" Margin="0 25 0 0"/>
                             <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0 15 0 15">
-                                <ctrls:RiotIconButton IconType="Download" IconWidth="13" Width="30" Height="30"  />
+                                <ctrls:RiotIconButton IconType="Download" IconWidth="13" Width="30" Height="30"/>
                                 <ctrls:RiotTextBox Grid.ColumnSpan="3" MinWidth="250"
                                            Height="30"
                                            HorizontalAlignment="Right"
@@ -57,7 +57,6 @@
                                       RowBackground="Transparent"
                                       BorderThickness="0"
                                       BorderBrush="Transparent"
-                                      ColumnHeaderHeight="25"                                      
                                       AutoGenerateColumns="False" 
                                       HeadersVisibility="Column"
                                       GridLinesVisibility="None"
@@ -66,13 +65,36 @@
                                       ScrollViewer.VerticalScrollBarVisibility="Auto"
                                       ScrollViewer.HorizontalScrollBarVisibility="Auto"
                                       ItemsSource="{Binding LobbyLists}">
+                                <DataGrid.ColumnHeaderStyle>
+                                    <Style TargetType="DataGridColumnHeader">
+                                        <Setter Property="Height" Value="30" />
+                                        <Setter Property="Padding" Value="5" />
+                                        <Setter Property="Background" Value="Transparent" />
+                                        <Setter Property="Foreground" Value="#BBAB82" />
+                                        <Setter Property="FontSize" Value="13"/>
+                                        <Setter Property="FontWeight" Value="Bold"/>
+                                        <Setter Property="Height" Value="50"/>
+                                    </Style>
+                                </DataGrid.ColumnHeaderStyle>
+                                <DataGrid.RowStyle>
+                                    <Style TargetType="DataGridRow">
+                                        <Style.Triggers>
+                                            <Trigger Property="IsSelected" Value="True">
+                                                <Setter Property="Background" Value="Red"/>
+                                            </Trigger>
+                                        </Style.Triggers>
+                                        <Setter Property="Height" Value="35"/>
+                                        <Setter Property="Background" Value="Red"/>
+                                    </Style>
+                                </DataGrid.RowStyle>
                                 <DataGrid.Columns>
-                                    <DataGridTextColumn Header="로비이름" Binding="{Binding Lobby}" Foreground="#9E998B" Width="4*"/>
-                                    <DataGridTextColumn Header="방장" Binding="{Binding Host}" Foreground="#9E998B" Width="2*"/>
-                                    <DataGridTextColumn Header="맵" Binding="{Binding Map}" Foreground="#9E998B" Width="2*"/>
-                                    <DataGridTextColumn Header="사람" Binding="{Binding TotalNumber}" Foreground="#9E998B" Width="1*"/>
-                                    <DataGridTextColumn Header="관전" Binding="{Binding Spectator}" Foreground="#9E998B" Width="1*"/>
+                                    <DataGridTextColumn Header="로비이름" Binding="{Binding Lobby}" FontSize="15" Foreground="#9E998B" Width="4*"/>
+                                    <DataGridTextColumn Header="방장" Binding="{Binding Host}" FontSize="15" Foreground="#9E998B" Width="2*"/>
+                                    <DataGridTextColumn Header="맵" Binding="{Binding Map}" FontSize="15" Foreground="#9E998B" Width="2*"/>
+                                    <DataGridTextColumn Header="사람" Binding="{Binding TotalNumber}" FontSize="15" Foreground="#9E998B" Width="1*"/>
+                                    <DataGridTextColumn Header="관전" Binding="{Binding Spectator}" FontSize="15" Foreground="#9E998B" Width="1*"/>
                                 </DataGrid.Columns>
+                                
                             </DataGrid>
                         </Grid>
                     </Grid>
