@@ -5,9 +5,9 @@
         <ResourceDictionary Source="/Lol.Loot;component/Themes/Units/PlusButton.xaml"/>
         <ResourceDictionary Source="/Lol.Loot;component/Themes/Units/Category.xaml"/>
         <ResourceDictionary Source="/Lol.Loot;component/Themes/Units/CategoryItem.xaml"/>
+        <ResourceDictionary Source="/Lol.Loot;component/Themes/Units/Materials.xaml"/>
+        <ResourceDictionary Source="/Lol.Loot;component/Themes/Units/MaterialsItem.xaml"/>
         <ResourceDictionary Source="/Lol.Loot;component/Themes/Units/ItemsFilter.xaml"/>
-        <ResourceDictionary Source="/Lol.Loot;component/Themes/Units/CommonListItem.xaml"/>
-        <ResourceDictionary Source="/Lol.Loot;component/Themes/Units/CommonList.xaml"/>
         <ResourceDictionary Source="/Lol.Loot;component/Themes/Units/ItemsSummary.xaml"/>
         <ResourceDictionary Source="/Lol.Loot;component/Themes/Units/LootItems.xaml"/>
         <ResourceDictionary Source="/Lol.Loot;component/Themes/Views/LootView.xaml"/>
