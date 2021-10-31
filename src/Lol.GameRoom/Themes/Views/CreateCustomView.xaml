@@ -53,7 +53,7 @@
                                                IconVisibility="Collapsed"/>
                             </StackPanel>
                             <StackPanel Grid.Column="1">
-                                
+                          
                             </StackPanel>
                             
                         </Grid>
