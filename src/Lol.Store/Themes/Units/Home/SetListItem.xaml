@@ -50,7 +50,7 @@
                                            FontWeight="Bold"
                                            HorizontalAlignment="Center"
                                            TextAlignment="Center"
-                                           Margin="0 0 0 6"/>
+                                           Margin="10 0 10 6"/>
                                 <StackPanel x:Name="spValue" 
                                             Orientation="Horizontal" 
                                             HorizontalAlignment="Center"
