@@ -8,9 +8,8 @@
         <ResourceDictionary Source="/Lol.Loot;component/Themes/Units/ItemsFilter.xaml"/>
         <ResourceDictionary Source="/Lol.Loot;component/Themes/Units/CommonListItem.xaml"/>
         <ResourceDictionary Source="/Lol.Loot;component/Themes/Units/CommonList.xaml"/>
-        <ResourceDictionary Source="/Lol.Loot;component/Themes/Units/ItemListBoxItem.xaml"/>
-        <ResourceDictionary Source="/Lol.Loot;component/Themes/Units/ItemList.xaml"/>
-        <ResourceDictionary Source="/Lol.Loot;component/Themes/Units/RightContent.xaml"/>
+        <ResourceDictionary Source="/Lol.Loot;component/Themes/Units/ItemsSummary.xaml"/>
+        <ResourceDictionary Source="/Lol.Loot;component/Themes/Units/LootItems.xaml"/>
         <ResourceDictionary Source="/Lol.Loot;component/Themes/Views/LootView.xaml"/>
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

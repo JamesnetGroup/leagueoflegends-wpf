@@ -13,7 +13,7 @@ namespace Lol.Loot.Local.ViewModels
         private List<Loots> _menus;
         private List<LootItemSortings> _filters;
         private List<PlantHeaders> _treeSource;
-        private List<Loots> _items;
+        private List<Loots> _summary;
 
         private Loots _currentMenu;
         private LootItemSortings _currentFilter;
@@ -64,12 +64,12 @@ namespace Lol.Loot.Local.ViewModels
         }
         #endregion
 
-        #region Items
+        #region Summary
 
-        public List<Loots> Items
+        public List<Loots> Summary
         {
-            get => _items;
-            set { _items = value; OnPropertyChanged(); }
+            get => _summary;
+            set { _summary = value; OnPropertyChanged(); }
         }
         #endregion
 
@@ -83,7 +83,7 @@ namespace Lol.Loot.Local.ViewModels
             Filters = new LootApi().GetFilters();
             CurrentFilter = Filters.First();
 
-            Items = new LootApi().GetLootItems();
+            Summary = new LootApi().GetLootSummary();
         }
         #endregion
 
