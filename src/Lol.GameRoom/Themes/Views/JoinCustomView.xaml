@@ -53,7 +53,13 @@
                             </StackPanel>
                             <Border Grid.Row="1" Style="{StaticResource BDR.SECTION}"/>
                             <DataGrid Grid.Row="2" Background="Transparent" BorderThickness="0" HeadersVisibility="None">
-                                
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="로비이름"/>
+                                    <DataGridTextColumn Header="방장"/>
+                                    <DataGridTextColumn Header="맵"/>
+                                    <DataGridTextColumn Header="사람"/>
+                                    <DataGridTextColumn Header="관전"/>
+                                </DataGrid.Columns>
                                 
                             </DataGrid>
                         </Grid>
