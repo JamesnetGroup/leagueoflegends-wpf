@@ -1,8 +1,8 @@
-﻿using Lol.Foundation.Mvvm;
+﻿using System.Linq;
+using System.Collections.Generic;
+using Lol.Foundation.Mvvm;
 using Lol.Database.Controller;
 using Lol.Database.Entites.Schema;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace Lol.Loot.Local.ViewModels
 {
@@ -37,11 +37,29 @@ namespace Lol.Loot.Local.ViewModels
         }
         #endregion
 
+        #region Filters
+
+        public List<LootItemSortings> Filters
+        {
+            get => _filters;
+            set { _filters = value; OnPropertyChanged(); }
+        }
+        #endregion
+
+        #region CurrentFilter
+
+        public LootItemSortings CurrentFilter
+        {
+            get => _currentFilter;
+            set { _currentFilter = value; OnPropertyChanged(); }
+        }
+        #endregion
+
         #region TreeSource
 
         public List<PlantHeaders> TreeSource
         {
-            get { return _treeSource; }
+            get => _treeSource;
             set { _treeSource = value; OnPropertyChanged(); }
         }
         #endregion
@@ -50,26 +68,8 @@ namespace Lol.Loot.Local.ViewModels
 
         public List<Loots> Items
         {
-            get { return _items; }
+            get => _items;
             set { _items = value; OnPropertyChanged(); }
-        }
-        #endregion
-
-        #region Filters
-
-        public List<LootItemSortings> Filters
-        {
-            get { return _filters; }
-            set { _filters = value; OnPropertyChanged(); }
-        }
-        #endregion
-
-        #region CurrentCbx
-
-        public LootItemSortings CurrentFilter
-        {
-            get { return _currentFilter; }
-            set { _currentFilter = value; OnPropertyChanged(); }
         }
         #endregion
 
@@ -91,12 +91,14 @@ namespace Lol.Loot.Local.ViewModels
 
         private void MenuChanged(int seq)
         {
-            var treeSource = new LootApi().GetPlantHeaders();
+            List<PlantHeaders> source = new LootApi().GetPlantHeaders();
 
             if (seq != 0)
-                treeSource = treeSource.Where(x => x.LootSeq == seq).ToList();
+            {
+                source = source.Where(x => x.LootSeq == seq).ToList();
+            }
 
-            TreeSource = treeSource;
+            TreeSource = source;
         }
         #endregion
     }
