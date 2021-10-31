@@ -2,7 +2,66 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:views="clr-namespace:Lol.GameRoom.UI.Views"
                     xmlns:units="clr-namespace:Lol.GameRoom.UI.Units"
-                    xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
+                    xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport"
+                    xmlns:cnvts="clr-namespace:Lol.Converter;assembly=Lol.Converter">
+
+
+
+    <LinearGradientBrush x:Key="GEO.FILL" StartPoint="0.5, 0" EndPoint="0.5, 1">
+        <GradientStop Color="#B28830" Offset="0"/>
+        <GradientStop Color="#A37E30" Offset="0.5"/>
+        <GradientStop Color="#87672B" Offset="1"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="GEO.FILL.OVER" StartPoint="0.5, 0" EndPoint="0.5, 1">
+        <GradientStop Color="#EDE1C9" Offset="0"/>
+        <GradientStop Color="#DBBF84" Offset="0.5"/>
+        <GradientStop Color="#CBA047" Offset="1"/>
+    </LinearGradientBrush>
+
+    <Style TargetType="{x:Type TextBlock}" x:Key="TXB.MODE">
+        <Setter Property="Text" Value="입력 모드"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Foreground" Value="#F0E6D2"/>
+        <Setter Property="Margin" Value="0 10 0 0"/>
+    </Style>
+
+    <Style TargetType="{x:Type RadioButton}" x:Key="IN.RDO">
+        <Setter Property="Foreground" Value="#BEB187"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="Transparent"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Margin" Value="0 20 0 0"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Content" Value="{Binding InputMode.ItemName}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <ctrls:RiotIcon x:Name="dia" Grid.Column="0" IconType="DiaEmpty" Width="14" Height="14"
+										HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Fill="{StaticResource GEO.FILL}"/>
+                        <TextBlock Grid.Column="1" Margin="5 0 0 0"
+								   Text="{Binding RelativeSource={RelativeSource AncestorType=RadioButton}, Path=Content}"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Foreground" Value="#F0E6D2"/>
+                            <Setter TargetName="dia" Property="Fill" Value="{StaticResource GEO.FILL.OVER}"/>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Foreground" Value="#F0E6D2"/>
+                            <Setter TargetName="dia" Property="IconType" Value="DiaFill"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
     <Style TargetType="{x:Type ctrls:RiotComboBoxItem}" x:Key="IN.CBXI">
         <Setter Property="Content" Value="{Binding Content}"/>
@@ -20,6 +79,13 @@
         <Setter Property="Foreground" Value="#77776E"/>
     </Style>
 
+    <Style TargetType="{x:Type Border}" x:Key="BDR.SECTION">
+        <Setter Property="BorderThickness" Value="0 1 0 0"/>
+        <Setter Property="BorderBrush" Value="#606F6E"/>
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="Grid.Row" Value="0"/>
+    </Style>
+
     <Style TargetType="{x:Type views:CreateCustomView}">
         <Setter Property="Template">
             <Setter.Value>
@@ -30,12 +96,13 @@
                             <RowDefinition Height="1*"/>
                         </Grid.RowDefinitions>
                         <units:MapList_Custom/>
+                        <Border Style="{StaticResource BDR.SECTION}"/>
                         <units:TrophyButton/>
                         <units:ConfirmButton Grid.RowSpan="2"/>
                         <Grid Grid.Row="1">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="4*"/>
-                                <ColumnDefinition Width="6*"/>
+                                <ColumnDefinition Width="5*"/>
+                                <ColumnDefinition Width="5*"/>
                             </Grid.ColumnDefinitions>
                             <StackPanel>
                                 <TextBlock Text="이름" Foreground="#F0E6D2" FontSize="14" FontWeight="Bold" Margin="0 25 0 0"/>
@@ -53,9 +120,53 @@
                                                IconVisibility="Collapsed"/>
                             </StackPanel>
                             <StackPanel Grid.Column="1">
-                          
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="1*"/>
+                                        <RowDefinition Height="1*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="auto"/>
+                                            <RowDefinition Height="auto"/>
+                                            <RowDefinition Height="auto"/>
+                                        </Grid.RowDefinitions>
+                                        <TextBlock Text="게임 종류" Foreground="#F0E6D2" FontSize="14" FontWeight="Bold" Margin="0 25 0 20"/>
+                                        <RadioButton Grid.Row="1" Style="{StaticResource IN.RDO}" 
+                                                     Content="비공개 선택" Margin="0" 
+                                                     IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsSelected}"/>
+                                        <RadioButton Grid.Row="1" Style="{StaticResource IN.RDO}" 
+                                                     Content="교차 선택" Margin="170 0 0 0"
+                                                     IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsSelected}"/>
+                                        <RadioButton Grid.Row="1" Style="{StaticResource IN.RDO}" 
+                                                     Content="모두 무작위" Margin="330 0 0 0"
+                                                     IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsSelected}"/>
+                                         <RadioButton Grid.Row="2" Style="{StaticResource IN.RDO}" 
+                                                     Content="토너먼트 드래프트"
+                                                     IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsSelected}"/>   
+                                    </Grid>
+                                    <Grid Grid.Row="1">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                        </Grid.RowDefinitions>
+                                        <TextBlock Text="관전 허용" Foreground="#F0E6D2" FontSize="14" FontWeight="Bold" Margin="0 25 0 20"/>
+                                        <RadioButton Grid.Row="1" Style="{StaticResource IN.RDO}" 
+                                                    Content="로비 관전자 공개" Margin="0"
+                                                    IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsSelected}"/>
+                                        <RadioButton Grid.Row="1" Style="{StaticResource IN.RDO}" 
+                                                    Content="친구 공개" Margin="170 0 0 0"
+                                                    IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsSelected}"/>
+                                        <RadioButton Grid.Row="1" Style="{StaticResource IN.RDO}" 
+                                                    Content="전체 공개" Margin="330 0 0 0"
+                                                    IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsSelected}"/>
+                                        <RadioButton Grid.Row="2" Style="{StaticResource IN.RDO}" 
+                                                    Content="비공개"
+                                                    IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsSelected}"/>
+                                    </Grid>
+                                </Grid>
                             </StackPanel>
-                            
                         </Grid>
                     </Grid>
                 </ControlTemplate>
