@@ -42,7 +42,7 @@ namespace Lol.Database.Entites.Statics
         internal List<StoreChampSortings> _storeChampSortings;
         internal List<SettingMenus> _settingMenus;
         internal List<Champs> _champs;
-        internal List<ChampCb> _champCb;
+        internal List<ChampFilter> _champFilter;
         internal List<Resolutions> _resolutions;
         internal List<Runes> _runes;
         internal List<RuneDetail> _runeDetail;
@@ -493,42 +493,62 @@ namespace Lol.Database.Entites.Statics
         }
         #endregion
 
-        #region Champs
+        #region ChampFilter
 
-        internal List<Champs> Champs
+        internal List<ChampFilter> ChampFilter
         {
             get
             {
-                if (_champs == null)
+                if (_champFilter == null)
                 {
-                    string readText = GetYamlData("champs");
+                    string readText = GetYamlData("champFilter");
                     var deserializer = new DeserializerBuilder()
                         .WithNamingConvention(CamelCaseNamingConvention.Instance)
                         .Build();
-                    _champs = deserializer.Deserialize<List<Champs>>(readText);
+                    _champFilter = deserializer.Deserialize<List<ChampFilter>>(readText);
                 }
 
-                return _champs;
+                return _champFilter;
             }
         }
         #endregion
 
-        #region ChampCb
+        #region ChampHeaders
 
-        internal List<ChampCb> ChampCb
+        internal List<ChampHeaders> ChampHeaders
         {
             get
             {
-                if (_champCb == null)
+                if (_champHeaders == null)
                 {
-                    string readText = GetYamlData("champCb");
+                    string readText = GetYamlData("champHeaders");
                     var deserializer = new DeserializerBuilder()
                         .WithNamingConvention(CamelCaseNamingConvention.Instance)
                         .Build();
-                    _champCb = deserializer.Deserialize<List<ChampCb>>(readText);
+                    _champHeaders = deserializer.Deserialize<List<ChampHeaders>>(readText);
                 }
 
-                return _champCb;
+                return _champHeaders;
+            }
+        }
+        #endregion
+
+        #region ChampItems
+
+        internal List<ChampItems> ChampItems
+        {
+            get
+            {
+                if (_champItems == null)
+                {
+                    string readText = GetYamlData("champItems");
+                    var deserializer = new DeserializerBuilder()
+                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .Build();
+                    _champItems = deserializer.Deserialize<List<ChampItems>>(readText);
+                }
+
+                return _champItems;
             }
         }
         #endregion
@@ -711,47 +731,6 @@ namespace Lol.Database.Entites.Statics
                 return _storeChamps;
             }
         }
-        #endregion
-
-        #region ChampHeaders
-
-        internal List<ChampHeaders> ChampHeaders
-        {
-            get
-            {
-                if (_champHeaders == null)
-                {
-                    string readText = GetYamlData("champHeaders");
-                    var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
-                        .Build();
-                    _champHeaders = deserializer.Deserialize<List<ChampHeaders>>(readText);
-                }
-
-                return _champHeaders;
-            }
-        }
-        #endregion
-
-        #region ChampItems
-
-        internal List<ChampItems> ChampItems
-        {
-            get
-            {
-                if (_champItems == null)
-                {
-                    string readText = GetYamlData("champItems");
-                    var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
-                        .Build();
-                    _champItems = deserializer.Deserialize<List<ChampItems>>(readText);
-                }
-
-                return _champItems;
-            }
-        }
-
         #endregion
 
         #region NewSkins
