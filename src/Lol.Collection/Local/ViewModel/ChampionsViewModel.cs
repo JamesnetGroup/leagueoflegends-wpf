@@ -10,52 +10,50 @@ namespace Lol.Collection.Local.ViewModel
     {
         #region Variables
 
-        private List<Champs> _champsLists;
-        private List<ChampCb> _champCb1;
-        private List<ChampCb> _champCb2;
+        private List<ChampCb> _champFilter1;
+        private List<ChampCb> _champFilter2;
 
-        private Champs _currentChamp;
-        private ChampCb _currentChampCb1;
-        private ChampCb _currentChampCb2;
+        private ChampCb _currentChampFilter1;
+        private ChampCb _currentChampFilter2;
         private List<ChampHeaders> _treeSource;
         private string _searchText;
-
         #endregion
 
-        #region Champs
-        public List<Champs> Champs
+        #region ChampFilter1
+
+        public List<ChampCb> ChampFilter1
         {
-            get { return _champsLists; }
-            set { _champsLists = value; OnPropertyChanged(); }
+            get => _champFilter1;
+            set { _champFilter1 = value; OnPropertyChanged(); }
         }
         #endregion
 
-        #region ChampCb1
+        #region ChampFilter2
 
-        public List<ChampCb> ChampCb1
+        public List<ChampCb> ChampFilter2
         {
-            get { return _champCb1; }
-            set { _champCb1 = value; OnPropertyChanged(); }
+            get => _champFilter2;
+            set { _champFilter2 = value; OnPropertyChanged(); }
         }
         #endregion
 
-        #region ChampCb2
+        #region CurrentChampFilter1
 
-        public List<ChampCb> ChampCb2
+        public ChampCb CurrentChampFilter1
         {
-            get { return _champCb2; }
-            set { _champCb2 = value; OnPropertyChanged(); }
+            get => _currentChampFilter1;
+            set { _currentChampFilter1 = value; OnPropertyChanged(); FilterChanged(value); }
         }
         #endregion
 
-        #region CurrentChamp
-        public Champs CurrentChamp
+        #region CurrentChampFilter2
+
+        public ChampCb CurrentChampFilter2
         {
-            get { return _currentChamp; }
-            set { _currentChamp = value; OnPropertyChanged(); }
+            get => _currentChampFilter2;
+            set { _currentChampFilter2 = value; OnPropertyChanged(); FilterChanged(value); }
         }
         #endregion
-
 
         #region TreeSource
 
@@ -63,24 +61,6 @@ namespace Lol.Collection.Local.ViewModel
         {
             get { return _treeSource; }
             set { _treeSource = value; OnPropertyChanged(); }
-        }
-        #endregion
-
-        #region CurrentChampCb1
-
-        public ChampCb CurrentChampCb1
-        {
-            get { return _currentChampCb1; }
-            set { _currentChampCb1 = value; OnPropertyChanged(); MenuChanged1(value); }
-        }
-        #endregion
-
-        #region CurrentChampCb2
-
-        public ChampCb CurrentChampCb2
-        {
-            get { return _currentChampCb2; }
-            set { _currentChampCb2 = value; OnPropertyChanged(); MenuChanged2(value); }
         }
         #endregion
 
@@ -97,43 +77,21 @@ namespace Lol.Collection.Local.ViewModel
 
         public ChampionsViewModel()
         {
-            Champs = new ChampApi().GetChamps();
-            var source = new List<Champs>();
-            source = Champs.OrderBy(x => x.Name).ToList();
-            Champs = source;
+            ChampFilter1 = new ChampApi().GetChampCb1();
+            ChampFilter2 = new ChampApi().GetChampCb2();
 
-            ChampCb1 = new ChampApi().GetChampCb1();
-            ChampCb2 = new ChampApi().GetChampCb2();
-
-            CurrentChampCb1 = ChampCb1.First();
-            CurrentChampCb2 = ChampCb2.First();
+            CurrentChampFilter1 = ChampFilter1.First();
+            CurrentChampFilter2 = ChampFilter2.First();
 
             TreeSource = new ChampApi().GetChampHeaders();
         }
         #endregion
 
-        #region MenuChanged1
+        #region FilterChanged
 
-        private void MenuChanged1(ChampCb value)
+        private void FilterChanged(ChampCb value)
         {
-            //int seq = value.Seq;
-            //var treeSource = new ChampApi().GetChampHeaders();
-
-            //if (seq != 0)
-            //{
-            //    treeSource = treeSource.Where(x => x.ChampCbSeq == seq).ToList();
-            //}
-
-            //TreeSource = treeSource;
-        }
-        #endregion
-
-
-        #region MenuChanged2
-
-        private void MenuChanged2(ChampCb value)
-        {
-            
+            //
         }
         #endregion
 
@@ -144,12 +102,5 @@ namespace Lol.Collection.Local.ViewModel
             
         }
         #endregion
-
-        
-        public void TestData()
-        {
-            //var data = new ChampApi().
-        }
-        
     }
 }
