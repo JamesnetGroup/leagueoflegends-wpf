@@ -8,8 +8,8 @@
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/Runes/RuneListBox.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/Spells/SpellInfo.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/Spells/SpellListBox.xaml"/>
-        <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/Champs/ChampListBoxItem.xaml"/>
-        <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/Champs/ChampListBox.xaml"/>
+        <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/Champs/ChampionsList.xaml"/>
+        <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/Champs/LeftMenu.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/Items/MapListBoxItem.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/Items/MapListBox.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/Items/ItemSetListBoxItem.xaml"/>
