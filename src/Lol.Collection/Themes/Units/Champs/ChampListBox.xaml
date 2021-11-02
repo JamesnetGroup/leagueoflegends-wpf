@@ -62,11 +62,11 @@
                             <Setter TargetName="icon" Property="Fill" Value="#CDBE91"/>
                             <Setter TargetName="icon" Property="Opacity" Value="1"/>
                         </Trigger>
-                        <DataTrigger Binding="{Binding Type}" Value="{x:Type types:ChampHeaders}">
+                        <DataTrigger Binding="{Binding Type}" Value="{x:Type types:ChampTreeItem}">
                             <Setter TargetName="content" Property="Visibility" Value="Collapsed"/>
                             <Setter TargetName="header" Property="Visibility" Value="Visible"/>
                         </DataTrigger>
-                        <DataTrigger Binding="{Binding Type}" Value="{x:Type types:ChampItems}">
+                        <DataTrigger Binding="{Binding Type}" Value="{x:Type types:Champions}">
                             <Setter TargetName="content" Property="Visibility" Value="Visible"/>
                             <Setter TargetName="header" Property="Visibility" Value="Collapsed"/>
                         </DataTrigger>
@@ -85,7 +85,7 @@
 
     <Style TargetType="{x:Type units:ChampListBox}">
         <Setter Property="ItemContainerStyle" Value="{StaticResource TRVI.CHILD}"/>
-        <Setter Property="ItemsSource" Value="{Binding TreeSource}"/>
+        <Setter Property="ItemsSource" Value="{Binding Champions}"/>
         <Setter Property="Margin" Value="0 0 0 0"/>
         <Setter Property="Template">
             <Setter.Value>

@@ -1,20 +1,20 @@
 ﻿- seq: 0
-  champCbSeq: 1
+  role: 1
   isExpanded: true
   header: 상단 (탑)
 - seq: 1
-  champCbSeq: 2
+  role: 2
   isExpanded: true
   header: 정글
 - seq: 2
-  champCbSeq: 3
+  role: 3
   isExpanded: true
   header: 중단 (미드)
 - seq: 3
-  champCbSeq: 4
+  role: 4
   isExpanded: true
   header: 하단 (봇)
 - seq: 4
-  champCbSeq: 5
+  role: 5
   isExpanded: true
   header: 서포터

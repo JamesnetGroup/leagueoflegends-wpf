@@ -12,10 +12,10 @@ namespace Lol.Collection.Local.ViewModel
 
         private List<ChampFilter> _champFilter1;
         private List<ChampFilter> _champFilter2;
+        private List<ChampTreeItem> _champions;
 
         private ChampFilter _currentChampFilter1;
         private ChampFilter _currentChampFilter2;
-        private List<ChampHeaders> _treeSource;
         private string _searchText;
         #endregion
 
@@ -57,10 +57,10 @@ namespace Lol.Collection.Local.ViewModel
 
         #region TreeSource
 
-        public List<ChampHeaders> TreeSource
+        public List<ChampTreeItem> Champions
         {
-            get { return _treeSource; }
-            set { _treeSource = value; OnPropertyChanged(); }
+            get { return _champions; }
+            set { _champions = value; OnPropertyChanged(); }
         }
         #endregion
 
@@ -83,7 +83,7 @@ namespace Lol.Collection.Local.ViewModel
             CurrentChampFilter1 = ChampFilter1.First();
             CurrentChampFilter2 = ChampFilter2.First();
 
-            TreeSource = new ChampApi().GetChampHeaders();
+            Champions = new ChampApi().GetChampTreeItem();
         }
         #endregion
 

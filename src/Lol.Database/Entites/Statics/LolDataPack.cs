@@ -41,7 +41,6 @@ namespace Lol.Database.Entites.Statics
         internal List<StoreChampTypes> _storeChampTypes;
         internal List<StoreChampSortings> _storeChampSortings;
         internal List<SettingMenus> _settingMenus;
-        internal List<Champs> _champs;
         internal List<ChampFilter> _champFilter;
         internal List<Resolutions> _resolutions;
         internal List<Runes> _runes;
@@ -52,8 +51,8 @@ namespace Lol.Database.Entites.Statics
         internal List<PlantHeaders> _plantHeaders;
         internal List<PlantItems> _plantItems;
         internal List<StoreChamps> _storeChamps;
-        internal List<ChampHeaders> _champHeaders;
-        internal List<ChampItems> _champItems;
+        internal List<ChampTreeItem> _champTreeItem;
+        internal List<Champions> _champions;
         internal List<NewSkins> _newSkins;
         internal List<SkinSets> _skinSets;
         internal List<Popularities> _popularities;
@@ -513,42 +512,42 @@ namespace Lol.Database.Entites.Statics
         }
         #endregion
 
-        #region ChampHeaders
+        #region ChampTreeItem
 
-        internal List<ChampHeaders> ChampHeaders
+        internal List<ChampTreeItem> ChampTreeItem
         {
             get
             {
-                if (_champHeaders == null)
+                if (_champTreeItem == null)
                 {
-                    string readText = GetYamlData("champHeaders");
+                    string readText = GetYamlData("champTreeItem");
                     var deserializer = new DeserializerBuilder()
                         .WithNamingConvention(CamelCaseNamingConvention.Instance)
                         .Build();
-                    _champHeaders = deserializer.Deserialize<List<ChampHeaders>>(readText);
+                    _champTreeItem = deserializer.Deserialize<List<ChampTreeItem>>(readText);
                 }
 
-                return _champHeaders;
+                return _champTreeItem;
             }
         }
         #endregion
 
-        #region ChampItems
+        #region Champions
 
-        internal List<ChampItems> ChampItems
+        internal List<Champions> Champions
         {
             get
             {
-                if (_champItems == null)
+                if (_champions == null)
                 {
-                    string readText = GetYamlData("champItems");
+                    string readText = GetYamlData("champions");
                     var deserializer = new DeserializerBuilder()
                         .WithNamingConvention(CamelCaseNamingConvention.Instance)
                         .Build();
-                    _champItems = deserializer.Deserialize<List<ChampItems>>(readText);
+                    _champions = deserializer.Deserialize<List<Champions>>(readText);
                 }
 
-                return _champItems;
+                return _champions;
             }
         }
         #endregion
