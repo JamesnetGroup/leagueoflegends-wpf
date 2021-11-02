@@ -44,9 +44,6 @@
     <None Update="Datas\champFilter.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Datas\champions.yml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="Datas\clashCups.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -89,13 +86,13 @@
     <None Update="Datas\mapTypes.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Datas\champHeaders.yml">
+    <None Update="Datas\champTreeItem.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Datas\plantHeaders.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Datas\champItems.yml">
+    <None Update="Datas\champions.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Datas\plantItems.yml">
@@ -117,9 +114,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Datas\settingMenus.yml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Update="Datas\skins.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Datas\spells-en.yml">

@@ -38,23 +38,22 @@ namespace Lol.Database.Controller
         }
         #endregion
 
-        public List<ChampHeaders> GetChampHeaders()
+        public List<ChampTreeItem> GetChampTreeItem()
         {
-            Db.ChampItems.ForEach(x => {
+            Db.Champions.ForEach(x => {
                 x.Img = ResourceHelper.ImgResource(x.Img);
                 x.Insignia = ResourceHelper.ImgResource(x.Insignia);
             });
 
-            var query = from c in Db.ChampHeaders
-                        select new ChampHeaders
+            var query = from c in Db.ChampTreeItem
+                        select new ChampTreeItem
                         {
                             Seq = c.Seq,
-                            ChampCbSeq = c.ChampCbSeq,
-                            Children = Db.ChampItems.Where(x => x.HeaderSeq == c.Seq).OrderBy(y => y.Name).ToList(),
+                            Role = c.Role,
+                            Children = Db.Champions.Where(x => x.HeaderSeq == c.Seq).OrderBy(y => y.Name).ToList(),
                             Header = c.Header,
                             IsExpanded =  c.IsExpanded
                         };
-
             return query.ToList();
         }
     }
