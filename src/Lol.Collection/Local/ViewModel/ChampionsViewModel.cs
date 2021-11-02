@@ -10,18 +10,18 @@ namespace Lol.Collection.Local.ViewModel
     {
         #region Variables
 
-        private List<ChampCb> _champFilter1;
-        private List<ChampCb> _champFilter2;
+        private List<ChampFilter> _champFilter1;
+        private List<ChampFilter> _champFilter2;
 
-        private ChampCb _currentChampFilter1;
-        private ChampCb _currentChampFilter2;
+        private ChampFilter _currentChampFilter1;
+        private ChampFilter _currentChampFilter2;
         private List<ChampHeaders> _treeSource;
         private string _searchText;
         #endregion
 
         #region ChampFilter1
 
-        public List<ChampCb> ChampFilter1
+        public List<ChampFilter> ChampFilter1
         {
             get => _champFilter1;
             set { _champFilter1 = value; OnPropertyChanged(); }
@@ -30,7 +30,7 @@ namespace Lol.Collection.Local.ViewModel
 
         #region ChampFilter2
 
-        public List<ChampCb> ChampFilter2
+        public List<ChampFilter> ChampFilter2
         {
             get => _champFilter2;
             set { _champFilter2 = value; OnPropertyChanged(); }
@@ -39,7 +39,7 @@ namespace Lol.Collection.Local.ViewModel
 
         #region CurrentChampFilter1
 
-        public ChampCb CurrentChampFilter1
+        public ChampFilter CurrentChampFilter1
         {
             get => _currentChampFilter1;
             set { _currentChampFilter1 = value; OnPropertyChanged(); FilterChanged(value); }
@@ -48,7 +48,7 @@ namespace Lol.Collection.Local.ViewModel
 
         #region CurrentChampFilter2
 
-        public ChampCb CurrentChampFilter2
+        public ChampFilter CurrentChampFilter2
         {
             get => _currentChampFilter2;
             set { _currentChampFilter2 = value; OnPropertyChanged(); FilterChanged(value); }
@@ -77,8 +77,8 @@ namespace Lol.Collection.Local.ViewModel
 
         public ChampionsViewModel()
         {
-            ChampFilter1 = new ChampApi().GetChampCb1();
-            ChampFilter2 = new ChampApi().GetChampCb2();
+            ChampFilter1 = new ChampApi().GetChampFilter1();
+            ChampFilter2 = new ChampApi().GetChampFilter2();
 
             CurrentChampFilter1 = ChampFilter1.First();
             CurrentChampFilter2 = ChampFilter2.First();
@@ -89,7 +89,7 @@ namespace Lol.Collection.Local.ViewModel
 
         #region FilterChanged
 
-        private void FilterChanged(ChampCb value)
+        private void FilterChanged(ChampFilter value)
         {
             //
         }

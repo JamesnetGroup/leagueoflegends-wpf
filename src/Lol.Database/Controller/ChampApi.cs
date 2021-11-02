@@ -6,31 +6,13 @@ namespace Lol.Database.Controller
 {
     public class ChampApi : LolDbContext
     {
-        #region GetChamps
+        #region GetChampFilter1
 
-        public List<Champs> GetChamps()
+        public List<ChampFilter> GetChampFilter1()
         {
-            var query = from c in Db.Champs
-                        select new Champs
-                        {
-                            Seq = c.Seq,
-                            Champ = c.Champ,
-                            Name = c.Name,
-                            Img = ResourceHelper.ImgResource(c.Img),
-                            Insignia = ResourceHelper.ImgResource(c.Insignia),
-                            영원석 = c.영원석
-                        };
-            return query.ToList();
-        }
-        #endregion
-
-        #region GetChampCb1
-
-        public List<ChampCb> GetChampCb1()
-        {
-            var query = from c in Db.ChampCb
+            var query = from c in Db.ChampFilter
                         where c.Type == 0
-                        select new ChampCb
+                        select new ChampFilter
                         {
                             Seq = c.Seq,
                             Content = c.Content,
@@ -40,13 +22,13 @@ namespace Lol.Database.Controller
         }
         #endregion
 
-        #region GetChampCb2
+        #region GetChampFilter2
 
-        public List<ChampCb> GetChampCb2()
+        public List<ChampFilter> GetChampFilter2()
         {
-            var query = from c in Db.ChampCb
+            var query = from c in Db.ChampFilter
                         where c.Type == 1
-                        select new ChampCb
+                        select new ChampFilter
                         {
                             Seq = c.Seq,
                             Content = c.Content,
