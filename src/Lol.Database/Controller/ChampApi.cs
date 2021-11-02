@@ -75,8 +75,5 @@ namespace Lol.Database.Controller
 
             return query.ToList();
         }
-
-
-
     }
 }
