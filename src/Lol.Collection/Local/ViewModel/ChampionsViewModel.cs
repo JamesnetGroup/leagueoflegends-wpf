@@ -17,6 +17,8 @@ namespace Lol.Collection.Local.ViewModel
         private ChampFilter _currentChampFilter1;
         private ChampFilter _currentChampFilter2;
         private string _searchText;
+        private int _proficiency;
+        private int _achieve;
         #endregion
 
         #region ChampFilter1
@@ -59,7 +61,7 @@ namespace Lol.Collection.Local.ViewModel
 
         public List<ChampTreeItem> Champions
         {
-            get { return _champions; }
+            get => _champions;
             set { _champions = value; OnPropertyChanged(); }
         }
         #endregion
@@ -68,8 +70,26 @@ namespace Lol.Collection.Local.ViewModel
 
         public string SearchText
         {
-            get { return _searchText; }
+            get => _searchText;
             set { _searchText = value; OnPropertyChanged(); SearchTextChanged(value); }
+        }
+        #endregion
+
+        #region Proficiency
+
+        public int Proficiency
+        {
+            get { return _proficiency; }
+            set { _proficiency = value; OnPropertyChanged(); }
+        }
+        #endregion
+
+        #region Achieve
+
+        public int Achieve
+        {
+            get { return _achieve; }
+            set { _achieve = value; OnPropertyChanged(); }
         }
         #endregion
 
@@ -84,6 +104,8 @@ namespace Lol.Collection.Local.ViewModel
             CurrentChampFilter2 = ChampFilter2.First();
 
             Champions = new ChampApi().GetChampTreeItem();
+            Proficiency = 282;
+            Achieve = 343;
         }
         #endregion
 
