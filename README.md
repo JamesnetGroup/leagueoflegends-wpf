@@ -99,7 +99,7 @@
 <br />
 
 ### `Collection`
-![image](https://user-images.githubusercontent.com/74305823/139851337-6d39e99d-b212-4f3b-ac4a-c066d1b48efe.png)
+![image](https://user-images.githubusercontent.com/74305823/140320827-2098e387-1c40-440d-bc3c-bf0703d2ed00.png)
 
 ![image](https://user-images.githubusercontent.com/74305823/138594906-270d42f5-bee6-4486-bd59-5a05cd8ead33.png)
 
