@@ -42,6 +42,7 @@ namespace Lol.Database.Entites.Statics
         internal List<StoreChampSortings> _storeChampSortings;
         internal List<SettingMenus> _settingMenus;
         internal List<ChampFilter> _champFilter;
+        internal List<SkinFilter> _skinFilter;
         internal List<Resolutions> _resolutions;
         internal List<Runes> _runes;
         internal List<RuneDetail> _runeDetail;
@@ -548,6 +549,26 @@ namespace Lol.Database.Entites.Statics
                 }
 
                 return _champions;
+            }
+        }
+        #endregion
+
+        #region SkinFilter
+
+        internal List<SkinFilter> SkinFilter
+        {
+            get
+            {
+                if (_skinFilter == null)
+                {
+                    string readText = GetYamlData("skinFilter");
+                    var deserializer = new DeserializerBuilder()
+                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .Build();
+                    _skinFilter = deserializer.Deserialize<List<SkinFilter>>(readText);
+                }
+
+                return _skinFilter;
             }
         }
         #endregion

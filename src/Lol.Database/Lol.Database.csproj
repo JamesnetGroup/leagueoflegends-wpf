@@ -17,6 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Datas\skinFilter.yml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Datas\lobbyLists.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
