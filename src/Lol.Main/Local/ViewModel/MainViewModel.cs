@@ -181,6 +181,7 @@ namespace Lol.Main.Local.ViewModel
                     12 => new HubView().SetVM(new HubViewModel()),
                     15 => new WinnersView().SetVM(new WinnersViewModel()),
                     17 => new ChampionsView().SetVM(new ChampionsViewModel()),
+                    18 => new SkinView().SetVM(new SkinsViewModel()),
                     20 => new RuneView().SetVM(new RuneViewModel()),
                     21 => new SpellsView().SetVM(new SpellsViewModel(BackgroundImage)),
                     22 => new ItemView().SetVM(new ItemViewModel()),

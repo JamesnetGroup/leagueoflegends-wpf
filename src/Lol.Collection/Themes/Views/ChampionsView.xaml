@@ -12,7 +12,7 @@
                             <ColumnDefinition Width="2.5*"/>
                             <ColumnDefinition Width="7.5*"/>
                         </Grid.ColumnDefinitions>
-                        <units:LeftMenu/>
+                        <units:ChampsLeftMenu/>
                         <units:ChampionsList/>
                     </Grid>
                 </ControlTemplate>

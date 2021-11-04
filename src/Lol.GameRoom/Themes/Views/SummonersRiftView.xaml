@@ -11,7 +11,7 @@
         <Setter Property="IconVisibility" Value="Collapsed"/>
     </Style>
 
-    <Style TargetType="{x:Type ctrls:RiotGameButtonn}" x:Key="RIOT.GAMEBTN">
+    <Style TargetType="{x:Type ctrls:RiotGameButton}" x:Key="RIOT.GAMEBTN">
         <Setter Property="Content" Value="대전 찾기"/>
         <Setter Property="VerticalAlignment" Value="Bottom"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
@@ -25,7 +25,7 @@
                         <units:RoomTitle/>
                         <units:TopRightContent/>
                         <ctrls:RiotTextBox Style="{StaticResource RIOT.TXB}"/>
-                        <ctrls:RiotGameButtonn Style="{StaticResource RIOT.GAMEBTN}" Command="{Binding CloseCommand}"/>
+                        <ctrls:RiotGameButton Style="{StaticResource RIOT.GAMEBTN}" Command="{Binding CloseCommand}"/>
                         <units:StateBox Margin="0 0 16 0"/>
                         <units:InviteButtonGrid/>
                         <units:MyDetail/>

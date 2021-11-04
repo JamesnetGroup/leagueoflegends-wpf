@@ -28,7 +28,7 @@
     <Page Update="Themes\Units\Champs\ChampionItem.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
     </Page>
-    <Page Update="Themes\Units\Champs\LeftMenu.xaml">
+    <Page Update="Themes\Units\Champs\ChampsLeftMenu.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
     </Page>
     <Page Update="Themes\Units\Items\MapListBoxItem.xaml">
@@ -44,6 +44,14 @@
     </Page>
     <Page Update="Themes\Units\Items\ItemQuickMenu.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
+    <Page Update="Themes\Units\Skins\SkinsSummary.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\Skins\SkinsLeftMenu.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
     </Page>
     <Page Update="Themes\Views\RuneView.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
