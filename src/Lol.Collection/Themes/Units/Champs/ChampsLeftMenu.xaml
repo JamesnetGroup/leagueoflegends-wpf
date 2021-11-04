@@ -24,11 +24,11 @@
         <Setter Property="Foreground" Value="#77776E"/>
     </Style>
     
-    <Style TargetType="{x:Type units:LeftMenu}">
+    <Style TargetType="{x:Type units:ChampsLeftMenu}">
         <Setter Property="Grid.Column" Value="0"/>
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type units:LeftMenu}">
+                <ControlTemplate TargetType="{x:Type units:ChampsLeftMenu}">
                     <StackPanel Margin="20 60 30 0">
                         <Border>
                             <Viewbox Width="200" Height="200">

@@ -10,12 +10,14 @@
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/Spells/SpellListBox.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/Champs/ChampionsList.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/Champs/ChampionItem.xaml"/>
-        <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/Champs/LeftMenu.xaml"/>
+        <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/Champs/ChampsLeftMenu.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/Items/MapListBoxItem.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/Items/MapListBox.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/Items/ItemSetListBoxItem.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/Items/ItemSetListBox.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/Items/ItemQuickMenu.xaml"/>
+        <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/Skins/SkinsLeftMenu.xaml"/>
+        <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/Skins/SkinsSummary.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Views/ItemView.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Views/SkinView.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Views/RuneView.xaml"/>

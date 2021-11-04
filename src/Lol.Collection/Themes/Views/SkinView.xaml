@@ -1,5 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:units="clr-namespace:Lol.Collection.UI.Units"
                     xmlns:views="clr-namespace:Lol.Collection.UI.Views">
   
     <Style TargetType="{x:Type views:SkinView}">
@@ -11,8 +12,7 @@
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <!--<Control Style="{StaticResource CTL.SKIN.LEFT}"/>-->
-                        <!--<ListBox Style="{StaticResource LBX.SKIN}"/>-->
+                        <units:SkinsLeftMenu/>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>

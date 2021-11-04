@@ -51,7 +51,7 @@ namespace Lol.Collection.Local.ViewModel
         public ChampFilter CurrentChampFilter2
         {
             get => _currentChampFilter2;
-            set { _currentChampFilter2 = value; OnPropertyChanged(); FilterChanged(value); }
+            set { _currentChampFilter2 = value; OnPropertyChanged(); SortChanged(value); }
         }
         #endregion
 
@@ -90,6 +90,14 @@ namespace Lol.Collection.Local.ViewModel
         #region FilterChanged
 
         private void FilterChanged(ChampFilter value)
+        {
+            //
+        }
+        #endregion
+
+        #region SortChanged
+
+        private void SortChanged(ChampFilter value)
         {
             //
         }
