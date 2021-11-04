@@ -4,20 +4,6 @@
                     xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport"
                     xmlns:types="clr-namespace:Lol.Database.Entites.Schema;assembly=Lol.Database">
 
-    <LinearGradientBrush x:Key="BDR.PARENT" StartPoint="0.5, 0" EndPoint="0.5, 1">
-        <GradientStop Color="#FDFDFD" Offset="0"/>
-        <GradientStop Color="#E4D6BA" Offset="0.5"/>
-        <GradientStop Color="#C8AA6E" Offset="1"/>
-    </LinearGradientBrush>
-
-    <Style TargetType="{x:Type Border}" x:Key="BDR.TEMP">
-        <Setter Property="BorderThickness" Value="0.5"/>
-        <Setter Property="BorderBrush" Value="#474C45"/>
-        <Setter Property="Width" Value="400"/>
-        <Setter Property="Margin" Value="0 20 0 15"/>
-        <Setter Property="HorizontalAlignment" Value="Left"/>
-    </Style>
-
     <Style TargetType="{x:Type TextBlock}" x:Key="TXB.HEADER">
         <Setter Property="Text" Value="{Binding Header}"/>
         <Setter Property="Foreground" Value="#F0E6D2"/>
@@ -40,57 +26,18 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type TreeViewItem}">
                     <StackPanel Margin="0 0 20 0">
-                        <StackPanel x:Name="header" 
-                                    Orientation="Horizontal" 
-                                    Margin="0 0 0 20">
+                        <StackPanel x:Name="header" Orientation="Horizontal" Margin="0 0 0 20">
                             <TextBlock Style="{StaticResource TXB.HEADER}"/>
                             <TextBlock Style="{StaticResource TXB.COUNT}"/>
                         </StackPanel>
-                        <StackPanel x:Name="content" 
-                                    Margin="0 0 0 20">
-                            <Grid>
-                                <Border x:Name="border" 
-                                        BorderThickness="1" 
-                                        BorderBrush="#1E2328">
-                                    <Image Source="{Binding Img}" 
-                                           Stretch="Fill"
-                                           Height="220"/>
-                                </Border>
-                                <StackPanel x:Name="stack"
-                                            Height="34" 
-                                            Background="Black" 
-                                            Margin="0 0 1 1" 
-                                            Opacity="0.7" 
-                                            VerticalAlignment="Bottom" 
-                                            Orientation="Horizontal">
-                                    <ctrls:RiotIcon x:Name="icon" 
-                                                    Width="18" 
-                                                    Height="18" 
-                                                    Fill="#B09B8C" 
-                                                    HorizontalAlignment="Right" 
-                                                    VerticalAlignment="Center" 
-                                                    IconType="Fire" 
-                                                    Margin="75 0 10 0"/>
-                                    <TextBlock x:Name="text"  
-                                               Text="{Binding Eternals}" 
-                                               FontSize="13"  
-                                               Foreground="#B09B8C" 
-                                               HorizontalAlignment="Center" 
-                                               VerticalAlignment="Center"/>
-                                </StackPanel>
-                            </Grid>
+                        <StackPanel x:Name="content" Margin="0 0 0 20">
+                            <units:ChampionItem/>
                             <Image Source="{Binding Insignia}" Height="38" Margin="0 -35 -2 0" HorizontalAlignment="Left"/>
                             <TextBlock Text="{Binding Name}" FontSize="13" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="#999487" Margin="0 10 0 0"/>
                         </StackPanel>
                         <ItemsPresenter/>
                     </StackPanel>
                     <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="border" Property="BorderBrush" Value="{StaticResource BDR.PARENT}"/>
-                            <Setter TargetName="text" Property="Foreground" Value="#CDBE91"/>
-                            <Setter TargetName="icon" Property="Fill" Value="#CDBE91"/>
-                            <Setter TargetName="stack" Property="Opacity" Value="1"/>
-                        </Trigger>
                         <DataTrigger Binding="{Binding Type}" Value="{x:Type types:ChampTreeItem}">
                             <Setter TargetName="content" Property="Visibility" Value="Collapsed"/>
                             <Setter TargetName="header" Property="Visibility" Value="Visible"/>

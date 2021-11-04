@@ -9,6 +9,7 @@
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/Spells/SpellInfo.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/Spells/SpellListBox.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/Champs/ChampionsList.xaml"/>
+        <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/Champs/ChampionItem.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/Champs/LeftMenu.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/Items/MapListBoxItem.xaml"/>
         <ResourceDictionary Source="/Lol.Collection;component/Themes/Units/Items/MapListBox.xaml"/>
