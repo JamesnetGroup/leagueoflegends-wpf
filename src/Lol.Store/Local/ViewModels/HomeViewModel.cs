@@ -52,7 +52,6 @@ namespace Lol.Store.Local.ViewModels
         }
         #endregion
 
-
         #region Constructor
 
         public HomeViewModel()
