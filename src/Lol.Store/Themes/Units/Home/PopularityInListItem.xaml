@@ -2,13 +2,36 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:units="clr-namespace:Lol.Store.UI.Units"
                     xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
+    <LinearGradientBrush x:Key="BDR.DISCOUNT" StartPoint="0.5, 0" EndPoint="0.5 , 1">
+        <GradientStop Color="#C4993E" Offset="0"/>
+        <GradientStop Color="#D7BB84" Offset="0.5"/>
+        <GradientStop Color="#EEE3CC" Offset="1"/>
+    </LinearGradientBrush>
+    
+    <LinearGradientBrush x:Key="BG.DISCOUNT" StartPoint="0.5, 0" EndPoint="0.5 , 1">
+        <GradientStop Color="#EE5353" Offset="0"/>
+        <GradientStop Color="#C13133" Offset="0.5"/>
+        <GradientStop Color="#600305" Offset="1"/>
+    </LinearGradientBrush>
 
     <Style TargetType="{x:Type Control}" x:Key="CTRL.DISCOUNT">
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="Margin" Value="4 4 0 0"/>
         <Setter Property="Template">
             <Setter.Value>
-                <Border>
-                    
-                </Border>
+                <ControlTemplate>
+                    <Border Height="42" Width="42"
+                            BorderThickness="2"
+                            BorderBrush="{StaticResource BDR.DISCOUNT}" 
+                            CornerRadius="300"
+                            Background="{StaticResource BG.DISCOUNT}">
+                        <TextBlock HorizontalAlignment="Center" 
+                                   VerticalAlignment="Center"
+                                   Foreground="#ffffff"
+                                   Text="{Binding Discount, StringFormat={}{0}%}"/>
+                    </Border>
+                </ControlTemplate>
             </Setter.Value>
         </Setter>
     </Style>
@@ -80,6 +103,7 @@
                                            Visibility="Collapsed" 
                                            HorizontalAlignment="Center"/>
                             </StackPanel>
+                            <Control Style="{StaticResource CTRL.DISCOUNT}"/>
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>

@@ -3,71 +3,71 @@
   name: 바다용 카이사 테두리 세트
   value: 1900
   imgSource: Champ,Kaisa_30
-  Discount: 0
+  discount: 0
 - seq: 1
   parentSeq: 0
   name: 강철용 쓰레쉬 테두리 세트
   value: 2340
   imgSource: Champ,Yasuo_41
-  Discount: 0
+  discount: 0
 - seq: 2
   parentSeq: 0
   name: 평온용 카르마 테두리 세트
   value: 1900
   imgSource: Champ,Yasuo_40
-  Discount: 0
+  discount: 0
 - seq: 3
   parentSeq: 0
   name: 이중용 볼리베어 테두리 세트
   value: 1900
   imgSource: Champ,Volibear_7
-  Discount: 0
+  discount: 0
 - seq: 4
   parentSeq: 0
   name: 바다용 카이사 크로마 세트
   value: 2795
   imgSource: Champ,Kaisa_30
-  Discount: 0
+  discount: 0
 - seq: 5
   parentSeq: 0
   name: 바다용 쓰레쉬 크로마 세트
   value: 3235
   imgSource: Champ,Thresh_30
-  Discount: 0
+  discount: 0
 - seq: 6
   parentSeq: 1
   name: 마법공학 열쇠
   value: 250
   imgSource: Champ,Yasuo_41
-  Discount: 0
+  discount: 0
 - seq: 7
   parentSeq: 1
   name: 마법공학 상자
   value: 125
   imgSource: Champ,Yasuo_41
-  Discount: 0
+  discount: 0
 - seq: 8
   parentSeq: 1
   name: 마법공학 상자 & 열쇠 세트 10개 + 세트 1개 보너스!
   value: 1950
   imgSource: Champ,Yasuo_41
-  Discount: 0
+  discount: 0
 - seq: 9
   parentSeq: 1
   name: 쥬라기 초가스
   value: 536
   imgSource: Champ,Yasuo_41
-  Discount: 40
+  discount: -40
 - seq: 10
   parentSeq: 1
   name: 
   value: 312
   imgSource: Champ,Yasuo_41
-  Discount: 60
+  discount: -60
 - seq: 11
   parentSeq: 1
   name: 수영장 파티 탈리야
   value: 944
   imgSource: Champ,Yasuo_41
-  Discount: 55
+  discount: -55
 
