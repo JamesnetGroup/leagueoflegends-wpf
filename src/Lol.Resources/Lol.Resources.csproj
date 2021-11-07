@@ -1766,9 +1766,13 @@
     <None Remove="Images\Concepts\warrior.png" />
     <None Remove="Images\Concepts\wizard.png" />
     <None Remove="Images\Hextech\capsule.png" />
+    <None Remove="Images\Hextech\Chogath_50.png" />
     <None Remove="Images\Hextech\egg.png" />
+    <None Remove="Images\Hextech\key.png" />
+    <None Remove="Images\Hextech\Leona_50.png" />
     <None Remove="Images\Hextech\magicbox.png" />
     <None Remove="Images\Hextech\prestige.png" />
+    <None Remove="Images\Hextech\Taliyah_4.png" />
     <None Remove="Images\Hextech\ward-token.png" />
     <None Remove="Images\ico-14.png" />
     <None Remove="Images\icon-menu-selected.png" />
@@ -3587,9 +3591,13 @@
     <Resource Include="Images\Champ\Zyra_6.jpg" />
     <Resource Include="Images\Champ\Zyra_7.jpg" />
     <Resource Include="Images\Hextech\capsule.png" />
+    <Resource Include="Images\Champ\Chogath_50.png" />
     <Resource Include="Images\Hextech\egg.png" />
+    <Resource Include="Images\Hextech\key.png" />
+    <Resource Include="Images\Champ\Leona_50.png" />
     <Resource Include="Images\Hextech\magicbox.png" />
     <Resource Include="Images\Hextech\prestige.png" />
+    <Resource Include="Images\Champ\Taliyah_4.png" />
     <Resource Include="Images\Hextech\ward-token.png" />
     <Resource Include="Images\map-icon.png" />
     <Resource Include="Images\Rune\Aftershock_rune.png" />

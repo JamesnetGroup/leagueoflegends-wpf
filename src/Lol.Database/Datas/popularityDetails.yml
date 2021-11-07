@@ -38,36 +38,36 @@
   parentSeq: 1
   name: 마법공학 열쇠
   value: 250
-  imgSource: Champ,Yasuo_41
+  imgSource: Hextech,key
   discount: 0
 - seq: 7
   parentSeq: 1
   name: 마법공학 상자
   value: 125
-  imgSource: Champ,Yasuo_41
+  imgSource: Hextech,magicbox
   discount: 0
 - seq: 8
   parentSeq: 1
   name: 마법공학 상자 & 열쇠 세트 10개 + 세트 1개 보너스!
   value: 1950
-  imgSource: Champ,Yasuo_41
+  imgSource: Hextech,magicbox
   discount: 0
 - seq: 9
   parentSeq: 1
   name: 쥬라기 초가스
   value: 536
-  imgSource: Champ,Yasuo_41
+  imgSource: Champ,Chogath_50
   discount: -40
 - seq: 10
   parentSeq: 1
-  name: 
+  name: 발키리 레오나
   value: 312
-  imgSource: Champ,Yasuo_41
+  imgSource: Champ,Leona_50
   discount: -60
 - seq: 11
   parentSeq: 1
   name: 수영장 파티 탈리야
   value: 944
-  imgSource: Champ,Yasuo_41
+  imgSource: Champ,Taliyah_4
   discount: -55
 

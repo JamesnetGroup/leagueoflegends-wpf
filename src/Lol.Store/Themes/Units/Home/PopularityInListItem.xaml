@@ -103,7 +103,7 @@
                                            Visibility="Collapsed" 
                                            HorizontalAlignment="Center"/>
                             </StackPanel>
-                            <Control Style="{StaticResource CTRL.DISCOUNT}"/>
+                            <Control x:Name="ctrlDis" Style="{StaticResource CTRL.DISCOUNT}"/>
                         </Grid>
                     </Border>
                     <ControlTemplate.Triggers>
@@ -119,6 +119,9 @@
                         </DataTrigger>
                         <DataTrigger Binding="{Binding Seq}" Value="3">
                             <Setter Property="VerticalAlignment" Value="Bottom"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Discount}" Value="0">
+                            <Setter TargetName="ctrlDis" Property="Visibility" Value="Collapsed"/>
                         </DataTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
