@@ -2,6 +2,16 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:units="clr-namespace:Lol.Store.UI.Units"
                     xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
+
+    <Style TargetType="{x:Type Control}" x:Key="CTRL.DISCOUNT">
+        <Setter Property="Template">
+            <Setter.Value>
+                <Border>
+                    
+                </Border>
+            </Setter.Value>
+        </Setter>
+    </Style>
     
     <Style TargetType="{x:Type ctrls:RiotIcon}" x:Key="RIOT.ICON">
         <Setter Property="Height" Value="28"/>
