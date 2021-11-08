@@ -114,6 +114,11 @@
 
 <br />
 
+### `My Shop`
+![image](https://user-images.githubusercontent.com/74305823/140745076-d88297bd-50ab-4a56-a558-c1fb78af1cb5.png)
+
+<br />
+
 ### `Store`
 ![image](https://user-images.githubusercontent.com/68521148/139537777-062b5bcf-61b2-4e10-a9df-31353bcffc66.PNG)
 
