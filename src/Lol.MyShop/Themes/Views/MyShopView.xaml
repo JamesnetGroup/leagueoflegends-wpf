@@ -15,12 +15,12 @@
 						</Grid.RowDefinitions>
 						<units:Title/>
                         <StackPanel Orientation="Horizontal" Grid.Row="1" Margin="40 0 0 0">
-                            <units:ShopItem1/>
-                            <units:ShopItem2/>
-                            <units:ShopItem3/>
-                            <units:ShopItem4/>
-                            <units:ShopItem5/>
-                            <units:ShopItem6/>
+                            <units:ShopItem ImageUrl="/Lol.Resources;component/Images/Champ/LeeSin_11.jpg" DiscountRate="-60"/>
+                            <units:ShopItem ImageUrl="/Lol.Resources;component/Images/Champ/KogMaw_9.jpg" DiscountRate="-20"/>
+                            <units:ShopItem ImageUrl="/Lol.Resources;component/Images/Champ/Aatrox_9.jpg" DiscountRate="-50"/>
+                            <units:ShopItem ImageUrl="/Lol.Resources;component/Images/Champ/Amumu_17.jpg" DiscountRate="-70"/>
+                            <units:ShopItem ImageUrl="/Lol.Resources;component/Images/Champ/Ashe_32.jpg" DiscountRate="-30"/>
+                            <units:ShopItem ImageUrl="/Lol.Resources;component/Images/Champ/Gangplank_21.jpg" DiscountRate="-20"/>
                         </StackPanel>
 						<units:EventInfo/>
 					</Grid>
