@@ -59,6 +59,7 @@ namespace Lol.Database.Entites.Statics
         internal List<Popularities> _popularities;
         internal List<PopularityDetails> _popularityDetails;
         internal List<LobbyLists> _lobbyLists;
+        internal List<UserCounts> _userCounts;
         #endregion
 
         #region GetYamlData
@@ -853,6 +854,25 @@ namespace Lol.Database.Entites.Statics
                 }
 
                 return _lobbyLists;
+            }
+        }
+        #endregion
+
+        #region UserCounts
+        internal List<UserCounts> UserCounts
+        {
+            get
+            {
+                if (_userCounts == null)
+                {
+                    string readText = GetYamlData("userCounts");
+                    var deserializer = new DeserializerBuilder()
+                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .Build();
+                    _userCounts = deserializer.Deserialize<List<UserCounts>>(readText);
+                }
+
+                return _userCounts;
             }
         }
         #endregion

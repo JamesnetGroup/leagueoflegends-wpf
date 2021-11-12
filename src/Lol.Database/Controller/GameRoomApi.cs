@@ -38,7 +38,7 @@ namespace Lol.Database.Controller
 
         #endregion
 
-        #region MyRegion
+        #region GetLobbyLists
 
         public List<LobbyLists> GetLobbyLists()
         {
@@ -55,5 +55,21 @@ namespace Lol.Database.Controller
             return query.ToList();
         }
         #endregion
+
+        #region GetUserCounts
+
+        public List<UserCounts> GetUserCounts()
+        {
+            var query = from i in Db.UserCounts
+                        select new UserCounts
+                        {
+                            Seq = i.Seq,
+                            UserCount = i.UserCount
+                        };
+            return query.ToList();
+        }
+        #endregion
+
+
     }
 }
