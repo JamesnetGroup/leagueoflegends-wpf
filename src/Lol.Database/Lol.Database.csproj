@@ -17,7 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="Datas\userCount.yml">
+    <None Update="Datas\userCounts.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Datas\skinFilter.yml">
