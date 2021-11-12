@@ -3,6 +3,7 @@ using Lol.Database.Entites.Schema;
 using Lol.Foundation.Mvvm;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Lol.GameRoom.Local.ViewModels
 {
@@ -13,6 +14,8 @@ namespace Lol.GameRoom.Local.ViewModels
         private Action<object> _customConfirm;
         private GameRoomsCustom _currentCusTom;
         public List<GameRoomsCustom> Customs { get; set; }
+        private List<UserCounts> _userCounts;
+        private UserCounts _currentUserCount;
 
         #endregion
 
@@ -29,6 +32,24 @@ namespace Lol.GameRoom.Local.ViewModels
         }
         #endregion
 
+        #region UserCounts
+
+        public List<UserCounts> UserCount
+        {
+            get => _userCounts;
+            set { _userCounts = value; OnPropertyChanged(); }
+        }
+        #endregion
+
+        #region CurrentUserCount
+
+        public UserCounts CurrentUserCount
+        {
+            get => _currentUserCount;
+            set { _currentUserCount = value; OnPropertyChanged(); }
+        }
+        #endregion
+
         #region Constructor
 
         public CreateCustomViewModel(Action<object> customConfirm)
@@ -36,11 +57,13 @@ namespace Lol.GameRoom.Local.ViewModels
             _customConfirm = customConfirm;
             Customs = new GameRoomApi().GetGameRoomsCustom();
 
+            UserCount = new GameRoomApi().GetUserCounts();
+            CurrentUserCount = UserCount.First();
+
             CurrentCustom = Customs[0];
             ConfirmCommand = new RelayCommand<object>(RoomCreateCommand, CanRoomCreateCommand);
         }
         #endregion
-
 
         #region RoomCreateCommand
 

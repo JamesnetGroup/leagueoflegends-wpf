@@ -72,9 +72,6 @@
         <Setter Property="Height" Value="30"/>
         <Setter Property="Margin" Value="0 10 0 20"/>
         <Setter Property="ItemContainerStyle" Value="{StaticResource IN.CBXI}"/>
-        <Setter Property="ItemsSource" Value="{Binding ChampCb1}"/>
-        <Setter Property="SelectedValue" Value="{Binding Model.InputDevice}"/>
-        <Setter Property="SelectedValuePath" Value="Name"/>
         <Setter Property="Content" Value="{Binding RelativeSource={RelativeSource Self}, Path=SelectedItem.Content}"/>
         <Setter Property="Foreground" Value="#77776E"/>
     </Style>
@@ -113,7 +110,9 @@
                                                IconVisibility="Collapsed"
                                                    Margin="0 10 0 20"/>
                                 <TextBlock Text="팀 인원 수:" Foreground="#F0E6D2" FontSize="14" FontWeight="Bold" Margin="0 0 0 0"/>
-                                <ctrls:RiotComboBox Style="{StaticResource CBX.DEVICE}" />
+                                <ctrls:RiotComboBox Style="{StaticResource CBX.DEVICE}" 
+                                                    ItemsSource="{Binding UserCount}"
+                                                    SelectedValue="{Binding CurrentUserCount}"/>
                                 <TextBlock Text="비밀번호 (선택 사항)" Foreground="#F0E6D2" FontSize="14" FontWeight="Bold" Margin="0 0 0 0"/>
                                 <ctrls:RiotTextBox MinWidth="300"
                                                Height="30"
