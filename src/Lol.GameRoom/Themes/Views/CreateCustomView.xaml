@@ -64,7 +64,7 @@
     </Style>
 
     <Style TargetType="{x:Type ctrls:RiotComboBoxItem}" x:Key="IN.CBXI">
-        <Setter Property="Content" Value="{Binding Content}"/>
+        <Setter Property="Content" Value="{Binding UserCount}"/>
     </Style>
     
     <Style TargetType="{x:Type ctrls:RiotComboBox}" x:Key="CBX.DEVICE">
@@ -72,7 +72,7 @@
         <Setter Property="Height" Value="30"/>
         <Setter Property="Margin" Value="0 10 0 20"/>
         <Setter Property="ItemContainerStyle" Value="{StaticResource IN.CBXI}"/>
-        <Setter Property="Content" Value="{Binding RelativeSource={RelativeSource Self}, Path=SelectedItem.Content}"/>
+        <Setter Property="Content" Value="{Binding RelativeSource={RelativeSource Self}, Path=SelectedItem.UserCount}"/>
         <Setter Property="Foreground" Value="#77776E"/>
     </Style>
 
