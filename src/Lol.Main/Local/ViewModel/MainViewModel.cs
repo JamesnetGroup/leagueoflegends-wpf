@@ -186,6 +186,7 @@ namespace Lol.Main.Local.ViewModel
                     21 => new SpellsView().SetVM(new SpellsViewModel(BackgroundImage)),
                     22 => new ItemView().SetVM(new ItemViewModel()),
                     26 => new store.HomeView().SetVM(new storeVM.HomeViewModel()),
+                    28 => new store.SkinView().SetVM(new storeVM.SkinViewModel()),
                     // TODO: [Elena] 클래스 이름 중복 관련 임시 처리 
                     27 => new store.ChampionsView().SetVM(new storeVM.ChampionsViewModel()),
                     33 => new HistoryView().SetVM(new HistoryViewModel()),
