@@ -1,5 +1,4 @@
-﻿using Lol.Database.Common;
-using Lol.Database.Entites.Core;
+﻿using Lol.Database.Entites.Core;
 using Lol.Database.Entites.Schema;
 
 namespace Lol.Database.Controller
