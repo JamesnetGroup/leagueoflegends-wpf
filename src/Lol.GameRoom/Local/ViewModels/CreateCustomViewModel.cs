@@ -58,7 +58,7 @@ namespace Lol.GameRoom.Local.ViewModels
             Customs = new GameRoomApi().GetGameRoomsCustom();
 
             UserCount = new GameRoomApi().GetUserCounts();
-            CurrentUserCount = UserCount.First();
+            CurrentUserCount = UserCount.LastOrDefault();
 
             CurrentCustom = Customs[0];
             ConfirmCommand = new RelayCommand<object>(RoomCreateCommand, CanRoomCreateCommand);
