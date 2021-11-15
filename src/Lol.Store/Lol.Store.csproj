@@ -17,6 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Page Update="Themes\Commons\ChampList.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    </Page>
     <Page Update="Themes\Commons\LockButton.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
@@ -90,6 +93,10 @@
     <Page Update="Themes\Views\ChampionsView.xaml">
       <SubType>Designer</SubType>
     </Page>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Themes\Units\Skin\" />
   </ItemGroup>
 
 </Project>
