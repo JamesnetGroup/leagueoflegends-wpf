@@ -8,11 +8,6 @@
         <GradientStop Color="#0D151A" Offset="1"/>
     </LinearGradientBrush>
 
-    <LinearGradientBrush x:Key="BDR.BOTTOM" StartPoint="0.5, 0" EndPoint="0.5, 1">
-        <GradientStop Color="#2F1103" Offset="0.9"/>
-        <GradientStop Color="#F3E18E" Offset="1"/>
-    </LinearGradientBrush>
-    
     <LinearGradientBrush x:Key="BG.PARENT" StartPoint="0.5, 0" EndPoint="0.5, 1">
         <GradientStop Color="#24323D" Offset="0"/>
         <GradientStop Color="#131B24" Offset="0.5"/>
@@ -27,16 +22,9 @@
                 <ControlTemplate TargetType="{x:Type units:MyDetail}">
                     <Grid>
                         <Border Width="200" Height="490" 
-                                BorderThickness="5 0 5 5"
+                                BorderThickness="5 0 5 0"
                                 BorderBrush="{StaticResource BDR.PARENT}" 
-                                Background="{StaticResource BG.PARENT}"
-                                CornerRadius="0 0 50 50">
-                        </Border>
-                        <Border Width="200" Height="490" 
-                                BorderThickness="0 0 0 5"
-                                BorderBrush="{StaticResource BDR.BOTTOM}" 
-                                Background="Transparent"
-                                CornerRadius="0 0 50 50">
+                                Background="{StaticResource BG.PARENT}">
                         </Border>
                         <TextBlock HorizontalAlignment="Center"
                                    VerticalAlignment="Top"
@@ -45,6 +33,7 @@
                                    FontWeight="Bold"
                                    Margin="0 90 0 0"
                                    Foreground="#F3BE0A"/>
+                        <Canvas Width="200" Height="60" VerticalAlignment="Bottom" x:Name="canvas"/>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
