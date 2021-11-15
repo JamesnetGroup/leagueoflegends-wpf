@@ -101,6 +101,10 @@
 							<Setter TargetName="border" Property="BorderBrush" Value="{StaticResource TXB.BDR.OVER}"/>
 							<Setter TargetName="close" Property="Visibility" Value="Visible"/>
 						</DataTrigger>
+                        <!--TODO: [Lucas] 텍스트 지우기 필요-->
+                        <DataTrigger Binding="{Binding ElementName=close, Path=IsPressed}" Value="true">
+                            <!--<Setter Property="Content" Value=""/>-->
+                        </DataTrigger>
 						<MultiDataTrigger>
 							<MultiDataTrigger.Conditions>
 								<Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Text}" Value=""/>
