@@ -9,9 +9,22 @@
 		<Setter Property="Template">
 			<Setter.Value>
                 <ControlTemplate TargetType="{x:Type views:SkinView}">
-                    <Grid Margin="0">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="200"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <units:ItemMenu/>
+                        <Grid Grid.Column="1">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <commons:TopRightContent/>
+                            <units:ChampList Grid.Row="1"/>
+                        </Grid>
                     </Grid>
-				</ControlTemplate>
+                </ControlTemplate>
 			</Setter.Value>
 		</Setter>
 	</Style>
