@@ -1,9 +1,11 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:units="clr-namespace:Lol.GameRoom.UI.Units">
+    
     <DataTemplate x:Key="LBX.FRIENDS">
         <units:FriendList/>
     </DataTemplate>
+    
     <DataTemplate x:Key="LBX.GUEST">
         <units:GuestList/>
     </DataTemplate>

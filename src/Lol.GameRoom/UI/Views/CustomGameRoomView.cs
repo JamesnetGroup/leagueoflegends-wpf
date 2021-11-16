@@ -7,11 +7,10 @@ namespace Lol.GameRoom.UI.Views
     {
         #region DefalutStyleKey
 
-        #endregion
-
         static CustomGameRoomView()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(CustomGameRoomView), new FrameworkPropertyMetadata(typeof(CustomGameRoomView)));
         }
+        #endregion
     }
 }

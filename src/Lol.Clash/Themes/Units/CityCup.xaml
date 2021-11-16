@@ -79,7 +79,7 @@
 		<Setter Property="Width" Value="130"/>
 	</Style>
 	
-    <Style TargetType="{x:Type ContentControl}" x:Key="CTC.TIER">
+    <Style TargetType="{x:Type ContentControl}" x:Key="CTL.TIER">
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -106,7 +106,7 @@
         </Setter>
     </Style>
 
-    <Style TargetType="{x:Type ContentControl}" x:Key="CTC.FREE">
+    <Style TargetType="{x:Type ContentControl}" x:Key="CTL.FREE">
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="Margin" Value="0 10 0 0"/>
         <Setter Property="Template">
@@ -114,7 +114,7 @@
                 <ControlTemplate TargetType="{x:Type ContentControl}">
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Foreground="#A09B8C" Text="자유 선수" VerticalAlignment="Center"/>
-                        <units:OnOffButton/>
+                        <ctrls:RiotToggleButton/>
 						<Border Width="18" Height="18" CornerRadius="30" Background="#C89B3C" Margin="10 0 0 0">
 							<ctrls:RiotIcon Width="12" Height="12" Fill="#000000" HorizontalAlignment="Center" VerticalAlignment="Center" IconType="Help"/>
                         </Border>
@@ -138,8 +138,8 @@
 						<TextBlock Style="{StaticResource TXB.GAUGE}"/>
                         <units:TicketButton/>
 						<Border Style="{StaticResource BDR.SEPERATE}"/>
-                        <ContentControl Style="{StaticResource CTC.TIER}"/>
-                        <ContentControl Style="{StaticResource CTC.FREE}"/>
+                        <ContentControl Style="{StaticResource CTL.TIER}"/>
+                        <ContentControl Style="{StaticResource CTL.FREE}"/>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 20 0 0">
                             <units:PositionButton SendIconType="Grass"/>
                             <units:PositionButton Margin="44 0 0 0" SendIconType="ArrowDecision"/>

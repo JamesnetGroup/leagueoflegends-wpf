@@ -7,7 +7,6 @@ namespace Lol.GameRoom.UI.Views
     {
         #region DefalutStyleKey
 
-
         static CreateCustomView()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(CreateCustomView), new FrameworkPropertyMetadata(typeof(CreateCustomView)));
