@@ -3,7 +3,8 @@
                     xmlns:views="clr-namespace:Lol.GameRoom.UI.Views"
                     xmlns:units="clr-namespace:Lol.GameRoom.UI.Units"
                     xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
-    <Style TargetType="{x:Type ctrls:RiotTextBox}" x:Key="RIOT.TXB">
+
+    <Style TargetType="{x:Type ctrls:RiotTextBox}" x:Key="TXB.SEARCH">
         <Setter Property="Width" Value="320"/>
         <Setter Property="Height" Value="35"/>
         <Setter Property="VerticalAlignment" Value="Bottom"/>
@@ -11,7 +12,8 @@
         <Setter Property="IconVisibility" Value="Collapsed"/>
     </Style>
 
-    <Style TargetType="{x:Type ctrls:RiotGameButton}" x:Key="RIOT.GAMEBTN">
+    <Style TargetType="{x:Type ctrls:RiotGameButton}" x:Key="BTN.FIND">
+        <Setter Property="Command" Value="{Binding CloseCommand}"/>
         <Setter Property="Content" Value="대전 찾기"/>
         <Setter Property="VerticalAlignment" Value="Bottom"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
@@ -22,12 +24,15 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type views:SummonersRiftView}">
                     <Grid Margin="20 0 20 20">
-                        <units:RoomTitle/>
-                        <units:TopRightContent/>
-                        <ctrls:RiotTextBox Style="{StaticResource RIOT.TXB}"/>
-                        <ctrls:RiotGameButton Style="{StaticResource RIOT.GAMEBTN}" Command="{Binding CloseCommand}"/>
-                        <units:StateBox Margin="0 0 16 0"/>
-                        <units:InviteButtonGrid/>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <units:RoomInfo/>
+                        <ctrls:RiotTextBox Style="{StaticResource TXB.SEARCH}" Grid.Row="0" Grid.RowSpan="2"/>
+                        <ctrls:RiotGameButton Style="{StaticResource BTN.FIND}" Grid.Row="0" Grid.RowSpan="2"/>
+                        <units:StateBox Margin="0 0 16 0" Grid.Row="0" Grid.RowSpan="2"/>
+                        <units:InviteButtonGrid Grid.Row="0" Grid.RowSpan="2"/>
                         <units:MyDetail/>
                     </Grid>
                 </ControlTemplate>

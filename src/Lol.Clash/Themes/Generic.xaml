@@ -4,7 +4,6 @@
         <ResourceDictionary Source="/Lol.Clash;component/Themes/Units/ScheduleListBox.xaml"/>
         <ResourceDictionary Source="/Lol.Clash;component/Themes/Units/Manual.xaml"/>
         <ResourceDictionary Source="/Lol.Clash;component/Themes/Units/CityCup.xaml"/>
-        <ResourceDictionary Source="/Lol.Clash;component/Themes/Units/OnOffButton.xaml"/>
         <ResourceDictionary Source="/Lol.Clash;component/Themes/Units/TicketButton.xaml"/>
         <ResourceDictionary Source="/Lol.Clash;component/Themes/Units/PositionButton.xaml"/>
         <ResourceDictionary Source="/Lol.Clash;component/Themes/Units/Schedule.xaml"/>
