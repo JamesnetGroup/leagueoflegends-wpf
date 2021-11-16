@@ -7,12 +7,12 @@
 		<Setter Property="SelectedValue" Value="{Binding CurrentSorting}"/>
 	</Style>
 
-	<Style TargetType="{x:Type units:ItemMenu}">
+    <Style TargetType="{x:Type units:SkinLeftMenu}">
 		<Setter Property="Template">
 			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type units:ItemMenu}">
+                <ControlTemplate TargetType="{x:Type units:SkinLeftMenu}">
 					<StackPanel Margin="30 55 5 0">
-                        <units:Category ItemsSource="{Binding ChampMenus}" SelectedItem="{Binding CurrentChampMenu}"/>
+                        <units:Category ItemsSource="{Binding SkinMenus}" SelectedItem="{Binding CurrentSkinMenu}"/>
 						<units:SearchTextBox/>
 						<units:StoreCheckBox Content="Show Owned" Margin="0 2 0 0"/>
 						<units:SortComboBox Style="{StaticResource CBX.SORT}"/>
