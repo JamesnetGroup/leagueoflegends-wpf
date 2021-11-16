@@ -7,6 +7,8 @@
         <ResourceDictionary Source="/Lol.Store;component/Themes/Commons/ChampList.xaml"/>
         <ResourceDictionary Source="/Lol.Store;component/Themes/Commons/Category.xaml"/>
         <ResourceDictionary Source="/Lol.Store;component/Themes/Commons/CategoryItem.xaml"/>
+        <ResourceDictionary Source="/Lol.Store;component/Themes/Commons/FilterList.xaml"/>
+        <ResourceDictionary Source="/Lol.Store;component/Themes/Commons/FilterListItem.xaml"/>
         <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Home/PopularityInListItem.xaml"/>
         <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Home/PopularityInList.xaml"/>
         <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Home/PopularityListItem.xaml"/>
@@ -16,8 +18,6 @@
         <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Home/NewSkin.xaml"/>
         <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Home/NewSkinList.xaml"/>
         <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Champions/ItemMenu.xaml"/>
-        <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Champions/FilterList.xaml"/>
-        <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Champions/FilterListItem.xaml"/>
         <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Champions/SearchTextBox.xaml"/>
         <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Champions/StoreCheckBox.xaml"/>
         <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Champions/SortComboBox.xaml"/>
