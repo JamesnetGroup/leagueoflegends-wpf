@@ -60,6 +60,7 @@ namespace Lol.Database.Entites.Statics
         internal List<PopularityDetails> _popularityDetails;
         internal List<LobbyLists> _lobbyLists;
         internal List<UserCounts> _userCounts;
+        internal List<StoreSkinTypes> _storeSkinTypes;
         #endregion
 
         #region GetYamlData
@@ -334,7 +335,7 @@ namespace Lol.Database.Entites.Statics
         }
         #endregion
 
-        #region ClashTabs
+        #region ClashTierDetails
 
         internal List<ClashTierDetails> ClashTierDetails
         {
@@ -434,7 +435,7 @@ namespace Lol.Database.Entites.Statics
         }
         #endregion
 
-        #region StoreChampTypes
+        #region StoreChampSortings
 
         internal List<StoreChampSortings> StoreChampSortings
         {
@@ -474,7 +475,7 @@ namespace Lol.Database.Entites.Statics
         }
         #endregion
 
-        #region SettingMenus
+        #region Resolutions
 
         internal List<Resolutions> Resolutions
         {
@@ -873,6 +874,26 @@ namespace Lol.Database.Entites.Statics
                 }
 
                 return _userCounts;
+            }
+        }
+        #endregion
+
+        #region StoreSkinTypes
+
+        internal List<StoreSkinTypes> StoreSkinTypes
+        {
+            get
+            {
+                if (_storeSkinTypes == null)
+                {
+                    string readText = GetYamlData("storeSkinTypes");
+                    var deserializer = new DeserializerBuilder()
+                      .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                      .Build();
+                    _storeSkinTypes = deserializer.Deserialize<List<StoreSkinTypes>>(readText);
+                }
+
+                return _storeSkinTypes;
             }
         }
         #endregion

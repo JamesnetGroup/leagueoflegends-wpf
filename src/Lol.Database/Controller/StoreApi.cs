@@ -108,5 +108,19 @@ namespace Lol.Database.Controller
             return query.ToList();
         }
         #endregion
+
+        #region GetSkinCategory
+
+        public List<StoreSkinTypes> GetSkinCategory()
+        {
+            var query = from s in Db.StoreSkinTypes
+                        select new StoreSkinTypes
+                        {
+                            Seq = s.Seq,
+                            Name = s.Name,
+                        };
+            return query.ToList();
+        }
+        #endregion
     }
 }
