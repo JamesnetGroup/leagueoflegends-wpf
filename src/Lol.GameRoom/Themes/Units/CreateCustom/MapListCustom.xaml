@@ -30,7 +30,7 @@
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
-                        <units:MapTitle_Custom/>
+                        <units:MapTitleCustom/>
                         <!--<Border Style="{StaticResource BDR.SECTION}"/>-->
                     </Grid>
                     <ControlTemplate.Triggers>
@@ -43,13 +43,13 @@
         </Setter>
     </Style>
 
-    <Style TargetType="{x:Type units:MapList_Custom}">
+    <Style TargetType="{x:Type units:MapListCustom}">
         <Setter Property="ItemContainerStyle" Value="{StaticResource LBXI.MAP}"/>
         <Setter Property="ItemsSource" Value="{Binding Customs}"/>
         <Setter Property="SelectedItem" Value="{Binding CurrentCustom}"/>
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type units:MapList_Custom}">
+                <ControlTemplate TargetType="{x:Type units:MapListCustom}">
                     <ItemsPresenter/>
                 </ControlTemplate>
             </Setter.Value>

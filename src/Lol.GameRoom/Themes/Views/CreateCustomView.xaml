@@ -92,7 +92,7 @@
                             <RowDefinition Height="auto"/>
                             <RowDefinition Height="1*"/>
                         </Grid.RowDefinitions>
-                        <units:MapList_Custom/>
+                        <units:MapListCustom/>
                         <Border Style="{StaticResource BDR.SECTION}"/>
                         <units:TrophyButton/>
                         <units:ConfirmButton Grid.RowSpan="2"/>

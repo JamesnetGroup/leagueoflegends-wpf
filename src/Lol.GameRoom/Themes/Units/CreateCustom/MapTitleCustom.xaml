@@ -32,14 +32,14 @@
         <Setter Property="Visibility" Value="{Binding RelativeSource={RelativeSource AncestorType=ListBoxItem}, Path=IsSelected, Converter={cnvts:BooleanToVisibilityConverter}}"/>
     </Style>
 
-    <Style TargetType="{x:Type units:MapTitle_Custom}">
+    <Style TargetType="{x:Type units:MapTitleCustom}">
         <Setter Property="Foreground" Value="#CDBE8E"/>
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="FontFamily" Value="Friz Quadrata Std"/>
         <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type units:MapTitle_Custom}">
+                <ControlTemplate TargetType="{x:Type units:MapTitleCustom}">
                     <Grid Background="Transparent">
                         <StackPanel Margin="0 0 0 15">
                             <units:MapSymbol/>
