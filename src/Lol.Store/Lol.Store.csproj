@@ -28,6 +28,14 @@
     <Page Update="Themes\Commons\ChampList.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
     </Page>
+    <Page Update="Themes\Commons\FilterList.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Commons\FilterListItem.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Themes\Commons\LockButton.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
@@ -43,12 +51,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Themes\Units\Champions\CategoryItem.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Themes\Units\Champions\FilterList.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Themes\Units\Champions\FilterListItem.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Themes\Units\Champions\ItemMenu.xaml">
