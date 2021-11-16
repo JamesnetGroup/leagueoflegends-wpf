@@ -29,9 +29,11 @@
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
                         <units:RoomInfo/>
+                        
                         <ctrls:RiotTextBox Style="{StaticResource TXB.SEARCH}" Grid.Row="0" Grid.RowSpan="2"/>
                         <ctrls:RiotGameButton Style="{StaticResource BTN.FIND}" Grid.Row="0" Grid.RowSpan="2"/>
                         <units:StateBox Margin="0 0 16 0" Grid.Row="0" Grid.RowSpan="2"/>
+                        
                         <units:InviteButtonGrid Grid.Row="0" Grid.RowSpan="2"/>
                         <units:MyDetail/>
                     </Grid>
