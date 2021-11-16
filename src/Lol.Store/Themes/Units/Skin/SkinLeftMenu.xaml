@@ -13,8 +13,8 @@
                 <ControlTemplate TargetType="{x:Type units:SkinLeftMenu}">
 					<StackPanel Margin="30 55 5 0">
                         <units:Category ItemsSource="{Binding SkinMenus}" SelectedItem="{Binding CurrentSkinMenu}"/>
-						<units:SearchTextBox/>
-						<units:StoreCheckBox Content="Show Owned" Margin="0 2 0 0"/>
+						<units:SearchTextBox />
+						<units:StoreCheckBox Content="보유 중인 상품도 보기" Margin="0 2 0 0"/>
 						<units:SortComboBox Style="{StaticResource CBX.SORT}"/>
 						<units:FilterList/>
 					</StackPanel>
