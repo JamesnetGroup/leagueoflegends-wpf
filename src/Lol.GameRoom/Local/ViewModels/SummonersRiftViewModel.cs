@@ -16,6 +16,7 @@ namespace Lol.GameRoom.Local.ViewModels
         private List<GuestModel> _guests;
         private Action _riftClose;
         private Action _modeChange;
+        private int _guestCount;
         #endregion
 
         #region ICommand
@@ -42,6 +43,15 @@ namespace Lol.GameRoom.Local.ViewModels
         }
         #endregion
 
+        #region GuestCount
+
+        public int GuestCount
+        {
+            get => _guestCount;
+            set { _guestCount = value; OnPropertyChanged(); }
+        }
+        #endregion
+
         #region Constructor
 
         public SummonersRiftViewModel(FriendsCollection friends, Action riftClose, Action modeChange)
@@ -54,10 +64,13 @@ namespace Lol.GameRoom.Local.ViewModels
 
             Friends = friends.GeneralList.Children.Where(x => x.Status == 3).ToList();
 
-            List<GuestModel> source = new List<GuestModel>();
+            List<GuestModel> source = new()
+            {
+                new GuestModel { Name = "Elena" }
+            };
 
-            source.Add(new GuestModel { Name = "Elena"});
             Guests = source;
+            GuestCount = Guests.Count;
         }
         #endregion
 
@@ -76,7 +89,6 @@ namespace Lol.GameRoom.Local.ViewModels
 
         #region ModeChangeCommandExe
 
-        #endregion
         private void ModeChangeCommandExe(object obj)
         {
             _modeChange?.Invoke();
@@ -86,5 +98,7 @@ namespace Lol.GameRoom.Local.ViewModels
         {
             return true;
         }
+        #endregion
+
     }
 }

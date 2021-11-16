@@ -9,7 +9,6 @@
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/Summoners/FriendList.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/Summoners/StateRadioButton.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/Summoners/GuestList.xaml"/>
-        <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/Summoners/ArrowTogglebutton.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/Summoners/MyDetail.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/Summoners/InviteButtonGrid.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/Summoners/StateBox.xaml"/>
