@@ -20,7 +20,7 @@
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
                         <units:TrophyButton/>
-                        <units:ConfirmButton_Join Grid.RowSpan="2"/>
+                        <units:ConfirmButtonJoin Grid.RowSpan="2"/>
                         <Grid Grid.Row="1">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto"/>

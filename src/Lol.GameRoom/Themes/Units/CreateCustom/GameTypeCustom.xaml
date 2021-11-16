@@ -65,13 +65,13 @@
         </Setter>
     </Style>
 
-    <Style TargetType="{x:Type units:GameType_Custom}">
+    <Style TargetType="{x:Type units:GameTypeCustom}">
         <Setter Property="Margin" Value="5 0 0 0"/>
         <Setter Property="ItemsSource" Value="{Binding GameTypes}"/>
         <Setter Property="ItemContainerStyle" Value="{StaticResource LBXI.MAPTYPE}"/>
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type units:GameType_Custom}">
+                <ControlTemplate TargetType="{x:Type units:GameTypeCustom}">
                     <ItemsPresenter/>
                 </ControlTemplate>
             </Setter.Value>

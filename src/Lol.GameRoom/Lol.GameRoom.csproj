@@ -12,15 +12,15 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Page Update="Themes\Units\CreateCustom\GameType_Custom.xaml">
+    <Page Update="Themes\Units\CreateCustom\GameTypeCustom.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Units\CreateCustom\MapList_Custom.xaml">
+    <Page Update="Themes\Units\CreateCustom\MapListCustom.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Units\JoinCustom\ConfirmButton_Join.xaml">
+    <Page Update="Themes\Units\JoinCustom\ConfirmButtonJoin.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
     </Page>
     <Page Update="Themes\Units\PVP\GameType.xaml">
