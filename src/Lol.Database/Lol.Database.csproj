@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Entites\Schema\LobbyLists.cs">
+    <Compile Update="Entites\Schema\LobbyList.cs">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
   </ItemGroup>
@@ -26,7 +26,7 @@
     <None Update="Datas\skinFilter.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Datas\lobbyLists.yml">
+    <None Update="Datas\lobbyList.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Datas\lootItemSortings.yml">

@@ -37,8 +37,6 @@ namespace Lol.GameRoom.Local.ViewModels
 
             _riftClose = riftClose;
             _modeChange = modeChange;
-
-
         }
 
         #region RoomCloseCommand
