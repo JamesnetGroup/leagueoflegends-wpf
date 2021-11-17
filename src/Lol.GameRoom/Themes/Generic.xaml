@@ -4,7 +4,7 @@
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/CreateCustom/MapTitleCustom.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/CreateCustom/GameTypeCustom.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/CreateCustom/MapListCustom.xaml"/>
-        <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/JoinCustom/ConfirmButtonJoin.xaml"/>
+        <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/JoinCustom/LobbyInfo.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/Summoners/InviteButton.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/Summoners/FriendList.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/Summoners/StateRadioButton.xaml"/>
@@ -18,7 +18,6 @@
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/PVP/GameType.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/PVP/MapTitle.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/PVP/MapList.xaml"/>
-        <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/PVP/ConfirmButton.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/PVP/TrophyButton.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Views/CustomGameRoomView.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Views/CreateCustomView.xaml"/>

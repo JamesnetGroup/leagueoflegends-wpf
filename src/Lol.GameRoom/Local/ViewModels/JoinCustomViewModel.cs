@@ -1,8 +1,9 @@
-﻿using Lol.Database.Controller;
+﻿using System;
+using System.Collections.Generic;
+using Lol.Database.Controller;
 using Lol.Database.Entites.Schema;
 using Lol.Foundation.Mvvm;
-using System;
-using System.Collections.Generic;
+
 
 namespace Lol.GameRoom.Local.ViewModels
 {
@@ -10,41 +11,32 @@ namespace Lol.GameRoom.Local.ViewModels
     {
         #region Variables
 
-        private Action<object> _customConfirm;
-        public List<LobbyLists> LobbyLists { get; set; }
+        private Action<object> _joinGame;
+        public List<LobbyList> LobbyList { get; set; }
         #endregion
 
         #region ICommand
-        public RelayCommand<object> ConfirmCommand { get; set; }
+
+        public RelayCommand<object> JoinCommand { get; set; }
         #endregion
 
         #region Constructor
 
-        public JoinCustomViewModel(Action<object> customConfirm)
+        public JoinCustomViewModel(Action<object> joinGame)
         {
-            _customConfirm = customConfirm;
-            LobbyLists = new GameRoomApi().GetLobbyLists();
+            _joinGame = joinGame;
+            LobbyList = new GameRoomApi().GetLobbyList();
 
-            ConfirmCommand = new RelayCommand<object>(RoomCreateCommand, CanRoomCreateCommand);
+            JoinCommand = new RelayCommand<object>(CreateRoom);
         }
         #endregion
 
+        #region CreateRoom
 
-        #region RoomCreateCommand
-
-        private void RoomCreateCommand(object obj)
+        private void CreateRoom(object obj)
         {
-            _customConfirm.Invoke(obj);
+            _joinGame.Invoke(obj);
         }
         #endregion
-
-        #region CanRoomCreateCommand
-
-        private bool CanRoomCreateCommand(object obj)
-        {
-            return true;
-        }
-        #endregion
-
     }
 }
