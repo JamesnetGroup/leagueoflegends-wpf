@@ -32,11 +32,11 @@ namespace Lol.GameRoom.UI.Units
     ///     <MyNamespace:MyDetail/>
     ///
     /// </summary>
-    public class MyDetail : Control
+    public class UserDetail : Control
     {
-        static MyDetail()
+        static UserDetail()
         {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(MyDetail), new FrameworkPropertyMetadata(typeof(MyDetail)));
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(UserDetail), new FrameworkPropertyMetadata(typeof(UserDetail)));
         }
     }
 }

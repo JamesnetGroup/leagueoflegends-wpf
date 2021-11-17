@@ -20,8 +20,9 @@
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Units\JoinCustom\ConfirmButtonJoin.xaml">
+    <Page Update="Themes\Units\JoinCustom\LobbyInfo.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
     </Page>
     <Page Update="Themes\Units\PVP\GameType.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
@@ -31,7 +32,7 @@
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Units\Summoners\InviteButtonGrid.xaml">
+    <Page Update="Themes\Units\Summoners\InviteGrid.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
@@ -46,6 +47,9 @@
     <Page Update="Themes\Units\PVP\MapList.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\Summoners\FindRoom.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
     </Page>
     <Page Update="Themes\Units\Summoners\StateBox.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
