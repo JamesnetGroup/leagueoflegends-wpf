@@ -3,32 +3,25 @@
                     xmlns:units="clr-namespace:Lol.GameRoom.UI.Units"
                     xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
 
-    <LinearGradientBrush x:Key="BDR.PARENT.OVER" StartPoint="0.5, 0" EndPoint="0.5, 1">
+    <LinearGradientBrush x:Key="LGB.BDR.OVER" StartPoint="0.5, 0" EndPoint="0.5, 1">
         <GradientStop Color="#CDC6B5" Offset="0"/>
         <GradientStop Color="#C3AC7A" Offset="0.5"/>
         <GradientStop Color="#B38C3A" Offset="1"/>
     </LinearGradientBrush>
     
-    <LinearGradientBrush x:Key="BG.PARENT.OVER" StartPoint="0.5, 0" EndPoint="0.5, 1">
+    <LinearGradientBrush x:Key="LGB.BG.OVER" StartPoint="0.5, 0" EndPoint="0.5, 1">
         <GradientStop Color="#1F2428" Offset="0"/>
         <GradientStop Color="#2D302F" Offset="0.5"/>
         <GradientStop Color="#3A3A34" Offset="1"/>
     </LinearGradientBrush>
     
-    <Style TargetType="{x:Type ctrls:RiotIcon}" x:Key="RIOT.ICON">
+    <Style TargetType="{x:Type ctrls:RiotIcon}" x:Key="ICON.PLUS">
         <Setter Property="IconType" Value="Plus"/>
         <Setter Property="Width" Value="22"/>
         <Setter Property="Height" Value="22"/>
         <Setter Property="Fill" Value="#C3B68B"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
-    </Style>
-
-    <Style TargetType="{x:Type Border}" x:Key="BD.PARENT">
-        <Setter Property="BorderThickness" Value="2"/>
-        <Setter Property="Width" Value="67"/>
-        <Setter Property="Height" Value="67"/>
-        <Setter Property="CornerRadius" Value="300"/>
     </Style>
 
     <Style TargetType="{x:Type units:InviteButton}">
@@ -39,17 +32,18 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:InviteButton}">
-                    <Grid>
-                        <Border x:Name="bd" Style="{StaticResource BD.PARENT}"
-                                Background="{TemplateBinding Background}"
-                                BorderBrush="{TemplateBinding BorderBrush}">
-                            <ctrls:RiotIcon Style="{StaticResource RIOT.ICON}"/>
-                        </Border>
-                    </Grid>
+                    <Border Width="67"
+                            Height="67"
+                            CornerRadius="300"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="2">
+                        <ctrls:RiotIcon Style="{StaticResource ICON.PLUS}"/>
+                    </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="{StaticResource BG.PARENT.OVER}"/>
-                            <Setter Property="BorderBrush" Value="{StaticResource BDR.PARENT.OVER}"/>
+                            <Setter Property="Background" Value="{StaticResource LGB.BG.OVER}"/>
+                            <Setter Property="BorderBrush" Value="{StaticResource LGB.BDR.OVER}"/>
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

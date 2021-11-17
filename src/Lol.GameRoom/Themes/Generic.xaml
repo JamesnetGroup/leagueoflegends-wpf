@@ -9,10 +9,11 @@
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/Summoners/FriendList.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/Summoners/StateRadioButton.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/Summoners/GuestList.xaml"/>
-        <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/Summoners/MyDetail.xaml"/>
-        <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/Summoners/InviteButtonGrid.xaml"/>
+        <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/Summoners/UserDetail.xaml"/>
+        <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/Summoners/InviteGrid.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/Summoners/StateBox.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/Summoners/RoomInfo.xaml"/>
+        <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/Summoners/FindRoom.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/PVP/MapSymbol.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/PVP/GameType.xaml"/>
         <ResourceDictionary Source="/Lol.GameRoom;component/Themes/Units/PVP/MapTitle.xaml"/>
