@@ -19,6 +19,8 @@ namespace Lol.Store.Local.ViewModels
         private StoreChampSortings _currentSorting;
 
         private List<FilterModel> _filters;
+
+        private List<StoreItems> _storeSkins;
         #endregion
 
         #region SkinMenus
@@ -66,13 +68,24 @@ namespace Lol.Store.Local.ViewModels
         }
         #endregion
 
+        #region StoreSkins
+
+        public List<StoreItems> StoreSkins
+        {
+            get { return _storeSkins; }
+            set { _storeSkins = value; OnPropertyChanged(); }
+        }
+        #endregion
+
+
         #region Constructor
 
         public SkinViewModel()
         {
-            SkinMenus = new StoreApi().GetSkinCategory();
+            StoreApi api = new StoreApi();
+            SkinMenus = api.GetSkinCategory();
             CurrentSkinMenu = SkinMenus.First();
-            
+            StoreSkins = api.GetSkins();
         }
         #endregion
 

@@ -61,6 +61,7 @@ namespace Lol.Database.Entites.Statics
         internal List<LobbyList> _lobbyList;
         internal List<UserCounts> _userCounts;
         internal List<StoreSkinTypes> _storeSkinTypes;
+        internal List<StoreItems> _storeSkins;
         #endregion
 
         #region GetYamlData
@@ -894,6 +895,26 @@ namespace Lol.Database.Entites.Statics
                 }
 
                 return _storeSkinTypes;
+            }
+        }
+        #endregion
+
+        #region StoreChamps
+
+        internal List<StoreItems> StoreSkins
+        {
+            get
+            {
+                if (_storeSkins == null)
+                {
+                    string readText = GetYamlData("storeSkins");
+                    var deserializer = new DeserializerBuilder()
+                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .Build();
+                    _storeSkins = deserializer.Deserialize<List<StoreItems>>(readText);
+                }
+
+                return _storeSkins;
             }
         }
         #endregion
