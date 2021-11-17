@@ -1,6 +1,7 @@
 ﻿using Lol.Database.Common;
 using Lol.Database.Entites.Core;
 using Lol.Database.Entites.Schema;
+using System.Collections.Generic;
 
 namespace Lol.Database.Controller
 {
@@ -118,6 +119,23 @@ namespace Lol.Database.Controller
                         {
                             Seq = s.Seq,
                             Name = s.Name,
+                        };
+            return query.ToList();
+        }
+        #endregion
+
+        #region GetSkins
+
+        public List<StoreItems> GetSkins()
+        {
+            var query = from s in Db.StoreSkins
+                        select new StoreItems
+                        {
+                            Seq = s.Seq,
+                            Name = s.Name,
+                            ImgSource = ResourceHelper.ImgResource(s.ImgSource),
+                            RP = s.RP,
+                            BE = s.BE,
                         };
             return query.ToList();
         }

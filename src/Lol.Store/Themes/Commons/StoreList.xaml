@@ -47,7 +47,7 @@
                             BorderBrush="{TemplateBinding BorderBrush}"
                             Margin="0 12 0 0">
                         <Grid>
-                            <Image Source="{Binding ImgSource}"/>
+                            <Image Source="{Binding ImgSource}" Stretch="UniformToFill"  VerticalAlignment="Center" HorizontalAlignment="Center"/>
                             <Border Background="#77000000" x:Name="shadowBd"/>
                             <Border x:Name="overBd"
                                     Height="40" Width="40"                                   
@@ -97,7 +97,7 @@
                                         <Image Style="{StaticResource IN.IMG}" VerticalAlignment="Center"/>
                                         <TextBlock Text="{Binding RP}" Style="{StaticResource TXB.VALUE}"/>
                                     </StackPanel>
-                                    <StackPanel Orientation="Horizontal" Grid.Column="1" Margin="6 0 0 0">
+                                    <StackPanel Orientation="Horizontal" Grid.Column="1" Margin="6 0 0 0" x:Name="spBe">
                                         <Image Style="{StaticResource IN.IMG2}" VerticalAlignment="Center"/>
                                         <TextBlock Text="{Binding BE}" Style="{StaticResource TXB.VALUE}"/>
                                     </StackPanel>

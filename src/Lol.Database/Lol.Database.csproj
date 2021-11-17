@@ -17,6 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Datas\storeSkins.yml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Datas\storeSkinTypes.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
