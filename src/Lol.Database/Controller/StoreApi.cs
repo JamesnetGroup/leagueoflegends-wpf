@@ -39,10 +39,10 @@ namespace Lol.Database.Controller
 
         #region GetChamps
 
-        public List<StoreChamps> GetChamps()
+        public List<StoreItems> GetChamps()
         {
             var query = from s in Db.StoreChamps
-                        select new StoreChamps
+                        select new StoreItems
                         {
                             Seq = s.Seq,
                             Name = s.Name,

@@ -51,7 +51,7 @@ namespace Lol.Database.Entites.Statics
         internal List<LootItemSortings> _lootItemSortings;
         internal List<PlantHeaders> _plantHeaders;
         internal List<PlantItems> _plantItems;
-        internal List<StoreChamps> _storeChamps;
+        internal List<StoreItems> _storeChamps;
         internal List<ChampTreeItem> _champTreeItem;
         internal List<Champions> _champions;
         internal List<NewSkins> _newSkins;
@@ -737,7 +737,7 @@ namespace Lol.Database.Entites.Statics
 
         #region StoreChamps
 
-        internal List<StoreChamps> StoreChamps
+        internal List<StoreItems> StoreChamps
         {
             get
             {
@@ -747,7 +747,7 @@ namespace Lol.Database.Entites.Statics
                     var deserializer = new DeserializerBuilder()
                         .WithNamingConvention(CamelCaseNamingConvention.Instance)
                         .Build();
-                    _storeChamps = deserializer.Deserialize<List<StoreChamps>>(readText);
+                    _storeChamps = deserializer.Deserialize<List<StoreItems>>(readText);
                 }
 
                 return _storeChamps;

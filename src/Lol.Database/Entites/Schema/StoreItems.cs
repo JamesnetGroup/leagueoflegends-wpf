@@ -1,6 +1,6 @@
 ﻿namespace Lol.Database.Entites.Schema
 {
-    public class StoreChamps
+    public class StoreItems
     {
         public int Seq { get; set; }
         public string Name { get; set; }
