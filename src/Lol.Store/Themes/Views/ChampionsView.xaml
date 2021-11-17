@@ -20,7 +20,7 @@
                                 <RowDefinition Height="*"/>
                             </Grid.RowDefinitions>
                             <commons:TopRightContent/>
-                            <units:ChampList Grid.Row="1"/>
+                            <units:StoreList Grid.Row="1"/>
                         </Grid>
                     </Grid>
 				</ControlTemplate>

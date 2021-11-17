@@ -4,7 +4,7 @@
     <ResourceDictionary.MergedDictionaries>
         <ResourceDictionary Source="/Lol.Store;component/Themes/Commons/LockButton.xaml"/>
         <ResourceDictionary Source="/Lol.Store;component/Themes/Commons/TopRightContent.xaml"/>
-        <ResourceDictionary Source="/Lol.Store;component/Themes/Commons/ChampList.xaml"/>
+        <ResourceDictionary Source="/Lol.Store;component/Themes/Commons/StoreList.xaml"/>
         <ResourceDictionary Source="/Lol.Store;component/Themes/Commons/Category.xaml"/>
         <ResourceDictionary Source="/Lol.Store;component/Themes/Commons/CategoryItem.xaml"/>
         <ResourceDictionary Source="/Lol.Store;component/Themes/Commons/FilterList.xaml"/>

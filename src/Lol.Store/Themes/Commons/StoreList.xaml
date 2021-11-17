@@ -118,12 +118,12 @@
             </Setter.Value>
         </Setter>
     </Style>
-    <Style TargetType="{x:Type units:ChampList}">
+    <Style TargetType="{x:Type units:StoreList}">
         <Setter Property="ItemContainerStyle" Value="{StaticResource LBXI.CHAMP}"/>
         <Setter Property="ItemsSource" Value="{Binding StoreChamps}"/>
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type units:ChampList}">
+                <ControlTemplate TargetType="{x:Type units:StoreList}">
                     <ctrls:BasicScroll VerticalScrollBarVisibility="Auto"
                                        HorizontalScrollBarVisibility="Disabled"
                                        Padding="0 0 20 0">
