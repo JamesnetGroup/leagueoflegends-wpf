@@ -35,7 +35,7 @@ using Lol.Loot.Local.ViewModels;
 namespace Lol.Main.Local.ViewModel
 {
     public class MainViewModel : ObservableObject
-    {
+    { 
         #region Variables
 
         private readonly WindowWork _winWork;
