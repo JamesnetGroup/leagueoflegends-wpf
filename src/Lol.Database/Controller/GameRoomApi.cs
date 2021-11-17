@@ -31,19 +31,18 @@ namespace Lol.Database.Controller
                         {
                             Seq = i.Seq,
                             MapName = i.MapName
-
                         };
             return query.ToList();
         }
 
         #endregion
 
-        #region GetLobbyLists
+        #region GetLobbyList
 
-        public List<LobbyLists> GetLobbyLists()
+        public List<LobbyList> GetLobbyList()
         {
-            var query = from i in Db.LobbyLists
-                        select new LobbyLists
+            var query = from i in Db.LobbyList
+                        select new LobbyList
                         {
                             Seq = i.Seq,
                             Host = i.Host,

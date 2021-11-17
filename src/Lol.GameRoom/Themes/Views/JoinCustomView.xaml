@@ -4,10 +4,13 @@
                     xmlns:units="clr-namespace:Lol.GameRoom.UI.Units"
                     xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
 
-    <Style TargetType="{x:Type Border}" x:Key="BDR.SECTION">
-        <Setter Property="BorderThickness" Value="0 1 0 0"/>
-        <Setter Property="BorderBrush" Value="#606F6E"/>
+    <Style TargetType="{x:Type ctrls:RiotGameButton}" x:Key="BTN.JOIN">
+        <Setter Property="Command" Value="{Binding JoinCommand}"/>
         <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0 0 0 10"/>
+        <Setter Property="Content" Value="참가"/>
+        <Setter Property="Grid.Row" Value="1"/>
     </Style>
 
     <Style TargetType="{x:Type views:JoinCustomView}">
@@ -20,90 +23,56 @@
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
                         <units:TrophyButton/>
-                        <units:ConfirmButtonJoin Grid.RowSpan="2"/>
-                        <Grid Grid.Row="1">
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="Auto"/>
-                                <RowDefinition Height="*"/>
-                                <RowDefinition Height="50"/>
-                            </Grid.RowDefinitions>
-                            <TextBlock Text="사용자 설정 게임 로비" FontSize="20" FontWeight="Black" Foreground="#F0E6D2" Margin="0 25 0 0"/>
-                            <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="0 15 0 15">
-                                <ctrls:RiotIconButton IconType="Download" IconWidth="13" Width="30" Height="30"/>
-                                <ctrls:RiotTextBox Grid.ColumnSpan="3" MinWidth="250"
-                                           Height="30"
-                                           HorizontalAlignment="Right"
-                                           PlaceHolder="게임 찾기"
-                                           Margin="12 0 20 0"/>
-                                <ctrls:CheckBox01 x:Name="ch1" 
-                                              IsChecked="False" 
-                                              VerticalAlignment="Center"
-                                              Foreground="#9E998A" 
-                                              FontWeight="Bold" 
-                                              Content="관전 허용" 
-                                              FontSize="12"/>
-                                <ctrls:CheckBox01 x:Name="ch2" 
-                                              IsChecked="False" 
-                                              VerticalAlignment="Center"
-                                              Foreground="#9E998A" 
-                                              FontWeight="Bold" 
-                                              Content="비공개 로비만 보기" 
-                                              FontSize="12" Margin="15 0 0 0"/>
-                            </StackPanel>
-                            <Border Grid.Row="1" Style="{StaticResource BDR.SECTION}"/>
-                            <DataGrid Grid.Row="2" 
-                                      Background="Transparent" 
-                                      RowBackground="Transparent"
-                                      BorderThickness="0"
-                                      BorderBrush="Transparent"
-                                      AutoGenerateColumns="False" 
-                                      HeadersVisibility="Column"
-                                      GridLinesVisibility="None"
-                                      IsReadOnly="true"
-                                      ScrollViewer.CanContentScroll="True" 
-                                      ScrollViewer.VerticalScrollBarVisibility="Auto"
-                                      ScrollViewer.HorizontalScrollBarVisibility="Auto"
-                                      ItemsSource="{Binding LobbyLists}">
-                                <DataGrid.ColumnHeaderStyle>
-                                    <Style TargetType="DataGridColumnHeader">
-                                        <Setter Property="Height" Value="30" />
-                                        <Setter Property="Padding" Value="5" />
-                                        <Setter Property="Background" Value="Transparent" />
-                                        <Setter Property="Foreground" Value="#BBAB82" />
-                                        <Setter Property="FontSize" Value="13"/>
-                                        <Setter Property="FontWeight" Value="Bold"/>
-                                        <Setter Property="Height" Value="50"/>
-                                    </Style>
-                                </DataGrid.ColumnHeaderStyle>
-                                <DataGrid.RowStyle>
-                                    <Style TargetType="DataGridRow">
-                                        <Style.Triggers>
-                                            <Trigger Property="IsSelected" Value="True">
-                                                <Setter Property="Background" Value="Red"/>
-                                            </Trigger>
-                                        </Style.Triggers>
-                                        <Setter Property="Height" Value="35"/>
-                                        <Setter Property="Background" Value="Red"/>
-                                    </Style>
-                                </DataGrid.RowStyle>
-                                <DataGrid.Columns>
-                                    <DataGridTextColumn Header="로비이름" Binding="{Binding Lobby}" FontSize="15" Foreground="#9E998B" Width="4*"/>
-                                    <DataGridTextColumn Header="방장" Binding="{Binding Host}" FontSize="15" Foreground="#9E998B" Width="2*"/>
-                                    <DataGridTextColumn Header="맵" Binding="{Binding Map}" FontSize="15" Foreground="#9E998B" Width="2*"/>
-                                    <DataGridTextColumn Header="사람" Binding="{Binding TotalNumber}" FontSize="15" Foreground="#9E998B" Width="1*"/>
-                                    <DataGridTextColumn Header="관전" Binding="{Binding Spectator}" FontSize="15" Foreground="#9E998B" Width="1*"/>
-                                </DataGrid.Columns>
-                                
-                            </DataGrid>
-                        </Grid>
+                        <units:LobbyInfo/>
+
+                        <!--TODO: [Elena] 추후 Custom Control 작업-->
+                        <DataGrid Grid.Row="1" 
+                                  Background="Transparent" 
+                                  RowBackground="Transparent"
+                                  BorderThickness="0"
+                                  BorderBrush="Transparent"
+                                  AutoGenerateColumns="False" 
+                                  HeadersVisibility="Column"
+                                  GridLinesVisibility="None"
+                                  IsReadOnly="true"
+                                  ScrollViewer.CanContentScroll="True" 
+                                  ScrollViewer.VerticalScrollBarVisibility="Auto"
+                                  ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                                  ItemsSource="{Binding LobbyList}"
+                                  Margin="0 0 0 55">
+                            <DataGrid.ColumnHeaderStyle>
+                                <Style TargetType="DataGridColumnHeader">
+                                    <Setter Property="Height" Value="30" />
+                                    <Setter Property="Padding" Value="5" />
+                                    <Setter Property="Background" Value="Transparent" />
+                                    <Setter Property="Foreground" Value="#BBAB82" />
+                                    <Setter Property="FontSize" Value="13"/>
+                                    <Setter Property="FontWeight" Value="Bold"/>
+                                    <Setter Property="Height" Value="50"/>
+                                </Style>
+                            </DataGrid.ColumnHeaderStyle>
+                            <DataGrid.RowStyle>
+                                <Style TargetType="DataGridRow">
+                                    <Style.Triggers>
+                                        <Trigger Property="IsSelected" Value="True">
+                                            <Setter Property="Background" Value="Red"/>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                    <Setter Property="Height" Value="35"/>
+                                    <Setter Property="Background" Value="Red"/>
+                                </Style>
+                            </DataGrid.RowStyle>
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="로비이름" Binding="{Binding Lobby}" FontSize="15" Foreground="#9E998B" Width="4*"/>
+                                <DataGridTextColumn Header="방장" Binding="{Binding Host}" FontSize="15" Foreground="#9E998B" Width="2*"/>
+                                <DataGridTextColumn Header="맵" Binding="{Binding Map}" FontSize="15" Foreground="#9E998B" Width="2*"/>
+                                <DataGridTextColumn Header="사람" Binding="{Binding TotalNumber}" FontSize="15" Foreground="#9E998B" Width="1*"/>
+                                <DataGridTextColumn Header="관전" Binding="{Binding Spectator}" FontSize="15" Foreground="#9E998B" Width="1*"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+                        <ctrls:RiotGameButton Style="{StaticResource BTN.JOIN}"/>
                     </Grid>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver" Value="True">
-                            <Setter TargetName="ch1" Property="Foreground" Value="#CAE6D2"/>
-                            <Setter TargetName="ch2" Property="Foreground" Value="#CAE6D2"/>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

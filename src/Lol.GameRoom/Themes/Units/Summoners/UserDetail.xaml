@@ -15,18 +15,18 @@
     </LinearGradientBrush>
     
     <!--TODO: [Kevin] Blend Path 작업 예정-->
-    <Style TargetType="{x:Type units:MyDetail}">
+    <Style TargetType="{x:Type units:UserDetail}">
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Top"/>
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type units:MyDetail}">
+                <ControlTemplate TargetType="{x:Type units:UserDetail}">
                     <Grid>
-                        <Border Width="200" Height="490" 
+                        <Border Width="200" 
+                                Height="490" 
                                 BorderThickness="5 0 5 0"
                                 BorderBrush="{StaticResource BDR.PARENT}" 
-                                Background="{StaticResource BG.PARENT}">
-                        </Border>
+                                Background="{StaticResource BG.PARENT}"/>
                         <TextBlock HorizontalAlignment="Center"
                                    VerticalAlignment="Top"
                                    Text="Elena"
@@ -34,7 +34,9 @@
                                    FontWeight="Bold"
                                    Margin="0 90 0 0"
                                    Foreground="#F3BE0A"/>
-                        <Canvas Width="200" Height="60" VerticalAlignment="Bottom" x:Name="canvas"/>
+                        <Canvas Width="200"
+                                Height="60"
+                                VerticalAlignment="Bottom"/>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>

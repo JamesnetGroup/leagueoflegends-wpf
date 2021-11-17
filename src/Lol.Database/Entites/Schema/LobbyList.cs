@@ -1,6 +1,6 @@
 ﻿namespace Lol.Database.Entites.Schema
 {
-    public class LobbyLists
+    public class LobbyList
     {
         public int Seq { get; set; }
         public string Lobby { get; set; }
