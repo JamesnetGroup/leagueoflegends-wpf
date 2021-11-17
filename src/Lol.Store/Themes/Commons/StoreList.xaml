@@ -120,7 +120,6 @@
     </Style>
     <Style TargetType="{x:Type units:StoreList}">
         <Setter Property="ItemContainerStyle" Value="{StaticResource LBXI.CHAMP}"/>
-        <Setter Property="ItemsSource" Value="{Binding StoreChamps}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:StoreList}">
