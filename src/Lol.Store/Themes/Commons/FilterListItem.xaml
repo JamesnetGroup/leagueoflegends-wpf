@@ -5,26 +5,13 @@
     <Style TargetType="{x:Type units:FilterListItem}">
         <Setter Property="Cursor" Value="Hand"/>
         <Setter Property="Template">
-<<<<<<< HEAD
-			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type units:FilterListItem}">
-=======
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:FilterListItem}">
->>>>>>> 3e064f5f7b4b66ab3c511d1f8d1fbcaed237a768
                     <Border>
                         <units:StoreCheckBox Content="{Binding DisplayName}"/>
                     </Border>
                 </ControlTemplate>
-<<<<<<< HEAD
-			</Setter.Value>
-		</Setter>
-	</Style>
-	
-=======
             </Setter.Value>
         </Setter>
     </Style>
-
->>>>>>> 3e064f5f7b4b66ab3c511d1f8d1fbcaed237a768
 </ResourceDictionary>
