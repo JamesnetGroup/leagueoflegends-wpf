@@ -44,6 +44,7 @@
                                 <TextBlock Text="{Binding Infor8}" Foreground="#A8A8A8" FontSize="10" VerticalAlignment="Center" Margin="15 0 0 0"/>
                             </StackPanel>
                         </Border>
+                        <TextBlock Text="{Binding Name}" VerticalAlignment="Center" Foreground="#E2D7C5" FontSize="12" FontWeight="UltraBold" Margin="20 150 0 0"/>
                         <Border x:Name="bd2" VerticalAlignment="Bottom" BorderBrush="#4A4B50" Margin="10 0 0 0" BorderThickness="0 1 0 0">
                             <StackPanel Grid.Row="1" Orientation="Horizontal">
                                 <Image Source="{Binding Keystone}" Width="40" Height="45" />
