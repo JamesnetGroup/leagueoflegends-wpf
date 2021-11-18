@@ -1,7 +1,8 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:units="clr-namespace:Lol.Store.UI.Units"
-                    xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
+                    xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport"
+                    xmlns:commons="clr-namespace:Lol.Store.UI.Commons">
     
     <LinearGradientBrush x:Key="BDR.PARENT.OVER" StartPoint="0.5, 0" EndPoint="0.5, 1">
         <GradientStop Color="#F0E6D2" Offset="0"/>
@@ -118,11 +119,11 @@
             </Setter.Value>
         </Setter>
     </Style>
-    <Style TargetType="{x:Type units:StoreList}">
+    <Style TargetType="{x:Type commons:StoreList}">
         <Setter Property="ItemContainerStyle" Value="{StaticResource LBXI.CHAMP}"/>
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type units:StoreList}">
+                <ControlTemplate TargetType="{x:Type commons:StoreList}">
                     <ctrls:BasicScroll VerticalScrollBarVisibility="Auto"
                                        HorizontalScrollBarVisibility="Disabled"
                                        Padding="0 0 20 0">

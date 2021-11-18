@@ -20,7 +20,7 @@
                                 <RowDefinition Height="*"/>
                             </Grid.RowDefinitions>
                             <commons:TopRightContent/>
-                            <units:StoreList Grid.Row="1" ItemsSource="{Binding StoreChamps}"/>
+                            <commons:StoreList Grid.Row="1" ItemsSource="{Binding StoreChamps}"/>
                         </Grid>
                     </Grid>
 				</ControlTemplate>
