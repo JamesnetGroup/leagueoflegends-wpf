@@ -9,7 +9,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type commons:FilterListItem}">
                     <Border>
-                        <units:StoreCheckBox Content="{Binding DisplayName}"/>
+                        <commons:StoreCheckBox Content="{Binding DisplayName}"/>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
