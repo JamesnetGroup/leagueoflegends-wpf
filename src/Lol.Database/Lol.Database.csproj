@@ -122,7 +122,7 @@
     <None Update="Datas\runeDetail.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Datas\Runes.yml">
+    <None Update="Datas\runes.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Datas\settingMenus.yml">
