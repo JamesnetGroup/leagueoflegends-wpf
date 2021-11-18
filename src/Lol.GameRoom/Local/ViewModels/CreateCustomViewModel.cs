@@ -13,8 +13,8 @@ namespace Lol.GameRoom.Local.ViewModels
 
         private Action<object> _customConfirm;
         private GameRoomsCustom _currentCustom;
-        private List<UserCounts> _userCounts;
-        private UserCounts _currentUserCount;
+        private List<UserCount> _userCount;
+        private UserCount _currentUserCount;
 
         public List<GameRoomsCustom> Customs { get; set; }
         #endregion
@@ -28,23 +28,23 @@ namespace Lol.GameRoom.Local.ViewModels
 
         public GameRoomsCustom CurrentCustom
         {
-            get { return _currentCustom; }
+            get => _currentCustom;
             set { _currentCustom = value; OnPropertyChanged(); }
         }
         #endregion
 
-        #region UserCounts
+        #region UserCount
 
-        public List<UserCounts> UserCount
+        public List<UserCount> UserCount
         {
-            get => _userCounts;
-            set { _userCounts = value; OnPropertyChanged(); }
+            get => _userCount;
+            set { _userCount = value; OnPropertyChanged(); }
         }
         #endregion
 
         #region CurrentUserCount
 
-        public UserCounts CurrentUserCount
+        public UserCount CurrentUserCount
         {
             get => _currentUserCount;
             set { _currentUserCount = value; OnPropertyChanged(); }
@@ -58,7 +58,7 @@ namespace Lol.GameRoom.Local.ViewModels
             _customConfirm = customConfirm;
             Customs = new GameRoomApi().GetGameRoomsCustom();
 
-            UserCount = new GameRoomApi().GetUserCounts();
+            UserCount = new GameRoomApi().GetUserCount();
             CurrentUserCount = UserCount.LastOrDefault();
 
             CurrentCustom = Customs.FirstOrDefault();
