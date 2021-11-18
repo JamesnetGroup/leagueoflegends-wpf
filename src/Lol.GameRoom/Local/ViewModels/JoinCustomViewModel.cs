@@ -4,7 +4,6 @@ using Lol.Database.Controller;
 using Lol.Database.Entites.Schema;
 using Lol.Foundation.Mvvm;
 
-
 namespace Lol.GameRoom.Local.ViewModels
 {
     public class JoinCustomViewModel : ObservableObject
