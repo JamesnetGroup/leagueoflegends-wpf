@@ -36,23 +36,15 @@ namespace Lol.GameRoom.Local.ViewModels
             _pvpConfirm = pvpConfirm;
             PVPs = new GameRoomApi().GetGameRooms();
             CurrentPVP = PVPs[0];
-            ConfirmCommand = new RelayCommand<object>(RoomCreateCommand, CanRoomCreateCommand);
+            ConfirmCommand = new RelayCommand<object>(CreateRoom);
         }
         #endregion
 
-        #region RoomCreateCommand
+        #region CreateRoom
 
-        private void RoomCreateCommand(object obj)
+        private void CreateRoom(object obj)
         {
             _pvpConfirm.Invoke(obj);
-        }
-        #endregion
-
-        #region CanRoomCreateCommand
-
-        private bool CanRoomCreateCommand(object obj)
-        {
-            return true;
         }
         #endregion
     }

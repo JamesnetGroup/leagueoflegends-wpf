@@ -12,14 +12,15 @@ namespace Lol.GameRoom.Local.ViewModels
         #region Variables
 
         private Action<object> _customConfirm;
-        private GameRoomsCustom _currentCusTom;
-        public List<GameRoomsCustom> Customs { get; set; }
+        private GameRoomsCustom _currentCustom;
         private List<UserCounts> _userCounts;
         private UserCounts _currentUserCount;
 
+        public List<GameRoomsCustom> Customs { get; set; }
         #endregion
 
         #region ICommand
+
         public RelayCommand<object> ConfirmCommand { get; set; }
         #endregion
 
@@ -27,8 +28,8 @@ namespace Lol.GameRoom.Local.ViewModels
 
         public GameRoomsCustom CurrentCustom
         {
-            get { return _currentCusTom; }
-            set { _currentCusTom = value; OnPropertyChanged(); }
+            get { return _currentCustom; }
+            set { _currentCustom = value; OnPropertyChanged(); }
         }
         #endregion
 
@@ -60,27 +61,17 @@ namespace Lol.GameRoom.Local.ViewModels
             UserCount = new GameRoomApi().GetUserCounts();
             CurrentUserCount = UserCount.LastOrDefault();
 
-            CurrentCustom = Customs[0];
-            ConfirmCommand = new RelayCommand<object>(RoomCreateCommand, CanRoomCreateCommand);
+            CurrentCustom = Customs.FirstOrDefault();
+            ConfirmCommand = new RelayCommand<object>(CreateRoom);
         }
         #endregion
 
-        #region RoomCreateCommand
+        #region CreateRoom
 
-        private void RoomCreateCommand(object obj)
+        private void CreateRoom(object obj)
         {
             _customConfirm.Invoke(obj);
         }
         #endregion
-
-        #region CanRoomCreateCommand
-
-        private bool CanRoomCreateCommand(object obj)
-        {
-            return true;
-        }
-        #endregion
-
-
     }
 }

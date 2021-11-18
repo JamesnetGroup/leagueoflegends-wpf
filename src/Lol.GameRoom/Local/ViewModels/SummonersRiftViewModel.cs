@@ -56,11 +56,11 @@ namespace Lol.GameRoom.Local.ViewModels
 
         public SummonersRiftViewModel(FriendsCollection friends, Action riftClose, Action modeChange)
         {
-            CloseCommand = new RelayCommand<object>(RoomCloseCommand, CanRoomCloseCommand);
-            ModeChangeCommand = new RelayCommand<object>(ModeChangeCommandExe, CanModeChangeCommand);
-
             _riftClose = riftClose;
             _modeChange = modeChange;
+
+            CloseCommand = new RelayCommand<object>(CloseRoom);
+            ModeChangeCommand = new RelayCommand<object>(ChangeMode);
 
             Friends = friends.GeneralList.Children.Where(x => x.Status == 3).ToList();
 
@@ -74,31 +74,20 @@ namespace Lol.GameRoom.Local.ViewModels
         }
         #endregion
 
-        #region RoomCloseCommand
+        #region CloseRoom
 
-        private void RoomCloseCommand(object obj)
+        private void CloseRoom(object obj)
         {
             _riftClose?.Invoke();
         }
-
-        private bool CanRoomCloseCommand(object obj)
-        {
-            return true;
-        }
         #endregion
 
-        #region ModeChangeCommandExe
+        #region ChangeMode
 
-        private void ModeChangeCommandExe(object obj)
+        private void ChangeMode(object obj)
         {
             _modeChange?.Invoke();
         }
-
-        private bool CanModeChangeCommand(object obj)
-        {
-            return true;
-        }
         #endregion
-
     }
 }
