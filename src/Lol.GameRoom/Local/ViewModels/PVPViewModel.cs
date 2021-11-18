@@ -24,7 +24,7 @@ namespace Lol.GameRoom.Local.ViewModels
 
         public GameRooms CurrentPVP
         {
-            get { return _currentPVP; }
+            get => _currentPVP;
             set { _currentPVP = value; OnPropertyChanged(); }
         }
         #endregion
