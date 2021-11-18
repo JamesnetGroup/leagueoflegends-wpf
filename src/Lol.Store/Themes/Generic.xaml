@@ -12,6 +12,7 @@
         <ResourceDictionary Source="/Lol.Store;component/Themes/Commons/StoreCheckBox.xaml"/>
         <ResourceDictionary Source="/Lol.Store;component/Themes/Commons/SortComboBox.xaml"/>
         <ResourceDictionary Source="/Lol.Store;component/Themes/Commons/SortComboBoxItem.xaml"/>
+        <ResourceDictionary Source="/Lol.Store;component/Themes/Commons/SearchTextBox.xaml"/>
         <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Home/PopularityInListItem.xaml"/>
         <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Home/PopularityInList.xaml"/>
         <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Home/PopularityListItem.xaml"/>
@@ -21,7 +22,6 @@
         <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Home/NewSkin.xaml"/>
         <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Home/NewSkinList.xaml"/>
         <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Champions/ItemMenu.xaml"/>
-        <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Champions/SearchTextBox.xaml"/>
 
         <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Skin/SkinLeftMenu.xaml"/>
         <ResourceDictionary Source="/Lol.Store;component/Themes/Views/ChampionsView.xaml"/>

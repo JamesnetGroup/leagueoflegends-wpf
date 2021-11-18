@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-namespace Lol.Store.UI.Units
+namespace Lol.Store.UI.Commons
 {
     public class SearchTextBox : TextBox
     {
