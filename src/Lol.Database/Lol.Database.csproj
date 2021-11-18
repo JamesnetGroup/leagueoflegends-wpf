@@ -23,7 +23,7 @@
     <None Update="Datas\storeSkinTypes.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Datas\userCounts.yml">
+    <None Update="Datas\userCount.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Datas\skinFilter.yml">

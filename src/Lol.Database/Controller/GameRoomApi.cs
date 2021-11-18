@@ -55,20 +55,18 @@ namespace Lol.Database.Controller
         }
         #endregion
 
-        #region GetUserCounts
+        #region GetUserCount
 
-        public List<UserCounts> GetUserCounts()
+        public List<UserCount> GetUserCount()
         {
-            var query = from i in Db.UserCounts
-                        select new UserCounts
+            var query = from i in Db.UserCount
+                        select new UserCount
                         {
                             Seq = i.Seq,
-                            UserCount = i.UserCount
+                            Count = i.Count
                         };
             return query.ToList();
         }
         #endregion
-
-
     }
 }
