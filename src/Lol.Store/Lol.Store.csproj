@@ -70,7 +70,7 @@
     <Page Update="Themes\Units\Champions\ItemMenu.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Units\Champions\SearchTextBox.xaml">
+    <Page Update="Themes\Commons\SearchTextBox.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Themes\Units\Home\NewSkin.xaml">

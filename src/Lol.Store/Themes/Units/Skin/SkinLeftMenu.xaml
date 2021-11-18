@@ -14,7 +14,7 @@
                 <ControlTemplate TargetType="{x:Type units:SkinLeftMenu}">
 					<StackPanel Margin="30 55 5 0">
                         <commons:Category ItemsSource="{Binding SkinMenus}" SelectedItem="{Binding CurrentSkinMenu}"/>
-						<units:SearchTextBox />
+						<commons:SearchTextBox />
                         <commons:StoreCheckBox Content="보유 중인 상품도 보기" Margin="0 2 0 0"/>
                         <commons:SortComboBox Style="{StaticResource CBX.SORT}"/>
                         <commons:FilterList/>

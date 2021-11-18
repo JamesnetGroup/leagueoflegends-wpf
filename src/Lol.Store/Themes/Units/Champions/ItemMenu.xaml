@@ -14,7 +14,7 @@
 				<ControlTemplate TargetType="{x:Type units:ItemMenu}">
 					<StackPanel Margin="30 55 5 0">
                         <commons:Category ItemsSource="{Binding ChampMenus}" SelectedItem="{Binding CurrentChampMenu}"/>
-						<units:SearchTextBox/>
+                        <commons:SearchTextBox/>
                         <commons:StoreCheckBox Content="Show Owned" Margin="0 2 0 0"/>
                         <commons:SortComboBox Style="{StaticResource CBX.SORT}"/>
                         <commons:FilterList/>
