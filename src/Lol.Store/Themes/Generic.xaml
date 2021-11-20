@@ -22,10 +22,14 @@
         <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Home/NewSkin.xaml"/>
         <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Home/NewSkinList.xaml"/>
         <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Champions/ItemMenu.xaml"/>
-
         <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Skin/SkinLeftMenu.xaml"/>
+        <ResourceDictionary Source="/Lol.Store;component/Themes/Units/TFT/TFTItemMenu.xaml"/>
+        
         <ResourceDictionary Source="/Lol.Store;component/Themes/Views/ChampionsView.xaml"/>
         <ResourceDictionary Source="/Lol.Store;component/Themes/Views/HomeView.xaml"/>
         <ResourceDictionary Source="/Lol.Store;component/Themes/Views/SkinView.xaml"/>
+        <ResourceDictionary Source="/Lol.Store;component/Themes/Views/TFTView.xaml"/>
     </ResourceDictionary.MergedDictionaries>
+
+  
 </ResourceDictionary>
