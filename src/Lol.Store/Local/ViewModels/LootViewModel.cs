@@ -15,8 +15,6 @@ namespace Lol.Store.Local.ViewModels
         private List<StoreChampSortings> _sorting;
         private StoreChampSortings _currentSorting;
 
-        private List<FilterModel> _filters;
-
         private List<StoreItems> _storeLoots;
         #endregion
 
@@ -38,15 +36,6 @@ namespace Lol.Store.Local.ViewModels
         }
         #endregion
 
-        #region Filters
-
-        public List<FilterModel> Filters
-        {
-            get { return _filters; }
-            set { _filters = value; OnPropertyChanged(); }
-        }
-        #endregion
-
         #region StoreTFTs
 
         public List<StoreItems> StoreLoots
@@ -56,13 +45,15 @@ namespace Lol.Store.Local.ViewModels
         }
         #endregion
 
-
         #region Constructor
 
         public LootViewModel()
         {
             StoreApi api = new StoreApi();
             StoreLoots = api.GetLoots();
+
+            Sorting = new StoreApi().GetSorting("BUNDLES");
+            CurrentSorting = Sorting.First();
         }
         #endregion
     }
