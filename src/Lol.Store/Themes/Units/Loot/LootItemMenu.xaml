@@ -12,12 +12,10 @@
 		<Setter Property="Template">
 			<Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:LootItemMenu}">
-					<StackPanel Margin="30 55 5 0">
-                        <commons:Category ItemsSource="{Binding LootMenus}" SelectedItem="{Binding CurrentLootMenu}"/>
+					<StackPanel Margin="30 36 5 0">
 						<commons:SearchTextBox />
                         <commons:StoreCheckBox Content="보유 중인 상품도 보기" Margin="0 2 0 0"/>
                         <commons:SortComboBox Style="{StaticResource CBX.SORT}"/>
-                        <commons:FilterList/>
 					</StackPanel>
 				</ControlTemplate>
 			</Setter.Value>

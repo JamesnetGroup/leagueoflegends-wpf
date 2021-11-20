@@ -1,65 +1,65 @@
 ﻿- seq: 0
-  name: 기계와 장치 패스 메가 세트
-  imgSource: Champ,Vi_50
-  rP: 12990
+  name: 대장군 바이
+  imgSource: Champ,Vi_51
+  rP: 1350
   bE: 0
 - seq: 1
-  name: 기계와 장치 패스 자매 세트
+  name: 사랑꾼 바이
   imgSource: Champ,Vi_50
-  rP: 6500
+  rP: 1350
   bE: 0
 - seq: 2
-  name: 기계와 장치 패스+
+  name: 강철용 쓰레쉬
   imgSource: Champ,Thresh_30
-  rP: 1295
+  rP: 1350
   bE: 0
 - seq: 3
-  name: 기계와 장치 패스 + 세트
+  name: 몽상용 야스오
   imgSource: Champ,Yasuo_41
-  rP: 3206
+  rP: 1820
   bE: 0
 - seq: 4
-  name: 미니 바이 + 펑펑 효과
+  name: 바다용 카이사
   imgSource: Champ,Kaisa_30
-  rP: 1900
+  rP: 1350
   bE: 0
 - seq: 5
-  name: 미니 에코 + 펑펑 효과
+  name: 이중용 볼리베어
   imgSource: Champ,Volibear_7
-  rP: 1900
+  rP: 1350
   bE: 0
 - seq: 6
-  name: 영리한 발명가 알
+  name: 진리용 야스오
   imgSource: Champ,Yasuo_40
-  rP: 490
+  rP: 1820
   bE: 0
 - seq: 7
-  name: 영리한 발명가 알 10+1개
+  name: 평온용 카르마
   imgSource: Champ,Karma_50
-  rP: 4900
+  rP: 1350
   bE: 0
 - seq: 8
-  name: 1성 꽥꽥이
+  name: 해방된 쓰레쉬
   imgSource: Champ,Thresh_30
   rP: 750
   bE: 0
 - seq: 9
-  name: 1성 꿀벌 꽥꽥이
+  name: 빛의 인도자 모르가나
   imgSource: Champ,Morgana_50
-  rP: 925
+  rP: 1350
   bE: 0
 - seq: 10
-  name: 1성 꿀벌 말캉이
+  name: 빛의 인도자 벡스
   imgSource: Champ,Vex_50
-  rP: 925
+  rP: 1350
   bE: 0
 - seq: 11
-  name: 1성 리오
+  name: 빛의 인도자 요네
   imgSource: Champ,Yone_50
-  rP: 925
+  rP: 1820
   bE: 0
 - seq: 12
-  name: 1성 마법공학 말캉이
+  name: 어둠의 인도자 릴리아
   imgSource: Champ,Lillia_3
-  rP: 925
+  rP: 1350
   bE: 0

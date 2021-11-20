@@ -85,7 +85,7 @@ namespace Lol.Store.Local.ViewModels
             StoreApi api = new StoreApi();
             TFTMenus = api.GetCategory(3);
             CurrentTFTMenu = TFTMenus.First();
-            StoreTFTs = api.GetSkins();
+            StoreTFTs = api.GetTFTs();
         }
         #endregion
 
