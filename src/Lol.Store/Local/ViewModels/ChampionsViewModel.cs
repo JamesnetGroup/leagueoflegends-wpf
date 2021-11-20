@@ -89,7 +89,7 @@ namespace Lol.Store.Local.ViewModels
 
         public ChampionsViewModel()
         {
-            ChampMenus = new StoreApi().GetCategory();
+            ChampMenus = new StoreApi().GetCategory(1);
             CurrentChampMenu = ChampMenus.First();
             StoreChamps = new StoreApi().GetChamps();
         }
