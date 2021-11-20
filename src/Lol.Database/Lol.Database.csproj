@@ -17,6 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Datas\storeTypes.yml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Datas\storeSkins.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
@@ -140,7 +143,7 @@
     <None Update="Datas\storeChampSortings.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Datas\storeChampTypes.yml">
+    <None Update="Datas\storeDetails.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="Datas\teamFights.yml">
