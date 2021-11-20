@@ -29,9 +29,6 @@
     <None Update="Datas\storeSkins.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Datas\storeSkinTypes.yml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
     <None Update="Datas\userCount.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
