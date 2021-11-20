@@ -85,7 +85,7 @@ namespace Lol.Store.Local.ViewModels
             StoreApi api = new StoreApi();
             EtcMenus = api.GetCategory(5);
             CurrentEtcMenu = EtcMenus.First();
-            //StoreEtcItems = api.GetTFTs();
+            StoreEtcItems = api.GetEtcItems();
         }
         #endregion
 

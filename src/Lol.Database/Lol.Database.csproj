@@ -20,6 +20,9 @@
     <None Update="Datas\storeLoots.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
+    <None Update="Datas\storeEtcItems.yml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Datas\storeTFTs.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
