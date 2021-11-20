@@ -23,6 +23,10 @@
     <Page Update="Themes\Styles\CircleFace.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Themes\Styles\LucasComboBoxItem.xaml">
+      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Themes\Styles\MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
