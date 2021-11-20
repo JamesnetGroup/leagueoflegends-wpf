@@ -35,7 +35,7 @@
   bE: 0
 - seq: 7
   name: 평온용 카르마
-  imgSource: Champ,Karma
+  imgSource: Champ,Karma_50
   rP: 1350
   bE: 0
 - seq: 8
@@ -45,21 +45,21 @@
   bE: 0
 - seq: 9
   name: 빛의 인도자 모르가나
-  imgSource: Champ,Morgana
+  imgSource: Champ,Morgana_50
   rP: 1350
   bE: 0
 - seq: 10
   name: 빛의 인도자 벡스
-  imgSource: Champ,Morgana
+  imgSource: Champ,Vex_50
   rP: 1350
   bE: 0
 - seq: 11
   name: 빛의 인도자 요네
-  imgSource: Champ,Yone
+  imgSource: Champ,Yone_50
   rP: 1820
   bE: 0
 - seq: 12
   name: 어둠의 인도자 릴리아
-  imgSource: Champ,Lillia
+  imgSource: Champ,Lillia_3
   rP: 1350
   bE: 0

@@ -1763,10 +1763,15 @@
     <None Remove="Images\Champ\Zyra_7.jpg" />
     <None Remove="Images\Concepts\assassin.png" />
     <None Remove="Images\Concepts\dealer.png" />
+    <None Remove="Images\Concepts\Karma_50.jpg" />
+    <None Remove="Images\Concepts\Lillia_3.jpg" />
+    <None Remove="Images\Concepts\Morgana_50.jpg" />
     <None Remove="Images\Concepts\support.png" />
     <None Remove="Images\Concepts\tanker.png" />
+    <None Remove="Images\Concepts\Vex_50.jpg" />
     <None Remove="Images\Concepts\warrior.png" />
     <None Remove="Images\Concepts\wizard.png" />
+    <None Remove="Images\Concepts\Yone_50.jpg" />
     <None Remove="Images\Hextech\capsule.png" />
     <None Remove="Images\Hextech\Chogath_50.png" />
     <None Remove="Images\Hextech\egg.png" />
@@ -3594,6 +3599,11 @@
     <Resource Include="Images\Champ\Zyra_5.jpg" />
     <Resource Include="Images\Champ\Zyra_6.jpg" />
     <Resource Include="Images\Champ\Zyra_7.jpg" />
+    <Resource Include="Images\Champ\Karma_50.jpg" />
+    <Resource Include="Images\Champ\Lillia_3.jpg" />
+    <Resource Include="Images\Champ\Morgana_50.jpg" />
+    <Resource Include="Images\Champ\Vex_50.jpg" />
+    <Resource Include="Images\Champ\Yone_50.jpg" />
     <Resource Include="Images\Hextech\capsule.png" />
     <Resource Include="Images\Champ\Chogath_50.png" />
     <Resource Include="Images\Hextech\egg.png" />
