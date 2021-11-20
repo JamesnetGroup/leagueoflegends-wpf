@@ -1,11 +1,11 @@
 ﻿- seq: 0
   name: 대장군 바이
-  imgSource: Champ,Vi
+  imgSource: Champ,Vi_51
   rP: 1350
   bE: 0
 - seq: 1
   name: 사랑꾼 바이
-  imgSource: Champ,Vi
+  imgSource: Champ,Vi_50
   rP: 1350
   bE: 0
 - seq: 2

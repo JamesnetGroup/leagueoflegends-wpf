@@ -1598,6 +1598,8 @@
     <None Remove="Images\Champ\Vi_3.jpg" />
     <None Remove="Images\Champ\Vi_4.jpg" />
     <None Remove="Images\Champ\Vi_5.jpg" />
+    <None Remove="Images\Champ\Vi_50.jpg" />
+    <None Remove="Images\Champ\Vi_51.jpg" />
     <None Remove="Images\Champ\Vladimir.jpg" />
     <None Remove="Images\Champ\Vladimir.png" />
     <None Remove="Images\Champ\Vladimir_0.jpg" />
@@ -3445,6 +3447,8 @@
     <Resource Include="Images\Champ\Vi_3.jpg" />
     <Resource Include="Images\Champ\Vi_4.jpg" />
     <Resource Include="Images\Champ\Vi_5.jpg" />
+    <Resource Include="Images\Champ\Vi_50.jpg" />
+    <Resource Include="Images\Champ\Vi_51.jpg" />
     <Resource Include="Images\Champ\Vladimir.png" />
     <Resource Include="Images\Champ\Vladimir_0.jpg" />
     <Resource Include="Images\Champ\Vladimir_1.jpg" />
