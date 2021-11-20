@@ -1,7 +1,6 @@
 ﻿using Lol.Database.Common;
 using Lol.Database.Entites.Core;
 using Lol.Database.Entites.Schema;
-using System.Collections.Generic;
 
 namespace Lol.Database.Controller
 {
@@ -9,12 +8,14 @@ namespace Lol.Database.Controller
     {
         #region GetCategory
 
-        public List<StoreTypes> GetCategory()
+        //TODO: [Kevin] Store Category merge > 조회시 임시 TypeSeq 인자 넘김
+        public List<StoreDetails> GetCategory(int type_seq)
         {
-            var query = from s in Db.StoreChampTypes
-                        select new StoreTypes
+            var query = from s in Db.StoreDetails.Where(x => x.TypeSeq == type_seq)
+                        select new StoreDetails
                         {
                             Seq = s.Seq,
+                            TypeSeq = s.TypeSeq,
                             Name = s.Name,
                         };
             return query.ToList();
@@ -106,20 +107,6 @@ namespace Lol.Database.Controller
                             Details = Db.PopularityDetails.Where(x => x.ParentSeq == s.Seq).ToList(),
                         };
 
-            return query.ToList();
-        }
-        #endregion
-
-        #region GetSkinCategory
-
-        public List<StoreTypes> GetSkinCategory()
-        {
-            var query = from s in Db.StoreSkinTypes
-                        select new StoreTypes
-                        {
-                            Seq = s.Seq,
-                            Name = s.Name,
-                        };
             return query.ToList();
         }
         #endregion

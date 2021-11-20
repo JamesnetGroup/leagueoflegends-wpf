@@ -12,8 +12,8 @@ namespace Lol.Store.Local.ViewModels
     {
         #region Variables
 
-        private List<StoreTypes> _skinMenus;
-        private StoreTypes _currentSkinMenu;
+        private List<StoreDetails> _skinMenus;
+        private StoreDetails _currentSkinMenu;
 
         private List<StoreChampSortings> _sorting;
         private StoreChampSortings _currentSorting;
@@ -25,7 +25,7 @@ namespace Lol.Store.Local.ViewModels
 
         #region SkinMenus
 
-        public List<StoreTypes> SkinMenus
+        public List<StoreDetails> SkinMenus
         {
             get { return _skinMenus; }
             set { _skinMenus = value; OnPropertyChanged(); }
@@ -34,7 +34,7 @@ namespace Lol.Store.Local.ViewModels
 
         #region CurrentSkinMenu
 
-        public StoreTypes CurrentSkinMenu
+        public StoreDetails CurrentSkinMenu
         {
             get { return _currentSkinMenu; }
             set { _currentSkinMenu = value; OnPropertyChanged(); MenuChanged(value); }
@@ -83,7 +83,7 @@ namespace Lol.Store.Local.ViewModels
         public SkinViewModel()
         {
             StoreApi api = new StoreApi();
-            SkinMenus = api.GetSkinCategory();
+            SkinMenus = api.GetCategory(2);
             CurrentSkinMenu = SkinMenus.First();
             StoreSkins = api.GetSkins();
         }
@@ -91,7 +91,7 @@ namespace Lol.Store.Local.ViewModels
 
         #region MenuChanged
 
-        private void MenuChanged(StoreTypes value)
+        private void MenuChanged(StoreDetails value)
         {
             string id = value.Name == "BUNDLES" ? value.Name : "STANDARD";
 
