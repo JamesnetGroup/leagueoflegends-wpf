@@ -1,0 +1,65 @@
+﻿- seq: 0
+  name: 녹서스 수수께끼 미니미 아이콘 상자
+  imgSource: Champ,Vi_51
+  rP: 0
+  bE: 2500
+- seq: 1
+  name: 데마시아 및 프렐요드 수수께끼 미니미 아이콘 상자
+  imgSource: Champ,Vi_50
+  rP: 0
+  bE: 2500
+- seq: 2
+  name: 룬테라 수수께끼 미니미 아이콘 상자
+  imgSource: Champ,Thresh_30
+  rP: 0
+  bE: 2500
+- seq: 3
+  name: 밴들 시티 수수께끼 미니미 아이콘 상자
+  imgSource: Champ,Yasuo_41
+  rP: 0
+  bE: 2500
+- seq: 4
+  name: 빌지워터 수수께끼 미니미 아이콘 상자
+  imgSource: Champ,Kaisa_30
+  rP: 0
+  bE: 2500
+- seq: 5
+  name: 아이오니아 수수께끼 미니미 아이콘 상자
+  imgSource: Champ,Volibear_7
+  rP: 0
+  bE: 2500
+- seq: 6
+  name: 필트오버 및 자운 수수께끼 미니미 아이콘 상자
+  imgSource: Champ,Yasuo_40
+  rP: 0
+  bE: 2500
+- seq: 7
+  name: 아케인 캡슐 10개 + 꾸러미 1개 + 40 프레스티지 포인트
+  imgSource: Champ,Karma_50
+  rP: 7500
+  bE: 0
+- seq: 8
+  name: 아케인 캡슐 1개 + 4프레스티지 포인트
+  imgSource: Champ,Thresh_30
+  rP: 750
+  bE: 0
+- seq: 9
+  name: 명품 상자 & 열쇠 1개 + 1 프레스티지 포인트 (2020)
+  imgSource: Champ,Morgana_50
+  rP: 225
+  bE: 0
+- seq: 10
+  name: 명품 상자 & 열쇠 11개 + 13 프레스티지 포인트 (2020)
+  imgSource: Champ,Vex_50
+  rP: 2250
+  bE: 0
+- seq: 11
+  name: 명품 상자 & 열쇠 5개 + 6 프레스티지 포인트 (2020)
+  imgSource: Champ,Yone_50
+  rP: 1125
+  bE: 0
+- seq: 12
+  name: 마법공학 상자
+  imgSource: Champ,Lillia_3
+  rP: 125
+  bE: 0

@@ -12,33 +12,12 @@ namespace Lol.Store.Local.ViewModels
     {
         #region Variables
 
-        private List<StoreDetails> _tftMenus;
-        private StoreDetails _currentTFTMenu;
-
         private List<StoreChampSortings> _sorting;
         private StoreChampSortings _currentSorting;
 
         private List<FilterModel> _filters;
 
-        private List<StoreItems> _storeTFTs;
-        #endregion
-
-        #region TFTMenus
-
-        public List<StoreDetails> TFTMenus
-        {
-            get { return _tftMenus; }
-            set { _tftMenus = value; OnPropertyChanged(); }
-        }
-        #endregion
-
-        #region CurrentTFTMenu
-
-        public StoreDetails CurrentTFTMenu
-        {
-            get { return _currentTFTMenu; }
-            set { _currentTFTMenu = value; OnPropertyChanged(); MenuChanged(value); }
-        }
+        private List<StoreItems> _storeLoots;
         #endregion
 
         #region Sorting
@@ -70,10 +49,10 @@ namespace Lol.Store.Local.ViewModels
 
         #region StoreTFTs
 
-        public List<StoreItems> StoreTFTs
+        public List<StoreItems> StoreLoots
         {
-            get { return _storeTFTs; }
-            set { _storeTFTs = value; OnPropertyChanged(); }
+            get { return _storeLoots; }
+            set { _storeLoots = value; OnPropertyChanged(); }
         }
         #endregion
 
@@ -83,48 +62,7 @@ namespace Lol.Store.Local.ViewModels
         public LootViewModel()
         {
             StoreApi api = new StoreApi();
-            //TFTMenus = api.GetCategory(3);
-            //CurrentTFTMenu = TFTMenus.First();
-            //StoreTFTs = api.GetSkins();
-        }
-        #endregion
-
-        #region MenuChanged
-
-        private void MenuChanged(StoreDetails value)
-        {
-            string id = value.Name == "BUNDLES" ? value.Name : "STANDARD";
-
-            Filters = GetFilters(value.Name);
-
-            Sorting = new StoreApi().GetSorting(id);
-            CurrentSorting = Sorting.First();
-        }
-        #endregion
-
-        #region Temp data
-
-        public static List<FilterModel> filters = new()
-        {
-            new FilterModel(PackageType.Limited, "이벤트 패스", true, false, false),
-            new FilterModel(PackageType.Limited, "알", true, false, false),
-            new FilterModel(PackageType.Limited, "전략가", true, false, false),
-        };
-
-        public static List<FilterModel> GetFilters(string name)
-        {
-            List<FilterModel> source = new();
-
-            switch (name)
-            {
-                case "전략가": source = filters.Where(x => x.IsChampionVisible).ToList(); break;
-                case "결투장 스킨": source = filters.Where(x => x.IsEternalVisible).ToList(); break;
-                case "별 파편": source = filters.Where(x => x.IsBundleVisible).ToList(); break;
-                default:
-                    break;
-            }
-
-            return source;
+            StoreLoots = api.GetLoots();
         }
         #endregion
     }

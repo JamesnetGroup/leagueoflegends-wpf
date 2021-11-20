@@ -145,5 +145,22 @@ namespace Lol.Database.Controller
             return query.ToList();
         }
         #endregion
+
+        #region GetLoots
+
+        public List<StoreItems> GetLoots()
+        {
+            var query = from s in Db.StoreLoots
+                        select new StoreItems
+                        {
+                            Seq = s.Seq,
+                            Name = s.Name,
+                            ImgSource = ResourceHelper.ImgResource(s.ImgSource),
+                            RP = s.RP,
+                            BE = s.BE,
+                        };
+            return query.ToList();
+        }
+        #endregion
     }
 }
