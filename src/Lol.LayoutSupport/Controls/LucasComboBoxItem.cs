@@ -15,24 +15,14 @@ using System.Windows.Shapes;
 
 namespace Lol.LayoutSupport.Controls
 {
-    public class LucasComboBox : ComboBox
+    public class LucasComboBoxItem : ComboBoxItem
     {
-
         #region DefaultStyleKey
 
-        static LucasComboBox()
+        static LucasComboBoxItem()
         {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(LucasComboBox), new FrameworkPropertyMetadata(typeof(LucasComboBox)));
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(LucasComboBoxItem), new FrameworkPropertyMetadata(typeof(LucasComboBoxItem)));
         }
-        #endregion
-
-        #region GetContainerForItemOverride
-
-        protected override DependencyObject GetContainerForItemOverride()
-        {
-            return new LucasComboBoxItem();
-        }
-
         #endregion
     }
 }
