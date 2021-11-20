@@ -38,7 +38,7 @@ namespace Lol.Database.Entites.Statics
         internal List<ClashTiers> _clashTiers;
         internal List<ClashTierDetails> _clashTierDetails;
         internal List<ClashSchedules> _clashSchedules;
-        internal List<StoreChampTypes> _storeChampTypes;
+        internal List<StoreTypes> _storeChampTypes;
         internal List<StoreChampSortings> _storeChampSortings;
         internal List<SettingMenus> _settingMenus;
         internal List<ChampFilter> _champFilter;
@@ -60,7 +60,7 @@ namespace Lol.Database.Entites.Statics
         internal List<PopularityDetails> _popularityDetails;
         internal List<LobbyList> _lobbyList;
         internal List<UserCount> _userCount;
-        internal List<StoreSkinTypes> _storeSkinTypes;
+        internal List<StoreTypes> _storeSkinTypes;
         internal List<StoreItems> _storeSkins;
         #endregion
 
@@ -418,7 +418,7 @@ namespace Lol.Database.Entites.Statics
 
         #region StoreChampTypes
 
-        internal List<StoreChampTypes> StoreChampTypes
+        internal List<StoreTypes> StoreChampTypes
         {
             get
             {
@@ -428,7 +428,7 @@ namespace Lol.Database.Entites.Statics
                     var deserializer = new DeserializerBuilder()
                       .WithNamingConvention(CamelCaseNamingConvention.Instance)
                       .Build();
-                    _storeChampTypes = deserializer.Deserialize<List<StoreChampTypes>>(readText);
+                    _storeChampTypes = deserializer.Deserialize<List<StoreTypes>>(readText);
                 }
 
                 return _storeChampTypes;
@@ -881,7 +881,7 @@ namespace Lol.Database.Entites.Statics
 
         #region StoreSkinTypes
 
-        internal List<StoreSkinTypes> StoreSkinTypes
+        internal List<StoreTypes> StoreSkinTypes
         {
             get
             {
@@ -891,7 +891,7 @@ namespace Lol.Database.Entites.Statics
                     var deserializer = new DeserializerBuilder()
                       .WithNamingConvention(CamelCaseNamingConvention.Instance)
                       .Build();
-                    _storeSkinTypes = deserializer.Deserialize<List<StoreSkinTypes>>(readText);
+                    _storeSkinTypes = deserializer.Deserialize<List<StoreTypes>>(readText);
                 }
 
                 return _storeSkinTypes;
