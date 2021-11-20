@@ -38,7 +38,6 @@ namespace Lol.Database.Entites.Statics
         internal List<ClashTiers> _clashTiers;
         internal List<ClashTierDetails> _clashTierDetails;
         internal List<ClashSchedules> _clashSchedules;
-        internal List<StoreTypes> _storeChampTypes;
         internal List<StoreChampSortings> _storeChampSortings;
         internal List<SettingMenus> _settingMenus;
         internal List<ChampFilter> _champFilter;
@@ -60,8 +59,9 @@ namespace Lol.Database.Entites.Statics
         internal List<PopularityDetails> _popularityDetails;
         internal List<LobbyList> _lobbyList;
         internal List<UserCount> _userCount;
-        internal List<StoreTypes> _storeSkinTypes;
         internal List<StoreItems> _storeSkins;
+        internal List<StoreTypes> _storeTypes;
+        internal List<StoreDetails> _storeDetails;
         #endregion
 
         #region GetYamlData
@@ -412,26 +412,6 @@ namespace Lol.Database.Entites.Statics
                 }
 
                 return _playChampions;
-            }
-        }
-        #endregion
-
-        #region StoreChampTypes
-
-        internal List<StoreTypes> StoreChampTypes
-        {
-            get
-            {
-                if (_storeChampTypes == null)
-                {
-                    string readText = GetYamlData("storeChampTypes");
-                    var deserializer = new DeserializerBuilder()
-                      .WithNamingConvention(CamelCaseNamingConvention.Instance)
-                      .Build();
-                    _storeChampTypes = deserializer.Deserialize<List<StoreTypes>>(readText);
-                }
-
-                return _storeChampTypes;
             }
         }
         #endregion
@@ -879,22 +859,42 @@ namespace Lol.Database.Entites.Statics
         }
         #endregion
 
-        #region StoreSkinTypes
+        #region StoreTypes
 
-        internal List<StoreTypes> StoreSkinTypes
+        internal List<StoreTypes> StoreTypes
         {
             get
             {
-                if (_storeSkinTypes == null)
+                if (_storeTypes == null)
                 {
-                    string readText = GetYamlData("storeSkinTypes");
+                    string readText = GetYamlData("storeTypes");
                     var deserializer = new DeserializerBuilder()
                       .WithNamingConvention(CamelCaseNamingConvention.Instance)
                       .Build();
-                    _storeSkinTypes = deserializer.Deserialize<List<StoreTypes>>(readText);
+                    _storeTypes = deserializer.Deserialize<List<StoreTypes>>(readText);
                 }
 
-                return _storeSkinTypes;
+                return _storeTypes;
+            }
+        }
+        #endregion
+
+        #region StoreDetails
+
+        internal List<StoreDetails> StoreDetails
+        {
+            get
+            {
+                if (_storeDetails == null)
+                {
+                    string readText = GetYamlData("storeDetails");
+                    var deserializer = new DeserializerBuilder()
+                      .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                      .Build();
+                    _storeDetails = deserializer.Deserialize<List<StoreDetails>>(readText);
+                }
+
+                return _storeDetails;
             }
         }
         #endregion

@@ -9,10 +9,10 @@ namespace Lol.Database.Controller
     {
         #region GetCategory
 
-        public List<StoreTypes> GetCategory()
+        public List<StoreDetails> GetCategory()
         {
-            var query = from s in Db.StoreChampTypes
-                        select new StoreTypes
+            var query = from s in Db.StoreDetails.Where(x => x.TypeSeq == 1)
+                        select new StoreDetails
                         {
                             Seq = s.Seq,
                             Name = s.Name,
@@ -112,10 +112,10 @@ namespace Lol.Database.Controller
 
         #region GetSkinCategory
 
-        public List<StoreTypes> GetSkinCategory()
+        public List<StoreDetails> GetSkinCategory()
         {
-            var query = from s in Db.StoreSkinTypes
-                        select new StoreTypes
+            var query = from s in Db.StoreDetails.Where(x => x.TypeSeq == 2)
+                        select new StoreDetails
                         {
                             Seq = s.Seq,
                             Name = s.Name,
