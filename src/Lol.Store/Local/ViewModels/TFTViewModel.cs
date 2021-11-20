@@ -12,7 +12,7 @@ namespace Lol.Store.Local.ViewModels
     {
         #region Variables
 
-        private List<StoreDetails> _skinMenus;
+        private List<StoreDetails> _tftMenus;
         private StoreDetails _currentSkinMenu;
 
         private List<StoreChampSortings> _sorting;
@@ -23,12 +23,12 @@ namespace Lol.Store.Local.ViewModels
         private List<StoreItems> _storeSkins;
         #endregion
 
-        #region SkinMenus
+        #region TFTMenus
 
-        public List<StoreDetails> SkinMenus
+        public List<StoreDetails> TFTMenus
         {
-            get { return _skinMenus; }
-            set { _skinMenus = value; OnPropertyChanged(); }
+            get { return _tftMenus; }
+            set { _tftMenus = value; OnPropertyChanged(); }
         }
         #endregion
 
@@ -83,7 +83,7 @@ namespace Lol.Store.Local.ViewModels
         public TFTViewModel()
         {
             StoreApi api = new StoreApi();
-            //SkinMenus = api.GetSkinCategory();
+            TFTMenus = api.GetCategory(2);
             //CurrentSkinMenu = SkinMenus.First();
             //StoreSkins = api.GetSkins();
         }

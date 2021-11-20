@@ -83,7 +83,7 @@ namespace Lol.Store.Local.ViewModels
         public SkinViewModel()
         {
             StoreApi api = new StoreApi();
-            SkinMenus = api.GetSkinCategory();
+            SkinMenus = api.GetCategory(2);
             CurrentSkinMenu = SkinMenus.First();
             StoreSkins = api.GetSkins();
         }
