@@ -13,14 +13,14 @@ namespace Lol.Store.Local.ViewModels
         #region Variables
 
         private List<StoreDetails> _tftMenus;
-        private StoreDetails _currentSkinMenu;
+        private StoreDetails _currentTFTMenu;
 
         private List<StoreChampSortings> _sorting;
         private StoreChampSortings _currentSorting;
 
         private List<FilterModel> _filters;
 
-        private List<StoreItems> _storeSkins;
+        private List<StoreItems> _storeTFTs;
         #endregion
 
         #region TFTMenus
@@ -32,12 +32,12 @@ namespace Lol.Store.Local.ViewModels
         }
         #endregion
 
-        #region CurrentSkinMenu
+        #region CurrentTFTMenu
 
-        public StoreDetails CurrentSkinMenu
+        public StoreDetails CurrentTFTMenu
         {
-            get { return _currentSkinMenu; }
-            set { _currentSkinMenu = value; OnPropertyChanged(); MenuChanged(value); }
+            get { return _currentTFTMenu; }
+            set { _currentTFTMenu = value; OnPropertyChanged(); MenuChanged(value); }
         }
         #endregion
 
@@ -68,12 +68,12 @@ namespace Lol.Store.Local.ViewModels
         }
         #endregion
 
-        #region StoreSkins
+        #region StoreTFTs
 
-        public List<StoreItems> StoreSkins
+        public List<StoreItems> StoreTFTs
         {
-            get { return _storeSkins; }
-            set { _storeSkins = value; OnPropertyChanged(); }
+            get { return _storeTFTs; }
+            set { _storeTFTs = value; OnPropertyChanged(); }
         }
         #endregion
 
@@ -83,9 +83,9 @@ namespace Lol.Store.Local.ViewModels
         public TFTViewModel()
         {
             StoreApi api = new StoreApi();
-            TFTMenus = api.GetCategory(2);
-            //CurrentSkinMenu = SkinMenus.First();
-            //StoreSkins = api.GetSkins();
+            TFTMenus = api.GetCategory(3);
+            CurrentTFTMenu = TFTMenus.First();
+            StoreTFTs = api.GetSkins();
         }
         #endregion
 

@@ -4,6 +4,7 @@ using Lol.Database.Entites.Schema;
 
 namespace Lol.Database.Controller
 {
+    // TODO: [Kevin] StoreItems 데이터 병합 작업 예정
     public class StoreApi : LolDbContext
     {
         #region GetCategory
@@ -116,6 +117,23 @@ namespace Lol.Database.Controller
         public List<StoreItems> GetSkins()
         {
             var query = from s in Db.StoreSkins
+                        select new StoreItems
+                        {
+                            Seq = s.Seq,
+                            Name = s.Name,
+                            ImgSource = ResourceHelper.ImgResource(s.ImgSource),
+                            RP = s.RP,
+                            BE = s.BE,
+                        };
+            return query.ToList();
+        }
+        #endregion
+
+        #region GetTFTs
+
+        public List<StoreItems> GetTFTs()
+        {
+            var query = from s in Db.StoreTFTs
                         select new StoreItems
                         {
                             Seq = s.Seq,

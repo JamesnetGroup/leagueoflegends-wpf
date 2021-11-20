@@ -62,6 +62,7 @@ namespace Lol.Database.Entites.Statics
         internal List<StoreItems> _storeSkins;
         internal List<StoreTypes> _storeTypes;
         internal List<StoreDetails> _storeDetails;
+        internal List<StoreItems> _storeTFTs;
         #endregion
 
         #region GetYamlData
@@ -879,6 +880,26 @@ namespace Lol.Database.Entites.Statics
         }
         #endregion
 
+        #region StoreSkins
+
+        internal List<StoreItems> StoreSkins
+        {
+            get
+            {
+                if (_storeSkins == null)
+                {
+                    string readText = GetYamlData("storeSkins");
+                    var deserializer = new DeserializerBuilder()
+                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .Build();
+                    _storeSkins = deserializer.Deserialize<List<StoreItems>>(readText);
+                }
+
+                return _storeSkins;
+            }
+        }
+        #endregion
+
         #region StoreDetails
 
         internal List<StoreDetails> StoreDetails
@@ -899,22 +920,22 @@ namespace Lol.Database.Entites.Statics
         }
         #endregion
 
-        #region StoreChamps
+        #region StoreTFTs
 
-        internal List<StoreItems> StoreSkins
+        internal List<StoreItems> StoreTFTs
         {
             get
             {
-                if (_storeSkins == null)
+                if (_storeTFTs == null)
                 {
-                    string readText = GetYamlData("storeSkins");
+                    string readText = GetYamlData("storeTFTs");
                     var deserializer = new DeserializerBuilder()
                         .WithNamingConvention(CamelCaseNamingConvention.Instance)
                         .Build();
-                    _storeSkins = deserializer.Deserialize<List<StoreItems>>(readText);
+                    _storeTFTs = deserializer.Deserialize<List<StoreItems>>(readText);
                 }
 
-                return _storeSkins;
+                return _storeTFTs;
             }
         }
         #endregion
