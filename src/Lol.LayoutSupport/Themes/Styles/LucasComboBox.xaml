@@ -6,9 +6,10 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ctrls:LucasComboBox}">
-                    <Border Background="{TemplateBinding Background}"
-                            BorderBrush="{TemplateBinding BorderBrush}"
-                            BorderThickness="{TemplateBinding BorderThickness}">
+                    <Border Background="#FF000000"
+                            BorderBrush="#1F2123"
+                            BorderThickness="0 0 0 1">
+                        
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
