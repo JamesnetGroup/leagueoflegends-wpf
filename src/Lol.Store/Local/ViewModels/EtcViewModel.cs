@@ -12,32 +12,32 @@ namespace Lol.Store.Local.ViewModels
     {
         #region Variables
 
-        private List<StoreDetails> _tftMenus;
-        private StoreDetails _currentTFTMenu;
+        private List<StoreDetails> _etcMenus;
+        private StoreDetails _currentEtcMenu;
 
         private List<StoreChampSortings> _sorting;
         private StoreChampSortings _currentSorting;
 
         private List<FilterModel> _filters;
 
-        private List<StoreItems> _storeTFTs;
+        private List<StoreItems> _storeEtcItems;
         #endregion
 
-        #region TFTMenus
+        #region EtcMenus
 
-        public List<StoreDetails> TFTMenus
+        public List<StoreDetails> EtcMenus
         {
-            get { return _tftMenus; }
-            set { _tftMenus = value; OnPropertyChanged(); }
+            get { return _etcMenus; }
+            set { _etcMenus = value; OnPropertyChanged(); }
         }
         #endregion
 
-        #region CurrentTFTMenu
+        #region CurrentEtcMenu
 
-        public StoreDetails CurrentTFTMenu
+        public StoreDetails CurrentEtcMenu
         {
-            get { return _currentTFTMenu; }
-            set { _currentTFTMenu = value; OnPropertyChanged(); MenuChanged(value); }
+            get { return _currentEtcMenu; }
+            set { _currentEtcMenu = value; OnPropertyChanged(); MenuChanged(value); }
         }
         #endregion
 
@@ -68,12 +68,12 @@ namespace Lol.Store.Local.ViewModels
         }
         #endregion
 
-        #region StoreTFTs
+        #region StoreEtcItems
 
-        public List<StoreItems> StoreTFTs
+        public List<StoreItems> StoreEtcItems
         {
-            get { return _storeTFTs; }
-            set { _storeTFTs = value; OnPropertyChanged(); }
+            get { return _storeEtcItems; }
+            set { _storeEtcItems = value; OnPropertyChanged(); }
         }
         #endregion
 
@@ -83,9 +83,9 @@ namespace Lol.Store.Local.ViewModels
         public EtcViewModel()
         {
             StoreApi api = new StoreApi();
-            //TFTMenus = api.GetCategory(3);
-            //CurrentTFTMenu = TFTMenus.First();
-            //StoreTFTs = api.GetTFTs();
+            EtcMenus = api.GetCategory(5);
+            CurrentEtcMenu = EtcMenus.First();
+            //StoreEtcItems = api.GetTFTs();
         }
         #endregion
 
@@ -106,9 +106,8 @@ namespace Lol.Store.Local.ViewModels
 
         public static List<FilterModel> filters = new()
         {
-            new FilterModel(PackageType.Limited, "이벤트 패스", true, false, false),
-            new FilterModel(PackageType.Limited, "알", true, false, false),
-            new FilterModel(PackageType.Limited, "전략가", true, false, false),
+            new FilterModel(PackageType.Limited, "한정 판매", false, true, true),
+            new FilterModel(PackageType.Limited, "할인중", true, false, false),
         };
 
         public static List<FilterModel> GetFilters(string name)
@@ -117,9 +116,9 @@ namespace Lol.Store.Local.ViewModels
 
             switch (name)
             {
-                case "전략가": source = filters.Where(x => x.IsChampionVisible).ToList(); break;
-                case "결투장 스킨": source = filters.Where(x => x.IsEternalVisible).ToList(); break;
-                case "별 파편": source = filters.Where(x => x.IsBundleVisible).ToList(); break;
+                case "감정표현": source = filters.Where(x => x.IsChampionVisible).ToList(); break;
+                case "와드 스킨": source = filters.Where(x => x.IsEternalVisible).ToList(); break;
+                case "세트": source = filters.Where(x => x.IsBundleVisible).ToList(); break;
                 default:
                     break;
             }

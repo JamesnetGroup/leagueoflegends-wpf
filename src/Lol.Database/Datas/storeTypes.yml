@@ -4,3 +4,7 @@
   name: SKIN
 - seq: 3
   name: TFT
+- seq: 4
+  name: LOOT
+- seq: 5
+  name: ETC

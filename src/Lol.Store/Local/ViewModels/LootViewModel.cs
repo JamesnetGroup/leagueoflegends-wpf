@@ -36,7 +36,7 @@ namespace Lol.Store.Local.ViewModels
         }
         #endregion
 
-        #region StoreTFTs
+        #region StoreLoots
 
         public List<StoreItems> StoreLoots
         {

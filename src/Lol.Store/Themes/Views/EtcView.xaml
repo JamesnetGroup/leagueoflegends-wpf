@@ -23,9 +23,6 @@
                             <commons:TopRightContent/>
                             <commons:StoreList Grid.Row="1" ItemsSource="{Binding StoreEtcItems}"/>
                         </Grid>
-                        <Grid Grid.Column="1" Background="Red">
-                            
-                        </Grid>
                     </Grid>
                 </ControlTemplate>
 			</Setter.Value>
