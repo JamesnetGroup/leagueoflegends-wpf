@@ -190,6 +190,7 @@ namespace Lol.Main.Local.ViewModel
                     27 => new store.ChampionsView().SetVM(new storeVM.ChampionsViewModel()),
                     28 => new store.SkinView().SetVM(new storeVM.SkinViewModel()),
                     29 => new store.TFTView().SetVM(new storeVM.TFTViewModel()),
+                    30 => new store.LootView().SetVM(new storeVM.LootViewModel()),
                     33 => new HistoryView().SetVM(new HistoryViewModel()),
                     35 => new HighlightView().SetVM(new HighlightViewModel()),
                     37 => new PVPView().SetVM(new PVPViewModel(PvpConfirm)),
