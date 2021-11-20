@@ -83,12 +83,13 @@
                                      Visibility="Collapsed"
                                      HorizontalAlignment="Center"/>
                             <StackPanel VerticalAlignment="Bottom" HorizontalAlignment="Center" Margin="0 0 0 6">
-                                <TextBlock Text="{Binding Name}" 
-                                           FontWeight="Bold"
+                                <TextBlock Text="{Binding Name}"
+                                           TextWrapping="Wrap" 
                                            Foreground="#F0E6D2"
-                                           FontSize="15"
+                                           FontSize="15" 
                                            HorizontalAlignment="Center"
-                                           Margin="0 0 0 4"/>
+                                           TextAlignment="Center"
+                                           Margin="10 0 10 6"/>
                                 <Grid HorizontalAlignment="Center">
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition/>
