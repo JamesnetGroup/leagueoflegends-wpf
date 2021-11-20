@@ -2,7 +2,9 @@
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 	<ResourceDictionary.MergedDictionaries>
-		<ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Styles/BasicScroll.xaml"/>
+        <ResourceDictionary Source="/Lol.Layoutsupport;component/Themes/Styles/LucasComboboxItem.xaml"/>
+        <ResourceDictionary Source="/Lol.Layoutsupport;component/Themes/Styles/LucasCombobox.xaml"/>
+        <ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Styles/BasicScroll.xaml"/>
 		<ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Styles/RiotIcon.xaml"/>
 		<ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Styles/CircleFace.xaml"/>
 		<ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Styles/RiotCheckBox.xaml"/>
