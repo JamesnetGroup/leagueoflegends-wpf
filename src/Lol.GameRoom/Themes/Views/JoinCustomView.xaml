@@ -8,7 +8,7 @@
         <Setter Property="Command" Value="{Binding JoinCommand}"/>
         <Setter Property="VerticalAlignment" Value="Bottom"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
-        <Setter Property="Margin" Value="0 0 0 10"/>
+        <Setter Property="Margin" Value="0 10 0 10"/>
         <Setter Property="Content" Value="참가"/>
         <Setter Property="Grid.Row" Value="1"/>
     </Style>
@@ -21,12 +21,19 @@
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
                         <units:TrophyButton/>
                         <units:LobbyInfo/>
-
+                        <ctrls:BasicScroll Grid.Row="1" Margin="0"
+									   ScrollViewer.VerticalScrollBarVisibility="Auto" 
+									   ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                                           PanningMode="VerticalFirst">
                         <!--TODO: [Elena] 추후 Custom Control 작업-->
                         <DataGrid Grid.Row="1" 
+                                  ScrollViewer.PanningMode="None"
+                                  VerticalAlignment="Stretch"
+                                  VerticalScrollBarVisibility="Auto"
                                   Background="Transparent" 
                                   RowBackground="Transparent"
                                   BorderThickness="0"
@@ -35,9 +42,7 @@
                                   HeadersVisibility="Column"
                                   GridLinesVisibility="None"
                                   IsReadOnly="true"
-                                  ScrollViewer.CanContentScroll="True" 
-                                  ScrollViewer.VerticalScrollBarVisibility="Auto"
-                                  ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                                 
                                   ItemsSource="{Binding LobbyList}"
                                   Margin="0 0 0 55">
                             <DataGrid.ColumnHeaderStyle>
@@ -51,17 +56,18 @@
                                     <Setter Property="Height" Value="50"/>
                                 </Style>
                             </DataGrid.ColumnHeaderStyle>
-                            <DataGrid.RowStyle>
-                                <Style TargetType="DataGridRow">
+                            <DataGrid.CellStyle>
+                                <Style TargetType="{x:Type DataGridCell}">
                                     <Style.Triggers>
-                                        <Trigger Property="IsSelected" Value="True">
-                                            <Setter Property="Background" Value="Red"/>
+                                        <Trigger Property="DataGridCell.IsSelected" Value="True">
+                                                <Setter Property="Background" Value="Transparent"/>
+                                        </Trigger>
+                                        <Trigger Property="DataGridCell.IsMouseOver" Value="True">
+                                                <Setter Property="BorderBrush" Value="Gold"/>
                                         </Trigger>
                                     </Style.Triggers>
-                                    <Setter Property="Height" Value="35"/>
-                                    <Setter Property="Background" Value="Red"/>
                                 </Style>
-                            </DataGrid.RowStyle>
+                            </DataGrid.CellStyle>
                             <DataGrid.Columns>
                                 <DataGridTextColumn Header="로비이름" Binding="{Binding Lobby}" FontSize="15" Foreground="#9E998B" Width="4*"/>
                                 <DataGridTextColumn Header="방장" Binding="{Binding Host}" FontSize="15" Foreground="#9E998B" Width="2*"/>
@@ -70,8 +76,8 @@
                                 <DataGridTextColumn Header="관전" Binding="{Binding Spectator}" FontSize="15" Foreground="#9E998B" Width="1*"/>
                             </DataGrid.Columns>
                         </DataGrid>
-
-                        <ctrls:RiotGameButton Style="{StaticResource BTN.JOIN}"/>
+                        </ctrls:BasicScroll>
+                        <ctrls:RiotGameButton Grid.Row="2" Style="{StaticResource BTN.JOIN}"/>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
