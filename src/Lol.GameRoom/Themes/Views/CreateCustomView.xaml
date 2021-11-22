@@ -70,7 +70,7 @@
     <Style TargetType="{x:Type ctrls:LucasComboBox}" x:Key="CBX.DEVICE">
         <Setter Property="Width" Value="300"/>
         <Setter Property="Height" Value="30"/>
-        <Setter Property="Margin" Value="0 10 0 20"/>
+        <Setter Property="Margin" Value="-190 10 0 20"/>
         <Setter Property="ItemContainerStyle" Value="{StaticResource IN.CBXI}"/>
         <!--<Setter Property="Content" Value="{Binding RelativeSource={RelativeSource Self}, Path=SelectedItem.Count}"/>-->
         <Setter Property="Foreground" Value="#77776E"/>
