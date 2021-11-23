@@ -14,6 +14,7 @@ namespace Lol.Collection.Local.ViewModel
         private Runes _currentRune;
         private List<RuneDetail> _runeDetail;
         private string _searchText;
+        private int runeSeq;
         #endregion
 
         #region Runes
@@ -35,7 +36,7 @@ namespace Lol.Collection.Local.ViewModel
         public Runes CurrentRune
         {
             get => _currentRune;
-            set { _currentRune = value; OnPropertyChanged(); RuneChanged(value); }
+            set { _currentRune = value; OnPropertyChanged(); RuneChanged(value); runeSeq = value.Seq; }
         }
 
         #endregion
@@ -79,13 +80,15 @@ namespace Lol.Collection.Local.ViewModel
 
         private void RuneTextChanged(string value)
         {
-            if (string.IsNullOrEmpty(value))
+            if (runeSeq == 0)
             {
                 RuneDetail = new RuneApi().GetRuneDetail();
-                return;
+            }
+            else
+            {
+                RuneDetail = new RuneApi().GetRunesDetail(runeSeq);
             }
 
-            RuneDetail = new RuneApi().GetRuneDetail();
             var list = RuneDetail.Where(x => x.Name.Contains(value));
             RuneDetail = list.ToList();
         }
