@@ -1,6 +1,4 @@
-﻿using Lol.Data.Enums;
-using Lol.Data.Store;
-using Lol.Database.Controller;
+﻿using Lol.Database.Controller;
 using Lol.Database.Entites.Schema;
 using Lol.Foundation.Mvvm;
 using System.Collections.Generic;
