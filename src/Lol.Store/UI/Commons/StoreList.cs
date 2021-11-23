@@ -12,5 +12,13 @@ namespace Lol.Store.UI.Commons
             DefaultStyleKeyProperty.OverrideMetadata(typeof(StoreList), new FrameworkPropertyMetadata(typeof(StoreList)));
         }
         #endregion
+
+        #region GetContainerForItemOverride
+
+        protected override DependencyObject GetContainerForItemOverride()
+        {
+            return new StoreListItem();
+        }
+        #endregion
     }
 }
