@@ -90,11 +90,7 @@
                                            HorizontalAlignment="Center"
                                            TextAlignment="Center"
                                            Margin="10 0 10 6"/>
-                                <Grid HorizontalAlignment="Center">
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition/>
-                                        <ColumnDefinition/>
-                                    </Grid.ColumnDefinitions>
+                                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                                     <StackPanel Orientation="Horizontal" Margin="0 0 6 0 ">
                                         <Image Style="{StaticResource IN.IMG}" VerticalAlignment="Center"/>
                                         <TextBlock Text="{Binding RP}" Style="{StaticResource TXB.VALUE}"/>
@@ -103,7 +99,7 @@
                                         <Image Style="{StaticResource IN.IMG2}" VerticalAlignment="Center"/>
                                         <TextBlock Text="{Binding BE}" Style="{StaticResource TXB.VALUE}"/>
                                     </StackPanel>
-                                </Grid>
+                                </StackPanel>
                             </StackPanel>
                         </Grid>
                     </Border>
@@ -115,6 +111,11 @@
                             <Setter TargetName="overBd2" Property="Visibility" Value="Visible"/>
                             <Setter TargetName="overIcon" Property="Visibility" Value="Visible"/>
                         </Trigger>
+                        <DataTrigger Binding="{Binding Rp}" Value="0">
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Be}" Value="0">
+                
+                        </DataTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
