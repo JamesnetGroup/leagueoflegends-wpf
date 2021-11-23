@@ -3,6 +3,7 @@ using System.Linq;
 using Lol.Foundation.Mvvm;
 using Lol.Database.Controller;
 using Lol.Database.Entites.Schema;
+using System;
 
 namespace Lol.Collection.Local.ViewModel
 {
@@ -37,8 +38,10 @@ namespace Lol.Collection.Local.ViewModel
         public string SearchText
         {
             get { return _searchText; }
-            set { _searchText = value; OnPropertyChanged(); }
+            set { _searchText = value; OnPropertyChanged(); ItemTextChanged(value); }
         }
+
+        
         #endregion
 
         #region Constructor
@@ -50,6 +53,22 @@ namespace Lol.Collection.Local.ViewModel
         }
         #endregion
 
+        #region ItemTextChanged
+        private void ItemTextChanged(string value)
+        {
+            if (string.IsNullOrEmpty(value))
+            {
+                ItemList = new ItemApi().GetItems();
+                return;
+            }
+
+            ItemList = new ItemApi().GetItems();
+            var list = ItemList.Where(x => x.Name.Contains(value));
+            ItemList = list.ToList();
+        }
+        #endregion
+
+        //TODO: [Lucas] 추후 Button Event 작업
         private void Test1(object obj)
         {
             //int cnt = ItemLists.Count;
@@ -80,7 +99,6 @@ namespace Lol.Collection.Local.ViewModel
         {
             ButtonUsed = true;
             var dd = ItemList.Where(x => x.IsChecked);
-
             //ButtonUsed = ItemLists.Where(x => x.IsChecked);
         }
 
