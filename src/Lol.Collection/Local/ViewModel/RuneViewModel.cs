@@ -50,8 +50,6 @@ namespace Lol.Collection.Local.ViewModel
 
         #endregion
 
-        
-
         #region Constructor
 
         public RuneViewModel()

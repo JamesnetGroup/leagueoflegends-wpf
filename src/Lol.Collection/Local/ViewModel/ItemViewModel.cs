@@ -12,6 +12,7 @@ namespace Lol.Collection.Local.ViewModel
 
         private bool _buttonUsed;
         private List<Items> _itemList;
+        private string _searchText;
 
         #region ButtonUsed
 
@@ -28,6 +29,15 @@ namespace Lol.Collection.Local.ViewModel
         {
             get { return _itemList; }
             set { _itemList = value; OnPropertyChanged(); }
+        }
+        #endregion
+
+        #region SearchText
+
+        public string SearchText
+        {
+            get { return _searchText; }
+            set { _searchText = value; OnPropertyChanged(); }
         }
         #endregion
 
