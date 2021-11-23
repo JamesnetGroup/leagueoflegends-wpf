@@ -91,7 +91,7 @@
                                            TextAlignment="Center"
                                            Margin="10 0 10 6"/>
                                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                                    <StackPanel Orientation="Horizontal" Margin="0 0 6 0 ">
+                                    <StackPanel Orientation="Horizontal" Margin="0 0 6 0 " x:Name="spRp">
                                         <Image Style="{StaticResource IN.IMG}" VerticalAlignment="Center"/>
                                         <TextBlock Text="{Binding RP}" Style="{StaticResource TXB.VALUE}"/>
                                     </StackPanel>
@@ -111,10 +111,13 @@
                             <Setter TargetName="overBd2" Property="Visibility" Value="Visible"/>
                             <Setter TargetName="overIcon" Property="Visibility" Value="Visible"/>
                         </Trigger>
-                        <DataTrigger Binding="{Binding Rp}" Value="0">
+                        <DataTrigger Binding="{Binding RP}" Value="0">
+                            <Setter TargetName="spRp" Property="Visibility" Value="Collapsed"/>
+                            <Setter TargetName="spRp" Property="Margin" Value="0"/>
                         </DataTrigger>
-                        <DataTrigger Binding="{Binding Be}" Value="0">
-                
+                        <DataTrigger Binding="{Binding BE}" Value="0">
+                            <Setter TargetName="spBe" Property="Visibility" Value="Collapsed"/>
+                            <Setter TargetName="spBe" Property="Margin" Value="0"/>
                         </DataTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
