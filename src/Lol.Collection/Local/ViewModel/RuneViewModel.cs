@@ -3,6 +3,7 @@ using Lol.Database.Controller;
 using Lol.Database.Entites.Schema;
 using System.Collections.Generic;
 using System.Linq;
+using System;
 
 namespace Lol.Collection.Local.ViewModel
 {
@@ -12,6 +13,7 @@ namespace Lol.Collection.Local.ViewModel
 
         private Runes _currentRune;
         private List<RuneDetail> _runeDetail;
+        private string _searchText;
         #endregion
 
         #region Runes
@@ -38,6 +40,18 @@ namespace Lol.Collection.Local.ViewModel
 
         #endregion
 
+        #region SearchText
+
+        public string SearchText
+        {
+            get => _searchText;
+            set { _searchText = value; OnPropertyChanged();  RuneTextChanged(value); } 
+        }
+
+        #endregion
+
+        
+
         #region Constructor
 
         public RuneViewModel()
@@ -60,6 +74,22 @@ namespace Lol.Collection.Local.ViewModel
             {
                 RuneDetail = new RuneApi().GetRunesDetail(value.Seq);
             }
+        }
+        #endregion
+
+        #region RuneTextChanged
+
+        private void RuneTextChanged(string value)
+        {
+            if (string.IsNullOrEmpty(value))
+            {
+                RuneDetail = new RuneApi().GetRuneDetail();
+                return;
+            }
+
+            RuneDetail = new RuneApi().GetRuneDetail();
+            var list = RuneDetail.Where(x => x.Name.Contains(value));
+            RuneDetail = list.ToList();
         }
         #endregion
 

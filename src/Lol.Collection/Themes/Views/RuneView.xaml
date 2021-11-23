@@ -64,7 +64,8 @@
                             <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
                         <StackPanel Orientation="Horizontal" Margin="35 0 0 0">
-                            <ctrls:RiotTextBox MinWidth="195"
+                            <ctrls:RiotTextBox Text="{Binding SearchText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                               MinWidth="195"
                                                Height="30"
                                                VerticalAlignment="Top"
                                                PlaceHolder="검색" 
