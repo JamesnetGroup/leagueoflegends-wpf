@@ -21,23 +21,25 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:UserDetail}">
-                    <Grid>
-                        <Border Width="200" 
-                                Height="490" 
-                                BorderThickness="5 0 5 0"
-                                BorderBrush="{StaticResource BDR.PARENT}" 
-                                Background="{StaticResource BG.PARENT}"/>
-                        <TextBlock HorizontalAlignment="Center"
-                                   VerticalAlignment="Top"
-                                   Text="Elena"
-                                   FontSize="15" 
-                                   FontWeight="Bold"
-                                   Margin="0 90 0 0"
-                                   Foreground="#F3BE0A"/>
-                        <Canvas Width="200"
+                    <StackPanel>
+                        <Grid>
+                            <Border Width="200" 
+                                    Height="430" 
+                                    BorderThickness="5 0 5 0"
+                                    BorderBrush="{StaticResource BDR.PARENT}" 
+                                    Background="{StaticResource BG.PARENT}"/>
+                            <TextBlock HorizontalAlignment="Center"
+                                       VerticalAlignment="Top"
+                                       Text="Elena"
+                                       FontSize="15" 
+                                       FontWeight="Bold"
+                                       Margin="0 90 0 0"
+                                       Foreground="#F3BE0A"/>
+                        </Grid>
+                        <!--<Canvas Width="200"
                                 Height="60"
-                                VerticalAlignment="Bottom"/>
-                    </Grid>
+                                VerticalAlignment="Bottom" Background="Red"/>-->
+                    </StackPanel>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
