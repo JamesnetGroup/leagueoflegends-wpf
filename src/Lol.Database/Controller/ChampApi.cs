@@ -46,7 +46,7 @@ namespace Lol.Database.Controller
             });
 
             var query = from c in Db.ChampTreeItem
-                        select new ChampTreeItem
+                        select new ChampTreeItem 
                         {
                             Seq = c.Seq,
                             Role = c.Role,
@@ -69,7 +69,7 @@ namespace Lol.Database.Controller
                         {
                             Seq = c.Seq,
                             Role = c.Role,
-                            Children = Db.Champions.Where(x => x.Name.Contains(value)).OrderBy(y => y.Name).ToList(),
+                            Children = Db.Champions.Where(x => x.HeaderSeq == c.Seq && x.Name.Contains(value)).OrderBy(y => y.Name).ToList(),
                             Header = c.Header,
                             IsExpanded = c.IsExpanded
                         };
