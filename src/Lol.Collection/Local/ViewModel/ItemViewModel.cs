@@ -55,6 +55,12 @@ namespace Lol.Collection.Local.ViewModel
         #region ItemTextChanged
         private void ItemTextChanged(string value)
         {
+            if (string.IsNullOrEmpty(value))
+            {
+                ItemList = new ItemApi().GetItems();
+                return;
+            }
+
             ItemList = new ItemApi().GetItems();
             var list = ItemList.Where(x => x.Name.Contains(value));
             ItemList = list.ToList();

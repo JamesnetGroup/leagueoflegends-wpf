@@ -66,6 +66,12 @@ namespace Lol.Collection.Local.ViewModel
         }
         #endregion
 
+        #region TreeSourceClone
+
+        public List<ChampTreeItem> ChampionsClone { get; set; }
+        #endregion
+
+
         #region SearchText
 
         public string SearchText
@@ -104,6 +110,7 @@ namespace Lol.Collection.Local.ViewModel
             CurrentChampFilter2 = ChampFilter2.First();
 
             Champions = new ChampApi().GetChampTreeItem();
+            ChampionsClone = Champions;
             Proficiency = 282;
             Achieve = 343;
         }
@@ -127,9 +134,24 @@ namespace Lol.Collection.Local.ViewModel
 
         #region SearchTextChanged
 
-        private void SearchTextChanged(string _)
+        private void SearchTextChanged(string value)
         {
-            
+            if (string.IsNullOrEmpty(value))
+            {
+                Champions = ChampionsClone;
+            }
+
+            var list = new ChampApi().GetChampTreeItem(value);
+
+            if (list[0].Children.Count < 1)
+            {
+                Champions = null;
+                return;
+            }
+            else
+            {
+                Champions = list;
+            }
         }
         #endregion
     }
