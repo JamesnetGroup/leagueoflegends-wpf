@@ -139,6 +139,7 @@ namespace Lol.Collection.Local.ViewModel
             if (string.IsNullOrEmpty(value))
             {
                 Champions = ChampionsClone;
+                return;
             }
 
             var list = new ChampApi().GetChampTreeItem(value);
