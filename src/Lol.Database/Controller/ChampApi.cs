@@ -56,5 +56,24 @@ namespace Lol.Database.Controller
                         };
             return query.ToList();
         }
+
+        public List<ChampTreeItem> GetChampTreeItem(string value)
+        {
+            Db.Champions.ForEach(x => {
+                x.Img = ResourceHelper.ImgResource(x.Img);
+                x.Insignia = ResourceHelper.ImgResource(x.Insignia);
+            });
+
+            var query = from c in Db.ChampTreeItem
+                        select new ChampTreeItem
+                        {
+                            Seq = c.Seq,
+                            Role = c.Role,
+                            Children = Db.Champions.Where(x => x.Name.Contains(value)).OrderBy(y => y.Name).ToList(),
+                            Header = c.Header,
+                            IsExpanded = c.IsExpanded
+                        };
+            return query.ToList();
+        }
     }
 }

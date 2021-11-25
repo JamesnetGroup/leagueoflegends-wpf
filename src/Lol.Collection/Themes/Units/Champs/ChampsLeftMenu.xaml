@@ -86,6 +86,7 @@
                             </StackPanel>
                         </Grid>
                         <ctrls:RiotTextBox MinWidth="190"
+                                           Text="{Binding SearchText, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                                            Height="30"
                                            HorizontalAlignment="Center"
                                            PlaceHolder="검색"/>
