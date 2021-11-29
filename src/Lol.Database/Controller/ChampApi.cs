@@ -38,6 +38,26 @@ namespace Lol.Database.Controller
         }
         #endregion
 
+        public List<Champions> GetChampData()
+        {
+            Db.Champions.ForEach(x => {
+                x.Img = ResourceHelper.ImgResource(x.Img);
+                x.Insignia = ResourceHelper.ImgResource(x.Insignia);
+            });
+
+            var query = from c in Db.Champions
+                        select new Champions
+                        {
+                            Seq = c.Seq,
+                            Champ = c.Champ,
+                            Name = c.Name,
+                            HeaderSeq = c.HeaderSeq,
+                            Eternals = c.Eternals
+                        };
+
+            return query.ToList();
+        }
+
         public List<ChampTreeItem> GetChampTreeItem()
         {
             Db.Champions.ForEach(x => {
