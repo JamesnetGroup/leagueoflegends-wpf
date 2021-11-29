@@ -121,6 +121,12 @@ namespace Lol.Collection.Local.ViewModel
         private void FilterChanged(ChampFilter value)
         {
             //
+
+            //if (value.Seq == 0)
+            //{
+            //    var items = new ChampApi().GetChampData();
+
+            //}
         }
         #endregion
 
