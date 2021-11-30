@@ -13,6 +13,7 @@ namespace Lol.Collection.Local.ViewModel
         private List<ChampFilter> _champFilter1;
         private List<ChampFilter> _champFilter2;
         private List<ChampTreeItem> _champions;
+        private List<Champions> _champs;
 
         private ChampFilter _currentChampFilter1;
         private ChampFilter _currentChampFilter2;
@@ -71,6 +72,12 @@ namespace Lol.Collection.Local.ViewModel
         public List<ChampTreeItem> ChampionsClone { get; set; }
         #endregion
 
+        public List<Champions> Champs
+        {
+            get => _champs;
+            set { _champs = value; OnPropertyChanged(); }
+        }
+
 
         #region SearchText
 
@@ -111,6 +118,9 @@ namespace Lol.Collection.Local.ViewModel
 
             Champions = new ChampApi().GetChampTreeItem();
             ChampionsClone = Champions;
+
+            Champs = new ChampApi().GetChampData();
+
             Proficiency = 282;
             Achieve = 343;
         }
@@ -120,7 +130,7 @@ namespace Lol.Collection.Local.ViewModel
 
         private void FilterChanged(ChampFilter value)
         {
-            //
+            
 
             //if (value.Seq == 0)
             //{
