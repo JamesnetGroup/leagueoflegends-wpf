@@ -6,5 +6,8 @@
         <ResourceDictionary Source="/Lol.Profile;component/Themes/Units/RecentActivity.xaml"/>
         <ResourceDictionary Source="/Lol.Profile;component/Themes/Units/GameHistory.xaml"/>
         <ResourceDictionary Source="/Lol.Profile;component/Themes/Views/HistoryView.xaml"/>
+        <ResourceDictionary Source="/Lol.Profile;component/Themes/Views/SummaryView.xaml"/>
     </ResourceDictionary.MergedDictionaries>
+
+    
 </ResourceDictionary>
