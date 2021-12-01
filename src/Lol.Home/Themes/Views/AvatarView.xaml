@@ -1,13 +1,74 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:units="clr-namespace:Lol.Home.UI.Units"
-                    xmlns:views="clr-namespace:Lol.Home.UI.Views">
+                    xmlns:views="clr-namespace:Lol.Home.UI.Views"
+                    xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
+
+    <Style TargetType="{x:Type ctrls:RiotIconButton}" x:Key="BTN.ICON">
+        <Setter Property="Width" Value="33"/>
+        <Setter Property="Height" Value="33"/>
+        <Setter Property="IconWidth" Value="16"/>
+        <Setter Property="IconHeight" Value="16"/>
+        <Setter Property="Margin" Value="0 20 50 0"/>
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+    </Style>
+
+    <Style TargetType="{x:Type ctrls:BasicTooltip}" x:Key="BTN.TOOLTIP">
+        <Setter Property="HorizontalOffset" Value="-40"/>
+        <Setter Property="VerticalOffset" Value="-65"/>
+    </Style>
 
     <Style TargetType="{x:Type views:AvatarView}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type views:AvatarView}">
-                    <TextBlock Background="Red" Width="500" Height="500"/>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="3*"/>
+                            <RowDefinition Height="4*"/>
+                            <RowDefinition Height="3*"/>
+                        </Grid.RowDefinitions>
+                        <ctrls:RiotIconButton Style="{StaticResource BTN.ICON}" IconType="Plus" Command="{Binding ButtonInfo}">
+                            <ctrls:RiotIconButton.ToolTip>
+                                <ctrls:BasicTooltip Style="{StaticResource BTN.TOOLTIP}" ToolTip="아바타 정보"/>
+                            </ctrls:RiotIconButton.ToolTip>
+                        </ctrls:RiotIconButton>
+                        <StackPanel Orientation="Horizontal">
+                            <Border BorderBrush="#C89B3C" 
+                                BorderThickness="0 1 0 0" 
+                                Margin="60 5 50 5" 
+                                HorizontalAlignment="Center" 
+                                VerticalAlignment="Center"
+                                Width="310"/>
+                            <units:AvatarTitle Width="200" Height="120" />
+                            <Border BorderBrush="#C89B3C" 
+                                BorderThickness="0 1 0 0"  
+                                Margin="40 5 0 5" 
+                                HorizontalAlignment="Center" 
+                                VerticalAlignment="Center"
+                                Width="310"/>
+                        </StackPanel>
+                        <StackPanel Grid.Row="1">
+                            
+                        </StackPanel>
+                        <StackPanel Grid.Row="2">
+                            <Border BorderBrush="#C89B3C" 
+                                BorderThickness="0 1 0 0" 
+                                Margin="60 5 50 5" 
+                                HorizontalAlignment="Center" 
+                                VerticalAlignment="Center"
+                                Width="310"/>
+                            <units:AvatarTitle Width="200" Height="120" />
+                            <Border BorderBrush="#C89B3C" 
+                                BorderThickness="0 1 0 0"  
+                                Margin="40 5 0 5" 
+                                HorizontalAlignment="Center" 
+                                VerticalAlignment="Center"
+                                Width="310"/>
+                        </StackPanel>
+
+
+                    </Grid>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
