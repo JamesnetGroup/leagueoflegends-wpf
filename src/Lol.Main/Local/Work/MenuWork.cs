@@ -89,6 +89,7 @@ namespace Lol.Main.Local.Work
                 new SubMenuModel(9, 0, "OVERVIEW"),
                 new SubMenuModel(10, 0, "PRESEASON"),
                 new SubMenuModel(11, 0, "PATCH NOTES"),
+                new SubMenuModel(44, 0, "AVATAR CREATE"),
 
                 new SubMenuModel(12, 2, "HUB"),
                 new SubMenuModel(13, 2, "FIND A TEAM"),
