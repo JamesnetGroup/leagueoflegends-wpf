@@ -192,6 +192,7 @@ namespace Lol.Main.Local.ViewModel
                     29 => new store.TFTView().SetVM(new storeVM.TFTViewModel()),
                     30 => new store.LootView().SetVM(new storeVM.LootViewModel()),
                     31 => new store.EtcView().SetVM(new storeVM.EtcViewModel()),
+                    32 => new SummaryView().SetVM(new SummaryViewModel()),
                     33 => new HistoryView().SetVM(new HistoryViewModel()),
                     35 => new HighlightView().SetVM(new HighlightViewModel()),
                     37 => new PVPView().SetVM(new PVPViewModel(PvpConfirm)),
