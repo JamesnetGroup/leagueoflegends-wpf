@@ -1,15 +1,18 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:views="clr-namespace:Lol.Profile.UI.Views">
+                    xmlns:views="clr-namespace:Lol.Profile.UI.Views"
+                    xmlns:units="clr-namespace:Lol.Profile.UI.Units">
     <Style TargetType="{x:Type views:SummaryView}">
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type views:SummaryView}">
-                    <Border Background="{TemplateBinding Background}"
-                            BorderBrush="{TemplateBinding BorderBrush}"
-                            BorderThickness="{TemplateBinding BorderThickness}">
-                        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Red" Text="테스트"/>
-                    </Border>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <units:UserProfile/>
+                    </Grid>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
