@@ -17,7 +17,7 @@
     <Style TargetType="{x:Type units:UserProfile}">
         <Setter Property="HorizontalAlignment" Value="Left"/>
         <Setter Property="VerticalAlignment" Value="Top"/>
-        <Setter Property="Margin" Value="45 0 0 0"/>
+        <Setter Property="Margin" Value="0 0 0 0"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:UserProfile}">
