@@ -200,6 +200,7 @@ namespace Lol.Main.Local.ViewModel
                     41 => new JoinCustomView().SetVM(new JoinCustomViewModel(JoinCustomConfirm)),
                     42 => new SummonersRiftView().SetVM(new SummonersRiftViewModel(Friends, GoHome, ModeChange)),
                     43 => new CustomGameRoomView().SetVM(new CustomGameRoomViewModel(Friends, GoHome, ModeChange)),
+                    44 => new AvatarView().SetVM(new AvatarViewModel()),
                     _ => new EmptyContent()
                 };
 
