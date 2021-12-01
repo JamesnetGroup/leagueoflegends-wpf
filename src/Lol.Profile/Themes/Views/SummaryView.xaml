@@ -11,7 +11,17 @@
                             <ColumnDefinition Width="auto"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
-                        <units:UserProfile/>
+                        <Grid Margin="45 0 0 0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <units:UserProfile/>
+                            <Border Grid.Row="1" Height="30" Width="60"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Top"
+                                    Margin="0 34 0 0"/>
+                        </Grid>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
