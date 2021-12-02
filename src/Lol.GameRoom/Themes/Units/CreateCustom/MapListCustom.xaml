@@ -2,13 +2,6 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:units="clr-namespace:Lol.GameRoom.UI.Units">
 
-    <!--<Style TargetType="{x:Type Border}" x:Key="BDR.SECTION">
-        <Setter Property="BorderThickness" Value="0 1 0 0"/>
-        <Setter Property="BorderBrush" Value="#606F6E"/>
-        <Setter Property="VerticalAlignment" Value="Bottom"/>
-        <Setter Property="Grid.Row" Value="1"/>
-    </Style>-->
-
     <Style TargetType="{x:Type TextBlock}" x:Key="TXB.CONTENT">
         <Setter Property="Text" Value="{Binding Content}"/>
         <Setter Property="TextWrapping" Value="Wrap"/>
@@ -19,19 +12,13 @@
     </Style>
     
     <Style TargetType="{x:Type ListBoxItem}" x:Key="LBXI.MAP">
-        <Setter Property="Margin" Value="0 90 0 0"/>
+        <Setter Property="Margin" Value="60 90 60 0"/>
         <Setter Property="Foreground" Value="#A09B8C"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ListBoxItem}">
                     <Grid>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="*"/>
-                        </Grid.RowDefinitions>
                         <units:MapTitleCustom/>
-                        <!--<Border Style="{StaticResource BDR.SECTION}"/>-->
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsSelected" Value="True">
@@ -47,6 +34,7 @@
         <Setter Property="ItemContainerStyle" Value="{StaticResource LBXI.MAP}"/>
         <Setter Property="ItemsSource" Value="{Binding Customs}"/>
         <Setter Property="SelectedItem" Value="{Binding CurrentCustom}"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type units:MapListCustom}">
@@ -56,9 +44,8 @@
         </Setter>
         <Setter Property="ItemsPanel">
             <Setter.Value>
-                
                 <ItemsPanelTemplate>
-                    <UniformGrid Columns="3" Margin="150 0 -100 0"/>
+                    <StackPanel Orientation="Horizontal"/>
                 </ItemsPanelTemplate>
             </Setter.Value>
         </Setter>

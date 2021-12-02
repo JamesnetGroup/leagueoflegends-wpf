@@ -2,10 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:views="clr-namespace:Lol.GameRoom.UI.Views"
                     xmlns:units="clr-namespace:Lol.GameRoom.UI.Units"
-                    xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport"
-                    xmlns:cnvts="clr-namespace:Lol.Converter;assembly=Lol.Converter">
-
-
+                    xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
 
     <LinearGradientBrush x:Key="GEO.FILL" StartPoint="0.5, 0" EndPoint="0.5, 1">
         <GradientStop Color="#B28830" Offset="0"/>
@@ -27,6 +24,20 @@
         <Setter Property="Margin" Value="0 10 0 0"/>
     </Style>
 
+    <Style TargetType="{x:Type TextBlock}" x:Key="TXB.SUBTITLE">
+        <Setter Property="Foreground" Value="#F0E6D2"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+    </Style>
+    
+    <Style TargetType="{x:Type ctrls:RiotGameButton}" x:Key="BTN.CONFIRM">
+        <Setter Property="Command" Value="{Binding ConfirmCommand}"/>
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0 0 0 10"/>
+        <Setter Property="Content" Value="확인"/>
+    </Style>
+
     <Style TargetType="{x:Type RadioButton}" x:Key="IN.RDO">
         <Setter Property="Foreground" Value="#BEB187"/>
         <Setter Property="Background" Value="Transparent"/>
@@ -45,7 +56,8 @@
                         </Grid.ColumnDefinitions>
                         <ctrls:RiotIcon x:Name="dia" Grid.Column="0" IconType="DiaEmpty" Width="14" Height="14"
 										HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Fill="{StaticResource GEO.FILL}"/>
-                        <TextBlock Grid.Column="1" Margin="5 0 0 0"
+                        <TextBlock Grid.Column="1" 
+                                   Margin="5 0 0 0"
 								   Text="{Binding RelativeSource={RelativeSource AncestorType=RadioButton}, Path=Content}"/>
                     </Grid>
                     <ControlTemplate.Triggers>
@@ -95,28 +107,29 @@
                         <units:MapListCustom/>
                         <Border Style="{StaticResource BDR.SECTION}"/>
                         <units:TrophyButton/>
-                        <units:ConfirmButton Grid.RowSpan="2"/>
+                        <ctrls:RiotGameButton Style="{StaticResource BTN.CONFIRM}" Grid.RowSpan="2"/>
                         <Grid Grid.Row="1">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="5*"/>
                                 <ColumnDefinition Width="5*"/>
                             </Grid.ColumnDefinitions>
-                            <StackPanel>
-                                <TextBlock Text="이름" Foreground="#F0E6D2" FontSize="14" FontWeight="Bold" Margin="0 25 0 0"/>
-                                <ctrls:RiotTextBox x:Name="txtSearch" MinWidth="300"
-                                               Height="30"
-                                               Text="잠시만한다님의 게임"
-                                               Foreground="#F0E6C6"
-                                               IconVisibility="Collapsed"
+                            <StackPanel Margin="0 25 0 0">
+                                <TextBlock Style="{StaticResource TXB.SUBTITLE}" Text="이름"/>
+                                <ctrls:RiotTextBox x:Name="txtSearch" 
+                                                   MinWidth="300"
+                                                   Height="30"
+                                                   Text="잠시만한다님의 게임"
+                                                   Foreground="#F0E6C6"
+                                                   IconVisibility="Collapsed"
                                                    Margin="0 10 0 20"/>
-                                <TextBlock Text="팀 인원 수:" Foreground="#F0E6D2" FontSize="14" FontWeight="Bold" Margin="0 0 0 0"/>
+                                <TextBlock Style="{StaticResource TXB.SUBTITLE}" Text="팀 인원 수:"/>
                                 <ctrls:LucasComboBox Style="{StaticResource CBX.DEVICE}" 
-                                                    ItemsSource="{Binding UserCount}"
-                                                    SelectedValue="{Binding CurrentUserCount}"/>
-                                <TextBlock Text="비밀번호 (선택 사항)" Foreground="#F0E6D2" FontSize="14" FontWeight="Bold" Margin="0 0 0 0"/>
+                                                     ItemsSource="{Binding UserCount}"
+                                                     SelectedValue="{Binding CurrentUserCount}"/>
+                                <TextBlock Style="{StaticResource TXB.SUBTITLE}" Text="비밀번호 (선택 사항)"/>
                                 <ctrls:RiotTextBox MinWidth="300"
-                                               Height="30"
-                                               IconVisibility="Collapsed"/>
+                                                   Height="30"
+                                                   IconVisibility="Collapsed"/>
                             </StackPanel>
                             <StackPanel Grid.Column="1">
                                 <Grid>
