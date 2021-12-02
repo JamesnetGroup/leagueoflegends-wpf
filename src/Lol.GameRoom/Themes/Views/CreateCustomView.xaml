@@ -40,8 +40,6 @@
 
     <Style TargetType="{x:Type RadioButton}" x:Key="IN.RDO">
         <Setter Property="Foreground" Value="#BEB187"/>
-        <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="BorderBrush" Value="Transparent"/>
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="Margin" Value="0 20 0 0"/>
         <Setter Property="FontSize" Value="12"/>
@@ -75,6 +73,63 @@
         </Setter>
     </Style>
 
+    <Style TargetType="{x:Type ListBoxItem}" x:Key="IN.LBXI">
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                    <RadioButton Style="{StaticResource IN.RDO}" 
+                                 Content="{Binding ItemName}"
+                                 IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsSelected}"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type ListBox}" x:Key="LBX.GAMETYPE">
+        <Setter Property="ItemContainerStyle" Value="{StaticResource IN.LBXI}"/>
+        <Setter Property="ItemsSource" Value="{Binding CustomGameType}"/>
+        <Setter Property="SelectedValuePath" Value="ItemName"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Margin" Value="0 0 0 20"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ListBox}">
+                    <ItemsPresenter/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="ItemsPanel">
+            <Setter.Value>
+                <ItemsPanelTemplate>
+                    <UniformGrid Columns="3"/>
+                </ItemsPanelTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type ListBox}" x:Key="LBX.SPECTATOR">
+        <Setter Property="ItemContainerStyle" Value="{StaticResource IN.LBXI}"/>
+        <Setter Property="ItemsSource" Value="{Binding SpectatorMode}"/>
+        <Setter Property="SelectedValuePath" Value="ItemName"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Margin" Value="0 0 0 20"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ListBox}">
+                    <ItemsPresenter/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="ItemsPanel">
+            <Setter.Value>
+                <ItemsPanelTemplate>
+                    <UniformGrid Columns="3"/>
+                </ItemsPanelTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
     <Style TargetType="{x:Type ctrls:LucasComboBoxItem}" x:Key="IN.CBXI">
         <!--<Setter Property="Content" Value="{Binding Count}"/>-->
     </Style>
@@ -101,19 +156,19 @@
                 <ControlTemplate TargetType="{x:Type views:CreateCustomView}">
                     <Grid Margin="36 0 36 0">
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="auto"/>
-                            <RowDefinition Height="1*"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
                         </Grid.RowDefinitions>
                         <units:MapListCustom/>
                         <Border Style="{StaticResource BDR.SECTION}"/>
                         <units:TrophyButton/>
-                        <ctrls:RiotGameButton Style="{StaticResource BTN.CONFIRM}" Grid.RowSpan="2"/>
-                        <Grid Grid.Row="1">
+                        <Grid Grid.Row="1" 
+                              Margin="0 25 0 0">
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="5*"/>
-                                <ColumnDefinition Width="5*"/>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
                             </Grid.ColumnDefinitions>
-                            <StackPanel Margin="0 25 0 0">
+                            <StackPanel>
                                 <TextBlock Style="{StaticResource TXB.SUBTITLE}" Text="이름"/>
                                 <ctrls:RiotTextBox x:Name="txtSearch" 
                                                    MinWidth="300"
@@ -132,54 +187,13 @@
                                                    IconVisibility="Collapsed"/>
                             </StackPanel>
                             <StackPanel Grid.Column="1">
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="1*"/>
-                                        <RowDefinition Height="1*"/>
-                                    </Grid.RowDefinitions>
-                                    <Grid>
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="auto"/>
-                                            <RowDefinition Height="auto"/>
-                                            <RowDefinition Height="auto"/>
-                                        </Grid.RowDefinitions>
-                                        <TextBlock Text="게임 종류" Foreground="#F0E6D2" FontSize="14" FontWeight="Bold" Margin="0 25 0 20"/>
-                                        <RadioButton Grid.Row="1" Style="{StaticResource IN.RDO}" 
-                                                     Content="비공개 선택" Margin="5 0 0 0" 
-                                                     IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsSelected}"/>
-                                        <RadioButton Grid.Row="1" Style="{StaticResource IN.RDO}" 
-                                                     Content="교차 선택" Margin="170 0 0 0"
-                                                     IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsSelected}"/>
-                                        <RadioButton Grid.Row="1" Style="{StaticResource IN.RDO}" 
-                                                     Content="모두 무작위" Margin="330 0 0 0"
-                                                     IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsSelected}"/>
-                                         <RadioButton Grid.Row="2" Style="{StaticResource IN.RDO}" 
-                                                     Content="토너먼트 드래프트" Margin="5 20 0 0 "
-                                                     IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsSelected}"/>   
-                                    </Grid>
-                                    <Grid Grid.Row="1">
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition/>
-                                            <RowDefinition/>
-                                            <RowDefinition/>
-                                        </Grid.RowDefinitions>
-                                        <TextBlock Text="관전 허용" Foreground="#F0E6D2" FontSize="14" FontWeight="Bold" Margin="0 25 0 20"/>
-                                        <RadioButton Grid.Row="1" Style="{StaticResource IN.RDO}" 
-                                                    Content="로비 관전자 공개" Margin="5 0 0 0"
-                                                    IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsSelected}"/>
-                                        <RadioButton Grid.Row="1" Style="{StaticResource IN.RDO}" 
-                                                    Content="친구 공개" Margin="170 0 0 0"
-                                                    IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsSelected}"/>
-                                        <RadioButton Grid.Row="1" Style="{StaticResource IN.RDO}" 
-                                                    Content="전체 공개" Margin="330 0 0 0"
-                                                    IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsSelected}"/>
-                                        <RadioButton Grid.Row="2" Style="{StaticResource IN.RDO}" 
-                                                    Content="비공개" Margin="5 20 0 0"
-                                                    IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsSelected}"/>
-                                    </Grid>
-                                </Grid>
+                                <TextBlock Style="{StaticResource TXB.SUBTITLE}" Text="게임 종류"/>
+                                <ListBox Style="{StaticResource LBX.GAMETYPE}"/>
+                                <TextBlock Style="{StaticResource TXB.SUBTITLE}" Text="관전 허용" Margin=" 0 25 0 0"/>
+                                <ListBox Style="{StaticResource LBX.SPECTATOR}"/>
                             </StackPanel>
                         </Grid>
+                        <ctrls:RiotGameButton Style="{StaticResource BTN.CONFIRM}" Grid.RowSpan="2"/>
                     </Grid>
                 </ControlTemplate>
             </Setter.Value>
