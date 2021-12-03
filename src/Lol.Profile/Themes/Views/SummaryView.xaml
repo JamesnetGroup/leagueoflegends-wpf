@@ -17,14 +17,7 @@
                                 <RowDefinition/>
                             </Grid.RowDefinitions>
                             <units:UserProfile/>
-                            <StackPanel Grid.Row="1" 
-                                        HorizontalAlignment="Center"
-                                        VerticalAlignment="Bottom"
-                                        Margin="0 0 0 52"
-                                        Orientation="Horizontal">
-
-                            </StackPanel>
-
+                            <units:MyItemInfoList Grid.Row="1"/>
                         </Grid>
                     </Grid>
                 </ControlTemplate>
