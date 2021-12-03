@@ -24,5 +24,13 @@ namespace Lol.Profile.UI.Units
             DefaultStyleKeyProperty.OverrideMetadata(typeof(MyItemInfoList), new FrameworkPropertyMetadata(typeof(MyItemInfoList)));
         }
         #endregion
+
+        #region GetContainerForItemOverride
+
+        protected override DependencyObject GetContainerForItemOverride()
+        {
+            return new MyItemInfoListItem();
+        }
+        #endregion
     }
 }
