@@ -1,0 +1,9 @@
+﻿- seq: 0
+  itemIconType: Alpha
+  count: 4
+- seq: 1
+  itemIconType: Boost
+  count: 1
+- seq: 2
+  itemIconType: Random
+  count: 2

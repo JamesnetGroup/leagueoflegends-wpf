@@ -17,6 +17,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Update="Datas\myItemInfos.yml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Datas\storeLoots.yml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
