@@ -7,6 +7,9 @@ namespace Lol.Profile.Local.ViewModels
 {
     public class SummaryViewModel : ObservableObject
     {
+        #region Variables
+
+        #endregion
 
         #region Constructor
 
