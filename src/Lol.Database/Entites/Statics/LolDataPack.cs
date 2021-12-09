@@ -65,7 +65,9 @@ namespace Lol.Database.Entites.Statics
         internal List<StoreItems> _storeTFTs;
         internal List<StoreItems> _storeLoots;
         internal List<StoreItems> _storeEtcItems;
+        internal List<MyItemInfos> _myItemInfos;
         #endregion
+
 
         #region GetYamlData
 
@@ -982,6 +984,25 @@ namespace Lol.Database.Entites.Statics
         }
         #endregion
 
+        #region MyItemInfos
+
+        internal List<MyItemInfos> MyItemInfos
+        {
+            get
+            {
+                if (_myItemInfos == null)
+                {
+                    string readText = GetYamlData("myItemInfos");
+                    var deserializer = new DeserializerBuilder()
+                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .Build();
+                    _myItemInfos = deserializer.Deserialize<List<MyItemInfos>>(readText);
+                }
+
+                return _myItemInfos;
+            }
+        }
+        #endregion
 
     }
 }

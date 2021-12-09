@@ -2,6 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:units="clr-namespace:Lol.Profile.UI.Units">
     <Style TargetType="{x:Type units:MyItemInfoList}">
+        <Setter Property="ItemsSource" Value="{Binding MyItemInfos}"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="VerticalAlignment" Value="Bottom"/>
         <Setter Property="Margin" Value="0 0 0 52"/>
