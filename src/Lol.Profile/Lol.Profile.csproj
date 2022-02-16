@@ -17,11 +17,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Page Update="Themes\Units\MyItemInfoListItem.xaml">
+    <Page Update="Themes\Units\Summary\MyItemInfoListItem.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Units\PlayedChampList.xaml">
+    <Page Update="Themes\Units\History\PlayedChampList.xaml">
       <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
       <SubType>Designer</SubType>
     </Page>
