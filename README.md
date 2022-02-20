@@ -22,7 +22,7 @@
 - [프로젝트 구조](#프로젝트-구조)
 - [데이터베이스](#데이터베이스)
 - [스크린샷](#스크린샷)
-- [DevNcore.WPF](#devncore)
+- [DevNcore](#devncore)
 
 <br />
 
