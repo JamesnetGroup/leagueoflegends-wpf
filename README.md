@@ -1,6 +1,7 @@
 ## WPF League of Legends
 
-이 리포지토리는 WPF로 만든 리그오브레전드 입니다. <br />
+이 리포지토리는 WPF로 만든 리그오브레전드입니다. 
+<br />
 
 <a href="https://github.com/devncore/devncore"><strong>더 알아보기 »</strong></a>
  
