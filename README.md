@@ -1,5 +1,13 @@
 ## WPF League of Legends
 
+<div>
+  <a href="https://www.leagueoflegends.com/en-us/">
+    <img src="https://user-images.githubusercontent.com/74305823/133882864-6fc75ced-e297-41f9-bdbf-e779b57c8ff3.png" width="250"/>
+  </a>
+</div>
+
+<br />
+
 이 리포지토리는 WPF로 만든 리그오브레전드입니다. 
 <br />
 
@@ -10,34 +18,6 @@
 | <a href="https://github.com/devncore/leagueoflegends/stargazers"><img src="https://img.shields.io/github/stars/devncore/leagueoflegends" alt="Github Stars"></a> | <img src="https://img.shields.io/github/license/devncore/leagueoflegends" alt="License"> | <a href="https://github.com/devncore/leagueoflegends/pulse"><img src="https://img.shields.io/github/commit-activity/m/devncore/leagueoflegends" alt="Commits-per-month"></a> |
 
 <br />
-
-<div align="center">
-  <a href="https://www.leagueoflegends.com/en-us/">
-    <img src="https://user-images.githubusercontent.com/74305823/133882864-6fc75ced-e297-41f9-bdbf-e779b57c8ff3.png" width="250"/>
-  </a>
-<<<<<<< HEAD
- 
-  <h1>WPF League of Legends</h1>
-  WPF로 만든 리그오브레전드 입니다..
- 
-  <br />  
-  <br />  
-  <br />  
-  
-  이 레포지토리는 DevNcore팀이 관리하고 있습니다.
-  
-  <a href="https://github.com/devncore/devncore"><strong>더 알아보기 »</strong></a>
- 
-  <br />
- 
-  <p align="center">
-   <a href="https://github.com/devncore/leagueoflegends/stargazers"><img src="https://img.shields.io/github/stars/devncore/leagueoflegends" alt="Github Stars"></a>
-   <img src="https://img.shields.io/github/license/devncore/leagueoflegends" alt="License">
-   <a href="https://github.com/devncore/leagueoflegends/pulse"><img src="https://img.shields.io/github/commit-activity/m/devncore/leagueoflegends" alt="Commits-per-month"></a>
-  </p>
-=======
->>>>>>> 7b1d17f1d17e05d9e4bda8625ec9f6d2ec4f0a3b
-</div>
   
 ## 컨텐츠
 - [이 오픈소스의 특징](#이-오픈소스의-특징)
