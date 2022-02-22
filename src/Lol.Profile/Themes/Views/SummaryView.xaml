@@ -6,15 +6,15 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type views:SummaryView}">
-                    <Grid >
+                    <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="*"/>
                         </Grid.ColumnDefinitions>
                         <Grid Margin="45 0 0 0" >
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="Auto"/>
-                                <RowDefinition/>
+                                <RowDefinition Height="*"/>
                             </Grid.RowDefinitions>
                             <units:UserProfile/>
                             <units:MyItemInfoList Grid.Row="1"/>

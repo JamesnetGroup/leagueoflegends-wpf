@@ -7,18 +7,10 @@ namespace Lol.Profile.Local.ViewModels
 {
     public class HistoryViewModel : ObservableObject
     {
-        #region History
+        #region Variables
 
         public List<History> History { get; set; }
-        #endregion
-
-        #region PlayChampions
-
         public List<History> PlayChampions { get; set; }
-        #endregion
-
-        #region Activities
-
         public List<History> Activities { get; set; }
         #endregion
 

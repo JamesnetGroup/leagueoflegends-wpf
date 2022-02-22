@@ -1,7 +1,21 @@
+## WPF League of Legends
+
+이 리포지토리는 WPF로 만든 리그오브레전드입니다. 
+<br />
+
+<a href="https://github.com/devncore/devncore"><strong>더 알아보기 »</strong></a>
+ 
+| Star | License | Activity |
+|:----:|:-------:|:--------:|
+| <a href="https://github.com/devncore/leagueoflegends/stargazers"><img src="https://img.shields.io/github/stars/devncore/leagueoflegends" alt="Github Stars"></a> | <img src="https://img.shields.io/github/license/devncore/leagueoflegends" alt="License"> | <a href="https://github.com/devncore/leagueoflegends/pulse"><img src="https://img.shields.io/github/commit-activity/m/devncore/leagueoflegends" alt="Commits-per-month"></a> |
+
+<br />
+
 <div align="center">
   <a href="https://www.leagueoflegends.com/en-us/">
     <img src="https://user-images.githubusercontent.com/74305823/133882864-6fc75ced-e297-41f9-bdbf-e779b57c8ff3.png" width="250"/>
   </a>
+<<<<<<< HEAD
  
   <h1>WPF League of Legends</h1>
   WPF로 만든 리그오브레전드 입니다..
@@ -21,9 +35,9 @@
    <img src="https://img.shields.io/github/license/devncore/leagueoflegends" alt="License">
    <a href="https://github.com/devncore/leagueoflegends/pulse"><img src="https://img.shields.io/github/commit-activity/m/devncore/leagueoflegends" alt="Commits-per-month"></a>
   </p>
+=======
+>>>>>>> 7b1d17f1d17e05d9e4bda8625ec9f6d2ec4f0a3b
 </div>
-
-<br />
   
 ## 컨텐츠
 - [이 오픈소스의 특징](#이-오픈소스의-특징)
@@ -31,6 +45,7 @@
 - [프로젝트 구조](#프로젝트-구조)
 - [데이터베이스](#데이터베이스)
 - [스크린샷](#스크린샷)
+- [DevNcore](#devncore)
 
 <br />
 
@@ -38,6 +53,8 @@
 - WPF 프로젝트를 올바르게 구현하는 방법을 학습할 수 있습니다.
 - **리그오브레전드**와 같은 최상위 디자인 영역의 표현을 상용 컴포넌트에 의지하지 않고 직접 구현하는 방법에 대해 설명합니다.
 - MVVM 패턴을 직접 구현하여 WPF에 대해 자세하게 이해하고 학습할 수 있습니다.
+
+## DevNcore
 - 이미지 형식의 사용을 지양하고 **`Geometry(SVG)`** 리소스를 활용하여 WPF 장점을 살릴 수 있습니다.
 
 <br />
@@ -132,6 +149,9 @@
 ![image](https://user-images.githubusercontent.com/74305823/136380449-ea229fbb-6db7-412c-828b-16d6f7af83d8.png)
 
 ![image](https://user-images.githubusercontent.com/74305823/137628858-65458b3c-5a3d-4263-9dda-65595a98965d.png)
+<<<<<<< HEAD
 
 <br />
 
+=======
+>>>>>>> 7b1d17f1d17e05d9e4bda8625ec9f6d2ec4f0a3b
