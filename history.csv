@@ -1,0 +1,1027 @@
+1b17805,devncore-elena,elena.kim@devncore.org,2021-11-18,Update CreateCustom
+a68b82b,devncore-elena,elena.kim@devncore.org,2021-11-18,Update getter expression
+1b1db69,devncore-elena,elena.kim@devncore.org,2021-11-18,Update GameRoom Command
+afe1352,kevin.kim,rlagurdls456@outlook.com,2021-11-17,Update Store SkinList
+05fd3de,kevin.kim,rlagurdls456@outlook.com,2021-11-17,Update Store
+c71b1e1,kevin.kim,rlagurdls456@outlook.com,2021-11-17,Update Store ChampList > StoreList로 변경
+5fdc7c8,kevin.kim,rlagurdls456@outlook.com,2021-11-17,merge Update
+c4feb0c,kevin.kim,rlagurdls456@outlook.com,2021-11-17,Update
+713d9b5,kevin.kim,rlagurdls456@outlook.com,2021-11-17,Update
+3e064f5,devncore-elena,elena.kim@devncore.org,2021-11-17,Update JoinCustomView
+0e25523,devncore-elena,elena.kim@devncore.org,2021-11-17,Update SummonersView
+ffb8c52,devncore-elena,elena.kim@devncore.org,2021-11-17,Restore Store FilterList
+4a1211e,kevin.kim,rlagurdls456@outlook.com,2021-11-16,Update Store
+646e20f,unknown,lucas.park@devncore.org,2021-11-16,Update ClassName 수정
+ccf2432,kevin.kim,rlagurdls456@outlook.com,2021-11-16,Update
+96f85c3,kevin.kim,rlagurdls456@outlook.com,2021-11-16,Update
+aa9f124,kevin.kim,rlagurdls456@outlook.com,2021-11-16,Update
+9b8bd44,devncore-elena,elena.kim@devncore.org,2021-11-16,Update Summoners StateBox
+3c5fa3c,devncore-elena,elena.kim@devncore.org,2021-11-16,Update SummonersView
+154f4fa,unknown,lucas.park@devncore.org,2021-11-15,Update RiotTextBox
+a72d1a3,unknown,lucas.park@devncore.org,2021-11-15,Update CreateRoom
+f88d021,kevin.kim,rlagurdls456@outlook.com,2021-11-15,Update
+7f1bc7b,kevin.kim,rlagurdls456@outlook.com,2021-11-15,Remove Using
+d82ba68,kevin.kim,rlagurdls456@outlook.com,2021-11-15,Add SkinView, View Connection
+c247ec2,kevin.kim,rlagurdls456@outlook.com,2021-11-15,Update
+4a2b409,kevin.kim,rlagurdls456@outlook.com,2021-11-15,Update
+76ebcdd,elena.kim,elena.kim@devncore.org,2021-11-14,Update README.md
+e941df8,nuhabo,nuhabo03@gmail.com,2021-11-14,Update CustomView Cb
+a4e4182,nuhabo,nuhabo03@gmail.com,2021-11-12,Update CreateCustom Cb
+bf423a8,nuhabo,nuhabo03@gmail.com,2021-11-12,Update UserCount CbBox
+14c110c,devncore-elena,elena.kim@devncore.org,2021-11-08,Merge branch 'main' of https://github.com/devncore/leagueoflegends
+ebe8942,devncore-elena,elena.kim@devncore.org,2021-11-08,Update MyShopView
+d9b9193,elena.kim,elena.kim@devncore.org,2021-11-08,Update README.md
+09b1d34,kevin.kim,kevin.kim@devncore.org,2021-11-07,Update README.md
+92b656a,rlagurdls456,rlagurdls456@outlook.com,2021-11-07,Update Store
+8cefd31,rlagurdls456,rlagurdls456@outlook.com,2021-11-07,Store Add Discount Control
+c683761,rlagurdls456,rlagurdls456@outlook.com,2021-11-07,Update Store
+5073ef3,rlagurdls456,rlagurdls456@outlook.com,2021-11-07,Update Store
+01ec5d0,elena.kim,elena.kim@devncore.org,2021-11-05,Update README.md
+a18e9b2,elena.kim,elena.kim@devncore.org,2021-11-04,Update README.md
+3e2b263,devncore-elena,elena.kim@devncore.org,2021-11-04,Update ChampsLeftMenu
+d4883b2,devncore-elena,elena.kim@devncore.org,2021-11-04,Update SkinApi
+7dcf777,devncore-elena,elena.kim@devncore.org,2021-11-04,Update SkinTierButton Resource
+3ef04e6,devncore-elena,elena.kim@devncore.org,2021-11-04,Add Collection SkinView
+456373a,devncore-elena,elena.kim@devncore.org,2021-11-04,Update ChampionsView
+ead265e,elena.kim,elena.kim@devncore.org,2021-11-02,Update README.md
+7a9b125,elena.kim,elena.kim@devncore.org,2021-11-02,Update README.md
+873949b,devncore-elena,elena.kim@devncore.org,2021-11-02,Update ChampionsView TreeView
+afe4258,devncore-elena,elena.kim@devncore.org,2021-11-02,Update ChampionsViewModel
+810f2e4,devncore-elena,elena.kim@devncore.org,2021-11-02,Change Name ChampCb to ChampFilter
+e6cae8e,devncore-elena,elena.kim@devncore.org,2021-11-02,Update ChampionsView
+032c4a4,kevin.kim,kevin.kim@devncore.org,2021-11-02,Update README.md
+ad6ceba,nuhabo,nuhabo03@gmail.com,2021-11-01,Update CustomGR
+461cacc,nuhabo,nuhabo03@gmail.com,2021-10-31,Update JoinCustom
+e3df5ef,elena.kim,elena.kim@devncore.org,2021-10-31,Update README.md
+9350cd4,devncore-elena,elena.kim@devncore.org,2021-10-31,Merge branch 'main' of https://github.com/devncore/leagueoflegends
+e76558f,devncore-elena,elena.kim@devncore.org,2021-10-31,Update Loot View
+f62d584,nuhabo,nuhabo03@gmail.com,2021-10-31,Merge branch 'main' of https://github.com/devncore/leagueoflegends into main
+0d65603,nuhabo,nuhabo03@gmail.com,2021-10-31,Update JoinCustom
+bbde86b,devncore-elena,elena.kim@devncore.org,2021-10-31,Merge branch 'main' of https://github.com/devncore/leagueoflegends
+5b03c12,devncore-elena,elena.kim@devncore.org,2021-10-31,Update Loot View
+96a3d59,nuhabo,nuhabo03@gmail.com,2021-10-31,Update JoinCustom
+4a5c50f,devncore-elena,elena.kim@devncore.org,2021-10-31,Update LootViewModel
+c2e23ef,devncore-elena,elena.kim@devncore.org,2021-10-31,Merge branch 'main' of https://github.com/devncore/leagueoflegends
+5c38032,devncore-elena,elena.kim@devncore.org,2021-10-31,Update LootView
+69782ad,nuhabo,nuhabo03@gmail.com,2021-10-31,Update JoinCustom
+e7604a1,nuhabo,nuhabo03@gmail.com,2021-10-31,Update JoinCustom
+a89d112,nuhabo,nuhabo03@gmail.com,2021-10-31,Update JoinCustom
+a9e73ed,rlagurdls456,rlagurdls456@outlook.com,2021-10-31,Update Store
+b687558,nuhabo,nuhabo03@gmail.com,2021-10-31,Update JoinCustom
+8547f67,nuhabo,nuhabo03@gmail.com,2021-10-31,Update CustomCreate
+7f78195,rlagurdls456,rlagurdls456@outlook.com,2021-10-31,Update Store
+53b15b7,rlagurdls456,rlagurdls456@outlook.com,2021-10-31,Update Store
+1a61e5d,rlagurdls456,rlagurdls456@outlook.com,2021-10-31,Merge branch 'main' of https://github.com/devncore/leagueoflegends into main
+bc490fb,rlagurdls456,rlagurdls456@outlook.com,2021-10-31,Update Store
+0a81efb,nuhabo,nuhabo03@gmail.com,2021-10-31,Update CustomCreate
+51fa350,nuhabo,nuhabo03@gmail.com,2021-10-31,Update CustomCreate
+9fce6b3,nuhabo,nuhabo03@gmail.com,2021-10-31,Update CustomCreate
+f1d370d,nuhabo,nuhabo03@gmail.com,2021-10-31,Update CreateCustom
+a0aec69,nuhabo,nuhabo03@gmail.com,2021-10-31,Udate CustomGame
+c990319,nuhabo,nuhabo03@gmail.com,2021-10-31,Update Custom_Create
+042e6cf,nuhabo,nuhabo03@gmail.com,2021-10-31,Update Custom
+543806a,nuhabo,nuhabo03@gmail.com,2021-10-31,Update CustomGame
+f6032b5,nuhabo,nuhabo03@gmail.com,2021-10-31,CreateCustom
+8d31059,nuhabo,nuhabo03@gmail.com,2021-10-31,Update CustomGame
+47062c0,kevin.kim,kevin.kim@devncore.org,2021-10-30,Update README.md
+87536c0,kevin.kim,kevin.kim@devncore.org,2021-10-30,Update README.md
+531b061,rlagurdls456,rlagurdls456@outlook.com,2021-10-30,Update Store
+6e7c0b4,rlagurdls456,rlagurdls456@outlook.com,2021-10-30,Update Store
+18de9b4,rlagurdls456,rlagurdls456@outlook.com,2021-10-30,Update Store
+8b1a2b7,rlagurdls456,rlagurdls456@outlook.com,2021-10-30,Update Store HomeView
+2c3de1f,rlagurdls456,rlagurdls456@outlook.com,2021-10-30,Add Store SetList
+65dcf5c,rlagurdls456,rlagurdls456@outlook.com,2021-10-30,Add Store Thread
+94e201c,rlagurdls456,rlagurdls456@outlook.com,2021-10-30,Update Store
+8085b16,nuhabo,nuhabo03@gmail.com,2021-10-30,Update CreateCustom
+6096e9d,nuhabo,nuhabo03@gmail.com,2021-10-30,Update GameRoom
+55e1b7a,rlagurdls456,rlagurdls456@outlook.com,2021-10-30,Update Store
+10bb2ae,rlagurdls456,rlagurdls456@outlook.com,2021-10-30,Add Store NewSkinList
+b4f8ee8,nuhabo,nuhabo03@gmail.com,2021-10-30,Update Highlight
+7a03702,rlagurdls456,rlagurdls456@outlook.com,2021-10-30,Add Store LockButton
+641693d,rlagurdls456,rlagurdls456@outlook.com,2021-10-30,Update Store
+63b2cf0,nuhabo,nuhabo03@gmail.com,2021-10-30,Update MyShop
+88285ed,rlagurdls456,rlagurdls456@outlook.com,2021-10-30,Update Store
+cae2c8b,nuhabo,nuhabo03@gmail.com,2021-10-30,Update MyShop
+085e8c0,nuhabo,nuhabo03@gmail.com,2021-10-30,Update Champ
+b47fe75,rlagurdls456,rlagurdls456@outlook.com,2021-10-30,Update Store
+d04b453,nuhabo,nuhabo03@gmail.com,2021-10-30,Update Champ
+8cfd9da,nuhabo,nuhabo03@gmail.com,2021-10-30,Update Champs
+ecac16a,rlagurdls456,rlagurdls456@outlook.com,2021-10-30,Add Store HomeView
+003ffc0,rlagurdls456,rlagurdls456@outlook.com,2021-10-30,Update
+3f858ce,rlagurdls456,rlagurdls456@outlook.com,2021-10-30,Update Tree
+b5c9ffe,rlagurdls456,rlagurdls456@outlook.com,2021-10-30,Update MyShop
+da1c506,nuhabo,nuhabo03@gmail.com,2021-10-30,Update JoinCustom
+37cf66d,nuhabo,nuhabo03@gmail.com,2021-10-30,Update JoinCustom
+274a73e,nuhabo,nuhabo03@gmail.com,2021-10-30,Update MyShop
+c7dcda9,nuhabo,nuhabo03@gmail.com,2021-10-30,Update myshop
+830190d,nuhabo,nuhabo03@gmail.com,2021-10-30,Update Highlight
+1d35ac4,nuhabo,nuhabo03@gmail.com,2021-10-30,Update Highlight
+1bdbb8c,lucas.park,lucas.park@devncore.org,2021-10-30,Update README.md
+4602eab,nuhabo,nuhabo03@gmail.com,2021-10-30,Update Highlight
+8160527,nuhabo,nuhabo03@gmail.com,2021-10-30,Update Highlight
+53f5055,nuhabo,nuhabo03@gmail.com,2021-10-29,Update Highlight
+98956d0,nuhabo,nuhabo03@gmail.com,2021-10-29,Update highlight
+d057551,nuhabo,nuhabo03@gmail.com,2021-10-29,Update highlight
+62d7907,nuhabo,nuhabo03@gmail.com,2021-10-29,Update champ
+1103c30,kevin.kim,kevin.kim@devncore.org,2021-10-29,Update README.md
+215173b,nuhabo,nuhabo03@gmail.com,2021-10-29,Update champ
+d59a2c6,nuhabo,nuhabo03@gmail.com,2021-10-28,Update champ
+71430a8,nuhabo,nuhabo03@gmail.com,2021-10-28,Udapte champ
+084daf2,nuhabo,nuhabo03@gmail.com,2021-10-28,Update
+b8e71ee,james lee,james.lee@devncore.org,2021-10-27,Remote IsSync Option
+5b0e857,james lee,james.lee@devncore.org,2021-10-27,Update Loot Project
+8156995,james lee,james.lee@devncore.org,2021-10-27,Delete Lol.YamlDatabase
+739718a,james lee,james.lee@devncore.org,2021-10-27,Merge branch 'main' of https://github.com/devncore/leagueoflegends
+88785d1,james lee,james.lee@devncore.org,2021-10-27,Update Lol.Yamldatabase -> Lol.Database
+9d35308,kevin.kim,kevin.kim@devncore.org,2021-10-27,Update README.md
+6bf12fd,rlagurdls456,rlagurdls456@outlook.com,2021-10-27,Update Store
+69d8e66,rlagurdls456,rlagurdls456@outlook.com,2021-10-27,Loot
+611d619,rlagurdls456,rlagurdls456@outlook.com,2021-10-26,Update
+3e5b3e0,rlagurdls456,rlagurdls456@outlook.com,2021-10-26,Update Store
+fc7156e,rlagurdls456,rlagurdls456@outlook.com,2021-10-26,Update Store ChampList
+5d9956a,rlagurdls456,rlagurdls456@outlook.com,2021-10-26,Add Store Yaml
+e9e8c7b,rlagurdls456,rlagurdls456@outlook.com,2021-10-26,Update Store
+07907fe,rlagurdls456,rlagurdls456@outlook.com,2021-10-26,Update Store'
+f6148a9,rlagurdls456,rlagurdls456@outlook.com,2021-10-25,Update Store
+09c26e2,rlagurdls456,rlagurdls456@outlook.com,2021-10-25,Update Store
+b6c8bb1,rlagurdls456,rlagurdls456@outlook.com,2021-10-25,Update Store
+71f5f87,elena.kim,elena.kim@devncore.org,2021-10-24,Update README.md
+f803736,elena.kim,elena.kim@devncore.org,2021-10-24,Update README.md
+75ca6f4,elena.kim,elena.kim@devncore.org,2021-10-24,Update README.md
+259e890,elena.kim,elena.kim@devncore.org,2021-10-24,Update README.md
+08f61b2,devncore-elena,elena.kim@devncore.org,2021-10-24,Merge branch 'main' of https://github.com/devncore/leagueoflegends
+76222d1,devncore-elena,elena.kim@devncore.org,2021-10-24,Update RuneView
+9abdf40,kevin.kim,kevin.kim@devncore.org,2021-10-24,Update README.md
+7422c52,rlagurdls456,rlagurdls456@outlook.com,2021-10-24,Update Loot Scroll 간격 조정
+697e9ba,rlagurdls456,rlagurdls456@outlook.com,2021-10-24,Update Loot
+514e659,kevin.kim,kevin.kim@devncore.org,2021-10-24,Update README.md
+c3f7903,devncore-elena,elena.kim@devncore.org,2021-10-24,Clean Collection Project
+f17179d,rlagurdls456,rlagurdls456@outlook.com,2021-10-24,Tree 주석
+dfe86f7,rlagurdls456,rlagurdls456@outlook.com,2021-10-24,Update Loot CommonLixtItem
+2c07d4f,rlagurdls456,rlagurdls456@outlook.com,2021-10-24,Update Loot
+02424c4,rlagurdls456,rlagurdls456@outlook.com,2021-10-24,Update Loot TreeView
+8a33e97,rlagurdls456,rlagurdls456@outlook.com,2021-10-24,Update yaml
+7d8e004,elena.kim,elena.kim@devncore.org,2021-10-23,Update README.md
+40cb9c4,rlagurdls456@outlook.com,rlagurdls456@outlook.com,2021-10-23,Update
+bc2be30,nuhabo,nuhabo03@gmail.com,2021-10-22,Update champ
+f439613,rlagurdls456,rlagurdls456@outlook.com,2021-10-21,Update
+294e6a2,nuhabo,nuhabo03@gmail.com,2021-10-21,Update champ
+6416125,rlagurdls456,rlagurdls456@outlook.com,2021-10-21,Update
+6965267,rlagurdls456,rlagurdls456@outlook.com,2021-10-21,Update
+e5969f0,rlagurdls456,rlagurdls456@outlook.com,2021-10-21,CommonListBox > TreeView Change
+1796cde,rlagurdls456,rlagurdls456@outlook.com,2021-10-21,Update Loot CommonListBox
+5db13e8,nuhabo,nuhabo03@gmail.com,2021-10-20,Update champ
+4253e8a,james lee,james.lee@devncore.org,2021-10-20,Disable allow nullable
+86d7920,james lee,james.lee@devncore.org,2021-10-20,Remove System.Windows.Interactivity.WPF
+9d66a87,nuhabo,nuhabo03@gmail.com,2021-10-19,Update champ
+5adecf0,james.lee,james.lee@devncore.org,2021-10-19,Update README.md
+b0a60d4,nuhabo,nuhabo03@gmail.com,2021-10-19,Update champ
+fff8e4f,nuhabo,nuhabo03@gmail.com,2021-10-19,Update champ
+7990a31,elena.kim,elena.kim@devncore.org,2021-10-19,Update README.md
+1c14eb4,nuhabo,nuhabo03@gmail.com,2021-10-19,Update champ
+1af8774,nuhabo,nuhabo03@gmail.com,2021-10-18,Update using
+73e19a4,elena.kim,elena.kim@devncore.org,2021-10-18,Update README.md
+6f296ad,devncore-elena,elena.kim@devncore.org,2021-10-17,Add SkinView and Resources
+f1b0f27,elena.kim,elena.kim@devncore.org,2021-10-17,Update README.md
+804f320,elena.kim,elena.kim@devncore.org,2021-10-17,Update README.md
+6526a0e,devncore-elena,elena.kim@devncore.org,2021-10-17,Merge branch 'main' of https://github.com/devncore/leagueoflegends
+73fbc9a,devncore-elena,elena.kim@devncore.org,2021-10-17,Update PVP View Button Command
+a6d90cf,james.lee,james.lee@devncore.org,2021-10-17,Update README.md
+0d55b4a,rlagurdls456,rlagurdls456@outlook.com,2021-10-17,Add Loot CommonListBox
+9995de9,rlagurdls456,rlagurdls456@outlook.com,2021-10-17,Update Loot ItemListBox
+0d9a2ab,devncore-elena,elena.kim@devncore.org,2021-10-17,Merge branch 'main' of https://github.com/devncore/leagueoflegends
+8bf2b53,devncore-elena,elena.kim@devncore.org,2021-10-17,Update ItemView
+abdaf04,rlagurdls456,rlagurdls456@outlook.com,2021-10-17,ItemListBox Add
+dbb4070,rlagurdls456,rlagurdls456@outlook.com,2021-10-17,Update Loot PlusButton Add
+7a4717d,rlagurdls456,rlagurdls456@outlook.com,2021-10-17,Loot RightContent Add
+37537a2,rlagurdls456,rlagurdls456@outlook.com,2021-10-17,Update Error
+3b6b6e1,rlagurdls456,rlagurdls456@outlook.com,2021-10-17,Update Lol Loot
+12f09f4,rlagurdls456,rlagurdls456@outlook.com,2021-10-17,Update Loot LeftMenu
+8839c8b,rlagurdls456,rlagurdls456@outlook.com,2021-10-17,Update Loot
+4f999c5,rlagurdls456,rlagurdls456@outlook.com,2021-10-17,LootLeftMenu ListBox Add
+89b0cee,rlagurdls456,rlagurdls456@outlook.com,2021-10-17,Lol.Loot Project Add
+006f234,nuhabo,nuhabo03@gmail.com,2021-10-17,Update Rune
+b42f5cf,nuhabo,nuhabo03@gmail.com,2021-10-17,Update rune
+3c8c318,nuhabo,nuhabo03@gmail.com,2021-10-17,Update champ
+ad7cadb,nuhabo,nuhabo03@gmail.com,2021-10-17,Update champImg
+a2b9490,nuhabo,nuhabo03@gmail.com,2021-10-16,Update champ
+6f09483,elena.kim,elena.kim@devncore.org,2021-10-15,Update README.md
+a51e224,rlagurdls456,rlagurdls456@outlook.com,2021-10-14,Collection RuneView Update
+b41f23f,rlagurdls456,rlagurdls456@outlook.com,2021-10-14,GameRoom 모드변경 클릭 이벤트 추가
+a90429a,kevin.kim,kevin.kim@devncore.org,2021-10-14,Update README.md
+5af7388,devncore-elena,elena.kim@devncore.org,2021-10-14,Update ItemView ItemListBox
+3ec13c7,devncore-elena,elena.kim@devncore.org,2021-10-14,Update ItemView ItemSet
+cbdece0,james lee,james.lee@devncore.org,2021-10-14,Remove nullable option
+1492b9e,james lee,james.lee@devncore.org,2021-10-14,Remove nullable option from Lol.YamDatabas
+6b254a6,nuhabo,nuhabo03@gmail.com,2021-10-14,Update champ
+9a31314,nuhabo,nuhabo03@gmail.com,2021-10-14,Update champ
+b206d6c,nuhabo,nuhabo03@gmail.com,2021-10-14,Update champ
+e0329b1,james lee,james.lee@devncore.org,2021-10-13,Merge branch 'main' of https://github.com/devncore/leagueoflegends
+432c51c,james lee,james.lee@devncore.org,2021-10-13,Add using from Lol.YamlDatabase
+00bee35,nuhabo,nuhabo03@gmail.com,2021-10-13,Update champs
+f2f743e,devncore-elena,elena.kim@devncore.org,2021-10-13,Clean Collection Units
+719bd2e,devncore-elena,elena.kim@devncore.org,2021-10-13,Merge branch 'main' of https://github.com/devncore/leagueoflegends
+2278495,devncore-elena,elena.kim@devncore.org,2021-10-13,Update ItemView
+dad7597,nuhabo,nuhabo03@gmail.com,2021-10-13,Champ/update
+433def9,nuhabo,nuhabo03@gmail.com,2021-10-13,Merge branch 'main' of https://github.com/devncore/leagueoflegends into main
+2c2e91e,nuhabo,nuhabo03@gmail.com,2021-10-13,Rune/Update
+f4a7f75,devncore-elena,elena.kim@devncore.org,2021-10-13,Fix nullable suggestion
+c3ecbb2,devncore-elena,elena.kim@devncore.org,2021-10-13,Merge branch 'main' of https://github.com/devncore/leagueoflegends
+a1b1977,devncore-elena,elena.kim@devncore.org,2021-10-13,Fix nullable suggestion
+e93bff5,elena.kim,elena.kim@devncore.org,2021-10-13,Update README.md
+c32bcf6,devncore-elena,elena.kim@devncore.org,2021-10-13,Update YamlDatabase
+bfc8bd8,kevin.kim,kevin.kim@devncore.org,2021-10-13,Update README.md
+8baaf91,nuhabo,nuhabo03@gmail.com,2021-10-13,champ/update
+677d03c,nuhabo,nuhabo03@gmail.com,2021-10-13,champ/update
+9c43e29,nuhabo,nuhabo03@gmail.com,2021-10-13,champ combobox
+d231a5d,nuhabo,nuhabo03@gmail.com,2021-10-12,champ
+0226527,nuhabo,nuhabo03@gmail.com,2021-10-12,champ
+99e1853,elena.kim,elena.kim@devncore.org,2021-10-11,Update README.md
+c35e098,james lee,james.lee@devncore.org,2021-10-11,Update
+33c17fc,rlagurdls456,rlagurdls456@outlook.com,2021-10-11,Update
+b110b46,rlagurdls456,rlagurdls456@outlook.com,2021-10-11,Add MyDetail
+6472e3a,rlagurdls456,rlagurdls456@outlook.com,2021-10-11,파티 Close버튼 클릭시 Home으로 이동
+8d1f37b,nuhabo,nuhabo03@gmail.com,2021-10-11,update
+08c4f91,elena.kim,elena.kim@devncore.org,2021-10-10,Update README.md
+df8d839,elena.kim,elena.kim@devncore.org,2021-10-10,Update README.md
+3468cbb,rlagurdls456,rlagurdls456@outlook.com,2021-10-10,Update
+db4c9bd,nuhabo,nuhabo03@gmail.com,2021-10-10,update
+56a74bf,kevin.kim,kevin.kim@devncore.org,2021-10-10,Update README.md
+7cd54c4,kevin.kim,kevin.kim@devncore.org,2021-10-10,Update README.md
+3318586,rlagurdls456,rlagurdls456@outlook.com,2021-10-10,Update
+93015b8,rlagurdls456,rlagurdls456@outlook.com,2021-10-10,Update
+dd5b647,rlagurdls456,rlagurdls456@outlook.com,2021-10-10,Update
+3a2beb3,rlagurdls456,rlagurdls456@outlook.com,2021-10-10,Update
+529f42d,rlagurdls456,rlagurdls456@outlook.com,2021-10-10,Update
+541af19,rlagurdls456,rlagurdls456@outlook.com,2021-10-10,Update
+181bc09,rlagurdls456,rlagurdls456@outlook.com,2021-10-10,Update
+cf3cad4,nuhabo,nuhabo03@gmail.com,2021-10-10,update
+029e1e9,nuhabo,nuhabo03@gmail.com,2021-10-10,update:
+abed559,nuhabo,nuhabo03@gmail.com,2021-10-10,update
+95e76c1,elena.kim,elena.kim@devncore.org,2021-10-10,Update README.md
+1635718,rlagurdls456,rlagurdls456@outlook.com,2021-10-09,Update
+eebf498,rlagurdls456,rlagurdls456@outlook.com,2021-10-09,Update
+79d605d,elena.kim,elena.kim@devncore.org,2021-10-09,Update README.md
+c08fa0f,rlagurdls456,rlagurdls456@outlook.com,2021-10-09,Update Animation
+1771d73,elena.kim,elena.kim@devncore.org,2021-10-09,Update README.md
+044aefa,nuhabo,nuhabo03@gmail.com,2021-10-09,update
+a60e951,rlagurdls456,rlagurdls456@outlook.com,2021-10-09,Update
+236e4c2,nuhabo,nuhabo03@gmail.com,2021-10-09,update
+330bfc8,rlagurdls456,rlagurdls456@outlook.com,2021-10-09,Update
+2155e19,rlagurdls456,rlagurdls456@outlook.com,2021-10-09,Update
+f7b51d3,rlagurdls456,rlagurdls456@outlook.com,2021-10-09,Update
+452062a,nuhabo,nuhabo03@gmail.com,2021-10-09,update
+977f2bc,elena.kim,elena.kim@devncore.org,2021-10-09,Update README.md
+eef30ed,rlagurdls456,rlagurdls456@outlook.com,2021-10-09,Update
+23c60be,rlagurdls456,rlagurdls456@outlook.com,2021-10-09,RiftView TopContent Add
+a967e1a,rlagurdls456,rlagurdls456@outlook.com,2021-10-09,Update
+b20c00c,elena.kim,elena.kim@devncore.org,2021-10-08,Update README.md
+3a9563d,elena.kim,elena.kim@devncore.org,2021-10-08,Update README.md
+98c38c1,james lee,james.lee@devncore.org,2021-10-07,update
+66d3d29,elena.kim,elena.kim@devncore.org,2021-10-07,Update README.md
+7163810,devncore-elena,elena.kim@devncore.org,2021-10-07,Update PVPView
+64780b9,devncore-elena,elena.kim@devncore.org,2021-10-07,Add GameType
+bb441d6,devncore-elena,elena.kim@devncore.org,2021-10-07,Add PVPView MapTitle
+c386485,devncore-elena,elena.kim@devncore.org,2021-10-07,Add MapSymbol
+3a4bf00,devncore-elena,elena.kim@devncore.org,2021-10-07,Update MapList
+3b50b15,james lee,james.lee@devncore.org,2021-10-06,Merge branch 'main' of https://github.com/devncore/leagueoflegends
+7f42777,james lee,james.lee@devncore.org,2021-10-06,Update Game margin
+584e24e,elena.kim,elena.kim@devncore.org,2021-10-06,Update README.md
+8c71985,devncore-elena,elena.kim@devncore.org,2021-10-06,Update MapList
+158224e,devncore-elena,elena.kim@devncore.org,2021-10-06,Remove Unused code
+2219c3d,devncore-elena,elena.kim@devncore.org,2021-10-06,Update GameRoom PVPView
+c3ac0ba,devncore-elena,elena.kim@devncore.org,2021-10-06,Update Main PlayButton
+cfb98b7,devncore-elena,elena.kim@devncore.org,2021-10-06,Update PVPViewModel
+338795b,devncore-elena,elena.kim@devncore.org,2021-10-06,Update SubMenus
+55c890e,devncore-elena,elena.kim@devncore.org,2021-10-06,Update TFT Yaml Data
+08d92fb,devncore-elena,elena.kim@devncore.org,2021-10-06,Update Yamldatabase
+e8db5ad,rlagurdls456,rlagurdls456@outlook.com,2021-10-06,Update
+999b677,rlagurdls456,rlagurdls456@outlook.com,2021-10-06,Update
+7569450,nuhabo,nuhabo03@gmail.com,2021-10-06,update
+119690f,nuhabo,nuhabo03@gmail.com,2021-10-06,update
+4ee98c0,james lee,james.lee@devncore.org,2021-10-06,Merge branch 'main' of https://github.com/devncore/leagueoflegends
+00bbe6b,james lee,james.lee@devncore.org,2021-10-06,update
+9f84b33,nuhabo,nuhabo03@gmail.com,2021-10-06,update
+716a923,nuhabo,nuhabo03@gmail.com,2021-10-06,update
+6b00966,nuhabo,nuhabo03@gmail.com,2021-10-06,update
+cb897a6,nuhabo,nuhabo03@gmail.com,2021-10-06,update
+8c87bf6,nuhabo,nuhabo03@gmail.com,2021-10-06,update
+3fe3a34,elena.kim,elena.kim@devncore.org,2021-10-06,Update README.md
+dad513b,elena.kim,elena.kim@devncore.org,2021-10-06,Update README.md
+5f283b8,james.lee,james.lee@devncore.org,2021-10-06,Update README.md
+16424c5,james.lee,james.lee@devncore.org,2021-10-06,Update README.md
+187a6d0,nuhabo,nuhabo03@gmail.com,2021-10-06,update
+62d9ff3,james.lee,james.lee@devncore.org,2021-10-06,Update README.md
+aa5149a,james.lee,james.lee@devncore.org,2021-10-06,Update README.md
+39a6897,james.lee,james.lee@devncore.org,2021-10-06,Update README.md
+b9a3ccf,james.lee,james.lee@devncore.org,2021-10-05,Update README.md
+128f0c1,james.lee,james.lee@devncore.org,2021-10-05,Update README.md
+81968b9,james.lee,james.lee@devncore.org,2021-10-05,Update README.md
+7506dbc,james.lee,james.lee@devncore.org,2021-10-05,Update README.md
+b535383,devncore-elena,elena.kim@devncore.org,2021-10-05,Merge branch 'main' of https://github.com/devncore/leagueoflegends
+20f94c1,devncore-elena,elena.kim@devncore.org,2021-10-05,Update HistoryView
+f95e98a,rlagurdls456,rlagurdls456@outlook.com,2021-10-05,Update
+0a95e6f,nuhabo,nuhabo03@gmail.com,2021-10-05,udate
+da50869,devncore-elena,elena.kim@devncore.org,2021-10-05,Update SpellsView
+dbea3b9,devncore-elena,elena.kim@devncore.org,2021-10-05,Update GameRoom
+d0b739c,rlagurdls456,rlagurdls456@outlook.com,2021-10-05,Update
+1937343,rlagurdls456,rlagurdls456@outlook.com,2021-10-05,Update
+b80eee5,kevin.kim,kevin.kim@devncore.org,2021-10-04,Update README.md
+732bcc8,rlagurdls456,rlagurdls456@outlook.com,2021-10-04,Update
+86f3593,nuhabo,nuhabo03@gmail.com,2021-10-04,update
+d4c8d87,rlagurdls456,rlagurdls456@outlook.com,2021-10-04,Update
+7309e50,rlagurdls456,rlagurdls456@outlook.com,2021-10-04,Update
+0ade2da,nuhabo,nuhabo03@gmail.com,2021-10-04,update
+0e0700e,nuhabo,nuhabo03@gmail.com,2021-10-04,update
+402d870,nuhabo,nuhabo03@gmail.com,2021-10-04,update
+e5ef502,nuhabo,nuhabo03@gmail.com,2021-10-04,update
+67d3a34,nuhabo,nuhabo03@gmail.com,2021-10-04,update
+f4c5ca7,nuhabo,nuhabo03@gmail.com,2021-10-04,update
+070c300,james lee,james.lee@devncore.org,2021-10-04,'Update
+e4ef14a,james lee,james.lee@devncore.org,2021-10-04,Update
+eaceb17,nuhabo,nuhabo03@gmail.com,2021-10-04,update
+7e388fa,james lee,james.lee@devncore.org,2021-10-04,Update
+5bb0635,nuhabo,nuhabo03@gmail.com,2021-10-04,update
+86e9851,nuhabo,nuhabo03@gmail.com,2021-10-04,update
+26924cd,nuhabo,nuhabo03@gmail.com,2021-10-03,update
+f647c7b,nuhabo,nuhabo03@gmail.com,2021-10-03,update
+d3a1f65,nuhabo,nuhabo03@gmail.com,2021-10-03,update
+285a6f0,nuhabo,nuhabo03@gmail.com,2021-10-03,update
+0ddd4fa,nuhabo,nuhabo03@gmail.com,2021-10-03,champImg
+2bfa100,nuhabo,nuhabo03@gmail.com,2021-10-03,ChampImg
+1861504,nuhabo,nuhabo03@gmail.com,2021-10-03,champImg
+f431730,james lee,james.lee@devncore.org,2021-10-03,Update audio device
+ebf0cad,james lee,james.lee@devncore.org,2021-10-03,Update
+f0b38a4,james lee,james.lee@devncore.org,2021-10-03,Update
+4ed4925,james lee,james.lee@devncore.org,2021-10-03,Add storeChampTypes
+63b3220,james lee,james.lee@devncore.org,2021-10-03,Update clash db
+7b1b48b,james lee,james.lee@devncore.org,2021-10-03,update
+c9b81b1,james lee,james.lee@devncore.org,2021-10-03,Update
+498c10f,james lee,james.lee@devncore.org,2021-10-03,Merge branch 'main' of https://github.com/devncore/leagueoflegends
+331d49d,james lee,james.lee@devncore.org,2021-10-03,Update
+5ed0a18,james lee,james.lee@devncore.org,2021-10-03,Update
+5052c5f,nuhabo,nuhabo03@gmail.com,2021-10-03,update
+d352f73,rlagurdls456@outlook.com,rlagurdls456@outlook.com,2021-10-03,Update
+1b6887b,james lee,james.lee@devncore.org,2021-10-03,Update
+8ec236b,james lee,james.lee@devncore.org,2021-10-03,Rename Histories
+86fd26a,james lee,james.lee@devncore.org,2021-10-03,Update
+b616417,james lee,james.lee@devncore.org,2021-10-03,Update
+df7c1d5,james lee,james.lee@devncore.org,2021-10-03,update
+9e043e7,rlagurdls456@outlook.com,rlagurdls456@outlook.com,2021-10-03,History ExamData to Yaml
+1f4aa45,rlagurdls456@outlook.com,rlagurdls456@outlook.com,2021-10-03,GetActivities to Yaml
+cb811b3,rlagurdls456@outlook.com,rlagurdls456@outlook.com,2021-10-03,GetHistory Remove
+d6e0a62,rlagurdls456@outlook.com,rlagurdls456@outlook.com,2021-10-03,Update
+ec19458,rlagurdls456@outlook.com,rlagurdls456@outlook.com,2021-10-03,GetHistory to yaml
+9228f59,james lee,james.lee@devncore.org,2021-10-03,Merge branch 'main' of https://github.com/devncore/leagueoflegends
+382d299,james lee,james.lee@devncore.org,2021-10-03,Update
+288575e,nuhabo,nuhabo03@gmail.com,2021-10-03,Merge branch 'main' of https://github.com/devncore/leagueoflegends into main
+03c0ef4,nuhabo,nuhabo03@gmail.com,2021-10-03,update
+832fe0e,james lee,james.lee@devncore.org,2021-10-03,Update
+01d59ef,nuhabo,nuhabo03@gmail.com,2021-10-03,update
+e441a8e,rlagurdls456@outlook.com,rlagurdls456@outlook.com,2021-10-03,GameRoom exam to yaml
+b9434bd,rlagurdls456@outlook.com,rlagurdls456@outlook.com,2021-10-03,yml add
+59c0805,james lee,james.lee@devncore.org,2021-10-03,Delete temporary data (collection)
+dceb349,james lee,james.lee@devncore.org,2021-10-03,Delete GetSpells
+3d3442e,james lee,james.lee@devncore.org,2021-10-03,Remove tempdata
+e996acb,james lee,james.lee@devncore.org,2021-10-03,Update
+467911f,james lee,james.lee@devncore.org,2021-10-03,Update yml
+d1bbf7f,james lee,james.lee@devncore.org,2021-10-03,Update teamfights.yml
+4763f27,james lee,james.lee@devncore.org,2021-10-03,Add teamFights.yml
+0f47e5b,rlagurdls456@outlook.com,rlagurdls456@outlook.com,2021-10-02,Update
+76d9f1a,james lee,james.lee@devncore.org,2021-10-02,Update
+6ade276,james lee,james.lee@devncore.org,2021-10-02,Update resource
+4b2944b,james lee,james.lee@devncore.org,2021-10-02,Update resource
+8826489,james lee,james.lee@devncore.org,2021-10-02,Update
+6de53b0,james lee,james.lee@devncore.org,2021-10-02,Clean ScrollBar resource
+1c0f452,james lee,james.lee@devncore.org,2021-10-02,Update resource
+9b290f4,james lee,james.lee@devncore.org,2021-10-02,Update resource
+79df15e,james lee,james.lee@devncore.org,2021-10-02,Resource clean
+54965ed,kevin.kim,kevin.kim@devncore.org,2021-10-02,Update README.md
+fc975a8,rlagurdls456@outlook.com,rlagurdls456@outlook.com,2021-10-02,Update
+c4a3f20,rlagurdls456@outlook.com,rlagurdls456@outlook.com,2021-10-02,Update
+222c925,james lee,james.lee@devncore.org,2021-10-02,clean using
+3e93d45,rlagurdls456@outlook.com,rlagurdls456@outlook.com,2021-10-02,update
+4f9b6f1,james lee,james.lee@devncore.org,2021-10-02,Update
+7cbf92b,nuhabo,nuhabo03@gmail.com,2021-10-01,update
+ff58435,nuhabo,nuhabo03@gmail.com,2021-10-01,update
+9e0bbe4,nuhabo,nuhabo03@gmail.com,2021-10-01,update
+9b4bf7d,nuhabo,nuhabo03@gmail.com,2021-10-01,update
+3fc17da,nuhabo,nuhabo03@gmail.com,2021-10-01,update
+8df178f,nuhabo,nuhabo03@gmail.com,2021-10-01,update
+121be4a,james lee,james.lee@devncore.org,2021-09-30,Update
+6841699,james lee,james.lee@devncore.org,2021-09-30,Clean using
+c1a1bfe,rlagurdls456,rlagurdls456@outlook.com,2021-09-30,Linq Where Remove
+eb54bac,james lee,james.lee@devncore.org,2021-09-30,Update spells data
+9847a5d,james lee,james.lee@devncore.org,2021-09-30,Clean using
+0cad91a,james lee,james.lee@devncore.org,2021-09-30,Add spell data.
+a25a594,james lee,james.lee@devncore.org,2021-09-30,Fixed errolist
+4efaeee,james lee,james.lee@devncore.org,2021-09-30,Update linq any()
+115c330,james lee,james.lee@devncore.org,2021-09-30,Update
+a319b2c,james lee,james.lee@devncore.org,2021-09-30,Merge branch 'main' of https://github.com/devncore/leagueoflegends
+2cc0b52,james lee,james.lee@devncore.org,2021-09-30,Update
+3999664,nuhabo,nuhabo03@gmail.com,2021-09-30,update
+32c99c6,rlagurdls456,rlagurdls456@outlook.com,2021-09-30,Update
+4813647,james.lee,james.lee@devncore.org,2021-09-29,Update README.md
+e746c28,nuhabo,nuhabo03@gmail.com,2021-09-29,update
+73a0997,nuhabo,nuhabo03@gmail.com,2021-09-29,update
+7589753,nuhabo,nuhabo03@gmail.com,2021-09-29,update
+50d546e,nuhabo,nuhabo03@gmail.com,2021-09-29,update
+8ff4794,nuhabo,nuhabo03@gmail.com,2021-09-29,update
+3de3b48,nuhabo,nuhabo03@gmail.com,2021-09-29,update
+53b4f98,nuhabo,nuhabo03@gmail.com,2021-09-29,update
+85c8e8c,nuhabo,nuhabo03@gmail.com,2021-09-29,update
+7354053,elena.kim,elena.kim@devncore.org,2021-09-29,Update README.md
+7b14881,elena.kim,elena.kim@devncore.org,2021-09-29,Update README.md
+b68c31a,elena.kim,elena.kim@devncore.org,2021-09-29,Update README.md
+df3b074,elena.kim,elena.kim@devncore.org,2021-09-29,Update README.md
+fe274d0,rlagurdls456,rlagurdls456@outlook.com,2021-09-29,오타수정
+61ed7f4,james.lee,james.lee@devncore.org,2021-09-28,Update README.md
+0fcead1,james lee,james.lee@devncore.org,2021-09-28,Update
+53863cb,james lee,james.lee@devncore.org,2021-09-28,Update
+f489464,james lee,james.lee@devncore.org,2021-09-28,Update
+d005430,james lee,james.lee@devncore.org,2021-09-28,Update
+4d37d1a,james lee,james.lee@devncore.org,2021-09-28,Update
+4b61a74,james lee,james.lee@devncore.org,2021-09-28,Update
+788e598,james lee,james.lee@devncore.org,2021-09-28,Update
+0646959,james lee,james.lee@devncore.org,2021-09-28,Update
+9e48200,james lee,james.lee@devncore.org,2021-09-28,Update
+52bc0a4,james lee,james.lee@devncore.org,2021-09-28,Update
+f00fb94,james lee,james.lee@devncore.org,2021-09-28,Update resource
+314db00,james lee,james.lee@devncore.org,2021-09-28,Update resource
+f28615e,james lee,james.lee@devncore.org,2021-09-28,Update resource
+9d83679,james lee,james.lee@devncore.org,2021-09-28,Add region
+1021dd3,james lee,james.lee@devncore.org,2021-09-28,Add region
+d8241c1,james lee,james.lee@devncore.org,2021-09-28,Add region
+11bea5c,james lee,james.lee@devncore.org,2021-09-28,Update
+ac70298,rlagurdls456,rlagurdls456@outlook.com,2021-09-28,Update
+dfffb98,nuhabo,nuhabo03@gmail.com,2021-09-28,Merge branch 'main' of https://github.com/devncore/leagueoflegends into main
+074f598,nuhabo,nuhabo03@gmail.com,2021-09-28,update
+9ab1cda,rlagurdls456,rlagurdls456@outlook.com,2021-09-28,Update
+c1a3fe9,kevin.kim,kevin.kim@devncore.org,2021-09-28,Update README.md
+53b0dd3,kevin.kim,kevin.kim@devncore.org,2021-09-28,Update README.md
+4d7d63f,kevin.kim,kevin.kim@devncore.org,2021-09-28,Update README.md
+1143af5,rlagurdls456,rlagurdls456@outlook.com,2021-09-28,Update
+17a3f3a,devncore-elena,elena.kim@devncore.org,2021-09-27,Update ExampleData
+e5eeb70,devncore-elena,elena.kim@devncore.org,2021-09-27,Merge branch 'main' of https://github.com/devncore/leagueoflegends
+7d174fa,devncore-elena,elena.kim@devncore.org,2021-09-27,Update FriendsApi
+42b4853,rlagurdls456,rlagurdls456@outlook.com,2021-09-27,MapIcon 임시 추가
+d440460,rlagurdls456,rlagurdls456@outlook.com,2021-09-27,MapListBox Blur Effect Add
+68c0792,rlagurdls456,rlagurdls456@outlook.com,2021-09-27,Update
+08f854d,elena.kim,elena.kim@devncore.org,2021-09-27,Update README.md
+b621695,devncore-elena,elena.kim@devncore.org,2021-09-27,Update MainView Background
+ced5e4c,elena.kim,elena.kim@devncore.org,2021-09-27,Update README.md
+356df8d,elena.kim,elena.kim@devncore.org,2021-09-27,Update README.md
+0a6c536,elena.kim,elena.kim@devncore.org,2021-09-27,Update README.md
+6607c9c,elena.kim,elena.kim@devncore.org,2021-09-27,Update README.md
+c613786,rlagurdls456,rlagurdls456@outlook.com,2021-09-27,Remove using
+4dea6d6,rlagurdls456,rlagurdls456@outlook.com,2021-09-27,Update
+c8a6d77,rlagurdls456,rlagurdls456@outlook.com,2021-09-27,Update
+ef3d28a,rlagurdls456,rlagurdls456@outlook.com,2021-09-27,Update
+2d7652d,james.lee,james.lee@devncore.org,2021-09-27,Update README.md
+b50f8b0,james.lee,james.lee@devncore.org,2021-09-27,Update README.md
+4d81b0c,james.lee,james.lee@devncore.org,2021-09-27,Update README.md
+c187513,james.lee,james.lee@devncore.org,2021-09-27,Update README.md
+6c0a6d7,james.lee,james.lee@devncore.org,2021-09-27,Update README.md
+74e6931,james.lee,james.lee@devncore.org,2021-09-27,Update README.md
+6c8460e,james.lee,james.lee@devncore.org,2021-09-27,Update README.md
+c60fa3d,james.lee,james.lee@devncore.org,2021-09-27,Update README.md
+37658ff,james.lee,james.lee@devncore.org,2021-09-27,Update README.md
+731c6d5,james.lee,james.lee@devncore.org,2021-09-26,Update README.md
+d7f3cd1,james.lee,james.lee@devncore.org,2021-09-26,Update README.md
+5ffed37,james.lee,james.lee@devncore.org,2021-09-26,Update README.md
+232c8ac,james.lee,james.lee@devncore.org,2021-09-26,Update README.md
+d50d381,james.lee,james.lee@devncore.org,2021-09-26,Update README.md
+119fc3f,rlagurdls456,rlagurdls456@outlook.com,2021-09-26,using Remove
+822aef7,rlagurdls456,rlagurdls456@outlook.com,2021-09-26,Update
+187261a,rlagurdls456,rlagurdls456@outlook.com,2021-09-26,PVPView TrophyButton Add
+d4298d7,james.lee,james.lee@devncore.org,2021-09-26,Update README.md
+4c64283,devncore-elena,elena.kim@devncore.org,2021-09-26,Merge branch 'main' of https://github.com/devncore/leagueoflegends
+065df99,devncore-elena,elena.kim@devncore.org,2021-09-26,update
+476c6d4,kevin.kim,kevin.kim@devncore.org,2021-09-26,Update README.md
+dd11f3c,kevin.kim,kevin.kim@devncore.org,2021-09-26,Update README.md
+f4183b6,kevin.kim,kevin.kim@devncore.org,2021-09-26,Update README.md
+cadbc1f,kevin.kim,kevin.kim@devncore.org,2021-09-26,Update README.md
+4962836,rlagurdls456,rlagurdls456@outlook.com,2021-09-26,GAME Collapsed
+9678489,devncore-elena,elena.kim@devncore.org,2021-09-26,Update
+2b6266e,james.lee,james.lee@devncore.org,2021-09-25,Update README.md
+f81965f,unknown,james.lee@devncore.org,2021-09-25,Remove Lol.DBEntity
+c645943,unknown,james.lee@devncore.org,2021-09-25,Update codeitems
+a71cfa8,devncore-elena,elena.kim@devncore.org,2021-09-25,Add Yaml Data
+fbf44b9,unknown,james.lee@devncore.org,2021-09-25,Update
+ce0f879,unknown,james.lee@devncore.org,2021-09-25,Update
+e1b8660,unknown,james.lee@devncore.org,2021-09-25,update
+ef96b46,devncore-elena,elena.kim@devncore.org,2021-09-25,Merge branch 'main' of https://github.com/devncore/leagueoflegends
+9bf9a8a,devncore-elena,elena.kim@devncore.org,2021-09-25,Update YamlDatabase
+b90523b,rlagurdls456,rlagurdls456@outlook.com,2021-09-25,Update 및 원격
+737e1bf,devncore-elena,elena.kim@devncore.org,2021-09-25,Merge branch 'main' of https://github.com/devncore/leagueoflegends
+7a7b82a,devncore-elena,elena.kim@devncore.org,2021-09-25,Update SpellModel
+5e34d28,james.lee,james.lee@devncore.org,2021-09-25,Update README.md
+8b6676f,devncore-elena,elena.kim@devncore.org,2021-09-25,Update SpellView
+bb61d3f,rlagurdls456,rlagurdls456@outlook.com,2021-09-25,Update
+9a37e2e,rlagurdls456,rlagurdls456@outlook.com,2021-09-25,Updaet
+4ad9df6,rlagurdls456,rlagurdls456@outlook.com,2021-09-25,Update
+04347c6,rlagurdls456,rlagurdls456@outlook.com,2021-09-25,전적 1차 마무리
+3ad728a,rlagurdls456,rlagurdls456@outlook.com,2021-09-25,Update
+623e48f,nuhabo,nuhabo03@gmail.com,2021-09-25,update
+fc5b529,nuhabo,nuhabo03@gmail.com,2021-09-25,update
+3c8f727,nuhabo,nuhabo03@gmail.com,2021-09-25,update
+71aa905,nuhabo,nuhabo03@gmail.com,2021-09-25,update
+9735d9a,nuhabo,nuhabo03@gmail.com,2021-09-25,update
+8fc6ab5,nuhabo,nuhabo03@gmail.com,2021-09-25,'update'
+2148c67,james.lee,james.lee@devncore.org,2021-09-24,Update README.md
+2d39d54,rlagurdls456,rlagurdls456@outlook.com,2021-09-24,Update
+6ad525a,rlagurdls456,rlagurdls456@outlook.com,2021-09-24,HistoryView Image Change
+fe8dfc0,rlagurdls456,rlagurdls456@outlook.com,2021-09-24,RiotIconButton Update
+341a258,rlagurdls456,rlagurdls456@outlook.com,2021-09-24,RiotIconButton Create
+f75f38a,devncore-elena,elena.kim@devncore.org,2021-09-24,Update SearchTextbox
+404ae48,devncore-elena,elena.kim@devncore.org,2021-09-24,Clean Project
+b73b2a2,rlagurdls456,rlagurdls456@outlook.com,2021-09-23,Update
+12b774b,elena.kim,elena.kim@devncore.org,2021-09-23,Update README.md
+2295a21,kevin.kim,kevin.kim@devncore.org,2021-09-23,Update README.md
+5a4ba41,kevin.kim,kevin.kim@devncore.org,2021-09-23,Update README.md
+0b2b259,elena.kim,elena.kim@devncore.org,2021-09-22,Update README.md
+57da3ee,elena.kim,elena.kim@devncore.org,2021-09-22,Update README.md
+3db51b2,elena.kim,elena.kim@devncore.org,2021-09-22,Update README.md
+cf2657b,james.lee,james.lee@devncore.org,2021-09-22,Update README.md
+56f1723,elena.kim,elena.kim@devncore.org,2021-09-21,Update README.md
+2fdb486,james.lee,james.lee@devncore.org,2021-09-21,Update README.md
+3e4c1ce,james.lee,james.lee@devncore.org,2021-09-21,Update README.md
+7b2c6e4,elena.kim,elena.kim@devncore.org,2021-09-20,Update README.md
+a3309e5,james.lee,james.lee@devncore.org,2021-09-20,Update README.md
+08cc8fc,rlagurdls456,rlagurdls456@outlook.com,2021-09-19,Update
+023b702,nuhabo,nuhabo03@gmail.com,2021-09-19,update
+b75c58a,kevin.kim,kevin.kim@devncore.org,2021-09-19,Update README.md
+b368660,elena.kim,elena.kim@devncore.org,2021-09-19,Update README.md
+59485ba,james.lee,james.lee@devncore.org,2021-09-18,Update README.md
+0e6c076,james lee,james.lee@devncore.org,2021-09-18,Update
+f7231fe,james lee,james.lee@devncore.org,2021-09-18,Update
+4973ee2,nuhabo,nuhabo03@gmail.com,2021-09-18,update
+fbfe736,rlagurdls456,rlagurdls456@outlook.com,2021-09-18,Update
+6136abd,nuhabo,nuhabo03@gmail.com,2021-09-18,update
+d68f7dd,rlagurdls456,rlagurdls456@outlook.com,2021-09-18,Update
+c2b2653,nuhabo,nuhabo03@gmail.com,2021-09-18,update
+42c8924,nuhabo,nuhabo03@gmail.com,2021-09-18,update
+a874204,nuhabo,nuhabo03@gmail.com,2021-09-18,update
+afdacbd,nuhabo,nuhabo03@gmail.com,2021-09-18,updatep
+72cdb38,devncore-elena,elena.kim@devncore.org,2021-09-18,Updtae ProfileView
+0e27755,devncore-elena,elena.kim@devncore.org,2021-09-18,Update SpellListBox
+8586aa6,devncore-elena,elena.kim@devncore.org,2021-09-18,Merge branch 'main' of https://github.com/devncore/leagueoflegends
+827db1b,devncore-elena,elena.kim@devncore.org,2021-09-18,Update SpellListBox
+f23b02f,rlagurdls456,rlagurdls456@outlook.com,2021-09-18,Update
+01a3bcf,rlagurdls456,rlagurdls456@outlook.com,2021-09-18,Update
+4226828,elena.kim,elena.kim@devncore.org,2021-09-18,Update README.md
+44ca781,elena.kim,elena.kim@devncore.org,2021-09-18,Update README.md
+1ee537e,james.lee,james.lee@devncore.org,2021-09-18,Update README.md
+c8262cb,rlagurdls456,rlagurdls456@outlook.com,2021-09-18,Update
+fa74325,rlagurdls456,rlagurdls456@outlook.com,2021-09-18,Update
+2b9eb2e,elena.kim,elena.kim@devncore.org,2021-09-18,Update README.md
+4f720df,devncore-elena,elena.kim@devncore.org,2021-09-18,Update MainView
+269d099,devncore-elena,elena.kim@devncore.org,2021-09-18,Merge branch 'main' of https://github.com/devncore/leagueoflegends
+49f0541,devncore-elena,elena.kim@devncore.org,2021-09-18,Update ChatTool
+b946c13,james.lee,james.lee@devncore.org,2021-09-18,Update README.md
+fc43923,james.lee,james.lee@devncore.org,2021-09-18,Update README.md
+50688d6,james.lee,james.lee@devncore.org,2021-09-18,Update README.md
+660b667,james.lee,james.lee@devncore.org,2021-09-18,Update README.md
+d5e85c3,rlagurdls456,rlagurdls456@outlook.com,2021-09-18,Update
+cfc7e61,rlagurdls456,rlagurdls456@outlook.com,2021-09-18,Update
+f82f8a2,unknown,lucas.park@devncore.org,2021-09-18,update
+9b39feb,rlagurdls456,rlagurdls456@outlook.com,2021-09-18,Update
+54122a0,unknown,lucas.park@devncore.org,2021-09-18,update
+d00563b,rlagurdls456,rlagurdls456@outlook.com,2021-09-18,Update
+6fb1fe0,unknown,lucas.park@devncore.org,2021-09-18,updatep
+a55abdb,james.lee,james.lee@devncore.org,2021-09-18,Update README.md
+ed68c19,elena.kim,elena.kim@devncore.org,2021-09-18,Update README.md
+ca3045a,elena.kim,elena.kim@devncore.org,2021-09-18,Update README.md
+7732381,rlagurdls456,rlagurdls456@outlook.com,2021-09-17,Update
+e66c414,lucas.park,lucas.park@devncore.org,2021-09-17,Update README.md
+79eafc8,elena.kim,elena.kim@devncore.org,2021-09-17,Update README.md
+56ef1fb,elena.kim,elena.kim@devncore.org,2021-09-17,Update README.md
+3ed66ef,elena.kim,elena.kim@devncore.org,2021-09-17,Update README.md
+5898036,rlagurdls456,rlagurdls456@outlook.com,2021-09-16,Update
+58a57be,james.lee,james.lee@devncore.org,2021-09-16,Update README.md
+d62f8cc,james.lee,james.lee@devncore.org,2021-09-16,Update README.md
+8a208fa,james.lee,james.lee@devncore.org,2021-09-16,Update README.md
+ac0e995,elena.kim,elena.kim@devncore.org,2021-09-16,Update README.md
+b0cce0d,nuhabo,nuhabo03@gmail.com,2021-09-16,update
+f2d131b,james lee,james.lee@devncore.org,2021-09-16,Add yamldatabase project
+c5c3076,james lee,james.lee@devncore.org,2021-09-16,Merge branch 'main' of https://github.com/devncore/leagueoflegends
+bcd1d3a,james lee,james.lee@devncore.org,2021-09-16,'Update
+c8a185d,nuhabo,nuhabo03@gmail.com,2021-09-15,update
+ca41e78,james.lee,james.lee@devncore.org,2021-09-15,Update README.md
+bf8af80,james.lee,james.lee@devncore.org,2021-09-15,Update README.md
+5bb85b0,james lee,james.lee@devncore.org,2021-09-15,Project structure changed
+4f94769,james lee,james.lee@devncore.org,2021-09-15,Update
+5cdea5f,james lee,james.lee@devncore.org,2021-09-15,Update
+a14b7e3,james lee,james.lee@devncore.org,2021-09-15,Update
+542fdcc,james lee,james.lee@devncore.org,2021-09-15,Update foundation
+0619b55,james.lee,james.lee@devncore.org,2021-09-15,Update README.md
+fb017aa,nuhabo,nuhabo03@gmail.com,2021-09-15,update
+745e10b,nuhabo,nuhabo03@gmail.com,2021-09-15,Merge branch 'main' of https://github.com/devncore/leagueoflegends into main
+5e3af1b,nuhabo,nuhabo03@gmail.com,2021-09-15,update
+a72bf16,james lee,james.lee@devncore.org,2021-09-15,Update
+11dd60f,rlagurdls456,rlagurdls456@outlook.com,2021-09-15,Update
+b40a242,devncore-elena,elena.kim@devncore.org,2021-09-15,Merge branch 'main' of https://github.com/devncore/leagueoflegends
+3628223,devncore-elena,elena.kim@devncore.org,2021-09-15,Add TFT Item Image
+9ef2ffa,rlagurdls456,rlagurdls456@outlook.com,2021-09-15,Update
+cf581c7,devncore-elena,elena.kim@devncore.org,2021-09-15,Update TFT View
+c22df94,devncore-elena,elena.kim@devncore.org,2021-09-15,Update MainView
+d392da0,james lee,james.lee@devncore.org,2021-09-15,Update 경고 문제 해결
+d9ad859,james.lee,james.lee@devncore.org,2021-09-15,Update README.md
+c87c22a,elena.kim,elena.kim@devncore.org,2021-09-15,Update README.md
+0235f7d,elena.kim,elena.kim@devncore.org,2021-09-15,Update README.md
+1e6f190,elena.kim,elena.kim@devncore.org,2021-09-15,Update README.md
+5ff7d3b,james lee,james.lee@devncore.org,2021-09-15,Update
+1ba3fa1,james.lee,james.lee@devncore.org,2021-09-14,Update README.md
+8481cef,james.lee,james.lee@devncore.org,2021-09-14,Update README.md
+831cf0f,james.lee,james.lee@devncore.org,2021-09-14,Update README.md
+c656155,james.lee,james.lee@devncore.org,2021-09-14,Update README.md
+aeed084,james.lee,james.lee@devncore.org,2021-09-14,Update README.md
+7ca63b0,james.lee,james.lee@devncore.org,2021-09-14,Update README.md
+b298191,james.lee,james.lee@devncore.org,2021-09-14,Update README.md
+d9e310e,james.lee,james.lee@devncore.org,2021-09-14,Update README.md
+5ced1e8,james.lee,james.lee@devncore.org,2021-09-14,Update README.md
+eea6155,james.lee,james.lee@devncore.org,2021-09-14,Update README.md
+183ce15,james.lee,james.lee@devncore.org,2021-09-14,Update README.md
+29f1988,james.lee,james.lee@devncore.org,2021-09-14,Update README.md
+e587fe2,james.lee,james.lee@devncore.org,2021-09-14,Update README.md
+1b9314b,james.lee,james.lee@devncore.org,2021-09-14,Update README.md
+591e5b3,james.lee,james.lee@devncore.org,2021-09-14,Update README.md
+d73ae4b,james.lee,james.lee@devncore.org,2021-09-14,Update README.md
+07bb712,james.lee,james.lee@devncore.org,2021-09-14,Update README.md
+16c3a6a,james.lee,james.lee@devncore.org,2021-09-14,Update README.md
+f535bc0,rlagurdls456,rlagurdls456@outlook.com,2021-09-14,Update
+0d9140d,rlagurdls456,rlagurdls456@outlook.com,2021-09-14,Update
+e892095,rlagurdls456,rlagurdls456@outlook.com,2021-09-13,Update
+475961c,rlagurdls456,rlagurdls456@outlook.com,2021-09-13,Update
+a7e52a9,rlagurdls456,rlagurdls456@outlook.com,2021-09-13,Update
+9ccd2fa,unknown,james.lee@devncore.org,2021-09-13,Clean xaml resource
+c3d31a4,unknown,james.lee@devncore.org,2021-09-13,Clean xaml resource
+beefa85,unknown,james.lee@devncore.org,2021-09-13,Update xaml resource
+0c931c7,unknown,james.lee@devncore.org,2021-09-11,Update
+6d6ee72,james.lee,james.lee@devncore.org,2021-09-11,Update Region
+2ef0e64,devncore-elena,elena.kim@devncore.org,2021-09-10,update MainView
+c24064c,devncore-elena,elena.kim@devncore.org,2021-09-10,Change ViewName and Set Background
+caa54e2,devncore-elena,elena.kim@devncore.org,2021-09-10,Update Store Champion
+da297df,devncore-elena,elena.kim@devncore.org,2021-09-10,Update Store Champion
+96d56a5,james lee,james.lee@devncore.org,2021-09-10,Region RelayCommand
+1b45575,james lee,james.lee@devncore.org,2021-09-10,Update
+67d4272,james lee,james.lee@devncore.org,2021-09-10,Add region
+a1a4709,james lee,james.lee@devncore.org,2021-09-10,Clean resource 'MenuList'
+f861eb1,james lee,james.lee@devncore.org,2021-09-10,Clean resource 'CurrentMenu'
+e5b2006,james lee,james.lee@devncore.org,2021-09-10,update
+f0a60ba,james lee,james.lee@devncore.org,2021-09-10,Sorted using namespace
+c5dae44,james lee,james.lee@devncore.org,2021-09-10,Clean unusing
+88fb688,james lee,james.lee@devncore.org,2021-09-09,Merge branch 'main' of https://github.com/devncore/leagueoflegends
+9db829e,james lee,james.lee@devncore.org,2021-09-09,Update
+414918a,rlagurdls456,rlagurdls456@outlook.com,2021-09-09,Update
+c3c972f,rlagurdls456,rlagurdls456@outlook.com,2021-09-09,Update
+5ed197c,rlagurdls456,rlagurdls456@outlook.com,2021-09-09,Update
+bd52d00,rlagurdls456,rlagurdls456@outlook.com,2021-09-09,Update
+2f2fd0a,devncore-elena,elena.kim@devncore.org,2021-09-08,Update WinnersViewModel
+9b76617,devncore-elena,elena.kim@devncore.org,2021-09-08,Update TierDetailListBox
+bc30cf6,devncore-elena,elena.kim@devncore.org,2021-09-08,Change SubMenu Name
+8355820,james lee,james.lee@devncore.org,2021-09-08,Update
+606517f,james lee,james.lee@devncore.org,2021-09-07,Update
+0069cdc,james lee,james.lee@devncore.org,2021-09-07,update
+f0f9f42,rlagurdls456,rlagurdls456@outlook.com,2021-09-07,Update
+7af3bad,rlagurdls456,rlagurdls456@outlook.com,2021-09-07,Update
+e97adb2,rlagurdls456,rlagurdls456@outlook.com,2021-09-07,Update
+74d2ea8,rlagurdls456,rlagurdls456@outlook.com,2021-09-07,Update
+37c6dab,james lee,james.lee@devncore.org,2021-09-06,Update
+37de28f,elena.kim,elena.kim@devncore.org,2021-09-06,Update README.md
+b1749a1,rlagurdls456,rlagurdls456@outlook.com,2021-09-06,Update
+37ebfa2,rlagurdls456,rlagurdls456@outlook.com,2021-09-06,Update
+37108fb,rlagurdls456,rlagurdls456@outlook.com,2021-09-06,Update
+391ee6a,rlagurdls456,rlagurdls456@outlook.com,2021-09-06,Profile Project Create
+5809f10,devncore-elena,elena.kim@devncore.org,2021-09-05,Update TierMenu
+7655315,devncore-elena,elena.kim@devncore.org,2021-09-05,update
+78c44b1,james lee,james.lee@devncore.org,2021-09-05,Update
+6adb8b9,james lee,james.lee@devncore.org,2021-09-05,Update
+d1db152,james lee,james.lee@devncore.org,2021-09-05,Merge branch 'main' of https://github.com/devncore/leagueoflegends
+8ef82a3,james lee,james.lee@devncore.org,2021-09-05,Update
+6b72a2e,elena.kim,elena.kim@devncore.org,2021-09-04,Update README.md
+6d4251e,james lee,james.lee@devncore.org,2021-09-04,update
+79accef,james lee,james.lee@devncore.org,2021-09-04,Update
+3cfce35,james lee,james.lee@devncore.org,2021-09-02,update
+aaebe27,james lee,james.lee@devncore.org,2021-09-02,Update
+e196645,rlagurdls456,rlagurdls456@outlook.com,2021-09-02,Update
+92a7e85,rlagurdls456,rlagurdls456@outlook.com,2021-09-02,Update
+cc85812,rlagurdls456,rlagurdls456@outlook.com,2021-09-02,Update
+f739dc8,rlagurdls456,rlagurdls456@outlook.com,2021-09-02,Update
+c2720af,james lee,james.lee@devncore.org,2021-09-01,Update
+20d3c51,rlagurdls456,rlagurdls456@outlook.com,2021-09-01,Update
+d5533c7,rlagurdls456,rlagurdls456@outlook.com,2021-09-01,WinningTeam Background 임시 추가
+12db185,rlagurdls456,rlagurdls456@outlook.com,2021-09-01,Update
+3fc5ca0,james.lee,james.lee@devncore.org,2021-08-31,Update README.md
+4dbe0e1,rlagurdls456,rlagurdls456@outlook.com,2021-08-31,Update
+ba466bb,rlagurdls456,rlagurdls456@outlook.com,2021-08-31,Update
+d415a66,nuhabo,nuhabo03@gmail.com,2021-08-29,'icon'
+b3e77a8,james lee,james.lee@devncore.org,2021-08-29,Update
+cc28d17,rlagurdls456,rlagurdls456@outlook.com,2021-08-29,Update
+c3a8455,rlagurdls456,rlagurdls456@outlook.com,2021-08-29,Image Add
+b0bd959,rlagurdls456,rlagurdls456@outlook.com,2021-08-29,Update
+8a8ca5e,rlagurdls456,rlagurdls456@outlook.com,2021-08-29,TierDetailListBox Edit
+a62f819,rlagurdls456,rlagurdls456@outlook.com,2021-08-29,Update
+2b7f6e8,rlagurdls456,rlagurdls456@outlook.com,2021-08-29,Add TierDetailListBox
+dd9d4b5,devncore-elena,elena.kim@devncore.org,2021-08-27,Update
+67b9ca0,devncore-elena,elena.kim@devncore.org,2021-08-27,Update WinningTeam
+278102c,devncore-elena,elena.kim@devncore.org,2021-08-27,Update MainViewModel
+dd6f196,rlagurdls456,rlagurdls456@outlook.com,2021-08-27,Comment
+1f4ad68,rlagurdls456,rlagurdls456@outlook.com,2021-08-27,Update
+db9edb0,rlagurdls456,rlagurdls456@outlook.com,2021-08-27,Update
+e2b769c,rlagurdls456,rlagurdls456@outlook.com,2021-08-27,TierMenu Add
+ab23eac,nuhabo,nuhabo03@gmail.com,2021-08-26,'아이콘클릭시최소화'
+8171359,nuhabo,nuhabo03@gmail.com,2021-08-26,'icon'
+b7b32d4,nuhabo,nuhabo03@gmail.com,2021-08-26,'icon'
+e02e4ae,nuhabo,nuhabo03@gmail.com,2021-08-26,'update'
+38bd009,devncore-elena,elena.kim@devncore.org,2021-08-26,fix formatting
+c17d57f,devncore-elena,elena.kim@devncore.org,2021-08-26,Update TFT data
+da87f63,devncore-elena,elena.kim@devncore.org,2021-08-26,Update
+6f1e188,devncore-elena,elena.kim@devncore.org,2021-08-25,Update TFT tooltip
+462a14e,rlagurdls456,rlagurdls456@outlook.com,2021-08-25,Update
+377ce2c,devncore-elena,elena.kim@devncore.org,2021-08-25,Rename: ClashView >> HubView
+7452340,devncore-elena,elena.kim@devncore.org,2021-08-25,Update CupToggleButton
+06d3aa6,rlagurdls456,rlagurdls456@outlook.com,2021-08-25,CupToggle, CupList Update(미완성)
+505b146,rlagurdls456,rlagurdls456@outlook.com,2021-08-25,Update
+5d258c8,rlagurdls456,rlagurdls456@outlook.com,2021-08-25,Update
+916ec37,rlagurdls456,rlagurdls456@outlook.com,2021-08-25,Update
+7a6e3f8,devncore-elena,elena.kim@devncore.org,2021-08-24,update ticketbutton
+b5fc8d0,devncore-elena,elena.kim@devncore.org,2021-08-24,Update TicketButton
+fbffc8d,rlagurdls456,rlagurdls456@outlook.com,2021-08-24,Update
+3b709e8,rlagurdls456,rlagurdls456@outlook.com,2021-08-24,c
+aa874b2,rlagurdls456,rlagurdls456@outlook.com,2021-08-23,Update
+1c53dc3,rlagurdls456,rlagurdls456@outlook.com,2021-08-23,CupToggleButton Add
+7a253a3,rlagurdls456,rlagurdls456@outlook.com,2021-08-23,WinningTeam Title Add
+43c7fb5,devncore-elena,elena.kim@devncore.org,2021-08-23,Update ClashView > Schedule
+5a41b8d,devncore-elena,elena.kim@devncore.org,2021-08-23,Update ClashView
+b811691,rlagurdls456,rlagurdls456@outlook.com,2021-08-23,WinningTeam View Connection
+1736139,rlagurdls456,rlagurdls456@outlook.com,2021-08-23,WinningTeam Create
+39fd6f2,rlagurdls456,rlagurdls456@outlook.com,2021-08-23,FaqButton Update
+6544587,rlagurdls456,rlagurdls456@outlook.com,2021-08-23,FaqButton Add
+02d278e,elena.kim,elena.kim@devncore.org,2021-08-22,Update README.md
+4dd8077,elena.kim,elena.kim@devncore.org,2021-08-22,Update README.md
+08e968a,rlagurdls456,rlagurdls456@outlook.com,2021-08-22,Schedule Triangle Add
+2586f92,rlagurdls456,rlagurdls456@outlook.com,2021-08-22,Update
+89a0ea9,rlagurdls456,rlagurdls456@outlook.com,2021-08-22,Schdule HeaderButton Create
+90a252e,rlagurdls456,rlagurdls456@outlook.com,2021-08-22,Schedule Add
+fdb598d,rlagurdls456,rlagurdls456@outlook.com,2021-08-22,PositionButton 주석
+bae729b,rlagurdls456,rlagurdls456@outlook.com,2021-08-22,PositionBbutton SendIconTypeProperty Add
+004d182,rlagurdls456,rlagurdls456@outlook.com,2021-08-22,PositionButton Update
+fb192dd,rlagurdls456,rlagurdls456@outlook.com,2021-08-22,PositionButton Create
+e6569d4,rlagurdls456,rlagurdls456@outlook.com,2021-08-21,Free Player Update
+d938148,rlagurdls456,rlagurdls456@outlook.com,2021-08-21,Transparent Border Add
+744b430,rlagurdls456,rlagurdls456@outlook.com,2021-08-21,Ticket Button 주석
+11e0629,rlagurdls456,rlagurdls456@outlook.com,2021-08-21,Ticket Button Update
+a203fe4,rlagurdls456,rlagurdls456@outlook.com,2021-08-21,c
+c5e5dfd,rlagurdls456,rlagurdls456@outlook.com,2021-08-21,Add Button Edit
+e52891d,rlagurdls456,rlagurdls456@outlook.com,2021-08-21,TicketButton PlusButton Add
+4e6f453,rlagurdls456,rlagurdls456@outlook.com,2021-08-21,c
+7005496,james lee,james.lee@devncore.org,2021-08-20,update
+5008de7,james lee,james.lee@devncore.org,2021-08-20,Update
+65c1ac3,elena.kim,elena.kim@devncore.org,2021-08-20,Update README.md
+99b15d2,elena.kim,elena.kim@devncore.org,2021-08-20,Update README.md
+f528b37,devncore-elena,elena.kim@devncore.org,2021-08-20,Update GeneralView
+77ca83f,james,james.lee@devncore.org,2021-08-20,Update .NET 6.0
+d37f9e9,devncore-elena,elena.kim@devncore.org,2021-08-20,update submenu order and fix friends
+d221931,rlagurdls456,rlagurdls456@outlook.com,2021-08-20,Update
+61ac84e,rlagurdls456,rlagurdls456@outlook.com,2021-08-20,Update
+f17c3ab,rlagurdls456,rlagurdls456@outlook.com,2021-08-20,Update
+ee3583a,rlagurdls456,rlagurdls456@outlook.com,2021-08-20,Update
+d85a9f5,devncore-elena,elena.kim@devncore.org,2021-08-19,Update RiotButton
+927103d,rlagurdls456,rlagurdls456@outlook.com,2021-08-19,c
+0681229,rlagurdls456,rlagurdls456@outlook.com,2021-08-19,c
+250eb39,rlagurdls456,rlagurdls456@outlook.com,2021-08-19,c
+d5b73a4,rlagurdls456,rlagurdls456@outlook.com,2021-08-18,c
+b850829,rlagurdls456,rlagurdls456@outlook.com,2021-08-18,c
+25efa7e,rlagurdls456,rlagurdls456@outlook.com,2021-08-18,c
+7f88abd,rlagurdls456,rlagurdls456@outlook.com,2021-08-18,c
+6024112,rlagurdls456,rlagurdls456@outlook.com,2021-08-18,Clash Project Add
+3999445,rlagurdls456,rlagurdls456@outlook.com,2021-08-18,SubMenuAdd
+879852d,elena.kim,elena.kim@devncore.org,2021-08-17,Update README.md
+d7d061b,james lee,james.lee@devncore.org,2021-08-15,update
+0f185af,james lee,james.lee@devncore.org,2021-08-15,Update
+f87d6ba,elena.kim,elena.kim@devncore.org,2021-08-15,Update README.md
+7144f1f,devncore-elena,elena.kim@devncore.org,2021-08-13,fix background
+6b2ab92,devncore-elena,elena.kim@devncore.org,2021-08-12,udpate store
+e9409c2,james,james.lee@devncore.org,2021-08-12,Clean using
+3d5225b,devncore-elena,elena.kim@devncore.org,2021-08-12,update storeview
+f8abbe7,elena.kim,elena.kim@devncore.org,2021-08-11,Update README.md
+52a42a4,devncore-elena,elena.kim@devncore.org,2021-08-10,Add Store - Champion
+9178936,devncore-elena,elena.kim@devncore.org,2021-08-10,fix structure
+6f2b15d,devncore-elena,elena.kim@devncore.org,2021-08-09,update
+d7d11a2,devncore-elena,elena.kim@devncore.org,2021-08-08,Add Settings - Verification
+6e4c585,devncore-elena,elena.kim@devncore.org,2021-08-08,update setting
+fabc074,elena.kim,elena.kim@devncore.org,2021-08-04,Update README.md
+b976cee,elena.kim,elena.kim@devncore.org,2021-08-02,Update README.md
+ca3a83b,elena.kim,elena.kim@devncore.org,2021-08-01,Update README.md
+3c1bf1d,elena.kim,elena.kim@devncore.org,2021-07-31,Update README.md
+0d2f658,kyj,elena.kim@devncore.org,2021-07-30,Update Setting > ReplayView
+a55420f,kyj,elena.kim@devncore.org,2021-07-30,organizing structure
+ee34fb4,kyj,elena.kim@devncore.org,2021-07-29,Update Setting-GameView
+8bfe4d3,rlagurdls456,rlagurdls456@outlook.com,2021-07-24,c
+8d69c0d,james,james.lee@devncore.org,2021-07-22,Update
+b61b3b1,james,james.lee@devncore.org,2021-07-22,Update
+3201c17,kyj,elena.kim@devncore.org,2021-07-20,'udpate interface view
+fbaae65,elena.kim,elena.kim@devncore.org,2021-07-20,Update README.md
+a7daed3,elena.kim,elena.kim@devncore.org,2021-07-19,Update README.md
+4b886ed,kyj,elena.kim@devncore.org,2021-07-19,update setting interface
+ae5d8be,kyj,elena.kim@devncore.org,2021-07-16,Arrange
+59fba68,kyj,elena.kim@devncore.org,2021-07-16,update
+2908aa0,kyj,elena.kim@devncore.org,2021-07-15,Update
+4fc65c0,Yejin Kim,elena.kim@devncore.org,2021-07-14,Update Settings
+d4b51f4,elena.kim,elena.kim@devncore.org,2021-07-14,Update README.md
+d96e93e,elena.kim,elena.kim@devncore.org,2021-07-14,Update README.md
+8d16883,kyj,elena.kim@devncore.org,2021-07-14,Update codeitems
+616570b,james.lee,james.lee@devncore.org,2021-07-13,Update
+39871d8,elena.kim,elena.kim@devncore.org,2021-07-12,Update README.md
+9e32a1c,elena.kim,elena.kim@devncore.org,2021-07-12,Update README.md
+2c239c9,james.lee,james.lee@devncore.org,2021-07-12,Update README.md
+b3f55bf,elena.kim,elena.kim@devncore.org,2021-07-11,Update README.md
+d5556c9,elena.kim,elena.kim@devncore.org,2021-07-11,Update README.md
+14d72ea,james.lee,james.lee@devncore.org,2021-07-11,Update
+81bb0cf,elena.kim,elena.kim@devncore.org,2021-07-10,Update README.md
+5b545ad,elena.kim,elena.kim@devncore.org,2021-07-10,Update README.md
+ece38c5,elena.kim,elena.kim@devncore.org,2021-07-09,Update README.md
+2e14ef1,elena.kim,elena.kim@devncore.org,2021-07-08,Update README.md
+6f6b268,elena.kim,elena.kim@devncore.org,2021-07-06,Update README.md
+fc19b60,james.lee,james.lee@devncore.org,2021-07-06,update
+45785ba,james.lee,james.lee@devncore.org,2021-07-06,Update
+4946089,james.lee,james.lee@devncore.org,2021-07-05,Merge branch 'main' of https://github.com/devncore/leagueoflegends
+670adac,james.lee,james.lee@devncore.org,2021-07-05,Update
+6ed8db8,james.lee,james.lee@devncore.org,2021-07-05,Update README.md
+1b45937,james.lee,james.lee@devncore.org,2021-07-05,Update README.md
+119a7ac,james.lee,james.lee@devncore.org,2021-07-05,Update README.md
+08da29c,elena.kim,elena.kim@devncore.org,2021-07-05,Update README.md
+7c4eb6f,elena.kim,elena.kim@devncore.org,2021-07-05,Update README.md
+56df426,james.lee,james.lee@devncore.org,2021-07-05,update
+f52ab75,james.lee,james.lee@devncore.org,2021-07-05,Update
+c281160,james.lee,james.lee@devncore.org,2021-07-05,Update
+4d16ce8,james.lee,james.lee@devncore.org,2021-07-05,Update
+b3786a1,james.lee,james.lee@devncore.org,2021-07-05,Updpate
+aa78769,james.lee,james.lee@devncore.org,2021-07-05,Merge branch 'main' of https://github.com/devncore/leagueoflegends
+3a4b07b,james.lee,james.lee@devncore.org,2021-07-05,update
+9051cf1,elena.kim,elena.kim@devncore.org,2021-07-04,Update README.md
+bf68979,elena.kim,elena.kim@devncore.org,2021-07-04,Update README.md
+db8408d,james.lee,james.lee@devncore.org,2021-07-04,Update
+55a767f,james.lee,james.lee@devncore.org,2021-07-04,Update
+89c4899,james.lee,james.lee@devncore.org,2021-07-04,Update
+070ba33,james.lee,james.lee@devncore.org,2021-07-04,update
+2763040,james.lee,james.lee@devncore.org,2021-07-04,Merge branch 'main' of https://github.com/devncore/leagueoflegends
+0975564,james.lee,james.lee@devncore.org,2021-07-04,Update
+f2df24a,elena.kim,elena.kim@devncore.org,2021-07-03,Update README.md
+fedcc2a,elena.kim,elena.kim@devncore.org,2021-07-03,Update README.md
+76543cf,james.lee,james.lee@devncore.org,2021-07-03,Update
+a275ecc,james.lee,james.lee@devncore.org,2021-07-03,Update
+ee3c54b,kyj,elena.kim@devncore.org,2021-07-02,Add Project
+c8e4c69,kyj,elena.kim@devncore.org,2021-07-02,Add Game Shortcut View
+dbd2d19,kyj,elena.kim@devncore.org,2021-07-01,Update TFT View
+1c44b5c,james.lee,james.lee@devncore.org,2021-07-01,Update
+718fdf6,kyj,elena.kim@devncore.org,2021-06-30,Update setting view
+7ff5fc4,kyj,elena.kim@devncore.org,2021-06-30,Update Setting
+1eef75c,james.lee,james.lee@devncore.org,2021-06-29,update
+24116c4,james.lee,james.lee@devncore.org,2021-06-29,Merge branch 'main' of https://github.com/devncore/leagueoflegends
+b55ee49,james.lee,james.lee@devncore.org,2021-06-29,Update
+2c0ebd1,james.lee,james.lee@devncore.org,2021-06-29,Update README.md
+24dddb8,james.lee,james.lee@devncore.org,2021-06-29,Update
+bf70964,kyj,elena.kim@devncore.org,2021-06-29,Change structure
+adbdcb0,kyj,elena.kim@devncore.org,2021-06-29,Update MyShopView
+d58a095,kyj,elena.kim@devncore.org,2021-06-29,Update GeneralView
+85f5913,kyj,elena.kim@devncore.org,2021-06-28,Change structure
+4e218a6,kyj,elena.kim@devncore.org,2021-06-28,Add ClientBlockView
+1631032,kyj,elena.kim@devncore.org,2021-06-28,Update ClientVoiceView
+9de0992,elena.kim,elena.kim@devncore.org,2021-06-27,Update README.md
+e191197,elena.kim,elena.kim@devncore.org,2021-06-27,Update README.md
+aa19f6e,elena.kim,elena.kim@devncore.org,2021-06-26,Update README.md
+6d0f54a,james.lee,james.lee@devncore.org,2021-06-26,Update
+2a6a084,james.lee,james.lee@devncore.org,2021-06-25,Update README.md
+31d26a5,james.lee,james.lee@devncore.org,2021-06-25,Update README.md
+0095d0f,elena.kim,elena.kim@devncore.org,2021-06-25,Update README.md
+7586d54,kyj,elena.kim@devncore.org,2021-06-25,Add ClientVoiceView
+5bb4e8b,james.lee,james.lee@devncore.org,2021-06-24,Update
+c8d5178,james.lee,james.lee@devncore.org,2021-06-24,Update
+e70fd5d,james.lee,james.lee@devncore.org,2021-06-24,Update
+a8221da,james.lee,james.lee@devncore.org,2021-06-24,Update
+0f8aa5e,elena.kim,elena.kim@devncore.org,2021-06-24,Update README.md
+522cc0d,elena.kim,elena.kim@devncore.org,2021-06-24,Update README.md
+6ed1ca9,elena.kim,elena.kim@devncore.org,2021-06-24,Update README.md
+d476bcd,elena.kim,elena.kim@devncore.org,2021-06-24,Update README.md
+a1d425a,kyj,elena.kim@devncore.org,2021-06-24,Add ClientSoundView
+1c79253,elena.kim,elena.kim@devncore.org,2021-06-24,Update README.md
+57e0042,kyj,elena.kim@devncore.org,2021-06-24,add ClientChatView
+7ac18dc,elena.kim,elena.kim@devncore.org,2021-06-24,Update README.md
+99326f1,elena.kim,elena.kim@devncore.org,2021-06-24,Update README.md
+5dc2c56,elena.kim,elena.kim@devncore.org,2021-06-24,Update README.md
+bc84a3e,elena.kim,elena.kim@devncore.org,2021-06-24,Update README.md
+5eb198c,kyj,elena.kim@devncore.org,2021-06-24,Add ClientAlarmView
+9b9386e,kyj,elena.kim@devncore.org,2021-06-24,Change name .Foundation
+0e41683,james,james.lee@devncore.org,2021-06-24,Update
+1d24ecf,james.lee,james.lee@devncore.org,2021-06-23,Update README.md
+2aca14d,james.lee,james.lee@devncore.org,2021-06-23,Update README.md
+6ee4885,james.lee,james.lee@devncore.org,2021-06-23,Update README.md
+974456d,james.lee,james.lee@devncore.org,2021-06-23,Update README.md
+03c331e,james.lee,james.lee@devncore.org,2021-06-23,Update README.md
+89f2883,james.lee,james.lee@devncore.org,2021-06-23,Update README.md
+879050c,james.lee,james.lee@devncore.org,2021-06-23,Update README.md
+e93e158,james.lee,james.lee@devncore.org,2021-06-23,Update README.md
+2d8731f,james.lee,james.lee@devncore.org,2021-06-23,Update README.md
+b70683a,james.lee,james.lee@devncore.org,2021-06-23,Update README.md
+0b76498,james.lee,james.lee@devncore.org,2021-06-23,Update README.md
+606ff08,james.lee,james.lee@devncore.org,2021-06-23,Update README.md
+3157e3d,james.lee,james.lee@devncore.org,2021-06-23,Update README.md
+46d284a,james.lee,james.lee@devncore.org,2021-06-23,Update README.md
+a35971a,james.lee,james.lee@devncore.org,2021-06-23,Update README.md
+d851fbb,james.lee,james.lee@devncore.org,2021-06-23,Update README.md
+40ce7bf,james.lee,james.lee@devncore.org,2021-06-23,Update README.md
+12d03fb,james.lee,james.lee@devncore.org,2021-06-23,Update README.md
+57e1c9f,james.lee,james.lee@devncore.org,2021-06-23,Update README.md
+3ddebe0,james.lee,james.lee@devncore.org,2021-06-23,Update README.md
+10f2857,james.lee,james.lee@devncore.org,2021-06-23,Update README.md
+33952ab,james.lee,james.lee@devncore.org,2021-06-23,Update README.md
+8a05849,james.lee,james.lee@devncore.org,2021-06-23,Update README.md
+e26864e,james.lee,james.lee@devncore.org,2021-06-23,Update README.md
+ac3a841,james.lee,james.lee@devncore.org,2021-06-23,Update README.md
+1476272,james.lee,james.lee@devncore.org,2021-06-23,Create README.md
+f039f8b,james.lee,james.lee@devncore.org,2021-06-23,Update README.md
+5bc3cc6,james.lee,james.lee@devncore.org,2021-06-23,Update README.md
+17afbfa,james.lee,james.lee@devncore.org,2021-06-23,Update README.md
+7ef031f,james.lee,james.lee@devncore.org,2021-06-23,Update README.md
+0d59d53,james.lee,james.lee@devncore.org,2021-06-23,Update README.md
+3eefb37,james.lee,james.lee@devncore.org,2021-06-23,Update README.md
+1b6160b,james.lee,james.lee@devncore.org,2021-06-23,Update
+5f521bf,james.lee,james.lee@devncore.org,2021-06-23,Update
+5f0dddc,james.lee,james.lee@devncore.org,2021-06-23,Update
+5067c90,james.lee,james.lee@devncore.org,2021-06-23,Update
+616e611,james.lee,james.lee@devncore.org,2021-06-23,Update
+1c2801a,james,james.lee@devncore.org,2021-06-23,Update
+f0c1400,james,james.lee@devncore.org,2021-06-23,Update
+d558da5,james.lee,james.lee@devncore.org,2021-06-22,Update
+898242d,james.lee,james.lee@devncore.org,2021-06-22,Update
+a5e7c2d,james.lee,james.lee@devncore.org,2021-06-22,Update
+d4e60f8,james.lee,james.lee@devncore.org,2021-06-22,Update
+a5fce3d,kyj,elena.kim@devncore.org,2021-06-22,Merge branch 'main' of https://github.com/devncore/leagueoflegends into main
+01cab4c,james,james.lee@devncore.org,2021-06-22,Update
+edcb8c3,kyj,elena.kim@devncore.org,2021-06-22,complete merge
+ec0a450,kyj,elena.kim@devncore.org,2021-06-22,Update Setting
+4e605a3,james,james.lee@devncore.org,2021-06-22,Update
+fa09c9b,kyj,elena.kim@devncore.org,2021-06-22,Update MainView
+75ebb76,james,james.lee@devncore.org,2021-06-22,Update
+c2531b6,james.lee,james.lee@devncore.org,2021-06-22,update
+5c86fbc,james.lee,james.lee@devncore.org,2021-06-22,update
+d6a3cad,kyj,elena.kim@devncore.org,2021-06-21,Update SettingView
+ea3532f,kyj,elena.kim@devncore.org,2021-06-21,Update OptionView
+a208668,james.lee,james.lee@devncore.org,2021-06-20,Update
+d9f66b0,james.lee,james.lee@devncore.org,2021-06-20,fix struct
+62851bc,james.lee,james.lee@devncore.org,2021-06-20,fix structure
+8f89ec1,james.lee,james.lee@devncore.org,2021-06-20,Merge branch 'main' of https://github.com/devncore/leagueoflegends
+0601eb5,james.lee,james.lee@devncore.org,2021-06-20,Udpate
+c94f072,elena.kim,elena.kim@devncore.org,2021-06-20,Update README.md
+3dc7410,elena.kim,elena.kim@devncore.org,2021-06-19,Update README.md
+c7ce57f,kyj,elena.kim@devncore.org,2021-06-18,Update OptionView
+a5417d5,kyj,elena.kim@devncore.org,2021-06-18,Merge branch 'main' of https://github.com/devncore/leagueoflegends into main
+97ebb55,kyj,elena.kim@devncore.org,2021-06-18,Update AddFriendsView
+5457073,elena.kim,elena.kim@devncore.org,2021-06-17,Update README.md
+e3bb821,kyj,elena.kim@devncore.org,2021-06-17,Add MyShopView
+afa8537,kyj,elena.kim@devncore.org,2021-06-17,Update ScrollViewer
+3615252,kyj,elena.kim@devncore.org,2021-06-17,Update TeamFightView
+9dcbbef,kyj,elena.kim@devncore.org,2021-06-16,Update Main
+4e53ba1,kyj,elena.kim@devncore.org,2021-06-15,Update Geometry Data Processing
+7acdf2d,kyj,elena.kim@devncore.org,2021-06-15,Fix Dragbar
+d6d9cdf,kyj,elena.kim@devncore.org,2021-06-15,Update FriendsList
+f4ab96d,kyj,elena.kim@devncore.org,2021-06-14,Update
+dba655e,elena.kim,elena.kim@devncore.org,2021-06-13,Update README.md
+bc422dc,elena.kim,elena.kim@devncore.org,2021-06-12,Update README.md
+370b7e1,elena.kim,elena.kim@devncore.org,2021-06-12,Update README.md
+104f2ca,kyj,elena.kim@devncore.org,2021-06-11,Update MainView
+dabc15a,kyj,elena.kim@devncore.org,2021-06-11,Update GeneralView
+0f5b6db,kyj,elena.kim@devncore.org,2021-06-10,Update MainMenuViewModel
+3e86ad6,kyj,elena.kim@devncore.org,2021-06-10,Update MainView
+6e082b1,Yejin Kim,elena.kim@devncore.org,2021-06-09,Update MainView
+ae15c67,kyj,elena.kim@devncore.org,2021-06-09,Update MainMenu
+0df1db2,kyj,elena.kim@devncore.org,2021-06-08,Update MainMenu
+993dcc9,kyj,elena.kim@devncore.org,2021-06-08,Remove TitleBarModel
+6d90d58,kyj,elena.kim@devncore.org,2021-06-08,Update TitleBar
+0860992,elena.kim,elena.kim@devncore.org,2021-06-04,Update README.md
+2fb5665,james.lee,james.lee@devncore.org,2021-06-03,Merge branch 'main' of https://github.com/devncore/leagueoflegends
+dac5525,james.lee,james.lee@devncore.org,2021-06-03,Update
+fdb6e51,elena.kim,elena.kim@devncore.org,2021-06-03,Update README.md
+999c26c,james.lee,james.lee@devncore.org,2021-06-03,Update
+ba71c1e,kyj,elena.kim@devncore.org,2021-05-17,Update source
+11ab8c6,elena.kim,elena.kim@devncore.org,2021-05-16,Update README.md
+368b035,elena.kim,elena.kim@devncore.org,2021-05-15,Update README.md
+8645aa2,elena.kim,elena.kim@devncore.org,2021-05-14,Update README.md
+6890382,elena.kim,elena.kim@devncore.org,2021-05-14,Update README.md
+37b82c5,elena.kim,elena.kim@devncore.org,2021-05-14,Update README.md
+1faf0be,elena.kim,elena.kim@devncore.org,2021-05-14,Update README.md
+50501dc,elena.kim,elena.kim@devncore.org,2021-05-14,Update README.md
+4da09c0,elena.kim,elena.kim@devncore.org,2021-05-14,Update README.md
+1f5f6ad,Yejin Kim,elena.kim@devncore.org,2021-05-13,Update Source
+8260dbb,james.lee,james.lee@devncore.org,2021-05-09,Merge branch 'main' of https://github.com/devncore/wpf-leagueoflegends
+cec3142,james.lee,james.lee@devncore.org,2021-05-09,Project structure
+f4379fd,elena.kim,elena.kim@devncore.org,2021-05-09,Update README.md
+a2d068f,elena.kim,elena.kim@devncore.org,2021-05-08,Update README.md
+264c5b1,elena.kim,elena.kim@devncore.org,2021-05-07,Update README.md
+797678e,james.lee,james.lee@devncore.org,2021-05-05,Update README.md
+1ff56b1,elena.kim,elena.kim@devncore.org,2021-05-05,Update README.md
+f31989b,elena.kim,elena.kim@devncore.org,2021-04-30,Update README.md
+31b70d2,elena.kim,elena.kim@devncore.org,2021-04-24,Update README.md
+7d85440,james.lee,james.lee@devncore.org,2021-04-22,Initial commit
