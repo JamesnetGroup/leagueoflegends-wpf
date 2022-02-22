@@ -1,22 +1,11 @@
-﻿using System.Collections.Generic;
-using Lol.Foundation.Mvvm;
-using Lol.Database.Controller;
-using Lol.Database.Entites.Schema;
+﻿using Lol.Foundation.Mvvm;
 
 namespace Lol.Profile.Local.ViewModels
 {
     public class SummaryViewModel : ObservableObject
     {
-        #region Variables
-
-        #endregion
-
-        #region Constructor
-
         public SummaryViewModel()
         {
-           
         }
-        #endregion
     }
 }
