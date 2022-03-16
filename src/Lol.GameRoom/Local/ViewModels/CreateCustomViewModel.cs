@@ -1,6 +1,6 @@
-﻿using Lol.Database.Controller;
+﻿using DevNcore.UI.Foundation.Mvvm;
+using Lol.Database.Controller;
 using Lol.Database.Entites.Schema;
-using Lol.Foundation.Mvvm;
 using System;
 using System.Collections.Generic;
 using System.Linq;

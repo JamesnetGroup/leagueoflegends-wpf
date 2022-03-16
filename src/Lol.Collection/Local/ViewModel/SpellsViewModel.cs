@@ -1,11 +1,11 @@
-﻿using Lol.Foundation.Mvvm;
-using Lol.Database.Controller;
+﻿using Lol.Database.Controller;
 using Lol.Database.Entites.Schema;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
+using DevNcore.UI.Foundation.Mvvm;
 
 namespace Lol.Collection.Local.ViewModel
 {

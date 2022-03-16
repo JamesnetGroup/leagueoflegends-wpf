@@ -2,7 +2,6 @@
 using System.Windows.Input;
 using System.Collections.Generic;
 using Lol.Data.Setting;
-using Lol.Foundation.Mvvm;
 using Lol.Foundation.Riotbase;
 using Lol.Foundation.Riotcore;
 using Lol.LayoutSupport.Controls;
@@ -15,6 +14,7 @@ using Lol.Settings.About.UI.Views;
 using Lol.Settings.About.Local.ViewModels;
 using Lol.Database.Controller;
 using Lol.Database.Entites.Schema;
+using DevNcore.UI.Foundation.Mvvm;
 
 namespace Lol.Settings.Local.ViewModel
 {
@@ -135,7 +135,7 @@ namespace Lol.Settings.Local.ViewModel
 
         private void CompleteClick(Modal obj)
         {
-            ViewClosed.Invoke(View);
+            ViewClosed.Invoke(View as IRiotUI);
 
             SettingModel setting = RiotConfig.Config.Settings;
             setting.General = General.Model;

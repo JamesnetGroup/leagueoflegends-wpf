@@ -1,4 +1,4 @@
-﻿using Lol.Foundation.Mvvm;
+﻿using DevNcore.UI.Foundation.Mvvm;
 
 namespace Lol.MyShop.Local.ViewModel
 {

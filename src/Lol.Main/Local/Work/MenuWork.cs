@@ -1,5 +1,5 @@
-﻿using Lol.Data.Main;
-using Lol.Foundation.Mvvm;
+﻿using DevNcore.UI.Foundation.Mvvm;
+using Lol.Data.Main;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,10 +1,10 @@
-﻿using Lol.Foundation.Mvvm;
-using Lol.GameRoom.Local.Models;
+﻿using Lol.GameRoom.Local.Models;
 using Lol.Database.Collection;
 using Lol.Database.Entites.Schema;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using DevNcore.UI.Foundation.Mvvm;
 
 namespace Lol.GameRoom.Local.ViewModels
 {

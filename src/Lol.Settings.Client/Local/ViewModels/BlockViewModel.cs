@@ -1,4 +1,4 @@
-﻿using Lol.Foundation.Mvvm;
+﻿using DevNcore.UI.Foundation.Mvvm;
 using Lol.LayoutSupport.Controls;
 using System.Windows.Input;
 

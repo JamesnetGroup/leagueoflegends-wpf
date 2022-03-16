@@ -1,6 +1,6 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
-using Lol.Foundation.Mvvm;
+using DevNcore.UI.Foundation.Mvvm;
 using Lol.Foundation.Riotcore;
 
 namespace Lol.Foundation.Riotbase
@@ -11,18 +11,6 @@ namespace Lol.Foundation.Riotbase
 
         public RiotView()
         {
-            Loaded += RiotView_Loaded;
-        }
-        #endregion
-
-        #region RiotView_Loaded
-
-        private void RiotView_Loaded(object sender, RoutedEventArgs e)
-        {
-            if (DataContext is ObservableObject vm)
-            {
-                vm.InitRegistUI(this);
-            }
         }
         #endregion
 

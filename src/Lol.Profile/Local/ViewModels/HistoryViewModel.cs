@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using Lol.Foundation.Mvvm;
 using Lol.Database.Controller;
 using Lol.Database.Entites.Schema;
+using DevNcore.UI.Foundation.Mvvm;
 
 namespace Lol.Profile.Local.ViewModels
 {

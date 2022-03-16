@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using DevNcore.UI.Foundation.Mvvm;
 using Lol.Database.Controller;
 using Lol.Database.Entites.Schema;
-using Lol.Foundation.Mvvm;
 
 namespace Lol.GameRoom.Local.ViewModels
 {

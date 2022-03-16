@@ -5,7 +5,6 @@ using System.Windows.Input;
 using System.Windows.Controls;
 using System.Collections.Generic;
 using Lol.Data.Main;
-using Lol.Foundation.Mvvm;
 using Lol.Foundation.Riotcore;
 using Lol.LayoutSupport.Controls;
 using Lol.Main.Local.Work;
@@ -31,6 +30,7 @@ using Lol.Database.Entites.Schema;
 using Lol.Database.Collection;
 using Lol.Loot.UI.Views;
 using Lol.Loot.Local.ViewModels;
+using DevNcore.UI.Foundation.Mvvm;
 
 namespace Lol.Main.Local.ViewModel
 {
@@ -233,9 +233,9 @@ namespace Lol.Main.Local.ViewModel
 
         #region OnLoaded
 
-        protected override void OnLoaded(Window window)
+        protected override void OnLoaded(object sender, RoutedEventArgs e)
         {
-            if (window is MainWindow win)
+            if (sender is MainWindow win)
             {
                 BackgroundImage = win.BackgroundImage;
             }

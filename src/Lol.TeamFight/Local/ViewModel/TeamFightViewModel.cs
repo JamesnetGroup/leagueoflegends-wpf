@@ -1,8 +1,8 @@
-﻿using Lol.Foundation.Mvvm;
-using Lol.Database.Controller;
+﻿using Lol.Database.Controller;
 using Lol.Database.Entites.Schema;
 using System.Collections.Generic;
 using System.Linq;
+using DevNcore.UI.Foundation.Mvvm;
 
 namespace Lol.TeamFight.Local.ViewModel
 {
