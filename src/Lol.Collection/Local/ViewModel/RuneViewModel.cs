@@ -1,8 +1,8 @@
-﻿using Lol.Database.Controller;
+﻿using DevNcore.UI.Foundation.Mvvm;
+using Lol.Database.Controller;
 using Lol.Database.Entites.Schema;
 using System.Collections.Generic;
 using System.Linq;
-using DevNcore.UI.Foundation.Mvvm;
 
 namespace Lol.Collection.Local.ViewModel
 {

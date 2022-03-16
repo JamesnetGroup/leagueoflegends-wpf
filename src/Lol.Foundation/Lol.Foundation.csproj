@@ -7,11 +7,16 @@
 
   <ItemGroup>
     <PackageReference Include="DevNcore.UI.Foundation" Version="1.0.2" />
+    <PackageReference Include="DevNcore.WPF" Version="1.0.3" />
     <PackageReference Include="YamlDotNet" Version="11.2.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Lol.Data\Lol.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Mvvm\" />
   </ItemGroup>
 
 </Project>
