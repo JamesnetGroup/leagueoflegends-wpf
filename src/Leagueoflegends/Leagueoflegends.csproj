@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="DevNcore.UI.Design" Version="1.0.1" />
+    <PackageReference Include="DevNcore.UI.Design.Converter" Version="1.0.0" />
+    <PackageReference Include="DevNcore.UI.Design.Geometry" Version="1.0.1" />
+    <PackageReference Include="DevNcore.UI.Foundation" Version="1.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Lol.Foundation\Lol.Foundation.csproj" />
     <ProjectReference Include="..\Lol.Main\Lol.Main.csproj" />
     <ProjectReference Include="..\Lol.Resources\Lol.Resources.csproj" />
