@@ -1,4 +1,0 @@
-﻿namespace Lol.Foundation.Mvvm
-{
-
-}

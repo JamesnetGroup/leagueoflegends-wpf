@@ -16,6 +16,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="DevNcore.UI.Foundation" Version="1.0.2" />
+    <PackageReference Include="DevNcore.WPF" Version="1.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Lol.Database\Lol.Database.csproj" />
     <ProjectReference Include="..\Lol.LayoutSupport\Lol.LayoutSupport.csproj" />
   </ItemGroup>
