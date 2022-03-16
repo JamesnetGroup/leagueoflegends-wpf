@@ -1,5 +1,5 @@
-﻿using Lol.Data.Collection;
-using Lol.Foundation.Mvvm;
+﻿using DevNcore.UI.Foundation.Mvvm;
+using Lol.Data.Collection;
 using System;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;

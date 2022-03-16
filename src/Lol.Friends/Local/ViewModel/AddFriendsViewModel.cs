@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Windows.Input;
-using Lol.Foundation.Mvvm;
 using Lol.Foundation.Riotcore;
 using Lol.Friends.Local.Collection;
 using Lol.LayoutSupport.Controls;
 using Lol.Database.Controller;
 using Lol.Database.Entites.Schema;
+using DevNcore.UI.Foundation.Mvvm;
 
 namespace Lol.Friends.Local.ViewModel
 {
@@ -51,7 +51,7 @@ namespace Lol.Friends.Local.ViewModel
             Keyword = "";
             KeywordCommand = new RelayCommand<object>(KeywordChanged);
             CloseKeywordCommand = new RelayCommand<object>(CloseKeyword);
-            CompleteCommand = new RelayCommand<object>((o) => ViewClosed.Invoke(View));
+            CompleteCommand = new RelayCommand<object>((o) => ViewClosed.Invoke(View as IRiotUI));
             DeleteCommand = new RelayCommand<RequestUsers>(UserCollection.CancelRequest);
             RequestCommand = new RelayCommand<RequestUsers>(UserCollection.SendRequest);
 

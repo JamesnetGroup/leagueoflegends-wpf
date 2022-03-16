@@ -2,11 +2,11 @@
 using Lol.Data.Config;
 using Lol.Data.Setting.Clients;
 using Lol.Devices.Audio;
-using Lol.Foundation.Mvvm;
 using Lol.Foundation.Riotbase;
 using Lol.Database.Controller;
 using Lol.Database.Entites.Schema;
 using System.Collections.Generic;
+using DevNcore.UI.Foundation.Mvvm;
 
 namespace Lol.Settings.Client.Local.ViewModels
 {

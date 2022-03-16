@@ -1,5 +1,5 @@
 ﻿using System.Windows.Input;
-using Lol.Foundation.Mvvm;
+using DevNcore.UI.Foundation.Mvvm;
 using Lol.Foundation.Riotbase;
 using Lol.Settings.InGame.UI.Units;
 using wf = System.Windows.Forms;

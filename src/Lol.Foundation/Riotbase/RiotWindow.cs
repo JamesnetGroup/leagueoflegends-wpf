@@ -1,5 +1,5 @@
 ﻿using System.Windows;
-using Lol.Foundation.Mvvm;
+using DevNcore.UI.Foundation.Mvvm;
 using Lol.Foundation.Riotcore;
 
 namespace Lol.Foundation.Riotbase
@@ -29,10 +29,10 @@ namespace Lol.Foundation.Riotbase
         {
             ResizeMode = ResizeMode.CanMinimize;
 
-            if (DataContext is ObservableObject vm)
-            {
-                vm.InitRegistUI(this);
-            }
+            //if (DataContext is ObservableObject vm)
+            //{
+            //    vm.InitRegistUI(this);
+            //}
         }
         #endregion
     }

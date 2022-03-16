@@ -1,6 +1,6 @@
-﻿using Lol.Data.Config;
+﻿using DevNcore.UI.Foundation.Mvvm;
+using Lol.Data.Config;
 using Lol.Data.Setting.InGame;
-using Lol.Foundation.Mvvm;
 using Lol.Foundation.Riotbase;
 
 namespace Lol.Settings.InGame.Local.ViewModels

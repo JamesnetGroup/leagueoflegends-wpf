@@ -1,6 +1,6 @@
-﻿using Lol.Database.Collection;
+﻿using DevNcore.UI.Foundation.Mvvm;
+using Lol.Database.Collection;
 using Lol.Database.Entites.Schema;
-using Lol.Foundation.Mvvm;
 using System;
 using System.Collections.Generic;
 

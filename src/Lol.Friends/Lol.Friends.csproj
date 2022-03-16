@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DevNcore.UI.Foundation" Version="1.0.0" />
+    <PackageReference Include="DevNcore.UI.Foundation" Version="1.0.2" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Lol.Database\Lol.Database.csproj" />
