@@ -5,8 +5,7 @@ using System.Windows.Input;
 using System.Windows.Controls;
 using System.Collections.Generic;
 using Lol.Data.Main;
-using Lol.Foundation.Riotcore;
-using Lol.LayoutSupport.Controls;
+using DevNcore.LayoutSupport.Leagueoflegends.Controls;
 using Lol.Main.Local.Work;
 using Lol.Main.UI.Units;
 using Lol.MyShop.UI.Views;
@@ -31,6 +30,7 @@ using Lol.Database.Collection;
 using Lol.Loot.UI.Views;
 using Lol.Loot.Local.ViewModels;
 using DevNcore.UI.Foundation.Mvvm;
+using DevNcore.LayoutSupport.Leagueoflegends.Controls.Primitives;
 
 namespace Lol.Main.Local.ViewModel
 {

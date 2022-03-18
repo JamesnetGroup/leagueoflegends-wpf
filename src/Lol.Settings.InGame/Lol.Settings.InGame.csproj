@@ -18,7 +18,6 @@
     <ProjectReference Include="..\Lol.Database\Lol.Database.csproj" />
     <ProjectReference Include="..\Lol.Data\Lol.Data.csproj" />
     <ProjectReference Include="..\Lol.Foundation\Lol.Foundation.csproj" />
-    <ProjectReference Include="..\Lol.LayoutSupport\Lol.LayoutSupport.csproj" />
   </ItemGroup>
 
   <ItemGroup>

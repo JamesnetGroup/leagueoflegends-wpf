@@ -3,8 +3,7 @@ using System.Windows.Input;
 using System.Collections.Generic;
 using Lol.Data.Setting;
 using Lol.Foundation.Riotbase;
-using Lol.Foundation.Riotcore;
-using Lol.LayoutSupport.Controls;
+using DevNcore.LayoutSupport.Leagueoflegends.Controls;
 using Lol.Settings.UI.Views;
 using Lol.Settings.Client.UI.Views;
 using Lol.Settings.Client.Local.ViewModels;
@@ -15,6 +14,7 @@ using Lol.Settings.About.Local.ViewModels;
 using Lol.Database.Controller;
 using Lol.Database.Entites.Schema;
 using DevNcore.UI.Foundation.Mvvm;
+using DevNcore.LayoutSupport.Leagueoflegends.Controls.Primitives;
 
 namespace Lol.Settings.Local.ViewModel
 {

@@ -12,8 +12,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\..\ncore\src\DevNcore.LayoutSupport.Leagueoflegends\DevNcore.LayoutSupport.Leagueoflegends.csproj" />
     <ProjectReference Include="..\Lol.Data\Lol.Data.csproj" />
     <ProjectReference Include="..\Lol.Foundation\Lol.Foundation.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Primitives\" />
   </ItemGroup>
 
 </Project>

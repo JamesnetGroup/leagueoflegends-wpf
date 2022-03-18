@@ -4,7 +4,12 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net6.0-windows7.0</TargetFramework>
     <UseWPF>true</UseWPF>
+    <ApplicationIcon>Properties\Lol.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Properties\Lol.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="DevNcore.UI.Design" Version="1.0.5" />

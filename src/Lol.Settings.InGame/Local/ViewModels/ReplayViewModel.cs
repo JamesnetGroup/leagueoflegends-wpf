@@ -1,6 +1,6 @@
 ﻿using System.Windows.Input;
+using DevNcore.LayoutSupport.Leagueoflegends.Controls.Primitives;
 using DevNcore.UI.Foundation.Mvvm;
-using Lol.Foundation.Riotbase;
 using Lol.Settings.InGame.UI.Units;
 using wf = System.Windows.Forms;
 

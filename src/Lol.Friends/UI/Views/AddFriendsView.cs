@@ -1,4 +1,4 @@
-﻿using Lol.LayoutSupport.Controls;
+﻿using DevNcore.LayoutSupport.Leagueoflegends.Controls;
 using System.Windows;
 
 namespace Lol.Friends.UI.Views

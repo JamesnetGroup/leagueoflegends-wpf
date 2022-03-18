@@ -6,6 +6,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="BooleanReverseConverter.cs" />
+    <Compile Remove="BooleanToHiddenConverter.cs" />
+    <Compile Remove="BooleanToVisibilityConverter.cs" />
+    <Compile Remove="EqualsToVisibilityConverter.cs" />
+    <Compile Remove="IndexToThicknessConverter.cs" />
+    <Compile Remove="MultiValueBooleanConverter.cs" />
+    <Compile Remove="MultiValueEqualityConverter.cs" />
+    <Compile Remove="PercentageConverter.cs" />
+    <Compile Remove="StatusConverter.cs" />
+    <Compile Remove="ThumbnailConverter.cs" />
+    <Compile Remove="TooltipSelector.cs" />
+    <Compile Remove="WidthPercentageConverter.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="DevNcore.UI.Design" Version="1.0.5" />
     <PackageReference Include="DevNcore.UI.Design.Geometry" Version="1.0.5" />
     <PackageReference Include="DevNcore.UI.Foundation" Version="1.0.2" />

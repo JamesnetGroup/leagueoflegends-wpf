@@ -6,7 +6,23 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Mvvm\**" />
+    <EmbeddedResource Remove="Mvvm\**" />
+    <None Remove="Mvvm\**" />
+    <Page Remove="Mvvm\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="Riotbase\RiotApp.cs" />
+    <Compile Remove="Riotbase\RiotView.cs" />
+    <Compile Remove="Riotbase\RiotWindow.cs" />
+    <Compile Remove="Riotcore\IRiotUI.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DevNcore.LayoutSupport.Leagueoflegends" Version="1.0.0" />
     <PackageReference Include="DevNcore.UI.Design" Version="1.0.5" />
+    <PackageReference Include="DevNcore.UI.Design.Converter" Version="1.0.0" />
     <PackageReference Include="DevNcore.UI.Design.Geometry" Version="1.0.5" />
     <PackageReference Include="DevNcore.UI.Foundation" Version="1.0.2" />
     <PackageReference Include="DevNcore.WPF" Version="1.0.3" />
@@ -18,7 +34,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Mvvm\" />
+    <Folder Include="Riotcore\" />
   </ItemGroup>
 
 </Project>

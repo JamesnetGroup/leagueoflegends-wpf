@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Windows.Input;
-using Lol.Foundation.Riotcore;
 using Lol.Friends.Local.Collection;
-using Lol.LayoutSupport.Controls;
+using DevNcore.LayoutSupport.Leagueoflegends.Controls;
 using Lol.Database.Controller;
 using Lol.Database.Entites.Schema;
 using DevNcore.UI.Foundation.Mvvm;
+using DevNcore.LayoutSupport.Leagueoflegends.Controls.Primitives;
 
 namespace Lol.Friends.Local.ViewModel
 {
