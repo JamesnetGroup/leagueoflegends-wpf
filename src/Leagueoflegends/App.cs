@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Windows;
-using Lol.Foundation.Riotbase;
 using Lol.Main.UI.Views;
 using Lol.Main.Local.ViewModel;
+using DevNcore.LayoutSupport.Leagueoflegends.Controls.Primitives;
 
 namespace Leagueoflegends
 {

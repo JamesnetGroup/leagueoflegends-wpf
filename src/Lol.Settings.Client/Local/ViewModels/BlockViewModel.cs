@@ -1,5 +1,5 @@
 ﻿using DevNcore.UI.Foundation.Mvvm;
-using Lol.LayoutSupport.Controls;
+using DevNcore.LayoutSupport.Leagueoflegends.Controls;
 using System.Windows.Input;
 
 namespace Lol.Settings.Client.Local.ViewModels

@@ -1,7 +1,7 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 					xmlns:units="clr-namespace:Lol.TeamFight.UI.Units"
-					xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
+					xmlns:ctrls="clr-namespace:DevNcore.LayoutSupport.Leagueoflegends.Controls;assembly=DevNcore.LayoutSupport.Leagueoflegends">
 
 	<Style TargetType="{x:Type units:SubTitleControl}">
 		<Setter Property="Margin" Value="20 10 0 0"/>

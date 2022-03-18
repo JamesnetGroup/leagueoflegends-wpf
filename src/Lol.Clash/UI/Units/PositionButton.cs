@@ -1,4 +1,4 @@
-﻿using Lol.Data.Enums;
+﻿using DevNcore.LayoutSupport.Leagueoflegends.Utils;
 using System.Windows;
 using System.Windows.Controls;
 

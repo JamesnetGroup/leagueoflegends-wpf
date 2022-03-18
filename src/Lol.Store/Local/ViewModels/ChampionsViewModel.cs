@@ -1,10 +1,10 @@
-﻿using Lol.Data.Enums;
-using Lol.Data.Store;
-using Lol.Database.Controller;
+﻿using Lol.Database.Controller;
 using Lol.Database.Entites.Schema;
 using System.Collections.Generic;
 using System.Linq;
 using DevNcore.UI.Foundation.Mvvm;
+using Lol.Data.Store;
+using Lol.Data.Enums;
 
 namespace Lol.Store.Local.ViewModels
 {

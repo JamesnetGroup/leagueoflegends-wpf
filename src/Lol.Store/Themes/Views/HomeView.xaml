@@ -3,7 +3,7 @@
 					xmlns:views="clr-namespace:Lol.Store.UI.Views"
                     xmlns:commons="clr-namespace:Lol.Store.UI.Commons"
 					xmlns:units="clr-namespace:Lol.Store.UI.Units"
-                    xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
+                    xmlns:ctrls="clr-namespace:DevNcore.LayoutSupport.Leagueoflegends.Controls;assembly=DevNcore.LayoutSupport.Leagueoflegends">
 
     <Style TargetType="{x:Type views:HomeView}">
 		<Setter Property="Template">

@@ -2,7 +2,7 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 					xmlns:views="clr-namespace:Lol.Main.UI.Views"
 					xmlns:units="clr-namespace:Lol.Main.UI.Units"
-					xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport">
+					xmlns:ctrls="clr-namespace:DevNcore.LayoutSupport.Leagueoflegends.Controls;assembly=DevNcore.LayoutSupport.Leagueoflegends">
 
 	<Style TargetType="{x:Type TextBlock}" x:Key="TXB.FRIENDS">
 		<Setter Property="FontFamily" Value="Friz Quadrata Std"/>

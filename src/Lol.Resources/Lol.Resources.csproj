@@ -6,7 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Icon\1.png" />
     <None Remove="Images\bg-ezreal.jpg" />
     <None Remove="Images\bg-main-01.png" />
     <None Remove="Images\bg-main-02.png" />

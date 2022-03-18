@@ -1,8 +1,8 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:units="clr-namespace:Lol.Clash.UI.Units"
-                    xmlns:ctrls="clr-namespace:Lol.LayoutSupport.Controls;assembly=Lol.LayoutSupport"
-					xmlns:cnvts="clr-namespace:Lol.Converter;assembly=Lol.Converter">
+                    xmlns:ctrls="clr-namespace:DevNcore.LayoutSupport.Leagueoflegends.Controls;assembly=DevNcore.LayoutSupport.Leagueoflegends"
+					xmlns:cnvts="clr-namespace:DevNcore.LayoutSupport.Leagueoflegends.Converter;assembly=DevNcore.LayoutSupport.Leagueoflegends">
 
     <Style TargetType="{x:Type TextBlock}" x:Key="TXB.TITLE">
 		<Setter Property="Foreground" Value="#CDBE91"/>

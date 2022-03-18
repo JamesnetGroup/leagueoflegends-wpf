@@ -1,5 +1,5 @@
 ﻿using System.Windows;
-using Lol.LayoutSupport.Controls;
+using DevNcore.LayoutSupport.Leagueoflegends.Controls;
 
 namespace Lol.Main.UI.Views
 {
