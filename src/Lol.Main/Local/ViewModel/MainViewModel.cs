@@ -217,7 +217,6 @@ namespace Lol.Main.Local.ViewModel
                     6 => new MyShopView().SetVM(new MyShopViewModel()),
                     _ => new EmptyContent()
                 };
-
                 ParentSeq = 0;
             }
 
@@ -252,16 +251,6 @@ namespace Lol.Main.Local.ViewModel
         }
         #endregion
 
-        #region CustomConfirm
-
-        private void CustomConfirm(object value)
-        {
-            // TODO: [Lucas] 사용자설정게임 -> 확인 버튼시 게임구성 화면 작업예정
-            SubMenus = null;
-            SubMenuChanged(MainMenu.TotalSubMenus[34]);
-        }
-        #endregion
-
         #region CreateCustomConfirm
 
         private void CreateCustomConfirm(object value)
@@ -284,10 +273,8 @@ namespace Lol.Main.Local.ViewModel
 
         #region GoHome: SummonersRiftView "X" 버튼 클릭
 
-        // TODO: [Elena] Menu, Submenu가 제대로 표시되지 않아 수정함
         private void GoHome()
         {
-            //SubMenuChanged(MainMenu.TotalSubMenus[0]);
             SubMenus = MainMenu.MenuChangedbyButtonClick(0);
             CurrentSubMenu = SubMenus[0];
         }
@@ -295,10 +282,8 @@ namespace Lol.Main.Local.ViewModel
 
         #region ModeChange: SummonersRiftViewModel "모드 변경" 버튼 클릭
 
-        // TODO: [Elena] Menu, Submenu가 제대로 표시되지 않아 수정함
         private void ModeChange()
         {
-            //SubMenuChanged(MainMenu.TotalSubMenus[28]);
             SubMenus = MainMenu.MenuChangedbyButtonClick(8);
             CurrentSubMenu = SubMenus[0];
         }
