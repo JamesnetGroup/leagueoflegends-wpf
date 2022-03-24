@@ -68,7 +68,6 @@ namespace Lol.Database.Entites.Statics
         internal List<MyItemInfos> _myItemInfos;
         #endregion
 
-
         #region GetYamlData
 
         private static string GetYamlData(string table)
