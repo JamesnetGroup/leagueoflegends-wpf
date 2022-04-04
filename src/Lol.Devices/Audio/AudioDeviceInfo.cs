@@ -1,5 +1,4 @@
-﻿
-using Lol.Data.Codes;
+﻿using Lol.Data.Codes;
 using NAudio.CoreAudioApi;
 using System.Collections.Generic;
 
