@@ -1,7 +1,7 @@
-﻿using DevNcore.UI.Foundation.Mvvm;
-using Lol.Data.Main;
+﻿using System.Linq;
 using System.Collections.Generic;
-using System.Linq;
+using DevNcore.UI.Foundation.Mvvm;
+using Lol.Data.Main;
 
 namespace Lol.Main.Local.Work
 {

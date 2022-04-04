@@ -6,7 +6,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Clash\" />
+    <Compile Remove="Clash\**" />
+    <EmbeddedResource Remove="Clash\**" />
+    <None Remove="Clash\**" />
+    <Page Remove="Clash\**" />
   </ItemGroup>
 
   <ItemGroup>
