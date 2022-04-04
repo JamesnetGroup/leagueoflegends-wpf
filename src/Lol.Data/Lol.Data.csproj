@@ -11,10 +11,10 @@
 
   <ItemGroup>
     <PackageReference Include="DevNcore.LayoutSupport.Leagueoflegends" Version="1.0.0" />
-    <PackageReference Include="DevNcore.UI.Design" Version="1.0.5" />
+    <PackageReference Include="DevNcore.UI.Design" Version="1.0.7" />
     <PackageReference Include="DevNcore.UI.Design.Converter" Version="1.0.0" />
-    <PackageReference Include="DevNcore.UI.Design.Geometry" Version="1.0.5" />
-    <PackageReference Include="DevNcore.UI.Foundation" Version="1.0.2" />
+    <PackageReference Include="DevNcore.UI.Design.Geometry" Version="1.0.7" />
+    <PackageReference Include="DevNcore.UI.Foundation" Version="1.0.4" />
   </ItemGroup>
 
 </Project>

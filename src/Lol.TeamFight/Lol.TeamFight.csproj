@@ -6,8 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DevNcore.UI.Foundation" Version="1.0.2" />
-    <PackageReference Include="DevNcore.WPF" Version="1.0.3" />
+    <PackageReference Include="DevNcore.UI.Foundation" Version="1.0.4" />
+    <PackageReference Include="DevNcore.WPF" Version="1.0.5" />
   </ItemGroup>
 
   <ItemGroup>
