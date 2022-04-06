@@ -154,7 +154,7 @@
 	</Style>
 
 	<Style TargetType="{x:Type TextBlock}" x:Key="TXB.NAME">
-		<Setter Property="Text" Value="Elena"/>
+		<Setter Property="Text" Value="Hide on bush"/>
 		<Setter Property="FontSize" Value="15"/>
 		<Setter Property="FontFamily" Value="Friz Quadrata Std"/>
 		<Setter Property="FontWeight" Value="Bold"/>
