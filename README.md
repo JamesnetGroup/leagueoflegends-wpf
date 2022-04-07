@@ -44,6 +44,7 @@
 
 ## Nuget Package
 - DevNcore.WPF
+- DevNcore.UI.Geometry
 
 <br />
 
