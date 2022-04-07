@@ -42,10 +42,11 @@
 - C# 10.0  
 - [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/ko/vs/preview/vs2022/)
 
-## Nuget Package
+## Nuget Packages
 - DevNcore.WPF
+- DevNcore.UI.Design
 - DevNcore.UI.Geometry
-
+- DevNcore.UI.Foundation
 <br />
 
 ## 프로젝트 구조
