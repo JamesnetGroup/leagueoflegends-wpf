@@ -45,9 +45,11 @@
 
 ## Nuget Packages
 - DevNcore.WPF
-- DevNcore.UI.Design
-- DevNcore.UI.Geometry
 - DevNcore.UI.Foundation
+- DevNcore.UI.Design
+- DevNcore.UI.Design.Converter
+- DevNcore.UI.Design.Geometry
+- DevNcore.LayoutSupport.Leagueoflegends
 <br />
 
 ## 프로젝트 구조
