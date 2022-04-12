@@ -44,12 +44,12 @@
 - [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/ko/vs/preview/vs2022/)
 
 ## Nuget Packages
-- DevNcore.WPF
-- DevNcore.UI.Foundation
-- DevNcore.UI.Design
-- DevNcore.UI.Design.Converter
-- DevNcore.UI.Design.Geometry
-- DevNcore.LayoutSupport.Leagueoflegends
+- [DevNcore.WPF](https://github.com/devncore/devncore)
+- [DevNcore.UI.Foundation](https://github.com/devncore/devncore)
+- [DevNcore.UI.Design](https://github.com/devncore/devncore)
+- [DevNcore.UI.Design.Converter](https://github.com/devncore/devncore)
+- [DevNcore.UI.Design.Geometry](https://github.com/devncore/devncore)
+- [DevNcore.LayoutSupport.Leagueoflegends](https://github.com/devncore/devncore)
 <br />
 
 ## 프로젝트 구조
