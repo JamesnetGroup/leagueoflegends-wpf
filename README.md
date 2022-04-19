@@ -7,6 +7,7 @@
 </div>
 
 <br />
+<br />
 
 이 리포지토리는 WPF로 만든 리그오브레전드입니다. 
 <br />
@@ -20,6 +21,7 @@
 <br />
   
 ## 컨텐츠
+
 - [이 오픈소스의 특징](#이-오픈소스의-특징)
 - [개발 정보](#개발-정보)
 - [프로젝트 구조](#프로젝트-구조)
@@ -41,6 +43,13 @@
 - C# 10.0  
 - [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/ko/vs/preview/vs2022/)
 
+## Nuget Packages
+- [DevNcore.WPF](https://github.com/devncore/devncore)
+- [DevNcore.UI.Foundation](https://github.com/devncore/devncore)
+- [DevNcore.UI.Design](https://github.com/devncore/devncore)
+- [DevNcore.UI.Design.Converter](https://github.com/devncore/devncore)
+- [DevNcore.UI.Design.Geometry](https://github.com/devncore/devncore)
+- [DevNcore.LayoutSupport.Leagueoflegends](https://github.com/devncore/devncore)
 <br />
 
 ## 프로젝트 구조
