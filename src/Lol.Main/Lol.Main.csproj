@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DevNcore.UI.Foundation" Version="1.0.4" />
+    <PackageReference Include="DevNcore.UI.Foundation" Version="1.0.9" />
   </ItemGroup>
 
   <ItemGroup>
