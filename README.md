@@ -1,23 +1,11 @@
-## WPF League of Legends
-
-<div>
-  <a href="https://www.leagueoflegends.com/en-us/">
-    <img src="https://user-images.githubusercontent.com/74305823/133882864-6fc75ced-e297-41f9-bdbf-e779b57c8ff3.png" width="250"/>
-  </a>
-</div>
-
-<br />
-
+# WPF 리그오브레전드
 이 리포지토리는 WPF로 만든 리그오브레전드입니다. 
-<br />
 
-<a href="https://github.com/devncore/devncore"><strong>더 알아보기 »</strong></a>
  
 | Star | License | Activity |
 |:----:|:-------:|:--------:|
 | <a href="https://github.com/devncore/leagueoflegends/stargazers"><img src="https://img.shields.io/github/stars/devncore/leagueoflegends" alt="Github Stars"></a> | <img src="https://img.shields.io/github/license/devncore/leagueoflegends" alt="License"> | <a href="https://github.com/devncore/leagueoflegends/pulse"><img src="https://img.shields.io/github/commit-activity/m/devncore/leagueoflegends" alt="Commits-per-month"></a> |
 
-<br />
   
 ## 컨텐츠
 
@@ -26,8 +14,6 @@
 - [프로젝트 구조](#프로젝트-구조)
 - [데이터베이스](#데이터베이스)
 - [스크린샷](#스크린샷)
-
-<br />
 
 ## 이 오픈소스의 특징
 - WPF 프로젝트를 올바르게 구현하는 방법을 학습할 수 있습니다.
@@ -46,7 +32,6 @@
 - [DevNcore.UI.Design.Converter](https://github.com/devncore/devncore)
 - [DevNcore.UI.Design.Geometry](https://github.com/devncore/devncore)
 - [DevNcore.LayoutSupport.Leagueoflegends](https://github.com/devncore/devncore)
-<br />
 
 ## 프로젝트 구조
  
@@ -57,44 +42,30 @@
 - 📁 Presentation
 - **Leagueoflegends**
  
-<br />
-
 ## 데이터베이스
 **WPF League of Legends**는 클래식 **RDB** 대신 **YAML**을 데이터베이스로 사용하고 있습니다.
 
 > YAML은 JSON과 함께 널리 사용되는 데이터 양식입니다.  
 > 이 기술에 대한 내용은 **[Guide to Yaml](https://github.com/devncore/guide-to-yaml)** 에서 더 자세히 학습할 수 있습니다.  
 
-<br />
-
 ## 스크린샷 
 
 ### `Home`
 ![image](https://user-images.githubusercontent.com/52397976/124482513-526ba380-dde4-11eb-9b31-c3c1199987b6.png)
 
-<br />
-
 ### `TFT`
 ![image](https://user-images.githubusercontent.com/52397976/133445360-29ced456-994a-4f10-a669-0355bd1dee00.png)
-
-<br />
 
 ### `Clash`
 ![image](https://user-images.githubusercontent.com/68521148/135798131-1b1d8281-5f07-4012-9863-9feb97beea62.PNG)
 
 ![image](https://user-images.githubusercontent.com/52397976/133266434-97659a57-284d-4207-bfab-ac2684c16f04.png)
 
-<br />
-
 ### `Setting`
 ![image](https://user-images.githubusercontent.com/74305823/126187790-d6d3332e-694c-4318-b556-66e1df34a4be.png)
 
-<br />
-
 ### `Profile`
 ![image](https://user-images.githubusercontent.com/74305823/136051365-b82be44d-318d-4ac4-81cc-02ba6c306776.png)
-
-<br />
 
 ### `Collection`
 ![image](https://user-images.githubusercontent.com/74305823/140320827-2098e387-1c40-440d-bc3c-bf0703d2ed00.png)
@@ -105,17 +76,11 @@
 
 ![image](https://user-images.githubusercontent.com/74305823/137628890-d0ef33b4-14a1-4caa-be24-4d0e4b16c5a8.png)
 
-<br />
-
 ### `Loot`
 ![image](https://user-images.githubusercontent.com/68521148/138593391-44e3dec7-433c-4422-a7a2-cc8a109ad10b.png)
 
-<br />
-
 ### `My Shop`
 ![image](https://user-images.githubusercontent.com/74305823/140745076-d88297bd-50ab-4a56-a558-c1fb78af1cb5.png)
-
-<br />
 
 ### `Store`
 ![image](https://user-images.githubusercontent.com/68521148/139537777-062b5bcf-61b2-4e10-a9df-31353bcffc66.PNG)
@@ -123,7 +88,6 @@
 ![image](https://user-images.githubusercontent.com/68521148/140644848-d16192cf-6dba-42c0-8de3-f5e6d503d3c2.PNG)
 
 ![image](https://user-images.githubusercontent.com/68521148/139064074-130eb6da-6093-4fe2-b813-d1133d4c1857.PNG)
-
 
 ### `Game`
 ![image](https://user-images.githubusercontent.com/74305823/136380449-ea229fbb-6db7-412c-828b-16d6f7af83d8.png)
