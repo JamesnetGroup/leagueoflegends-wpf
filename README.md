@@ -34,13 +34,10 @@
 - **리그오브레전드**와 같은 최상위 디자인 영역의 표현을 상용 컴포넌트에 의지하지 않고 직접 구현하는 방법에 대해 설명합니다.
 - MVVM 패턴을 직접 구현하여 WPF에 대해 자세하게 이해하고 학습할 수 있습니다.
 
-<br />
-
 ## 개발 정보
-
 - .NET 6.0  
 - C# 10.0  
-- [Visual Studio 2022 Preview](https://visualstudio.microsoft.com/ko/vs/preview/vs2022/)
+- [Visual Studio 2022](https://visualstudio.microsoft.com/ko/vs/preview/vs2022/)
 
 ## Nuget Package (1.0.9)
 - [DevNcore.WPF](https://github.com/devncore/devncore)
