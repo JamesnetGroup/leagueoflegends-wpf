@@ -1,4 +1,4 @@
-# WPF 리그오브레전드
+# WPF League of Legends
 이 리포지토리는 WPF로 만든 리그오브레전드입니다. 
 
  
