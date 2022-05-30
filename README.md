@@ -1,5 +1,5 @@
 # WPF League of Legends
-WPF C#으로 만든 **리그오브레전드**입니다. 
+WPF 기반으로 만든 **리그오브레전드**입니다. 
 
 ![image](https://user-images.githubusercontent.com/74305823/140320827-2098e387-1c40-440d-bc3c-bf0703d2ed00.png)
  
