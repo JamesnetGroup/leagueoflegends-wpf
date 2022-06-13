@@ -1,7 +1,8 @@
 # WPF League of Legends
 
-[한국어](https://github.com/devncore/leagueoflegends)
-[English](https://github.com/devncore/leagueoflegends)
+[한국어](https://github.com/devncore/leagueoflegends) 
+[English](https://github.com/devncore/leagueoflegends/blob/main/README-EN.md)
+
 WPF 기반으로 만든 **리그오브레전드**입니다. 
 
 ![image](https://user-images.githubusercontent.com/74305823/140320827-2098e387-1c40-440d-bc3c-bf0703d2ed00.png)
