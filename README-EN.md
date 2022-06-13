@@ -26,7 +26,8 @@
  
 ## Features
 - You can learn how to implement WPF projects correctly.
-- You can learn how to deploy directly without relying on commercial components.
+- You can learn how to implement design areas directly without relying on commercial components.
+- You can directly implement MVVM patterns to gain a deeper understanding of WPF.
 
 ## Development
 - .NET 6.0
@@ -34,6 +35,8 @@
 - [Visual Studio 2022](https://visualstudio.microsoft.com/vs/)
 
 ## Nuget Package 
+> Install Nuget from [**GitHub**][nuget-github] or [**nuget.org**][nuget-org]
+
 - DevNcore.WPF
 - DevNcore.UI.Foundation
 - DevNcore.UI.Design
@@ -41,4 +44,5 @@
 - DevNcore.UI.Design.Geometry
 - DevNcore.LayoutSupport.Leagueoflegends
 
-👉 [See our Nuget](https://github.com/orgs/devncore/packages?repo_name=devncore)
+[nuget-github]: https://github.com/orgs/devncore/packages?repo_name=devncore  
+[nuget-org]: https://www.nuget.org/profiles/DevNcore
