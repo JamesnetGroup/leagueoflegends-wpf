@@ -15,7 +15,6 @@ WPF 기반으로 만든 **리그오브레전드**입니다.
 
 - [이 오픈소스의 특징](#이-오픈소스의-특징)
 - [개발 정보](#개발-정보)
-- [프로젝트 구조](#프로젝트-구조)
 - [데이터베이스](#데이터베이스)
 - [스크린샷](#스크린샷)
 
@@ -36,15 +35,6 @@ WPF 기반으로 만든 **리그오브레전드**입니다.
 - [DevNcore.UI.Design.Converter](https://github.com/devncore/devncore)
 - [DevNcore.UI.Design.Geometry](https://github.com/devncore/devncore)
 - [DevNcore.LayoutSupport.Leagueoflegends](https://github.com/devncore/devncore)
-
-## 프로젝트 구조
- 
-- 📁 AppData
-- 📁 Based
-- 📁 Implement
-- 📁 Material
-- 📁 Presentation
-- **Leagueoflegends**
  
 ## 데이터베이스
 **WPF League of Legends**는 클래식 **RDB** 대신 **YAML**을 데이터베이스로 사용하고 있습니다.
