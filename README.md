@@ -11,14 +11,6 @@ WPF 기반으로 만든 **리그오브레전드**입니다.
 |:----:|:-------:|:--------:|
 | <a href="https://github.com/devncore/leagueoflegends/stargazers"><img src="https://img.shields.io/github/stars/devncore/leagueoflegends" alt="Github Stars"></a> | <img src="https://img.shields.io/github/license/devncore/leagueoflegends" alt="License"> | <a href="https://github.com/devncore/leagueoflegends/pulse"><img src="https://img.shields.io/github/commit-activity/m/devncore/leagueoflegends" alt="Commits-per-month"></a> |
 
-  
-## 컨텐츠
-
-- [이 오픈소스의 특징](#이-오픈소스의-특징)
-- [개발 정보](#개발-정보)
-- [데이터베이스](#데이터베이스)
-- [스크린샷](#스크린샷)
-
 ## 이 오픈소스의 특징
 - WPF 프로젝트를 올바르게 구현하는 방법을 학습할 수 있습니다.
 - **리그오브레전드**와 같은 최상위 디자인 영역의 표현을 상용 컴포넌트에 의지하지 않고 직접 구현하는 방법에 대해 설명합니다.
@@ -29,14 +21,18 @@ WPF 기반으로 만든 **리그오브레전드**입니다.
 - C# 10.0  
 - [Visual Studio 2022](https://visualstudio.microsoft.com/ko/vs/preview/vs2022/)
 
-## Nuget Package (1.0.9)
+## Nuget Package 
+> Nuget 설치 &nbsp; [**GitHub**][nuget-github] | [**nuget.org**][nuget-org]
 - [DevNcore.WPF](https://github.com/devncore/devncore)
 - [DevNcore.UI.Foundation](https://github.com/devncore/devncore)
 - [DevNcore.UI.Design](https://github.com/devncore/devncore)
 - [DevNcore.UI.Design.Converter](https://github.com/devncore/devncore)
 - [DevNcore.UI.Design.Geometry](https://github.com/devncore/devncore)
 - [DevNcore.LayoutSupport.Leagueoflegends](https://github.com/devncore/devncore)
- 
+
+[nuget-github]: https://github.com/orgs/devncore/packages?repo_name=devncore  
+[nuget-org]: https://www.nuget.org/profiles/DevNcore
+
 ## 데이터베이스
 **WPF League of Legends**는 클래식 **RDB** 대신 **YAML**을 데이터베이스로 사용하고 있습니다.
 
