@@ -12,16 +12,13 @@
 
 <p align="center">
   <a href="https://github.com/devncore/leagueoflegends/stargazers">
-    <img src="https://img.shields.io/github/stars/devncore/leagueoflegends?style=for-the-badge" alt="Github Stars">
+    <img src="https://img.shields.io/github/stars/devncore/leagueoflegends?style=for-the-badge&color=yellow" alt="Github Stars">
   </a>
   <a href="https://github.com/devncore/leagueoflegends/network/members">
     <img src="https://img.shields.io/github/forks/devncore/leagueoflegends?style=for-the-badge" alt="Github Forks">
   </a>
   <a href="https://github.com/devncore/leagueoflegends/blob/master/LICENSE">
       <img src="https://img.shields.io/github/license/devncore/leagueoflegends?style=for-the-badge" alt="License - MIT" />
-  </a>
-  <a href="https://github.com/devncore/leagueoflegends/pulse">
-      <img src="https://img.shields.io/github/commit-activity/m/devncore/leagueoflegends?style=for-the-badge" alt="Commits-per-month">
   </a>
 </p>
 
