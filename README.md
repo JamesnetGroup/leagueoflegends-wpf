@@ -6,9 +6,17 @@ WPF 기반으로 만든 **리그오브레전드**입니다.
 
 ![image](https://user-images.githubusercontent.com/74305823/140320827-2098e387-1c40-440d-bc3c-bf0703d2ed00.png)
  
-| Star | License | Activity |
-|:----:|:-------:|:--------:|
-| <a href="https://github.com/devncore/leagueoflegends/stargazers"><img src="https://img.shields.io/github/stars/devncore/leagueoflegends" alt="Github Stars"></a> | <img src="https://img.shields.io/github/license/devncore/leagueoflegends" alt="License"> | <a href="https://github.com/devncore/leagueoflegends/pulse"><img src="https://img.shields.io/github/commit-activity/m/devncore/leagueoflegends" alt="Commits-per-month"></a> |
+<p align="center">
+  <a href="https://github.com/devncore/leagueoflegends/stargazers">
+    <img src="https://img.shields.io/github/stars/devncore/leagueoflegends?style=for-the-badge&color=yellow" alt="Github Stars">
+  </a>
+  <a href="https://github.com/devncore/leagueoflegends/network/members">
+    <img src="https://img.shields.io/github/forks/devncore/leagueoflegends?style=for-the-badge" alt="Github Forks">
+  </a>
+  <a href="https://github.com/devncore/leagueoflegends/blob/main/LICENSE">
+      <img src="https://img.shields.io/github/license/devncore/leagueoflegends?style=for-the-badge" alt="License - MIT" />
+  </a>
+</p>
 
 ## 이 오픈소스의 특징
 - WPF 프로젝트를 올바르게 구현하는 방법을 학습할 수 있습니다.
