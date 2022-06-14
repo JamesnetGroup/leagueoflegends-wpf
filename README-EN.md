@@ -17,7 +17,7 @@
   <a href="https://github.com/devncore/leagueoflegends/network/members">
     <img src="https://img.shields.io/github/forks/devncore/leagueoflegends?style=for-the-badge" alt="Github Forks">
   </a>
-  <a href="https://github.com/devncore/leagueoflegends/blob/master/LICENSE">
+  <a href="https://github.com/devncore/leagueoflegends/blob/main/LICENSE">
       <img src="https://img.shields.io/github/license/devncore/leagueoflegends?style=for-the-badge" alt="License - MIT" />
   </a>
 </p>
