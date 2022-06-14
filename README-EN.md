@@ -14,6 +14,9 @@
   <a href="https://github.com/devncore/leagueoflegends/stargazers">
     <img src="https://img.shields.io/github/stars/devncore/leagueoflegends?style=for-the-badge" alt="Github Stars">
   </a>
+  <a href="https://github.com/devncore/leagueoflegends/fork">
+    <img src="https://img.shields.io/github/forks/devncore/leagueoflegends?style=for-the-badge" alt="Github Fork">
+  </a>
   <a href="https://github.com/devncore/leagueoflegends/blob/master/LICENSE">
       <img src="https://img.shields.io/github/license/devncore/leagueoflegends?style=for-the-badge" alt="License - MIT" />
   </a>
