@@ -1,11 +1,15 @@
-# WPF League of Legends
+<div align="center">
+  <img src="https://user-images.githubusercontent.com/74305823/140320827-2098e387-1c40-440d-bc3c-bf0703d2ed00.png" width="900"/>
+</div>
 
-[**English**](https://github.com/devncore/leagueoflegends/blob/main/README-EN.md)
+<h1 align="center">
+    WPF League of Legends
+</h1>
 
-WPF 기반으로 만든 **리그오브레전드**입니다. 
+<p align="center">
+  WPF 기반으로 만든 <b>리그오브레전드</b>입니다. 
+</p>
 
-![image](https://user-images.githubusercontent.com/74305823/140320827-2098e387-1c40-440d-bc3c-bf0703d2ed00.png)
- 
 <p align="center">
   <a href="https://github.com/devncore/leagueoflegends/stargazers">
     <img src="https://img.shields.io/github/stars/devncore/leagueoflegends?style=for-the-badge&color=yellow" alt="Github Stars">
@@ -18,6 +22,8 @@ WPF 기반으로 만든 **리그오브레전드**입니다.
   </a>
 </p>
 
+ ---
+ 
 ## 이 오픈소스의 특징
 - WPF 프로젝트를 올바르게 구현하는 방법을 학습할 수 있습니다.
 - **리그오브레전드**와 같은 최상위 디자인 영역의 표현을 상용 컴포넌트에 의지하지 않고 직접 구현하는 방법에 대해 설명합니다.
