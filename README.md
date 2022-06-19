@@ -35,12 +35,12 @@
 ## Nuget Package 
 > Nuget 설치 &nbsp; [**GitHub**][nuget-github] | [**nuget.org**][nuget-org]
 
-- [DevNcore.WPF](https://github.com/devncore/devncore)
-- [DevNcore.UI.Foundation](https://github.com/devncore/devncore)
-- [DevNcore.UI.Design](https://github.com/devncore/devncore)
-- [DevNcore.UI.Design.Converter](https://github.com/devncore/devncore)
-- [DevNcore.UI.Design.Geometry](https://github.com/devncore/devncore)
-- [DevNcore.LayoutSupport.Leagueoflegends](https://github.com/devncore/devncore)
+- DevNcore.WPF
+- DevNcore.UI.Foundation
+- DevNcore.UI.Design
+- DevNcore.UI.Design.Converter
+- DevNcore.UI.Design.Geometry
+- DevNcore.LayoutSupport.Leagueoflegends
 
 [nuget-github]: https://github.com/orgs/devncore/packages?repo_name=devncore  
 [nuget-org]: https://www.nuget.org/profiles/DevNcore
