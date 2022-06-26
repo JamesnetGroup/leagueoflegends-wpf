@@ -46,7 +46,7 @@
 [nuget-org]: https://www.nuget.org/profiles/DevNcore
 
 ## 데이터베이스
-**WPF League of Legends**는 클래식 **RDB** 대신 **YAML**을 데이터베이스로 사용하고 있습니다.
+**WPF League of Legends**는 클래식 RDB 대신 **YAML**을 데이터베이스로 사용하고 있습니다.
 
 > YAML은 JSON과 함께 널리 사용되는 데이터 양식입니다.  
 > 이 기술에 대한 내용은 **[Guide to Yaml](https://github.com/devncore/guide-to-yaml)** 에서 더 자세히 학습할 수 있습니다.  
