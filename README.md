@@ -28,9 +28,9 @@
 - MVVM 패턴을 직접 구현하여 WPF에 대해 자세하게 이해하고 학습할 수 있습니다.
 
 ## 개발 정보
+- [Visual Studio 2022](https://visualstudio.microsoft.com/ko/vs/preview/vs2022/)
 - .NET 6.0  
 - C# 10.0  
-- [Visual Studio 2022](https://visualstudio.microsoft.com/ko/vs/preview/vs2022/)
 
 ## Nuget Package 
 > Nuget 설치 &nbsp; [**GitHub**][nuget-github] | [**nuget.org**][nuget-org]
