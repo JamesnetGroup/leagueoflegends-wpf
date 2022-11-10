@@ -34,6 +34,8 @@
 
 ## TBD
 - CommunityToolkit.Mvvm
+- .NET 7
+- IoC
 
 ## Nuget Package 
 > Nuget 설치 &nbsp; [**GitHub**][nuget-github] | [**nuget.org**][nuget-org]
