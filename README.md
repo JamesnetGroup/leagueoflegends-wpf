@@ -32,7 +32,7 @@
 - .NET 6.0  
 - C# 10.0  
 
-## TBD
+## Future!
 - CommunityToolkit.Mvvm
 - .NET 7
 - IoC
