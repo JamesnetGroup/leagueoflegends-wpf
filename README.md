@@ -34,8 +34,8 @@
 
 ## Future!
 - CommunityToolkit.Mvvm
-- .NET 7
-- IoC
+- .NET 7 (C# 11)
+- Prism IoC
 - WpfAutoGrid
 
 ## Nuget Package 
