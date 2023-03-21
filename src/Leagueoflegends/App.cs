@@ -1,30 +1,26 @@
-﻿using Jamesnet.Wpf.Controls;
-using LeagueOfLegends.Forms.UI.Views;
+﻿using System;
 using System.Windows;
+using Lol.Main.UI.Views;
+using Lol.Main.Local.ViewModel;
+using DevNcore.LayoutSupport.Leagueoflegends.Controls.Primitives;
 
-namespace LeagueOfLegends
+namespace Leagueoflegends
 {
-    internal class App : JamesApplication
+    public class App : RiotApp
     {
-        protected override Window CreateShell()
+        protected override void OnStartup(StartupEventArgs e)
         {
-            //bool dialogResult = true;
+            bool dialogResult = true;
 
-            //while (dialogResult)
-            //{
-            //    ShutdownMode = ShutdownMode.OnExplicitShutdown;
-            //    MainView main = new();
-            //    main.DataContext = new MainViewModel();
+            while (dialogResult)
+            {
+                ShutdownMode = ShutdownMode.OnExplicitShutdown;
+                MainView main = new();
+                main.DataContext = new MainViewModel();
 
-            //    dialogResult = (bool)main.ShowDialog();
-            //}
-            //Environment.Exit(0);
-
-            //MainView main = new();
-            //main.DataContext = new MainViewModel();
-
-            RiotWindow window = new();
-            return window;
+                dialogResult = (bool)main.ShowDialog();
+            }
+            Environment.Exit(0);
         }
     }
 }
