@@ -1,11 +1,5 @@
 ﻿using Jamesnet.Wpf.Controls;
-using Lol.Main.Local.ViewModel;
-using Lol.Main.UI.Views;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using LeagueOfLegends.Forms.UI.Views;
 using System.Windows;
 
 namespace LeagueOfLegends
@@ -26,9 +20,11 @@ namespace LeagueOfLegends
             //}
             //Environment.Exit(0);
 
-            MainView main = new();
-            main.DataContext = new MainViewModel();
-            return main;
+            //MainView main = new();
+            //main.DataContext = new MainViewModel();
+
+            RiotWindow window = new();
+            return window;
         }
     }
 }

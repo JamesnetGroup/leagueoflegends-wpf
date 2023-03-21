@@ -1,7 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <OutputType>WinExe</OutputType>
     <TargetFramework>net7.0-windows</TargetFramework>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
@@ -13,8 +12,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\LeagueOfLegends.Core\LeagueOfLegends.Core.csproj" />
-    <ProjectReference Include="..\LeagueOfLegends.Forms\LeagueOfLegends.Forms.csproj" />
-    <ProjectReference Include="..\LeagueOfLegends.Main\LeagueOfLegends.Main.csproj" />
   </ItemGroup>
 
 </Project>

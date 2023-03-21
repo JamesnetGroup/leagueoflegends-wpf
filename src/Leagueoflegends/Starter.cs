@@ -1,12 +1,5 @@
-﻿using Jamesnet.Wpf.Controls;
-using Lol.Main.Local.ViewModel;
-using Lol.Main.UI.Views;
+﻿using LeagueOfLegends.Settings;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
 
 namespace LeagueOfLegends
 {
@@ -16,6 +9,7 @@ namespace LeagueOfLegends
         private static void Main(string[] args)
         {
             _ = new App()
+                .AddInversionModule<ViewModules>()
                 .Run();
         }
     }
