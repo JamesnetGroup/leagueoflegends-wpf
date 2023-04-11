@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Linq;
-using System.Windows;
 using System.Windows.Input;
 using System.Windows.Controls;
 using System.Collections.Generic;
 using Lol.Data.Main;
-using DevNcore.LayoutSupport.Leagueoflegends.Controls;
 using Lol.Main.Local.Work;
 using Lol.Main.UI.Units;
 using Lol.MyShop.UI.Views;
@@ -31,10 +29,13 @@ using Lol.Loot.UI.Views;
 using Lol.Loot.Local.ViewModels;
 using DevNcore.UI.Foundation.Mvvm;
 using DevNcore.LayoutSupport.Leagueoflegends.Controls.Primitives;
+using Jamesnet.Wpf.Mvvm;
+using Jamesnet.Wpf.Controls;
+using Lol.Main.UI.Views;
 
 namespace Lol.Main.Local.ViewModel
 {
-    public class MainViewModel : ObservableObject
+    public class MainContentViewModel : ObservableBase, IViewLoadable
     { 
         #region Variables
 
@@ -132,7 +133,7 @@ namespace Lol.Main.Local.ViewModel
 
         #region Constructor
 
-        public MainViewModel()
+        public MainContentViewModel()
         {
             _winWork = new();
             _modalWork = new(this);
@@ -230,16 +231,13 @@ namespace Lol.Main.Local.ViewModel
         }
         #endregion
 
-        #region OnLoaded
-
-        protected override void OnLoaded(object sender, RoutedEventArgs e)
+        public void OnLoaded(IViewable view)
         {
-            if (sender is MainWindow win)
+            if (view is MainContent win)
             {
                 BackgroundImage = win.BackgroundImage;
             }
         }
-        #endregion
 
         #region PvpConfirm
 

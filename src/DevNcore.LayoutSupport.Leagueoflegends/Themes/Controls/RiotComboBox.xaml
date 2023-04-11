@@ -1,0 +1,166 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:ctrls="clr-namespace:DevNcore.LayoutSupport.Leagueoflegends.Controls">
+
+	<LinearGradientBrush x:Key="CBX.BDR" StartPoint="0.5 0" EndPoint="0.5 1">
+		<GradientStop Color="#C6A667" Offset="0.0" />
+		<GradientStop Color="#6B5825" Offset="1.0" />
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="CBX.BG.OVER" StartPoint="0.5 0" EndPoint="0.5 1">
+		<GradientStop Color="#111920" Offset="0.0" />
+		<GradientStop Color="#292E2B" Offset="1.0" />
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="CBX.BDR.OVER" StartPoint="0.5 0" EndPoint="0.5 1">
+		<GradientStop Color="#EFE5D0" Offset="0.0" />
+		<GradientStop Color="#C89C3D" Offset="1.0" />
+	</LinearGradientBrush>
+
+	<Style TargetType="{x:Type ToggleButton}" x:Key="IN.TGL">
+		<Setter Property="ClickMode" Value="Press"/>
+		<Setter Property="Focusable" Value="False"/>
+		<Setter Property="IsChecked" Value="{Binding Path=IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type ToggleButton}">
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="*"/>
+							<ColumnDefinition Width="50" />
+						</Grid.ColumnDefinitions>
+						<Border x:Name="border"
+                                Grid.Column="0"
+                                Grid.ColumnSpan="2"
+                                Background="#0f1a20" 
+								BorderBrush="{StaticResource CBX.BDR}"
+                                BorderThickness="1"/>
+						<ctrls:RiotIcon x:Name="swap" 
+                                        Grid.Column="1" 
+                                        IconType="Menuswap"
+                                        HorizontalAlignment="Right"
+										Fill="#a89060"
+                                        Height="20" 
+                                        Width="20" 
+                                        Margin="0 0 6 0"/>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter TargetName="border" Property="Background" Value="{StaticResource CBX.BG.OVER}"/>
+							<Setter TargetName="border" Property="BorderBrush" Value="{StaticResource CBX.BDR.OVER}"/>
+						</Trigger>
+						<Trigger Property="ToggleButton.IsChecked" Value="True">
+							<Setter TargetName="swap" Property="Fill" Value="#654D26"/>
+							<Setter TargetName="border" Property="BorderBrush" Value="#463714"/>
+							<Setter TargetName="border" Property="Background" Value="#0F181F"/>
+						</Trigger>
+						<Trigger Property="IsEnabled" Value="False">
+							<Setter Property="TextElement.Foreground" Value="#463714"/>
+							<Setter TargetName="border" Property="Background" Value="#0F181F"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style TargetType="{x:Type ctrls:RiotComboBox}">
+		<Setter Property="ItemsSource" Value="{Binding RelativeSource={RelativeSource AncestorType=ctrls:RiotComboBox}, Path=ItemsSource}"/>
+		<Setter Property="SelectedValue" Value="{Binding RelativeSource={RelativeSource AncestorType=ctrls:RiotComboBox}, Path=SelectedValue}"/>
+		<Setter Property="SelectedValuePath" Value="{Binding RelativeSource={RelativeSource AncestorType=ctrls:RiotComboBox}, Path=SelectedValuePath}"/>
+		<Setter Property="UIElement.SnapsToDevicePixels" Value="True"/>
+		<Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto"/>
+		<Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto"/>
+		<Setter Property="ScrollViewer.CanContentScroll" Value="True"/>
+		<Setter Property="TextElement.Foreground" Value="White"/>
+		<Setter Property="FrameworkElement.FocusVisualStyle" Value="{x:Null}"/>
+		<Setter Property="Padding" Value="5 5 5 5"/>
+		<Setter Property="HorizontalAlignment" Value="Left"/>
+		<Setter Property="ItemTemplate">
+			<Setter.Value>
+				<DataTemplate>
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="Auto"/>
+							<ColumnDefinition Width="*"/>
+						</Grid.ColumnDefinitions>
+						<TextBlock Grid.Column="0" 
+								   VerticalAlignment="Center"
+								   Text="{Binding RelativeSource={RelativeSource AncestorType=ctrls:RiotComboBox}, Path=Content}" />
+					</Grid>
+				</DataTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="Cursor" Value="Hand"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type ctrls:RiotComboBox}">
+					<ControlTemplate.Resources>
+						<Style TargetType="{x:Type ContentPresenter}" x:Key="IN.DISPLAY">
+							<Setter Property="Margin" Value="10 0 0 1"/>
+							<Setter Property="IsHitTestVisible" Value="False"/>
+							<Setter Property="HorizontalAlignment" Value="Left"/>
+							<Setter Property="VerticalAlignment" Value="Center"/>
+							<Setter Property="Content" Value="{Binding RelativeSource={RelativeSource AncestorType=ctrls:RiotComboBox}, Path=SelectionBoxItem}"/>
+							<Setter Property="ContentTemplate" Value="{Binding RelativeSource={RelativeSource AncestorType=ctrls:RiotComboBox}, Path=SelectionBoxItemTemplate}"/>
+							<Setter Property="ContentTemplateSelector" Value="{Binding RelativeSource={RelativeSource AncestorType=ctrls:RiotComboBox}, Path=ItemTemplateSelector}"/>
+						</Style>
+						<Style TargetType="{x:Type Popup}" x:Key="IN.POPUP">
+							<Setter Property="Placement" Value="Bottom"/>
+							<Setter Property="Focusable" Value="False"/>
+							<Setter Property="AllowsTransparency" Value="True"/>
+							<Setter Property="IsOpen" Value="{Binding RelativeSource={RelativeSource AncestorType=ctrls:RiotComboBox}, Path=IsDropDownOpen}"/>
+							<Setter Property="PopupAnimation" Value="Slide"/>
+						</Style>
+						<Style TargetType="{x:Type Grid}" x:Key="IN.GRID">
+							<Setter Property="SnapsToDevicePixels" Value="True"/>
+							<Setter Property="Width" Value="{Binding RelativeSource={RelativeSource AncestorType=ctrls:RiotComboBox}, Path=Width}"/>
+							<Setter Property="MaxHeight" Value="130"/>
+						</Style>
+						<Style TargetType="{x:Type Border}" x:Key="IN.BORDER">
+							<Setter Property="Background" Value="#FF000000"/>
+							<Setter Property="BorderBrush" Value="#463714"/>
+							<Setter Property="BorderThickness" Value="1 0 1 1"/>
+						</Style>
+						<Style TargetType="{x:Type ctrls:BasicScroll}" x:Key="IN.SCROLL">
+							<Setter Property="Margin" Value="1 1 1 1"/>
+							<Setter Property="SnapsToDevicePixels" Value="True"/>
+						</Style>
+						<Style TargetType="{x:Type ItemsPresenter}" x:Key="IN.ITEMS">
+							<Setter Property="Margin" Value="0 0 0 -1"/>
+						</Style>
+					</ControlTemplate.Resources>
+					<Grid>
+						<ToggleButton Name="togglebutton"
+                                      Style="{StaticResource IN.TGL}"/>
+						<ContentPresenter Name="contentsite" 
+                                          Style="{StaticResource IN.DISPLAY}"/>
+						<Popup Name="popup" 
+                               Style="{StaticResource IN.POPUP}">
+							<Grid Name="dropdown" 
+                                  Style="{StaticResource IN.GRID}">
+								<Border x:Name="dropdownborder"
+                                        Style="{StaticResource IN.BORDER}"/>
+								<ctrls:BasicScroll Style="{StaticResource IN.SCROLL}">
+									<ItemsPresenter Style="{StaticResource IN.ITEMS}"/>
+								</ctrls:BasicScroll>
+							</Grid>
+						</Popup>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger Property="ItemsControl.IsGrouping" Value="True">
+							<Setter Property="ScrollViewer.CanContentScroll" Value="False"/>
+						</Trigger>
+						<Trigger Property="ComboBox.IsEditable" Value="True">
+							<Setter Property="KeyboardNavigation.IsTabStop" Value="False"/>
+							<Setter TargetName="contentsite" Property="UIElement.Visibility" Value="Hidden"/>
+						</Trigger>
+						<Trigger Property="IsDropDownOpen" Value="True">
+							<Setter Property="Foreground" Value="#463714"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+</ResourceDictionary>

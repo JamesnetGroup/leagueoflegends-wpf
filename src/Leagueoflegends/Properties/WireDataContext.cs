@@ -1,11 +1,8 @@
 ﻿using Jamesnet.Wpf.Global.Location;
+using Lol.Forms.Local.ViewModels;
+using Lol.Forms.UI.Views;
 using Lol.Main.Local.ViewModel;
 using Lol.Main.UI.Views;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Leagueoflegends.Properties
 {
@@ -13,7 +10,8 @@ namespace Leagueoflegends.Properties
     {
         protected override void Match(ViewModelLocatorCollection items)
         {
-            items.Register<MainView, MainViewModel>();
+            items.Register<RiotWindow, RiotViewModel>();
+            items.Register<MainContent, MainContentViewModel>();
         }
     }
 }

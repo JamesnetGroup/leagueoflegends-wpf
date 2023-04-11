@@ -10,6 +10,7 @@ namespace Leagueoflegends
         {
             _ = new App()
                 .AddWireDataContext<WireDataContext>()
+                .AddInversionModule<ViewModules>()
                 .Run();
         }
     }
