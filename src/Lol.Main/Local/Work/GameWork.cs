@@ -7,12 +7,12 @@ namespace Lol.Main.Local.Work
     {
         #region Variables
 
-        private readonly MainViewModel _vm;
+        private readonly MainContentViewModel _vm;
         #endregion
 
         #region Constructor
 
-        public GameWork(MainViewModel vm)
+        public GameWork(MainContentViewModel vm)
         {
             _vm = vm;
         }

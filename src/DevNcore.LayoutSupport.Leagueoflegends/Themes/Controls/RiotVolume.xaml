@@ -1,0 +1,103 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:ctrls="clr-namespace:DevNcore.LayoutSupport.Leagueoflegends.Controls">
+
+	<LinearGradientBrush x:Key="TGL.BDR.CHK"  StartPoint="0.5 0" EndPoint="0.5 1">
+		<GradientStop Color="#745728" Offset="0" />
+		<GradientStop Color="#C79A3B" Offset="0.5" />
+		<GradientStop Color="#C8A96C" Offset="1" />
+	</LinearGradientBrush>
+
+	<Style TargetType="{x:Type ctrls:Slider01}" x:Key="SLD.SOUND">
+		<Setter Property="Grid.Row" Value="1"/>
+		<Setter Property="MinHeight" Value="26"/>
+		<Setter Property="MaxHeight" Value="26"/>
+		<Setter Property="Height" Value="26"/>
+		<Setter Property="Width" Value="400"/>
+		<Setter Property="Margin" Value="0 0 5 0"/>
+		<Setter Property="HorizontalAlignment" Value="Left"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+		<Setter Property="Value" Value="{Binding RelativeSource={RelativeSource AncestorType=ctrls:RiotVolume}, Path=Value}"/>
+	</Style>
+	
+	<Style TargetType="{x:Type ToggleButton}" x:Key="TGL.MUTE">
+		<Setter Property="Grid.Row" Value="1"/>
+		<Setter Property="Background" Value="#1E2328"/>
+		<Setter Property="BorderBrush" Value="#BC9A53"/>
+		<Setter Property="BorderThickness" Value="2 2 2 2"/>
+		<Setter Property="HorizontalAlignment" Value="Right"/>
+		<Setter Property="Margin" Value="0 0 75 0"/>
+		<Setter Property="Cursor" Value="Hand"/>
+		<Setter Property="IsChecked" Value="{Binding RelativeSource={RelativeSource AncestorType=ctrls:RiotVolume}, Path=IsMute}"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type ToggleButton}">
+					<Border x:Name="border"
+							Width="25"
+							Height="25"
+							CornerRadius="30"
+							Background="{TemplateBinding Background}"
+							BorderBrush="{TemplateBinding BorderBrush}"
+							BorderThickness="{TemplateBinding BorderThickness}">
+						<ctrls:RiotIcon x:Name="path" 
+                                        IconType="VolumeON" 
+                                        Fill="#CDBE91" 
+                                        Width="20" 
+                                        Height="20"/>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsChecked" Value="True">
+							<Setter TargetName="path" Property="Fill" Value="#C89B3C"/>
+							<Setter TargetName="path" Property="IconType" Value="VolumeOFF"/>
+							<Setter TargetName="border" Property="BorderBrush" Value="{StaticResource TGL.BDR.CHK}"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	
+	<Style TargetType="{x:Type ctrls:RiotVolume}">
+		<Setter Property="Margin" Value="0 0 0 15"/>
+		<Setter Property="FontSize" Value="12"/>
+		<Setter Property="IsHeaderVisible" Value="True"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type ctrls:RiotVolume}">
+					<Grid>
+						<Grid.RowDefinitions>
+							<RowDefinition Height="Auto"/>
+							<RowDefinition Height="Auto"/>
+						</Grid.RowDefinitions>
+						<StackPanel x:Name="header"
+                                    Orientation="Horizontal"
+                                    Visibility="Collapsed">
+							<TextBlock Text="{Binding RelativeSource={RelativeSource AncestorType=ctrls:RiotVolume}, Path=Header}"
+									   Foreground="#9B9688"
+									   Margin="0 0 0 0"/>
+							<TextBlock Text="{Binding RelativeSource={RelativeSource AncestorType=ctrls:RiotVolume}, Path=Value, StringFormat={}{0:N0}}"
+									   Foreground="#9B9688"/>
+						</StackPanel>
+						<ctrls:Slider01 x:Name="slider"
+                                        Style="{StaticResource SLD.SOUND}"/>
+						<ToggleButton x:Name="toggle" 
+                                      Style="{StaticResource TGL.MUTE}"/>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMute" Value="true">
+							<Setter TargetName="slider" Property="IsEnabled" Value="False"/>
+						</Trigger>
+						<Trigger Property="IsHeaderVisible" Value="True">
+							<Setter TargetName="header" Property="Visibility" Value="Visible"/>
+						</Trigger>
+						<DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=StackPanel}, Path=IsEnabled}" Value="false">
+							<Setter TargetName="slider" Property="IsEnabled" Value="False"/>
+							<Setter TargetName="toggle" Property="IsEnabled" Value="True"/>
+							<Setter TargetName="toggle" Property="IsChecked" Value="True"/>
+						</DataTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+</ResourceDictionary>

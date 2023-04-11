@@ -1,0 +1,121 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:ctrls="clr-namespace:DevNcore.LayoutSupport.Leagueoflegends.Controls">
+
+	<LinearGradientBrush x:Key="TXB.BG.OVER" StartPoint="0.5, 0" EndPoint="0.5, 1">
+		<GradientStop Color="#06101A" Offset="0.0" />
+		<GradientStop Color="#141D24" Offset="1.0" />
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="TXB.BDR.OVER"  StartPoint="0.5 0" EndPoint="0.5 1">
+		<GradientStop Color="#795B29" Offset="0" />
+		<GradientStop Color="#9E8049" Offset="0.5" />
+		<GradientStop Color="#C7A96E" Offset="1" />
+	</LinearGradientBrush>
+
+	<Style TargetType="{x:Type Button}" x:Key="BTN.CLOSE">
+		<Setter Property="Command" Value="{Binding CloseKeywordCommand}"/>
+		<Setter Property="Cursor" Value="Hand"/>
+		<Setter Property="Visibility" Value="Collapsed"/>
+		<Setter Property="HorizontalAlignment" Value="Right"/>
+		<Setter Property="Margin" Value="0 0 10 0"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Border Background="Transparent">
+						<ctrls:RiotIcon x:Name="icon" 
+                                        IconType="Close" 
+                                        HorizontalAlignment="Left" 
+										Fill="#CDBE91"
+                                        Width="15" 
+                                        Height="15" 
+                                        Margin="10 0 0 0"/>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter TargetName="icon" Property="Fill" Value="#F0E6D2"/>
+						</Trigger>
+						<Trigger Property="IsPressed" Value="True">
+							<Setter TargetName="icon" Property="Fill" Value="#999999"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style TargetType="{x:Type ctrls:RiotTextBox}">
+		<Setter Property="Command" Value="{Binding KeywordCommand}"/>
+		<Setter Property="Text" Value="{Binding Keyword, UpdateSourceTrigger=PropertyChanged}"/>
+		<Setter Property="HorizontalAlignment" Value="Left"/>
+		<Setter Property="VerticalContentAlignment" Value="Center"/>
+		<Setter Property="CaretBrush" Value="#DDDDDD"/>
+		<Setter Property="Foreground" Value="#F1F1F1"/>
+		<Setter Property="FontSize" Value="13"/>
+		<Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+		<Setter Property="MinWidth" Value="300"/>
+		<Setter Property="Height" Value="35"/>
+		<Setter Property="Margin" Value="0 12 0 0"/>
+		<Setter Property="Padding" Value="0 5 0 5"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type ctrls:RiotTextBox}">
+					<Grid>
+						<Border x:Name="border" 
+                                Background="#000407" 
+                                BorderBrush="#785A28" 
+                                BorderThickness="1"/>
+						<ctrls:RiotIcon IconType="Magnify"
+                                        HorizontalAlignment="Left" 
+										Fill="#F0E6D2" 
+                                        Width="15"
+                                        Height="15"
+                                        Margin="10 0 0 0"
+                                        Visibility="{TemplateBinding IconVisibility}"/>
+						<ScrollViewer x:Name="PART_ContentHost"
+                                      Margin="30 0 30 0" 
+                                      VerticalAlignment="Center"/>
+                        <TextBlock x:Name="placeholder"
+                                   Text="{Binding RelativeSource={RelativeSource AncestorType=ctrls:RiotTextBox}, Path=PlaceHolder}"
+                                   Margin="32 0 10 0"
+                                   VerticalAlignment="Center" 
+                                   Visibility="Collapsed"
+								   Foreground="#757575" />
+						<Button x:Name="close" 
+                                Style="{StaticResource BTN.CLOSE}"/>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="Cursor" Value="IBeam"/>
+                        </Trigger>
+                        <Trigger Property="IconVisibility" Value="Collapsed">
+                            <Setter TargetName="PART_ContentHost" Property="Margin" Value="10 0 10 0"/>
+                        </Trigger>
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Text}" Value="">
+							<Setter TargetName="placeholder" Property="Visibility" Value="Visible"/>
+							<Setter TargetName="close" Property="Visibility" Value="Collapsed"/>
+						</DataTrigger>
+						<DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=IsKeyboardFocusWithin}" Value="True">
+							<Setter TargetName="placeholder" Property="Foreground" Value="#66757575"/>
+							<Setter TargetName="border" Property="Background" Value="{StaticResource TXB.BG.OVER}"/>
+							<Setter TargetName="border" Property="BorderBrush" Value="{StaticResource TXB.BDR.OVER}"/>
+							<Setter TargetName="close" Property="Visibility" Value="Visible"/>
+						</DataTrigger>
+                        <!--TODO: [Lucas] 텍스트 지우기 필요-->
+                        <DataTrigger Binding="{Binding ElementName=close, Path=IsPressed}" Value="true">
+                            <!--<Setter Property="Content" Value=""/>-->
+                        </DataTrigger>
+						<MultiDataTrigger>
+							<MultiDataTrigger.Conditions>
+								<Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Text}" Value=""/>
+								<Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=IsKeyboardFocusWithin}" Value="True"/>
+							</MultiDataTrigger.Conditions>
+							<Setter TargetName="close" Property="Visibility" Value="Collapsed"/>
+						</MultiDataTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+</ResourceDictionary>

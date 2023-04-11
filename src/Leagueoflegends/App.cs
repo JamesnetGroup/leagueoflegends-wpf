@@ -1,9 +1,6 @@
-﻿using System;
-using System.Windows;
-using Lol.Main.UI.Views;
-using Lol.Main.Local.ViewModel;
-using DevNcore.LayoutSupport.Leagueoflegends.Controls.Primitives;
+﻿using System.Windows;
 using Jamesnet.Wpf.Controls;
+using Lol.Forms.UI.Views;
 
 namespace Leagueoflegends
 {
@@ -11,7 +8,7 @@ namespace Leagueoflegends
     {
         protected override Window CreateShell()
         {
-            return new MainView();
+            return new RiotWindow();
         }
     }
 }
