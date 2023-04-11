@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Leagueoflegends.Properties;
+using System;
 
 namespace Leagueoflegends
 {
@@ -7,7 +8,9 @@ namespace Leagueoflegends
         [STAThread]
         public static void Main(string[] args)
         {
-            _ = new App().Run();
+            _ = new App()
+                .AddWireDataContext<WireDataContext>()
+                .Run();
         }
     }
 }
