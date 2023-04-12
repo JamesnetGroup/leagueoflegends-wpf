@@ -1,0 +1,38 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:ctrls="clr-namespace:DevNcore.LayoutSupport.Leagueoflegends.Controls">
+
+	<Style TargetType="{x:Type ctrls:RiotIcon}">
+		<Setter Property="HorizontalAlignment" Value="Left"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+		<Setter Property="Width" Value="15"/>
+		<Setter Property="Height" Value="15"/>
+		<Setter Property="GeometryWidth" Value="24"/>
+		<Setter Property="GeometryHeight" Value="24"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type ctrls:RiotIcon}">
+					<Viewbox Width="{TemplateBinding Width}" 
+                             Height="{TemplateBinding Height}">
+						<Canvas Width="{TemplateBinding GeometryWidth}" 
+                                Height="{TemplateBinding GeometryHeight}" 
+                                Margin="{TemplateBinding Padding}">
+							<Path Width="{TemplateBinding GeometryWidth}" 
+                                  Height="{TemplateBinding GeometryHeight}" 
+                                  Data="{TemplateBinding Data}" 
+                                  Fill="{TemplateBinding Fill}"
+                                  Stroke="{TemplateBinding Stroke}"
+                                  StrokeThickness="{TemplateBinding StrokeThickness}" 
+                                  StrokeLineJoin="{TemplateBinding StrokeLineJoin}"
+                                  StrokeDashCap="{TemplateBinding StrokeDashCap}"
+                                  StrokeDashArray="{TemplateBinding StrokeDashArray}"
+                                  StrokeMiterLimit="{TemplateBinding StrokeMiterLimit}"
+                                  Stretch="{TemplateBinding Stretch}"/>
+						</Canvas>
+					</Viewbox>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+</ResourceDictionary>

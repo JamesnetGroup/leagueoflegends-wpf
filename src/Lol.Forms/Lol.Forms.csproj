@@ -6,4 +6,8 @@
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.8" />
+  </ItemGroup>
+
 </Project>

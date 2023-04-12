@@ -1,0 +1,27 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/DevNcore.LayoutSupport.Leagueoflegends;component/Themes/Controls/LucasComboboxItem.xaml"/>
+        <ResourceDictionary Source="/DevNcore.LayoutSupport.Leagueoflegends;component/Themes/Controls/LucasCombobox.xaml"/>
+        <ResourceDictionary Source="/DevNcore.LayoutSupport.Leagueoflegends;component/Themes/Controls/BasicScroll.xaml"/>
+        <ResourceDictionary Source="/DevNcore.LayoutSupport.Leagueoflegends;component/Themes/Controls/RiotIcon.xaml"/>
+        <ResourceDictionary Source="/DevNcore.LayoutSupport.Leagueoflegends;component/Themes/Controls/CircleFace.xaml"/>
+        <ResourceDictionary Source="/DevNcore.LayoutSupport.Leagueoflegends;component/Themes/Controls/RiotCheckBox.xaml"/>
+        <ResourceDictionary Source="/DevNcore.LayoutSupport.Leagueoflegends;component/Themes/Controls/RiotComboBox.xaml"/>
+        <ResourceDictionary Source="/DevNcore.LayoutSupport.Leagueoflegends;component/Themes/Controls/RiotComboBoxItem.xaml"/>
+        <ResourceDictionary Source="/DevNcore.LayoutSupport.Leagueoflegends;component/Themes/Controls/RiotButton.xaml"/>
+        <ResourceDictionary Source="/DevNcore.LayoutSupport.Leagueoflegends;component/Themes/Controls/RiotIconButton.xaml"/>
+        <ResourceDictionary Source="/DevNcore.LayoutSupport.Leagueoflegends;component/Themes/Controls/RiotHotKey.xaml"/>
+        <ResourceDictionary Source="/DevNcore.LayoutSupport.Leagueoflegends;component/Themes/Controls/RiotSlider.xaml"/>
+        <ResourceDictionary Source="/DevNcore.LayoutSupport.Leagueoflegends;component/Themes/Controls/RiotVolume.xaml"/>
+        <ResourceDictionary Source="/DevNcore.LayoutSupport.Leagueoflegends;component/Themes/Controls/BasicTooltip.xaml"/>
+        <ResourceDictionary Source="/DevNcore.LayoutSupport.Leagueoflegends;component/Themes/Controls/RiotTextBox.xaml"/>
+        <ResourceDictionary Source="/DevNcore.LayoutSupport.Leagueoflegends;component/Themes/Controls/RiotTooltip.xaml"/>
+        <ResourceDictionary Source="/DevNcore.LayoutSupport.Leagueoflegends;component/Themes/Controls/RiotGameButton.xaml"/>
+        <ResourceDictionary Source="/DevNcore.LayoutSupport.Leagueoflegends;component/Themes/Controls/SkinTierButton.xaml"/>
+        <ResourceDictionary Source="/DevNcore.LayoutSupport.Leagueoflegends;component/Themes/Controls/RiotToggleButton.xaml"/>
+        <ResourceDictionary Source="/DevNcore.LayoutSupport.Leagueoflegends;component/Themes/Controls/Modal.xaml"/>
+        <ResourceDictionary Source="/DevNcore.LayoutSupport.Leagueoflegends;component/Themes/Controls/MainWindow.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

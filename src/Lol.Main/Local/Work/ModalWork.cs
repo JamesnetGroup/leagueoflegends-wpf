@@ -13,13 +13,13 @@ namespace Lol.Main.Local.Work
     {
         #region Variables 
 
-        private readonly MainViewModel _vm;
+        private readonly MainContentViewModel _vm;
         private readonly Dictionary<Type, IRiotUI> _modals;
         #endregion
 
         #region Constructor
 
-        public ModalWork(MainViewModel vm)
+        public ModalWork(MainContentViewModel vm)
         {
             _vm = vm;
             _modals = new();

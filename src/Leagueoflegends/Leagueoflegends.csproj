@@ -16,9 +16,11 @@
     <PackageReference Include="DevNcore.UI.Design.Converter" Version="1.0.9" />
     <PackageReference Include="DevNcore.UI.Design.Geometry" Version="1.0.9" />
     <PackageReference Include="DevNcore.UI.Foundation" Version="1.0.9" />
+    <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.8" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Lol.Forms\Lol.Forms.csproj" />
     <ProjectReference Include="..\Lol.Foundation\Lol.Foundation.csproj" />
     <ProjectReference Include="..\Lol.Main\Lol.Main.csproj" />
     <ProjectReference Include="..\Lol.Resources\Lol.Resources.csproj" />

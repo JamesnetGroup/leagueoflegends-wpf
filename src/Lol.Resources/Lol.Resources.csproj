@@ -1995,6 +1995,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.8" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Images\Champ\Aatrox_0.jpg" />
     <Resource Include="Images\Champ\Aatrox_1.jpg" />
     <Resource Include="Images\Champ\Aatrox_11.jpg" />
