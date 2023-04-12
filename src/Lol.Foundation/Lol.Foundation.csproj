@@ -27,6 +27,7 @@
     <PackageReference Include="DevNcore.UI.Foundation" Version="1.0.9" />
     <PackageReference Include="DevNcore.WPF" Version="1.0.9" />
     <PackageReference Include="YamlDotNet" Version="11.2.1" />
+    <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.8" />
   </ItemGroup>
 
   <ItemGroup>
