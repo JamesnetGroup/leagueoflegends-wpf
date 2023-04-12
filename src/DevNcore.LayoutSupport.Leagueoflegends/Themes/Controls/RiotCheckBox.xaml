@@ -1,0 +1,142 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:ctrls="clr-namespace:DevNcore.LayoutSupport.Leagueoflegends.Controls">
+
+	<LinearGradientBrush x:Key="CBX.BDR.OVER" EndPoint="0.5,1" StartPoint="0.5,0">
+		<GradientStop Color="#735627" Offset="0"/>
+		<GradientStop Color="#7C6130" Offset="0.5"/>
+		<GradientStop Color="#997D46" Offset="1"/>
+	</LinearGradientBrush>
+
+	<Style TargetType="{x:Type ctrls:TooltipA}" x:Key="TOOLTIP">
+		<Setter Property="Placement" Value="Left"/>
+		<Setter Property="MaxWidth" Value="330"/>
+		<Setter Property="TextWrapping" Value="Wrap"/>
+		<Setter Property="TextAlignment" Value="Center"/>
+		<Setter Property="HorizontalAlignment" Value="Center"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+	</Style>
+	
+	<Style TargetType="{x:Type ctrls:CheckBox01}">
+		<Setter Property="Cursor" Value="Hand"/>
+		<Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+		<Setter Property="VerticalContentAlignment" Value="Center"/>
+		<Setter Property="FontWeight" Value="Bold"/>
+		<Setter Property="Foreground" Value="#A09B8C"/>
+		<Setter Property="FontSize" Value="12"/>
+		<Setter Property="Margin" Value="0 8 0 8"/>
+        <Setter Property="TooltipPadding" Value="22 12 22 12"/>
+        <Setter Property="Tag" Value=""/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type ctrls:CheckBox01}">
+					<Grid>
+						<Grid.ToolTip>
+							<ctrls:TooltipA x:Name="tooltip" 
+                                            Style="{StaticResource TOOLTIP}" 
+                                            ToolTip="{TemplateBinding Tag}"
+                                            Padding="{TemplateBinding TooltipPadding}"
+                                            HorizontalOffset="{TemplateBinding ToolTipHorizonOffset}"
+                                            VerticalOffset="{TemplateBinding ToolTipVerticalOffset}"
+                                            Visibility="Visible"/>
+						</Grid.ToolTip>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="Auto"/>
+							<ColumnDefinition Width="Auto"/>
+						</Grid.ColumnDefinitions>
+						<Border x:Name="border"
+                                Width="12" 
+                                Height="12" 
+                                Background="Transparent"
+                                BorderBrush="#705427"
+                                BorderThickness="1"
+                                Margin="0 0 0 0">
+							<ctrls:RiotIcon x:Name="icon"
+                                            IconType="Mark"
+                                            HorizontalAlignment="Center" 
+                                            VerticalAlignment="Center"
+											Fill="#705427" 
+                                            Width="12" 
+                                            Height="12" 
+                                            Margin="0"
+                                            Visibility="Collapsed"/>
+						</Border>
+                        <Border Grid.Column="1" 
+                                Background="Transparent">
+                            <ContentPresenter VerticalAlignment="Center"
+                                              Margin="8 0 0 0"/>
+                        </Border>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsChecked" Value="True">
+							<Setter TargetName="icon" Property="Visibility" Value="Visible"/>
+						</Trigger>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="Foreground" Value="#F0E6D2"/>
+							<Setter TargetName="border" Property="BorderBrush" Value="{StaticResource CBX.BDR.OVER}"/>
+						</Trigger>
+						<DataTrigger Binding="{Binding ElementName=tooltip, Path=ToolTip}" Value="">
+							<Setter TargetName="tooltip" Property="Visibility" Value="Collapsed"/>
+						</DataTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style TargetType="{x:Type ctrls:CheckBox02}">
+		<Setter Property="Cursor" Value="Hand"/>
+		<Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+		<Setter Property="VerticalContentAlignment" Value="Center"/>
+		<Setter Property="FontWeight" Value="Bold"/>
+		<Setter Property="Foreground" Value="#A09B8C"/>
+		<Setter Property="FontSize" Value="12"/>
+		<Setter Property="Margin" Value="0 8 0 8"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type ctrls:CheckBox02}">
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="Auto"/>
+							<ColumnDefinition Width="Auto"/>
+						</Grid.ColumnDefinitions>
+						<Border x:Name="border"
+                                Width="12" 
+                                Height="12" 
+                                Background="Transparent" 
+                                BorderBrush="#705427" 
+                                BorderThickness="1"
+                                Margin="0 0 8 0">
+							<ctrls:RiotIcon x:Name="icon" 
+                                            IconType="Mark" 
+                                            HorizontalAlignment="Center" 
+                                            VerticalAlignment="Center"
+											Fill="#705427"
+                                            Width="12" 
+                                            Height="12" 
+                                            Margin="0" 
+                                            Visibility="Collapsed"/>
+						</Border>
+						<ContentPresenter Grid.Column="1" 
+                                          VerticalAlignment="Center"/>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsChecked" Value="True">
+							<Setter TargetName="icon" Property="Visibility" Value="Visible"/>
+						</Trigger>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="Foreground" Value="#F0E6D2"/>
+							<Setter TargetName="border" Property="BorderBrush" Value="{StaticResource CBX.BDR.OVER}"/>
+						</Trigger>
+						<Trigger Property="IsEnabled" Value="False">
+							<Setter TargetName="border" Property="BorderBrush" Value="#3A2B14"/>
+							<Setter TargetName="icon" Property="Fill" Value="#3A2B14"/>
+							<Setter Property="Foreground" Value="#494741"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+</ResourceDictionary>

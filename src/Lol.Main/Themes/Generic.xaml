@@ -15,8 +15,9 @@
 		<ResourceDictionary Source="/Lol.Main;component/Themes/Units/NoticeButton.xaml"/>
 		<ResourceDictionary Source="/Lol.Main;component/Themes/Units/PlayButton.xaml"/>
 		<ResourceDictionary Source="/Lol.Main;component/Themes/Units/Currency.xaml"/>
-		<ResourceDictionary Source="/Lol.Main;component/Themes/Units/Profile.xaml"/>
-		<ResourceDictionary Source="/Lol.Main;component/Themes/Views/MainView.xaml"/>
+        <ResourceDictionary Source="/Lol.Main;component/Themes/Units/Profile.xaml"/>
+        <ResourceDictionary Source="/Lol.Main;component/Themes/Views/MainContent.xaml"/>
+        <ResourceDictionary Source="/Lol.Main;component/Themes/Views/MainView.xaml"/>
 	</ResourceDictionary.MergedDictionaries>
 
     

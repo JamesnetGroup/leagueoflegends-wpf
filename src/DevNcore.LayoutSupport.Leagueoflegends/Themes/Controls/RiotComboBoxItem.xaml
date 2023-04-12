@@ -1,0 +1,49 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:ctrls="clr-namespace:DevNcore.LayoutSupport.Leagueoflegends.Controls">
+
+	<Style TargetType="{x:Type ctrls:RiotComboBoxItem}">
+		<Setter Property="Background" Value="#FF000000"/>
+		<Setter Property="Foreground" Value="#CDBE91"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type ctrls:RiotComboBoxItem}">
+					<Border Background="#FF000000"
+                            BorderBrush="#1F2123"
+                            BorderThickness="0 0 0 1">
+						<Grid>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="Auto"/>
+								<ColumnDefinition Width="*"/>
+								<ColumnDefinition Width="Auto"/>
+							</Grid.ColumnDefinitions>
+							<TextBlock Grid.Column="0" 
+									   Margin="10 7 0 7" 
+									   Text="{Binding RelativeSource={RelativeSource AncestorType=ctrls:RiotComboBoxItem}, Path=Content}" 
+									   FontWeight="Bold" 
+									   FontSize="12"/>
+							<ctrls:RiotIcon x:Name="check" 
+                                            Grid.Column="2" 
+                                            IconType="Check" 
+                                            Fill="#CDBE91"
+											Width="15" 
+                                            Height="15"
+                                            Margin="0 0 12 0" 
+                                            Visibility="Collapsed"/>
+						</Grid>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="Background" Value="#1E2328"/>
+							<Setter Property="Cursor" Value="Hand"/>
+						</Trigger>
+						<Trigger Property="IsSelected" Value="True">
+							<Setter TargetName="check" Property="Visibility" Value="Visible"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+</ResourceDictionary>

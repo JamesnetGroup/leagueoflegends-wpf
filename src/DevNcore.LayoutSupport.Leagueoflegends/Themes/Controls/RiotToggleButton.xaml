@@ -1,0 +1,119 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:ctrls="clr-namespace:DevNcore.LayoutSupport.Leagueoflegends.Controls">
+
+	<LinearGradientBrush x:Key="TGL.BDR" StartPoint="0.5,0" EndPoint="0.5,1">
+		<GradientStop Color="#9F8449" Offset="0"/>
+		<GradientStop Color="#7D612B" Offset="0.5"/>
+		<GradientStop Color="#5D4828" Offset="1"/>
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="TGL.OFF.BG" StartPoint="0,0.5" EndPoint="1,0.5">
+		<GradientStop Color="#22404B" Offset="0"/>
+		<GradientStop Color="#20313A" Offset="0.5"/>
+		<GradientStop Color="#1F2D34" Offset="1"/>
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="TGL.ON.BG" StartPoint="0,0.5" EndPoint="1,0.5">
+		<GradientStop Color="#2C5138" Offset="0"/>
+		<GradientStop Color="#327E3F" Offset="0.3"/>
+		<GradientStop Color="#349C44" Offset="0.5"/>
+		<GradientStop Color="#349C44" Offset="1"/>
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="THUMB.BDR" StartPoint="0.5,0" EndPoint="0.5,1">
+		<GradientStop Color="#B79858" Offset="0"/>
+		<GradientStop Color="#93712F" Offset="0.5"/>
+		<GradientStop Color="#664D27" Offset="1"/>
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="THUMB.BDR.OVER" StartPoint="0.5,0" EndPoint="0.5,1">
+		<GradientStop Color="#EDE2CD" Offset="0"/>
+		<GradientStop Color="#D2B67C" Offset="0.5"/>
+		<GradientStop Color="#C3973D" Offset="1"/>
+	</LinearGradientBrush>
+
+	<Style TargetType="{x:Type Border}" x:Key="BDR.OFF">
+		<Setter Property="Width" Value="38"/>
+		<Setter Property="Height" Value="20"/>
+		<Setter Property="CornerRadius" Value="8"/>
+		<Setter Property="Background" Value="{StaticResource TGL.OFF.BG}"/>
+		<Setter Property="BorderBrush" Value="{StaticResource TGL.BDR}"/>
+		<Setter Property="BorderThickness" Value="2 2 2 2"/>
+		<Setter Property="UseLayoutRounding" Value="True"/>
+	</Style>
+
+	<Style TargetType="{x:Type Border}" x:Key="BDR.THUMB">
+		<Setter Property="Width" Value="26"/>
+		<Setter Property="Height" Value="26"/>
+		<Setter Property="Background" Value="#1E2328"/>
+		<Setter Property="BorderBrush" Value="{StaticResource THUMB.BDR}"/>
+		<Setter Property="BorderThickness" Value="2 2 2 2"/>
+		<Setter Property="CornerRadius" Value="20"/>
+		<Setter Property="HorizontalAlignment" Value="Left"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+		<Setter Property="Margin" Value="-8 0 0 0"/>
+	</Style>
+	
+	<Style TargetType="{x:Type ctrls:RiotToggleButton}">
+		<Setter Property="Cursor" Value="Hand"/>
+		<Setter Property="Margin" Value="14 0 0 0"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+		<Setter Property="HorizontalAlignment" Value="Center"/>
+		<Setter Property="Template">
+			<Setter.Value>
+                <ControlTemplate TargetType="{x:Type ctrls:RiotToggleButton}">
+					<ControlTemplate.Resources>
+						<Storyboard x:Key="OnChecking">
+							<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" 
+														   Storyboard.TargetName="Thumb"
+                                                           Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.X)">
+								<SplineDoubleKeyFrame KeyTime="00:00:00.2" Value="30"/>
+							</DoubleAnimationUsingKeyFrames>
+						</Storyboard>
+						<Storyboard x:Key="OnUnchecking">
+							<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" 
+														   Storyboard.TargetName="Thumb"
+                                                           Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.X)">
+								<SplineDoubleKeyFrame KeyTime="00:00:00.2" Value="0"/>
+							</DoubleAnimationUsingKeyFrames>
+						</Storyboard>
+					</ControlTemplate.Resources>
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="Auto"/>
+							<ColumnDefinition Width="Auto"/>
+						</Grid.ColumnDefinitions>
+						<Border x:Name="RangeBorder" Style="{StaticResource BDR.OFF}">
+							<ctrls:RiotIcon Width="13" Height="13" Fill="#20432A" IconType="Check" Margin="3 0 0 0"/>
+						</Border>
+						<Border x:Name="Thumb" Style="{StaticResource BDR.THUMB}">
+							<ctrls:RiotIcon x:Name="icon" Fill="#CDBE91" Width="15" Height="15" HorizontalAlignment="Center" IconType="AccountSupervisor"/>
+							<Border.RenderTransform>
+								<TransformGroup>
+									<TranslateTransform X="0" Y="0"/>
+								</TransformGroup>
+							</Border.RenderTransform>
+						</Border>
+						<ContentPresenter Grid.Column="1" Margin="4 0 0 0"/>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter TargetName="Thumb" Property="BorderBrush" Value="{StaticResource THUMB.BDR.OVER}"/>
+							<Setter TargetName="icon" Property="Fill" Value="#F0E6D2"/>
+						</Trigger>
+						<Trigger Property="IsChecked" Value="True">
+							<Setter TargetName="RangeBorder" Property="Background" Value="{StaticResource TGL.ON.BG}"/>
+							<Trigger.ExitActions>
+								<BeginStoryboard Storyboard="{StaticResource OnUnchecking}"/>
+							</Trigger.ExitActions>
+							<Trigger.EnterActions>
+								<BeginStoryboard Storyboard="{StaticResource OnChecking}"/>
+							</Trigger.EnterActions>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+</ResourceDictionary>

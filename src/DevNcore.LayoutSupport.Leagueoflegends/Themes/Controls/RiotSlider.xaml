@@ -1,0 +1,249 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:ctrls="clr-namespace:DevNcore.LayoutSupport.Leagueoflegends.Controls"
+					xmlns:cnvts="clr-namespace:DevNcore.LayoutSupport.Leagueoflegends.Converter">
+
+	<LinearGradientBrush x:Key="THB.FILL" StartPoint="0.5, 0" EndPoint="0.5, 1">
+		<GradientStop Color="#B79248" Offset="0"/>
+		<GradientStop Color="#997530" Offset="0.5"/>
+		<GradientStop Color="#74592B" Offset="1"/>
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="THB.FILL.OVER" StartPoint="0.5, 0" EndPoint="0.5, 1">
+		<GradientStop Color="#EDE1C8" Offset="0"/>
+		<GradientStop Color="#DCC088" Offset="0.5"/>
+		<GradientStop Color="#CBA14A" Offset="1"/>
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="THB.FILL.DRAG" StartPoint="0.5, 0" EndPoint="0.5, 1">
+		<GradientStop Color="#473814" Offset="0"/>
+		<GradientStop Color="#57421B" Offset="0.5"/>
+		<GradientStop Color="#684E23" Offset="1"/>
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="SLD.FILL" StartPoint="0, 0.5" EndPoint="1, 0.5">
+		<GradientStop Color="#463714" Offset="0"/>
+		<GradientStop Color="#58471D" Offset="0.5"/>
+		<GradientStop Color="#695625" Offset="1"/>
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="SLD.FILL.OVER" StartPoint="0, 0.5" EndPoint="1, 0.5">
+		<GradientStop Color="#795B28" Offset="0"/>
+		<GradientStop Color="#C1963B" Offset="0.5"/>
+		<GradientStop Color="#C8AA6D" Offset="1"/>
+	</LinearGradientBrush>
+
+	<LinearGradientBrush x:Key="SLD.FILL.DRAG" StartPoint="0, 0.5" EndPoint="1, 0.5">
+		<GradientStop Color="#685524" Offset="0"/>
+		<GradientStop Color="#55441B" Offset="0.5"/>
+		<GradientStop Color="#463714" Offset="1"/>
+	</LinearGradientBrush>
+
+	<ControlTemplate TargetType="{x:Type ToolTip}" x:Key="TOOLTIP">
+		<Border Background="#010A13" BorderThickness="2">
+			<Border.BorderBrush>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="#614a1f" Offset="0"/>
+					<GradientStop Color="#463714" Offset="1"/>
+				</LinearGradientBrush>
+			</Border.BorderBrush>
+			<ContentPresenter Margin="5" 
+                              VerticalAlignment="Center" 
+                              HorizontalAlignment="Center"/>
+		</Border>
+	</ControlTemplate>
+
+	<Style TargetType="{x:Type Thumb}" x:Key="IN.THUMB">
+		<Setter Property="OverridesDefaultStyle" Value="True"/>
+		<Setter Property="VerticalAlignment" Value="Center"/>
+		<Setter Property="Focusable" Value="False"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Thumb}">
+					<Grid HorizontalAlignment="Center"
+						  VerticalAlignment="Center"
+						  UseLayoutRounding="True"
+						  Background="Transparent">
+						<ctrls:RiotIcon x:Name="path" 
+										IconType="Thumb" 
+										Fill="{StaticResource THB.FILL}"
+										Width="24"
+										Height="24"
+										Margin="0 0 0 0"/>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="true">
+							<Setter TargetName="path" Property="Fill" Value="{StaticResource THB.FILL.OVER}" />
+						</Trigger>
+						<Trigger Property="IsDragging" Value="true">
+							<Setter TargetName="path" Property="Fill" Value="{StaticResource THB.FILL.DRAG}" />
+						</Trigger>
+						<DataTrigger Binding="{Binding RelativeSource={RelativeSource AncestorType=Slider}, Path=IsEnabled}" Value="false">
+							<Setter Property="IsEnabled" Value="False"/>
+						</DataTrigger>
+						<Trigger Property="IsEnabled" Value="false">
+							<Setter TargetName="path" Property="Fill" Value="#5C5B67"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style TargetType="{x:Type ctrls:Slider01}">
+		<Setter Property="IsMoveToPointEnabled" Value="True"/>
+		<Setter Property="AutoToolTipPlacement" Value="None"/>
+		<Setter Property="IsSnapToTickEnabled" Value="True"/>
+		<Setter Property="TickFrequency" Value="0.01"/>
+		<Setter Property="SmallChange" Value="0.01"/>
+		<Setter Property="LargeChange" Value="0.01"/>
+		<Setter Property="Minimum" Value="0"/>
+		<Setter Property="Maximum" Value="100"/>
+		<Setter Property="Focusable" Value="False"/>
+		<Setter Property="Stylus.IsPressAndHoldEnabled" Value="false"/>
+		<Setter Property="SelectionStart" Value="{Binding Path=Minimum, RelativeSource={RelativeSource Self}}"/>
+		<Setter Property="SelectionEnd" Value="{Binding Path=Value, RelativeSource={RelativeSource Self}}"/>
+		<Setter Property="ToolTip" Value="{Binding RelativeSource={RelativeSource Self}, Path=Value, Converter={cnvts:PercentageConverter}}"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type ctrls:Slider01}">
+					<Border x:Name="border" 
+                            Background="Transparent" 
+                            SnapsToDevicePixels="True">
+						<Grid Height="{Binding RelativeSource={RelativeSource AncestorType=ctrls:Slider01}, Path=MinHeight}">
+							<DockPanel LastChildFill="True">
+								<Border x:Name="PART_SelectionRange" 
+                                        Height="2.5" 
+                                        ClipToBounds="True" 
+                                        Visibility="Visible">
+									<Rectangle x:Name="sliderBar" 
+                                               Margin="4 0 -4 0" 
+                                               RadiusX="1" 
+                                               RadiusY="1" 
+                                               Fill="{StaticResource SLD.FILL}"/>
+								</Border>
+								<Border Height="2.5" 
+                                        ClipToBounds="True"
+                                        Visibility="Visible">
+									<Rectangle x:Name="PART_NegativeSelection" 
+                                               Margin="8 0 4 0" 
+                                               RadiusX="1" 
+                                               RadiusY="1" 
+                                               Fill="#1E2328"/>
+								</Border>
+							</DockPanel>
+							<Track x:Name="PART_Track">
+								<Track.Thumb>
+									<Thumb x:Name="thumb" Style="{StaticResource IN.THUMB}">
+										<Thumb.ToolTip>
+											<ToolTip x:Name="thumbTooltip" 
+													 Template="{StaticResource TOOLTIP}" 
+													 Content="{TemplateBinding ToolTip}"
+													 Placement="Center" 
+													 VerticalOffset="-30" 
+													 FontSize="12" 
+													 FontWeight="Bold" 
+													 Foreground="#A09B8C" 
+													 Padding="8 2 8 2" 
+													 MinWidth="30"/>
+										</Thumb.ToolTip>
+									</Thumb>
+								</Track.Thumb>
+							</Track>
+						</Grid>
+					</Border>
+					<ControlTemplate.Triggers>
+						<DataTrigger Binding="{Binding ElementName=thumb, Path=IsMouseOver}" Value="true">
+							<Setter TargetName="sliderBar" Property="Fill" Value="{StaticResource SLD.FILL.OVER}"/>
+						</DataTrigger>
+						<DataTrigger Binding="{Binding ElementName=thumb, Path=IsDragging}" Value="true">
+							<Setter TargetName="sliderBar" Property="Fill" Value="{StaticResource SLD.FILL.DRAG}"/>
+						</DataTrigger>
+						<Trigger Property="IsEnabled" Value="false">
+							<Setter TargetName="PART_SelectionRange" Property="Visibility" Value="Collapsed"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style TargetType="{x:Type ctrls:Slider02}">
+		<Setter Property="IsMoveToPointEnabled" Value="True"/>
+		<Setter Property="AutoToolTipPlacement" Value="None"/>
+		<Setter Property="IsSnapToTickEnabled" Value="True"/>
+		<Setter Property="TickFrequency" Value="0.01"/>
+		<Setter Property="SmallChange" Value="0.01"/>
+		<Setter Property="LargeChange" Value="0.01"/>
+		<Setter Property="Minimum" Value="0"/>
+		<Setter Property="Maximum" Value="100"/>
+		<Setter Property="SelectionStart" Value="{Binding Path=Minimum, RelativeSource={RelativeSource Self}}"/>
+		<Setter Property="SelectionEnd" Value="{Binding Path=Value, RelativeSource={RelativeSource Self}}"/>
+		<Setter Property="Stylus.IsPressAndHoldEnabled" Value="false"/>
+		<Setter Property="Focusable" Value="False"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type ctrls:Slider02}">
+					<Border x:Name="border" 
+                            Background="Transparent" 
+                            SnapsToDevicePixels="True">
+						<Grid Height="{Binding RelativeSource={RelativeSource AncestorType=ctrls:Slider02}, Path=MinHeight}">
+							<DockPanel LastChildFill="True">
+								<Border x:Name="PART_SelectionRange" 
+                                        Height="2.5" 
+                                        ClipToBounds="True" 
+                                        Visibility="Visible">
+									<Rectangle x:Name="sliderBar" 
+                                               Margin="4 0 -4 0"
+                                               RadiusX="1" 
+                                               RadiusY="1" 
+                                               Fill="{StaticResource SLD.FILL}"/>
+								</Border>
+								<Border Height="2.5"
+                                        ClipToBounds="True"
+                                        Visibility="Visible">
+									<Rectangle x:Name="PART_NegativeSelection"
+                                               Margin="8 0 4 0"
+                                               RadiusX="1"
+                                               RadiusY="1"
+                                               Fill="#1E2328"/>
+								</Border>
+							</DockPanel>
+							<Track x:Name="PART_Track">
+								<Track.Thumb>
+									<Thumb x:Name="thumb" 
+                                           Style="{StaticResource IN.THUMB}">
+										<Thumb.ToolTip>
+											<ToolTip x:Name="thumbTooltip" 
+													 Template="{StaticResource TOOLTIP}" 
+													 Content="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Value}" 
+													 ContentStringFormat="N0"
+													 Placement="Center" 
+													 VerticalOffset="-30" 
+													 FontSize="12" 
+													 FontWeight="Bold" 
+													 Foreground="#A09B8C" 
+													 Padding="8 2 8 2" 
+													 MinWidth="30"/>
+										</Thumb.ToolTip>
+									</Thumb>
+								</Track.Thumb>
+							</Track>
+						</Grid>
+					</Border>
+					<ControlTemplate.Triggers>
+						<DataTrigger Binding="{Binding ElementName=thumb, Path=IsMouseOver}" Value="true">
+							<Setter TargetName="sliderBar" Property="Fill" Value="{StaticResource SLD.FILL.OVER}"/>
+						</DataTrigger>
+						<DataTrigger Binding="{Binding ElementName=thumb, Path=IsDragging}" Value="true">
+							<Setter TargetName="sliderBar" Property="Fill" Value="{StaticResource SLD.FILL.DRAG}"/>
+						</DataTrigger>
+						<Trigger Property="IsEnabled" Value="false">
+							<Setter TargetName="PART_SelectionRange" Property="Visibility" Value="Collapsed"/>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+</ResourceDictionary>

@@ -1,0 +1,104 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:ctrls="clr-namespace:DevNcore.LayoutSupport.Leagueoflegends.Controls">
+    <LinearGradientBrush x:Key="LGB.GEO.OVER" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FF1D3B4A" Offset="0"/>
+        <GradientStop Color="#FF082734" Offset="1"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="LGB.GEO.BDR" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#CC3FE7FF" Offset="0"/>
+        <GradientStop Color="#CC006D7D" Offset="0.5"/>
+        <GradientStop Color="#CC0493A7" Offset="1"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="LGB.GEO.BDR.OVER" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FFAFF5FF" Offset="0"/>
+        <GradientStop Color="#FF46E6FF" Offset="0.5"/>
+        <GradientStop Color="#FF00ADD4" Offset="1"/>
+    </LinearGradientBrush>
+
+    <Geometry x:Key="PATH.LOL.PLAY">M26.209747,0.50054082 L29.419775,3.7105691 26.211681,6.918663 0.56522596,6.9227533 0.57565898,6.9094772 C1.2333483,6.0300493 1.6228278,4.938385 1.6228276,3.7557535 1.6228278,2.573122 1.2333483,1.4814577 0.57565898,0.60203022 L0.5,0.50575346 z</Geometry>
+
+    <Style TargetType="{x:Type ctrls:RiotGameButton}">
+        <Setter Property="Grid.Column" Value="0"/>
+        <Setter Property="Foreground" Value="#AAFCF1DC"/>
+        <Setter Property="Margin" Value="0 0 0 0"/>
+        <Setter Property="Padding" Value="6 6 6 6"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ctrls:RiotGameButton}">
+                    <ControlTemplate.Resources>
+                        <Style TargetType="{x:Type Border}" x:Key="IN.BORDER.01">
+                            <Setter Property="Grid.ColumnSpan" Value="2"/>
+                            <Setter Property="Background" Value="#00070E"/>
+                            <Setter Property="BorderBrush" Value="#34291E"/>
+                            <Setter Property="BorderThickness" Value="1 1 1 1"/>
+                            <Setter Property="Margin" Value="-4 0 0 0"/>
+                            <Setter Property="CornerRadius" Value="20 0 0 20"/>
+                        </Style>
+                        <Style TargetType="{x:Type Border}" x:Key="IN.BORDER.02">
+                            <Setter Property="Grid.Column" Value="1"/>
+                            <Setter Property="Background" Value="#1E2328"/>
+                            <Setter Property="BorderBrush" Value="#09343D"/>
+                            <Setter Property="BorderThickness" Value="2 2 2 2"/>
+                            <Setter Property="Margin" Value="10 4 4 4"/>
+                        </Style>
+                        <Style TargetType="{x:Type Image}" x:Key="IN.IMG">
+                            <Setter Property="Source" Value="/Lol.Resources;component/Images/lol-logo-03.png"/>
+                            <Setter Property="RenderOptions.BitmapScalingMode" Value="Fant"/>
+                            <Setter Property="VerticalAlignment" Value="Top"/>
+                            <Setter Property="Height" Value="38"/>
+                        </Style>
+                        <Style TargetType="{x:Type TextBlock}" x:Key="IN.CONTENT">
+                            <Setter Property="Grid.Column" Value="1"/>
+                            <Setter Property="HorizontalAlignment" Value="Center"/>
+                            <Setter Property="VerticalAlignment" Value="Center"/>
+                            <Setter Property="Margin" Value="0 2 4 0"/>
+                            <Setter Property="Padding" Value="6 6 6 6"/>
+                            <Setter Property="FontSize" Value="14"/>
+                            <Setter Property="Foreground" Value="#95b6b6"/>
+                            <Setter Property="FontWeight" Value="Bold"/>
+                            <Setter Property="FontFamily" Value="Friz Quadrata Std"/>
+                        </Style>
+                        <Style TargetType="{x:Type Path}" x:Key="IN.ICON">
+                            <Setter Property="Grid.Column" Value="1"/>
+                            <Setter Property="Width" Value="120"/>
+                            <Setter Property="Height" Value="32"/>
+                            <Setter Property="Data" Value="{StaticResource PATH.LOL.PLAY}"/>
+                            <Setter Property="Fill" Value="#1E2328"/>
+                            <Setter Property="Stretch" Value="Fill"/>
+                            <Setter Property="Stroke" Value="{StaticResource LGB.GEO.BDR}"/>
+                            <Setter Property="StrokeThickness" Value="2"/>
+                            <Setter Property="Margin" Value="0 4 4 4"/>
+                            <Setter Property="Effect">
+                                <Setter.Value>
+                                    <DropShadowEffect BlurRadius="5" Opacity="1" ShadowDepth="2"/>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </ControlTemplate.Resources>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Border Style="{StaticResource IN.BORDER.01}"/>
+                        <ctrls:RiotIconButton IconType="Close" VerticalAlignment="Center" Command="{TemplateBinding Command}"/>
+                        <Border Style="{StaticResource IN.BORDER.02}"/>
+                        <Path x:Name="path" Style="{StaticResource IN.ICON}"/>
+                        <TextBlock Style="{StaticResource IN.CONTENT}" Text="{TemplateBinding Content}"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Cursor" Value="Hand"/>
+                            <Setter TargetName="path" Property="Fill" Value="{StaticResource LGB.GEO.OVER}"/>
+                            <Setter TargetName="path" Property="Stroke" Value="{StaticResource LGB.GEO.BDR.OVER}"/>
+                            <Setter Property="Foreground" Value="#FFFCF1DC"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
