@@ -24,7 +24,7 @@
 
 	<Style TargetType="{x:Type units:PlayButton}">
         <Setter Property="Command" Value="{Binding GameCommand}"/>
-        <Setter Property="CommandParameter" Value="{x:Type main:MainView}"/>
+        <Setter Property="CommandParameter" Value="{x:Type main:MainContent}"/>
         <Setter Property="Grid.Column" Value="0"/>
 		<Setter Property="VerticalAlignment" Value="Center"/>
 		<Setter Property="Foreground" Value="#AAFCF1DC"/>

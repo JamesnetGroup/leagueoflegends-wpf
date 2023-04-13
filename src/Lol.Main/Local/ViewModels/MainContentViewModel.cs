@@ -98,7 +98,7 @@ namespace Lol.Main.Local.ViewModels
         [RelayCommand]
         private void Game(Type value)
         {
-            _modalWork.SwitchModal(value);
+            _gameWork.OpenGameRoom(value);
         }
 
         internal void MenuSelected(MainMenuModel menu, List<SubMenuModel> subMenus)
