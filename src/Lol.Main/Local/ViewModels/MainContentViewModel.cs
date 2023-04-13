@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using System.Windows.Input;
 using System.Windows.Controls;
 using System.Collections.Generic;
 using Lol.Data.Main;
