@@ -1,5 +1,5 @@
 ﻿using System;
-using Lol.Main.Local.ViewModel;
+using Lol.Main.Local.ViewModels;
 
 namespace Lol.Main.Local.Work
 {
