@@ -7,12 +7,7 @@ namespace Lol.Main.Local.Work
 {
     public class FriendsSortWork : ObservableObject
     {
-        #region SortTypes
-
         public List<OptionModel> SortTypes { get; set; }
-        #endregion
-
-        #region CurrentSortType
 
         private OptionModel _currentSortType;
         public OptionModel CurrentSortType
@@ -20,18 +15,12 @@ namespace Lol.Main.Local.Work
             get { return _currentSortType; }
             set { _currentSortType = value; OnPropertyChanged(); }
         }
-        #endregion
-
-        #region Constructor
 
         public FriendsSortWork()
         {
             SortTypes = GetSortTypes();
             CurrentSortType = SortTypes.First();
         }
-        #endregion
-
-        #region GetSortTypes
 
         private List<OptionModel> GetSortTypes()
         {
@@ -42,6 +31,5 @@ namespace Lol.Main.Local.Work
             };
             return source;
         }
-        #endregion
     }
 }

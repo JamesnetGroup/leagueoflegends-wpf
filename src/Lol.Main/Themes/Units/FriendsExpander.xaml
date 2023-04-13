@@ -49,8 +49,8 @@
                                            Margin="5 0 0 0">
 									<TextBlock.Text>
 										<MultiBinding StringFormat="{}({0}/{1})">
-											<Binding RelativeSource="{RelativeSource AncestorType=views:MainView}" Path="DataContext.Friends.GeneralFriendsCount"/>
-											<Binding RelativeSource="{RelativeSource AncestorType=views:MainView}" Path="DataContext.Friends.TotalFriendsCount" />
+											<Binding RelativeSource="{RelativeSource AncestorType=views:MainContent}" Path="DataContext.Friends.GeneralFriendsCount"/>
+                                            <Binding RelativeSource="{RelativeSource AncestorType=views:MainContent}" Path="DataContext.Friends.TotalFriendsCount" />
 										</MultiBinding>
 									</TextBlock.Text>
 								</TextBlock>
@@ -60,7 +60,7 @@
                                            Margin="5 0 0 0">
 									<TextBlock.Text>
 										<MultiBinding StringFormat="{}({0})">
-											<Binding RelativeSource="{RelativeSource AncestorType=views:MainView}" Path="DataContext.Friends.OfflineFriendsCount"/>
+                                            <Binding RelativeSource="{RelativeSource AncestorType=views:MainContent}" Path="DataContext.Friends.OfflineFriendsCount"/>
 										</MultiBinding>
 									</TextBlock.Text>
 								</TextBlock>
