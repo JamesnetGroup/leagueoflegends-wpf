@@ -1,7 +1,7 @@
 ﻿using Jamesnet.Wpf.Global.Location;
 using Lol.Forms.Local.ViewModels;
 using Lol.Forms.UI.Views;
-using Lol.Main.Local.ViewModel;
+using Lol.Main.Local.ViewModels;
 using Lol.Main.UI.Views;
 
 namespace Leagueoflegends.Properties

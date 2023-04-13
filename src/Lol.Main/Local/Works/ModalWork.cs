@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Lol.Friends.UI.Views;
 using Lol.Settings.UI.Views;
-using Lol.Main.Local.ViewModel;
+using Lol.Main.Local.ViewModels;
 using Lol.Friends.Local.ViewModel;
 using Lol.Settings.Local.ViewModel;
 using DevNcore.LayoutSupport.Leagueoflegends.Controls.Primitives;

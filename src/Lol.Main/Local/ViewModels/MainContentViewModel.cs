@@ -27,111 +27,41 @@ using Lol.Database.Entites.Schema;
 using Lol.Database.Collection;
 using Lol.Loot.UI.Views;
 using Lol.Loot.Local.ViewModels;
-using DevNcore.UI.Foundation.Mvvm;
 using DevNcore.LayoutSupport.Leagueoflegends.Controls.Primitives;
 using Jamesnet.Wpf.Mvvm;
 using Jamesnet.Wpf.Controls;
 using Lol.Main.UI.Views;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 
-namespace Lol.Main.Local.ViewModel
+namespace Lol.Main.Local.ViewModels
 {
-    public class MainContentViewModel : ObservableBase, IViewLoadable
-    { 
-        #region Variables
-
+    public partial class MainContentViewModel : ObservableBase, IViewLoadable
+    {
         private readonly WindowWork _winWork;
         private readonly ModalWork _modalWork;
         private readonly GameWork _gameWork;
-
-        private object _modalContent;
-        private IRiotUI _currentUI;
-        private List<SubMenuModel> _subMenus;
-        private SubMenuModel _currentSubMenu;
         private MainMenuModel _mainMenu;
-        private FriendsCollection _friends;
-        private int _currentSeq;
-        private int _parentSeq;
-
         private Image BackgroundImage;
 
+        [ObservableProperty]
+        private object _modalContent;
+        [ObservableProperty]
+        private IRiotUI _currentUI;
+        [ObservableProperty]
+        private List<SubMenuModel> _subMenus;
+        [ObservableProperty]
+        private SubMenuModel _currentSubMenu;
+        [ObservableProperty]
+        private FriendsCollection _friends;
+        [ObservableProperty]
+        private int _currentSeq;
+        [ObservableProperty]
+        private int _parentSeq;
+
         private Dictionary<int, IRiotUI> UIs { get; set; }
-        #endregion
-
-        #region ViewModels
-
         public MenuWork MainMenu { get; }
         public FriendsSortWork Options { get; }
-        #endregion
-
-        #region ICommands
-
-        public ICommand ModalCommand { get; }
-        public ICommand CloseCommand { get; }
-        public ICommand MinimizeCommand { get; }
-        public ICommand GameCommand { get; }
-        #endregion
-
-        #region ModalContent
-
-        public object ModalContent
-        {
-            get => _modalContent;
-            set { _modalContent = value; OnPropertyChanged(); }
-        }
-        #endregion
-
-        #region CurrentUI
-
-        public IRiotUI CurrentUI
-        {
-            get => _currentUI;
-            set { _currentUI = value; OnPropertyChanged(); }
-        }
-        #endregion
-
-        #region CurrentSeq
-
-        public int CurrentSeq
-        {
-            get => _currentSeq;
-            set { _currentSeq = value; OnPropertyChanged(); }
-        }
-        #endregion
-
-        #region ParentSeq
-
-        public int ParentSeq
-        {
-            get => _parentSeq;
-            set { _parentSeq = value; OnPropertyChanged(); }
-        }
-        #endregion
-
-        #region SubMenus
-
-        public SubMenuModel CurrentSubMenu
-        {
-            get => _currentSubMenu;
-            set { _currentSubMenu = value; OnPropertyChanged(); SubMenuChanged(value); }
-        }
-
-        public List<SubMenuModel> SubMenus
-        {
-            get => _subMenus;
-            set { _subMenus = value; OnPropertyChanged(); }
-        }
-        #endregion
-
-        #region Friends
-
-        public FriendsCollection Friends
-        {
-            get => _friends;
-            set { _friends = value; OnPropertyChanged(); }
-        }
-        #endregion
-
-        #region Constructor
 
         public MainContentViewModel()
         {
@@ -141,22 +71,36 @@ namespace Lol.Main.Local.ViewModel
 
             UIs = new();
 
-            CloseCommand = new RelayCommand<object>(_winWork.DoClosing);
-            MinimizeCommand = new RelayCommand<object>(_winWork.DoMinizing);
-            ModalCommand = new RelayCommand<Type>(_modalWork.SwitchModal);
-            GameCommand = new RelayCommand<Type>(_gameWork.OpenGameRoom);
-
             MainMenu = new(MenuSelected);
             Options = new();
 
             List<IFriendsList> friends = new FriendsApi().GetMyFriends(0);
             Friends = new(friends);
         }
-        #endregion
 
-        // Private
+        [RelayCommand]
+        private void Close(object value)
+        {
+            _winWork.DoClosing(value);
+        }
 
-        #region MenuSelected
+        [RelayCommand]
+        private void Minimize(object value)
+        {
+            _winWork.DoMinizing(value);
+        }
+
+        [RelayCommand]
+        private void Modal(Type value)
+        {
+            _modalWork.SwitchModal(value);
+        }
+
+        [RelayCommand]
+        private void Game(Type value)
+        {
+            _modalWork.SwitchModal(value);
+        }
 
         internal void MenuSelected(MainMenuModel menu, List<SubMenuModel> subMenus)
         {
@@ -164,11 +108,8 @@ namespace Lol.Main.Local.ViewModel
             SubMenus = subMenus;
             CurrentSubMenu = SubMenus.FirstOrDefault();
         }
-        #endregion
 
-        #region SubMenuChanged
-
-        private void SubMenuChanged(SubMenuModel value)
+        partial void OnCurrentSubMenuChanged(SubMenuModel value)
         {
             IRiotUI content;
             int key;
@@ -204,7 +145,6 @@ namespace Lol.Main.Local.ViewModel
                     44 => new AvatarView().SetVM(new AvatarViewModel()),
                     _ => new EmptyContent()
                 };
-
                 // TODO: [Elena] Store의 경우 SubMenu마다 Background가 동일하여 부모Seq로 처리하려고 추가함. 
                 ParentSeq = value.MainSeq;
             }
@@ -229,7 +169,6 @@ namespace Lol.Main.Local.ViewModel
             CurrentUI = UIs[key];
             CurrentSeq = key;
         }
-        #endregion
 
         public void OnLoaded(IViewable view)
         {
@@ -239,52 +178,37 @@ namespace Lol.Main.Local.ViewModel
             }
         }
 
-        #region PvpConfirm
-
         private void PvpConfirm(object value)
         {
             // TODO: [Kevin] 게임시작 > 확인 버튼 클릭시 화면 Change, 변경 필히 필요
             SubMenus = null;
-            SubMenuChanged(MainMenu.TotalSubMenus[33]);
+            OnCurrentSubMenuChanged(MainMenu.TotalSubMenus[33]);
         }
-        #endregion
-
-        #region CreateCustomConfirm
 
         private void CreateCustomConfirm(object value)
         {
             // TODO: [Lucas] 사용자설정게임 -> 확인 버튼시 게임구성 화면 작업예정
             SubMenus = null;
-            SubMenuChanged(MainMenu.TotalSubMenus[34]);
+            OnCurrentSubMenuChanged(MainMenu.TotalSubMenus[34]);
         }
-        #endregion
-
-        #region JoinCustomConfirm
 
         private void JoinCustomConfirm(object value)
         {
             // TODO: [Lucas] 사용자설정게임 -> 확인 버튼시 게임구성 화면 작업예정
             SubMenus = null;
-            SubMenuChanged(MainMenu.TotalSubMenus[34]);
+            OnCurrentSubMenuChanged(MainMenu.TotalSubMenus[34]);
         }
-        #endregion
-
-        #region GoHome: SummonersRiftView "X" 버튼 클릭
 
         private void GoHome()
         {
             SubMenus = MainMenu.MenuChangedbyButtonClick(0);
             CurrentSubMenu = SubMenus[0];
         }
-        #endregion
-
-        #region ModeChange: SummonersRiftViewModel "모드 변경" 버튼 클릭
 
         private void ModeChange()
         {
             SubMenus = MainMenu.MenuChangedbyButtonClick(8);
             CurrentSubMenu = SubMenus[0];
         }
-        #endregion
     }
 }
