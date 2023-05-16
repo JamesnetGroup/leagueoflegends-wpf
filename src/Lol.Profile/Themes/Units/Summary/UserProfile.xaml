@@ -30,7 +30,7 @@
                                     Background="{StaticResource BG.PARENT}"/>
                             <TextBlock HorizontalAlignment="Center"
                                        VerticalAlignment="Top"
-                                       Text="Elena"
+                                       Text="Jamesnet214"
                                        FontSize="26" 
                                        FontWeight="Bold"
                                        Margin="0 60 0 0"
