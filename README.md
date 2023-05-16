@@ -29,7 +29,7 @@
 
 ## 개발 정보
 - [Visual Studio 2022](https://visualstudio.microsoft.com/ko/vs/preview/vs2022/)
-- .NET 6.0  
+- .NET 7.0  
 - C# 10.0  
 
 ## Future!
