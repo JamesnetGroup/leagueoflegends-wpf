@@ -43,8 +43,8 @@ namespace Lol.Foundation.Riotbase
                 SaveConfig(new ConfigModel());
             }
 
-            IDeserializer deserializer = new DeserializerBuilder()
-              .WithNamingConvention(CamelCaseNamingConvention.Instance)
+            var deserializer = new DeserializerBuilder()
+              .WithNamingConvention(new CamelCaseNamingConvention())
               .Build();
 
             Config = deserializer.Deserialize<ConfigModel>(File.ReadAllText(CFG_PATH));
@@ -72,8 +72,8 @@ namespace Lol.Foundation.Riotbase
 
         private static void SaveConfig(ConfigModel config)
         {
-            ISerializer serializer = new SerializerBuilder()
-                .WithNamingConvention(CamelCaseNamingConvention.Instance)
+            var serializer = new SerializerBuilder()
+                .WithNamingConvention(new CamelCaseNamingConvention())
                 .Build();
 
             string yaml = serializer.Serialize(config);

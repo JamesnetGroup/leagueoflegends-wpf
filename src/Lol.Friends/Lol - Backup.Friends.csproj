@@ -2,7 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>net7.0-windows</TargetFramework>
-    <Nullable>disable</Nullable>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
@@ -13,46 +12,29 @@
     <PackageReference Include="DevNcore.UI.Design.Geometry" Version="1.0.9" />
     <PackageReference Include="DevNcore.UI.Foundation" Version="1.0.9" />
     <PackageReference Include="DevNcore.WPF" Version="1.0.9" />
-    <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.26" />
+    <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.12" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\Lol.Database\Lol.Database.csproj" />
   </ItemGroup>
-
   <ItemGroup>
-    <Page Update="Themes\Units\MaterialsItem.xaml">
-      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    <Page Update="Themes\Generic.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Units\Materials.xaml">
-      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    <Page Update="Themes\Units\DeleteButton.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Units\ItemsSummary.xaml">
-      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    <Page Update="Themes\Units\DoneButton.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Units\PlusButton.xaml">
-      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    <Page Update="Themes\Units\RecentUserBox.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Units\ItemsFilter.xaml">
-      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    <Page Update="Themes\Units\RequestUserBox.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Units\LootItems.xaml">
-      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Themes\Units\CategoryItem.xaml">
-      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Themes\Units\Category.xaml">
-      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
+    <Page Update="Themes\Views\AddFriendsView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
-
 </Project>
