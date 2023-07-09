@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net7.0-windows</TargetFramework>
@@ -11,7 +11,7 @@
     <PackageReference Include="DevNcore.UI.Design.Geometry" Version="1.0.9" />
     <PackageReference Include="DevNcore.UI.Foundation" Version="1.0.9" />
     <PackageReference Include="DevNcore.WPF" Version="1.0.9" />
-    <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.26" />
+    <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.28" />
   </ItemGroup>
 
   <ItemGroup>
