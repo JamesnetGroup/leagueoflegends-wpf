@@ -1,16 +1,14 @@
 ﻿using DevNcore.LayoutSupport.Leagueoflegends.Controls;
+using Jamesnet.Wpf.Controls;
 using System.Windows;
 
 namespace Lol.Profile.UI.Views
 {
-    public class HistoryView : View
+    public class HistoryView : JamesContent
     {
-        #region DefaultStyleKey
-
         static HistoryView()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(HistoryView), new FrameworkPropertyMetadata(typeof(HistoryView)));
         }
-        #endregion
     }
 }

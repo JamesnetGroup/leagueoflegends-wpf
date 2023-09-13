@@ -63,7 +63,7 @@
 	</Style>
 	
 	<Style TargetType="{x:Type RadioButton}" x:Key="MENU.TEXT">
-		<Setter Property="Command" Value="{Binding MenuSelectCommand}"/>
+		<Setter Property="Command" Value="{Binding RelativeSource={RelativeSource AncestorType=ListBox}, Path=DataContext.MenuSelectCommand}"/>
 		<Setter Property="CommandParameter" Value="{Binding}"/>
 		<Setter Property="FocusVisualStyle" Value="{x:Null}"/>
 		<Setter Property="GroupName" Value="GROUP.MENU"/>
@@ -113,9 +113,9 @@
 	<Style TargetType="{x:Type RadioButton}" x:Key="MENU.ICON">
 		<Style.Resources>
 			<Style TargetType="ToolTip" BasedOn="{StaticResource MAIN.TOOL}"/>
-		</Style.Resources>
-		<Setter Property="Command" Value="{Binding MenuSelectCommand}"/>
-		<Setter Property="CommandParameter" Value="{Binding}"/>
+        </Style.Resources>
+        <Setter Property="Command" Value="{Binding RelativeSource={RelativeSource AncestorType=ListBox}, Path=DataContext.MenuSelectCommand}"/>
+        <Setter Property="CommandParameter" Value="{Binding}"/>
 		<Setter Property="GroupName" Value="GROUP.MENU"/>
 		<Setter Property="FocusVisualStyle" Value="{x:Null}"/>
 		<Setter Property="Foreground" Value="#CDBE91"/>

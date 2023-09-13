@@ -8,18 +8,10 @@ namespace Lol.GameRoom.Local.ViewModels
 {
     public class JoinCustomViewModel : ObservableObject
     {
-        #region Variables
-
         private Action<object> _joinGame;
         public List<LobbyList> LobbyList { get; set; }
-        #endregion
-
-        #region ICommand
 
         public RelayCommand<object> JoinCommand { get; set; }
-        #endregion
-
-        #region Constructor
 
         public JoinCustomViewModel(Action<object> joinGame)
         {
@@ -28,14 +20,10 @@ namespace Lol.GameRoom.Local.ViewModels
 
             JoinCommand = new RelayCommand<object>(CreateRoom);
         }
-        #endregion
-
-        #region CreateRoom
 
         private void CreateRoom(object obj)
         {
             _joinGame.Invoke(obj);
         }
-        #endregion
     }
 }

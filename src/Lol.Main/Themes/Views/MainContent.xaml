@@ -194,7 +194,7 @@
                                         <units:PlayButton Margin="25 20 20 20"/>
                                         <units:NoticeButton/>
                                     </StackPanel>
-                                    <units:MainMenu Grid.Column="1" DataContext="{Binding MainMenu}"/>
+                                    <units:MainMenu Grid.Column="1"/>
                                     <units:Currency Grid.Column="2"/>
                                 </Grid>
                             </Border>

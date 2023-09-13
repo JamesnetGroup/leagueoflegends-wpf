@@ -7,7 +7,7 @@
 
   <ItemGroup>
     <PackageReference Include="DevNcore.UI.Foundation" Version="1.0.9" />
-    <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.28" />
+    <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.33" />
   </ItemGroup>
 
   <ItemGroup>
@@ -23,6 +23,7 @@
     <ProjectReference Include="..\Lol.Profile\Lol.Profile.csproj" />
     <ProjectReference Include="..\Lol.Settings\Lol.Settings.csproj" />
     <ProjectReference Include="..\Lol.Store\Lol.Store.csproj" />
+    <ProjectReference Include="..\Lol.Support\Lol.Support.csproj" />
     <ProjectReference Include="..\Lol.TeamFight\Lol.TeamFight.csproj" />
   </ItemGroup>
 
