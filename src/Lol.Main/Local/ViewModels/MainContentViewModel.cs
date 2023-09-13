@@ -2,7 +2,6 @@
 using System.Linq;
 using System.Windows.Controls;
 using System.Collections.Generic;
-using Lol.Data.Main;
 using Lol.Main.Local.Work;
 using Lol.Main.UI.Units;
 using Lol.MyShop.UI.Views;
@@ -32,6 +31,9 @@ using Jamesnet.Wpf.Controls;
 using Lol.Main.UI.Views;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using Lol.Support.Local.Models;
+using Lol.Support.Local.Helpers;
+using Prism.Ioc;
 
 namespace Lol.Main.Local.ViewModels
 {
@@ -39,18 +41,17 @@ namespace Lol.Main.Local.ViewModels
     {
         private readonly WindowWork _winWork;
         private readonly ModalWork _modalWork;
-        private readonly GameWork _gameWork;
-        private MainMenuModel _mainMenu;
+        private MainMenuInfo _mainMenu;
         private Image BackgroundImage;
 
         [ObservableProperty]
         private object _modalContent;
         [ObservableProperty]
-        private IRiotUI _currentUI;
+        private object _currentUI;
         [ObservableProperty]
-        private List<SubMenuModel> _subMenus;
+        private List<SubMenuInfo> _subMenus;
         [ObservableProperty]
-        private SubMenuModel _currentSubMenu;
+        private SubMenuInfo _currentSubMenu;
         [ObservableProperty]
         private FriendsCollection _friends;
         [ObservableProperty]
@@ -58,19 +59,33 @@ namespace Lol.Main.Local.ViewModels
         [ObservableProperty]
         private int _parentSeq;
 
-        private Dictionary<int, IRiotUI> UIs { get; set; }
-        public MenuWork MainMenu { get; }
+        private Dictionary<int, object> UIs { get; set; }
         public FriendsSortWork Options { get; }
 
-        public MainContentViewModel()
+        [ObservableProperty]
+        private List<MainMenuInfo> _menus;
+        [ObservableProperty]
+        private List<SubMenuInfo> _totalSubMenus;
+
+        [ObservableProperty]
+        private MainMenuInfo _currentMenu;
+        private readonly MenuService _menuService;
+        private readonly IContainerProvider _containerProvider;
+
+        public MainContentViewModel(MenuService menuService, IContainerProvider containerProvider)
         {
+            _menuService = menuService;
+            _containerProvider = containerProvider;
+            Menus = _menuService.GetMenus();
+            TotalSubMenus = _menuService.GetSubMenus();
+
+            _menuService.MenuChanged += MenuService_MenuChanged;
+
             _winWork = new();
             _modalWork = new(this);
-            _gameWork = new(this);
 
             UIs = new();
 
-            MainMenu = new(MenuSelected);
             Options = new();
 
             List<IFriendsList> friends = new FriendsApi().GetMyFriends(0);
@@ -98,19 +113,20 @@ namespace Lol.Main.Local.ViewModels
         [RelayCommand]
         private void Game(Type value)
         {
-            _gameWork.OpenGameRoom(value);
+            CurrentMenu = Menus[8];
+            MenuSelect(CurrentMenu);
         }
 
-        internal void MenuSelected(MainMenuModel menu, List<SubMenuModel> subMenus)
+        internal void MenuSelected(MainMenuInfo menu, List<SubMenuInfo> subMenus)
         {
             _mainMenu = menu;
             SubMenus = subMenus;
             CurrentSubMenu = SubMenus.FirstOrDefault();
         }
 
-        partial void OnCurrentSubMenuChanged(SubMenuModel value)
+        partial void OnCurrentSubMenuChanged(SubMenuInfo value)
         {
-            IRiotUI content;
+            object content;
             int key;
 
             if (value != null)
@@ -134,9 +150,11 @@ namespace Lol.Main.Local.ViewModels
                     30 => new store.LootView().SetVM(new storeVM.LootViewModel()),
                     31 => new store.EtcView().SetVM(new storeVM.EtcViewModel()),
                     32 => new SummaryView().SetVM(new SummaryViewModel()),
-                    33 => new HistoryView().SetVM(new HistoryViewModel()),
+                    //33 => new HistoryView().SetVM(new HistoryViewModel()),
+                    33 => FindView("HistoryContent"),
                     35 => new HighlightView().SetVM(new HighlightViewModel()),
-                    37 => new PVPView().SetVM(new PVPViewModel(PvpConfirm)),
+                    //37 => new PVPView().SetVM(new PVPViewModel(PvpConfirm)),
+                    37 => FindView("PvpContent"),
                     40 => new CreateCustomView().SetVM(new CreateCustomViewModel(CreateCustomConfirm)),
                     41 => new JoinCustomView().SetVM(new JoinCustomViewModel(JoinCustomConfirm)),
                     42 => new SummonersRiftView().SetVM(new SummonersRiftViewModel(Friends, GoHome, ModeChange)),
@@ -169,45 +187,74 @@ namespace Lol.Main.Local.ViewModels
             CurrentSeq = key;
         }
 
+        private object FindView(string name)
+        {
+            IViewable view = _containerProvider.Resolve<IViewable>(name);
+            return view;
+        }
+
         public void OnLoaded(IViewable view)
         {
             if (view is MainContent win)
             {
                 BackgroundImage = win.BackgroundImage;
             }
+            CurrentMenu = Menus.First();
+            MenuSelect(CurrentMenu);
         }
 
         private void PvpConfirm(object value)
         {
             // TODO: [Kevin] 게임시작 > 확인 버튼 클릭시 화면 Change, 변경 필히 필요
             SubMenus = null;
-            OnCurrentSubMenuChanged(MainMenu.TotalSubMenus[33]);
+            CurrentSubMenu =TotalSubMenus[33];
         }
 
         private void CreateCustomConfirm(object value)
         {
             // TODO: [Lucas] 사용자설정게임 -> 확인 버튼시 게임구성 화면 작업예정
             SubMenus = null;
-            OnCurrentSubMenuChanged(MainMenu.TotalSubMenus[34]);
+            CurrentSubMenu = TotalSubMenus[34];
         }
 
         private void JoinCustomConfirm(object value)
         {
             // TODO: [Lucas] 사용자설정게임 -> 확인 버튼시 게임구성 화면 작업예정
             SubMenus = null;
-            OnCurrentSubMenuChanged(MainMenu.TotalSubMenus[34]);
+            CurrentSubMenu =TotalSubMenus[34] ;
         }
 
         private void GoHome()
         {
-            SubMenus = MainMenu.MenuChangedbyButtonClick(0);
+            SubMenus = MenuChangedbyButtonClick(0);
             CurrentSubMenu = SubMenus[0];
         }
 
         private void ModeChange()
         {
-            SubMenus = MainMenu.MenuChangedbyButtonClick(8);
+            SubMenus = MenuChangedbyButtonClick(8);
             CurrentSubMenu = SubMenus[0];
+        }
+
+        [RelayCommand]
+        internal void MenuSelect(MainMenuInfo obj)
+        {
+            List<SubMenuInfo> subMenus = TotalSubMenus.Where(x => x.MainSeq == obj.Seq).ToList();
+            MenuSelected(obj, subMenus);
+        }
+
+        private List<SubMenuInfo> MenuChangedbyButtonClick(int seq)
+        {
+            CurrentMenu = Menus[seq];
+            List<SubMenuInfo> subMenus = TotalSubMenus.Where(x => x.MainSeq == CurrentMenu.Seq).ToList();
+
+            return subMenus;
+        }
+
+        private void MenuService_MenuChanged(object sender, MenuChangedEventArgs e)
+        {
+            SubMenus = null;
+            CurrentSubMenu = TotalSubMenus[e.MenuId];
         }
     }
 }

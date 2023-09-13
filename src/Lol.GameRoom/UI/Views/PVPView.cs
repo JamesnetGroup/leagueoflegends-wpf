@@ -1,16 +1,19 @@
 ﻿using DevNcore.LayoutSupport.Leagueoflegends.Controls;
+using Jamesnet.Wpf.Controls;
 using System.Windows;
 
 namespace Lol.GameRoom.UI.Views
 {
-    public class PVPView : View
+    public class PVPView : JamesContent
     {
-        #region DefaultStyleKey
-
         static PVPView()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(PVPView), new FrameworkPropertyMetadata(typeof(PVPView)));
         }
-        #endregion
+
+        public PVPView()
+        { 
+        
+        }
     }
 }

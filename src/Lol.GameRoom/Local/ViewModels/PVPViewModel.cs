@@ -3,49 +3,39 @@ using System.Collections.Generic;
 using Lol.Database.Controller;
 using Lol.Database.Entites.Schema;
 using DevNcore.UI.Foundation.Mvvm;
+using Jamesnet.Wpf.Mvvm;
+using Lol.Support.Local.Helpers;
 
 namespace Lol.GameRoom.Local.ViewModels
 {
-    public class PVPViewModel : ObservableObject
+    public class PVPViewModel : ObservableBase
     {
-        #region Variables
-
         private Action<object> _pvpConfirm;
         private GameRooms _currentPVP;
-        public List<GameRooms> PVPs { get; set; }
-        #endregion
+        private readonly MenuService _menuService;
 
-        #region ICommand
+        public List<GameRooms> PVPs { get; set; }
 
         public RelayCommand<object> ConfirmCommand { get; set; }
-        #endregion
 
-        #region CurrentPVP
 
         public GameRooms CurrentPVP
         {
             get => _currentPVP;
             set { _currentPVP = value; OnPropertyChanged(); }
         }
-        #endregion
 
-        #region Constructor
-
-        public PVPViewModel(Action<object> pvpConfirm)
+        public PVPViewModel(MenuService menuService)
         {
-            _pvpConfirm = pvpConfirm;
+            _menuService = menuService;
             PVPs = new GameRoomApi().GetGameRooms();
             CurrentPVP = PVPs[0];
             ConfirmCommand = new RelayCommand<object>(CreateRoom);
         }
-        #endregion
-
-        #region CreateRoom
 
         private void CreateRoom(object obj)
         {
-            _pvpConfirm.Invoke(obj);
+            _menuService.ChangeMenu(33);
         }
-        #endregion
     }
 }

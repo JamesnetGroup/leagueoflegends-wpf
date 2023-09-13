@@ -12,11 +12,12 @@
     <PackageReference Include="DevNcore.UI.Design.Geometry" Version="1.0.9" />
     <PackageReference Include="DevNcore.UI.Foundation" Version="1.0.9" />
     <PackageReference Include="DevNcore.WPF" Version="1.0.9" />
-    <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.28" />
+    <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.33" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Lol.Database\Lol.Database.csproj" />
+    <ProjectReference Include="..\Lol.Support\Lol.Support.csproj" />
   </ItemGroup>
 
   <ItemGroup>
