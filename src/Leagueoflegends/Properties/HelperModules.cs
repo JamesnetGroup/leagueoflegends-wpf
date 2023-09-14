@@ -12,6 +12,7 @@ namespace Leagueoflegends.Properties
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            containerRegistry.RegisterSingleton<FriendsService>();
             containerRegistry.RegisterSingleton<MenuService>();
         }
     }

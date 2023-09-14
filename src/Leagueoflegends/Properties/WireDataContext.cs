@@ -23,7 +23,7 @@ namespace Leagueoflegends.Properties
         protected override void Match(ViewModelLocatorCollection items)
         {
             items.Register<AvatarView, AvatarViewModel>();
-            items.Register<HighlightView, HighlightView>();
+            items.Register<HighlightView, HighlightViewModel>();
             items.Register<SummaryView, SummaryViewModel>();
             items.Register<TFTView, TFTViewModel>();
             items.Register<LootView, LootViewModel>();
