@@ -1,16 +1,14 @@
 ﻿using DevNcore.LayoutSupport.Leagueoflegends.Controls;
+using Jamesnet.Wpf.Controls;
 using System.Windows;
 
 namespace Lol.GameRoom.UI.Views
 {
-    public class SummonersRiftView : View
+    public class SummonersRiftView : JamesContent
     {
-        #region DefaultStyleKey
-
         static SummonersRiftView()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(SummonersRiftView), new FrameworkPropertyMetadata(typeof(SummonersRiftView)));
         }
-        #endregion
     }
 }

@@ -1,61 +1,43 @@
-﻿using DevNcore.UI.Foundation.Mvvm;
+﻿using CommunityToolkit.Mvvm.Input;
+using DevNcore.UI.Foundation.Mvvm;
 using Lol.Database.Collection;
 using Lol.Database.Entites.Schema;
+using Lol.Support.Local.Helpers;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Lol.GameRoom.Local.ViewModels
 {
-    public class CustomGameRoomViewModel : ObservableObject
+    public partial class CustomGameRoomViewModel : ObservableObject
     {
-        #region Variables
-
         private List<MyFriends> _friends;
-        private Action _riftClose;
-        private Action _modeChange;
-        #endregion
-
-        #region ICommand
-
-        public RelayCommand<object> ModeChangeCommand { get; set; }
-        public RelayCommand<object> CloseCommand { get; set; }
-        #endregion
-
-        #region Friends
+        private readonly MenuService _menuService;
 
         public List<MyFriends> Friends
         {
             get => _friends;
             set { _friends = value; OnPropertyChanged(); }
         }
-        #endregion
 
-        #region Constructor
-
-        public CustomGameRoomViewModel(FriendsCollection friends, Action riftClose, Action modeChange)
+        public CustomGameRoomViewModel(FriendsService friendsService, MenuService menuService)
         {
-            _riftClose = riftClose;
-            _modeChange = modeChange;
+            _menuService = menuService;
 
-            CloseCommand = new RelayCommand<object>(CloseRoom);
-            ModeChangeCommand = new RelayCommand<object>(ChangeMode);
+            var friends = (FriendsCollection)friendsService.GetFriends();
+            Friends = friends.GeneralList.Children.Where(x => x.Status == 3).ToList();
         }
-        #endregion
 
-        #region CloseRoom
-
-        private void CloseRoom(object obj)
+        [RelayCommand]
+        private void Close()
         {
-            _riftClose?.Invoke();
+            _menuService.GoHome();
         }
-        #endregion
 
-        #region ChangeMode
-
-        private void ChangeMode(object obj)
+        [RelayCommand]
+        private void ModeChange()
         {
-            _modeChange?.Invoke();
+            _menuService.ModeChange();
         }
-        #endregion
     }
 }

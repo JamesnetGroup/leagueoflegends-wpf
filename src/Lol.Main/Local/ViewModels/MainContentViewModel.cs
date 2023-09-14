@@ -71,11 +71,13 @@ namespace Lol.Main.Local.ViewModels
         [ObservableProperty]
         private MainMenuInfo _currentMenu;
         private readonly MenuService _menuService;
+        private readonly FriendsService _friendsService;
         private readonly IContainerProvider _containerProvider;
 
-        public MainContentViewModel(MenuService menuService, IContainerProvider containerProvider)
+        public MainContentViewModel(FriendsService friendsService, MenuService menuService, IContainerProvider containerProvider)
         {
             _menuService = menuService;
+            _friendsService = friendsService;
             _containerProvider = containerProvider;
             Menus = _menuService.GetMenus();
             TotalSubMenus = _menuService.GetSubMenus();
@@ -92,6 +94,8 @@ namespace Lol.Main.Local.ViewModels
 
             List<IFriendsList> friends = new FriendsApi().GetMyFriends(0);
             Friends = new(friends);
+
+            friendsService.SetFriends(Friends);
         }
 
         [RelayCommand]
@@ -136,11 +140,8 @@ namespace Lol.Main.Local.ViewModels
                 key = value.Seq;
                 content = value.Seq switch
                 {
-                    9 or 33 or 37 or 40 or 41 or 12 or 15 or 17 or 18 or 20 or 21 or 22 or 26 or 27 or 28 or 29 or 30 or 31 or 32 or 35 or 44
+                    9 or 33 or 37 or 40 or 41 or 12 or 15 or 17 or 18 or 20 or 21 or 22 or 26 or 27 or 28 or 29 or 30 or 31 or 32 or 35 or 42 or 43 or 44
                         => FindContent(value.ContentName),
-
-                    42 => new SummonersRiftView().SetVM(new SummonersRiftViewModel(Friends, GoHome, ModeChange)),
-                    43 => new CustomGameRoomView().SetVM(new CustomGameRoomViewModel(Friends, GoHome, ModeChange)),
                     _ => new EmptyContent()
                 };
                 // TODO: [Elena] Store의 경우 SubMenu마다 Background가 동일하여 부모Seq로 처리하려고 추가함. 
@@ -180,20 +181,9 @@ namespace Lol.Main.Local.ViewModels
             {
                 BackgroundImage = win.BackgroundImage;
             }
+
             CurrentMenu = Menus.First();
             MenuSelect(CurrentMenu);
-        }
-
-        private void GoHome()
-        {
-            SubMenus = MenuChangedbyButtonClick(0);
-            CurrentSubMenu = SubMenus[0];
-        }
-
-        private void ModeChange()
-        {
-            SubMenus = MenuChangedbyButtonClick(8);
-            CurrentSubMenu = SubMenus[0];
         }
 
         [RelayCommand]
@@ -213,8 +203,21 @@ namespace Lol.Main.Local.ViewModels
 
         private void MenuService_MenuChanged(object sender, MenuChangedEventArgs e)
         {
-            SubMenus = null;
-            CurrentSubMenu = TotalSubMenus[e.MenuId];
+            if (e.GoHome)
+            {
+                SubMenus = MenuChangedbyButtonClick(0);
+                CurrentSubMenu = SubMenus[0];
+            }
+            else if (e.ModeChange)
+            {
+                SubMenus = MenuChangedbyButtonClick(8);
+                CurrentSubMenu = SubMenus[0];
+            }
+            else
+            {
+                SubMenus = null;
+                CurrentSubMenu = TotalSubMenus[e.MenuId];
+            }
         }
 
         private void _menuService_BackgroundChanged(object sender, BackgroundChangedEventArgs e)

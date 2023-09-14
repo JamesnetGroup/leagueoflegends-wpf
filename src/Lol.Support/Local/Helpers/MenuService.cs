@@ -1,6 +1,7 @@
 ﻿using Lol.Support.Local.Models;
 using System;
 using System.Collections.Generic;
+using System.Windows.Controls;
 
 namespace Lol.Support.Local.Helpers
 {
@@ -17,6 +18,16 @@ namespace Lol.Support.Local.Helpers
         public void ChangeMenu(int menuId)
         {
             MenuChanged?.Invoke(this, new MenuChangedEventArgs(menuId));
+        }
+
+        public void GoHome()
+        {
+            MenuChanged?.Invoke(this, new MenuChangedEventArgs("Home"));
+        }
+
+        public void ModeChange()
+        {
+            MenuChanged?.Invoke(this, new MenuChangedEventArgs("ModeChange"));
         }
 
         public List<MainMenuInfo> GetMenus()
