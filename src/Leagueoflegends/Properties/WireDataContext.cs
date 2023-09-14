@@ -9,12 +9,18 @@ using Lol.GameRoom.Local.ViewModels;
 using Lol.GameRoom.UI.Views;
 using Lol.Home.Local.ViewModels;
 using Lol.Home.UI.Views;
+using Lol.Loot.Local.ViewModels;
+using Lol.Loot.UI.Views;
 using Lol.Main.Local.ViewModels;
 using Lol.Main.UI.Views;
+using Lol.MyShop.Local.ViewModel;
+using Lol.MyShop.UI.Views;
 using Lol.Profile.Local.ViewModels;
 using Lol.Profile.UI.Views;
 using Lol.Store.Local.ViewModels;
 using Lol.Store.UI.Views;
+using Lol.TeamFight.Local.ViewModel;
+using Lol.TeamFight.UI.Views;
 
 namespace Leagueoflegends.Properties
 {
@@ -22,11 +28,14 @@ namespace Leagueoflegends.Properties
     {
         protected override void Match(ViewModelLocatorCollection items)
         {
+            items.Register<TeamFightView, TeamFightViewModel>();
+            items.Register<LootView, LootViewModel>();
+            items.Register<MyShopView, MyShopViewModel>();
             items.Register<AvatarView, AvatarViewModel>();
             items.Register<HighlightView, HighlightViewModel>();
             items.Register<SummaryView, SummaryViewModel>();
             items.Register<TFTView, TFTViewModel>();
-            items.Register<LootView, LootViewModel>();
+            items.Register<StoreLootView, StoreLootViewModel>();
             items.Register<EtcView, EtcViewModel>();
             items.Register<StoreHomeContent, StoreHomeViewModel>();
             items.Register<StoreChampionsContent, StoreChampionsViewModel>();

@@ -1,9 +1,10 @@
 ﻿using DevNcore.LayoutSupport.Leagueoflegends.Controls;
+using Jamesnet.Wpf.Controls;
 using System.Windows;
 
 namespace Lol.Main.UI.Units
 {
-    public class EmptyContent : View
+    public class EmptyContent : JamesContent
     {
         #region DefaultStyleKey
 

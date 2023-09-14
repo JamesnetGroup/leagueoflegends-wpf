@@ -6,7 +6,7 @@ using System.Linq;
 
 namespace Lol.Store.Local.ViewModels
 {
-    public class LootViewModel : ObservableObject
+    public class StoreLootViewModel : ObservableObject
     {
         #region Variables
 
@@ -45,7 +45,7 @@ namespace Lol.Store.Local.ViewModels
 
         #region Constructor
 
-        public LootViewModel()
+        public StoreLootViewModel()
         {
             StoreApi api = new StoreApi();
             StoreLoots = api.GetLoots();

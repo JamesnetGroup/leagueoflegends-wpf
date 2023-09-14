@@ -35,12 +35,12 @@ namespace Lol.Support.Local.Helpers
             List<MainMenuInfo> source = new()
             {
                 new MainMenuInfo(0, "HOME", "TEXT"),
-                new MainMenuInfo(1, "TFT", "TEXT"),
+                new MainMenuInfo(1, "TFT", "TEXT", "TeamFightContent"),
                 new MainMenuInfo(2, "CLASH", "TEXT"),
                 new MainMenuInfo(3, "Profile", "ICON"),
                 new MainMenuInfo(4, "Collection", "ICON"),
-                new MainMenuInfo(5, "Loot", "ICON"),
-                new MainMenuInfo(6, "My Shop", "ICON"),
+                new MainMenuInfo(5, "Loot", "ICON", "LootContent"),
+                new MainMenuInfo(6, "My Shop", "ICON", "MyShopContent"),
                 new MainMenuInfo(7, "Store", "ICON"),
                 new MainMenuInfo(8, "GAME", "TEXT")
             };
@@ -76,7 +76,7 @@ namespace Lol.Support.Local.Helpers
                 new SubMenuInfo(27, 7, "CHAMPIONS", "StoreChampionsContent"),
                 new SubMenuInfo(28, 7, "SKINS", "StoreSkinContent"),
                 new SubMenuInfo(29, 7, "TFT", "TFTContent"),
-                new SubMenuInfo(30, 7, "LOOT", "LootContent"),
+                new SubMenuInfo(30, 7, "LOOT", "StoreLootContent"),
                 new SubMenuInfo(31, 7, "ACCESSORIES", "EtcContent"),
 
                 new SubMenuInfo(32, 3, "SUMMARY", "SummaryContent"),

@@ -1,9 +1,10 @@
 ﻿using DevNcore.LayoutSupport.Leagueoflegends.Controls;
+using Jamesnet.Wpf.Controls;
 using System.Windows;
 
 namespace Lol.Loot.UI.Views
 {
-    public class LootView : View
+    public class LootView : JamesContent
     {
         #region DefaultStyleKey
 
