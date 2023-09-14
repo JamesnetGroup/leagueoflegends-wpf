@@ -1,5 +1,4 @@
-﻿using DevNcore.UI.Foundation.Mvvm;
-using Jamesnet.Wpf.Mvvm;
+﻿using Jamesnet.Wpf.Mvvm;
 using Lol.Database.Controller;
 using Lol.Database.Entites.Schema;
 using System.Collections.Generic;

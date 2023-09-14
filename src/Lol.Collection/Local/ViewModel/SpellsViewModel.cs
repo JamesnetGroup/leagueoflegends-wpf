@@ -3,9 +3,6 @@ using Lol.Database.Entites.Schema;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Windows.Controls;
-using System.Windows.Media.Imaging;
-using DevNcore.UI.Foundation.Mvvm;
 using Jamesnet.Wpf.Mvvm;
 using Lol.Support.Local.Helpers;
 
