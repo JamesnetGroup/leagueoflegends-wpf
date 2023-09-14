@@ -1,16 +1,14 @@
 ﻿using DevNcore.LayoutSupport.Leagueoflegends.Controls;
+using Jamesnet.Wpf.Controls;
 using System.Windows;
 
 namespace Lol.TeamFight.UI.Views
 {
-    public class TeamFightView : View
+    public class TeamFightView : JamesContent
     {
-        #region DefaultStyleKey
-
         static TeamFightView()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(TeamFightView), new FrameworkPropertyMetadata(typeof(TeamFightView)));
         }
-        #endregion
     }
 }

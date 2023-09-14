@@ -35,11 +35,16 @@ using Lol.Support.Local.Models;
 using Lol.Support.Local.Helpers;
 using Prism.Ioc;
 using System.Windows.Media.Imaging;
+using Prism.Regions;
 
 namespace Lol.Main.Local.ViewModels
 {
     public partial class MainContentViewModel : ObservableBase, IViewLoadable
     {
+        private readonly MenuService _menuService;
+        private readonly FriendsService _friendsService;
+        private readonly IContainerProvider _containerProvider;
+        private readonly IRegionManager _regionManager;
         private readonly WindowWork _winWork;
         private readonly ModalWork _modalWork;
         private MainMenuInfo _mainMenu;
@@ -60,25 +65,21 @@ namespace Lol.Main.Local.ViewModels
         [ObservableProperty]
         private int _parentSeq;
 
-        private Dictionary<int, object> UIs { get; set; }
         public FriendsSortWork Options { get; }
 
         [ObservableProperty]
         private List<MainMenuInfo> _menus;
         [ObservableProperty]
         private List<SubMenuInfo> _totalSubMenus;
-
         [ObservableProperty]
         private MainMenuInfo _currentMenu;
-        private readonly MenuService _menuService;
-        private readonly FriendsService _friendsService;
-        private readonly IContainerProvider _containerProvider;
 
-        public MainContentViewModel(FriendsService friendsService, MenuService menuService, IContainerProvider containerProvider)
+        public MainContentViewModel(FriendsService friendsService, MenuService menuService, IContainerProvider containerProvider, IRegionManager regionManager)
         {
             _menuService = menuService;
             _friendsService = friendsService;
             _containerProvider = containerProvider;
+            _regionManager = regionManager;
             Menus = _menuService.GetMenus();
             TotalSubMenus = _menuService.GetSubMenus();
 
@@ -87,8 +88,6 @@ namespace Lol.Main.Local.ViewModels
 
             _winWork = new();
             _modalWork = new(this);
-
-            UIs = new();
 
             Options = new();
 
@@ -138,40 +137,36 @@ namespace Lol.Main.Local.ViewModels
             if (value != null)
             {
                 key = value.Seq;
-                content = value.Seq switch
-                {
-                    9 or 33 or 37 or 40 or 41 or 12 or 15 or 17 or 18 or 20 or 21 or 22 or 26 or 27 or 28 or 29 or 30 or 31 or 32 or 35 or 42 or 43 or 44
-                        => FindContent(value.ContentName),
-                    _ => new EmptyContent()
-                };
-                // TODO: [Elena] Store의 경우 SubMenu마다 Background가 동일하여 부모Seq로 처리하려고 추가함. 
+                content = FindContent(value.ContentName);
                 ParentSeq = value.MainSeq;
             }
             else
             {
                 key = _mainMenu.Seq;
-                content = _mainMenu.Seq switch
-                {
-                    1 => new TeamFightView().SetVM(new TeamFightViewModel()),
-                    5 => new LootView().SetVM(new LootViewModel()),
-                    6 => new MyShopView().SetVM(new MyShopViewModel()),
-                    _ => new EmptyContent()
-                };
+                content = FindContent(_mainMenu.ContentName);
                 ParentSeq = 0;
             }
 
-            if (!UIs.ContainsKey(key))
+            IRegion region = _regionManager.Regions["ContentsRegion"];
+            if(!region.Views.Contains(content))
             {
-                UIs.Add(key, content);
+                region.Add(content);
             }
-
-            CurrentUI = UIs[key];
+            region.Activate(content);
             CurrentSeq = key;
         }
 
         private object FindContent(string name)
         {
-            IViewable view = _containerProvider.Resolve<IViewable>(name);
+            IViewable view;
+            try
+            {
+                view = _containerProvider.Resolve<IViewable>(name);
+            }
+            catch
+            {
+                view = _containerProvider.Resolve<IViewable>("EmptyContent");
+            }
             return view;
         }
 

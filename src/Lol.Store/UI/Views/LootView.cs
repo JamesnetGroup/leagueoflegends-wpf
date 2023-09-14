@@ -4,14 +4,11 @@ using System.Windows;
 
 namespace Lol.Store.UI.Views
 {
-    public class LootView : JamesContent
+    public class StoreLootView : JamesContent
     {
-        #region DefaultStyleKey
-
-        static LootView()
+        static StoreLootView()
         {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(LootView), new FrameworkPropertyMetadata(typeof(LootView)));
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(StoreLootView), new FrameworkPropertyMetadata(typeof(StoreLootView)));
         }
-        #endregion
     }
 }

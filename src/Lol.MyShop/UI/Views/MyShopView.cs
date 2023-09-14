@@ -1,9 +1,10 @@
 ﻿using DevNcore.LayoutSupport.Leagueoflegends.Controls;
+using Jamesnet.Wpf.Controls;
 using System.Windows;
 
 namespace Lol.MyShop.UI.Views
 {
-    public class MyShopView : View
+    public class MyShopView : JamesContent
     {
         #region DefaultstyleKey
 
