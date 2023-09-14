@@ -1,9 +1,10 @@
 ﻿using DevNcore.LayoutSupport.Leagueoflegends.Controls;
+using Jamesnet.Wpf.Controls;
 using System.Windows;
 
 namespace Lol.Home.UI.Views
 {
-    public class Overview : View
+    public class Overview : JamesContent
     {
         #region DefaultStyleKey
 

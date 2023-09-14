@@ -1,4 +1,5 @@
 ﻿using DevNcore.UI.Foundation.Mvvm;
+using Jamesnet.Wpf.Mvvm;
 using Lol.Database.Controller;
 using Lol.Database.Entites.Schema;
 using System.Collections.Generic;
@@ -6,55 +7,39 @@ using System.Threading;
 
 namespace Lol.Store.Local.ViewModels
 {
-    public class HomeViewModel : ObservableObject
+    public class StoreHomeViewModel : ObservableBase
     {
-        #region Variables
 
         private List<NewSkins> _newSkins;
         private List<SkinSets> _skinSets;
         private List<Popularities> _popularities;
         private NewSkins _currentSkin;
-        #endregion
-
-        #region NewSkins
 
         public List<NewSkins> NewSkins
         {
             get { return _newSkins; }
             set { _newSkins = value; OnPropertyChanged(); }
         }
-        #endregion
-
-        #region CurrentSkin
 
         public NewSkins CurrentSkin
         {
             get { return _currentSkin; }
             set { _currentSkin = value; OnPropertyChanged(); }
         }
-        #endregion
-
-        #region SkinSets
 
         public List<SkinSets> SkinSets
         {
             get { return _skinSets; }
             set { _skinSets = value; OnPropertyChanged(); }
         }
-        #endregion
-
-        #region Popularities
 
         public List<Popularities> Popularities
         {
             get { return _popularities; }
             set { _popularities = value; OnPropertyChanged(); }
         }
-        #endregion
 
-        #region Constructor
-
-        public HomeViewModel()
+        public StoreHomeViewModel()
         {
             StoreApi storeApi = new StoreApi();
             NewSkins = storeApi.GetNewSkins();
@@ -80,6 +65,5 @@ namespace Lol.Store.Local.ViewModels
             thread.IsBackground = true;
             thread.Start();
         }
-        #endregion
     }
 }

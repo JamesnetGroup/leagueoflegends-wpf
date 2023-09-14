@@ -1,16 +1,14 @@
 ﻿using DevNcore.LayoutSupport.Leagueoflegends.Controls;
+using Jamesnet.Wpf.Controls;
 using System.Windows;
 
 namespace Lol.Store.UI.Views
 {
-    public class TFTView : View
+    public class TFTView : JamesContent
     {
-        #region DefaultStyleKey
-
         static TFTView()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(TFTView), new FrameworkPropertyMetadata(typeof(TFTView)));
         }
-        #endregion
     }
 }

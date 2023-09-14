@@ -1,9 +1,10 @@
 ﻿using DevNcore.LayoutSupport.Leagueoflegends.Controls;
+using Jamesnet.Wpf.Controls;
 using System.Windows;
 
 namespace Lol.Clash.UI.Views
 {
-    public class WinnersView : View
+    public class WinnersView : JamesContent
     {
         static WinnersView()
         {

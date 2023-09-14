@@ -1,21 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
 using DevNcore.UI.Foundation.Mvvm;
+using Jamesnet.Wpf.Mvvm;
 using Lol.Database.Controller;
 using Lol.Database.Entites.Schema;
+using Lol.Support.Local.Helpers;
 
 namespace Lol.GameRoom.Local.ViewModels
 {
-    public class JoinCustomViewModel : ObservableObject
+    public class JoinCustomViewModel : ObservableBase
     {
         private Action<object> _joinGame;
+        private readonly MenuService _menuService;
+
         public List<LobbyList> LobbyList { get; set; }
 
         public RelayCommand<object> JoinCommand { get; set; }
 
-        public JoinCustomViewModel(Action<object> joinGame)
+        public JoinCustomViewModel(MenuService menuService)
         {
-            _joinGame = joinGame;
+            _menuService = menuService;
             LobbyList = new GameRoomApi().GetLobbyList();
 
             JoinCommand = new RelayCommand<object>(CreateRoom);
@@ -23,7 +27,7 @@ namespace Lol.GameRoom.Local.ViewModels
 
         private void CreateRoom(object obj)
         {
-            _joinGame.Invoke(obj);
+            _menuService.ChangeMenu(34);
         }
     }
 }

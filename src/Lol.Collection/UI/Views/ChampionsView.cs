@@ -1,16 +1,14 @@
 ﻿using DevNcore.LayoutSupport.Leagueoflegends.Controls;
+using Jamesnet.Wpf.Controls;
 using System.Windows;
 
 namespace Lol.Collection.UI.Views
 {
-    public class ChampionsView : View
+    public class ChampionsView : JamesContent
     {
-        #region DefaultStyleKey
-
         static ChampionsView()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(ChampionsView), new FrameworkPropertyMetadata(typeof(ChampionsView)));
         }
-        #endregion
     }
 }
