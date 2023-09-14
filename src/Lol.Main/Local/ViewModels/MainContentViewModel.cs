@@ -34,6 +34,7 @@ using CommunityToolkit.Mvvm.Input;
 using Lol.Support.Local.Models;
 using Lol.Support.Local.Helpers;
 using Prism.Ioc;
+using System.Windows.Media.Imaging;
 
 namespace Lol.Main.Local.ViewModels
 {
@@ -80,6 +81,7 @@ namespace Lol.Main.Local.ViewModels
             TotalSubMenus = _menuService.GetSubMenus();
 
             _menuService.MenuChanged += MenuService_MenuChanged;
+            _menuService.BackgroundChanged += _menuService_BackgroundChanged;
 
             _winWork = new();
             _modalWork = new(this);
@@ -134,29 +136,14 @@ namespace Lol.Main.Local.ViewModels
                 key = value.Seq;
                 content = value.Seq switch
                 {
-                    9 => new Overview().SetVM(new OverviewModel()),
-                    12 => new HubView().SetVM(new HubViewModel()),
-                    15 => new WinnersView().SetVM(new WinnersViewModel()),
-                    17 => new ChampionsView().SetVM(new ChampionsViewModel()),
-                    18 => new SkinView().SetVM(new SkinsViewModel()),
-                    20 => new RuneView().SetVM(new RuneViewModel()),
-                    21 => new SpellsView().SetVM(new SpellsViewModel(BackgroundImage)),
-                    22 => new ItemView().SetVM(new ItemViewModel()),
-                    26 => new store.HomeView().SetVM(new storeVM.HomeViewModel()),
-                    // TODO: [Elena] 클래스 이름 중복 관련 임시 처리 
-                    27 => new store.ChampionsView().SetVM(new storeVM.ChampionsViewModel()),
-                    28 => new store.SkinView().SetVM(new storeVM.SkinViewModel()),
+                    9 or 33 or 37 or 40 or 41 or 12 or 15 or 17 or 18 or 20 or 21 or 22 or 26 or 27 or 28
+                        => FindContent(value.ContentName),
+
                     29 => new store.TFTView().SetVM(new storeVM.TFTViewModel()),
                     30 => new store.LootView().SetVM(new storeVM.LootViewModel()),
                     31 => new store.EtcView().SetVM(new storeVM.EtcViewModel()),
                     32 => new SummaryView().SetVM(new SummaryViewModel()),
-                    //33 => new HistoryView().SetVM(new HistoryViewModel()),
-                    33 => FindView("HistoryContent"),
                     35 => new HighlightView().SetVM(new HighlightViewModel()),
-                    //37 => new PVPView().SetVM(new PVPViewModel(PvpConfirm)),
-                    37 => FindView("PvpContent"),
-                    40 => new CreateCustomView().SetVM(new CreateCustomViewModel(CreateCustomConfirm)),
-                    41 => new JoinCustomView().SetVM(new JoinCustomViewModel(JoinCustomConfirm)),
                     42 => new SummonersRiftView().SetVM(new SummonersRiftViewModel(Friends, GoHome, ModeChange)),
                     43 => new CustomGameRoomView().SetVM(new CustomGameRoomViewModel(Friends, GoHome, ModeChange)),
                     44 => new AvatarView().SetVM(new AvatarViewModel()),
@@ -187,7 +174,7 @@ namespace Lol.Main.Local.ViewModels
             CurrentSeq = key;
         }
 
-        private object FindView(string name)
+        private object FindContent(string name)
         {
             IViewable view = _containerProvider.Resolve<IViewable>(name);
             return view;
@@ -201,27 +188,6 @@ namespace Lol.Main.Local.ViewModels
             }
             CurrentMenu = Menus.First();
             MenuSelect(CurrentMenu);
-        }
-
-        private void PvpConfirm(object value)
-        {
-            // TODO: [Kevin] 게임시작 > 확인 버튼 클릭시 화면 Change, 변경 필히 필요
-            SubMenus = null;
-            CurrentSubMenu =TotalSubMenus[33];
-        }
-
-        private void CreateCustomConfirm(object value)
-        {
-            // TODO: [Lucas] 사용자설정게임 -> 확인 버튼시 게임구성 화면 작업예정
-            SubMenus = null;
-            CurrentSubMenu = TotalSubMenus[34];
-        }
-
-        private void JoinCustomConfirm(object value)
-        {
-            // TODO: [Lucas] 사용자설정게임 -> 확인 버튼시 게임구성 화면 작업예정
-            SubMenus = null;
-            CurrentSubMenu =TotalSubMenus[34] ;
         }
 
         private void GoHome()
@@ -255,6 +221,11 @@ namespace Lol.Main.Local.ViewModels
         {
             SubMenus = null;
             CurrentSubMenu = TotalSubMenus[e.MenuId];
+        }
+
+        private void _menuService_BackgroundChanged(object sender, BackgroundChangedEventArgs e)
+        {
+            BackgroundImage.Source = new BitmapImage(e.NewUri);
         }
     }
 }

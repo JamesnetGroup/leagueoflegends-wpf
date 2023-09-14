@@ -6,43 +6,30 @@ using System.Linq;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
 using DevNcore.UI.Foundation.Mvvm;
+using Jamesnet.Wpf.Mvvm;
+using Lol.Support.Local.Helpers;
 
 namespace Lol.Collection.Local.ViewModel
 {
-    public class SpellsViewModel : ObservableObject
+    public class SpellsViewModel : ObservableBase
     {
-        #region Variables 
-
         private Spells _currentSpell;
-        private readonly Image _backgroundImage;
-        #endregion
-
-        #region Spells
+        private readonly MenuService _menuService;
 
         public List<Spells> Spells { get; set; }
-        #endregion
-
-        #region CurrentSpell
 
         public Spells CurrentSpell
         {
             get => _currentSpell;
             set { _currentSpell = value; OnPropertyChanged(); SpellChanged(value); }
         }
-        #endregion
 
-        #region Constructor
-
-        public SpellsViewModel(Image backgroundImage)
+        public SpellsViewModel(MenuService menuService)
         {
             Spells = new SpellApi().GetSpells();
             _currentSpell = Spells.First();
-            _backgroundImage = backgroundImage;
-
+            _menuService = menuService;
         }
-        #endregion
-
-        #region SpellChanged
 
         private void SpellChanged(Spells value)
         {
@@ -51,9 +38,9 @@ namespace Lol.Collection.Local.ViewModel
                 // TODO: [Lucas] 임시로 배경화면 변경 부분 처리
                 // (전체 구조가 보완되어야 함)
                 var uri = new Uri(@"/Lol.Resources;component/Images/leona.jpg", UriKind.RelativeOrAbsolute);
-                _backgroundImage.Source = new BitmapImage(uri);
+
+                _menuService.ChangeBackground(uri);
             }
         }
-        #endregion
     }
 }

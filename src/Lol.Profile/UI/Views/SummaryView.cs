@@ -1,16 +1,14 @@
 ﻿using DevNcore.LayoutSupport.Leagueoflegends.Controls;
+using Jamesnet.Wpf.Controls;
 using System.Windows;
 
 namespace Lol.Profile.UI.Views
 {
-    public class SummaryView : View
+    public class SummaryView : JamesContent
     {
-        #region DefaultStyleKey
-
         static SummaryView()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(SummaryView), new FrameworkPropertyMetadata(typeof(SummaryView)));
         }
-        #endregion
     }
 }

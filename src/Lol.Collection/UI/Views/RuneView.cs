@@ -1,9 +1,10 @@
 ﻿using DevNcore.LayoutSupport.Leagueoflegends.Controls;
+using Jamesnet.Wpf.Controls;
 using System.Windows;
 
 namespace Lol.Collection.UI.Views
 {
-    public class RuneView : View
+    public class RuneView : JamesContent
     {
         #region DefaultStyleKey
 

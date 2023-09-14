@@ -1,16 +1,15 @@
 ﻿using DevNcore.LayoutSupport.Leagueoflegends.Controls;
+using Jamesnet.Wpf.Controls;
 using System.Windows;
 
 namespace Lol.Store.UI.Views
 {
-    public class SkinView : View
+    public class StoreSkinContent : JamesContent
     {
-        #region DefaultStyleKey
 
-        static SkinView()
+        static StoreSkinContent()
         {
-            DefaultStyleKeyProperty.OverrideMetadata(typeof(SkinView), new FrameworkPropertyMetadata(typeof(SkinView)));
+            DefaultStyleKeyProperty.OverrideMetadata(typeof(StoreSkinContent), new FrameworkPropertyMetadata(typeof(StoreSkinContent)));
         }
-        #endregion
     }
 }

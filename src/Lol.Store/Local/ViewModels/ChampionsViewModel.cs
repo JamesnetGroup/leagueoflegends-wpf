@@ -5,13 +5,12 @@ using System.Linq;
 using DevNcore.UI.Foundation.Mvvm;
 using Lol.Data.Store;
 using Lol.Data.Enums;
+using Jamesnet.Wpf.Mvvm;
 
 namespace Lol.Store.Local.ViewModels
 {
-    public class ChampionsViewModel : ObservableObject
+    public class StoreChampionsViewModel : ObservableBase
     {
-        #region Variables
-
         private List<StoreDetails> _champMenus;
         private List<StoreChampSortings> _sorting;
         private List<StoreItems> _storeChamps;
@@ -20,82 +19,55 @@ namespace Lol.Store.Local.ViewModels
         private StoreDetails _currentChampMenu;
         private StoreChampSortings _currentSorting;
         private string _searchText;
-        #endregion
-
-        #region ChampMenus
 
         public List<StoreDetails> ChampMenus
         {
             get { return _champMenus; }
             set { _champMenus = value; OnPropertyChanged(); }
         }
-        #endregion
-
-        #region CurrentChampMenu
 
         public StoreDetails CurrentChampMenu
         {
             get { return _currentChampMenu; }
             set { _currentChampMenu = value; OnPropertyChanged(); MenuChanged(value); }
         }
-        #endregion
-
-        #region Sorting
 
         public List<StoreChampSortings> Sorting
         {
             get { return _sorting; }
             set { _sorting = value; OnPropertyChanged(); }
         }
-        #endregion
-
-        #region CurrentSorting
 
         public StoreChampSortings CurrentSorting
         {
             get { return _currentSorting; }
             set { _currentSorting = value; OnPropertyChanged(); }
         }
-        #endregion
-
-        #region StoreChamps
 
         public List<StoreItems> StoreChamps
         {
             get { return _storeChamps; }
             set { _storeChamps = value; OnPropertyChanged(); }
         }
-        #endregion
-
-        #region SearchText
 
         public string SearchText
         {
             get { return _searchText; }
             set { _searchText = value; OnPropertyChanged(); SearchTextChanged(value); }
         }
-        #endregion
-
-        #region Filters
 
         public List<FilterModel> Filters
         {
             get { return _filters; }
             set { _filters = value; OnPropertyChanged(); }
         }
-        #endregion
 
-        #region Constructor
-
-        public ChampionsViewModel()
+        public StoreChampionsViewModel()
         {
             ChampMenus = new StoreApi().GetCategory(1);
             CurrentChampMenu = ChampMenus.First();
             StoreChamps = new StoreApi().GetChamps();
         }
-        #endregion
-
-        #region MenuChanged
 
         private void MenuChanged(StoreDetails value)
         {
@@ -105,9 +77,6 @@ namespace Lol.Store.Local.ViewModels
             Sorting = new StoreApi().GetSorting(id);
             CurrentSorting = Sorting.First();          
         }
-        #endregion
-
-        #region SearchTextChanged
 
         private void SearchTextChanged(string _)
         {
@@ -116,9 +85,6 @@ namespace Lol.Store.Local.ViewModels
                 //
             }
         }
-        #endregion
-
-        #region Temp data
 
         public static List<FilterModel> filters = new()
         {
@@ -149,6 +115,5 @@ namespace Lol.Store.Local.ViewModels
 
             return source;
         }
-        #endregion
     }
 }

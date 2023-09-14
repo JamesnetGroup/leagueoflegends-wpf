@@ -28,6 +28,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Lol.Database\Lol.Database.csproj" />
     <ProjectReference Include="..\Lol.Data\Lol.Data.csproj" />
+    <ProjectReference Include="..\Lol.Support\Lol.Support.csproj" />
   </ItemGroup>
 
   <ItemGroup>

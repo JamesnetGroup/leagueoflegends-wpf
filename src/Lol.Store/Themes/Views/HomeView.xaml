@@ -5,10 +5,10 @@
 					xmlns:units="clr-namespace:Lol.Store.UI.Units"
                     xmlns:ctrls="clr-namespace:DevNcore.LayoutSupport.Leagueoflegends.Controls;assembly=DevNcore.LayoutSupport.Leagueoflegends">
 
-    <Style TargetType="{x:Type views:HomeView}">
+    <Style TargetType="{x:Type views:StoreHomeContent}">
 		<Setter Property="Template">
 			<Setter.Value>
-                <ControlTemplate TargetType="{x:Type views:HomeView}">
+                <ControlTemplate TargetType="{x:Type views:StoreHomeContent}">
                     <ctrls:BasicScroll Padding="0 0 30 0">
                         <Grid Margin="40 0 0 0">
                             <Grid.RowDefinitions>

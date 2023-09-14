@@ -1,9 +1,10 @@
 ﻿using DevNcore.LayoutSupport.Leagueoflegends.Controls;
+using Jamesnet.Wpf.Controls;
 using System.Windows;
 
 namespace Lol.Collection.UI.Views
 {
-    public class SpellsView : View
+    public class SpellsView : JamesContent
     {
         #region DefaultStyleKey
 

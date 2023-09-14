@@ -1,16 +1,14 @@
 ﻿using DevNcore.LayoutSupport.Leagueoflegends.Controls;
+using Jamesnet.Wpf.Controls;
 using System.Windows;
 
 namespace Lol.Clash.UI.Views
 {
-    public class HubView : View
+    public class HubView : JamesContent
     {
-        #region DefaultStyleKey
-
         static HubView()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(HubView), new FrameworkPropertyMetadata(typeof(HubView)));
         }
-        #endregion
     }
 }

@@ -1,17 +1,14 @@
 ﻿using DevNcore.LayoutSupport.Leagueoflegends.Controls;
+using Jamesnet.Wpf.Controls;
 using System.Windows;
 
 namespace Lol.Profile.UI.Views
 {
-    public class HighlightView : View
+    public class HighlightView : JamesContent
     {
-        #region DefalutStyleKey
-
-
         static HighlightView()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(HighlightView), new FrameworkPropertyMetadata(typeof(HighlightView)));
         }
-        #endregion
     }
 }

@@ -1,4 +1,5 @@
 ﻿using DevNcore.LayoutSupport.Leagueoflegends.Controls;
+using Jamesnet.Wpf.Controls;
 using System.Windows;
 
 namespace Lol.Store.UI.Views
@@ -32,7 +33,7 @@ namespace Lol.Store.UI.Views
     ///     <MyNamespace:EtcView/>
     ///
     /// </summary>
-    public class EtcView : View
+    public class EtcView : JamesContent
     {
         #region DefaultStyleKey
 

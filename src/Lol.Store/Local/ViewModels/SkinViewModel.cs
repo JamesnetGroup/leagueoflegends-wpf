@@ -1,4 +1,5 @@
 ﻿using DevNcore.UI.Foundation.Mvvm;
+using Jamesnet.Wpf.Mvvm;
 using Lol.Data.Enums;
 using Lol.Data.Store;
 using Lol.Database.Controller;
@@ -8,10 +9,8 @@ using System.Linq;
 
 namespace Lol.Store.Local.ViewModels
 {
-    public class SkinViewModel : ObservableObject
+    public class StoreSkinViewModel : ObservableBase
     {
-        #region Variables
-
         private List<StoreDetails> _skinMenus;
         private StoreDetails _currentSkinMenu;
 
@@ -21,75 +20,50 @@ namespace Lol.Store.Local.ViewModels
         private List<FilterModel> _filters;
 
         private List<StoreItems> _storeSkins;
-        #endregion
-
-        #region SkinMenus
 
         public List<StoreDetails> SkinMenus
         {
             get { return _skinMenus; }
             set { _skinMenus = value; OnPropertyChanged(); }
         }
-        #endregion
-
-        #region CurrentSkinMenu
 
         public StoreDetails CurrentSkinMenu
         {
             get { return _currentSkinMenu; }
             set { _currentSkinMenu = value; OnPropertyChanged(); MenuChanged(value); }
         }
-        #endregion
-
-        #region Sorting
 
         public List<StoreChampSortings> Sorting
         {
             get { return _sorting; }
             set { _sorting = value; OnPropertyChanged(); }
         }
-        #endregion
-
-        #region CurrentSorting
 
         public StoreChampSortings CurrentSorting
         {
             get { return _currentSorting; }
             set { _currentSorting = value; OnPropertyChanged(); }
         }
-        #endregion
-
-        #region Filters
 
         public List<FilterModel> Filters
         {
             get { return _filters; }
             set { _filters = value; OnPropertyChanged(); }
         }
-        #endregion
-
-        #region StoreSkins
 
         public List<StoreItems> StoreSkins
         {
             get { return _storeSkins; }
             set { _storeSkins = value; OnPropertyChanged(); }
         }
-        #endregion
 
-
-        #region Constructor
-
-        public SkinViewModel()
+        public StoreSkinViewModel()
         {
             StoreApi api = new StoreApi();
             SkinMenus = api.GetCategory(2);
             CurrentSkinMenu = SkinMenus.First();
             StoreSkins = api.GetSkins();
         }
-        #endregion
-
-        #region MenuChanged
 
         private void MenuChanged(StoreDetails value)
         {
@@ -100,9 +74,6 @@ namespace Lol.Store.Local.ViewModels
             Sorting = new StoreApi().GetSorting(id);
             CurrentSorting = Sorting.First();
         }
-        #endregion
-
-        #region Temp data
 
         public static List<FilterModel> filters = new()
         {
@@ -130,8 +101,5 @@ namespace Lol.Store.Local.ViewModels
 
             return source;
         }
-        #endregion
     }
-
-
 }
