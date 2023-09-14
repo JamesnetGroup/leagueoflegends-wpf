@@ -1,5 +1,4 @@
-﻿using DevNcore.UI.Foundation.Mvvm;
-using Jamesnet.Wpf.Mvvm;
+﻿using Jamesnet.Wpf.Mvvm;
 using Lol.Data.Enums;
 using Lol.Data.Store;
 using Lol.Database.Controller;

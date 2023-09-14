@@ -3,7 +3,6 @@ using Jamesnet.Wpf.Mvvm;
 using Lol.Database.Controller;
 using Lol.Database.Entites.Schema;
 using Lol.Support.Local.Helpers;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
