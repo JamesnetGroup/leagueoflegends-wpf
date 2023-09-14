@@ -136,17 +136,11 @@ namespace Lol.Main.Local.ViewModels
                 key = value.Seq;
                 content = value.Seq switch
                 {
-                    9 or 33 or 37 or 40 or 41 or 12 or 15 or 17 or 18 or 20 or 21 or 22 or 26 or 27 or 28
+                    9 or 33 or 37 or 40 or 41 or 12 or 15 or 17 or 18 or 20 or 21 or 22 or 26 or 27 or 28 or 29 or 30 or 31 or 32 or 35 or 44
                         => FindContent(value.ContentName),
 
-                    29 => new store.TFTView().SetVM(new storeVM.TFTViewModel()),
-                    30 => new store.LootView().SetVM(new storeVM.LootViewModel()),
-                    31 => new store.EtcView().SetVM(new storeVM.EtcViewModel()),
-                    32 => new SummaryView().SetVM(new SummaryViewModel()),
-                    35 => new HighlightView().SetVM(new HighlightViewModel()),
                     42 => new SummonersRiftView().SetVM(new SummonersRiftViewModel(Friends, GoHome, ModeChange)),
                     43 => new CustomGameRoomView().SetVM(new CustomGameRoomViewModel(Friends, GoHome, ModeChange)),
-                    44 => new AvatarView().SetVM(new AvatarViewModel()),
                     _ => new EmptyContent()
                 };
                 // TODO: [Elena] Store의 경우 SubMenu마다 Background가 동일하여 부모Seq로 처리하려고 추가함. 

@@ -20,6 +20,9 @@ namespace Leagueoflegends.Properties
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            containerRegistry.RegisterSingleton<IViewable, SummaryView>("SummaryContent");
+            containerRegistry.RegisterSingleton<IViewable, HighlightView>("HighlightContent");
+            containerRegistry.RegisterSingleton<IViewable, AvatarView>("AvatarContent");
             containerRegistry.RegisterSingleton<IViewable, TFTView>("TFTContent");
             containerRegistry.RegisterSingleton<IViewable, LootView>("LootContent");
             containerRegistry.RegisterSingleton<IViewable, EtcView>("EtcContent");
