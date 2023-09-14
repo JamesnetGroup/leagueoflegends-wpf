@@ -43,7 +43,7 @@ namespace Lol.Support.Local.Helpers
                 new SubMenuInfo(9, 0, "OVERVIEW", "OverViewContent"),
                 new SubMenuInfo(10, 0, "PRESEASON"),
                 new SubMenuInfo(11, 0, "PATCH NOTES"),
-                new SubMenuInfo(44, 0, "AVATAR CREATE"),
+                new SubMenuInfo(44, 0, "AVATAR CREATE", "AvatarContent"),
 
                 new SubMenuInfo(12, 2, "HUB", "HubContent"),
                 new SubMenuInfo(13, 2, "FIND A TEAM"),
@@ -64,14 +64,14 @@ namespace Lol.Support.Local.Helpers
                 new SubMenuInfo(26, 7, "FEATURED", "StoreHomeContent"),
                 new SubMenuInfo(27, 7, "CHAMPIONS", "StoreChampionsContent"),
                 new SubMenuInfo(28, 7, "SKINS", "StoreSkinContent"),
-                new SubMenuInfo(29, 7, "TFT"),
-                new SubMenuInfo(30, 7, "LOOT"),
-                new SubMenuInfo(31, 7, "ACCESSORIES"),
+                new SubMenuInfo(29, 7, "TFT", "TFTContent"),
+                new SubMenuInfo(30, 7, "LOOT", "LootContent"),
+                new SubMenuInfo(31, 7, "ACCESSORIES", "EtcContent"),
 
-                new SubMenuInfo(32, 3, "SUMMARY"),
+                new SubMenuInfo(32, 3, "SUMMARY", "SummaryContent"),
                 new SubMenuInfo(33, 3, "MATCH HISTORY", "HistoryContent"),
                 new SubMenuInfo(34, 3, "RANKED"),
-                new SubMenuInfo(35, 3, "HIGHLIGHTS"),
+                new SubMenuInfo(35, 3, "HIGHLIGHTS", "HighlightContent"),
                 new SubMenuInfo(36, 3, "STATS"),
 
                 new SubMenuInfo(37, 8, "PVP", "PvpContent"),
