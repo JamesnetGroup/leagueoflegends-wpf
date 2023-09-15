@@ -27,18 +27,10 @@
                                     <ColumnDefinition Width="*"/>
                                     <ColumnDefinition Width="225"/>
                                 </Grid.ColumnDefinitions>
-
-                                <Grid Grid.Row="0" Grid.ColumnSpan="2"
-                                      Background="Transparent"
-                                      VerticalAlignment="Top"
-                                      Height="81">
-                                    <Border x:Name="PART_DragBar"
-                                            Background="Transparent"/>
+                                <Grid Grid.Row="0" Grid.ColumnSpan="2" Background="Transparent" VerticalAlignment="Top" Height="81">
+                                    <Border x:Name="PART_DragBar" Background="Transparent"/>
                                 </Grid>
-
-                                <Border Grid.Row="0"
-                                        BorderBrush="#553D4143"
-                                        BorderThickness="0 0 0 1">
+                                <Border Grid.Row="0" BorderBrush="#553D4143" BorderThickness="0 0 0 1">
                                     <Grid>
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="Auto"/>
@@ -53,12 +45,8 @@
                                         <units:Currency Grid.Column="2"/>
                                     </Grid>
                                 </Border>
-
-                                <Grid Grid.RowSpan="2" Grid.Column="1"
-                                  Width="225" Height="81"
-                                  VerticalAlignment="Top">
-                                    <Border Background="#FF010A13"
-                                        IsHitTestVisible="False"/>
+                                <Grid Grid.RowSpan="2" Grid.Column="1" Width="225" Height="81" VerticalAlignment="Top">
+                                    <Border Background="#FF010A13" IsHitTestVisible="False"/>
                                     <units:WindowBar/>
                                     <units:Profile/>
                                 </Grid>
@@ -66,11 +54,10 @@
                                 <Grid Grid.Row="1" Grid.Column="0">
                                     <james:JamesRegion RegionName="ContentsRegion"/>
                                     <units:SubMenu HorizontalAlignment="Left"
-                                               VerticalAlignment="Top"/>
+                                                   VerticalAlignment="Top"/>
                                 </Grid>
 
-                                <Grid Grid.Row="1" Grid.Column="1"
-                                  Background="#FF010A13">
+                                <Grid Grid.Row="1" Grid.Column="1" Background="#FF010A13">
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="Auto"/>
                                         <RowDefinition Height="*"/>
@@ -82,16 +69,8 @@
                                     <units:ChatTool Grid.Row="2"/>
                                 </Grid>
 
-                                <Border Grid.ColumnSpan="2"
-                                    Background="#785a28"
-                                    VerticalAlignment="Top"
-                                    Height="2"/>
-
-                                <Border Grid.ColumnSpan="2"
-                                    SnapsToDevicePixels="True"
-                                    UseLayoutRounding="True"
-                                    BorderBrush="#22ffffff"
-                                    BorderThickness="0 0 0 1"/>
+                                <Border Grid.ColumnSpan="2" Background="#785a28" VerticalAlignment="Top" Height="2"/>
+                                <Border Grid.ColumnSpan="2" SnapsToDevicePixels="True" UseLayoutRounding="True" BorderBrush="#22ffffff" BorderThickness="0 0 0 1"/>
 
                                 <james:JamesRegion Grid.RowSpan="2" Grid.ColumnSpan="2" RegionName="ModalRegion"/>
                             </Grid>
