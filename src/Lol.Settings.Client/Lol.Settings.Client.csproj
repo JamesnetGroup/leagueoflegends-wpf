@@ -33,22 +33,22 @@
     <Page Update="Themes\Units\InputStatus.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Views\AlarmView.xaml">
+    <Page Update="Themes\Views\AlarmContent.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Views\BlockView.xaml">
+    <Page Update="Themes\Views\BlockContent.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Views\ChatView.xaml">
+    <Page Update="Themes\Views\ChatContent.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Views\GeneralView.xaml">
+    <Page Update="Themes\Views\GeneralContent.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Views\SoundView.xaml">
+    <Page Update="Themes\Views\SoundContent.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Views\VoiceView.xaml">
+    <Page Update="Themes\Views\VoiceContent.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

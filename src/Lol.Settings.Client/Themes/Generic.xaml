@@ -6,11 +6,11 @@
 		<ResourceDictionary Source="/Lol.Settings.Client;component/Themes/Units/InputPress.xaml"/>
 		<ResourceDictionary Source="/Lol.Settings.Client;component/Themes/Units/InputStatus.xaml"/>
 		<ResourceDictionary Source="/Lol.Settings.Client;component/Themes/Units/InputSetting.xaml"/>
-		<ResourceDictionary Source="/Lol.Settings.Client;component/Themes/Views/AlarmView.xaml"/>
-		<ResourceDictionary Source="/Lol.Settings.Client;component/Themes/Views/BlockView.xaml"/>
-		<ResourceDictionary Source="/Lol.Settings.Client;component/Themes/Views/ChatView.xaml"/>
-		<ResourceDictionary Source="/Lol.Settings.Client;component/Themes/Views/GeneralView.xaml"/>
-		<ResourceDictionary Source="/Lol.Settings.Client;component/Themes/Views/SoundView.xaml"/>
-		<ResourceDictionary Source="/Lol.Settings.Client;component/Themes/Views/VoiceView.xaml"/>
+		<ResourceDictionary Source="/Lol.Settings.Client;component/Themes/Views/AlarmContent.xaml"/>
+		<ResourceDictionary Source="/Lol.Settings.Client;component/Themes/Views/BlockContent.xaml"/>
+		<ResourceDictionary Source="/Lol.Settings.Client;component/Themes/Views/ChatContent.xaml"/>
+		<ResourceDictionary Source="/Lol.Settings.Client;component/Themes/Views/GeneralContent.xaml"/>
+		<ResourceDictionary Source="/Lol.Settings.Client;component/Themes/Views/SoundContent.xaml"/>
+		<ResourceDictionary Source="/Lol.Settings.Client;component/Themes/Views/VoiceContent.xaml"/>
 	</ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

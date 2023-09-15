@@ -89,10 +89,10 @@
 		<Setter Property="Text" Value="{Binding ElementName=sldMusic, Path=Value, StringFormat={}음악 볼륨: {0:N0}}"/>
 	</Style>
 
-	<Style TargetType="{x:Type views:SoundView}">
+	<Style TargetType="{x:Type views:SoundContent}">
 		<Setter Property="Template">
 			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type views:SoundView}">
+				<ControlTemplate TargetType="{x:Type views:SoundContent}">
 					<StackPanel Margin="10 0 0 0">
 
 						<ctrls:CheckBox02 x:Name="chbMaster" Style="{StaticResource CHK.ONOFF}"/>

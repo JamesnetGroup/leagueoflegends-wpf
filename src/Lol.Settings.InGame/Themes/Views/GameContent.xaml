@@ -3,10 +3,10 @@
 					xmlns:views="clr-namespace:Lol.Settings.InGame.UI.Views"
 					xmlns:units="clr-namespace:Lol.Settings.InGame.UI.Units">
 	
-	<Style TargetType="{x:Type views:GameView}">
+	<Style TargetType="{x:Type views:GameContent}">
 		<Setter Property="Template">
 			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type views:GameView}">
+				<ControlTemplate TargetType="{x:Type views:GameContent}">
 					<StackPanel Margin="20 10 0 0">
 						<units:Graphic/>
 						<units:GameControl/>

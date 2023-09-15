@@ -1,43 +1,23 @@
-﻿using Lol.Data.Config;
+﻿using System.Collections.Generic;
+using System.Diagnostics;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using Jamesnet.Wpf.Mvvm;
+using Lol.Data.Config;
 using Lol.Data.Setting;
 using Lol.Data.Setting.Clients;
-using Lol.Foundation.Riotbase;
 using Lol.Database.Controller;
 using Lol.Database.Entites.Schema;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Windows.Input;
-using DevNcore.UI.Foundation.Mvvm;
+using Lol.Foundation.Riotbase;
 
 namespace Lol.Settings.Client.Local.ViewModels
 {
-    public class GeneralViewModel : ObservableObject
+    public partial class GeneralViewModel : ObservableBase
     {
-        #region Variables
-
+        [ObservableProperty]
         private List<Resolutions> _sizeList;
-        #endregion
-
-        #region Commands 
-
-        public ICommand LinkCommand { get; set; }
-        #endregion
-
-        #region Model
 
         public GeneralModel Model { get; set; }
-        #endregion
-
-        #region SizeList
-
-        public List<Resolutions> SizeList
-        {
-            get => _sizeList;
-            set { _sizeList = value; OnPropertyChanged(); }
-        }
-        #endregion
-
-        #region Constructor
 
         public GeneralViewModel()
         {
@@ -47,14 +27,10 @@ namespace Lol.Settings.Client.Local.ViewModels
             config.Settings ??= new SettingModel();
 
             Model = config.Settings.General;
-
-            LinkCommand = new RelayCommand<object>(SearchLink);
         }
-        #endregion
 
-        #region SearchLink
-
-        private void SearchLink(object obj)
+        [RelayCommand]
+        private void Link(object obj)
         {
             string Uri = "https://na.leagueoflegends.com/en-us/event/league-of-legends-code-of-conduct/";
 
@@ -63,6 +39,5 @@ namespace Lol.Settings.Client.Local.ViewModels
                 UseShellExecute = true
             });
         }
-        #endregion
     }
 }

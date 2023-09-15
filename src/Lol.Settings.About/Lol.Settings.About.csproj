@@ -27,7 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="UI\Views\VerificationView.cs">
+    <Compile Update="UI\Views\VerificationContent.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
