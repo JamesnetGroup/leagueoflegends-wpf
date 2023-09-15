@@ -172,7 +172,7 @@
 							   StaysOpen="False" 
 							   HorizontalOffset="-168" 
 							   VerticalOffset="10">	
-							<units:FriendsSortPopup DataContext="{Binding Options}"/>
+							<units:FriendsSortPopup/>
 						</Popup>
 					</Grid>
 				</ControlTemplate>
