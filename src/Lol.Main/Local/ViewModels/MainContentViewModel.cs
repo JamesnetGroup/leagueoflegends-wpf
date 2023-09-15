@@ -2,7 +2,6 @@
 using System.Linq;
 using System.Windows.Controls;
 using System.Collections.Generic;
-using Lol.Main.Local.Work;
 using Lol.Database.Controller;
 using Lol.Database.Entites.Schema;
 using Lol.Database.Collection;
@@ -16,6 +15,13 @@ using Lol.Support.Local.Helpers;
 using Prism.Ioc;
 using System.Windows.Media.Imaging;
 using Prism.Regions;
+using System.Windows;
+using Lol.Friends.Local.ViewModel;
+using Lol.Friends.UI.Views;
+using Lol.Settings.Local.ViewModel;
+using Lol.Settings.UI.Views;
+using DevNcore.LayoutSupport.Leagueoflegends.Controls.Primitives;
+using Lol.Data.Main;
 
 namespace Lol.Main.Local.ViewModels
 {
@@ -25,10 +31,9 @@ namespace Lol.Main.Local.ViewModels
         private readonly FriendsService _friendsService;
         private readonly IContainerProvider _containerProvider;
         private readonly IRegionManager _regionManager;
-        private readonly WindowWork _winWork;
-        private readonly ModalWork _modalWork;
         private MainMenuInfo _mainMenu;
         private Image BackgroundImage;
+        private readonly Dictionary<Type, IRiotUI> _modals;
 
         [ObservableProperty]
         private object _modalContent;
@@ -45,8 +50,15 @@ namespace Lol.Main.Local.ViewModels
         [ObservableProperty]
         private int _parentSeq;
 
-        public FriendsSortWork Options { get; }
 
+        public List<OptionModel> SortTypes { get; set; }
+
+        private OptionModel _currentSortType;
+        public OptionModel CurrentSortType
+        {
+            get { return _currentSortType; }
+            set { _currentSortType = value; OnPropertyChanged(); }
+        }
         [ObservableProperty]
         private List<MainMenuInfo> _menus;
         [ObservableProperty]
@@ -60,16 +72,15 @@ namespace Lol.Main.Local.ViewModels
             _friendsService = friendsService;
             _containerProvider = containerProvider;
             _regionManager = regionManager;
-            Menus = _menuService.GetMenus();
             TotalSubMenus = _menuService.GetSubMenus();
 
             _menuService.MenuChanged += MenuService_MenuChanged;
             _menuService.BackgroundChanged += _menuService_BackgroundChanged;
 
-            _winWork = new();
-            _modalWork = new(this);
-
-            Options = new();
+            Menus = _menuService.GetMenus();
+            SortTypes = GetSortTypes();
+            CurrentSortType = SortTypes.First();
+            _modals = new();
 
             List<IFriendsList> friends = new FriendsApi().GetMyFriends(0);
             Friends = new(friends);
@@ -80,19 +91,19 @@ namespace Lol.Main.Local.ViewModels
         [RelayCommand]
         private void Close(object value)
         {
-            _winWork.DoClosing(value);
+            Window.GetWindow((UIElement)value).Close();
         }
 
         [RelayCommand]
         private void Minimize(object value)
         {
-            _winWork.DoMinizing(value);
+            Window.GetWindow((UIElement)value).WindowState = WindowState.Minimized;
         }
 
         [RelayCommand]
         private void Modal(Type value)
         {
-            _modalWork.SwitchModal(value);
+            SwitchModal(value);
         }
 
         [RelayCommand]
@@ -198,6 +209,51 @@ namespace Lol.Main.Local.ViewModels
         private void _menuService_BackgroundChanged(object sender, BackgroundChangedEventArgs e)
         {
             BackgroundImage.Source = new BitmapImage(e.NewUri);
+        }
+
+        internal void SwitchModal(Type type)
+        {
+            IRiotUI content = null;
+
+            if (typeof(SettingView) == type) content = SwitchSettingView(type);
+            if (typeof(AddFriendsView) == type) content = SwitchAddFriendsView(type);
+
+            ModalContent = content;
+        }
+
+        private IRiotUI SwitchSettingView(Type type)
+        {
+            if (!_modals.ContainsKey(type))
+            {
+                _modals.Add(type, new SettingView().SetVM(new SettingViewModel(CloseModal)));
+            }
+
+            return _modals[type];
+        }
+
+        private IRiotUI SwitchAddFriendsView(Type type)
+        {
+            if (!_modals.ContainsKey(type))
+            {
+                _modals.Add(type, new AddFriendsView().SetVM(new AddFriendsViewModel(CloseModal)));
+            }
+
+            return _modals[type];
+        }
+
+        private void CloseModal(IRiotUI ui)
+        {
+            ModalContent = null;
+        }
+
+        private List<OptionModel> GetSortTypes()
+        {
+            List<OptionModel> source = new()
+            {
+                new OptionModel { DisplayName = "Sort Alphabetically" },
+                new OptionModel { DisplayName = "Sort by Status" }
+            };
+            return source;
         }
     }
 }
