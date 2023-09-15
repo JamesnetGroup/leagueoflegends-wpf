@@ -61,7 +61,11 @@
 							<ctrls:RiotButton Style="{StaticResource BTN.RESTORE}"/>
 
 							<!--MenuList-->
-							<units:MenuList/>
+							<units:MenuList 
+											Grid.Row="1" 
+							                Grid.RowSpan="2"
+											ItemsSource="{Binding SettingMenus }"
+											SelectedItem="{Binding CurrentSettingMenu}"/>
 							<Border Grid.Row="2" Background="{StaticResource VIEW.BDR}"/>
 
 							<!--CurrentContent-->
