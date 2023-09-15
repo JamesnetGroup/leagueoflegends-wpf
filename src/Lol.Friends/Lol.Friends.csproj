@@ -16,6 +16,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Lol.Database\Lol.Database.csproj" />
+    <ProjectReference Include="..\Lol.Support\Lol.Support.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Page Update="Themes\Generic.xaml">

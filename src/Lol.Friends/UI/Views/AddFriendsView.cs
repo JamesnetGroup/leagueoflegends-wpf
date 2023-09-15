@@ -1,16 +1,14 @@
 ﻿using DevNcore.LayoutSupport.Leagueoflegends.Controls;
+using Jamesnet.Wpf.Controls;
 using System.Windows;
 
 namespace Lol.Friends.UI.Views
 {
-    public class AddFriendsView : View
+    public class AddFriendsView : JamesContent
     {
-        #region DefaultStyleKey
-
         static AddFriendsView()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(AddFriendsView), new FrameworkPropertyMetadata(typeof(AddFriendsView)));
         }
-        #endregion
     }
 }

@@ -8,6 +8,7 @@ namespace Lol.Support.Local.Helpers
     {
         public event EventHandler<MenuChangedEventArgs> MenuChanged;
         public event EventHandler<BackgroundChangedEventArgs> BackgroundChanged;
+        public event EventHandler<EventArgs> ModalClosed;
 
         public void ChangeBackground(Uri uri)
         {
@@ -27,6 +28,11 @@ namespace Lol.Support.Local.Helpers
         public void ModeChange()
         {
             MenuChanged?.Invoke(this, new MenuChangedEventArgs("ModeChange"));
+        }
+
+        public void CloseModal()
+        {
+            ModalClosed?.Invoke(this, new EventArgs());
         }
 
         public List<MainMenuInfo> GetMenus()
