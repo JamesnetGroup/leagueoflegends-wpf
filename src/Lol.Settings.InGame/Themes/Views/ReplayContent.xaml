@@ -47,10 +47,10 @@
 		</Setter>
 	</Style>
 
-	<Style TargetType="{x:Type views:ReplayView}">
+	<Style TargetType="{x:Type views:ReplayContent}">
 		<Setter Property="Template">
 			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type views:ReplayView}">
+				<ControlTemplate TargetType="{x:Type views:ReplayContent}">
 					<StackPanel Margin="20 20 0 0">
 						<TextBlock Style="{StaticResource TXB.FOLDER}"/>
 						<TextBlock Style="{StaticResource TXB.SAVE}"/>

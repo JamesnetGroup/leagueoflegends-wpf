@@ -76,19 +76,19 @@
     <Page Update="Themes\Units\Sound\SoundControl.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Views\GameSoundView.xaml">
+    <Page Update="Themes\Views\GameSoundContent.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Views\GameView.xaml">
+    <Page Update="Themes\Views\GameContent.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Views\HotKeyView.xaml">
+    <Page Update="Themes\Views\HotKeyContent.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Views\InterfaceView.xaml">
+    <Page Update="Themes\Views\InterfaceContent.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Views\ReplayView.xaml">
+    <Page Update="Themes\Views\ReplayContent.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

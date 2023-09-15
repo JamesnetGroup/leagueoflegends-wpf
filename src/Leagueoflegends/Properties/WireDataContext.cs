@@ -19,6 +19,12 @@ using Lol.MyShop.Local.ViewModel;
 using Lol.MyShop.UI.Views;
 using Lol.Profile.Local.ViewModels;
 using Lol.Profile.UI.Views;
+using Lol.Settings.About.Local.ViewModels;
+using Lol.Settings.About.UI.Views;
+using Lol.Settings.Client.Local.ViewModels;
+using Lol.Settings.Client.UI.Views;
+using Lol.Settings.InGame.Local.ViewModels;
+using Lol.Settings.InGame.UI.Views;
 using Lol.Settings.Local.ViewModel;
 using Lol.Settings.UI.Views;
 using Lol.Store.Local.ViewModels;
@@ -33,7 +39,21 @@ namespace Leagueoflegends.Properties
         protected override void Match(ViewModelLocatorCollection items)
         {
             items.Register<AddFriendsView, AddFriendsViewModel>();
-            items.Register<SettingView, SettingViewModel>();
+            
+            items.Register<SettingContent, SettingViewModel>();
+            items.Register<VerificationContent, VerificationViewModel>();
+            items.Register<AlarmContent, AlarmViewModel>();
+            items.Register<BlockContent, BlockViewModel>();
+            items.Register<ChatContent, ChatViewModel>();
+            items.Register<GeneralContent, GeneralViewModel>();
+            items.Register<SoundContent, SoundViewModel>();
+            items.Register<VoiceContent, VoiceViewModel>();
+            items.Register<GameContent, GameSoundViewModel>();
+            items.Register<GameSoundContent, GameViewModel>();
+            items.Register<HotKeyContent, HotKeyViewModel>();
+            items.Register<InterfaceContent, InterfaceViewModel>();
+            items.Register<ReplayContent, ReplayViewModel>();
+            
             items.Register<TeamFightView, TeamFightViewModel>();
             items.Register<LootView, LootViewModel>();
             items.Register<MyShopView, MyShopViewModel>();

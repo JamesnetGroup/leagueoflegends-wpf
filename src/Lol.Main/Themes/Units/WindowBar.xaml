@@ -59,7 +59,7 @@
 
 	<Style TargetType="{x:Type ToggleButton}"  x:Key="WIN.SETTINGS" >
 		<Setter Property="Command" Value="{Binding ModalCommand}"/>
-		<Setter Property="CommandParameter" Value="{x:Type setts:SettingView}"/>
+		<Setter Property="CommandParameter" Value="{x:Type setts:SettingContent}"/>
 		<Setter Property="Grid.Column" Value="3"/>
 		<Setter Property="Margin" Value="10 5 5 5"/>
 		<Setter Property="Template">

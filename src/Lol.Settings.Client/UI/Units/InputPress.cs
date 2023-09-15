@@ -3,14 +3,12 @@ using System.Windows.Controls;
 
 namespace Lol.Settings.Client.UI.Units
 {
-    public class InputPress : Control
+    public class InputPress : ContentControl
     {
-        #region DefaultStyleKey
 
         static InputPress()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(InputPress), new FrameworkPropertyMetadata(typeof(InputPress)));
         }
-        #endregion
     }
 }

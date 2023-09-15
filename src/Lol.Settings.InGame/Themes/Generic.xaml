@@ -19,10 +19,10 @@
 		<ResourceDictionary Source="/Lol.Settings.InGame;component/Themes/Units/Game/Play.xaml"/>
 		<ResourceDictionary Source="/Lol.Settings.InGame;component/Themes/Units/Replay/FindButton.xaml"/>
 		<ResourceDictionary Source="/Lol.Settings.InGame;component/Themes/Units/Replay/Location.xaml"/>
-		<ResourceDictionary Source="/Lol.Settings.InGame;component/Themes/Views/HotKeyView.xaml"/>
-		<ResourceDictionary Source="/Lol.Settings.InGame;component/Themes/Views/GameSoundView.xaml"/>
-		<ResourceDictionary Source="/Lol.Settings.InGame;component/Themes/Views/InterfaceView.xaml"/>
-		<ResourceDictionary Source="/Lol.Settings.InGame;component/Themes/Views/GameView.xaml"/>
-		<ResourceDictionary Source="/Lol.Settings.InGame;component/Themes/Views/ReplayView.xaml"/>
+		<ResourceDictionary Source="/Lol.Settings.InGame;component/Themes/Views/HotKeyContent.xaml"/>
+		<ResourceDictionary Source="/Lol.Settings.InGame;component/Themes/Views/GameSoundContent.xaml"/>
+		<ResourceDictionary Source="/Lol.Settings.InGame;component/Themes/Views/InterfaceContent.xaml"/>
+		<ResourceDictionary Source="/Lol.Settings.InGame;component/Themes/Views/GameContent.xaml"/>
+		<ResourceDictionary Source="/Lol.Settings.InGame;component/Themes/Views/ReplayContent.xaml"/>
 	</ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

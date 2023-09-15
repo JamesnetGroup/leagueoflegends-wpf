@@ -214,7 +214,7 @@ namespace Lol.Main.Local.ViewModels
         {
             string name = "";
 
-            if (typeof(SettingView) == type) name = "SettingContent";
+            if (typeof(SettingContent) == type) name = "SettingContent";
             if (typeof(AddFriendsView) == type) name = "AddFriendsContent";
 
             IViewable content = FindContent(name);

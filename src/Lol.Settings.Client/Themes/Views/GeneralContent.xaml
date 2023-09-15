@@ -73,10 +73,10 @@
 		<Setter Property="Content" Value="{Binding RelativeSource={RelativeSource Self}, Path=SelectedItem.Name}"/>
 	</Style>
 	
-	<Style TargetType="{x:Type views:GeneralView}">
+	<Style TargetType="{x:Type views:GeneralContent}">
 		<Setter Property="Template">
 			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type views:GeneralView}">
+				<ControlTemplate TargetType="{x:Type views:GeneralContent}">
 					<StackPanel Margin="30 15 0 0">
 						<TextBlock Text="리그 오브 레전드 행동 수칙" FontSize="12" Foreground="#A09B8C"/>
 						<Button Style="{StaticResource BTN.DETAIL}"/>

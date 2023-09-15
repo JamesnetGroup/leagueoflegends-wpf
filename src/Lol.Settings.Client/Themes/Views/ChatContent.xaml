@@ -24,10 +24,10 @@
 		<Setter Property="IsChecked" Value="{Binding Model.NewFriends}"/>
 	</Style>
 
-	<Style TargetType="{x:Type views:ChatView}">
+	<Style TargetType="{x:Type views:ChatContent}">
 		<Setter Property="Template">
 			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type views:ChatView}">
+				<ControlTemplate TargetType="{x:Type views:ChatContent}">
 					<StackPanel Margin="30 20 0 0">
 						<ctrls:CheckBox02 Style="{StaticResource CHK.SLANG}"/>
 						<ctrls:CheckBox02 Style="{StaticResource CHK.LINK}"/>

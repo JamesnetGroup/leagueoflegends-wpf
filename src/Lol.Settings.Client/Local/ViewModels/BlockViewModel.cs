@@ -1,50 +1,25 @@
-﻿using DevNcore.UI.Foundation.Mvvm;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using DevNcore.LayoutSupport.Leagueoflegends.Controls;
-using System.Windows.Input;
+using Jamesnet.Wpf.Mvvm;
 
 namespace Lol.Settings.Client.Local.ViewModels
 {
-    public class BlockViewModel : ObservableObject
+    public partial class BlockViewModel : ObservableBase
     {
-        #region ICommand
+        [ObservableProperty]
+        private string _keywordStr= "";
 
-        public ICommand KeywordCommand { get; private set; }
-        public ICommand CloseKeywordCommand { get; private set; }
-        #endregion
-
-        #region Keyword
-
-        private string _keyword;
-        public string Keyword
+        [RelayCommand]
+        private void Keyword(object obj)
         {
-            get { return _keyword; }
-            set { _keyword = value; OnPropertyChanged(); }
+            KeywordStr = (obj as RiotTextBox).Text;
         }
-        #endregion
 
-        #region Constructor
-        public BlockViewModel()
-        {
-            Keyword = "";
-            KeywordCommand = new RelayCommand<object>(KeywordChanged);
-            CloseKeywordCommand = new RelayCommand<object>(CloseKeyword);
-        }
-        #endregion
-
-        #region KeywordChanged
-
-        private void KeywordChanged(object obj)
-        {
-            Keyword = (obj as RiotTextBox).Text;
-        }
-        #endregion
-
-        #region CloseKeyword
-
+        [RelayCommand]
         private void CloseKeyword(object obj)
         {
-            Keyword = "";
+            KeywordStr = "";
         }
-        #endregion
     }
 }

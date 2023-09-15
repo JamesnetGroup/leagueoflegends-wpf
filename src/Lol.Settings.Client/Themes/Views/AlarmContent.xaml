@@ -14,10 +14,10 @@
 		<Setter Property="IsChecked" Value="{Binding Model.GameInvitation}"/>
 	</Style>
 
-	<Style TargetType="{x:Type views:AlarmView}">
+	<Style TargetType="{x:Type views:AlarmContent}">
 		<Setter Property="Template">
 			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type views:AlarmView}">
+				<ControlTemplate TargetType="{x:Type views:AlarmContent}">
 					<StackPanel Margin="30 20 0 0">
 						<ctrls:CheckBox02 Style="{StaticResource CHK.ESPORTS}"/>
 						<ctrls:CheckBox02 Style="{StaticResource CHK.INVITE}"/>

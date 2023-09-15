@@ -2,10 +2,10 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 					xmlns:views="clr-namespace:Lol.Settings.InGame.UI.Views"
 					xmlns:units="clr-namespace:Lol.Settings.InGame.UI.Units">
-	<Style TargetType="{x:Type views:InterfaceView}">
+	<Style TargetType="{x:Type views:InterfaceContent}">
 		<Setter Property="Template">
 			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type views:InterfaceView}">
+				<ControlTemplate TargetType="{x:Type views:InterfaceContent}">
 					<Grid Margin="20 10 0 5">
 						<StackPanel>
 							<units:Size/>

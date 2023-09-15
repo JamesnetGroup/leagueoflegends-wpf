@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="UI\Views\SettingView.cs">
+    <Compile Update="UI\Views\SettingContent.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -41,10 +41,10 @@
     <Page Update="Themes\Units\MenuList.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Views\EmptyView.xaml">
+    <Page Update="Themes\Views\EmptyContent.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Views\Setting.xaml">
+    <Page Update="Themes\Views\SettingContent.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
