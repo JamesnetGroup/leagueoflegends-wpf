@@ -1,8 +1,9 @@
 <ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-	<ResourceDictionary.MergedDictionaries>
-		<ResourceDictionary Source="/Lol.Main;component/Themes/Units/SubMenu.xaml"/>
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Lol.Main;component/Themes/Units/Wallpaper.xaml"/>
+        <ResourceDictionary Source="/Lol.Main;component/Themes/Units/SubMenu.xaml"/>
 		<ResourceDictionary Source="/Lol.Main;component/Themes/Units/MainMenu.xaml"/>
 		<ResourceDictionary Source="/Lol.Main;component/Themes/Units/WindowBar.xaml"/>
 		<ResourceDictionary Source="/Lol.Main;component/Themes/Units/ChatTool.xaml"/>
@@ -18,8 +19,6 @@
         <ResourceDictionary Source="/Lol.Main;component/Themes/Units/Profile.xaml"/>
         <ResourceDictionary Source="/Lol.Main;component/Themes/Views/MainContent.xaml"/>
 	</ResourceDictionary.MergedDictionaries>
-
-    
 </ResourceDictionary>
 
 
