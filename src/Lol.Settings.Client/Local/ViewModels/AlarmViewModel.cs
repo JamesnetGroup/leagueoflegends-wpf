@@ -1,5 +1,4 @@
-﻿using DevNcore.UI.Foundation.Mvvm;
-using Jamesnet.Wpf.Mvvm;
+﻿using Jamesnet.Wpf.Mvvm;
 using Lol.Data.Config;
 using Lol.Data.Setting.Clients;
 using Lol.Foundation.Riotbase;

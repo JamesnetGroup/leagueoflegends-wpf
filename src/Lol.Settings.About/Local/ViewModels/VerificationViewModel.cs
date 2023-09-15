@@ -1,5 +1,4 @@
-﻿using DevNcore.UI.Foundation.Mvvm;
-using Jamesnet.Wpf.Mvvm;
+﻿using Jamesnet.Wpf.Mvvm;
 
 namespace Lol.Settings.About.Local.ViewModels
 {

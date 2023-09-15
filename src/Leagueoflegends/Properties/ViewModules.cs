@@ -5,7 +5,6 @@ using Lol.Friends.UI.Views;
 using Lol.GameRoom.UI.Views;
 using Lol.Home.UI.Views;
 using Lol.Loot.UI.Views;
-using Lol.Main.UI.Units;
 using Lol.Main.UI.Views;
 using Lol.MyShop.UI.Views;
 using Lol.Profile.UI.Views;

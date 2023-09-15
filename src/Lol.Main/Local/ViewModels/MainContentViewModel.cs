@@ -30,7 +30,6 @@ namespace Lol.Main.Local.ViewModels
         private readonly IRegionManager _regionManager;
         private MainMenuInfo _mainMenu;
         private Image BackgroundImage;
-        //private readonly Dictionary<Type, IRiotUI> _modals;
 
         [ObservableProperty]
         private object _currentUI;
