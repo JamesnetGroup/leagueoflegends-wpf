@@ -1,11 +1,9 @@
-﻿using System;
-using System.Windows.Input;
+﻿using System.Windows.Input;
 using Lol.Friends.Local.Collection;
 using DevNcore.LayoutSupport.Leagueoflegends.Controls;
 using Lol.Database.Controller;
 using Lol.Database.Entites.Schema;
 using DevNcore.UI.Foundation.Mvvm;
-using DevNcore.LayoutSupport.Leagueoflegends.Controls.Primitives;
 using Lol.Support.Local.Helpers;
 using Jamesnet.Wpf.Mvvm;
 

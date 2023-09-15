@@ -1,5 +1,4 @@
-﻿using DevNcore.LayoutSupport.Leagueoflegends.Controls;
-using System.Windows;
+﻿using System.Windows;
 using Jamesnet.Wpf.Controls;
 
 namespace Lol.Settings.UI.Views
