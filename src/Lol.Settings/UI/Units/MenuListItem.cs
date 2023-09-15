@@ -3,7 +3,7 @@ using System.Windows.Controls;
 
 namespace Lol.Settings.UI.Units;
 
-public class MenuListItem : ContentControl
+public class MenuListItem : ListBoxItem
 {
    static MenuListItem()
    {

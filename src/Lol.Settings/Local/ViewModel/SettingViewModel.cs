@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Linq;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using DevNcore.LayoutSupport.Leagueoflegends.Controls;
@@ -28,6 +28,8 @@ namespace Lol.Settings.Local.ViewModel
         private IRiotUI _currentView;
         [ObservableProperty]
         private SettingMenus _currentSettingMenu;
+        [ObservableProperty]
+        private List<SettingMenus> _settingMenus;
 
         private readonly Action<IRiotUI> ViewClosed;
         private readonly AlarmViewModel Alarm;
@@ -42,7 +44,6 @@ namespace Lol.Settings.Local.ViewModel
         private readonly MenuService _menuService;
 
         private Dictionary<int, IRiotUI> UIs { get; set; }
-        public List<SettingMenus> SettingMenus;
 
 
         public SettingViewModel(MenuService menuService)
@@ -60,6 +61,7 @@ namespace Lol.Settings.Local.ViewModel
             Game = new GameViewModel();
 
             SettingMenus = new SettingsApi().GetSettingMenus();
+            CurrentSettingMenu = this.SettingMenus.FirstOrDefault(x => x.Seq == 1); 
         }
 
         protected override void OnPropertyChanged(PropertyChangedEventArgs e)
