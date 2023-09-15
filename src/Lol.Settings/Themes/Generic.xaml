@@ -6,7 +6,7 @@
 		<ResourceDictionary Source="Lol.Settings;component/Themes/Units/MenuList.xaml"/>
 		<ResourceDictionary Source="Lol.Settings;component/Themes/Units/CurrentMenu.xaml"/>
 		<ResourceDictionary Source="Lol.Settings;component/Themes/Units/CurrentContent.xaml"/>
-		<ResourceDictionary Source="Lol.Settings;component/Themes/Views/Setting.xaml"/>
-		<ResourceDictionary Source="Lol.Settings;component/Themes/Views/EmptyView.xaml"/>
+		<ResourceDictionary Source="Lol.Settings;component/Themes/Views/SettingContent.xaml"/>
+		<ResourceDictionary Source="Lol.Settings;component/Themes/Views/EmptyContent.xaml"/>
 	</ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

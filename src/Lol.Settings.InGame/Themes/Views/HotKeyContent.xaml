@@ -65,10 +65,10 @@
 		<Setter Property="Foreground" Value="#F0E6D2"/>
 	</Style>
 	
-	<Style TargetType="{x:Type views:HotKeyView}">
+	<Style TargetType="{x:Type views:HotKeyContent}">
 		<Setter Property="Template">
 			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type views:HotKeyView}">
+				<ControlTemplate TargetType="{x:Type views:HotKeyContent}">
 					<Grid Margin="20 10 0 0">
 						<Grid.RowDefinitions>
 							<RowDefinition Height="Auto"/>
