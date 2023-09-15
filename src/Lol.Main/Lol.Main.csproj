@@ -34,9 +34,6 @@
     <Page Update="Themes\Units\ChatTool.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Units\Currency.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="Themes\Units\EmptyContent.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -52,25 +49,7 @@
     <Page Update="Themes\Units\FriendsSortPopup.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Units\MainMenu.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Themes\Units\NoticeButton.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Themes\Units\PlayButton.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Themes\Units\Profile.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="Themes\Units\SocialTool.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Themes\Units\SubMenu.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Themes\Units\WindowBar.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

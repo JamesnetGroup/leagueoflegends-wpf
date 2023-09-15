@@ -23,6 +23,7 @@
     <ProjectReference Include="..\Lol.Forms\Lol.Forms.csproj" />
     <ProjectReference Include="..\Lol.Foundation\Lol.Foundation.csproj" />
     <ProjectReference Include="..\Lol.Main\Lol.Main.csproj" />
+    <ProjectReference Include="..\Lol.Menus\Lol.Menus.csproj" />
     <ProjectReference Include="..\Lol.Resources\Lol.Resources.csproj" />
   </ItemGroup>
 

@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-namespace Lol.Main.UI.Units
+namespace Lol.Menus.UI.Units
 {
     public class MainMenu : Control
     {

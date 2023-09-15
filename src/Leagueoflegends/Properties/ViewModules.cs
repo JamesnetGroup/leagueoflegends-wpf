@@ -6,6 +6,7 @@ using Lol.GameRoom.UI.Views;
 using Lol.Home.UI.Views;
 using Lol.Loot.UI.Views;
 using Lol.Main.UI.Views;
+using Lol.Menus.UI.Views;
 using Lol.MyShop.UI.Views;
 using Lol.Profile.UI.Views;
 using Lol.Settings.About.UI.Views;
@@ -29,8 +30,8 @@ namespace Leagueoflegends.Properties
 
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
+            containerRegistry.RegisterSingleton<IViewable, MenuContent>("MenuContent");
             containerRegistry.RegisterSingleton<IViewable, SettingContent>("SettingContent");
-            // containerRegistry.RegisterSingleton<IViewable, EmptyContent>("EmptyContent");
             containerRegistry.RegisterSingleton<IViewable, VerificationContent>("VerificationContent");
             containerRegistry.RegisterSingleton<IViewable, AlarmContent>("AlarmContent");
             containerRegistry.RegisterSingleton<IViewable, BlockContent>("BlockContent");

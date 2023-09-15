@@ -1,6 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-					xmlns:units="clr-namespace:Lol.Main.UI.Units">
+					xmlns:units="clr-namespace:Lol.Menus.UI.Units">
 
 	<LinearGradientBrush x:Key="BDR.SEC" StartPoint="0.5,1" EndPoint="0.5,0">
 		<GradientStop Color="Transparent" Offset="0"/>

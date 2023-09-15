@@ -15,6 +15,8 @@ using Lol.Loot.Local.ViewModels;
 using Lol.Loot.UI.Views;
 using Lol.Main.Local.ViewModels;
 using Lol.Main.UI.Views;
+using Lol.Menus.Local.ViewModels;
+using Lol.Menus.UI.Views;
 using Lol.MyShop.Local.ViewModel;
 using Lol.MyShop.UI.Views;
 using Lol.Profile.Local.ViewModels;
@@ -38,6 +40,8 @@ namespace Leagueoflegends.Properties
     {
         protected override void Match(ViewModelLocatorCollection items)
         {
+            items.Register<MenuContent, MenuContentViewModel>();
+
             items.Register<AddFriendsView, AddFriendsViewModel>();
             
             items.Register<SettingContent, SettingViewModel>();
