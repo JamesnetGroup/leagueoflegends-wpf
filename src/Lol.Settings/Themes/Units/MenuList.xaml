@@ -2,102 +2,8 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
 					xmlns:units="clr-namespace:Lol.Settings.UI.Units"
 					xmlns:ctrls="clr-namespace:DevNcore.LayoutSupport.Leagueoflegends.Controls;assembly=DevNcore.LayoutSupport.Leagueoflegends">
-
-	<Style TargetType="{x:Type RadioButton}" x:Key="RDO.MENU">
-		<Setter Property="Background" Value="Transparent"/>
-		<Setter Property="Padding" Value="5 7 6 7"/>
-		<Setter Property="FontSize" Value="12"/>
-		<Setter Property="FontWeight" Value="Bold"/>
-		<Setter Property="GroupName" Value="SETTINGS"/>
-		<Setter Property="Template">
-			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type RadioButton}">
-					<Grid>
-						<Border x:Name="menu" Background="{TemplateBinding Background}">
-							<Grid>
-								<Border x:Name="border" 
-										BorderBrush="#BB9138"
-										BorderThickness="3 0 0 0"
-										Visibility="Collapsed"/>
-                                <TextBlock x:Name="text"
-										   Text="{Binding Name}" 
-										   Foreground="#CDBE91"
-										   Padding="{TemplateBinding Padding}"
-										   Margin="10 0 0 0"
-										   FontFamily="Friz Quadrata Std"/>
-							</Grid>
-						</Border>
-						<TextBlock x:Name="category"
-								   Foreground="#A09B8C"
-								   Text="{Binding Name}"
-								   Margin="20 10 0 10" 
-								   Visibility="Collapsed"/>
-					</Grid>
-					<ControlTemplate.Triggers>
-						<DataTrigger Binding="{Binding Category}" Value="CATEGORY">
-							<Setter TargetName="category" Property="Visibility" Value="Visible"/>
-							<Setter TargetName="menu" Property="Visibility" Value="Collapsed"/>
-                            <Setter TargetName="category" Property="FontSize" Value="10"/>
-                        </DataTrigger>
-						<Trigger Property="IsMouseOver" Value="True">
-							<Setter TargetName="text" Property="Foreground" Value="#DBD3C2"/>
-							<Setter TargetName="menu" Property="Background" Value="#1E2328"/>
-						</Trigger>
-						<Trigger Property="IsChecked" Value="True">
-							<Setter TargetName="text" Property="Foreground" Value="#DBD3C2"/>
-							<Setter TargetName="text" Property="Margin" Value="14 0 0 0"/>
-							<Setter TargetName="border" Property="Visibility" Value="Visible"/>
-						</Trigger>
-					</ControlTemplate.Triggers>
-				</ControlTemplate>
-			</Setter.Value>
-		</Setter>
-	</Style>
-
-	<Style TargetType="{x:Type ListBoxItem}" x:Key="LBXI.MENU">
-		<Setter Property="Width" Value="165"/>
-		<Setter Property="Background" Value="Transparent"/>
-		<Setter Property="FocusVisualStyle" Value="{x:Null}"/>
-		<Setter Property="Template">
-			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type ListBoxItem}">
-					<RadioButton x:Name="radio" Style="{StaticResource RDO.MENU}"/>
-					<ControlTemplate.Triggers>
-						<DataTrigger Binding="{Binding Category}" Value="CATEGORY">
-							<Setter Property="IsHitTestVisible" Value="False"/>
-							<Setter Property="IsEnabled" Value="False"/>
-                            <Setter Property="Margin" Value="0 12 0 5"/>
-                        </DataTrigger>
-						<DataTrigger Binding="{Binding ElementName=radio, Path=IsChecked}" Value="True">
-							<Setter Property="IsSelected" Value="True"/>
-						</DataTrigger>
-						<Trigger Property="IsSelected" Value="True">
-							<Setter TargetName="radio" Property="IsChecked" Value="True"/>
-						</Trigger>
-					</ControlTemplate.Triggers>
-				</ControlTemplate>
-			</Setter.Value>
-		</Setter>
-	</Style>
-
-	<Style TargetType="{x:Type ListBox}" x:Key="LBX.MENU">
-		<Setter Property="ItemContainerStyle" Value="{StaticResource LBXI.MENU}"/>
-		<Setter Property="ItemsSource" Value="{Binding SettingMenus}"/>
-		<Setter Property="SelectedItem" Value="{Binding CurrentSettingMenu}"/>
-		<Setter Property="Margin" Value="0 -10 0 0"/>
-		<Setter Property="Template">
-			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type ListBox}">
-					<ItemsPresenter/>
-				</ControlTemplate>
-			</Setter.Value>
-		</Setter>
-	</Style>
 	
 	<Style TargetType="{x:Type units:MenuList}">
-		<Setter Property="Grid.Row" Value="1"/>
-		<Setter Property="Grid.RowSpan" Value="2"/>
-		<Setter Property="Margin" Value="0 0 0 30"/>
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type units:MenuList}">
@@ -105,7 +11,7 @@
 									   VerticalScrollBarVisibility="Auto" 
 									   HorizontalScrollBarVisibility="Auto">
 						<Grid HorizontalAlignment="Left">
-							<ListBox Style="{StaticResource LBX.MENU}"/>
+							<ItemsPresenter Margin="0 -10 0 0"/>
 						</Grid>
 					</ctrls:BasicScroll>
 				</ControlTemplate>
