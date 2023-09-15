@@ -1,6 +1,7 @@
 ﻿using Jamesnet.Wpf.Controls;
 using Lol.Clash.UI.Views;
 using Lol.Collection.UI.Views;
+using Lol.Friends.UI.Views;
 using Lol.GameRoom.UI.Views;
 using Lol.Home.UI.Views;
 using Lol.Loot.UI.Views;
@@ -8,6 +9,7 @@ using Lol.Main.UI.Units;
 using Lol.Main.UI.Views;
 using Lol.MyShop.UI.Views;
 using Lol.Profile.UI.Views;
+using Lol.Settings.UI.Views;
 using Lol.Store.UI.Views;
 using Lol.TeamFight.UI.Views;
 using Prism.Ioc;
@@ -25,6 +27,8 @@ namespace Leagueoflegends.Properties
         public void RegisterTypes(IContainerRegistry containerRegistry)
         {
 
+            containerRegistry.RegisterSingleton<IViewable, SettingView>("SettingContent");
+            containerRegistry.RegisterSingleton<IViewable, AddFriendsView>("AddFriendsContent");
             containerRegistry.RegisterSingleton<IViewable, TeamFightView>("TeamFightContent");
             containerRegistry.RegisterSingleton<IViewable, LootView>("LootContent");
             containerRegistry.RegisterSingleton<IViewable, MyShopView>("MyShopContent");

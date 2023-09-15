@@ -19,6 +19,7 @@
     <ProjectReference Include="..\Lol.Settings.About\Lol.Settings.About.csproj" />
     <ProjectReference Include="..\Lol.Settings.Client\Lol.Settings.Client.csproj" />
     <ProjectReference Include="..\Lol.Settings.InGame\Lol.Settings.InGame.csproj" />
+    <ProjectReference Include="..\Lol.Support\Lol.Support.csproj" />
   </ItemGroup>
 
   <ItemGroup>

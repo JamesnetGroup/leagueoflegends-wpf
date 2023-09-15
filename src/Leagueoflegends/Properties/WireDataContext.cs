@@ -5,6 +5,8 @@ using Lol.Collection.Local.ViewModel;
 using Lol.Collection.UI.Views;
 using Lol.Forms.Local.ViewModels;
 using Lol.Forms.UI.Views;
+using Lol.Friends.Local.ViewModel;
+using Lol.Friends.UI.Views;
 using Lol.GameRoom.Local.ViewModels;
 using Lol.GameRoom.UI.Views;
 using Lol.Home.Local.ViewModels;
@@ -17,6 +19,8 @@ using Lol.MyShop.Local.ViewModel;
 using Lol.MyShop.UI.Views;
 using Lol.Profile.Local.ViewModels;
 using Lol.Profile.UI.Views;
+using Lol.Settings.Local.ViewModel;
+using Lol.Settings.UI.Views;
 using Lol.Store.Local.ViewModels;
 using Lol.Store.UI.Views;
 using Lol.TeamFight.Local.ViewModel;
@@ -28,6 +32,8 @@ namespace Leagueoflegends.Properties
     {
         protected override void Match(ViewModelLocatorCollection items)
         {
+            items.Register<AddFriendsView, AddFriendsViewModel>();
+            items.Register<SettingView, SettingViewModel>();
             items.Register<TeamFightView, TeamFightViewModel>();
             items.Register<LootView, LootViewModel>();
             items.Register<MyShopView, MyShopViewModel>();

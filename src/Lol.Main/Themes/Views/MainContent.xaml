@@ -210,7 +210,6 @@
 		                    </Grid>
 
                             <Grid Grid.Row="1" Grid.Column="0">
-                                <!--<ContentControl Content="{Binding CurrentUI}"/>-->
                                 <james:JamesRegion RegionName="ContentsRegion"/>
                                 <units:SubMenu HorizontalAlignment="Left"
                                                VerticalAlignment="Top"/>
@@ -240,8 +239,10 @@
 									BorderBrush="#22ffffff" 
 									BorderThickness="0 0 0 1"/>
 
-                            <ctrls:Modal Grid.RowSpan="2" Grid.ColumnSpan="2"
-                                         Content="{Binding ModalContent}"/>
+                            <james:JamesRegion Grid.RowSpan="2" Grid.ColumnSpan="2"
+                                               RegionName="ModalRegion"/>
+                            <!--<ctrls:Modal Grid.RowSpan="2" Grid.ColumnSpan="2"
+                                         Content="{Binding ModalContent}"/>-->
                         </Grid>
                     </Border>
                 </ControlTemplate>

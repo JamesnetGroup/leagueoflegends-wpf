@@ -16,11 +16,8 @@ using Prism.Ioc;
 using System.Windows.Media.Imaging;
 using Prism.Regions;
 using System.Windows;
-using Lol.Friends.Local.ViewModel;
 using Lol.Friends.UI.Views;
-using Lol.Settings.Local.ViewModel;
 using Lol.Settings.UI.Views;
-using DevNcore.LayoutSupport.Leagueoflegends.Controls.Primitives;
 using Lol.Data.Main;
 
 namespace Lol.Main.Local.ViewModels
@@ -33,10 +30,8 @@ namespace Lol.Main.Local.ViewModels
         private readonly IRegionManager _regionManager;
         private MainMenuInfo _mainMenu;
         private Image BackgroundImage;
-        private readonly Dictionary<Type, IRiotUI> _modals;
+        //private readonly Dictionary<Type, IRiotUI> _modals;
 
-        [ObservableProperty]
-        private object _modalContent;
         [ObservableProperty]
         private object _currentUI;
         [ObservableProperty]
@@ -49,16 +44,10 @@ namespace Lol.Main.Local.ViewModels
         private int _currentSeq;
         [ObservableProperty]
         private int _parentSeq;
-
-
-        public List<OptionModel> SortTypes { get; set; }
-
+        [ObservableProperty]
+        private List<OptionModel> _sortTypes;
+        [ObservableProperty]
         private OptionModel _currentSortType;
-        public OptionModel CurrentSortType
-        {
-            get { return _currentSortType; }
-            set { _currentSortType = value; OnPropertyChanged(); }
-        }
         [ObservableProperty]
         private List<MainMenuInfo> _menus;
         [ObservableProperty]
@@ -76,11 +65,11 @@ namespace Lol.Main.Local.ViewModels
 
             _menuService.MenuChanged += MenuService_MenuChanged;
             _menuService.BackgroundChanged += _menuService_BackgroundChanged;
+            _menuService.ModalClosed += _menuService_ModalClosed;
 
             Menus = _menuService.GetMenus();
             SortTypes = GetSortTypes();
             CurrentSortType = SortTypes.First();
-            _modals = new();
 
             List<IFriendsList> friends = new FriendsApi().GetMyFriends(0);
             Friends = new(friends);
@@ -147,7 +136,7 @@ namespace Lol.Main.Local.ViewModels
             CurrentSeq = key;
         }
 
-        private object FindContent(string name)
+        private IViewable FindContent(string name)
         {
             IViewable view;
             try
@@ -211,39 +200,32 @@ namespace Lol.Main.Local.ViewModels
             BackgroundImage.Source = new BitmapImage(e.NewUri);
         }
 
+        private void _menuService_ModalClosed(object sender, EventArgs e)
+        {
+            IRegion region = _regionManager.Regions["ModalRegion"];
+
+            foreach (var i in region.ActiveViews)
+            {
+                region.Deactivate(i);
+            }
+        }
+
         internal void SwitchModal(Type type)
         {
-            IRiotUI content = null;
+            string name = "";
 
-            if (typeof(SettingView) == type) content = SwitchSettingView(type);
-            if (typeof(AddFriendsView) == type) content = SwitchAddFriendsView(type);
+            if (typeof(SettingView) == type) name = "SettingContent";
+            if (typeof(AddFriendsView) == type) name = "AddFriendsContent";
 
-            ModalContent = content;
-        }
+            IViewable content = FindContent(name);
 
-        private IRiotUI SwitchSettingView(Type type)
-        {
-            if (!_modals.ContainsKey(type))
+            IRegion region = _regionManager.Regions["ModalRegion"];
+
+            if (!region.Views.Contains(content))
             {
-                _modals.Add(type, new SettingView().SetVM(new SettingViewModel(CloseModal)));
+                region.Add(content);
             }
-
-            return _modals[type];
-        }
-
-        private IRiotUI SwitchAddFriendsView(Type type)
-        {
-            if (!_modals.ContainsKey(type))
-            {
-                _modals.Add(type, new AddFriendsView().SetVM(new AddFriendsViewModel(CloseModal)));
-            }
-
-            return _modals[type];
-        }
-
-        private void CloseModal(IRiotUI ui)
-        {
-            ModalContent = null;
+            region.Activate(content);
         }
 
         private List<OptionModel> GetSortTypes()

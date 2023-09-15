@@ -15,13 +15,13 @@ using Lol.Database.Controller;
 using Lol.Database.Entites.Schema;
 using DevNcore.UI.Foundation.Mvvm;
 using DevNcore.LayoutSupport.Leagueoflegends.Controls.Primitives;
+using Jamesnet.Wpf.Mvvm;
+using Lol.Support.Local.Helpers;
 
 namespace Lol.Settings.Local.ViewModel
 {
-    public class SettingViewModel : ObservableObject
+    public class SettingViewModel : ObservableBase
     {
-        #region Variables
-
         private readonly Action<IRiotUI> ViewClosed;
         private IRiotUI _currentView;
         private List<SettingMenus> _settingMenus;
@@ -36,15 +36,11 @@ namespace Lol.Settings.Local.ViewModel
         private readonly GameSoundViewModel GameSound;
         private readonly InterfaceViewModel Interface;
         private readonly GameViewModel Game;
-        private Dictionary<int, IRiotUI> UIs { get; set; }
-        #endregion
+        private readonly MenuService _menuService;
 
-        #region Command
+        private Dictionary<int, IRiotUI> UIs { get; set; }
 
         public ICommand CompleteCommand { get; set; }
-        #endregion
-
-        #region Menus
 
         public List<SettingMenus> SettingMenus
         {
@@ -57,22 +53,17 @@ namespace Lol.Settings.Local.ViewModel
             get => _currentSettingMenu;
             set { _currentSettingMenu = value; OnPropertyChanged(); SettingMenuChanged(value); }
         }
-        #endregion
-
-        #region CurrentView
 
         public IRiotUI CurrentView
         {
             get => _currentView;
             set { _currentView = value; OnPropertyChanged(); }
         }
-        #endregion
 
-        #region Constructor
 
-        public SettingViewModel(Action<IRiotUI> modalClose)
+        public SettingViewModel(MenuService menuService)
         {
-            ViewClosed = modalClose;
+            _menuService = menuService;
             UIs = new();
             General = new GeneralViewModel();
             Alarm = new AlarmViewModel();
@@ -87,9 +78,6 @@ namespace Lol.Settings.Local.ViewModel
             SettingMenus = new SettingsApi().GetSettingMenus();
             CompleteCommand = new RelayCommand<Modal>(CompleteClick);
         }
-        #endregion
-
-        #region SettingMenuChanged
 
         private void SettingMenuChanged(SettingMenus value)
         {
@@ -129,13 +117,10 @@ namespace Lol.Settings.Local.ViewModel
                 CurrentView = UIs[key];
             }
         }
-        #endregion
-
-        #region CompleteClick
 
         private void CompleteClick(Modal obj)
         {
-            ViewClosed.Invoke(View as IRiotUI);
+            _menuService.CloseModal();
 
             SettingModel setting = RiotConfig.Config.Settings;
             setting.General = General.Model;
@@ -150,6 +135,5 @@ namespace Lol.Settings.Local.ViewModel
 
             RiotConfig.SaveSettings(setting);
         }
-        #endregion
     }
 }
