@@ -3,8 +3,6 @@
                     xmlns:james="clr-namespace:Jamesnet.Wpf.Controls;assembly=Jamesnet.Wpf"
                     xmlns:views="clr-namespace:Lol.Main.UI.Views"
                     xmlns:units="clr-namespace:Lol.Main.UI.Units">
-
-
     <Style TargetType="{x:Type views:MainContent}">
         <Setter Property="SnapsToDevicePixels" Value="True"/>
         <Setter Property="UseLayoutRounding" Value="True"/>
@@ -13,69 +11,22 @@
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type views:MainContent}">
-                    <Border>
-                        <Grid>
-                            <units:Wallpaper/>
-                            <Image x:Name="PART_BackgroundImage" Stretch="Fill"/>
-
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto"/>
-                                    <RowDefinition Height="*"/>
-                                </Grid.RowDefinitions>
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*"/>
-                                    <ColumnDefinition Width="225"/>
-                                </Grid.ColumnDefinitions>
-                                <Grid Grid.Row="0" Grid.ColumnSpan="2" Background="Transparent" VerticalAlignment="Top" Height="81">
-                                    <Border x:Name="PART_DragBar" Background="Transparent"/>
-                                </Grid>
-                                <Border Grid.Row="0" BorderBrush="#553D4143" BorderThickness="0 0 0 1">
-                                    <Grid>
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="Auto"/>
-                                            <ColumnDefinition Width="*"/>
-                                            <ColumnDefinition Width="115"/>
-                                        </Grid.ColumnDefinitions>
-                                        <StackPanel Grid.Column="0" Orientation="Horizontal">
-                                            <units:PlayButton Margin="25 20 20 20"/>
-                                            <units:NoticeButton/>
-                                        </StackPanel>
-                                        <units:MainMenu Grid.Column="1"/>
-                                        <units:Currency Grid.Column="2"/>
-                                    </Grid>
-                                </Border>
-                                <Grid Grid.RowSpan="2" Grid.Column="1" Width="225" Height="81" VerticalAlignment="Top">
-                                    <Border Background="#FF010A13" IsHitTestVisible="False"/>
-                                    <units:WindowBar/>
-                                    <units:Profile/>
-                                </Grid>
-
-                                <Grid Grid.Row="1" Grid.Column="0">
-                                    <james:JamesRegion RegionName="ContentsRegion"/>
-                                    <units:SubMenu HorizontalAlignment="Left"
-                                                   VerticalAlignment="Top"/>
-                                </Grid>
-
-                                <Grid Grid.Row="1" Grid.Column="1" Background="#FF010A13">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="Auto"/>
-                                        <RowDefinition Height="*"/>
-                                        <RowDefinition Height="Auto"/>
-                                    </Grid.RowDefinitions>
-
-                                    <units:SocialTool Grid.Row="0"/>
-                                    <units:FriendsList Grid.Row="1"/>
-                                    <units:ChatTool Grid.Row="2"/>
-                                </Grid>
-
-                                <Border Grid.ColumnSpan="2" Background="#785a28" VerticalAlignment="Top" Height="2"/>
-                                <Border Grid.ColumnSpan="2" SnapsToDevicePixels="True" UseLayoutRounding="True" BorderBrush="#22ffffff" BorderThickness="0 0 0 1"/>
-
-                                <james:JamesRegion Grid.RowSpan="2" Grid.ColumnSpan="2" RegionName="ModalRegion"/>
-                            </Grid>
-                        </Grid>
-                    </Border>
+                    <Grid>
+                        <units:Wallpaper/>
+                        <Image x:Name="PART_BackgroundImage" Stretch="Fill"/>
+                        <james:JamesGrid Rows="Auto, *" Columns="*">
+                            <james:JamesRegion RegionName="MenuRegion" Panel.ZIndex="10000"/>
+                            <james:JamesGrid Rows="*" Columns="*, 225">
+                                <james:JamesRegion RegionName="ContentsRegion"/>
+                                <james:JamesGrid Rows="Auto, *, Auto" Columns="*" Background="#FF010A13">
+                                    <units:SocialTool/>
+                                    <units:FriendsList/>
+                                    <units:ChatTool/>
+                                </james:JamesGrid>
+                            </james:JamesGrid>
+                        </james:JamesGrid>
+                        <james:JamesRegion RegionName="ModalRegion"/>
+                    </Grid>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

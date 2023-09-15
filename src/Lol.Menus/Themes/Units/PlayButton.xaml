@@ -1,7 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-					xmlns:units="clr-namespace:Lol.Main.UI.Units"
-                    xmlns:main="clr-namespace:Lol.Main.UI.Views">
+					xmlns:units="clr-namespace:Lol.Menus.UI.Units">
 
 	<LinearGradientBrush x:Key="LGB.GEO.OVER" EndPoint="0.5,1" StartPoint="0.5,0">
 		<GradientStop Color="#FF1D3B4A" Offset="0"/>
@@ -24,7 +23,6 @@
 
 	<Style TargetType="{x:Type units:PlayButton}">
         <Setter Property="Command" Value="{Binding GameCommand}"/>
-        <Setter Property="CommandParameter" Value="{x:Type main:MainContent}"/>
         <Setter Property="Grid.Column" Value="0"/>
 		<Setter Property="VerticalAlignment" Value="Center"/>
 		<Setter Property="Foreground" Value="#AAFCF1DC"/>
