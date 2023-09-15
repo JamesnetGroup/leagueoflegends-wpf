@@ -4,9 +4,6 @@
 					xmlns:ctrls="clr-namespace:DevNcore.LayoutSupport.Leagueoflegends.Controls;assembly=DevNcore.LayoutSupport.Leagueoflegends">
 	
 	<Style TargetType="{x:Type units:CurrentContent}">
-		<Setter Property="Grid.Row" Value="1"/>
-		<Setter Property="Grid.Column" Value="1"/>
-		<Setter Property="Margin" Value="0 0 0 30"/>
 		<Setter Property="Template">
 			<Setter.Value>
 				<ControlTemplate TargetType="{x:Type units:CurrentContent}">

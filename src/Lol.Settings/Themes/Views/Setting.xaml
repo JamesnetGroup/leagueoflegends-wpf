@@ -12,24 +12,13 @@
 
 	<Style TargetType="{x:Type ctrls:RiotButton}" x:Key="BTN.RESTORE">
 		<Setter Property="Width" Value="150"/>
-		<Setter Property="Grid.Row" Value="0"/>
-		<Setter Property="Grid.Column" Value="1"/>
-		<Setter Property="HorizontalAlignment" Value="Right"/>
-		<Setter Property="VerticalAlignment" Value="Top"/>
-		<Setter Property="Margin" Value="0 20 15 0"/>
 		<Setter Property="Content" Value="기본값 복원"/>
 	</Style>
 
 	<Style TargetType="{x:Type ctrls:RiotButton}" x:Key="BTN.DONE">
-		<Setter Property="Command" Value="{Binding CompleteCommand}"/>
-		<Setter Property="CommandParameter" Value="{Binding RelativeSource={RelativeSource AncestorType=ctrls:Modal}}"/>
-		<Setter Property="Grid.Row" Value="2"/>
-		<Setter Property="Grid.ColumnSpan" Value="2"/>
 		<Setter Property="BorderThickness" Value="2 2 2 2"/>
 		<Setter Property="FontSize" Value="13"/>
 		<Setter Property="FontWeight" Value="Bold"/>
-		<Setter Property="HorizontalAlignment" Value="Center"/>
-		<Setter Property="VerticalAlignment" Value="Bottom"/>
 		<Setter Property="Width" Value="90"/>
 		<Setter Property="Content" Value="완료"/>
 	</Style>
@@ -57,20 +46,41 @@
 							</Grid.ColumnDefinitions>
 
 							<!--CurrentMenu-->
-							<units:CurrentMenu/>
-							<ctrls:RiotButton Style="{StaticResource BTN.RESTORE}"/>
+							<units:CurrentMenu Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+							<ctrls:RiotButton Grid.Row="0" 
+							                  Grid.Column="1" 
+							                  HorizontalAlignment="Right" 
+							                  VerticalAlignment="Top"
+							                  Margin="0 20 15 0"
+							                  Style="{StaticResource BTN.RESTORE}"/>
 
 							<!--MenuList-->
-							<units:MenuList/>
-							<Border Grid.Row="2" Background="{StaticResource VIEW.BDR}"/>
+							<units:MenuList Grid.Column="0" 
+											Grid.Row="1" Grid.RowSpan="2"
+											Margin=" 0 0 0 30"
+											ItemsSource="{Binding SettingMenus }"
+											SelectedItem="{Binding CurrentSettingMenu}"/>
+							
+							<Border Grid.Column="0" 
+							        Grid.Row="2" 
+							        Background="{StaticResource VIEW.BDR}"/>
 
 							<!--CurrentContent-->
-							<units:CurrentContent/>
-
-							<ctrls:RiotButton Style="{StaticResource BTN.DONE}"/>
-
-                            <Border Grid.ColumnSpan="2"
-									BorderBrush="#22ffffff" 
+							<units:CurrentContent Grid.Row="1" 
+							                      Grid.Column="1"
+							                      Margin="0 0 0 30"/>
+							
+							<ctrls:RiotButton Grid.Row="2" 
+							                  Grid.Column="0" Grid.ColumnSpan="2"
+							                  HorizontalAlignment="Center"
+							                  VerticalAlignment="Bottom"
+							                  Command="{Binding CompleteCommand}"
+							                  CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=ctrls:Modal}}"
+							                  Style="{StaticResource BTN.DONE}"/>
+       
+                            <Border Grid.Row="0" 
+                                    Grid.Column="0" Grid.ColumnSpan="2"
+									BorderBrush="#22ffffff"
 									SnapsToDevicePixels="True"
 									UseLayoutRounding="True"
 									BorderThickness="0 0 0 0.5"

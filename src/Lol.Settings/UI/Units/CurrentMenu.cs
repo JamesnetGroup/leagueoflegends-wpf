@@ -3,7 +3,7 @@ using System.Windows.Controls;
 
 namespace Lol.Settings.UI.Units
 {
-    public class CurrentMenu : Control
+    public class CurrentMenu : ContentControl
     {
         static CurrentMenu()
         {
