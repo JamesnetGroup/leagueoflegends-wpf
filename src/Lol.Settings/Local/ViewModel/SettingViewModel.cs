@@ -1,32 +1,35 @@
 ﻿using System;
-using System.Windows.Input;
 using System.Collections.Generic;
-using Lol.Data.Setting;
-using Lol.Foundation.Riotbase;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using DevNcore.LayoutSupport.Leagueoflegends.Controls;
-using Lol.Settings.UI.Views;
-using Lol.Settings.Client.UI.Views;
-using Lol.Settings.Client.Local.ViewModels;
-using Lol.Settings.InGame.UI.Views;
-using Lol.Settings.InGame.Local.ViewModels;
-using Lol.Settings.About.UI.Views;
-using Lol.Settings.About.Local.ViewModels;
-using Lol.Database.Controller;
-using Lol.Database.Entites.Schema;
-using DevNcore.UI.Foundation.Mvvm;
 using DevNcore.LayoutSupport.Leagueoflegends.Controls.Primitives;
 using Jamesnet.Wpf.Mvvm;
+using Lol.Data.Setting;
+using Lol.Database.Controller;
+using Lol.Database.Entites.Schema;
+using Lol.Foundation.Riotbase;
+using Lol.Settings.About.Local.ViewModels;
+using Lol.Settings.About.UI.Views;
+using Lol.Settings.Client.Local.ViewModels;
+using Lol.Settings.Client.UI.Views;
+using Lol.Settings.InGame.Local.ViewModels;
+using Lol.Settings.InGame.UI.Views;
+using Lol.Settings.UI.Views;
 using Lol.Support.Local.Helpers;
 
 namespace Lol.Settings.Local.ViewModel
 {
-    public class SettingViewModel : ObservableBase
+    public partial class SettingViewModel : ObservableBase
     {
-        private readonly Action<IRiotUI> ViewClosed;
+        [ObservableProperty]
         private IRiotUI _currentView;
-        private List<SettingMenus> _settingMenus;
+        [ObservableProperty]
         private SettingMenus _currentSettingMenu;
 
+        private readonly Action<IRiotUI> ViewClosed;
         private readonly AlarmViewModel Alarm;
         private readonly ChatViewModel Chat;
         private readonly GeneralViewModel General;
@@ -39,26 +42,7 @@ namespace Lol.Settings.Local.ViewModel
         private readonly MenuService _menuService;
 
         private Dictionary<int, IRiotUI> UIs { get; set; }
-
-        public ICommand CompleteCommand { get; set; }
-
-        public List<SettingMenus> SettingMenus
-        {
-            get => _settingMenus;
-            set { _settingMenus = value; OnPropertyChanged(); }
-        }
-
-        public SettingMenus CurrentSettingMenu
-        {
-            get => _currentSettingMenu;
-            set { _currentSettingMenu = value; OnPropertyChanged(); SettingMenuChanged(value); }
-        }
-
-        public IRiotUI CurrentView
-        {
-            get => _currentView;
-            set { _currentView = value; OnPropertyChanged(); }
-        }
+        public List<SettingMenus> SettingMenus;
 
 
         public SettingViewModel(MenuService menuService)
@@ -76,8 +60,37 @@ namespace Lol.Settings.Local.ViewModel
             Game = new GameViewModel();
 
             SettingMenus = new SettingsApi().GetSettingMenus();
-            CompleteCommand = new RelayCommand<Modal>(CompleteClick);
         }
+
+        protected override void OnPropertyChanged(PropertyChangedEventArgs e)
+        {
+            base.OnPropertyChanged(e);
+            string propertyName = e.PropertyName;
+            if (propertyName == "CurrentSettingMenu")
+            {
+                SettingMenuChanged(CurrentSettingMenu);
+            }
+        }
+
+        [RelayCommand]
+        private void Complete(Modal obj)
+        {
+            _menuService.CloseModal();
+
+            SettingModel setting = RiotConfig.Config.Settings;
+            setting.General = General.Model;
+            setting.Alarm = Alarm.Model;
+            setting.Chat = Chat.Model;
+            setting.Sound = Sound.Model;
+            setting.Voice = Voice.Model;
+            setting.HotKey = HotKey.Model;
+            setting.GameSound = GameSound.Model;
+            setting.Interface = Interface.Model;
+            setting.Game = Game.Model;
+
+            RiotConfig.SaveSettings(setting);
+        }
+        
 
         private void SettingMenuChanged(SettingMenus value)
         {
@@ -116,24 +129,6 @@ namespace Lol.Settings.Local.ViewModel
 
                 CurrentView = UIs[key];
             }
-        }
-
-        private void CompleteClick(Modal obj)
-        {
-            _menuService.CloseModal();
-
-            SettingModel setting = RiotConfig.Config.Settings;
-            setting.General = General.Model;
-            setting.Alarm = Alarm.Model;
-            setting.Chat = Chat.Model;
-            setting.Sound = Sound.Model;
-            setting.Voice = Voice.Model;
-            setting.HotKey = HotKey.Model;
-            setting.GameSound = GameSound.Model;
-            setting.Interface = Interface.Model;
-            setting.Game = Game.Model;
-
-            RiotConfig.SaveSettings(setting);
         }
     }
 }
