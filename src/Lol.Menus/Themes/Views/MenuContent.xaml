@@ -44,10 +44,19 @@
                                 <units:WindowBar/>
                                 <units:Profile/>
                             </Grid>
-                            <Border Grid.ColumnSpan="2" Background="#785a28" VerticalAlignment="Top" Height="2"/>
-                            <Border Grid.ColumnSpan="2" SnapsToDevicePixels="True" UseLayoutRounding="True" BorderBrush="#22ffffff" BorderThickness="0 0 0 1"/>
+                            <Border Grid.ColumnSpan="2" 
+                                    Background="#785a28" 
+                                    VerticalAlignment="Top" 
+                                    Height="2"/>
+                            <Border Grid.ColumnSpan="2" 
+                                    SnapsToDevicePixels="True" 
+                                    UseLayoutRounding="True" 
+                                    BorderBrush="#22ffffff" 
+                                    BorderThickness="0 0 0 1"/>
 
-                            <units:SubMenu Margin="0 0 0 -30" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
+                            <units:SubMenu Margin="0 0 0 -30" 
+                                           HorizontalAlignment="Left" 
+                                           VerticalAlignment="Bottom"/>
                         </Grid>
                     </Border>
                 </ControlTemplate>
