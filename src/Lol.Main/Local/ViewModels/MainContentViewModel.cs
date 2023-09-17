@@ -31,6 +31,8 @@ namespace Lol.Main.Local.ViewModels
         private Image BackgroundImage;
 
         [ObservableProperty]
+        private int _currentSeq;
+        [ObservableProperty]
         private FriendsCollection _friends;
 
         public MainContentViewModel(FriendsService friendsService, MenuService menuService, IContainerProvider containerProvider, IRegionManager regionManager)
@@ -40,11 +42,17 @@ namespace Lol.Main.Local.ViewModels
             _containerProvider = containerProvider;
             _regionManager = regionManager;
             _menuService.BackgroundChanged += _menuService_BackgroundChanged;
+            _menuService.MenuChanged += _menuService_MenuChanged;
 
             List<IFriendsList> friends = new FriendsApi().GetMyFriends(0);
             Friends = new(friends);
 
             friendsService.SetFriends(Friends);
+        }
+
+        private void _menuService_MenuChanged(object sender, MenuChangedEventArgs e)
+        {
+            CurrentSeq = e.MenuId;
         }
 
         public void OnLoaded(IViewable view)

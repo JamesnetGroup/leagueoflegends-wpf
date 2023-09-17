@@ -41,8 +41,6 @@ namespace Lol.Menus.Local.ViewModels
         [ObservableProperty]
         private object _currentUI;
         [ObservableProperty]
-        private int _currentSeq;
-        [ObservableProperty]
         private int _parentSeq;
         [ObservableProperty]
         private List<OptionModel> _sortTypes;
@@ -66,8 +64,8 @@ namespace Lol.Menus.Local.ViewModels
         public void OnLoaded(IViewable view)
         {
 
-            CurrentMenu = Menus.First();
-            MenuSelect(CurrentMenu);
+            //CurrentMenu = Menus.First();
+            //MenuSelect(CurrentMenu);
         }
 
         [RelayCommand]
@@ -135,7 +133,6 @@ namespace Lol.Menus.Local.ViewModels
                 region.Add(content);
             }
             region.Activate(content);
-            CurrentSeq = key;
         }
 
         private IViewable FindContent(string name)

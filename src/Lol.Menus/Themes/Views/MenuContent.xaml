@@ -16,10 +16,15 @@
                                 <ColumnDefinition Width="*"/>
                                 <ColumnDefinition Width="225"/>
                             </Grid.ColumnDefinitions>
-                            <Grid Grid.Row="0" Grid.ColumnSpan="2" Background="Transparent" VerticalAlignment="Top" Height="81">
+                            <Grid Grid.Row="0" Grid.ColumnSpan="2" 
+                                  VerticalAlignment="Top" 
+                                  Background="Transparent" 
+                                  Height="81">
                                 <Border x:Name="PART_DragBar" Background="Transparent"/>
                             </Grid>
-                            <Border Grid.Row="0" BorderBrush="#553D4143" BorderThickness="0 0 0 1">
+                            <Border Grid.Row="0" 
+                                    BorderBrush="#553D4143" 
+                                    BorderThickness="0 0 0 1">
                                 <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="Auto"/>
