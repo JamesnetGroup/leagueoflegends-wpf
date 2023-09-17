@@ -3,10 +3,7 @@ using CommunityToolkit.Mvvm.Input;
 using Jamesnet.Wpf.Controls;
 using Jamesnet.Wpf.Mvvm;
 using Lol.Data.Main;
-using Lol.Database.Entites.Schema;
 using Lol.Friends.UI.Views;
-using Lol.Menus.UI.Units;
-using Lol.Settings.UI.Units;
 using Lol.Settings.UI.Views;
 using Lol.Support.Local.Helpers;
 using Lol.Support.Local.Models;
@@ -15,10 +12,7 @@ using Prism.Regions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Media.Imaging;
 
 namespace Lol.Menus.Local.ViewModels
 {
@@ -63,7 +57,6 @@ namespace Lol.Menus.Local.ViewModels
 
         public void OnLoaded(IViewable view)
         {
-
             //CurrentMenu = Menus.First();
             //MenuSelect(CurrentMenu);
         }

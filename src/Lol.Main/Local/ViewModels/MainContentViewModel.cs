@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Windows.Controls;
+﻿using System.Windows.Controls;
 using System.Collections.Generic;
 using Lol.Database.Controller;
 using Lol.Database.Entites.Schema;
@@ -9,16 +7,11 @@ using Jamesnet.Wpf.Mvvm;
 using Jamesnet.Wpf.Controls;
 using Lol.Main.UI.Views;
 using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
 using Lol.Support.Local.Models;
 using Lol.Support.Local.Helpers;
 using Prism.Ioc;
 using System.Windows.Media.Imaging;
 using Prism.Regions;
-using System.Windows;
-using Lol.Friends.UI.Views;
-using Lol.Settings.UI.Views;
-using Lol.Data.Main;
 
 namespace Lol.Main.Local.ViewModels
 {
