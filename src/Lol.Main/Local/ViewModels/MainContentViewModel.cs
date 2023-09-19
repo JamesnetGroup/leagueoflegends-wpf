@@ -36,11 +36,17 @@ namespace Lol.Main.Local.ViewModels
             _regionManager = regionManager;
             _menuService.BackgroundChanged += _menuService_BackgroundChanged;
             _menuService.MenuChanged += _menuService_MenuChanged;
+            _menuService.UpdateChanged += _menuService_UpdateChanged;
 
             List<IFriendsList> friends = new FriendsApi().GetMyFriends(0);
             Friends = new(friends);
 
             friendsService.SetFriends(Friends);
+        }
+
+        private void _menuService_UpdateChanged(object sender, BackgroundChangedEventArgs e)
+        {
+            CurrentSeq = e.Seq;
         }
 
         private void _menuService_MenuChanged(object sender, MenuChangedEventArgs e)
