@@ -57,8 +57,8 @@ namespace Lol.Menus.Local.ViewModels
 
         public void OnLoaded(IViewable view)
         {
-            //CurrentMenu = Menus.First();
-            //MenuSelect(CurrentMenu);
+            CurrentMenu = Menus.First();
+            MenuSelect(CurrentMenu);
         }
 
         [RelayCommand]
@@ -126,6 +126,7 @@ namespace Lol.Menus.Local.ViewModels
                 region.Add(content);
             }
             region.Activate(content);
+            _menuService.Update(key);
         }
 
         private IViewable FindContent(string name)

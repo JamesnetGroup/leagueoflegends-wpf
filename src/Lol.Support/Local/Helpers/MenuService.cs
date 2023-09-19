@@ -6,6 +6,7 @@ namespace Lol.Support.Local.Helpers
 {
     public class MenuService
     {
+        public event EventHandler<BackgroundChangedEventArgs> UpdateChanged;
         public event EventHandler<MenuChangedEventArgs> MenuChanged;
         public event EventHandler<BackgroundChangedEventArgs> BackgroundChanged;
         public event EventHandler<EventArgs> ModalClosed;
@@ -99,6 +100,11 @@ namespace Lol.Support.Local.Helpers
                 new SubMenuInfo(43, 8, "CUSTOM GAMEROOM")
             };
             return source;
+        }
+
+        public void Update(int key)
+        {
+            UpdateChanged?.Invoke(this, new BackgroundChangedEventArgs(key));
         }
     }
 }
