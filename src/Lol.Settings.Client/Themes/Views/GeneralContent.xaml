@@ -5,7 +5,6 @@
 	xmlns:ctrls="clr-namespace:DevNcore.LayoutSupport.Leagueoflegends.Controls;assembly=DevNcore.LayoutSupport.Leagueoflegends">
 
 	<Style TargetType="{x:Type Button}" x:Key="BTN.DETAIL">
-        <Setter Property="Command" Value="{Binding LinkCommand}"/>
         <Setter Property="Content" Value="자세히 보기 ↗"/>
 		<Setter Property="Foreground" Value="#0596AA"/>
 		<Setter Property="Margin" Value="0 10 0 15"/>
@@ -63,14 +62,10 @@
 
 	<Style TargetType="{x:Type ctrls:RiotComboBox}" x:Key="CBX.WINSIZE">
 		<Setter Property="ItemContainerStyle" Value="{StaticResource IN.CBXI}"/>
-		<Setter Property="ItemsSource" Value="{Binding SizeList}"/>
-		<Setter Property="SelectedValue" Value="{Binding Model.WinSizeValue}"/>
-		<Setter Property="SelectedValuePath" Value="Name"/>
 		<Setter Property="FontSize" Value="12"/>
 		<Setter Property="Width" Value="220"/>
 		<Setter Property="Height" Value="30"/>
 		<Setter Property="Margin" Value="0 10 0 0"/>
-		<Setter Property="Content" Value="{Binding RelativeSource={RelativeSource Self}, Path=SelectedItem.Name}"/>
 	</Style>
 	
 	<Style TargetType="{x:Type views:GeneralContent}">
@@ -79,13 +74,18 @@
 				<ControlTemplate TargetType="{x:Type views:GeneralContent}">
 					<StackPanel Margin="30 15 0 0">
 						<TextBlock Text="리그 오브 레전드 행동 수칙" FontSize="12" Foreground="#A09B8C"/>
-						<Button Style="{StaticResource BTN.DETAIL}"/>
+						<Button Style="{StaticResource BTN.DETAIL}" 
+						        Command="{Binding LinkCommand}"/>
 						<ctrls:CheckBox01 Style="{StaticResource CHK.LOWMODE}"/>
 						<ctrls:CheckBox01 Style="{StaticResource CHK.ONOFF}"/>
 						<ctrls:CheckBox01 Style="{StaticResource CHK.ERROR}"/>
 						<ctrls:CheckBox01 Style="{StaticResource CHK.GUIDE}"/>
 						<TextBlock Text="창 크기" FontSize="12" Foreground="#A09B8C" Margin="0 20 0 0"/>
-						<ctrls:RiotComboBox Style="{StaticResource CBX.WINSIZE}"/>
+						<ctrls:RiotComboBox ItemsSource="{Binding SizeList}"
+						                    SelectedValue="{Binding Model.WinSizeValue}"
+						                    SelectedValuePath="Name"
+						                    Style="{StaticResource CBX.WINSIZE}"
+						                    Content="{Binding RelativeSource={RelativeSource Self}, Path=SelectedItem.Name}"/>
 						<TextBlock Text="문제 해결" FontSize="12" Foreground="#A09B8C" Margin="0 30 0 10"/>
 						<ctrls:RiotButton Style="{StaticResource BTN.RESTORE}"/>
 					</StackPanel>

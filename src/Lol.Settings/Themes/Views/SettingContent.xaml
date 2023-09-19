@@ -66,14 +66,11 @@
                                     Grid.Row="2"
                                     Background="{StaticResource VIEW.BDR}"/>
 
+                            <!--CurrentContent-->
                             <james:JamesRegion Grid.Row="1"
                                                Grid.Column="1"
                                                Margin="0 0 0 30"
                                                RegionName="SettingContentRegion"/>
-                            <!--CurrentContent-->
-                            <units:CurrentContent Grid.Row="1"
-                                                  Grid.Column="1"
-                                                  Margin="0 0 0 30"/>
 
                             <ctrls:RiotButton Grid.Row="2"
                                               Grid.Column="0" Grid.ColumnSpan="2"

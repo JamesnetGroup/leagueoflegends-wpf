@@ -7,55 +7,46 @@
 	<Style TargetType="{x:Type ctrls:CheckBox02}" x:Key="CHK.ONOFF">
 		<Setter Property="Content" Value="소리 켜기"/>
 		<Setter Property="Margin" Value="10 8 0 0"/>
-		<Setter Property="IsChecked" Value="{Binding Model.MasterVolumeOn}"/>
 	</Style>
 
 	<Style TargetType="{x:Type ctrls:CheckBox02}" x:Key="CHK.EFFECT">
 		<Setter Property="Content" Value="음향 특수효과 켜기"/>
 		<Setter Property="Margin" Value="30 17 0 0"/>
-		<Setter Property="IsChecked" Value="{Binding Model.SoundEffectOn}"/>
 	</Style>
 
 	<Style TargetType="{x:Type ctrls:CheckBox02}" x:Key="CHK.AROUND">
 		<Setter Property="Content" Value="주변 음향 효과 듣기"/>
 		<Setter Property="Margin" Value="40 15 0 0"/>
-		<Setter Property="IsChecked" Value="{Binding Model.SoundAroundOn}"/>
 	</Style>
 
 	<Style TargetType="{x:Type ctrls:CheckBox02}" x:Key="CHK.SELECT">
 		<Setter Property="Content" Value="챔피언 선택 시 음성 듣기"/>
 		<Setter Property="Margin" Value="40 10 0 0"/>
-		<Setter Property="IsChecked" Value="{Binding Model.SoundChampionSelect}"/>
 	</Style>
 
 	<Style TargetType="{x:Type ctrls:CheckBox02}" x:Key="CHK.BAN">
 		<Setter Property="Content" Value="챔피언 금지 시 음성 듣기"/>
 		<Setter Property="Margin" Value="40 10 0 0"/>
-		<Setter Property="IsChecked" Value="{Binding Model.SoundChampionBan}"/>
 	</Style>
 
 	<Style TargetType="{x:Type ctrls:CheckBox02}" x:Key="CHK.MUSIC">
 		<Setter Property="Content" Value="음악 켜기"/>
 		<Setter Property="Margin" Value="30 22 0 0"/>
-		<Setter Property="IsChecked" Value="{Binding Model.MusicVolumeOn}"/>
 	</Style>
 
 	<Style TargetType="{x:Type ctrls:CheckBox02}" x:Key="CHK.SELECT2">
 		<Setter Property="Content" Value="챔피언 선택 시 음악 켜기"/>
 		<Setter Property="Margin" Value="40 15 0 0"/>
-		<Setter Property="IsChecked" Value="{Binding Model.MusicChampionSelect}"/>
 	</Style>
 
 	<Style TargetType="{x:Type ctrls:CheckBox02}" x:Key="CHK.LOBBY">
 		<Setter Property="Content" Value="로비/게임 종료 화면 음악 켜기"/>
 		<Setter Property="Margin" Value="40 10 0 0"/>
-		<Setter Property="IsChecked" Value="{Binding Model.MusicLobby}"/>
 	</Style>
 
 	<Style TargetType="{x:Type ctrls:CheckBox02}" x:Key="CHK.LOGIN">
 		<Setter Property="Content" Value="로그인 음악 켜기"/>
 		<Setter Property="Margin" Value="40 10 0 0"/>
-		<Setter Property="IsChecked" Value="{Binding Model.MusicLogin}"/>
 	</Style>
 
 	<Style TargetType="{x:Type ctrls:Slider01}" x:Key="SLD.BASE">
@@ -68,25 +59,20 @@
 		<Setter Property="Margin" Value="30 5 0 0"/>
 	</Style>
 
-	<Style TargetType="{x:Type TextBlock}" x:Key="TXB.MASTER">
+	<Style x:Key="TXB.TITLE" TargetType="{x:Type TextBlock}">
+		<Setter Property="Foreground" Value="#9B9688"/>
+		<Setter Property="FontSize" Value="12"/>
+	</Style>
+	<Style TargetType="{x:Type TextBlock}" x:Key="TXB.MASTER" BasedOn="{StaticResource TXB.TITLE}">
         <Setter Property="Margin" Value="10 10 0 0"/>
-		<Setter Property="Foreground" Value="#9B9688"/>
-		<Setter Property="FontSize" Value="12"/>
-		<Setter Property="Text" Value="{Binding ElementName=sldMaster, Path=Value, StringFormat={}마스터 볼륨: {0:N0}}"/>
 	</Style>
 
-	<Style TargetType="{x:Type TextBlock}" x:Key="TXB.EFFECT">
+	<Style TargetType="{x:Type TextBlock}" x:Key="TXB.EFFECT" BasedOn="{StaticResource TXB.TITLE}">
 		<Setter Property="Margin" Value="35 10 0 0"/>
-		<Setter Property="Foreground" Value="#9B9688"/>
-		<Setter Property="FontSize" Value="12"/>
-		<Setter Property="Text" Value="{Binding ElementName=sldEffect, Path=Value, StringFormat={}음향 특수효과 볼륨: {0:N0}}"/>
 	</Style>
 
-	<Style TargetType="{x:Type TextBlock}" x:Key="TXB.MUSIC">
+	<Style TargetType="{x:Type TextBlock}" x:Key="TXB.MUSIC" BasedOn="{StaticResource TXB.TITLE}">
         <Setter Property="Margin" Value="35 10 0 0"/>
-		<Setter Property="Foreground" Value="#9B9688"/>
-		<Setter Property="FontSize" Value="12"/>
-		<Setter Property="Text" Value="{Binding ElementName=sldMusic, Path=Value, StringFormat={}음악 볼륨: {0:N0}}"/>
 	</Style>
 
 	<Style TargetType="{x:Type views:SoundContent}">
@@ -95,30 +81,43 @@
 				<ControlTemplate TargetType="{x:Type views:SoundContent}">
 					<StackPanel Margin="10 0 0 0">
 
-						<ctrls:CheckBox02 x:Name="chbMaster" Style="{StaticResource CHK.ONOFF}"/>
+						<ctrls:CheckBox02 x:Name="chbMaster" Style="{StaticResource CHK.ONOFF}"
+						                  IsChecked="{Binding Model.MasterVolumeOn }"/>
 						
 						<StackPanel IsEnabled="{Binding ElementName=chbMaster, Path=IsChecked}">
-							<TextBlock Style="{StaticResource TXB.MASTER}"/>
+							<TextBlock Style="{StaticResource TXB.MASTER}"
+							           Text="{Binding ElementName=sldMaster, Path=Value, StringFormat={}마스터 볼륨: {0:N0}}"/>
 							<ctrls:Slider01 x:Name="sldMaster" Style="{StaticResource SLD.BASE}" Value="{Binding Model.MasterVolume}" Width="415" Margin="5 0 0 0"/>
 
-							<ctrls:CheckBox02 x:Name="chbEffect" Style="{StaticResource CHK.EFFECT}"/>
+							<ctrls:CheckBox02 x:Name="chbEffect"
+							                  Style="{StaticResource CHK.EFFECT}"
+							                  IsChecked="{Binding Model.SoundEffectOn}"/>
 							<StackPanel IsEnabled="{Binding ElementName=chbEffect, Path=IsChecked}">
-								<TextBlock Style="{StaticResource TXB.EFFECT}"/>
+								<TextBlock Style="{StaticResource TXB.EFFECT}"
+								           Text="{Binding ElementName=sldEffect, Path=Value, StringFormat={}음향 특수효과 볼륨: {0:N0}}"/>
 								<ctrls:Slider01 x:Name="sldEffect" Style="{StaticResource SLD.BASE}" Value="{Binding Model.EffectVolume}"/>
-								<ctrls:CheckBox02 Style="{StaticResource CHK.AROUND}"/>
-								<ctrls:CheckBox02 Style="{StaticResource CHK.SELECT}"/>
-								<ctrls:CheckBox02 Style="{StaticResource CHK.BAN}"/>
+								<ctrls:CheckBox02 Style="{StaticResource CHK.AROUND}"
+								                  IsChecked="{Binding Model.SoundAroundOn}"/>
+								<ctrls:CheckBox02 Style="{StaticResource CHK.SELECT}"
+								                  IsChecked="{Binding Model.SoundChampionSelect}"/>
+								<ctrls:CheckBox02 Style="{StaticResource CHK.BAN}"
+								                  IsChecked="{Binding Model.SoundChampionBan}"/>
 							</StackPanel>
 
-							<ctrls:CheckBox02 x:Name="chbMusic" Style="{StaticResource CHK.MUSIC}"/>
+							<ctrls:CheckBox02 x:Name="chbMusic" 
+							                  Style="{StaticResource CHK.MUSIC}"
+							                  IsChecked="{Binding Model.MusicVolumeOn}"/>
 							<StackPanel IsEnabled="{Binding ElementName=chbMusic, Path=IsChecked}">
-								<TextBlock Style="{StaticResource TXB.MUSIC}"/>
+								<TextBlock Style="{StaticResource TXB.MUSIC}"
+								           Text="{Binding ElementName=sldMusic, Path=Value, StringFormat={}음악 볼륨: {0:N0}}"/>
 								<ctrls:Slider01 x:Name="sldMusic" Style="{StaticResource SLD.BASE}" Value="{Binding Model.MusicVolume}"/>
-								<ctrls:CheckBox02 Style="{StaticResource CHK.SELECT2}"/>
-								<ctrls:CheckBox02 Style="{StaticResource CHK.LOBBY}"/>
-								<ctrls:CheckBox02 Style="{StaticResource CHK.LOGIN}"/>
+								<ctrls:CheckBox02 Style="{StaticResource CHK.SELECT2}"
+								                  IsChecked="{Binding Model.MusicChampionSelect}"/>
+								<ctrls:CheckBox02 Style="{StaticResource CHK.LOBBY}"
+								                  IsChecked="{Binding Model.MusicLobby}"/>
+								<ctrls:CheckBox02 Style="{StaticResource CHK.LOGIN}" 
+								                  IsChecked="{Binding Model.MusicLogin}"/>
 							</StackPanel>
-
 						</StackPanel>
 						
 					</StackPanel>
