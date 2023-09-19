@@ -70,10 +70,6 @@
 		<Setter Property="Height" Value="30"/>
 		<Setter Property="Margin" Value="0 7 0 0"/>
 		<Setter Property="ItemContainerStyle" Value="{StaticResource IN.CBXI}"/>
-		<Setter Property="ItemsSource" Value="{Binding DeviceList}"/>
-		<Setter Property="SelectedValue" Value="{Binding Model.InputDevice}"/>
-		<Setter Property="SelectedValuePath" Value="Name"/>
-		<Setter Property="Content" Value="{Binding RelativeSource={RelativeSource Self}, Path=SelectedItem.Name}"/>
 	</Style>
 
 	<Style TargetType="{x:Type Button}" x:Key="BTN.MIC">
@@ -149,7 +145,11 @@
 						<TextBlock Style="{StaticResource TXB.SETTING}"/>
 						<TextBlock Style="{StaticResource TXB.DEVICE}"/>
 						<StackPanel Orientation="Horizontal">
-							<ctrls:RiotComboBox Style="{StaticResource CBX.DEVICE}"/>
+							<ctrls:RiotComboBox Style="{StaticResource CBX.DEVICE}"
+							                    ItemsSource="{Binding DeviceList}"
+							                    SelectedValue="{Binding Model.InputDevice}"
+							                    SelectedValuePath="Name"/>
+							<!-- <Setter Property="Content" Value="{Binding RelativeSource={RelativeSource Self}, Path=SelectedItem.Name}" -->
 							<Button Style="{StaticResource BTN.MIC}"/>
 						</StackPanel>
 						
