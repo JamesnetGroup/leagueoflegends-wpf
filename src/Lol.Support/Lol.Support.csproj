@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.34" />
+    <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.35" />
   </ItemGroup>
 
 </Project>
