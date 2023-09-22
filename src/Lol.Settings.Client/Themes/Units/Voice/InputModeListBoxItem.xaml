@@ -15,18 +15,21 @@
         <GradientStop Color="#CBA047" Offset="1"/>
     </LinearGradientBrush>
 
-    <Style TargetType="{x:Type RadioButton}" x:Key="IN.RDO">
-        <Setter Property="Content" Value="{Binding InputMode.ItemName}"/>
+    <Style TargetType="{x:Type voice:InputModeListBoxItem}">
+        <Setter Property="ChangeVoiceModeCommand" Value="{Binding DataContext.ChangeVoiceModeCommand, RelativeSource={RelativeSource AncestorType={x:Type voice:InputModeListBox}}}"/>
+        <Setter Property="GroupName" Value="Mode"/>
         <Setter Property="Foreground" Value="#BEB187"/>
         <Setter Property="Background" Value="Transparent"/>
         <Setter Property="BorderBrush" Value="Transparent"/>
         <Setter Property="BorderThickness" Value="0"/>
         <Setter Property="Margin" Value="0 20 0 0"/>
         <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Content" Value="{Binding InputMode.ItemName}"/>
         <Setter Property="Template">
             <Setter.Value>
-                <ControlTemplate TargetType="{x:Type RadioButton}">
-                    <Grid>
+                <ControlTemplate TargetType="{x:Type voice:InputModeListBoxItem}">
+
+                    <Grid Background="{TemplateBinding Background}">
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="Auto"/>
                             <ColumnDefinition Width="*"/>
@@ -34,7 +37,7 @@
                         <ctrls:RiotIcon x:Name="dia" Grid.Column="0" IconType="DiaEmpty" Width="14" Height="14"
                                         HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Fill="{StaticResource GEO.FILL}"/>
                         <TextBlock Grid.Column="1" Margin="5 0 0 0"
-                                   Text="{Binding RelativeSource={RelativeSource AncestorType=RadioButton}, Path=Content}"/>
+                                   Text="{Binding ItemName}"/>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
@@ -51,15 +54,4 @@
         </Setter>
     </Style>
 
-    <Style TargetType="{x:Type voice:InputModeListBoxItem}" x:Key="IN.LBXI">
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type voice:InputModeListBoxItem}">
-                    <RadioButton Style="{StaticResource IN.RDO}"
-                                 Content="{Binding ItemName}"
-                                 IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsSelected}"/>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
 </ResourceDictionary>
