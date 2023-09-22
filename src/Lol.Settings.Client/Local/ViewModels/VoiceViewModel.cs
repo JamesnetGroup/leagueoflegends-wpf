@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
+using System.Windows.Forms;
 using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using Jamesnet.Wpf.Mvvm;
 using Lol.Data.Codes;
 using Lol.Data.Config;
@@ -17,7 +19,8 @@ namespace Lol.Settings.Client.Local.ViewModels
         private List<AudioDevice> _deviceList;
         [ObservableProperty]
         private List<UsualCodes> _inputMode;
-
+        [ObservableProperty]
+        private string _selectInputMode;
         public VoiceModel Model { get; set; }
 
         public VoiceViewModel()
@@ -27,6 +30,12 @@ namespace Lol.Settings.Client.Local.ViewModels
 
             ConfigModel config = RiotConfig.LoadConfig();
             Model = config.Settings.Voice;
+        }
+
+        [RelayCommand]
+        private void ChangeVoiceMode(UsualCodes codes)
+        {
+            SelectInputMode = Model.InputMode = codes.ItemName;
         }
     }
 }
