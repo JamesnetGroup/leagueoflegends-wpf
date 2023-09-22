@@ -3,7 +3,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 
-namespace Lol.Settings.Client.UI.Units.Voice
+namespace Lol.Settings.Client.UI.Units
 {
     public class InputModeListBoxItem : ListBoxItem
     {
