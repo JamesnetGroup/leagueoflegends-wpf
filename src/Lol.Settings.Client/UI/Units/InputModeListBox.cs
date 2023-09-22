@@ -1,7 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 
-namespace Lol.Settings.Client.UI.Units.Voice
+namespace Lol.Settings.Client.UI.Units
 {
     public class InputModeListBox : ListBox
     {
