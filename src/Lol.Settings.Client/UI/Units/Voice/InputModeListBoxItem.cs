@@ -5,7 +5,7 @@ using System.Windows.Input;
 
 namespace Lol.Settings.Client.UI.Units.Voice
 {
-    public class InputModeListBoxItem : RadioButton
+    public class InputModeListBoxItem : ListBoxItem
     {
         public ICommand ChangeVoiceModeCommand
         {
@@ -25,7 +25,7 @@ namespace Lol.Settings.Client.UI.Units.Voice
 
         public InputModeListBoxItem()
         {
-            Checked += (sender, args) =>
+            Selected += (sender, args) =>
             {
                 ChangeVoiceModeCommand?.Execute (this.DataContext as UsualCodes);
             };

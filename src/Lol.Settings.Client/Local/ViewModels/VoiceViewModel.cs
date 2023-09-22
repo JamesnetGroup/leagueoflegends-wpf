@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Forms;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
@@ -20,7 +21,7 @@ namespace Lol.Settings.Client.Local.ViewModels
         [ObservableProperty]
         private List<UsualCodes> _inputMode;
         [ObservableProperty]
-        private string _selectInputMode;
+        private UsualCodes _selectInputMode;
         public VoiceModel Model { get; set; }
 
         public VoiceViewModel()
@@ -30,12 +31,19 @@ namespace Lol.Settings.Client.Local.ViewModels
 
             ConfigModel config = RiotConfig.LoadConfig();
             Model = config.Settings.Voice;
+            SelectInputMode = InputMode.FirstOrDefault(x=>x.ItemName == Model.InputMode);
         }
 
         [RelayCommand]
         private void ChangeVoiceMode(UsualCodes codes)
         {
-            SelectInputMode = Model.InputMode = codes.ItemName;
+            Model.InputMode = codes.ItemName;            
+            SelectInputMode = Select (codes.ItemName);
+        }
+
+        private UsualCodes Select(string ItemName)
+        {
+            return InputMode.FirstOrDefault (x => x.ItemName == ItemName);
         }
     }
 }
