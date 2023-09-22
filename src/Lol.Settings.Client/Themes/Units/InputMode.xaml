@@ -17,16 +17,14 @@
         <Setter Property="MaxHeight" Value="26" />
         <Setter Property="Width" Value="200" />
         <Setter Property="Height" Value="26" />
-        <Setter Property="Margin" Value="0,70,0,0" />
+        <Setter Property="Margin" Value="0,20,0,0" />
         <Setter Property="HorizontalAlignment" Value="Center" />
-        <Setter Property="VerticalAlignment" Value="Center" />
     </Style>
     <ControlTemplate x:Key="Status" TargetType="{x:Type ContentControl}">
-        <Grid>
+        <Grid Margin="0,30,0,0">
             <TextBlock
-                Margin="0,50,0,30"
+                Margin="110,0,0,0"
                 HorizontalAlignment="Left"
-                VerticalAlignment="Center"
                 FontSize="12"
                 Foreground="#9B9688"
                 Text="{Binding ElementName=slider2, Path=Value, StringFormat={}음성 입력 감도: {0:N0}%}" />
@@ -56,7 +54,7 @@
     </LinearGradientBrush>
 
     <Style x:Key="BTN.SC" TargetType="{x:Type Button}">
-        <Setter Property="Margin" Value="145,55,0,0" />
+        <Setter Property="Margin" Value="145,35,0,0" />
         <Setter Property="HorizontalAlignment" Value="Left" />
         <Setter Property="Template">
             <Setter.Value>
@@ -112,7 +110,7 @@
     <ControlTemplate x:Key="Press" TargetType="{x:Type ContentControl}">
         <Grid>
             <TextBlock
-                Margin="120,30,0,0"
+                Margin="120,0,0,0"
                 HorizontalAlignment="Left"
                 FontSize="12"
                 Foreground="#9B9688"
@@ -138,15 +136,19 @@
                                 <ColumnDefinition Width="100" />
                                 <ColumnDefinition Width="*" />
                             </Grid.ColumnDefinitions>
-                            <voice:InputModeListBox Grid.Column="0" ItemsSource="{Binding InputMode}" />
+                            <voice:InputModeListBox
+                                Grid.Column="0"
+                                DisplayMemberPath="ItemName"
+                                ItemsSource="{Binding InputMode}"
+                                SelectedItem="{Binding SelectInputMode}" />
                             <ContentControl Grid.Column="1">
                                 <ContentControl.Style>
                                     <Style TargetType="{x:Type ContentControl}">
                                         <Style.Triggers>
-                                            <DataTrigger Binding="{Binding DataContext.SelectInputMode, RelativeSource={RelativeSource AncestorType={x:Type units:InputMode}}}" Value="Voice Activity">
+                                            <DataTrigger Binding="{Binding SelectInputMode.ItemName}" Value="Voice Activity">
                                                 <Setter Property="Template" Value="{StaticResource Status}" />
                                             </DataTrigger>
-                                            <DataTrigger Binding="{Binding DataContext.SelectInputMode, RelativeSource={RelativeSource AncestorType={x:Type units:InputMode}}}" Value="Push to Talk">
+                                            <DataTrigger Binding="{Binding SelectInputMode.ItemName}" Value="Push to Talk">
                                                 <Setter Property="Template" Value="{StaticResource Press}" />
                                             </DataTrigger>
                                         </Style.Triggers>
