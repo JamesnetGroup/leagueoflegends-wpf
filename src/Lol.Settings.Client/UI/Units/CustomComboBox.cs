@@ -2,11 +2,11 @@
 using System.Windows;
 namespace Lol.Settings.Client.UI.Units
 {
-    public class OutputModeComboBox : RiotComboBox
+    public class CustomComboBox : RiotComboBox
     {
         protected override DependencyObject GetContainerForItemOverride()
         {
-            return new OutputModeComboBoxItem ();
+            return new CustomComboBoxItem ();
         }
     }
 }
