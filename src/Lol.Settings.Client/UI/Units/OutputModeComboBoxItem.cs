@@ -1,6 +1,5 @@
 ﻿using DevNcore.LayoutSupport.Leagueoflegends.Controls;
 using Lol.Data.Codes;
-using Lol.Database.Entites.Schema;
 using System.Windows;
 using System.Windows.Input;
 
