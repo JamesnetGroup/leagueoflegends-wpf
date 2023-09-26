@@ -1,8 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Windows.Forms;
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Jamesnet.Wpf.Mvvm;
 using Lol.Data.Codes;
@@ -12,19 +8,17 @@ using Lol.Database.Controller;
 using Lol.Database.Entites.Schema;
 using Lol.Devices.Audio;
 using Lol.Foundation.Riotbase;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Lol.Settings.Client.Local.ViewModels
 {
     public partial class VoiceViewModel : ObservableBase
     {
-        [ObservableProperty]
-        private List<AudioDevice> _deviceList;
-        [ObservableProperty]
-        private List<UsualCodes> _inputMode;
-        [ObservableProperty]
-        private UsualCodes _selectInputMode;
-        [ObservableProperty]
-        private AudioDevice _selectDevice;
+        [ObservableProperty] List<AudioDevice> _deviceList;
+        [ObservableProperty] List<UsualCodes> _inputMode;
+        [ObservableProperty] UsualCodes _selectInputMode;
+        [ObservableProperty] AudioDevice _selectDevice;
         public VoiceModel Model { get; set; }
 
         public VoiceViewModel()
@@ -52,6 +46,7 @@ namespace Lol.Settings.Client.Local.ViewModels
 
         private AudioDevice SearchAudio(string name)
         {
+            Model.InputDevice = name;
             var search = DeviceList.FirstOrDefault (x => x.Name == name);
             if (search == null)
                 return DeviceList.First ();
