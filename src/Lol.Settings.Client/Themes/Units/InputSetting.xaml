@@ -70,14 +70,13 @@
     <Style x:Key="CBX.DEVICE" TargetType="{x:Type ctrls:RiotComboBox}">
         <Setter Property="Width" Value="320" />
         <Setter Property="Height" Value="30" />
-        <Setter Property="Margin" Value="0,7,0,0" />
         <Setter Property="ItemContainerStyle" Value="{StaticResource IN.CBXI}" />
     </Style>
 
     <Style x:Key="BTN.MIC" TargetType="{x:Type Button}">
         <Setter Property="Width" Value="35" />
         <Setter Property="Height" Value="30" />
-        <Setter Property="Margin" Value="15,7,0,0" />
+        <Setter Property="Margin" Value="15,0,0,0" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
@@ -149,9 +148,9 @@
 
                         <TextBlock Style="{StaticResource TXB.SETTING}" />
                         <TextBlock Style="{StaticResource TXB.DEVICE}" />
-                        <StackPanel Orientation="Horizontal">
+                        <StackPanel Margin="0,7,0,0" Orientation="Horizontal">
                             <units:OutputModeComboBox
-                                DisplayMemberPath="Name"
+                                Content="{Binding SelectDevice.Name}"
                                 ItemsSource="{Binding DeviceList}"
                                 SelectedItem="{Binding SelectDevice}"
                                 Style="{StaticResource CBX.DEVICE}" />
