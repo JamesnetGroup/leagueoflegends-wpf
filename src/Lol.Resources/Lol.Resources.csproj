@@ -1995,7 +1995,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.63" />
+    <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.67" />
   </ItemGroup>
 
   <ItemGroup>
