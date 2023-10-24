@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.77" />
-    <PackageReference Include="XamlDesign.Wpf" Version="1.0.0" />
+    <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.78" />
+    <PackageReference Include="XamlDesign.Wpf" Version="1.0.0.1" />
   </ItemGroup>
 
 </Project>
