@@ -48,7 +48,7 @@ namespace Lol.GameRoom.Local.ViewModels
 
             List<GuestModel> source = new()
             {
-                new GuestModel { Name = "Elena" }
+                new GuestModel { Name = "Jamesnet214" }
             };
 
             Guests = source;
