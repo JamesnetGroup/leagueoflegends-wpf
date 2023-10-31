@@ -29,7 +29,6 @@
 									   ScrollViewer.VerticalScrollBarVisibility="Auto" 
 									   ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                                            PanningMode="VerticalFirst">
-                        <!--TODO: [Elena] 추후 Custom Control 작업-->
                         <DataGrid Grid.Row="1" 
                                   ScrollViewer.PanningMode="None"
                                   VerticalAlignment="Stretch"
