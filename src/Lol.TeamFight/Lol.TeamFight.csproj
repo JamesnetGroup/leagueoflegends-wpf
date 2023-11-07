@@ -8,8 +8,8 @@
   <ItemGroup>
     <PackageReference Include="DevNcore.UI.Foundation" Version="1.0.9" />
     <PackageReference Include="DevNcore.WPF" Version="1.0.9" />
-    <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.99" />
-    <PackageReference Include="XamlDesign.Wpf" Version="1.0.0.15" />
+    <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.108" />
+    <PackageReference Include="XamlDesign.Wpf" Version="1.0.0.22" />
   </ItemGroup>
 
   <ItemGroup>
