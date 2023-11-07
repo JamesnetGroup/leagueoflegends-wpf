@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using System.Diagnostics;
-using CommunityToolkit.Mvvm.ComponentModel;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using Jamesnet.Wpf.Mvvm;
 using Lol.Data.Config;
@@ -9,13 +7,17 @@ using Lol.Data.Setting.Clients;
 using Lol.Database.Controller;
 using Lol.Database.Entites.Schema;
 using Lol.Foundation.Riotbase;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
 
 namespace Lol.Settings.Client.Local.ViewModels
 {
     public partial class GeneralViewModel : ObservableBase
     {
-        [ObservableProperty]
-        private List<Resolutions> _sizeList;
+        [ObservableProperty] List<Resolutions> _sizeList;
+        [ObservableProperty] Resolutions _selectSize;
+
 
         public GeneralModel Model { get; set; }
 
@@ -27,6 +29,7 @@ namespace Lol.Settings.Client.Local.ViewModels
             config.Settings ??= new SettingModel();
 
             Model = config.Settings.General;
+            this.SelectSize = SearchWinSize(Model.WinSizeValue);
         }
 
         [RelayCommand]
@@ -38,6 +41,21 @@ namespace Lol.Settings.Client.Local.ViewModels
             {
                 UseShellExecute = true
             });
+        }
+        [RelayCommand]
+        private void ChangeSize(Resolutions resolutions)
+        {
+            Model.WinSizeValue = resolutions.Name;
+            this.SelectSize = SearchWinSize (Model.WinSizeValue);
+        }
+
+        private Resolutions SearchWinSize(string name)
+        {
+            var search = SizeList.FirstOrDefault (x => x.Name == name);
+            if (search == null)
+                return SizeList.Last ();
+
+            return search;
         }
     }
 }
