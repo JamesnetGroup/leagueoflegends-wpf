@@ -1,16 +1,14 @@
-<ResourceDictionary
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-	<ResourceDictionary.MergedDictionaries>
-		<ResourceDictionary Source="/Lol.Settings.Client;component/Themes/Units/InputMode.xaml"/>
-		<ResourceDictionary Source="/Lol.Settings.Client;component/Themes/Units/InputPress.xaml"/>
-		<ResourceDictionary Source="/Lol.Settings.Client;component/Themes/Units/InputStatus.xaml"/>
-		<ResourceDictionary Source="/Lol.Settings.Client;component/Themes/Units/InputSetting.xaml"/>
-		<ResourceDictionary Source="/Lol.Settings.Client;component/Themes/Views/AlarmContent.xaml"/>
-		<ResourceDictionary Source="/Lol.Settings.Client;component/Themes/Views/BlockContent.xaml"/>
-		<ResourceDictionary Source="/Lol.Settings.Client;component/Themes/Views/ChatContent.xaml"/>
-		<ResourceDictionary Source="/Lol.Settings.Client;component/Themes/Views/GeneralContent.xaml"/>
-		<ResourceDictionary Source="/Lol.Settings.Client;component/Themes/Views/SoundContent.xaml"/>
-		<ResourceDictionary Source="/Lol.Settings.Client;component/Themes/Views/VoiceContent.xaml"/>
-	</ResourceDictionary.MergedDictionaries>
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Lol.Settings.Client;component/Themes/Units/InputModeListBoxItem.xaml" />
+        <ResourceDictionary Source="/Lol.Settings.Client;component/Themes/Units/InputModeListBox.xaml" />
+        <ResourceDictionary Source="/Lol.Settings.Client;component/Themes/Units/InputMode.xaml" />
+        <ResourceDictionary Source="/Lol.Settings.Client;component/Themes/Units/InputSetting.xaml" />
+        <ResourceDictionary Source="/Lol.Settings.Client;component/Themes/Views/AlarmContent.xaml" />
+        <ResourceDictionary Source="/Lol.Settings.Client;component/Themes/Views/BlockContent.xaml" />
+        <ResourceDictionary Source="/Lol.Settings.Client;component/Themes/Views/ChatContent.xaml" />
+        <ResourceDictionary Source="/Lol.Settings.Client;component/Themes/Views/GeneralContent.xaml" />
+        <ResourceDictionary Source="/Lol.Settings.Client;component/Themes/Views/SoundContent.xaml" />
+        <ResourceDictionary Source="/Lol.Settings.Client;component/Themes/Views/VoiceContent.xaml" />
+    </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

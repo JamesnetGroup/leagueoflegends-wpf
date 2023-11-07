@@ -13,10 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Themes\units\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="DevNcore.LayoutSupport.Leagueoflegends" Version="1.0.9" />
     <PackageReference Include="DevNcore.UI.Design" Version="1.0.9" />
     <PackageReference Include="DevNcore.UI.Design.Converter" Version="1.0.9" />

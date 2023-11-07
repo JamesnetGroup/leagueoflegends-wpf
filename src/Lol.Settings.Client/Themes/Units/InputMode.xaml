@@ -1,112 +1,163 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-					xmlns:units="clr-namespace:Lol.Settings.Client.UI.Units"
-					xmlns:ctrls="clr-namespace:DevNcore.LayoutSupport.Leagueoflegends.Controls;assembly=DevNcore.LayoutSupport.Leagueoflegends">
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:ctrls="clr-namespace:DevNcore.LayoutSupport.Leagueoflegends.Controls;assembly=DevNcore.LayoutSupport.Leagueoflegends"
+    xmlns:units="clr-namespace:Lol.Settings.Client.UI.Units">
 
-	<LinearGradientBrush x:Key="GEO.FILL" StartPoint="0.5, 0" EndPoint="0.5, 1">
-		<GradientStop Color="#B28830" Offset="0"/>
-		<GradientStop Color="#A37E30" Offset="0.5"/>
-		<GradientStop Color="#87672B" Offset="1"/>
-	</LinearGradientBrush>
+    <Style x:Key="TXB.MODE" TargetType="{x:Type TextBlock}">
+        <Setter Property="Text" Value="입력 모드" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="Foreground" Value="#F0E6D2" />
+        <Setter Property="Margin" Value="0,10,0,0" />
+    </Style>
+    <Style x:Key="SLD.NOISE" TargetType="{x:Type ctrls:Slider01}">
+        <Setter Property="MinHeight" Value="26" />
+        <Setter Property="MaxHeight" Value="26" />
+        <Setter Property="Width" Value="200" />
+        <Setter Property="Height" Value="26" />
+        <Setter Property="Margin" Value="0,20,0,0" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
+    </Style>
+    <ControlTemplate x:Key="Status" TargetType="{x:Type ContentControl}">
+        <Grid Margin="0,30,0,0">
+            <TextBlock
+                Margin="110,0,0,0"
+                HorizontalAlignment="Left"
+                FontSize="12"
+                Foreground="#9B9688"
+                Text="{Binding ElementName=slider2, Path=Value, StringFormat={}음성 입력 감도: {0:N0}%}" />
+            <ctrls:Slider01
+                x:Name="slider2"
+                Style="{StaticResource SLD.NOISE}"
+                Value="{Binding Model.NoiseControl}" />
+        </Grid>
+    </ControlTemplate>
 
-	<LinearGradientBrush x:Key="GEO.FILL.OVER" StartPoint="0.5, 0" EndPoint="0.5, 1">
-		<GradientStop Color="#EDE1C9" Offset="0"/>
-		<GradientStop Color="#DBBF84" Offset="0.5"/>
-		<GradientStop Color="#CBA047" Offset="1"/>
-	</LinearGradientBrush>
-	
-	<Style TargetType="{x:Type TextBlock}" x:Key="TXB.MODE">
-		<Setter Property="Text" Value="입력 모드"/>
-		<Setter Property="FontSize" Value="14"/>
-		<Setter Property="FontWeight" Value="Bold"/>
-		<Setter Property="Foreground" Value="#F0E6D2"/>
-		<Setter Property="Margin" Value="0 10 0 0"/>
-	</Style>
+    <LinearGradientBrush x:Key="BTN.BDR" StartPoint="0.5, 0" EndPoint="0.5, 1">
+        <GradientStop Offset="0" Color="#6F5327" />
+        <GradientStop Offset="0.5" Color="#B58C36" />
+        <GradientStop Offset="1" Color="#AD9562" />
+    </LinearGradientBrush>
 
-	<Style TargetType="{x:Type RadioButton}" x:Key="IN.RDO">
-		<Setter Property="Foreground" Value="#BEB187"/>
-		<Setter Property="Background" Value="Transparent"/>
-		<Setter Property="BorderBrush" Value="Transparent"/>
-		<Setter Property="BorderThickness" Value="0"/>
-		<Setter Property="Margin" Value="0 20 0 0"/>
-		<Setter Property="FontSize" Value="12"/>
-		<Setter Property="Content" Value="{Binding InputMode.ItemName}"/>
-		<Setter Property="Template">
-			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type RadioButton}">
-					<Grid>
-						<Grid.ColumnDefinitions>
-							<ColumnDefinition Width="Auto"/>
-							<ColumnDefinition Width="*"/>
-						</Grid.ColumnDefinitions>
-						<ctrls:RiotIcon x:Name="dia" Grid.Column="0" IconType="DiaEmpty" Width="14" Height="14"
-										HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Fill="{StaticResource GEO.FILL}"/>
-						<TextBlock Grid.Column="1" Margin="5 0 0 0"
-								   Text="{Binding RelativeSource={RelativeSource AncestorType=RadioButton}, Path=Content}"/>
-					</Grid>
-					<ControlTemplate.Triggers>
-						<Trigger Property="IsMouseOver" Value="True">
-							<Setter Property="Foreground" Value="#F0E6D2"/>
-							<Setter TargetName="dia" Property="Fill" Value="{StaticResource GEO.FILL.OVER}"/>
-						</Trigger>
-						<Trigger Property="IsChecked" Value="True">
-							<Setter Property="Foreground" Value="#EAE0CD"/>
-							<Setter TargetName="dia" Property="IconType" Value="DiaFill"/>
-						</Trigger>
-					</ControlTemplate.Triggers>
-				</ControlTemplate>
-			</Setter.Value>
-		</Setter>
-	</Style>
+    <LinearGradientBrush x:Key="BTN.BDR.OVER" StartPoint="0.5, 0" EndPoint="0.5, 1">
+        <GradientStop Offset="0" Color="#BE943C" />
+        <GradientStop Offset="0.5" Color="#B79F6B" />
+        <GradientStop Offset="1" Color="#DED4C1" />
+    </LinearGradientBrush>
 
-	<Style TargetType="{x:Type ListBoxItem}" x:Key="IN.LBXI">
-		<Setter Property="Template">
-			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type ListBoxItem}">
-					<RadioButton Style="{StaticResource IN.RDO}" 
-                                 Content="{Binding ItemName}"
-                                 IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsSelected}"/>
-				</ControlTemplate>
-			</Setter.Value>
-		</Setter>
-	</Style>
+    <LinearGradientBrush x:Key="BTN.BG.OVER" StartPoint="0.5, 0" EndPoint="0.5, 1">
+        <GradientStop Offset="0" Color="#1E2328" />
+        <GradientStop Offset="0.5" Color="#2A2D2D" />
+        <GradientStop Offset="1" Color="#3A3A34" />
+    </LinearGradientBrush>
 
-	<Style TargetType="{x:Type ListBox}" x:Key="LBX.MODE">
-		<Setter Property="ItemContainerStyle" Value="{StaticResource IN.LBXI}"/>
-		<Setter Property="ItemsSource" Value="{Binding InputMode}"/>
-		<Setter Property="SelectedValue" Value="{Binding Model.InputMode}"/>
-		<Setter Property="SelectedValuePath" Value="ItemName"/>
-		<Setter Property="Background" Value="Transparent"/>
-		<Setter Property="Template">
-			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type ListBox}">
-					<ItemsPresenter/>
-				</ControlTemplate>
-			</Setter.Value>
-		</Setter>
-	</Style>
+    <Style x:Key="BTN.SC" TargetType="{x:Type Button}">
+        <Setter Property="Margin" Value="145,35,0,0" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Button}">
+                    <Grid>
+                        <Border
+                            x:Name="border1"
+                            Width="55"
+                            Height="95"
+                            Background="#1E2328"
+                            BorderBrush="{StaticResource BTN.BDR}"
+                            BorderThickness="2">
+                            <Grid>
+                                <Border
+                                    x:Name="border2"
+                                    Width="55"
+                                    Padding="0,45,0,0"
+                                    VerticalAlignment="Center"
+                                    Background="Transparent"
+                                    BorderBrush="#8F7335"
+                                    BorderThickness="0,0,0,1.5" />
+                                <TextBlock
+                                    Margin="0,0,0,30"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    FontSize="30"
+                                    Foreground="#FFFFFF"
+                                    Text="{Binding Model.TalkShortCut}" />
+                                <ctrls:RiotIcon
+                                    Width="18"
+                                    Height="18"
+                                    Margin="0,0,0,2"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Bottom"
+                                    Fill="#F0E6D2"
+                                    IconType="Mic" />
+                            </Grid>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border1" Property="BorderBrush" Value="{StaticResource BTN.BDR.OVER}" />
+                            <Setter TargetName="border1" Property="Background" Value="{StaticResource BTN.BG.OVER}" />
+                            <Setter TargetName="border2" Property="BorderBrush" Value="#8E866B" />
+                            <Setter Property="Cursor" Value="Hand" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
-	<Style TargetType="{x:Type units:InputMode}">
-		<Setter Property="Grid.Row" Value="1"/>
-		<Setter Property="Margin" Value="10 0 0 0"/>
-		<Setter Property="Template">
-			<Setter.Value>
-				<ControlTemplate TargetType="{x:Type units:InputMode}">
-					<Grid>
-						<Grid.ColumnDefinitions>
-							<ColumnDefinition Width="Auto"/>
-							<ColumnDefinition Width="*"/>
-						</Grid.ColumnDefinitions>
-						<StackPanel Grid.Column="0">
-							<TextBlock Style="{StaticResource TXB.MODE}"/>
-							<ListBox Style="{StaticResource LBX.MODE}"/>
-						</StackPanel>
-						<units:InputStatus/>
-						<units:InputPress/>
-					</Grid>
-				</ControlTemplate>
-			</Setter.Value>
-		</Setter>
-	</Style>
-	
+    <ControlTemplate x:Key="Press" TargetType="{x:Type ContentControl}">
+        <Grid>
+            <TextBlock
+                Margin="120,0,0,0"
+                HorizontalAlignment="Left"
+                FontSize="12"
+                Foreground="#9B9688"
+                Text="눌러서 말하기 단축키" />
+            <Button Style="{StaticResource BTN.SC}" />
+        </Grid>
+    </ControlTemplate>
+
+    <Style TargetType="{x:Type units:InputMode}">
+        <Setter Property="Grid.Row" Value="1" />
+        <Setter Property="Margin" Value="10,0,0,0" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type units:InputMode}">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto" />
+                            <RowDefinition Height="*" />
+                        </Grid.RowDefinitions>
+                        <TextBlock Grid.Row="0" Style="{StaticResource TXB.MODE}" />
+                        <Grid Grid.Row="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <units:InputModeListBox
+                                Grid.Column="0"
+                                DisplayMemberPath="ItemName"
+                                ItemsSource="{Binding InputMode}"
+                                SelectedItem="{Binding SelectInputMode}" />
+                            <ContentControl Grid.Column="1">
+                                <ContentControl.Style>
+                                    <Style TargetType="{x:Type ContentControl}">
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding SelectInputMode.ItemName}" Value="Voice Activity">
+                                                <Setter Property="Template" Value="{StaticResource Status}" />
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding SelectInputMode.ItemName}" Value="Push to Talk">
+                                                <Setter Property="Template" Value="{StaticResource Press}" />
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </ContentControl.Style>
+                            </ContentControl>
+                        </Grid>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>
