@@ -67,7 +67,7 @@ namespace Lol.Collection.Local.ViewModel
 
         public SkinsViewModel()
         {
-            SkinCount = 105;  // TODO: [Elena] 추후 데이터 수정
+            SkinCount = 105;
 
             SkinFilter1 = new SkinApi().GetSkinFilter1();
             CurrentSkinFilter1 = SkinFilter1.First();
