@@ -90,8 +90,8 @@ namespace Lol.Database.Entites.Statics
                 {
                     string readText = GetYamlData("users");
 
-                    var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                    var deserializer = new DeserializerBuilder ()
+                        .WithNamingConvention(new CamelCaseNamingConvention())
                         .Build();
                     _users = deserializer.Deserialize<List<Users>>(readText);
                 }
@@ -111,7 +111,7 @@ namespace Lol.Database.Entites.Statics
                     string readText = GetYamlData("friends");
 
                     var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .WithNamingConvention(new CamelCaseNamingConvention ())
                         .Build();
                     _friends = deserializer.Deserialize<List<Friends>>(readText);
                 }
@@ -131,8 +131,8 @@ namespace Lol.Database.Entites.Statics
                     string readText = GetYamlData("codeitems");
 
                     var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
-                        .Build();
+                        .WithNamingConvention(new CamelCaseNamingConvention ())
+                        .Build();   
                     _codeItems = deserializer.Deserialize<List<CodeItems>>(readText);
                 }
                 return _codeItems;
@@ -151,7 +151,7 @@ namespace Lol.Database.Entites.Statics
                     string readText = GetYamlData("spells-en");
 
                     var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .WithNamingConvention(new CamelCaseNamingConvention ())
                         .Build();
                     _spells = deserializer.Deserialize<List<Spells>>(readText);
                 }
@@ -171,7 +171,7 @@ namespace Lol.Database.Entites.Statics
                     string readText = GetYamlData("items");
 
                     var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .WithNamingConvention(new CamelCaseNamingConvention ())
                         .Build();
                     _items = deserializer.Deserialize<List<Items>>(readText);
                 }
@@ -191,7 +191,7 @@ namespace Lol.Database.Entites.Statics
                     string readText = GetYamlData("mapTypes");
 
                     var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .WithNamingConvention(new CamelCaseNamingConvention ())
                         .Build();
                     _mapTypes = deserializer.Deserialize<List<MapTypes>>(readText);
                 }
@@ -211,7 +211,7 @@ namespace Lol.Database.Entites.Statics
                     string readText = GetYamlData("playTypes");
 
                     var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .WithNamingConvention(new CamelCaseNamingConvention ())
                         .Build();
                     _playTypes = deserializer.Deserialize<List<PlayTypes>>(readText);
                 }
@@ -231,7 +231,7 @@ namespace Lol.Database.Entites.Statics
                     string readText = GetYamlData("teamFights");
 
                     var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .WithNamingConvention(new CamelCaseNamingConvention ())
                         .Build();
                     _teamFights = deserializer.Deserialize<List<TeamFights>>(readText);
                 }
@@ -251,7 +251,7 @@ namespace Lol.Database.Entites.Statics
                     string readText = GetYamlData("gameRooms");
 
                     var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .WithNamingConvention(new CamelCaseNamingConvention ())
                         .Build();
                     _gameRooms = deserializer.Deserialize<List<GameRooms>>(readText);
                 }
@@ -271,7 +271,7 @@ namespace Lol.Database.Entites.Statics
                     string readText = GetYamlData("gameRoomsCustom");
 
                     var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .WithNamingConvention(new CamelCaseNamingConvention ())
                         .Build();
                     _gameRoomsCustom = deserializer.Deserialize<List<GameRoomsCustom>>(readText);
                 }
@@ -291,7 +291,7 @@ namespace Lol.Database.Entites.Statics
                     string readText = GetYamlData("clashCups");
 
                     var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .WithNamingConvention(new CamelCaseNamingConvention ())
                         .Build();
                     _clashCups = deserializer.Deserialize<List<ClashCups>>(readText);
                 }
@@ -311,7 +311,7 @@ namespace Lol.Database.Entites.Statics
                     string readText = GetYamlData("clashTabs");
 
                     var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .WithNamingConvention(new CamelCaseNamingConvention ())
                         .Build();
                     _clashTabs = deserializer.Deserialize<List<ClashTabs>>(readText);
                 }
@@ -331,7 +331,7 @@ namespace Lol.Database.Entites.Statics
                     string readText = GetYamlData("clashTiers");
 
                     var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .WithNamingConvention(new CamelCaseNamingConvention ())
                         .Build();
                     _clashTiers = deserializer.Deserialize<List<ClashTiers>>(readText);
                 }
@@ -351,7 +351,7 @@ namespace Lol.Database.Entites.Statics
                     string readText = GetYamlData("clashTierDetails");
 
                     var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .WithNamingConvention(new CamelCaseNamingConvention ())
                         .Build();
                     _clashTierDetails = deserializer.Deserialize<List<ClashTierDetails>>(readText);
                 }
@@ -370,7 +370,7 @@ namespace Lol.Database.Entites.Statics
                 {
                     string readText = GetYamlData("histories");
                     var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .WithNamingConvention(new CamelCaseNamingConvention ())
                         .Build();
                     _historys = deserializer.Deserialize<List<History>>(readText);
                 }
@@ -390,7 +390,7 @@ namespace Lol.Database.Entites.Statics
                 {
                     string readText = GetYamlData("activities");
                     var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .WithNamingConvention(new CamelCaseNamingConvention ())
                         .Build();
                     _activities = deserializer.Deserialize<List<History>>(readText);
                 }
@@ -410,7 +410,7 @@ namespace Lol.Database.Entites.Statics
                 {
                     string readText = GetYamlData("playChampions");
                     var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .WithNamingConvention(new CamelCaseNamingConvention ())
                         .Build();
                     _playChampions = deserializer.Deserialize<List<History>>(readText);
                 }
@@ -430,7 +430,7 @@ namespace Lol.Database.Entites.Statics
                 {
                     string readText = GetYamlData("storeChampSortings");
                     var deserializer = new DeserializerBuilder()
-                      .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                      .WithNamingConvention(new CamelCaseNamingConvention ())
                       .Build();
                     _storeChampSortings = deserializer.Deserialize<List<StoreChampSortings>>(readText);
                 }
@@ -450,7 +450,7 @@ namespace Lol.Database.Entites.Statics
                 {
                     string readText = GetYamlData("settingMenus");
                     var deserializer = new DeserializerBuilder()
-                      .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                      .WithNamingConvention(new CamelCaseNamingConvention ())
                       .Build();
                     _settingMenus = deserializer.Deserialize<List<SettingMenus>>(readText);
                 }
@@ -470,7 +470,7 @@ namespace Lol.Database.Entites.Statics
                 {
                     string readText = GetYamlData("resolutions");
                     var deserializer = new DeserializerBuilder()
-                      .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                      .WithNamingConvention(new CamelCaseNamingConvention ())
                       .Build();
                     _resolutions = deserializer.Deserialize<List<Resolutions>>(readText);
                 }
@@ -490,7 +490,7 @@ namespace Lol.Database.Entites.Statics
                 {
                     string readText = GetYamlData("champFilter");
                     var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .WithNamingConvention(new CamelCaseNamingConvention ())
                         .Build();
                     _champFilter = deserializer.Deserialize<List<ChampFilter>>(readText);
                 }
@@ -510,7 +510,7 @@ namespace Lol.Database.Entites.Statics
                 {
                     string readText = GetYamlData("champTreeItem");
                     var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .WithNamingConvention(new CamelCaseNamingConvention ())
                         .Build();
                     _champTreeItem = deserializer.Deserialize<List<ChampTreeItem>>(readText);
                 }
@@ -530,7 +530,7 @@ namespace Lol.Database.Entites.Statics
                 {
                     string readText = GetYamlData("champions");
                     var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .WithNamingConvention(new CamelCaseNamingConvention ())
                         .Build();
                     _champions = deserializer.Deserialize<List<Champions>>(readText);
                 }
@@ -550,7 +550,7 @@ namespace Lol.Database.Entites.Statics
                 {
                     string readText = GetYamlData("skinFilter");
                     var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .WithNamingConvention(new CamelCaseNamingConvention ())
                         .Build();
                     _skinFilter = deserializer.Deserialize<List<SkinFilter>>(readText);
                 }
@@ -570,7 +570,7 @@ namespace Lol.Database.Entites.Statics
                 {
                     string readText = GetYamlData("clashSchedules");
                     var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .WithNamingConvention(new CamelCaseNamingConvention ())
                         .Build();
                     _clashSchedules = deserializer.Deserialize<List<ClashSchedules>>(readText);
                 }
@@ -590,7 +590,7 @@ namespace Lol.Database.Entites.Statics
                 {
                     string readText = GetYamlData("runes");
                     var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .WithNamingConvention(new CamelCaseNamingConvention ())
                         .Build();
                     _runes = deserializer.Deserialize<List<Runes>>(readText);
                 }
@@ -610,7 +610,7 @@ namespace Lol.Database.Entites.Statics
                 {
                     string readText = GetYamlData("runeDetail");
                     var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .WithNamingConvention(new CamelCaseNamingConvention ())
                         .Build();
                     _runeDetail = deserializer.Deserialize<List<RuneDetail>>(readText);
                 }
@@ -630,7 +630,7 @@ namespace Lol.Database.Entites.Statics
                 {
                     string readText = GetYamlData("loots");
                     var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .WithNamingConvention(new CamelCaseNamingConvention ())
                         .Build();
                     _loots = deserializer.Deserialize<List<Loots>>(readText);
                 }
@@ -650,7 +650,7 @@ namespace Lol.Database.Entites.Statics
                 {
                     string readText = GetYamlData("lootSummary");
                     var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .WithNamingConvention(new CamelCaseNamingConvention ())
                         .Build();
                     _lootSummary = deserializer.Deserialize<List<Loots>>(readText);
                 }
@@ -670,7 +670,7 @@ namespace Lol.Database.Entites.Statics
                 {
                     string readText = GetYamlData("lootItemSortings");
                     var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .WithNamingConvention(new CamelCaseNamingConvention ())
                         .Build();
                     _lootItemSortings = deserializer.Deserialize<List<LootItemSortings>>(readText);
                 }
@@ -690,7 +690,7 @@ namespace Lol.Database.Entites.Statics
                 {
                     string readText = GetYamlData("plantHeaders");
                     var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .WithNamingConvention(new CamelCaseNamingConvention ())
                         .Build();
                     _plantHeaders = deserializer.Deserialize<List<PlantHeaders>>(readText);
                 }
@@ -710,7 +710,7 @@ namespace Lol.Database.Entites.Statics
                 {
                     string readText = GetYamlData("plantItems");
                     var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .WithNamingConvention(new CamelCaseNamingConvention ())
                         .Build();
                     _plantItems = deserializer.Deserialize<List<PlantItems>>(readText);
                 }
@@ -730,7 +730,7 @@ namespace Lol.Database.Entites.Statics
                 {
                     string readText = GetYamlData("storeChamps");
                     var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .WithNamingConvention(new CamelCaseNamingConvention ())
                         .Build();
                     _storeChamps = deserializer.Deserialize<List<StoreItems>>(readText);
                 }
@@ -750,7 +750,7 @@ namespace Lol.Database.Entites.Statics
                 {
                     string readText = GetYamlData("newSkins");
                     var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .WithNamingConvention(new CamelCaseNamingConvention ())
                         .Build();
                     _newSkins = deserializer.Deserialize<List<NewSkins>>(readText);
                 }
@@ -771,7 +771,7 @@ namespace Lol.Database.Entites.Statics
                 {
                     string readText = GetYamlData("skinSets");
                     var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .WithNamingConvention(new CamelCaseNamingConvention ())
                         .Build();
                     _skinSets = deserializer.Deserialize<List<SkinSets>>(readText);
                 }
@@ -792,8 +792,8 @@ namespace Lol.Database.Entites.Statics
                 {
                     string readText = GetYamlData("popularities");
                     var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
-                        .Build();
+                        .WithNamingConvention(new CamelCaseNamingConvention ())
+                        .Build();   
                     _popularities = deserializer.Deserialize<List<Popularities>>(readText);
                 }
 
@@ -813,7 +813,7 @@ namespace Lol.Database.Entites.Statics
                 {
                     string readText = GetYamlData("popularityDetails");
                     var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .WithNamingConvention(new CamelCaseNamingConvention ())
                         .Build();
                     _popularityDetails = deserializer.Deserialize<List<PopularityDetails>>(readText);
                 }
@@ -834,7 +834,7 @@ namespace Lol.Database.Entites.Statics
                 {
                     string readText = GetYamlData("lobbyList");
                     var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .WithNamingConvention(new CamelCaseNamingConvention ())
                         .Build();
                     _lobbyList = deserializer.Deserialize<List<LobbyList>>(readText);
                 }
@@ -853,7 +853,7 @@ namespace Lol.Database.Entites.Statics
                 {
                     string readText = GetYamlData("userCount");
                     var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .WithNamingConvention(new CamelCaseNamingConvention ())
                         .Build();
                     _userCount = deserializer.Deserialize<List<UserCount>>(readText);
                 }
@@ -873,7 +873,7 @@ namespace Lol.Database.Entites.Statics
                 {
                     string readText = GetYamlData("storeTypes");
                     var deserializer = new DeserializerBuilder()
-                      .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                      .WithNamingConvention(new CamelCaseNamingConvention ())
                       .Build();
                     _storeTypes = deserializer.Deserialize<List<StoreTypes>>(readText);
                 }
@@ -893,7 +893,7 @@ namespace Lol.Database.Entites.Statics
                 {
                     string readText = GetYamlData("storeSkins");
                     var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .WithNamingConvention(new CamelCaseNamingConvention ())
                         .Build();
                     _storeSkins = deserializer.Deserialize<List<StoreItems>>(readText);
                 }
@@ -913,7 +913,7 @@ namespace Lol.Database.Entites.Statics
                 {
                     string readText = GetYamlData("storeDetails");
                     var deserializer = new DeserializerBuilder()
-                      .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                      .WithNamingConvention(new CamelCaseNamingConvention ())
                       .Build();
                     _storeDetails = deserializer.Deserialize<List<StoreDetails>>(readText);
                 }
@@ -933,7 +933,7 @@ namespace Lol.Database.Entites.Statics
                 {
                     string readText = GetYamlData("storeTFTs");
                     var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .WithNamingConvention(new CamelCaseNamingConvention ())
                         .Build();
                     _storeTFTs = deserializer.Deserialize<List<StoreItems>>(readText);
                 }
@@ -953,7 +953,7 @@ namespace Lol.Database.Entites.Statics
                 {
                     string readText = GetYamlData("storeLoots");
                     var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .WithNamingConvention(new CamelCaseNamingConvention ())
                         .Build();
                     _storeLoots = deserializer.Deserialize<List<StoreItems>>(readText);
                 }
@@ -973,7 +973,7 @@ namespace Lol.Database.Entites.Statics
                 {
                     string readText = GetYamlData("storeEtcItems");
                     var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .WithNamingConvention(new CamelCaseNamingConvention ())
                         .Build();
                     _storeEtcItems = deserializer.Deserialize<List<StoreItems>>(readText);
                 }
@@ -993,7 +993,7 @@ namespace Lol.Database.Entites.Statics
                 {
                     string readText = GetYamlData("myItemInfos");
                     var deserializer = new DeserializerBuilder()
-                        .WithNamingConvention(CamelCaseNamingConvention.Instance)
+                        .WithNamingConvention(new CamelCaseNamingConvention ())
                         .Build();
                     _myItemInfos = deserializer.Deserialize<List<MyItemInfos>>(readText);
                 }
