@@ -25,13 +25,7 @@
     <Page Update="Themes\Units\InputMode.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Themes\Units\InputPress.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="Themes\Units\InputSetting.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="Themes\Units\InputStatus.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Themes\Views\AlarmContent.xaml">
