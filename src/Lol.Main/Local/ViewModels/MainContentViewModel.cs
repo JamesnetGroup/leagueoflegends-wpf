@@ -74,6 +74,5 @@ namespace Lol.Main.Local.ViewModels
         {
             BackgroundImage.Source = new BitmapImage(e.NewUri);
         }
-
     }
 }
