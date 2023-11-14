@@ -22,19 +22,6 @@ namespace Lol.Main.UI.Views
             {
                 BackgroundImage = img;
             }
-
-            if (GetTemplateChild("PART_DragBar") is Border bar)
-            {
-                bar.MouseDown += Bar_MouseDown;
-            }
-        }
-
-        private void Bar_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            if (e.LeftButton == MouseButtonState.Pressed)
-            {
-                Window.GetWindow(this).DragMove();
-            }
         }
     }
 }
