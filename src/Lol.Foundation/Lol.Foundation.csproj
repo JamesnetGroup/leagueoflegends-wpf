@@ -1,24 +1,21 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>net7.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
+	<Nullable>disable</Nullable>
   </PropertyGroup>
-
   <ItemGroup>
     <Compile Remove="Mvvm\**" />
     <EmbeddedResource Remove="Mvvm\**" />
     <None Remove="Mvvm\**" />
     <Page Remove="Mvvm\**" />
   </ItemGroup>
-
   <ItemGroup>
     <Compile Remove="Riotbase\RiotApp.cs" />
     <Compile Remove="Riotbase\RiotView.cs" />
     <Compile Remove="Riotbase\RiotWindow.cs" />
     <Compile Remove="Riotcore\IRiotUI.cs" />
   </ItemGroup>
-
   <ItemGroup>
     <PackageReference Include="DevNcore.LayoutSupport.Leagueoflegends" Version="1.0.9" />
     <PackageReference Include="DevNcore.UI.Design" Version="1.0.9" />
@@ -29,13 +26,10 @@
     <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.110" />
     <PackageReference Include="XamlDesign.Wpf" Version="1.0.0.22" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\Lol.Data\Lol.Data.csproj" />
   </ItemGroup>
-
   <ItemGroup>
     <Folder Include="Riotcore\" />
   </ItemGroup>
-
 </Project>
