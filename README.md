@@ -66,17 +66,21 @@
 ![image](https://user-images.githubusercontent.com/52397976/133445360-29ced456-994a-4f10-a669-0355bd1dee00.png)
 
 ### `Clash`
+
 ![image](https://user-images.githubusercontent.com/68521148/135798131-1b1d8281-5f07-4012-9863-9feb97beea62.PNG)
 
 ![image](https://user-images.githubusercontent.com/52397976/133266434-97659a57-284d-4207-bfab-ac2684c16f04.png)
 
 ### `Setting`
+
 ![image](https://user-images.githubusercontent.com/74305823/126187790-d6d3332e-694c-4318-b556-66e1df34a4be.png)
 
 ### `Profile`
+
 ![image](https://user-images.githubusercontent.com/74305823/136051365-b82be44d-318d-4ac4-81cc-02ba6c306776.png)
 
 ### `Collection`
+
 ![image](https://user-images.githubusercontent.com/74305823/140320827-2098e387-1c40-440d-bc3c-bf0703d2ed00.png)
 
 ![image](https://user-images.githubusercontent.com/74305823/138594906-270d42f5-bee6-4486-bd59-5a05cd8ead33.png)
@@ -86,12 +90,15 @@
 ![image](https://user-images.githubusercontent.com/74305823/137628890-d0ef33b4-14a1-4caa-be24-4d0e4b16c5a8.png)
 
 ### `Loot`
+
 ![image](https://user-images.githubusercontent.com/68521148/138593391-44e3dec7-433c-4422-a7a2-cc8a109ad10b.png)
 
 ### `My Shop`
+
 ![image](https://user-images.githubusercontent.com/74305823/140745076-d88297bd-50ab-4a56-a558-c1fb78af1cb5.png)
 
 ### `Store`
+
 ![image](https://user-images.githubusercontent.com/68521148/139537777-062b5bcf-61b2-4e10-a9df-31353bcffc66.PNG)
 
 ![image](https://user-images.githubusercontent.com/68521148/140644848-d16192cf-6dba-42c0-8de3-f5e6d503d3c2.PNG)
