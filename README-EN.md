@@ -90,7 +90,6 @@
 
 ![image](https://user-images.githubusercontent.com/68521148/140644848-d16192cf-6dba-42c0-8de3-f5e6d503d3c2.PNG)
 
-![image](https://user-images.githubusercontent.com/68521148/139064074-130eb6da-6093-4fe2-b813-d1133d4c1857.PNG)
 
 ### `Game`
 ![image](https://user-images.githubusercontent.com/74305823/136380449-ea229fbb-6db7-412c-828b-16d6f7af83d8.png)
