@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net7.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
+	<Nullable>disable</Nullable>
     <ApplicationIcon>Properties\Lol.ico</ApplicationIcon>
   </PropertyGroup>
 
