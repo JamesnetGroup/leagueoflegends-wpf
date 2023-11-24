@@ -4,7 +4,7 @@
 		<UseWPF>true</UseWPF>
 	</PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="Jamesnet.Wpf" Version="1.0.0.108" />
+		<PackageReference Include="Jamesnet.Wpf" Version="1.0.0.109" />
 		<PackageReference Include="NAudio" Version="2.0.1" />
 		<PackageReference Include="XamlDesign.Wpf" Version="1.0.0.22" />
 	</ItemGroup>
