@@ -39,9 +39,7 @@ League of Legends의 역동적인 세계를 WPF와 C#을 통해 새로운 창으
 이 프로젝트는 커뮤니티의 기여를 통해 성장합니다. `CONTRIBUTING.md` 파일을 확인하고 프로젝트에 기여하는 방법을 알아보세요.
 
 ## 라이선스
-이 프로
-
-젝트는 [MIT License](LICENSE) 하에 배포됩니다.
+이 프로젝트는 [MIT License](LICENSE) 하에 배포됩니다.
 
 ## 연락처
 - 이메일: [your-email@example.com](mailto:your-email@example.com)
