@@ -2,6 +2,8 @@
 
 WPF 기반으로 만든 <b>리그오브레전드</b>입니다. 
 
+<img src="https://github.com/jamesnet214/leagueoflegends/assets/52397976/69981e49-0152-4d95-8268-8fe744eaa548" style="width: 500px"/>
+
 Youtube: https://youtu.be/xgUqDavCJGg
 
 ## 이 오픈소스의 특징
