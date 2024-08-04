@@ -1,84 +1,92 @@
-# WPF League of Legends
+# League of Legends Client (WPF) [![English](https://img.shields.io/badge/Language-English-blue.svg)](README.md) [![한국어](https://img.shields.io/badge/Language-한국어-red.svg)](README.ko.md)
 
-WPF 기반으로 만든 <b>리그오브레전드</b>입니다. 
+A high-fidelity recreation of the League of Legends client using WPF, showcasing advanced WPF techniques and the power of Jamesnet.Wpf
 
-<img src="https://github.com/jamesnet214/leagueoflegends/assets/52397976/69981e49-0152-4d95-8268-8fe744eaa548" style="width: 500px"/>
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![.NET](https://img.shields.io/badge/.NET-8.0-blue.svg)](https://dotnet.microsoft.com/download)
+[![Stars](https://img.shields.io/github/stars/jamesnet214/leagueoflegends.svg)](https://github.com/jamesnet214/leagueoflegends/stargazers)
+[![Issues](https://img.shields.io/github/issues/jamesnet214/leagueoflegends.svg)](https://github.com/jamesnet214/leagueoflegends/issues)
 
-Youtube: https://youtu.be/xgUqDavCJGg
+## Project Overview
 
-## 이 오픈소스의 특징
-- WPF 프로젝트를 올바르게 구현하는 방법을 학습할 수 있습니다.
-- **리그오브레전드**와 같은 최상위 디자인 영역의 표현을 상용 컴포넌트에 의지하지 않고 직접 구현하는 방법에 대해 설명합니다.
-- MVVM 패턴을 직접 구현하여 WPF에 대해 자세하게 이해하고 학습할 수 있습니다.
+This project is a faithful reproduction of the League of Legends client interface using WPF technology. It demonstrates the capabilities of WPF and the Jamesnet.Wpf framework in creating complex, high-performance user interfaces identical to modern game clients.
 
-## 개발 정보
-- [Visual Studio 2022](https://visualstudio.microsoft.com/ko/vs/preview/vs2022/)
-- .NET 7.0  
-- C# 10.0  
+<img src="https://github.com/user-attachments/assets/9aa294d7-be6d-48ac-8d81-8d8eeb2d79dd" width="49%"/>
+<img src="https://github.com/user-attachments/assets/ecb3f8e5-829f-4c44-ad1e-db4f61aeed19" width="49%"/>
+<img src="https://github.com/user-attachments/assets/0ec377bc-3242-4dbb-9e8e-d763ca8984e5" width="49%"/>  
+<img src="https://github.com/user-attachments/assets/f7313f69-9255-4509-ba8c-2c1d9bdbc80e" width="49%"/>  
+<img src="https://github.com/user-attachments/assets/2afe65fe-5189-403b-b042-f184f974bbcf" width="49%"/>  
+<img src="https://github.com/user-attachments/assets/57c4f317-68c0-46fa-9e76-b46aeab617d0" width="49%"/>  
+<img src="https://github.com/user-attachments/assets/1db54994-a3bc-469e-9ca8-b537473f3773" width="49%"/> 
+<img src="https://github.com/user-attachments/assets/dc8159c1-dbdd-43ad-865e-6a593882a3b9" width="49%"/> 
 
-## Future!
+## Key Features and Implementations
+#### 1. Advanced WPF Techniques
+- [x] Utilization of Jamesnet.Wpf for enhanced WPF development
+- [x] Implementation of dependency injection for flexible and maintainable code
+- [x] Project modularization and distribution for improved scalability
+
+#### 2. MVVM Architecture
+- [x] Use of CommunityToolkit.Mvvm for code generation and MVVM pattern implementation
+- [x] Clear separation of concerns between View and ViewModel
+
+#### 3. Custom Controls
+- [x] Development of custom WPF controls to match League of Legends UI components
+- [x] Extensive use of ControlTemplates for unique visual designs
+
+#### 4. Complex UI Design
+- [x] Implementation of intricate design elements using Geometry Path
+- [x] Pixel-perfect recreation of the League of Legends client interface
+
+#### 5. Performance Optimization
+- [x] Efficient rendering and resource management for smooth UI interactions
+- [x] Optimized data binding and UI virtualization techniques
+
+## Technology Stack
+- .NET 8.0
+- WPF (Windows Presentation Foundation)
 - Jamesnet.Wpf
 - CommunityToolkit.Mvvm
-- .NET 7 (C# 11)
-- Prism IoC
-- WpfAutoGrid
- 
 
-## 데이터베이스
-**WPF League of Legends**는 클래식 RDB 대신 **YAML**을 데이터베이스로 사용하고 있습니다.
+## Getting Started
+### Prerequisites
+- Visual Studio 2022 or later
+- .NET 8.0 SDK
+- Jamesnet.Wpf NuGet package
 
-> YAML은 JSON과 함께 널리 사용되는 데이터 양식입니다.  
-> 이 기술에 대한 내용은 **[Guide to Yaml](https://github.com/devncore/guide-to-yaml)** 에서 더 자세히 학습할 수 있습니다.  
+### Installation and Execution
+#### 1. Clone the repository:
 
-## 스크린샷 
+```
+git clone https://github.com/jamesnet214/leagueoflegends.git
+```
 
-### `Home`
-![image](https://user-images.githubusercontent.com/52397976/124482513-526ba380-dde4-11eb-9b31-c3c1199987b6.png)
+#### 2. Open the solution
+- [x] Visual Studio
+- [x] Visual Studio Code
+- [x] JetBrains Rider
 
-### `TFT`
-![image](https://user-images.githubusercontent.com/52397976/133445360-29ced456-994a-4f10-a669-0355bd1dee00.png)
+#### 3. Build and Run
+- [x] Set the startup project
+- [x] Press F5 or click the Run button
+- [x] Windows 11 recommended
 
-### `Clash`
+## Learning Opportunities
+This project offers valuable insights for WPF developers:
+1. **Complex UI Recreation**: Learn techniques for recreating sophisticated user interfaces
+2. **Custom Control Development**: Understand the process of building custom WPF controls
+3. **MVVM in Practice**: See real-world implementation of MVVM pattern in a complex application
+4. **Geometry Path Usage**: Master the use of Geometry Path for intricate UI designs
+5. **Performance Optimization**: Learn strategies for optimizing large-scale WPF applications
 
-![image](https://user-images.githubusercontent.com/68521148/135798131-1b1d8281-5f07-4012-9863-9feb97beea62.PNG)
+## Contributing
+Contributions to the League of Legends Client (WPF) project are welcome! Feel free to submit issues, create pull requests, or suggest improvements.
 
-![image](https://user-images.githubusercontent.com/52397976/133266434-97659a57-284d-4207-bfab-ac2684c16f04.png)
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-### `Setting`
+## Contact
+- Website: https://jamesnet.dev
+- Email: james@jamesnet.dev, vickyqu115@hotmail.com
 
-![image](https://user-images.githubusercontent.com/74305823/126187790-d6d3332e-694c-4318-b556-66e1df34a4be.png)
-
-### `Profile`
-
-![image](https://user-images.githubusercontent.com/74305823/136051365-b82be44d-318d-4ac4-81cc-02ba6c306776.png)
-
-### `Collection`
-
-![image](https://user-images.githubusercontent.com/74305823/140320827-2098e387-1c40-440d-bc3c-bf0703d2ed00.png)
-
-![image](https://user-images.githubusercontent.com/74305823/138594906-270d42f5-bee6-4486-bd59-5a05cd8ead33.png)
-
-![image](https://user-images.githubusercontent.com/74305823/136051245-cd0d9c3f-507e-4e0f-b659-1a1253d3db74.png)
-
-![image](https://user-images.githubusercontent.com/74305823/137628890-d0ef33b4-14a1-4caa-be24-4d0e4b16c5a8.png)
-
-### `Loot`
-
-![image](https://user-images.githubusercontent.com/68521148/138593391-44e3dec7-433c-4422-a7a2-cc8a109ad10b.png)
-
-### `My Shop`
-
-![image](https://user-images.githubusercontent.com/74305823/140745076-d88297bd-50ab-4a56-a558-c1fb78af1cb5.png)
-
-### `Store`
-
-![image](https://user-images.githubusercontent.com/68521148/139537777-062b5bcf-61b2-4e10-a9df-31353bcffc66.PNG)
-
-![image](https://user-images.githubusercontent.com/68521148/140644848-d16192cf-6dba-42c0-8de3-f5e6d503d3c2.PNG)
-
-![image](https://user-images.githubusercontent.com/68521148/139064074-130eb6da-6093-4fe2-b813-d1133d4c1857.PNG)
-
-### `Game`
-![image](https://user-images.githubusercontent.com/74305823/136380449-ea229fbb-6db7-412c-828b-16d6f7af83d8.png)
-
-![image](https://user-images.githubusercontent.com/74305823/137628858-65458b3c-5a3d-4263-9dda-65595a98965d.png)
+Experience the power of WPF in recreating complex game interfaces with this League of Legends client recreation!
