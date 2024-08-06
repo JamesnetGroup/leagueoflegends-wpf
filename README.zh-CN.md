@@ -1,4 +1,4 @@
-# 英雄联盟客户端 (WPF) [![English](https://img.shields.io/badge/Language-English-blue.svg)](README.md) [![中文](https://img.shields.io/badge/Language-中文-green.svg)](README.zh.md) [![한국어](https://img.shields.io/badge/Language-한국어-red.svg)](README.ko.md) 
+# 英雄联盟客户端 (WPF) [![English](https://img.shields.io/badge/Language-English-blue.svg)](README.md) [![中文](https://img.shields.io/badge/Language-中文-green.svg)](README.zh-CN.md) [![한국어](https://img.shields.io/badge/Language-한국어-red.svg)](README.ko.md) 
 
 使用WPF对英雄联盟客户端进行的高保真重现，展示了先进的WPF技术和Jamesnet.Wpf的强大功能
 
