@@ -1,4 +1,4 @@
-# 리그 오브 레전드 클라이언트 (WPF) [![English](https://img.shields.io/badge/Language-English-blue.svg)](README.md) [![中文](https://img.shields.io/badge/Language-中文-green.svg)](README.zh.md) [![한국어](https://img.shields.io/badge/Language-한국어-red.svg)](README.ko.md) 
+# 리그 오브 레전드 클라이언트 (WPF) [![English](https://img.shields.io/badge/Language-English-blue.svg)](README.md) [![中文](https://img.shields.io/badge/Language-中文-green.svg)](README.zh-CN.md) [![한국어](https://img.shields.io/badge/Language-한국어-red.svg)](README.ko.md) 
 
 WPF를 사용한 리그 오브 레전드 클라이언트의 고품질 재현, 고급 WPF 기술과 Jamesnet.Wpf의 강력함을 보여주는 프로젝트
 
