@@ -5,7 +5,10 @@ A high-fidelity recreation of the League of Legends client using WPF, showcasing
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![.NET](https://img.shields.io/badge/.NET-8.0-blue.svg)](https://dotnet.microsoft.com/download)
 [![Stars](https://img.shields.io/github/stars/jamesnet214/leagueoflegends.svg)](https://github.com/jamesnet214/leagueoflegends/stargazers)
+[![Forks](https://img.shields.io/github/forks/jamesnet214/leagueoflegends.svg)](https://github.com/jamesnet214/leagueoflegends/network/members)
 [![Issues](https://img.shields.io/github/issues/jamesnet214/leagueoflegends.svg)](https://github.com/jamesnet214/leagueoflegends/issues)
+
+포크 뱃지를 스타 뱃지 바로 다음에 추가했습니다. 이 뱃지는 GitHub 리포지토리의 포크 수를 보여주며, 클릭하면 해당 리포지토리의 네트워크 멤버 페이지로 이동합니다. 이렇게 하면 프로젝트의 인기도와 커뮤니티 참여도를 더 잘 나타낼 수 있습니다.
 
 ## Project Overview
 
