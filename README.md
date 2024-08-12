@@ -1,4 +1,4 @@
-# League of Legends Client (WPF) [![English](https://img.shields.io/badge/Language-English-blue.svg)](README.md) [![中文](https://img.shields.io/badge/Language-中文-red.svg)](README.zh-CN.md) [![한국어](https://img.shields.io/badge/Language-한국어-green.svg)](README.ko.md) 
+# League of Legends Client (WPF) [![English](https://img.shields.io/badge/docs-English-blue.svg)](README.md) [![中文](https://img.shields.io/badge/docs-中文-red.svg)](README.zh-CN.md) [![한국어](https://img.shields.io/badge/docs-한국어-green.svg)](README.ko.md) 
 
 A high-fidelity recreation of the League of Legends client using WPF, showcasing advanced WPF techniques and the power of Jamesnet.Wpf
 
