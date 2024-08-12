@@ -5,6 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![.NET](https://img.shields.io/badge/.NET-8.0-blue.svg)](https://dotnet.microsoft.com/download)
 [![Stars](https://img.shields.io/github/stars/jamesnet214/leagueoflegends.svg)](https://github.com/jamesnet214/leagueoflegends/stargazers)
+[![Forks](https://img.shields.io/github/forks/jamesnet214/leagueoflegends.svg)](https://github.com/jamesnet214/leagueoflegends/network/members)
 [![Issues](https://img.shields.io/github/issues/jamesnet214/leagueoflegends.svg)](https://github.com/jamesnet214/leagueoflegends/issues)
 
 ## 项目概述
