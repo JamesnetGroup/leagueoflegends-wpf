@@ -8,8 +8,6 @@ A high-fidelity recreation of the League of Legends client using WPF, showcasing
 [![Forks](https://img.shields.io/github/forks/jamesnet214/leagueoflegends.svg)](https://github.com/jamesnet214/leagueoflegends/network/members)
 [![Issues](https://img.shields.io/github/issues/jamesnet214/leagueoflegends.svg)](https://github.com/jamesnet214/leagueoflegends/issues)
 
-포크 뱃지를 스타 뱃지 바로 다음에 추가했습니다. 이 뱃지는 GitHub 리포지토리의 포크 수를 보여주며, 클릭하면 해당 리포지토리의 네트워크 멤버 페이지로 이동합니다. 이렇게 하면 프로젝트의 인기도와 커뮤니티 참여도를 더 잘 나타낼 수 있습니다.
-
 ## Project Overview
 
 This project is a faithful reproduction of the League of Legends client interface using WPF technology. It demonstrates the capabilities of WPF and the Jamesnet.Wpf framework in creating complex, high-performance user interfaces identical to modern game clients.
