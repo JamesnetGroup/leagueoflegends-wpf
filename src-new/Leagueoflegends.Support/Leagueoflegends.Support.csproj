@@ -1,0 +1,81 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Datas\Friends.yml" />
+    <None Remove="Datas\SubMenus.yml" />
+    <None Remove="Images\blue-essence.png" />
+    <None Remove="Images\logo.png" />
+    <None Remove="Images\menu-selection.png" />
+    <None Remove="Images\profile-default.png" />
+    <None Remove="Images\rp.png" />
+    <None Remove="Images\thumb-1.png" />
+    <None Remove="Images\thumb-10.png" />
+    <None Remove="Images\thumb-11.png" />
+    <None Remove="Images\thumb-12.png" />
+    <None Remove="Images\thumb-2.png" />
+    <None Remove="Images\thumb-3.png" />
+    <None Remove="Images\thumb-4.png" />
+    <None Remove="Images\thumb-5.png" />
+    <None Remove="Images\thumb-6.png" />
+    <None Remove="Images\thumb-7.png" />
+    <None Remove="Images\thumb-8.png" />
+    <None Remove="Images\thumb-9.png" />
+    <None Remove="Images\wallpaper-caitlyn.jpg" />
+    <None Remove="Images\wallpaper-ezreal.jpg" />
+    <None Remove="Images\wallpaper-gnar.jpg" />
+    <None Remove="Images\wallpaper-jinx.jpg" />
+    <None Remove="Images\wallpaper-leona.jpg" />
+    <None Remove="Images\wallpaper-maokai.jpg" />
+    <None Remove="Images\wallpaper-rucian.png" />
+    <None Remove="Images\wallpaper-sena.png" />
+    <None Remove="Images\wallpaper-singed.png" />
+    <None Remove="Images\wallpaper-thumb-1.png" />
+    <None Remove="Images\wallpaper-thumb-2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Datas\Friends.yml" />
+    <EmbeddedResource Include="Datas\SubMenus.yml" />
+    <Resource Include="Images\blue-essence.png" />
+    <Resource Include="Images\logo.png" />
+    <Resource Include="Images\menu-selection.png" />
+    <Resource Include="Images\profile-default.png" />
+    <Resource Include="Images\rp.png" />
+    <Resource Include="Images\thumb-1.png" />
+    <Resource Include="Images\thumb-10.png" />
+    <Resource Include="Images\thumb-11.png" />
+    <Resource Include="Images\thumb-12.png" />
+    <Resource Include="Images\thumb-2.png" />
+    <Resource Include="Images\thumb-3.png" />
+    <Resource Include="Images\thumb-4.png" />
+    <Resource Include="Images\thumb-5.png" />
+    <Resource Include="Images\thumb-6.png" />
+    <Resource Include="Images\thumb-7.png" />
+    <Resource Include="Images\thumb-8.png" />
+    <Resource Include="Images\thumb-9.png" />
+    <Resource Include="Images\wallpaper-caitlyn.jpg" />
+    <Resource Include="Images\wallpaper-ezreal.jpg" />
+    <Resource Include="Images\wallpaper-gnar.jpg" />
+    <Resource Include="Images\wallpaper-jinx.jpg" />
+    <Resource Include="Images\wallpaper-leona.jpg" />
+    <Resource Include="Images\wallpaper-maokai.jpg" />
+    <Resource Include="Images\wallpaper-rucian.png" />
+    <Resource Include="Images\wallpaper-sena.png" />
+    <Resource Include="Images\wallpaper-singed.png" />
+    <Resource Include="Images\wallpaper-thumb-1.png" />
+    <Resource Include="Images\wallpaper-thumb-2.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Jamesnet.Core\Jamesnet.Core.csproj" />
+    <ProjectReference Include="..\Jamesnet.Windows\Jamesnet.Windows.csproj" />
+  </ItemGroup>
+
+</Project>

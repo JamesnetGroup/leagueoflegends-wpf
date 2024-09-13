@@ -1,0 +1,100 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cnvts="clr-namespace:Leagueoflegends.Support.Local.Converters"
+    xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units">
+
+    <cnvts:BoolToPlayStopConverter x:Key="BoolToPlayStopConverter"/>
+
+    <LinearGradientBrush x:Key="ArrowStroke" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#CC3FE7FF" Offset="0"/>
+        <GradientStop Color="#CC006D7D" Offset="0.5"/>
+        <GradientStop Color="#CC0493A7" Offset="1"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="ArrowStrokeOver" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#FFAFF5FF" Offset="0"/>
+        <GradientStop Color="#FF46E6FF" Offset="0.5"/>
+        <GradientStop Color="#FF00ADD4" Offset="1"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="ArrowFillOver" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#FF1D3B4A" Offset="0"/>
+        <GradientStop Color="#FF082734" Offset="1"/>
+    </LinearGradientBrush>
+
+    <Style x:Key="GoldLine" TargetType="Border">
+        <Setter Property="Background" Value="#00070E"/>
+        <Setter Property="BorderBrush" Value="#34291E"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="Margin" Value="10,0,0,0"/>
+    </Style>
+
+    <Style x:Key="GreenLine" TargetType="Border">
+        <Setter Property="Background" Value="#1E2328"/>
+        <Setter Property="BorderBrush" Value="#09343D"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="Margin" Value="50,4,4,4"/>
+    </Style>
+
+    <Style x:Key="Emblem" TargetType="Image">
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="Source" Value="/Leagueoflegends.Support;component/Images/logo.png"/>
+        <Setter Property="Height" Value="38"/>
+    </Style>
+
+    <Style x:Key="Arrow" TargetType="Path">
+        <Setter Property="Fill" Value="#1E2328"/>
+        <Setter Property="Stroke" Value="{StaticResource ArrowStroke}"/>
+        <Setter Property="StrokeThickness" Value="2"/>
+        <Setter Property="Data" Value="M 0,0 L 103,0 L 118,14 L 103,28 L 0,28 C 10,14 0,0 0,0 Z"/>
+        <Setter Property="Margin" Value="40,5,4,-5"/>
+    </Style>
+
+    <Style TargetType="{x:Type units:RiotPlayButton}">
+        <Setter Property="Height" Value="38"/>
+        <Setter Property="Width" Value="165"/>
+        <Setter Property="Foreground" Value="#FFFFFF"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type units:RiotPlayButton}">
+                    <Grid x:Name="RootGrid" Background="{TemplateBinding Background}">
+                        <Border Style="{StaticResource GoldLine}"/>
+                        <Image Style="{StaticResource Emblem}"/>
+                        <Border Style="{StaticResource GreenLine}"/>
+                        <Path x:Name="path" Style="{StaticResource Arrow}"/>
+                        <TextBlock x:Name="ContentPresenter"
+                                   Text="{Binding IsChecked, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource BoolToPlayStopConverter}}"
+                                   HorizontalAlignment="Center"
+                                   VerticalAlignment="Center"
+                                   Margin="30,0,0,0"
+                                   FontSize="15"
+                                   FontWeight="Bold"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="path" Property="Fill" Value="{StaticResource ArrowFillOver}"/>
+                            <Setter TargetName="path" Property="Stroke" Value="{StaticResource ArrowStrokeOver}"/>
+                            <Setter TargetName="ContentPresenter" Property="Foreground" Value="#FFFCF1DC"/>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="path" Property="Fill" Value="#1E2328"/>
+                            <Setter TargetName="path" Property="Stroke" Value="#5C5B57"/>
+                            <Setter TargetName="ContentPresenter" Property="Foreground" Value="#3C3C41"/>
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="True"/>
+                                <Condition Property="IsMouseOver" Value="True"/>
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="path" Property="Fill" Value="{StaticResource ArrowFillOver}"/>
+                            <Setter TargetName="path" Property="Stroke" Value="{StaticResource ArrowStrokeOver}"/>
+                            <Setter TargetName="ContentPresenter" Property="Foreground" Value="#FFFCF1DC"/>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
