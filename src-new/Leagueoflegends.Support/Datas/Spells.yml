@@ -1,0 +1,77 @@
+- seq: 0
+  name: Ghost
+  displayName: GHOST
+  level: 1
+  types: ARAM;Classic;Tutorial
+  content: For 10 seconds, your champion can move through units and gains 24 - 48 % Movement Speed (depending on champion level). Ghost extends its duration on takedown.
+  delay: 210
+- seq: 1
+  name: Heal
+  displayName: HEAL
+  level: 1
+  types: ARAM;Classic;Tutorial
+  content: Restores 90-345 Health (depending on champion level) and grants 30% Movement Speed for 1 second to you and target allied champion. This healing is halved for units recently affected by Summoner Heal.
+  delay: 240
+- seq: 2
+  name: Barrier
+  displayName: BARRIER
+  level: 4
+  types: ARAM;Classic
+  content: Shields your champion from 115-455 damage (depending on champion level) for 2 seconds.
+  delay: 180
+- seq: 3
+  name: Exhaust
+  displayName: EXHAUST
+  level: 4
+  types: ARAM;Classic
+  content: Exhausts target enemy champion, reducing their Move Speed by 30%, and their damage dealt by 40% for 3 seconds.
+  delay: 210
+- seq: 4
+  name: Clarity
+  displayName: CLARITY
+  level: 6
+  types: ARAM
+  content: Restores 50% of your champion's maximum Mana. Also restores allies for 25% of their maximum Mana.
+  delay: 240
+- seq: 5
+  name: Mark
+  displayName: MARK
+  level: 6
+  types: ARAM
+  content: Throw a snowball in a straight line at your enemies. If it hits an enemy, they become marked, granting True Sight, and your champion can quickly travel to the marked target as a follow up.
+  delay: 80
+- seq: 6
+  name: Flash
+  displayName: FLASH
+  level: 7
+  types: ARAM;Classic
+  content: Teleports your champion a short distance toward tour cursor's location.
+  delay: 300
+- seq: 7
+  name: Teleport
+  displayName: TELEPORT
+  level: 7
+  types: Classic
+  content: After channeling for 4 seconds, teleports your champion to target allied structure, minion, or ward and grants a Move Speed boost. The cooldown of Teleport scales from 420-210 seconds depending on champion level.
+  delay: 0
+- seq: 8
+  name: Cleanse
+  displayName: CLEANSE
+  level: 9
+  types: ARAM;Classic
+  content: Removes all disables (excluding suppresion and airborne) and summoner spell debuffs affection your champion and lowers the duration of incoming disables by 65% for 3 seconds.
+  delay: 210
+- seq: 9
+  name: Ignite
+  displayName: IGNITE
+  level: 9
+  types: ARAM;Classic
+  content: Ignites target enemy champion, dealing 70-410 true damage (depending on champion level) over 5 seconds, grants you vision of the target, and reduces healing effects on them for the duration.
+  delay: 180
+- seq: 10
+  name: Smite
+  displayName: SMITE
+  level: 9
+  types: ARAM
+  content: Deals @SmiteBaseDamage@ true damage to target epic, large, or medium monster or minion.
+  delay: 15

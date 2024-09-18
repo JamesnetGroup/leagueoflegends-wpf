@@ -1,0 +1,41 @@
+﻿<ResourceDictionary
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units">
+
+  <Style x:Key="RecentTitleStyle" TargetType="TextBlock">
+    <Setter Property="Foreground" Value="#F0E2BE"/>
+    <Setter Property="FontWeight" Value="Bold"/>
+    <Setter Property="Margin" Value="0,0,0,10"/>
+    <Setter Property="HorizontalAlignment" Value="Center"/>
+  </Style>
+
+  <Style x:Key="RecentItemsPresenterStyle" TargetType="ItemsPresenter">
+    <Setter Property="HorizontalAlignment" Value="Center"/>
+    <Setter Property="Grid.Row" Value="1"/>
+  </Style>
+
+  <Style TargetType="units:RiotRecentListBox">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="units:RiotRecentListBox">
+          <Grid Background="Transparent">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto"/>
+              <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Style="{StaticResource RecentTitleStyle}" Text="RECENT ACTIVITY"/>
+            <ItemsPresenter Style="{StaticResource RecentItemsPresenterStyle}"/>
+          </Grid>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+    <Setter Property="ItemsPanel">
+      <Setter.Value>
+        <ItemsPanelTemplate>
+          <StackPanel Orientation="Horizontal"/>
+        </ItemsPanelTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>

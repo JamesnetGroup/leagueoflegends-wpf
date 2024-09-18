@@ -6,7 +6,7 @@ namespace Leagueoflegends.Main.Local.ViewModels;
 
 public class MainContentViewModel : ViewModelBase, IViewLoadable
 {
-    private readonly ISubMenuNavigator _subNavigator;
+    private readonly IMenuManager _menu;
     private string _currentMenu;
 
     public string CurrentMenu
@@ -15,22 +15,29 @@ public class MainContentViewModel : ViewModelBase, IViewLoadable
         set => SetProperty(ref _currentMenu, value);
     }
 
-    public ICommand SelectMenuCommand { get; }
+    public ICommand MenuCommand { get; private init; }
+    public ICommand SettingsCommand { get; private init; }
 
-    public MainContentViewModel(ISubMenuNavigator subNavigator)
+    public MainContentViewModel(IMenuManager menu)
     {
-        _subNavigator = subNavigator;
-        SelectMenuCommand = new RelayCommand<string>(SelectMenuItem);
+        _menu = menu;
+        MenuCommand = new RelayCommand<string>(SelectMenu);
+        SettingsCommand = new RelayCommand(OpenSettings);
     }
 
-    private void SelectMenuItem(string menuName)
+    private void OpenSettings()
+    {
+        _menu.OpenOverlay("OptionContent");
+    }
+
+    private void SelectMenu(string menuName)
     {
         CurrentMenu = menuName;
-        _subNavigator.UpdateSubMenuItems(menuName);
+        _menu.NavigateToMenu(menuName);
     }
 
     public void Loaded()
     {
-        SelectMenuItem("HOME");
+        SelectMenu("HOME");
     }
 }

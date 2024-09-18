@@ -1,0 +1,53 @@
+﻿<ResourceDictionary
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units">
+
+  <Style TargetType="Border" x:Key="SeparatorBorderStyle">
+    <Setter Property="Background" Value="Transparent"/>
+    <Setter Property="BorderBrush" Value="#1E2328"/>
+    <Setter Property="BorderThickness" Value="0,0.5,0,0"/>
+    <Setter Property="Margin" Value="0,22,0,22"/>
+  </Style>
+
+  <Style TargetType="TextBlock" x:Key="HeaderStyle">
+    <Setter Property="Foreground" Value="#F0E2BE"/>
+    <Setter Property="FontSize" Value="16"/>
+    <Setter Property="Margin" Value="30,0,30,20"/>
+    <Setter Property="HorizontalAlignment" Value="Center"/>
+    <Setter Property="Text" Value="RECENTLY PLAYED CHAMPIONS"/>
+  </Style>
+
+  <Style TargetType="TextBlock" x:Key="RatioStyle">
+    <Setter Property="Margin" Value="0,12,0,0"/>
+    <Setter Property="Foreground" Value="#A09B8C"/>
+    <Setter Property="HorizontalAlignment" Value="Center"/>
+  </Style>
+
+  <Style TargetType="units:RiotPlayedChampListBox">
+    <Setter Property="Margin" Value="0,0,0,0"/>
+    <Setter Property="Background" Value="Transparent"/>
+    <Setter Property="BorderThickness" Value="0"/>
+    <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled"/>
+    <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Disabled"/>
+    <Setter Property="ItemsPanel">
+      <Setter.Value>
+        <ItemsPanelTemplate>
+          <StackPanel Orientation="Horizontal" HorizontalAlignment="Center"/>
+        </ItemsPanelTemplate>
+      </Setter.Value>
+    </Setter>
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="units:RiotPlayedChampListBox">
+          <StackPanel>
+            <TextBlock Style="{StaticResource HeaderStyle}" Text="RECENTLY PLAYED CHAMPIONS"/>
+            <ItemsPresenter/>
+            <TextBlock Style="{StaticResource RatioStyle}" Text="$ of games played"/>
+            <Border Style="{StaticResource SeparatorBorderStyle}"/>
+          </StackPanel>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>

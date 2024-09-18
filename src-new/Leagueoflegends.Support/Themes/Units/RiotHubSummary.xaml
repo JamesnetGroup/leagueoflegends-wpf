@@ -1,0 +1,131 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units">
+
+  <LinearGradientBrush x:Key="TextForegroundBrush" StartPoint="0.5,0" EndPoint="0.5,1">
+    <GradientStop Color="#CBB883" Offset="0"/>
+    <GradientStop Color="#74623D" Offset="1"/>
+  </LinearGradientBrush>
+
+  <LinearGradientBrush x:Key="TransparentBorderBrush" StartPoint="0, 0.5" EndPoint="1, 0.5">
+    <GradientStop Color="Transparent" Offset="0"/>
+    <GradientStop Color="#333C4244" Offset="0.1"/>
+    <GradientStop Color="#C8BA8E" Offset="0.5"/>
+    <GradientStop Color="#333C4244" Offset="0.9"/>
+    <GradientStop Color="Transparent" Offset="1"/>
+  </LinearGradientBrush>
+
+  <Style x:Key="HeaderTextBlockStyle" TargetType="TextBlock">
+    <Setter Property="Foreground" Value="#F0E6D2"/>
+    <Setter Property="FontSize" Value="23"/>
+    <Setter Property="FontWeight" Value="Bold"/>
+    <Setter Property="HorizontalAlignment" Value="Center"/>
+  </Style>
+
+  <Style x:Key="SubHeaderTextBlockStyle" TargetType="TextBlock">
+    <Setter Property="Foreground" Value="#5B5A56"/>
+    <Setter Property="FontSize" Value="20"/>
+    <Setter Property="FontWeight" Value="Bold"/>
+    <Setter Property="HorizontalAlignment" Value="Center"/>
+  </Style>
+
+  <Style x:Key="GaugeTextBlockStyle" TargetType="TextBlock">
+    <Setter Property="Text" Value="0 / 400"/>
+    <Setter Property="Foreground" Value="{StaticResource TextForegroundBrush}"/>
+    <Setter Property="FontSize" Value="19"/>
+    <Setter Property="HorizontalAlignment" Value="Center"/>
+    <Setter Property="Margin" Value="0 6 0 0"/>
+  </Style>
+
+  <Style x:Key="SeparatorBorderStyle" TargetType="Border">
+    <Setter Property="Background" Value="Transparent"/>
+    <Setter Property="BorderBrush" Value="{StaticResource TransparentBorderBrush}"/>
+    <Setter Property="BorderThickness" Value="0 0 0 1"/>
+    <Setter Property="Margin" Value="0 30 0 30"/>
+    <Setter Property="Width" Value="240"/>
+    <Setter Property="Opacity" Value="0.5"/>
+  </Style>
+
+  <Style x:Key="FreeAgentStyle" TargetType="TextBlock">
+    <Setter Property="Foreground" Value="#A09B8C"/>
+    <Setter Property="FontSize" Value="12"/>
+    <Setter Property="Text" Value="Free Agent"/>
+    <Setter Property="VerticalAlignment" Value="Center"/>
+  </Style>
+
+  <Style x:Key="TierLabelStyle" TargetType="TextBlock">
+    <Setter Property="Foreground" Value="#A09B8C"/>
+    <Setter Property="FontSize" Value="12"/>
+    <Setter Property="VerticalAlignment" Value="Center"/>
+  </Style>
+
+  <Style x:Key="PositionButtonContainerStyle" TargetType="StackPanel">
+    <Setter Property="Orientation" Value="Horizontal"/>
+    <Setter Property="HorizontalAlignment" Value="Center"/>
+    <Setter Property="Margin" Value="0 40 0 0"/>
+  </Style>
+
+  <Style x:Key="FirstTicketStyle" TargetType="units:RiotTicketButton">
+    <Setter Property="BorderThickness" Value="0 1 0 1"/>
+    <Setter Property="CornerRadius" Value="0 0 0 0"/>
+    <Setter Property="Content" Value="4"/>
+  </Style>
+
+  <Style x:Key="SecondTicketStyle" TargetType="units:RiotTicketButton">
+    <Setter Property="BorderThickness" Value="1 1 1 1"/>
+    <Setter Property="CornerRadius" Value="0 4 4 0"/>
+    <Setter Property="Content" Value="12"/>
+  </Style>
+
+  <Style x:Key="TicketStackStyle" TargetType="StackPanel">
+    <Setter Property="Orientation" Value="Horizontal"/>
+    <Setter Property="HorizontalAlignment" Value="Center"/>
+  </Style>
+
+  <Style x:Key="ToggleSwitchStackStyle" TargetType="StackPanel">
+    <Setter Property="Orientation" Value="Horizontal"/>
+    <Setter Property="HorizontalAlignment" Value="Center"/>
+    <Setter Property="VerticalAlignment" Value="Center"/>
+    <Setter Property="Margin" Value="0 10 0 0"/>
+  </Style>
+
+  <Style x:Key="TierContentStackStyle" TargetType="StackPanel">
+    <Setter Property="Orientation" Value="Horizontal"/>
+    <Setter Property="HorizontalAlignment" Value="Center"/>
+  </Style>
+
+  <Style TargetType="units:RiotHubSummary">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="units:RiotHubSummary">
+          <StackPanel>
+            <TextBlock Style="{StaticResource HeaderTextBlockStyle}" Text="IONIA CUP"/>
+            <TextBlock Style="{StaticResource SubHeaderTextBlockStyle}" Text="DAY 3"/>
+            <units:RiotClashEmblem/>
+            <TextBlock Style="{StaticResource GaugeTextBlockStyle}"/>
+            <StackPanel Style="{StaticResource TicketStackStyle}">
+              <units:RiotTicketAddButton/>
+              <units:RiotTicketButton Style="{StaticResource FirstTicketStyle}"/>
+              <units:RiotTicketButton Style="{StaticResource SecondTicketStyle}"/>
+            </StackPanel>
+            <Border Style="{StaticResource SeparatorBorderStyle}"/>
+            <StackPanel Style="{StaticResource TierContentStackStyle}">
+              <TextBlock Style="{StaticResource TierLabelStyle}" Text="Your Clash Tier:"/>
+              <units:RiotClashTierButton Content="TIER IV"/>
+            </StackPanel>
+            <StackPanel Style="{StaticResource ToggleSwitchStackStyle}">
+              <TextBlock Style="{StaticResource FreeAgentStyle}" Text="Free Agent"/>
+              <units:RiotSwitchButton/>
+              <units:RiotQuestionButton/>
+            </StackPanel>
+            <StackPanel Style="{StaticResource PositionButtonContainerStyle}">
+              <units:RiotPositionButton Margin="0 0 17 0" Position="Mid"/>
+              <units:RiotPositionButton Margin="17 0 0 0" Position="Support"/>
+            </StackPanel>
+          </StackPanel>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>

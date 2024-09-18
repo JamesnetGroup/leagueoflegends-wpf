@@ -2,7 +2,7 @@ using System.Windows;
 using System.Windows.Controls;
 
 namespace Leagueoflegends.Support.UI.Units;
-public class RiotStatusIndicator : ContentControl
+public class RiotStatusIndicator : Control
 {
     public string IconType
     {

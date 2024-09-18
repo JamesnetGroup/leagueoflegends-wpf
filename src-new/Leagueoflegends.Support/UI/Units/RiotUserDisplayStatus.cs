@@ -24,6 +24,7 @@ public sealed class RiotUserDisplayStatus : Control
     {
         this.DefaultStyleKey = typeof(RiotUserDisplayStatus);
     }
+
     public override void OnApplyTemplate()
     {
         base.OnApplyTemplate();

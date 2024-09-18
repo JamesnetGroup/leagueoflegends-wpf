@@ -1,0 +1,128 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units">
+
+    <Geometry x:Key="DownloadData">M2 12H4V17H20V12H22V17C22 18.11 21.11 19 20 19H4C2.9 19 2 18.11 2 17V12M12 15L17.55 9.54L16.13 8.13L13 11.25V2H11V11.25L7.88 8.13L6.46 9.55L12 15Z</Geometry>
+    <Geometry x:Key="GiftData">M9.06,1.93C7.17,1.92 5.33,3.74 6.17,6H3A2,2 0 0,0 1,8V10A1,1 0 0,0 2,11H11V8H13V11H22A1,1 0 0,0 23,10V8A2,2 0 0,0 21,6H17.83C19,2.73 14.6,0.42 12.57,3.24L12,4L11.43,3.22C10.8,2.33 9.93,1.94 9.06,1.93M9,4C9.89,4 10.34,5.08 9.71,5.71C9.08,6.34 8,5.89 8,5A1,1 0 0,1 9,4M15,4C15.89,4 16.34,5.08 15.71,5.71C15.08,6.34 14,5.89 14,5A1,1 0 0,1 15,4M2,12V20A2,2 0 0,0 4,22H20A2,2 0 0,0 22,20V12H13V20H11V12H2Z</Geometry>
+    <Geometry x:Key="UserData">M10 4A4 4 0 0 0 6 8A4 4 0 0 0 10 12A4 4 0 0 0 14 8A4 4 0 0 0 10 4M17 12C16.87 12 16.76 12.09 16.74 12.21L16.55 13.53C16.25 13.66 15.96 13.82 15.7 14L14.46 13.5C14.35 13.5 14.22 13.5 14.15 13.63L13.15 15.36C13.09 15.47 13.11 15.6 13.21 15.68L14.27 16.5C14.25 16.67 14.24 16.83 14.24 17C14.24 17.17 14.25 17.33 14.27 17.5L13.21 18.32C13.12 18.4 13.09 18.53 13.15 18.64L14.15 20.37C14.21 20.5 14.34 20.5 14.46 20.5L15.7 20C15.96 20.18 16.24 20.35 16.55 20.47L16.74 21.79C16.76 21.91 16.86 22 17 22H19C19.11 22 19.22 21.91 19.24 21.79L19.43 20.47C19.73 20.34 20 20.18 20.27 20L21.5 20.5C21.63 20.5 21.76 20.5 21.83 20.37L22.83 18.64C22.89 18.53 22.86 18.4 22.77 18.32L21.7 17.5C21.72 17.33 21.74 17.17 21.74 17C21.74 16.83 21.73 16.67 21.7 16.5L22.76 15.68C22.85 15.6 22.88 15.47 22.82 15.36L21.82 13.63C21.76 13.5 21.63 13.5 21.5 13.5L20.27 14C20 13.82 19.73 13.65 19.42 13.53L19.23 12.21C19.22 12.09 19.11 12 19 12H17M10 14C5.58 14 2 15.79 2 18V20H11.68A7 7 0 0 1 11 17A7 7 0 0 1 11.64 14.09C11.11 14.03 10.56 14 10 14M18 15.5C18.83 15.5 19.5 16.17 19.5 17C19.5 17.83 18.83 18.5 18 18.5C17.16 18.5 16.5 17.83 16.5 17C16.5 16.17 17.17 15.5 18 15.5Z</Geometry>
+
+    <LinearGradientBrush x:Key="RiotButtonBorderBrush" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#B89959" Offset="0"/>
+        <GradientStop Color="#997B44" Offset="0.5"/>
+        <GradientStop Color="#70552A" Offset="1"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="RiotButtonBorderBrushHover" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#f0e6d7" Offset="0"/>
+        <GradientStop Color="#c99d3d" Offset="1"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="RiotButtonBackgroundHover" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#1e232a" Offset="0"/>
+        <GradientStop Color="#443e2e" Offset="1"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="RiotButtonBorderBrushPressed" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#785a28" Offset="0"/>
+        <GradientStop Color="#c8aa6e" Offset="1"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="RiotButtonBackgroundPressed" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#373121" Offset="0"/>
+        <GradientStop Color="#1e2328" Offset="1"/>
+    </LinearGradientBrush>
+
+    <Style x:Key="MainBorderStyle" TargetType="Border">
+        <Setter Property="BorderBrush" Value="{StaticResource RiotButtonBorderBrush}"/>
+        <Setter Property="CornerRadius" Value="20"/>
+        <Setter Property="Background" Value="#1E2328"/>
+        <Setter Property="BorderThickness" Value="2.5"/>
+        <Setter Property="Margin" Value="0 0 0 0"/>
+    </Style>
+
+    <Style x:Key="InnerBorderStyle" TargetType="Border">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="#14171A"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="CornerRadius" Value="20"/>
+    </Style>
+
+    <Style x:Key="CirclePathStyle" TargetType="Path">
+        <Setter Property="Fill" Value="#CDBE91"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Stretch" Value="Uniform"/>
+        <Setter Property="Width" Value="15"/>
+        <Setter Property="Height" Value="15"/>
+    </Style>
+
+    <Style TargetType="units:RiotCircleButton">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Width" Value="34"/>
+        <Setter Property="Height" Value="34"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="units:RiotCircleButton">
+                    <Border x:Name="BorderOuter" Style="{StaticResource MainBorderStyle}">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal"/>
+                                <VisualState x:Name="PointerOver">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BorderOuter" Storyboard.TargetProperty="BorderBrush">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource RiotButtonBorderBrushHover}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BorderOuter" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource RiotButtonBackgroundHover}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Icon" Storyboard.TargetProperty="Fill">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#FFEDB5"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BorderOuter" Storyboard.TargetProperty="BorderBrush">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource RiotButtonBorderBrushPressed}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BorderOuter" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource RiotButtonBackgroundPressed}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="IconStates">
+                                <VisualState x:Name="DefaultIcon"/>
+                                <VisualState x:Name="DownloadIcon">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Icon" Storyboard.TargetProperty="Data">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource DownloadData}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="GiftIcon">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Icon" Storyboard.TargetProperty="Data">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource GiftData}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="UserIcon">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Icon" Storyboard.TargetProperty="Data">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource UserData}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Border x:Name="BorderInner" Style="{StaticResource InnerBorderStyle}">
+                            <Path x:Name="Icon" Style="{StaticResource CirclePathStyle}"/>
+                        </Border>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

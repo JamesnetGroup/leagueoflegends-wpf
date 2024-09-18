@@ -27,9 +27,14 @@ public class LeagueOfLegendsBootstrapper : AppBootstrapper
 
     protected override void RegisterDependencies()
     {
-        Container.RegisterSingleton<ISubMenuNavigator, SubMenuNavigator>();
+        Container.RegisterSingleton<IMenuManager, MenuManager>();
+
         Container.RegisterSingleton<IFriendDataLoader, FriendDataLoader>();
-        Container.RegisterSingleton<ISubMenuDataLoader, SubMenuDataLoader>();
+        Container.RegisterSingleton<IMenuDataLoader, MenuDataLoader>();
+
+        //Container.RegisterSingleton<ISubMenuNavigator, SubMenuNavigator>();
+        Container.RegisterSingleton<IFriendDataLoader, FriendDataLoader>();
+        //Container.RegisterSingleton<ISubMenuDataLoader, SubMenuDataLoader>();
         Container.RegisterSingleton<IView, MainContent>();
         Container.RegisterSingleton<IView, SubMenuContent>("SubNavContent");
         Container.RegisterSingleton<IView, SocialContent>();

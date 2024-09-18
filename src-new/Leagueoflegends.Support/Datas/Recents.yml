@@ -1,0 +1,12 @@
+- concept: Assassin
+  activepercent: 85
+- concept: Dealer
+  activepercent: 62
+- concept: Support
+  activepercent: 40
+- concept: Tanker
+  activepercent: 73
+- concept: Warrior
+  activepercent: 95
+- concept: Wizard
+  activepercent: 28

@@ -1,48 +1,48 @@
-- name: Drax
+- name: Charles Pzold
   seq: 1
   status: In Game
   category: GENERAL
-- name: Scott Lang
+- name: Faker
   seq: 2
   status: In Game
   category: GENERAL
-- name: Wanda Maximoff
+- name: Jamesnet
   seq: 3
   status: In Game
   category: GENERAL
-- name: Bruce Banner
+- name: Vickyqu
   seq: 4
   status: Champ Select
   category: GENERAL
-- name: Clint Barton
+- name: Michael Jordan
   seq: 5
   status: Champ Select
   category: GENERAL
-- name: Gamora
+- name: LeBron James
   seq: 6
   status: Champ Select
   category: GENERAL
-- name: Bucky Barnes
+- name: Lionel Messi
   seq: 7
   status: League+
   category: GENERAL
-- name: Carol Danvers
+- name: Lukewire
   seq: 8
   status: League+
   category: GENERAL
-- name: Nick Fury
+- name: James Harden
   seq: 9
   status: League+
   category: GENERAL
-- name: Groot
+- name: Matthew
   seq: 10
   status: League+
   category: GENERAL
-- name: Loki
+- name: Jeff Bezos
   seq: 11
   status: League+
   category: GENERAL
-- name: Jamesnet214
+- name: Elon Musk
   seq: 12
   status: Offline
   category: OFFLINE

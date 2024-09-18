@@ -1,0 +1,87 @@
+﻿<ResourceDictionary
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units">
+
+  <Geometry x:Key="BarPolygonData">0,0 150,0 170,25 300,25 300,60 0,60 0,0</Geometry>
+  
+  <LinearGradientBrush x:Key="LevelBackgroundBrush" StartPoint="0, 0.5" EndPoint="1, 0.5">
+    <GradientStop Color="#FF000000" Offset="0"/>
+    <GradientStop Color="#CC000000" Offset="0.25"/>
+    <GradientStop Color="#AA000000" Offset="0.5"/>
+    <GradientStop Color="#66000000" Offset="0.75"/>
+    <GradientStop Color="#33000000" Offset="0.9"/>
+    <GradientStop Color="#05000000" Offset="1"/>
+  </LinearGradientBrush>
+
+  <Style x:Key="LevelTextBlockStyle" TargetType="TextBlock">
+    <Setter Property="Foreground" Value="#F0E6D2"/>
+    <Setter Property="FontSize" Value="25"/>
+    <Setter Property="Margin" Value="0 5 0 -5"/>
+    <Setter Property="FontWeight" Value="Bold"/>
+    <Setter Property="VerticalAlignment" Value="Bottom"/>
+  </Style>
+
+  <Style x:Key="CurrentXPStyle" TargetType="TextBlock">
+    <Setter Property="Foreground" Value="#0AC8B9"/>
+    <Setter Property="FontSize" Value="12"/>
+    <Setter Property="FontWeight" Value="Normal"/>
+    <Setter Property="VerticalAlignment" Value="Bottom"/>
+    <Setter Property="Margin" Value="30 0 0 0"/>
+  </Style>
+
+  <Style x:Key="MaxXPTextBlockStyle" TargetType="TextBlock">
+    <Setter Property="Foreground" Value="#848484"/>
+    <Setter Property="FontSize" Value="12"/>
+    <Setter Property="FontWeight" Value="Normal"/>
+    <Setter Property="VerticalAlignment" Value="Bottom"/>
+    <Setter Property="Margin" Value="0 0 0 0"/>
+  </Style>
+
+  <Style x:Key="InformationStackStyle" TargetType="StackPanel">
+    <Setter Property="Grid.Row" Value="0"/>
+    <Setter Property="Orientation" Value="Horizontal"/>
+    <Setter Property="Margin" Value="0 0 0 5"/>
+  </Style>
+
+  <Style x:Key="BarPolygonStyle" TargetType="Polygon" >
+    <Setter Property="Fill" Value="{StaticResource LevelBackgroundBrush}"/>
+  </Style>
+
+  <Style x:Key="ProgressStyle" TargetType="units:RiotHorizontalProgress">
+    <Setter Property="Grid.Row" Value="1"/>
+  </Style>
+  
+  <Style TargetType="units:RiotLevelControl">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="units:RiotLevelControl">
+          <Grid>
+            <Polygon Style="{StaticResource BarPolygonStyle}" Points="{StaticResource BarPolygonData}"/>
+            <Grid Margin="0 0 5 5">
+              <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+              </Grid.RowDefinitions>
+              <StackPanel Style="{StaticResource InformationStackStyle}">
+                <TextBlock Style="{StaticResource LevelTextBlockStyle}">
+                  <Run Text="Lv."/>
+                  <Run Text="{Binding Level, RelativeSource={RelativeSource TemplatedParent}}"/>
+                </TextBlock>
+                <TextBlock Style="{StaticResource CurrentXPStyle}" Text="{Binding CurrentXP, RelativeSource={RelativeSource TemplatedParent}}"/>
+                <TextBlock Style="{StaticResource MaxXPTextBlockStyle}">
+                  <Run Text=" /"/>
+                  <Run Text="{Binding MaxXP, RelativeSource={RelativeSource TemplatedParent}}"/>
+                </TextBlock>
+              </StackPanel>
+              <units:RiotHorizontalProgress
+                Style="{StaticResource ProgressStyle}"
+                Value="{Binding CurrentXP, RelativeSource={RelativeSource TemplatedParent}}" 
+                Maximum="{Binding MaxXP, RelativeSource={RelativeSource TemplatedParent}}"/>
+            </Grid>
+          </Grid>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>

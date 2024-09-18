@@ -1,0 +1,80 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units">
+
+    <Geometry x:Key="TicketData">M15.58,16.8L12,14.5L8.42,16.8L9.5,12.68L6.21,10L10.46,9.74L12,5.8L13.54,9.74L17.79,10L14.5,12.68M20,12C20,10.89 20.9,10 22,10V6C22,4.89 21.1,4 20,4H4A2,2 0 0,0 2,6V10C3.11,10 4,10.9 4,12A2,2 0 0,1 2,14V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V14A2,2 0 0,1 20,12Z</Geometry>
+
+    <LinearGradientBrush x:Key="TicketBorderBrush" StartPoint="0.5, 0" EndPoint="0.5, 1">
+        <GradientStop Color="#33BE9F63" Offset="0"/>
+        <GradientStop Color="#3383662B" Offset="0.5"/>
+        <GradientStop Color="#33664C26" Offset="1"/>
+    </LinearGradientBrush>
+    <Style x:Key="TicketIconPathStyle" TargetType="Path">
+        <Setter Property="Data" Value="{StaticResource TicketData}"/>
+        <Setter Property="Fill" Value="#CCD0A756"/>
+        <Setter Property="Width" Value="14"/>
+        <Setter Property="Height" Value="14"/>
+        <Setter Property="Stretch" Value="Uniform"/>
+        <Setter Property="Margin" Value="10 0 4 0"/>
+    </Style>
+    <Style x:Key="TicketButtonBorderStyle" TargetType="Border">
+        <Setter Property="Background" Value="#77171F23"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="{StaticResource TicketBorderBrush}"/>
+    </Style>
+    <Style x:Key="TicketButtonTextStyle" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="#A09B7F"/>
+        <Setter Property="Margin" Value="3,0,10,0"/>
+    </Style>
+    <Style x:Key="TicketButtonStackPanelStyle" TargetType="StackPanel">
+        <Setter Property="Orientation" Value="Horizontal"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+    </Style>
+    <Style TargetType="units:RiotTicketButton">
+        <Setter Property="Background" Value="#77171F23"/>
+        <Setter Property="Height" Value="28"/>
+        <Setter Property="MinWidth" Value="50"/>
+        <Setter Property="FontSize" Value="11"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="units:RiotTicketButton">
+                    <Grid>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="PointerOver">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="TicketIcon" Storyboard.TargetProperty="Fill">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#D0A756"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="CountText" Storyboard.TargetProperty="Foreground">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#D0A756"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="TicketIcon" Storyboard.TargetProperty="Fill">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#FFFFFF"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="CountText" Storyboard.TargetProperty="Foreground">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#FFFFFF"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Border x:Name="RootBorder" Style="{StaticResource TicketButtonBorderStyle}" CornerRadius="{TemplateBinding CornerRadius}">
+                            <StackPanel Style="{StaticResource TicketButtonStackPanelStyle}">
+                                <Path x:Name="TicketIcon" Style="{StaticResource TicketIconPathStyle}"/>
+                                <TextBlock x:Name="CountText" Style="{StaticResource TicketButtonTextStyle}" Text="{TemplateBinding Content}"/>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

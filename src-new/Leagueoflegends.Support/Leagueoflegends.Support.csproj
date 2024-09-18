@@ -9,12 +9,42 @@
 
   <ItemGroup>
     <None Remove="Datas\Friends.yml" />
-    <None Remove="Datas\SubMenus.yml" />
+    <None Remove="Datas\MatchHistories.yml" />
+    <None Remove="Datas\Menus.yml" />
+    <None Remove="Datas\Options.yml" />
+    <None Remove="Datas\PersonalChampStats.yml" />
+    <None Remove="Datas\PlayChamps.yml" />
+    <None Remove="Datas\Recents.yml" />
+    <None Remove="Datas\Schedules.yml" />
+    <None Remove="Datas\Skins.yml" />
+    <None Remove="Datas\Spells.yml" />
+    <None Remove="Datas\StoreChamps.yml" />
+    <None Remove="Datas\TeamFights.yml" />
+    <None Remove="Images\badge_champion1.png" />
+    <None Remove="Images\badge_champion2.png" />
     <None Remove="Images\blue-essence.png" />
+    <None Remove="Images\clash.jpg" />
     <None Remove="Images\logo.png" />
     <None Remove="Images\menu-selection.png" />
     <None Remove="Images\profile-default.png" />
     <None Remove="Images\rp.png" />
+    <None Remove="Images\skin_chroma.png" />
+    <None Remove="Images\skin_epic.png" />
+    <None Remove="Images\skin_legend.png" />
+    <None Remove="Images\skin_limit.png" />
+    <None Remove="Images\skin_myth.png" />
+    <None Remove="Images\skin_transcend.png" />
+    <None Remove="Images\spell_barrier.png" />
+    <None Remove="Images\spell_clarity.png" />
+    <None Remove="Images\spell_cleanse.png" />
+    <None Remove="Images\spell_exhaust.png" />
+    <None Remove="Images\spell_flash.png" />
+    <None Remove="Images\spell_ghost.png" />
+    <None Remove="Images\spell_heal.png" />
+    <None Remove="Images\spell_ignite.png" />
+    <None Remove="Images\spell_mark.png" />
+    <None Remove="Images\spell_smite.png" />
+    <None Remove="Images\spell_teleport.png" />
     <None Remove="Images\thumb-1.png" />
     <None Remove="Images\thumb-10.png" />
     <None Remove="Images\thumb-11.png" />
@@ -29,25 +59,71 @@
     <None Remove="Images\thumb-9.png" />
     <None Remove="Images\wallpaper-caitlyn.jpg" />
     <None Remove="Images\wallpaper-ezreal.jpg" />
+    <None Remove="Images\wallpaper-fiora-gaussian.jpg" />
+    <None Remove="Images\wallpaper-fiora.jpg" />
     <None Remove="Images\wallpaper-gnar.jpg" />
     <None Remove="Images\wallpaper-jinx.jpg" />
+    <None Remove="Images\wallpaper-kindred.jpg" />
+    <None Remove="Images\wallpaper-leesin.png" />
     <None Remove="Images\wallpaper-leona.jpg" />
+    <None Remove="Images\wallpaper-lux-gaussian.jpg" />
+    <None Remove="Images\wallpaper-lux.jpg" />
     <None Remove="Images\wallpaper-maokai.jpg" />
     <None Remove="Images\wallpaper-rucian.png" />
     <None Remove="Images\wallpaper-sena.png" />
     <None Remove="Images\wallpaper-singed.png" />
+    <None Remove="Images\wallpaper-tft.jpg" />
     <None Remove="Images\wallpaper-thumb-1.png" />
     <None Remove="Images\wallpaper-thumb-2.png" />
+    <None Remove="Images\worlds_2022.png" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Datas\Friends.yml" />
-    <EmbeddedResource Include="Datas\SubMenus.yml" />
+    <EmbeddedResource Include="Datas\MatchHistories.yml" />
+    <EmbeddedResource Include="Datas\Menus.yml" />
+    <EmbeddedResource Include="Datas\Options.yml" />
+    <EmbeddedResource Include="Datas\PersonalChampStats.yml" />
+    <EmbeddedResource Include="Datas\PlayChamps.yml" />
+    <EmbeddedResource Include="Datas\Recents.yml" />
+    <EmbeddedResource Include="Datas\Schedules.yml" />
+    <EmbeddedResource Include="Datas\Skins.yml" />
+    <EmbeddedResource Include="Datas\Spells.yml" />
+    <EmbeddedResource Include="Datas\StoreChamps.yml" />
+    <EmbeddedResource Include="Datas\TeamFights.yml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Jamesnet.Core\Jamesnet.Core.csproj" />
+    <ProjectReference Include="..\Jamesnet.Windows\Jamesnet.Windows.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\badge_champion1.png" />
+    <Resource Include="Images\badge_champion2.png" />
     <Resource Include="Images\blue-essence.png" />
+    <Resource Include="Images\clash.jpg" />
     <Resource Include="Images\logo.png" />
     <Resource Include="Images\menu-selection.png" />
     <Resource Include="Images\profile-default.png" />
     <Resource Include="Images\rp.png" />
+    <Resource Include="Images\skin_chroma.png" />
+    <Resource Include="Images\skin_epic.png" />
+    <Resource Include="Images\skin_legend.png" />
+    <Resource Include="Images\skin_limit.png" />
+    <Resource Include="Images\skin_myth.png" />
+    <Resource Include="Images\skin_transcend.png" />
+    <Resource Include="Images\spell_barrier.png" />
+    <Resource Include="Images\spell_clarity.png" />
+    <Resource Include="Images\spell_cleanse.png" />
+    <Resource Include="Images\spell_exhaust.png" />
+    <Resource Include="Images\spell_flash.png" />
+    <Resource Include="Images\spell_ghost.png" />
+    <Resource Include="Images\spell_heal.png" />
+    <Resource Include="Images\spell_ignite.png" />
+    <Resource Include="Images\spell_mark.png" />
+    <Resource Include="Images\spell_smite.png" />
+    <Resource Include="Images\spell_teleport.png" />
     <Resource Include="Images\thumb-1.png" />
     <Resource Include="Images\thumb-10.png" />
     <Resource Include="Images\thumb-11.png" />
@@ -62,20 +138,23 @@
     <Resource Include="Images\thumb-9.png" />
     <Resource Include="Images\wallpaper-caitlyn.jpg" />
     <Resource Include="Images\wallpaper-ezreal.jpg" />
+    <Resource Include="Images\wallpaper-fiora-gaussian.jpg" />
+    <Resource Include="Images\wallpaper-fiora.jpg" />
     <Resource Include="Images\wallpaper-gnar.jpg" />
     <Resource Include="Images\wallpaper-jinx.jpg" />
+    <Resource Include="Images\wallpaper-kindred.jpg" />
+    <Resource Include="Images\wallpaper-leesin.png" />
     <Resource Include="Images\wallpaper-leona.jpg" />
+    <Resource Include="Images\wallpaper-lux-gaussian.jpg" />
+    <Resource Include="Images\wallpaper-lux.jpg" />
     <Resource Include="Images\wallpaper-maokai.jpg" />
     <Resource Include="Images\wallpaper-rucian.png" />
     <Resource Include="Images\wallpaper-sena.png" />
     <Resource Include="Images\wallpaper-singed.png" />
+    <Resource Include="Images\wallpaper-tft.jpg" />
     <Resource Include="Images\wallpaper-thumb-1.png" />
     <Resource Include="Images\wallpaper-thumb-2.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Jamesnet.Core\Jamesnet.Core.csproj" />
-    <ProjectReference Include="..\Jamesnet.Windows\Jamesnet.Windows.csproj" />
+    <Resource Include="Images\worlds_2022.png" />
   </ItemGroup>
 
 </Project>

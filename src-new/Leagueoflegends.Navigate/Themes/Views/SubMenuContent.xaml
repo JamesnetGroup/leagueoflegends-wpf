@@ -4,16 +4,14 @@
   xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units;assembly=Leagueoflegends.Support"
   xmlns:views="clr-namespace:Leagueoflegends.Navigate.UI.Views">
 
-    <Style TargetType="{x:Type views:SubMenuContent}">
-        <Setter Property="VerticalAlignment" Value="Top"/>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type views:SubMenuContent}">
-                    <units:RiotHorizMenuListBox ItemsSource="{Binding SubMenuItems}"
-                                      SelectedItem="{Binding SelectedItem, Mode=TwoWay}"
-                                      SelectionMode="Single"/>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
+  <Style TargetType="views:SubMenuContent">
+    <Setter Property="VerticalAlignment" Value="Top"/>
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="views:SubMenuContent">
+          <units:RiotHorizMenuListBox ItemsSource="{Binding SubMenuItems}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}"/>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
 </ResourceDictionary>

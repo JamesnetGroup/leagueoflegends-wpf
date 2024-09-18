@@ -1,0 +1,117 @@
+- name: All Champions
+  category: FilterOptions
+  isSelected: true
+- name: All Champions
+  category: FilterOptions
+  isSelected: false
+- name: Role Group
+  category: FilterOptions
+  isSelected: false
+- name: Ownership Status
+  category: FilterOptions
+  isSelected: false
+
+- name: Alphabetical Order
+  category: SortOptions
+  isSelected: true
+- name: Champion Mastery
+  category: SortOptions
+  isSelected: false
+- name: Achievements Completed
+  category: SortOptions
+  isSelected: false
+- name: Chest Available
+  category: SortOptions
+  isSelected: false
+
+- name: All Champions
+  category: ChampionFilter
+  isSelected: true
+- name: Owned
+  category: ChampionFilter
+  isSelected: false
+- name: Role Group
+  category: ChampionFilter
+  isSelected: false
+- name: Set
+  category: ChampionFilter
+  isSelected: false
+- name: Tier
+  category: ChampionFilter
+  isSelected: false
+
+- name: Alphabetical Order
+  category: ChampionSort
+  isSelected: true
+- name: Recent
+  category: ChampionSort
+  isSelected: false
+- name: Upcoming
+  category: ChampionSort
+  isSelected: false
+- name: Show Unowned Items
+  category: AdditionalOption
+  isSelected: false
+  
+- name: Release Date
+  category: ItemSortOptions  ↑
+  isSelected: true
+- name: Release Date
+  category: ItemSortOptions  ↓
+  isSelected: false
+- name: Price (RP)  ↑
+  category: ItemSortOptions
+  isSelected: false
+- name: Price (RP)  ↓
+  category: ItemSortOptions
+  isSelected: false
+- name: Price (BE)  ↑
+  category: ItemSortOptions
+  isSelected: false
+- name: Price (BE)  ↓
+  category: ItemSortOptions
+  isSelected: false
+- name: Alphabetical  ↑
+  category: ItemSortOptions
+  isSelected: false
+- name: Alphabetical  ↓
+  category: ItemSortOptions
+  isSelected: false
+
+- name: 2560 x 1440
+  category: WindowSize
+  isSelected: false
+  seq: 1
+- name: 1920 x 1080
+  category: WindowSize
+  isSelected: false
+  seq: 2
+- name: 1600 x 900
+  category: WindowSize
+  isSelected: false
+  seq: 3
+- name: 1280 x 720
+  category: WindowSize
+  isSelected: false
+  seq: 4
+- name: 1024 x 576
+  category: WindowSize
+  isSelected: false
+  seq: 5
+
+- name: MacBook Pro Microphone (Built-in)
+  category: AudioInput
+  isSelected: true
+  seq: 1
+- name: BenQ RD280U Monitor (USB Audio Device)
+  category: AudioInput
+  isSelected: false
+  seq: 2
+- name: HomePod (AirPlay Audio Input)
+  category: AudioInput
+  isSelected: false
+  seq: 3
+- name: AirPods Max (Bluetooth Hands-Free Audio)
+  category: AudioInput
+  isSelected: false
+  seq: 4

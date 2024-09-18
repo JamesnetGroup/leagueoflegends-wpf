@@ -1,47 +1,92 @@
 ﻿<ResourceDictionary 
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:cnvts="clr-namespace:Leagueoflegends.Support.Local.Converters"
-    xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units">
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:cnvts="clr-namespace:Leagueoflegends.Support.Local.Converters"
+  xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units">
 
-    <cnvts:MenuNameToWallpaperConverter x:Key="MenuNameToWallpaperConverter"/>
+  <cnvts:MenuNameToWallpaperConverter x:Key="MenuNameToWallpaperConverter"/>
 
-    <LinearGradientBrush x:Key="TopFadeOutGradient" EndPoint="0.5,1" StartPoint="0.5,0">
-        <GradientStop Color="#DD000000"/>
-        <GradientStop Color="#77000000" Offset="0.5"/>
-        <GradientStop Color="#00000000" Offset="1"/>
-    </LinearGradientBrush>
+  <LinearGradientBrush x:Key="TopFadeOutBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+    <GradientStop Color="#DD000000"/>
+    <GradientStop Color="#77000000" Offset="0.5"/>
+    <GradientStop Color="#00000000" Offset="1"/>
+  </LinearGradientBrush>
 
-    <LinearGradientBrush x:Key="LeftFadeOutGradient" EndPoint="1,0.5" StartPoint="0,0.5">
-        <GradientStop Color="#FF000000"/>
-        <GradientStop Color="#44000000" Offset="0.5"/>
-        <GradientStop Color="#00000000" Offset="1"/>
-    </LinearGradientBrush>
+  <LinearGradientBrush x:Key="LeftFadeOutBrush" EndPoint="1,0.5" StartPoint="0,0.5">
+    <GradientStop Color="#FF000000"/>
+    <GradientStop Color="#CC000000" Offset="0.5"/>
+    <GradientStop Color="#00000000" Offset="1"/>
+  </LinearGradientBrush>
 
-    <Style TargetType="Rectangle" x:Key="TopFadeOutOverlay">
-        <Setter Property="Fill" Value="{StaticResource TopFadeOutGradient}"/>
-        <Setter Property="Height" Value="300"/>
-        <Setter Property="VerticalAlignment" Value="Top"/>
-    </Style>
+  <Style TargetType="Rectangle" x:Key="TopFadeOutOverlayStyle">
+    <Setter Property="Fill" Value="{StaticResource TopFadeOutBrush}"/>
+    <Setter Property="Height" Value="300"/>
+    <Setter Property="VerticalAlignment" Value="Top"/>
+  </Style>
 
-    <Style TargetType="Rectangle" x:Key="LeftFadeOutOverlay">
-        <Setter Property="Fill" Value="{StaticResource LeftFadeOutGradient}"/>
-        <Setter Property="Width" Value="500"/>
-        <Setter Property="HorizontalAlignment" Value="Left"/>
-    </Style>
+  <Style TargetType="Rectangle" x:Key="LeftFadeOutOverlayStyle">
+    <Setter Property="Fill" Value="{StaticResource LeftFadeOutBrush}"/>
+    <Setter Property="Width" Value="500"/>
+    <Setter Property="HorizontalAlignment" Value="Left"/>
+  </Style>
 
-    <Style TargetType="{x:Type units:RiotWallpaper}">
-        <Setter Property="Background" Value="Transparent"/>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type units:RiotWallpaper}">
-                    <Grid>
-                        <Image Source="{Binding MenuName, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource MenuNameToWallpaperConverter}}" Stretch="UniformToFill"/>
-                        <Rectangle Style="{StaticResource TopFadeOutOverlay}"/>
-                        <Rectangle Style="{StaticResource LeftFadeOutOverlay}"/>
+  <Style TargetType="Rectangle" x:Key="WideSidebarOverlayStyle">
+    <Setter Property="Fill" Value="{StaticResource LeftFadeOutBrush}"/>
+    <Setter Property="Width" Value="1600"/>
+    <Setter Property="HorizontalAlignment" Value="Left"/>
+  </Style>
+
+  <Style TargetType="Rectangle" x:Key="MediumSidebarOverlayStyle">
+    <Setter Property="Fill" Value="{StaticResource LeftFadeOutBrush}"/>
+    <Setter Property="Width" Value="1200"/>
+    <Setter Property="HorizontalAlignment" Value="Left"/>
+  </Style>
+
+  <Style TargetType="Rectangle" x:Key="NarrowSidebarOverlayStyle">
+    <Setter Property="Fill" Value="{StaticResource LeftFadeOutBrush}"/>
+    <Setter Property="Width" Value="300"/>
+    <Setter Property="Opacity" Value="0.95"/>
+    <Setter Property="HorizontalAlignment" Value="Left"/>
+  </Style>
+
+  <Style TargetType="units:RiotWallpaper">
+    <Setter Property="Background" Value="Transparent"/>
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="units:RiotWallpaper">
+          <Grid>
+            <Image Source="{Binding Path=MenuName, RelativeSource={RelativeSource Mode=TemplatedParent}, Converter={StaticResource MenuNameToWallpaperConverter}}" Stretch="UniformToFill"/>
+            <Rectangle Style="{StaticResource TopFadeOutOverlayStyle}"/>
+            <Rectangle x:Name="LeftOverlay" Style="{StaticResource LeftFadeOutOverlayStyle}"/>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="MenuVisualStates">
+                                <VisualState x:Name="DefaultState"/>
+                                <VisualState x:Name="ExpandedSidebarState">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="LeftOverlay" Storyboard.TargetProperty="Style">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource WideSidebarOverlayStyle}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="MediumSidebarState">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="LeftOverlay" Storyboard.TargetProperty="Style">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource MediumSidebarOverlayStyle}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="NarrowSidebarState">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="LeftOverlay" Storyboard.TargetProperty="Style">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource NarrowSidebarOverlayStyle}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
                     </Grid>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
 </ResourceDictionary>

@@ -14,7 +14,7 @@ public class RiotHorizMenuListBox : ListBox
     {
         foreach (var item in e.RemovedItems)
         {
-            if (ItemContainerGenerator.ContainerFromItem(item) is RiotHorizMenuListBoxItem listBoxItem)
+            if (ItemContainerGenerator.ContainerFromItem(item) is ListBoxItem listBoxItem)
             {
                 listBoxItem.IsSelected = false;
             }
@@ -22,7 +22,7 @@ public class RiotHorizMenuListBox : ListBox
 
         foreach (var item in e.AddedItems)
         {
-            if (ItemContainerGenerator.ContainerFromItem(item) is RiotHorizMenuListBoxItem listBoxItem)
+            if (ItemContainerGenerator.ContainerFromItem(item) is ListBoxItem listBoxItem)
             {
                 listBoxItem.IsSelected = true;
             }

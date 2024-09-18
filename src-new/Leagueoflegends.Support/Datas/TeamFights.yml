@@ -1,0 +1,294 @@
+- seq: 0
+  name: Jade Emperor Goblin
+  level: 1
+  explain: Rule the empire and galaxy with your noble green friend. Instantly obtainable by upgrading to Pass+.
+  isPremium: true
+  image: lol-goblin.jpg
+  isFree: false
+- seq: 1
+  name: Please?
+  level: 2
+  explain: There's no harm in doing what Fluft and Tumble wants, right?
+  isPremium: false
+  image: lol-emoji-beg.jpg
+  isFree: true
+- seq: 2
+  name: 1-Star Curtain Call
+  level: 3
+  explain: Blow away your enemies with one last shot.
+  isPremium: true
+  image: lol-curtaincall.png
+  isFree: false
+- seq: 3
+  name: 30 Star Shards
+  level: 4
+  explain: Upgrade your Little Legend with these shards obtained from stars!
+  isPremium: true
+  image: lol-star-item.jpg 
+  isFree: false
+- seq: 4
+  name: Small Hero Egg
+  level: 5
+  explain: One of the small hero Little Legends - Ao Shin, Choncc, or Grunge - can hatch from this egg.
+  isPremium: true
+  image: lol-small-egg.png
+  isFree: false
+- seq: 5
+  name: 1-Star Kanmei Explosion
+  level: 6
+  explain: Blow away your enemies with the soul's flame.
+  isPremium: true
+  image: lol-kanmei.png
+  isFree: false
+- seq: 6
+  name: Random Emote
+  level: 7
+  explain: Express your mood with a random emote!
+  isPremium: false
+  image: lol-emoji-random.png
+  isFree: true
+- seq: 7
+  name: 30 Star Shards
+  level: 8
+  explain: Upgrade your Little Legend with these shards obtained from stars!
+  isPremium: true
+  image: lol-star-item.jpg
+  isFree: false
+- seq: 8
+  name: 2-Star Curtain Call
+  level: 9
+  explain: Blow away your enemies with one last shot. Your units fire together.
+  isPremium: true
+  image: lol-curtaincall2.png
+  isFree: false
+- seq: 9
+  name: 30 Star Shards
+  level: 10
+  explain: Upgrade your Little Legend with these shards obtained from stars!
+  isPremium: true
+  image: lol-star-item.jpg
+  isFree: false
+- seq: 10
+  name: 1-Star Lucky Fuwa
+  level: 11
+  explain: A golden friend that brings luck and smiles. It might respond when you whistle.
+  isPremium: true
+  image: lol-luckypig.png
+  isFree: false
+- seq: 11
+  name: Little Legend Egg (Random from Series 1-6)
+  level: 12
+  explain: A random Little Legend from Series 1-6 can hatch from this egg.
+  isPremium: false
+  image: lol-legend-egg.png
+  isFree: true
+- seq: 12
+  name: 3-Star Curtain Call
+  level: 13
+  explain: Blow away your enemies with a spectacular final shot. Your units fire together.
+  isPremium: true
+  image: lol-curtaincall2.png
+  isFree: false
+- seq: 13
+  name: 30 Star Shards
+  level: 14
+  explain: Upgrade your Little Legend with these shards obtained from stars!
+  isPremium: true
+  image: lol-star-item.jpg
+  isFree: false
+- seq: 14
+  name: 2-Star Kanmei Explosion
+  level: 15
+  explain: Blow away your enemies with the soul's flame. Your units fire together.
+  isPremium: true
+  image: lol-kanmei.png
+  isFree: false
+- seq: 15
+  name: Random Emote
+  level: 16
+  explain: Express your mood with a random emote!
+  isPremium: false
+  image: lol-emoji-random.png
+  isFree: true
+- seq: 16
+  name: 30 Star Shards
+  level: 17
+  explain: Upgrade your Little Legend with these shards obtained from stars!
+  isPremium: true
+  image: lol-star-item.jpg
+  isFree: false
+- seq: 17
+  name: 1-Star Shadow Scribble
+  level: 18
+  explain: Reduce your enemy's dignity by spraying dark paint.
+  isPremium: true
+  image: 
+  isFree: false
+- seq: 18
+  name: 30 Star Shards
+  level: 19
+  explain: Upgrade your Little Legend with these shards obtained from stars!
+  isPremium: true
+  image: lol-star-item.jpg
+  isFree: false
+- seq: 19
+  name: Journey's Beginning Arena
+  level: 20
+  explain: Sometimes, deciding when to start is the most important thing.
+  isPremium: true
+  image: 
+  isFree: false
+- seq: 20
+  name: Hooray
+  level: 21
+  explain: Melisma is letting out a joyful scream.
+  isPremium: false
+  image: 
+  isFree: true
+- seq: 21
+  name: 3-Star Kanmei Explosion
+  level: 22
+  explain: Blow away your enemies with the soul's flame. Your units fire together.
+  isPremium: true
+  image: lol-kanmei.png
+  isFree: false
+- seq: 22
+  name: Small Hero Egg
+  level: 23
+  explain: One of the small hero Little Legends - Ao Shin, Choncc, or Grunge - can hatch from this egg.
+  isPremium: true
+  image: lol-small-egg.png
+  isFree: false
+- seq: 23
+  name: 30 Star Shards
+  level: 24
+  explain: Upgrade your Little Legend with these shards obtained from stars!
+  isPremium: true
+  image: lol-star-item.jpg
+  isFree: false
+- seq: 24
+  name: 2-Star Shadow Scribble
+  level: 25
+  explain: Reduce your enemy's dignity by spraying dark paint. Your units spray together.
+  isPremium: true
+  image: 
+  isFree: false
+- seq: 25
+  name: Little Legend Egg (Random from Series 1-6)
+  level: 26
+  explain: A random Little Legend from Series 1-6 can hatch from this egg.
+  isPremium: false
+  image: lol-legend-egg.png
+  isFree: true
+- seq: 26
+  name: 30 Star Shards
+  level: 27
+  explain: Upgrade your Little Legend with these shards obtained from stars!
+  isPremium: true
+  image: lol-star-item.jpg
+  isFree: false
+- seq: 27
+  name: 1-Star Rushing Leaves
+  level: 28
+  explain: Blow away your enemies with a wave of leaves.
+  isPremium: true
+  image: 
+  isFree: false
+- seq: 28
+  name: 30 Star Shards
+  level: 29
+  explain: Upgrade your Little Legend with these shards obtained from stars!
+  isPremium: true
+  image: lol-star-item.jpg
+  isFree: false
+- seq: 29
+  name: Journey's Path Arena
+  level: 30
+  explain: Helps you conquer the same unknown and grow from it.
+  isPremium: true
+  image: 
+  isFree: false
+- seq: 30
+  name: Random Emote
+  level: 31
+  explain: Express your mood with a random emote!
+  isPremium: false
+  image: lol-emoji-random.png
+  isFree: true
+- seq: 31
+  name: 2-Star Rushing Leaves
+  level: 32
+  explain: Blow away your enemies with a wave of leaves. Your units fire together.
+  isPremium: true
+  image: 
+  isFree: false
+- seq: 32
+  name: 30 Star Shards
+  level: 33
+  explain: Upgrade your Little Legend with these shards obtained from stars!
+  isPremium: true
+  image: lol-star-item.jpg
+  isFree: false
+- seq: 33
+  name: 3-Star Shadow Scribble
+  level: 34
+  explain: Reduce your enemy's dignity by spraying dark paint. Your units spray together.
+  isPremium: true
+  image: 
+  isFree: false
+- seq: 34
+  name: Small Hero Egg
+  level: 35
+  explain: One of the small hero Little Legends - Ao Shin, Choncc, or Grunge - can hatch from this egg.
+  isPremium: true
+  image: lol-small-egg.png
+  isFree: false
+- seq: 35
+  name: Little Legend Egg (Random from Series 1-6)
+  level: 36
+  explain: A random Little Legend from Series 1-6 can hatch from this egg.
+  isPremium: false
+  image: lol-legend-egg.png
+  isFree: true
+- seq: 36
+  name: 30 Star Shards
+  level: 37
+  explain: Upgrade your Little Legend with these shards obtained from stars!
+  isPremium: true
+  image: lol-star-item.jpg
+  isFree: false
+- seq: 37
+  name: 3-Star Rushing Leaves
+  level: 38
+  explain: Blow away your enemies with a wave of leaves. Your units fire together.
+  isPremium: true
+  image: 
+  isFree: false
+- seq: 38
+  name: 30 Star Shards
+  level: 39
+  explain: Upgrade your Little Legend with these shards obtained from stars!
+  isPremium: true
+  image: lol-star-item.jpg
+  isFree: false
+- seq: 39
+  name: 2-Star Lucky Fuwa
+  level: 40
+  explain: A golden friend that brings luck and smiles. It might respond when you whistle.
+  isPremium: true
+  image: lol-luckypig.png
+  isFree: false
+- seq: 40
+  name: Journey's End Arena
+  level: 41
+  explain: The end of a journey is just another beginning.
+  isPremium: false
+  image: 
+  isFree: true
+- seq: 41
+  name: You Are Already Dead
+  level: 42
+  explain: What?!
+  isPremium: false
+  image: 
+  isFree: true

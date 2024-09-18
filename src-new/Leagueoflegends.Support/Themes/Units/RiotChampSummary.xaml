@@ -1,0 +1,110 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units">
+
+  <Geometry x:Key="SummaryPathData">M73.479167,6.4879167 L73.42115,83.273088 72.912406,84.002032 C70.050467,84.892122 67.912185,87.424602 67.60015,90.496932 L67.599357,90.512622 6.5652928,90.512622 6.5645002,90.496932 C6.2264661,87.168582 3.7451176,84.473782 0.52231627,83.814342 L0.50000002,83.376928 0.52083335,7.7738529 0.55016022,7.5572561 C3.2771481,6.9992703 5.4732712,4.9840263 6.2892464,2.3607517 L6.4277128,0.67162255 66.625,0.5 66.737466,1.3009875 C66.664269,4.4888962 70.108169,7.1286855 73.39635,6.9803701</Geometry>
+  <SolidColorBrush x:Key="SummaryBackgroundBrush" Color="#0A0908"/>
+
+  <!-- TODO: Use this brush for text when Uno Platform supports gradients on TextBlock -->
+  <LinearGradientBrush x:Key="CountGradient" StartPoint="0.5, 0" EndPoint="0.5, 1">
+    <GradientStop Color="#CBB785" Offset="0.0" />
+    <GradientStop Color="#8B703A" Offset="1.0" />
+  </LinearGradientBrush>
+  
+  <LinearGradientBrush x:Key="BorderGradient" StartPoint="0.5, 0" EndPoint="0.5, 1">
+    <GradientStop Color="#9B8246" Offset="0"/>
+    <GradientStop Color="#615138" Offset="0.5"/>
+    <GradientStop Color="#59462B" Offset="1"/>
+  </LinearGradientBrush>
+
+  <LinearGradientBrush x:Key="OverlayGradient" StartPoint="0.5, 1" EndPoint="0.5, 0">
+    <GradientStop Color="#AA0A0908" Offset="0.0" />
+    <GradientStop Color="#00000000" Offset="1.0" />
+  </LinearGradientBrush>
+
+  <Style x:Key="SummaryPathStyle" TargetType="Path">
+    <Setter Property="Fill" Value="{StaticResource SummaryBackgroundBrush}"/>
+    <Setter Property="Data" Value="{StaticResource SummaryPathData}"/>
+    <Setter Property="Stroke" Value="{StaticResource BorderGradient}"/>
+    <Setter Property="StrokeThickness" Value="2"/>
+  </Style>
+
+  <Style x:Key="ProficiencyContentStyle" TargetType="TextBlock">
+    <Setter Property="Foreground" Value="#CBB785"/>
+    <Setter Property="FontSize" Value="40"/>
+    <Setter Property="FontWeight" Value="Bold"/>
+    <Setter Property="HorizontalAlignment" Value="Center"/>
+  </Style>
+
+  <Style x:Key="ProficiencyTextStyle" TargetType="TextBlock">
+    <Setter Property="FontSize" Value="11"/>
+    <Setter Property="Foreground" Value="#A09B8C"/>
+    <Setter Property="HorizontalAlignment" Value="Center"/>
+  </Style>
+
+  <Style x:Key="AchieveCountStyle" TargetType="TextBlock">
+    <Setter Property="Foreground" Value="#CBB785"/>
+    <Setter Property="FontSize" Value="40"/>
+    <Setter Property="FontWeight" Value="Bold"/>
+    <Setter Property="HorizontalAlignment" Value="Center"/>
+  </Style>
+
+  <Style x:Key="AchieveTextStyle" TargetType="TextBlock">
+    <Setter Property="FontSize" Value="11"/>
+    <Setter Property="Foreground" Value="#A09B8C"/>
+    <Setter Property="HorizontalAlignment" Value="Center"/>
+  </Style>
+
+  <Style x:Key="CountOverlayStyle" TargetType="Border">
+    <Setter Property="Background" Value="{StaticResource OverlayGradient}"/>
+    <Setter Property="Width" Value="100"/>
+    <Setter Property="Height" Value="50"/>
+    <Setter Property="HorizontalAlignment" Value="Center"/>
+    <Setter Property="VerticalAlignment" Value="Center"/>
+  </Style>
+
+  <Style x:Key="CountStackStyle" TargetType="StackPanel">
+    <Setter Property="VerticalAlignment" Value="Center"/>
+  </Style>
+
+  <Style x:Key="CountGridStyle" TargetType="Grid">
+    <Setter Property="Margin" Value="0 0 0 5"/>
+  </Style>
+
+  <Style x:Key="ViewboxStyle" TargetType="Viewbox">
+    <Setter Property="Width" Value="200"/>
+    <Setter Property="Height" Value="200"/>
+  </Style>
+
+  <Style TargetType="units:RiotChampSummary">
+    <Setter Property="VerticalAlignment" Value="Top"/>
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="units:RiotChampSummary">
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto"/>
+              <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Viewbox Style="{StaticResource ViewboxStyle}">
+              <Path Style="{StaticResource SummaryPathStyle}"/>
+            </Viewbox>
+            <StackPanel Style="{StaticResource CountStackStyle}">
+              <Grid Style="{StaticResource CountGridStyle}">
+                <TextBlock Style="{StaticResource ProficiencyContentStyle}" Text="{Binding Proficiency}"/>
+                <Border Style="{StaticResource CountOverlayStyle}"/>
+              </Grid>
+              <TextBlock Style="{StaticResource ProficiencyTextStyle}" Text="Total Proficiency"/>
+              <Grid Style="{StaticResource CountGridStyle}">
+                <TextBlock Style="{StaticResource AchieveCountStyle}" Text="{Binding Achieve}"/>
+                <Border Style="{StaticResource CountOverlayStyle}"/>
+              </Grid>
+              <TextBlock Style="{StaticResource AchieveTextStyle}" Text="Achievements"/>
+            </StackPanel>
+          </Grid>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>

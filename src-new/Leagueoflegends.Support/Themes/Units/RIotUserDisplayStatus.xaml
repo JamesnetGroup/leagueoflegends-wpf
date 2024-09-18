@@ -3,43 +3,72 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units">
 
-    <Style TargetType="{x:Type units:RiotUserDisplayStatus}">
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type units:RiotUserDisplayStatus}">
-                    <Grid>
-                        <StackPanel>
-                            <TextBlock x:Name="PART_UserName" 
-                                       Text="{TemplateBinding UserName}"
-                                       FontSize="14"
-                                       FontWeight="Bold"
-                                       Foreground="#F0E6D2"
-                                       Margin="0,0,0,0"/>
-                            <StackPanel Orientation="Horizontal">
-                                <Ellipse x:Name="PART_StatusIndicator" 
-                                         Width="11" Height="11" 
-                                         Stroke="#66F8A0" 
-                                         StrokeThickness="2"
-                                         Fill="#09A646" 
-                                         Margin="0,0,6,0"/>
-                                <TextBlock x:Name="PART_StatusText" 
-                                           Text="Online"
-                                           FontSize="11"
-                                           FontWeight="Bold"
-                                           Foreground="#099441"/>
-                            </StackPanel>
-                        </StackPanel>
-                    </Grid>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsOnline" Value="False">
-                            <Setter TargetName="PART_StatusIndicator" Property="Fill" Value="Transparent"/>
-                            <Setter TargetName="PART_StatusIndicator" Property="Stroke" Value="#9C3213"/>
-                            <Setter TargetName="PART_StatusText" Property="Text" Value="자리 비움"/>
-                            <Setter TargetName="PART_StatusText" Property="Foreground" Value="#A09B8C"/>
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
+  <Style x:Key="UserNameTextBlockStyle" TargetType="TextBlock">
+    <Setter Property="FontSize" Value="14"/>
+    <Setter Property="FontWeight" Value="Bold"/>
+    <Setter Property="Foreground" Value="#F0E6D2"/>
+    <Setter Property="Margin" Value="0,0,0,0"/>
+  </Style>
+
+  <Style x:Key="StatusIndicatorEllipseStyle" TargetType="Ellipse">
+    <Setter Property="Width" Value="11"/>
+    <Setter Property="Height" Value="11"/>
+    <Setter Property="Stroke" Value="#66F8A0"/>
+    <Setter Property="StrokeThickness" Value="2"/>
+    <Setter Property="Fill" Value="#09A646"/>
+    <Setter Property="Margin" Value="0,0,6,0"/>
+  </Style>
+
+  <Style x:Key="StatusTextBlockStyle" TargetType="TextBlock">
+    <Setter Property="FontSize" Value="11"/>
+    <Setter Property="FontWeight" Value="Bold"/>
+    <Setter Property="Foreground" Value="#099441"/>
+  </Style>
+
+  <Style x:Key="StatusStackPanelStyle" TargetType="StackPanel">
+    <Setter Property="Orientation" Value="Horizontal"/>
+  </Style>
+
+  <Style x:Key="MainStackPanelStyle" TargetType="StackPanel">
+    <Setter Property="Orientation" Value="Vertical"/>
+  </Style>
+
+  <Style TargetType="units:RiotUserDisplayStatus">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="units:RiotUserDisplayStatus">
+          <Grid>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Online"/>
+                                <VisualState x:Name="Offline">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PART_StatusIndicator" Storyboard.TargetProperty="Fill">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Red"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PART_StatusIndicator" Storyboard.TargetProperty="Stroke">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#9C3213"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PART_StatusText" Storyboard.TargetProperty="Text">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="Away"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PART_StatusText" Storyboard.TargetProperty="Foreground">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#A09B8C"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <StackPanel Style="{StaticResource MainStackPanelStyle}">
+              <TextBlock x:Name="PART_UserName" Style="{StaticResource UserNameTextBlockStyle}" Text="{TemplateBinding UserName}"/>
+              <StackPanel Style="{StaticResource StatusStackPanelStyle}">
+                <Ellipse x:Name="PART_StatusIndicator" Style="{StaticResource StatusIndicatorEllipseStyle}"/>
+                <TextBlock x:Name="PART_StatusText" Style="{StaticResource StatusTextBlockStyle}" Text="Online"/>
+              </StackPanel>
+            </StackPanel>
+          </Grid>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
 </ResourceDictionary>

@@ -1,0 +1,35 @@
+﻿<ResourceDictionary
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units;assembly=Leagueoflegends.Support"
+  xmlns:views="clr-namespace:Leagueoflegends.Navigate.UI.Views">
+
+  <Style x:Key="CategoryTextStyle" TargetType="TextBlock">
+    <Setter Property="Foreground" Value="#A09B8C"/>
+    <Setter Property="Text" Value="CLIENT"/>
+    <Setter Property="FontSize" Value="12"/>
+    <Setter Property="Margin" Value="24 20 0 10"/>
+  </Style>
+
+  <Style TargetType="views:OptionMenuContent">
+    <Setter Property="MinWidth" Value="150"/>
+    <Setter Property="VerticalAlignment" Value="Top"/>
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="views:OptionMenuContent">
+          <StackPanel>
+            <TextBlock Style="{StaticResource CategoryTextStyle}" Text="CLIENT"/>
+            <units:RiotOptionMenuButton Command="{Binding MenuCommand}" CommandParameter="General" Content="GENERAL" IsChecked="True"/>
+            <units:RiotOptionMenuButton Command="{Binding MenuCommand}" CommandParameter="Notice" Content="NOTIFICATION"/>
+            <units:RiotOptionMenuButton Command="{Binding MenuCommand}" CommandParameter="Chat" Content="CHAT/FRIENDS"/>
+            <units:RiotOptionMenuButton Command="{Binding MenuCommand}" CommandParameter="Sound" Content="SOUND"/>
+            <units:RiotOptionMenuButton Command="{Binding MenuCommand}" CommandParameter="Voice" Content="VOICE"/>
+            <TextBlock Style="{StaticResource CategoryTextStyle}" Text="IN-GAME"/>
+            <units:RiotOptionMenuButton Command="{Binding MenuCommand}" CommandParameter="HotKey" Content="HOT KEYS"/>
+            <units:RiotOptionMenuButton Command="{Binding MenuCommand}" CommandParameter="Volume" Content="VOLUME"/>
+          </StackPanel>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>

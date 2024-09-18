@@ -1,0 +1,86 @@
+﻿<ResourceDictionary
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:cnvts="clr-namespace:Leagueoflegends.Support.Local.Converters"
+  xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units">
+
+    <cnvts:PercentToBadgeConverter x:Key="PercentToBadgeConverter"/>
+    <cnvts:ChampionNameToThumbnailConverter x:Key="ChampionNameToThumbnailConverter"/>
+
+    <Style x:Key="MainBorderStyle" TargetType="Border">
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="#33FFFFFF"/>
+        <Setter Property="Margin" Value="4 4 4 1"/>
+    </Style>
+
+    <Style x:Key="ChampionImageStyle" TargetType="Image">
+        <Setter Property="Width" Value="68"/>
+        <Setter Property="Height" Value="68"/>
+    </Style>
+
+    <Style x:Key="BadgeImageStyle" TargetType="Image">
+        <Setter Property="Stretch" Value="Uniform"/>
+        <Setter Property="Margin" Value="6 -1 6 20"/>
+        <Setter Property="Width" Value="48"/>
+    </Style>
+
+    <Style x:Key="PercentTextStyle" TargetType="TextBlock">
+        <Setter Property="Margin" Value="0,12,0,0"/>
+        <Setter Property="Foreground" Value="#B2955B"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="FontSize" Value="17"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+    </Style>
+
+    <Style TargetType="units:RiotPlayedChampListBoxItem">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="units:RiotPlayedChampListBoxItem">
+                    <StackPanel>
+                        <!--<VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal"/>
+                                <VisualState x:Name="PointerOver">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="MainBorder" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#33FFFFFF"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="MainBorder" Storyboard.TargetProperty="BorderBrush">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#66FFFFFF"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PercentText" Storyboard.TargetProperty="Foreground">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#FFFFFF"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="MainBorder" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#66FFFFFF"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="MainBorder" Storyboard.TargetProperty="BorderBrush">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#99FFFFFF"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PercentText" Storyboard.TargetProperty="Foreground">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#FFFFFF"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ChampionImage" Storyboard.TargetProperty="Opacity">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="0.8"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>-->
+                        <Border x:Name="MainBorder" Style="{StaticResource MainBorderStyle}">
+                            <Image x:Name="ChampionImage" Style="{StaticResource ChampionImageStyle}" Source="{Binding Champion, Converter={StaticResource ChampionNameToThumbnailConverter}}"/>
+                        </Border>
+                        <Image Style="{StaticResource BadgeImageStyle}" Source="{Binding Percent, Converter={StaticResource PercentToBadgeConverter}}"/>
+                        <TextBlock x:Name="PercentText" Style="{StaticResource PercentTextStyle}">
+                            <Run Text="{Binding Percent}"/><Run Text="%"/>
+                        </TextBlock>
+                    </StackPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

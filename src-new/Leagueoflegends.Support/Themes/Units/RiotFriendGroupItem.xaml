@@ -1,32 +1,25 @@
 ﻿<ResourceDictionary
-    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units">
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units">
 
-    <Style TargetType="{x:Type units:RiotFriendGroupItem}">
-        <Setter Property="ItemsBindingPath" Value="Children"/>
-        <Setter Property="Foreground" Value="#A09B8C"/>
-        <Setter Property="FontSize" Value="12"/>
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type units:RiotFriendGroupItem}">
-                    <Grid Background="Transparent">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto"/>
-                            <RowDefinition Height="*"/>
-                        </Grid.RowDefinitions>
-                        <Grid x:Name="PART_Root">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-                            <units:RiotFoldableIcon IsChecked="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Path=IsExpanded, Mode=TwoWay}" Margin="10 5 0 5">
-                                <TextBlock Text="{Binding Name}" FontWeight="Bold" Margin="5 0 0 0"/>
-                            </units:RiotFoldableIcon>
-                        </Grid>
-                        <StackPanel Grid.Row="1" x:Name="PART_ItemsPanel" Margin="0 4 0 0"/>
-                    </Grid>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
+  <Style x:Key="ItemsPresenterStyle" TargetType="StackPanel">
+    <Setter Property="Margin" Value="0 4 0 0"/>
+  </Style>
+
+  <Style TargetType="units:RiotFriendGroupItem">
+    <Setter Property="ItemsBindingPath" Value="Children"/>
+    <Setter Property="Foreground" Value="#A09B8C"/>
+    <Setter Property="FontSize" Value="12"/>
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="units:RiotFriendGroupItem">
+          <StackPanel Background="Transparent">
+            <units:RiotFoldableIcon IsChecked="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Mode=TwoWay, Path=IsExpanded}" Content="{Binding Name}"/>
+            <StackPanel x:Name="PART_ItemsPanel" Style="{StaticResource ItemsPresenterStyle}"/>
+          </StackPanel>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
 </ResourceDictionary>

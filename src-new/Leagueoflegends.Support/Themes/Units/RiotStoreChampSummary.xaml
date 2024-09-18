@@ -1,0 +1,67 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cnvts="clr-namespace:Leagueoflegends.Support.Local.Converters"
+    xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units">
+
+  <cnvts:BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter"/>
+
+  <Style x:Key="FilterStackStyle" TargetType="StackPanel">
+    <Setter Property="Margin" Value="0 20 0 0"/>
+  </Style>
+
+  <Style x:Key="CheckBoxStyle" TargetType="units:RiotCheckBox">
+    <Setter Property="Margin" Value="0 10 0 0"/>
+  </Style>
+  
+  <Style TargetType="units:RiotStoreChampSummary">
+    <Setter Property="Width" Value="200"/>
+    <Setter Property="VerticalAlignment" Value="Top"/>
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="units:RiotStoreChampSummary">
+          <Grid>
+            <Grid.RowDefinitions>
+              <RowDefinition Height="Auto"/>
+              <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <StackPanel Style="{StaticResource CountStackStyle}">
+              <units:RiotRadioButton Content="CHAMPIONS" IsChecked="{Binding IsChampionsSelected, Mode=TwoWay}"/>
+              <units:RiotRadioButton Content="ETERNALS" IsChecked="{Binding IsEternalsSelected, Mode=TwoWay}"/>
+              <units:RiotRadioButton Content="BUNDLES" IsChecked="{Binding IsBundlesSelected, Mode=TwoWay}"/>
+
+              <units:RiotTextBox Margin="0 20 0 0"/>
+              <units:RiotCheckBox Content="Show Owned"/>
+
+              <StackPanel Style="{StaticResource FilterStackStyle}" Visibility="{Binding IsChampionsSelected, Converter={StaticResource BooleanToVisibilityConverter}}">
+                <units:RiotComboBox ItemsSource="{Binding ChampOptions}" SelectedItem="{Binding CurrentChamp, Mode=TwoWay}"/>
+                <units:RiotCheckBox Style="{StaticResource CheckBoxStyle}" Content="Assassin"/>
+                <units:RiotCheckBox Style="{StaticResource CheckBoxStyle}" Content="Fighter"/>
+                <units:RiotCheckBox Style="{StaticResource CheckBoxStyle}" Content="Marksman"/>
+                <units:RiotCheckBox Style="{StaticResource CheckBoxStyle}" Content="Support"/>
+                <units:RiotCheckBox Style="{StaticResource CheckBoxStyle}" Content="Tank"/>
+                <units:RiotCheckBox Style="{StaticResource CheckBoxStyle}" Content="On Sale"/>
+              </StackPanel>
+
+              <StackPanel Style="{StaticResource FilterStackStyle}" Visibility="{Binding IsEternalsSelected, Converter={StaticResource BooleanToVisibilityConverter}}">
+                <units:RiotComboBox ItemsSource="{Binding EternalOptions}" SelectedItem="{Binding CurrentEternal, Mode=TwoWay}"/>
+                <units:RiotCheckBox Style="{StaticResource CheckBoxStyle}" Content="Assassin"/>
+                <units:RiotCheckBox Style="{StaticResource CheckBoxStyle}" Content="Fighter"/>
+                <units:RiotCheckBox Style="{StaticResource CheckBoxStyle}" Content="Marksman"/>
+                <units:RiotCheckBox Style="{StaticResource CheckBoxStyle}" Content="Support"/>
+                <units:RiotCheckBox Style="{StaticResource CheckBoxStyle}" Content="Tank"/>
+                <units:RiotCheckBox Style="{StaticResource CheckBoxStyle}" Content="Starter Series"/>
+                <units:RiotCheckBox Style="{StaticResource CheckBoxStyle}" Content="On Sale"/>
+              </StackPanel>
+
+              <StackPanel Style="{StaticResource FilterStackStyle}" Visibility="{Binding IsBundlesSelected, Converter={StaticResource BooleanToVisibilityConverter}}">
+                <units:RiotComboBox ItemsSource="{Binding BundleOptions}" SelectedItem="{Binding CurrentBundle, Mode=TwoWay}"/>
+                <units:RiotCheckBox Style="{StaticResource CheckBoxStyle}" Content="Limited Availability"/>
+              </StackPanel>
+            </StackPanel>
+          </Grid>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>

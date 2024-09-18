@@ -1,0 +1,239 @@
+- seq: 0
+  mapType: Summoner's Rift
+  gameMode: Solo Ranked/Duo
+  result: VICTORY
+  timestamp: 2023-09-25T19:42:00
+  duration: 31:24
+  date: 2023/09/25
+  goldEarned: 14231
+  creepScore: 231
+  kills: 8
+  deaths: 3
+  assists: 11
+  championLevel: 18
+  champion: Gangplank
+  summonerSpell1: Flash
+  summonerSpell2: Ignite
+  item1: Trinity Force
+  item2: Infinity Edge
+  item3: Plated Steelcaps
+  item4: Serpent's Fang
+  item5: Chempunk Chainsword
+  item6: Mortal Reminder
+  wardItem: Farsight Alteration
+
+- seq: 1
+  mapType: Summoner's Rift
+  gameMode: Solo Ranked/Duo
+  result: VICTORY
+  timestamp: 2023-09-24T22:15:00
+  duration: 28:47
+  date: 2023/09/24
+  goldEarned: 13452
+  creepScore: 187
+  kills: 5
+  deaths: 2
+  assists: 14
+  championLevel: 16
+  champion: Rumble
+  summonerSpell1: Flash
+  summonerSpell2: Ignite
+  item1: Liandry's Anguish
+  item2: Zhonya's Hourglass
+  item3: Sorcerer's Shoes
+  item4: Void Staff
+  item5: Morellonomicon
+  item6: Rabadon's Deathcap
+  wardItem: Oracle Lens
+
+- seq: 2
+  mapType: Summoner's Rift
+  gameMode: Solo Ranked/Duo
+  result: DEFEAT
+  timestamp: 2023-09-23T18:30:00
+  duration: 35:52
+  date: 2023/09/23
+  goldEarned: 15311
+  creepScore: 283
+  kills: 12
+  deaths: 7
+  assists: 9
+  championLevel: 18
+  champion: Riven
+  summonerSpell1: Flash
+  summonerSpell2: Ignite
+  item1: Goredrinker
+  item2: Black Cleaver
+  item3: Ionian Boots of Lucidity
+  item4: Death's Dance
+  item5: Guardian Angel
+  item6: Sterak's Gage
+  wardItem: Farsight Alteration
+
+- seq: 3
+  mapType: Summoner's Rift
+  gameMode: Solo Ranked/Duo
+  result: DEFEAT
+  timestamp: 2023-09-22T20:05:00
+  duration: 26:18
+  date: 2023/09/22
+  goldEarned: 10131
+  creepScore: 201
+  kills: 3
+  deaths: 8
+  assists: 6
+  championLevel: 15
+  champion: Malphite
+  summonerSpell1: Flash
+  summonerSpell2: Teleport
+  item1: Sunfire Aegis
+  item2: Thornmail
+  item3: Plated Steelcaps
+  item4: Frozen Heart
+  item5: Warmog's Armor
+  item6: Abyssal Mask
+  wardItem: Stealth Ward
+
+- seq: 4
+  mapType: Summoner's Rift
+  gameMode: Solo Ranked/Duo
+  result: VICTORY
+  timestamp: 2023-09-21T15:30:00
+  duration: 33:45
+  date: 2023/09/21
+  goldEarned: 16542
+  creepScore: 312
+  kills: 15
+  deaths: 4
+  assists: 7
+  championLevel: 18
+  champion: LeBlanc
+  summonerSpell1: Flash
+  summonerSpell2: Ignite
+  item1: Luden's Tempest
+  item2: Sorcerer's Shoes
+  item3: Zhonya's Hourglass
+  item4: Rabadon's Deathcap
+  item5: Void Staff
+  item6: Morellonomicon
+  wardItem: Oracle Lens
+
+- seq: 5
+  mapType: Summoner's Rift
+  gameMode: Solo Ranked/Duo
+  result: VICTORY
+  timestamp: 2023-09-20T12:10:00
+  duration: 29:56
+  date: 2023/09/20
+  goldEarned: 12785
+  creepScore: 223
+  kills: 6
+  deaths: 5
+  assists: 18
+  championLevel: 17
+  champion: Lissandra
+  summonerSpell1: Flash
+  summonerSpell2: Teleport
+  item1: Everfrost
+  item2: Zhonya's Hourglass
+  item3: Ionian Boots of Lucidity
+  item4: Cosmic Drive
+  item5: Void Staff
+  item6: Rabadon's Deathcap
+  wardItem: Farsight Alteration
+
+- seq: 6
+  mapType: Summoner's Rift
+  gameMode: Solo Ranked/Duo
+  result: DEFEAT
+  timestamp: 2023-09-19T23:05:00
+  duration: 40:12
+  date: 2023/09/19
+  goldEarned: 17823
+  creepScore: 342
+  kills: 11
+  deaths: 9
+  assists: 13
+  championLevel: 18
+  champion: Oriana
+  summonerSpell1: Flash
+  summonerSpell2: Barrier
+  item1: Liandry's Anguish
+  item2: Sorcerer's Shoes
+  item3: Zhonya's Hourglass
+  item4: Seraph's Embrace
+  item5: Void Staff
+  item6: Rabadon's Deathcap
+  wardItem: Farsight Alteration
+
+- seq: 7
+  mapType: Summoner's Rift
+  gameMode: Solo Ranked/Duo
+  result: VICTORY
+  timestamp: 2023-09-18T18:20:00
+  duration: 25:33
+  date: 2023/09/18
+  goldEarned: 11235
+  creepScore: 178
+  kills: 3
+  deaths: 2
+  assists: 22
+  championLevel: 14
+  champion: Lux
+  summonerSpell1: Flash
+  summonerSpell2: Barrier
+  item1: Luden's Tempest
+  item2: Ionian Boots of Lucidity
+  item3: Ardent Censer
+  item4: Chemtech Putrifier
+  item5: Watchful Wardstone
+  item6: Mejai's Soulstealer
+  wardItem: Oracle Lens
+
+- seq: 8
+  mapType: Summoner's Rift
+  gameMode: Solo Ranked/Duo
+  result: DEFEAT
+  timestamp: 2023-09-17T14:45:00
+  duration: 36:28
+  date: 2023/09/17
+  goldEarned: 14567
+  creepScore: 265
+  kills: 9
+  deaths: 8
+  assists: 10
+  championLevel: 17
+  champion: Gragas
+  summonerSpell1: Flash
+  summonerSpell2: Ignite
+  item1: Night Harvester
+  item2: Zhonya's Hourglass
+  item3: Sorcerer's Shoes
+  item4: Cosmic Drive
+  item5: Morellonomicon
+  item6: Void Staff
+  wardItem: Oracle Lens
+
+- seq: 9
+  mapType: Summoner's Rift
+  gameMode: Solo Ranked/Duo
+  result: VICTORY
+  timestamp: 2023-09-16T21:30:00
+  duration: 32:15
+  date: 2023/09/16
+  goldEarned: 15789
+  creepScore: 298
+  kills: 14
+  deaths: 6
+  assists: 8
+  championLevel: 18
+  champion: Leesin
+  summonerSpell1: Flash
+  summonerSpell2: Smite
+  item1: Goredrinker
+  item2: Plated Steelcaps
+  item3: Black Cleaver
+  item4: Death's Dance
+  item5: Guardian Angel
+  item6: Sterak's Gage
+  wardItem: Oracle Lens

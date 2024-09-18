@@ -1,0 +1,148 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cnvts="clr-namespace:Leagueoflegends.Support.Local.Converters"
+    xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units">
+
+  <cnvts:DiscountRateConverter x:Key="DiscountRateConverter"/>
+
+  <Geometry x:Key="OuterFrameIconData">M6.9158878,1 L68.225112,1 68.391426,1.6467668 C69.133224,4.0315618 71.015632,5.9138522 73.400581,6.6556005 L74.047996,6.8220577 74.047996,152.70395 73.400581,152.87041 C70.538642,153.7605 68.40036,156.29298 68.088325,159.36531 L68.087532,159.381 7.0534678,159.381 7.0526752,159.36531 C6.7146411,156.03696 4.2332926,153.34216 1.0104913,152.68272 L1,152.68112 1,6.8448715 1.0104889,6.8432712 C3.7374768,6.2852854 5.9335999,4.2700414 6.7495751,1.6467668 z</Geometry>
+  <Geometry x:Key="RightFrameIconData">M3.4696212,0.35 L3.9349995,0.35 3.9349995,79.949997 3.8786197,79.949997 0.35,76.421379 0.35,3.4696212 z</Geometry>
+  <Geometry x:Key="LeftFrameIconData">M0.35,0.35 L0.85725257,0.35 3.9349997,3.427747 3.9349997,76.437027 0.54256186,79.949997 0.35,79.949997 z</Geometry>
+  <Geometry x:Key="BottomFrameIconData">M2.9213299,0.25 L3.1259238,0.25 8.9433534,6.0674314 9.1017854,5.9089985 62.838726,5.9089985 62.981998,6.0522718 68.439552,0.59471366 70.75,2.9051568 70.75,37.22158 70.730758,37.224838 C70.078308,37.350441 69.425682,37.567036 68.79277,37.880043 66.683075,38.923408 65.291778,40.791103 64.906372,42.775887 L64.857383,43.066997 55.574337,43.066997 52.427646,39.920303 52.240955,40.106995 17.786884,40.106995 17.632,39.95211 14.517111,43.066997 5.7534181,43.066997 5.6943995,42.765633 C5.0781853,39.955585 2.9673817,37.86359 0.4836888,37.472092 L0.25,37.441879 0.25,2.9213276 z</Geometry>
+
+  <LinearGradientBrush x:Key="OuterFrameBorderBrush" StartPoint="0.5, 0" EndPoint="0.5, 1">
+    <GradientStop Color="#9B8246" Offset="0"/>
+    <GradientStop Color="#615138" Offset="0.5"/>
+    <GradientStop Color="#59462B" Offset="1"/>
+  </LinearGradientBrush>
+
+  <LinearGradientBrush x:Key="OuterFrameBorderHighlightBrush" StartPoint="0.5, 0" EndPoint="0.5, 1">
+    <GradientStop Color="#CEAC5A" Offset="0"/>
+    <GradientStop Color="#856F4C" Offset="0.5"/>
+    <GradientStop Color="#7D623C" Offset="1"/>
+  </LinearGradientBrush>
+
+  <LinearGradientBrush x:Key="InnerFrameBackgroundBrush" StartPoint="0.5, 0" EndPoint="0.5, 1">
+    <GradientStop Color="#070706" Offset="0"/>
+    <GradientStop Color="#0D0D0B" Offset="0.5"/>
+    <GradientStop Color="#171713" Offset="1"/>
+  </LinearGradientBrush>
+
+  <LinearGradientBrush x:Key="InnerFrameBorderBrush" StartPoint="0.5, 0" EndPoint="0.5, 1">
+    <GradientStop Color="#44403A" Offset="0"/>
+    <GradientStop Color="#7E774B" Offset="0.1"/>
+    <GradientStop Color="#4F4A38" Offset="0.85"/>
+    <GradientStop Color="#44403A" Offset="1"/>
+  </LinearGradientBrush>
+
+  <LinearGradientBrush x:Key="LeftFrameBorderBrush" StartPoint="0.5, 0" EndPoint="0.5, 1">
+    <GradientStop Color="#9E8664" Offset="0"/>
+    <GradientStop Color="#F4F4F3" Offset="0.2"/>
+    <GradientStop Color="#978060" Offset="0.5"/>
+    <GradientStop Color="#675842" Offset="0.8"/>
+    <GradientStop Color="#9E8664" Offset="1"/>
+  </LinearGradientBrush>
+
+  <LinearGradientBrush x:Key="RightFrameBorderBrush" StartPoint="0.5, 0" EndPoint="0.5, 1">
+    <GradientStop Color="#9E8664" Offset="0"/>
+    <GradientStop Color="#675842" Offset="0.2"/>
+    <GradientStop Color="#978060" Offset="0.5"/>
+    <GradientStop Color="#F4F4F3" Offset="0.65"/>
+    <GradientStop Color="#9E8664" Offset="0.8"/>
+  </LinearGradientBrush>
+
+  <Style x:Key="OuterFrameStyle" TargetType="Path">
+    <Setter Property="Data" Value="{StaticResource OuterFrameIconData}"/>
+    <Setter Property="Stroke" Value="{StaticResource OuterFrameBorderBrush}"/>
+    <Setter Property="StrokeThickness" Value="2"/>
+    <Setter Property="Stretch" Value="Uniform"/>
+    <Setter Property="Opacity" Value="0.8"/>
+  </Style>
+
+  <Style x:Key="BottomFrameStyle" TargetType="Path">
+    <Setter Property="Data" Value="{StaticResource BottomFrameIconData}"/>
+    <Setter Property="Fill" Value="{StaticResource InnerFrameBackgroundBrush}"/>
+    <Setter Property="Stroke" Value="{StaticResource InnerFrameBorderBrush}"/>
+    <Setter Property="StrokeThickness" Value="1"/>
+    <Setter Property="Stretch" Value="Uniform"/>
+    <Setter Property="Margin" Value="2,0,2,-1"/>
+    <Setter Property="VerticalAlignment" Value="Bottom"/>
+  </Style>
+
+  <Style x:Key="LeftFrameStyle" TargetType="Path">
+    <Setter Property="Data" Value="{StaticResource LeftFrameIconData}"/>
+    <Setter Property="Fill" Value="#070706"/>
+    <Setter Property="Stroke" Value="{StaticResource LeftFrameBorderBrush}"/>
+    <Setter Property="StrokeThickness" Value="1"/>
+    <Setter Property="Stretch" Value="Uniform"/>
+    <Setter Property="Width" Value="7"/>
+    <Setter Property="Margin" Value="1,0,0,2"/>
+    <Setter Property="HorizontalAlignment" Value="Left"/>
+    <Setter Property="VerticalAlignment" Value="Center"/>
+  </Style>
+
+  <Style x:Key="RightFrameStyle" TargetType="Path">
+    <Setter Property="Data" Value="{StaticResource RightFrameIconData}"/>
+    <Setter Property="Fill" Value="#070706"/>
+    <Setter Property="Stroke" Value="{StaticResource RightFrameBorderBrush}"/>
+    <Setter Property="StrokeThickness" Value="1"/>
+    <Setter Property="Stretch" Value="Uniform"/>
+    <Setter Property="Width" Value="7"/>
+    <Setter Property="Margin" Value="0,0,3,2"/>
+    <Setter Property="HorizontalAlignment" Value="Right"/>
+    <Setter Property="VerticalAlignment" Value="Center"/>
+  </Style>
+
+  <Style x:Key="TextStyle" TargetType="TextBlock">
+    <Setter Property="Margin" Value="0,0,0,15"/>
+    <Setter Property="FontSize" Value="24"/>
+    <Setter Property="FontWeight" Value="Bold"/>
+    <Setter Property="Text" Value="{Binding Discount, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource DiscountRateConverter}}"/>
+    <Setter Property="HorizontalAlignment" Value="Center"/>
+    <Setter Property="VerticalAlignment" Value="Bottom"/>
+    <Setter Property="Foreground" Value="#C89B3C"/>
+  </Style>
+
+  <Style TargetType="units:RiotSaleChampion">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="units:RiotSaleChampion">
+          <Grid Width="120" Height="250" Margin="20,0,25,0">
+            <VisualStateManager.VisualStateGroups>
+              <VisualStateGroup x:Name="CommonStates">
+                <VisualState x:Name="Normal"/>
+                <VisualState x:Name="PointerOver">
+                  <Storyboard>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="OuterFrame" Storyboard.TargetProperty="Stroke">
+                      <DiscreteObjectKeyFrame KeyTime="0"  Value="{StaticResource OuterFrameBorderHighlightBrush}"/>
+                    </ObjectAnimationUsingKeyFrames>
+                    <DoubleAnimation Storyboard.TargetName="OuterFrame" Storyboard.TargetProperty="Opacity" To="1" Duration="0"/>
+                  </Storyboard>
+                </VisualState>
+                <VisualState x:Name="Pressed">
+                  <Storyboard>
+                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="OuterFrame" Storyboard.TargetProperty="Stroke">
+                      <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource OuterFrameBorderHighlightBrush}"/>
+                    </ObjectAnimationUsingKeyFrames>
+                    <DoubleAnimation Storyboard.TargetName="OuterFrame" Storyboard.TargetProperty="Opacity" To="0.6" Duration="0"/>
+                  </Storyboard>
+                </VisualState>
+              </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+
+            <Path x:Name="OuterFrame" Style="{StaticResource OuterFrameStyle}">
+              <Path.Fill>
+                <ImageBrush ImageSource="{Binding ImageSource, RelativeSource={RelativeSource Mode=TemplatedParent}}" Stretch="UniformToFill" Opacity="0.8"/>
+              </Path.Fill>
+            </Path>
+            <Path Style="{StaticResource BottomFrameStyle}"/>
+            <Path Style="{StaticResource LeftFrameStyle}"/>
+            <Path Style="{StaticResource RightFrameStyle}"/>
+            <TextBlock Style="{StaticResource TextStyle}" Text="{Binding Discount, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource DiscountRateConverter}}"/>
+          </Grid>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>
