@@ -51,7 +51,7 @@ Through this project, we aim to showcase the powerful features of WPF while pres
 > The repository includes all framework source code.
 
 - [x] **Jamesnet.Core**: Cross-platform core library based on .NET Standard 2.0
-- [x] **Jamesnet.Window**: Window management and UI framework optimized for WPF
+- [x] **Jamesnet.Windows**: Window management and UI framework optimized for WPF
 
 These two libraries can be used identically in both WPF and Uno-Platform, and include all core functionalities necessary for the architectural design of large-scale projects.
 
