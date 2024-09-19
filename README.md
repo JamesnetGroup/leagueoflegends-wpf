@@ -1,16 +1,34 @@
-# League of Legends Client (WPF) [![English](https://img.shields.io/badge/docs-English-blue.svg)](README.md) [![中文](https://img.shields.io/badge/docs-中文-red.svg)](README.zh-CN.md) [![한국어](https://img.shields.io/badge/docs-한국어-green.svg)](README.ko.md) 
+# League of Legends Client (WPF)
 
-A high-fidelity recreation of the League of Legends client using WPF, showcasing advanced WPF techniques and the power of Jamesnet.Wpf
+[![English](https://img.shields.io/badge/docs-English-blue.svg)](README.md) [![中文](https://img.shields.io/badge/docs-中文-red.svg)](README.zh-CN.md) [![한국어](https://img.shields.io/badge/docs-한국어-green.svg)](README.ko.md)
+
+This is a high-quality reproduction project of the League of Legends client using WPF. The project includes various technical implementations of WPF and demonstrates a broad technical approach to the distributed design of large-scale projects.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![.NET](https://img.shields.io/badge/.NET-8.0-blue.svg)](https://dotnet.microsoft.com/download)
-[![Stars](https://img.shields.io/github/stars/jamesnet214/leagueoflegends.svg)](https://github.com/jamesnet214/leagueoflegends/stargazers)
-[![Forks](https://img.shields.io/github/forks/jamesnet214/leagueoflegends.svg)](https://github.com/jamesnet214/leagueoflegends/network/members)
-[![Issues](https://img.shields.io/github/issues/jamesnet214/leagueoflegends.svg)](https://github.com/jamesnet214/leagueoflegends/issues)
+[![Stars](https://img.shields.io/github/stars/jamesnetgroup/leagueoflegends-wpf.svg)](https://github.com/jamesnetgroup/leagueoflegends-wpf/stargazers)
+[![Forks](https://img.shields.io/github/forks/jamesnetgroup/leagueoflegends-wpf.svg)](https://github.com/jamesnetgroup/leagueoflegends-wpf/network/members)
+[![Issues](https://img.shields.io/github/issues/jamesnetgroup/leagueoflegends-wpf.svg)](https://github.com/jamesnetgroup/leagueoflegends-wpf/issues)
 
-## Project Overview
+#### League of Legends XAML-Based Series:
+[League of Legends Client (WPF)](https://github.com/jamesnetgroup/leagueoflegends-wpf)  
+[League of Legends Client (Uno-Platform)](https://github.com/jamesnetgroup/leagueoflegends-uno)
 
-This project is a faithful reproduction of the League of Legends client interface using WPF technology. It demonstrates the capabilities of WPF and the Jamesnet.Wpf framework in creating complex, high-performance user interfaces identical to modern game clients.
+## Project Introduction
+
+We have been researching and gaining experience with WPF technology since 2008. Over the years, various XAML-based cross-platform technologies such as Xamarin, MAUI, Uno-Platform, AvaloniaUI, and OpenSilver have evolved, opening up possibilities to extend the techniques accumulated in WPF to cross-platform development.
+
+This League of Legends WPF version we are releasing is built on the foundation of XAML-based rich UX, C#'s object-oriented design, and a systematic project structure. It maximizes the powerful features of WPF while considering the potential for future expansion to other XAML-based platforms.
+
+This project demonstrates how to implement large-scale projects in WPF. By implementing complex controls as CustomControls, we aim to provide developers with rich learning materials. It also includes various technical implementation cases of WPF, showing how to utilize WPF's powerful features in real projects.
+
+In particular, this project presents a broad approach to the distributed design of large-scale applications. It shows how to structure and manage complex applications through modularized structures, efficient state management, and scalable architecture.
+
+The Jamesnet.Core framework library is designed based on .NET Standard 2.0 to work identically in WPF and Uno. This library is provided as Jamesnet.Window for WPF and Jamesnet.Uno for Uno-Platform.
+
+This project directly references the actual source code of Jamesnet.Core and Jamesnet.Window, allowing you to learn about the design methods of XAML-based frameworks.
+
+Through this project, we aim to showcase the powerful features of WPF while presenting the possibility of expansion to various XAML-based platforms such as Uno-Platform, MAUI, AvaloniaUI, OpenSilver, and WinUI3 in the future, opening new horizons for cross-platform development.
 
 <img src="https://github.com/user-attachments/assets/3bc0d881-577e-4aa2-8802-698169d701a5" width="49%"/>
 <img src="https://github.com/user-attachments/assets/d3b13869-d0f8-457d-90d9-5a637c500b4a" width="49%"/>
@@ -29,33 +47,53 @@ This project is a faithful reproduction of the League of Legends client interfac
 <img src="https://github.com/user-attachments/assets/642ccf0d-f2df-4adc-bb87-b1246cbda0b7" width="49%"/>
 <img src="https://github.com/user-attachments/assets/bece2bfd-1bb9-436e-b928-929d3706398c" width="49%"/>
 
+## Core Technology Stack
+> The repository includes all framework source code.
+
+- [x] **Jamesnet.Core**: Cross-platform core library based on .NET Standard 2.0
+- [x] **Jamesnet.Window**: Window management and UI framework optimized for WPF
+
+These two libraries can be used identically in both WPF and Uno-Platform, and include all core functionalities necessary for the architectural design of large-scale projects.
+
 ## Key Features and Implementations
-#### 1. Advanced WPF Techniques
-- [x] Utilization of Jamesnet.Wpf for enhanced WPF development
-- [x] Implementation of dependency injection for flexible and maintainable code
-- [x] Project modularization and distribution for improved scalability
 
-#### 2. MVVM Architecture
-- [x] Use of CommunityToolkit.Mvvm for code generation and MVVM pattern implementation
-- [x] Clear separation of concerns between View and ViewModel
+1. **Large-scale Project Architecture**
+   - [x] Modular and distributed system design
+   - [x] Loose coupling through dependency injection
+   - [x] Plugin-based extensible structure
 
-#### 3. Custom Controls
-- [x] Development of custom WPF controls to match League of Legends UI components
-- [x] Extensive use of ControlTemplates for unique visual designs
+2. **Advanced WPF Techniques**
+   - [x] Implementation of various CustomControls
+   - [x] Complex state management using VisualStateManager
+   - [x] Data virtualization and UI virtualization techniques
 
-#### 4. Complex UI Design
-- [x] Implementation of intricate design elements using Geometry Path
-- [x] Pixel-perfect recreation of the League of Legends client interface
+3. **Performance Optimization**
+   - [x] Efficient resource management and memory usage
+   - [x] Application of asynchronous programming patterns
+   - [x] Rendering optimization techniques
 
-#### 5. Performance Optimization
-- [x] Efficient rendering and resource management for smooth UI interactions
-- [x] Optimized data binding and UI virtualization techniques
+4. **UI/UX Design**
+   - [x] Implementation of complex graphics using Geometry Path
+   - [x] Custom animations and transition effects
+   - [x] Dynamic theme system
+
+5. **Framework Design**
+   - [x] Event-based communication system
+   - [x] Implementation of state management patterns
+   - [x] Extensible navigation system
+
+This project comprehensively showcases advanced design patterns and techniques based on Jamesnet.Core and Jamesnet.Window while maximizing the powerful features of WPF. By providing real-world application cases of various technologies and patterns necessary for large-scale application development, it will serve as rich learning material for WPF developers.
+
+We hope this project will inspire WPF developers and serve as a best practice for large-scale desktop application development. Furthermore, we expect that through this project, we can explore code sharing strategies between WPF and [Uno-Platform](https://github.com/jamesnetgroup/leagueoflegends-uno) and new possibilities in cross-platform development.
+
+> We are planning versions for new platforms such as MAUI, WinUI 3, AvaloniaUI, and OpenSilver in the future.
 
 ## Technology Stack
 - .NET 8.0
 - WPF (Windows Presentation Foundation)
-- Jamesnet.Wpf
-- CommunityToolkit.Mvvm
+- Jamesnet.Core
+- Jamesnet.Windows
+- Jamesnet.Uno
 
 ## Getting Started
 ### Prerequisites
