@@ -1,0 +1,13 @@
+﻿<ResourceDictionary
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ResourceDictionary.MergedDictionaries>
+    <ResourceDictionary Source="/Leagueoflegends.Settings;component/Themes/Views/ChatContent.xaml"/>
+    <ResourceDictionary Source="/Leagueoflegends.Settings;component/Themes/Views/GeneralContent.xaml"/>
+    <ResourceDictionary Source="/Leagueoflegends.Settings;component/Themes/Views/HotKeyContent.xaml"/>
+    <ResourceDictionary Source="/Leagueoflegends.Settings;component/Themes/Views/NoticeContent.xaml"/>
+    <ResourceDictionary Source="/Leagueoflegends.Settings;component/Themes/Views/SoundContent.xaml"/>
+    <ResourceDictionary Source="/Leagueoflegends.Settings;component/Themes/Views/VoiceContent.xaml"/>
+    <ResourceDictionary Source="/Leagueoflegends.Settings;component/Themes/Views/VolumeContent.xaml"/>
+  </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

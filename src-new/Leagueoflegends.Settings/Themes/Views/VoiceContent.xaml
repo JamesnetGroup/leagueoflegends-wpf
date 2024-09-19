@@ -1,0 +1,92 @@
+﻿<ResourceDictionary
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:cnvts="clr-namespace:Leagueoflegends.Settings.Local.Converters"
+  xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units;assembly=Leagueoflegends.Support"
+  xmlns:views="clr-namespace:Leagueoflegends.Store.UI.Views">
+
+    <cnvts:InputModeToVisibilityConverter x:Key="InputModeToVisibilityConverter"/>
+
+    <Style x:Key="CheckStyle" TargetType="units:RiotCheckBox">
+        <Setter Property="Margin" Value="0 0 0 4"/>
+    </Style>
+
+    <Style x:Key="SliderStyle" TargetType="units:RiotSlider">
+        <Setter Property="Margin" Value="0 10 0 4"/>
+    </Style>
+
+    <Style x:Key="ComboStyle" TargetType="units:RiotComboBox">
+        <Setter Property="Margin" Value="0 4 0 4"/>
+        <Setter Property="Width" Value="280"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+    </Style>
+
+    <Style x:Key="FirstHeaderTextStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="13"/>
+        <Setter Property="FontWeight" Value="Normal"/>
+        <Setter Property="Foreground" Value="#FFFFFF"/>
+        <Setter Property="Margin" Value="0 6 0 6"/>
+    </Style>
+
+    <Style x:Key="HeaderTextStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="FontWeight" Value="Normal"/>
+        <Setter Property="Foreground" Value="#FFFFFF"/>
+        <Setter Property="Margin" Value="0 14 0 6"/>
+    </Style>
+
+    <Style x:Key="InfoTextStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Foreground" Value="#A09B8C"/>
+    </Style>
+
+    <Style x:Key="MainStackPanelStyle" TargetType="StackPanel">
+        <Setter Property="Margin" Value="0 0 30 0"/>
+    </Style>
+
+    <Style TargetType="views:VoiceContent">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="views:VoiceContent">
+                    <StackPanel Style="{StaticResource MainStackPanelStyle}">
+                        <TextBlock Style="{StaticResource FirstHeaderTextStyle}" Text="WHEN I JOIN A PARTY"/>
+                        <units:RiotCheckBox Style="{StaticResource CheckStyle}" Content="Automatically join voice chat."/>
+                        <units:RiotCheckBox Style="{StaticResource CheckStyle}" Content="Play a sound when connecting to voice chat."/>
+                        <TextBlock Style="{StaticResource HeaderTextStyle}" Text="INPUT SETTINGS"/>
+                        <TextBlock Style="{StaticResource InfoTextStyle}" Text="Input Device"/>
+                        <units:RiotComboBox Style="{StaticResource ComboStyle}" ItemsSource="{Binding Inputs}" SelectedItem="{Binding CurrentInput}"/>
+                        <TextBlock Style="{StaticResource InfoTextStyle}" Margin="0 20 0 0">
+                            <Run Text="Input volume:"/>
+                            <Run Text="{Binding ElementName=InputVolumeSlider, Path=Value, Mode=OneWay}"/>
+                        </TextBlock>
+                        <units:RiotSlider x:Name="InputVolumeSlider" Style="{StaticResource SliderStyle}" IsEnabled="{Binding ElementName=MainSoundCheckBox, Path=IsChecked}"/>
+                        <TextBlock Style="{StaticResource HeaderTextStyle}" Text="INPUT MODE"/>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel>
+                                <units:RiotDiamondRadioButton Content="Voice Activity" Command="{Binding ChangeInputModeCommand}" CommandParameter="VoiceActivity" IsChecked="True"/>
+                                <units:RiotDiamondRadioButton Content="Push to Talk" Command="{Binding ChangeInputModeCommand}" CommandParameter="PushToTalk"/>
+                            </StackPanel>
+                            <Grid Grid.Column="1" Margin="5 -20 0 0">
+                                <StackPanel Visibility="{Binding SelectedInputMode, Converter={StaticResource InputModeToVisibilityConverter}, ConverterParameter=VoiceActivity}">
+                                    <TextBlock Style="{StaticResource InfoTextStyle}" Margin="20 0 0 0">
+                                        <Run Text="Voice Activation Threshold:"/>
+                                        <Run Text="{Binding ElementName=VoiceVolumeSlider, Path=Value, Mode=OneWay}"/>
+                                    </TextBlock>
+                                    <units:RiotSlider x:Name="VoiceVolumeSlider" Style="{StaticResource SliderStyle}" Margin="20 10 0 0"/>
+                                </StackPanel>
+                                <StackPanel Visibility="{Binding SelectedInputMode, Converter={StaticResource InputModeToVisibilityConverter}, ConverterParameter=PushToTalk}">
+                                    <TextBlock Style="{StaticResource InfoTextStyle}" Text="Push to Talk Key" HorizontalAlignment="Center"/>
+                                    <units:RiotKeyButton Content="S" IconType="Mic"/>
+                                </StackPanel>
+                            </Grid>
+                        </Grid>
+                    </StackPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

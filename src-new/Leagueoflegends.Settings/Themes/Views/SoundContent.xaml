@@ -1,0 +1,73 @@
+﻿<ResourceDictionary
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units;assembly=Leagueoflegends.Support"
+  xmlns:views="clr-namespace:Leagueoflegends.Store.UI.Views">
+
+  <Style x:Key="CheckStyle" TargetType="units:RiotCheckBox">
+    <Setter Property="Margin" Value="0 4 0 4"/>
+  </Style>
+
+  <Style x:Key="SliderStyle" TargetType="units:RiotSlider">
+    <Setter Property="Margin" Value="0 4 0 4"/>
+  </Style>
+
+  <Style x:Key="InfoTextStyle" TargetType="TextBlock">
+    <Setter Property="FontSize" Value="12"/>
+    <Setter Property="Foreground" Value="#A09B8C"/>
+  </Style>
+
+  <Style x:Key="MainStackPanelStyle" TargetType="units:RiotVerticalStackPanel">
+    <Setter Property="Margin" Value="0 0 30 0"/>
+  </Style>
+
+  <Style x:Key="SoundEffectsStackPanelStyle" TargetType="units:RiotVerticalStackPanel">
+    <Setter Property="Margin" Value="15 15 0 15"/>
+  </Style>
+
+  <Style x:Key="MusicStackPanelStyle" TargetType="units:RiotVerticalStackPanel">
+    <Setter Property="Margin" Value="15 0 0 15"/>
+  </Style>
+
+  <Style TargetType="views:SoundContent">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="views:SoundContent">
+          <units:RiotVerticalStackPanel Style="{StaticResource MainStackPanelStyle}">
+            <units:RiotCheckBox x:Name="MainSoundCheckBox" Style="{StaticResource CheckStyle}" Content="Turn on sound"/>
+            <TextBlock Style="{StaticResource InfoTextStyle}">
+              <Run Text="Master volume:"/>
+              <Run Text="{Binding ElementName=MasterVolumeSlider, Path=Value, Mode=OneWay}"/>
+            </TextBlock>
+            <units:RiotSlider Style="{StaticResource SliderStyle}" x:Name="MasterVolumeSlider" IsEnabled="{Binding ElementName=MainSoundCheckBox, Path=IsChecked}"/>
+
+            <units:RiotVerticalStackPanel x:Name="SoundEffectsPanel" Style="{StaticResource SoundEffectsStackPanelStyle}" IsEnabled="{Binding ElementName=MainSoundCheckBox, Path=IsChecked}">
+              <units:RiotCheckBox x:Name="SoundEffectsCheckBox" Style="{StaticResource CheckStyle}" Content="Turn on sound effects"/>
+              <TextBlock Style="{StaticResource InfoTextStyle}">
+                <Run Text="Sound effects volume:"/>
+                <Run Text="{Binding ElementName=SoundEffectsVolumeSlider, Path=Value, Mode=OneWay}"/>
+              </TextBlock>
+              <units:RiotSlider Style="{StaticResource SliderStyle}" x:Name="SoundEffectsVolumeSlider" IsEnabled="{Binding ElementName=SoundEffectsCheckBox, Path=IsChecked}"/>
+              <units:RiotCheckBox Style="{StaticResource CheckStyle}" Content="Listen to ambient sound effects" IsEnabled="{Binding ElementName=SoundEffectsCheckBox, Path=IsChecked}"/>
+              <units:RiotCheckBox Style="{StaticResource CheckStyle}" Content="Listen to champion select voice" IsEnabled="{Binding ElementName=SoundEffectsCheckBox, Path=IsChecked}"/>
+              <units:RiotCheckBox Style="{StaticResource CheckStyle}" Content="Listen to champion ban voice" IsEnabled="{Binding ElementName=SoundEffectsCheckBox, Path=IsChecked}"/>
+              <units:RiotCheckBox Style="{StaticResource CheckStyle}" Content="Turn on music" IsEnabled="{Binding ElementName=SoundEffectsCheckBox, Path=IsChecked}"/>
+            </units:RiotVerticalStackPanel>
+
+            <units:RiotVerticalStackPanel x:Name="MusicPanel" Style="{StaticResource MusicStackPanelStyle}" IsEnabled="{Binding ElementName=MainSoundCheckBox, Path=IsChecked}">
+              <units:RiotCheckBox x:Name="MusicCheckBox" Style="{StaticResource CheckStyle}" Content="Turn on music"/>
+              <TextBlock Style="{StaticResource InfoTextStyle}">
+                <Run Text="Music volume:"/>
+                <Run Text="{Binding ElementName=MusicVolumeSlider, Path=Value, Mode=OneWay}"/>
+              </TextBlock>
+              <units:RiotSlider Style="{StaticResource SliderStyle}" x:Name="MusicVolumeSlider" IsEnabled="{Binding ElementName=MusicCheckBox, Path=IsChecked}"/>
+              <units:RiotCheckBox Style="{StaticResource CheckStyle}" Content="Turn on champion select music" IsEnabled="{Binding ElementName=MusicCheckBox, Path=IsChecked}"/>
+              <units:RiotCheckBox Style="{StaticResource CheckStyle}" Content="Turn on lobby/end-of-game screen music" IsEnabled="{Binding ElementName=MusicCheckBox, Path=IsChecked}"/>
+              <units:RiotCheckBox Style="{StaticResource CheckStyle}" Content="Turn on login music" IsEnabled="{Binding ElementName=MusicCheckBox, Path=IsChecked}"/>
+            </units:RiotVerticalStackPanel>
+          </units:RiotVerticalStackPanel>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>

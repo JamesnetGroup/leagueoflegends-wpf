@@ -3,113 +3,137 @@
   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
   xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units">
 
-  <Geometry x:Key="StarData">M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z</Geometry>
-  <Geometry x:Key="OuterPolygonData">0,5 5,0 80,0 80,15 75,20 0,20 0,5</Geometry>
-  <Geometry x:Key="InnerPolygonData">0,3 3,0 75,0 75,12 72,15 0,15, 0,3</Geometry>
-  
-  <Style x:Key="OuterViewboxStyle" TargetType="Viewbox">
-    <Setter Property="Stretch" Value="Uniform"/>
-    <Setter Property="Width" Value="96"/>
-  </Style>
+    <Geometry x:Key="StarData">M12,17.27L18.18,21L16.54,13.97L22,9.24L14.81,8.62L12,2L9.19,8.62L2,9.24L7.45,13.97L5.82,21L12,17.27Z</Geometry>
+    <PointCollection x:Key="OuterPolygonData">0,5 5,0 80,0 80,15 75,20 0,20 0,5</PointCollection>
+    <PointCollection x:Key="InnerPolygonData">0,3 3,0 75,0 75,12 72,15 0,15, 0,3</PointCollection>
 
-  <Style x:Key="InnerGridStyle" TargetType="Grid"/>
+    <Style x:Key="OuterViewboxStyle" TargetType="Viewbox">
+        <Setter Property="Stretch" Value="Uniform"/>
+        <Setter Property="Width" Value="96"/>
+    </Style>
 
-  <Style x:Key="OuterPolygonStyle" TargetType="Polygon">
-    <Setter Property="Fill" Value="#C89B3C"/>
-    <Setter Property="StrokeThickness" Value="0"/>
-    <Setter Property="Width" Value="80"/>
-    <Setter Property="VerticalAlignment" Value="Center"/>
-    <Setter Property="HorizontalAlignment" Value="Center"/>
-    <Setter Property="Stretch" Value="Uniform"/>
-  </Style>
+    <Style x:Key="InnerGridStyle" TargetType="Grid"/>
 
-  <Style x:Key="InnerPolygonStyle" TargetType="Polygon">
-    <Setter Property="Stroke" Value="#AA000000"/>
-    <Setter Property="StrokeThickness" Value="1"/>
-    <Setter Property="Width" Value="77"/>
-    <Setter Property="VerticalAlignment" Value="Center"/>
-    <Setter Property="HorizontalAlignment" Value="Center"/>
-    <Setter Property="Stretch" Value="Uniform"/>
-  </Style>
+    <Style x:Key="OuterPolygonStyle" TargetType="Polygon">
+        <Setter Property="Fill" Value="#C89B3C"/>
+        <Setter Property="StrokeThickness" Value="0"/>
+        <Setter Property="Width" Value="80"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Stretch" Value="Uniform"/>
+    </Style>
 
-  <Style x:Key="ContentGridStyle" TargetType="Grid">
-    <Setter Property="HorizontalAlignment" Value="Center"/>
-    <Setter Property="VerticalAlignment" Value="Center"/>
-  </Style>
+    <Style x:Key="InnerPolygonStyle" TargetType="Polygon">
+        <Setter Property="Stroke" Value="#AA000000"/>
+        <Setter Property="StrokeThickness" Value="1"/>
+        <Setter Property="Width" Value="77"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Stretch" Value="Uniform"/>
+    </Style>
 
-  <Style x:Key="StarIconStyle" TargetType="Path">
-    <Setter Property="Data" Value="{StaticResource StarData}"/>
-    <Setter Property="Stretch" Value="Uniform"/>
-    <Setter Property="Width" Value="12"/>
-    <Setter Property="Fill" Value="#DD000000"/>
-  </Style>
+    <Style x:Key="ContentGridStyle" TargetType="Grid">
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
 
-  <Style x:Key="ButtonTextStyle" TargetType="TextBlock">
-    <Setter Property="Grid.Column" Value="1"/>
-    <Setter Property="VerticalAlignment" Value="Center"/>
-    <Setter Property="FontSize" Value="11"/>
-    <Setter Property="Foreground" Value="#DD000000"/>
-    <Setter Property="FontWeight" Value="Bold"/>
-    <Setter Property="TextAlignment" Value="Center"/>
-    <Setter Property="Margin" Value="3,0,0,0"/>
-  </Style>
+    <Style x:Key="StarIconStyle" TargetType="Path">
+        <Setter Property="Data" Value="{StaticResource StarData}"/>
+        <Setter Property="Stretch" Value="Uniform"/>
+        <Setter Property="Width" Value="12"/>
+        <Setter Property="Fill" Value="#DD000000"/>
+    </Style>
 
-  <Style TargetType="units:RiotPremiumButton">
-    <Setter Property="Margin" Value="0 10 0 0"/>
-    <Setter Property="HorizontalAlignment" Value="Left"/>
-    <Setter Property="VerticalAlignment" Value="Center"/>
-    <Setter Property="Template">
-      <Setter.Value>
-        <ControlTemplate TargetType="units:RiotPremiumButton">
-          <Grid x:Name="RootGrid">
-            <VisualStateManager.VisualStateGroups>
-              <VisualStateGroup x:Name="CommonStates">
-                <VisualState x:Name="Normal"/>
-                <VisualState x:Name="PointerOver">
-                  <Storyboard>
-                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="OuterPolygon" Storyboard.TargetProperty="Fill">
-                      <DiscreteObjectKeyFrame KeyTime="0" Value="#D6AB4D"/>
-                    </ObjectAnimationUsingKeyFrames>
-                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="StarIcon" Storyboard.TargetProperty="Fill">
-                      <DiscreteObjectKeyFrame KeyTime="0" Value="#000000"/>
-                    </ObjectAnimationUsingKeyFrames>
-                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ButtonText" Storyboard.TargetProperty="Foreground">
-                      <DiscreteObjectKeyFrame KeyTime="0" Value="#000000"/>
-                    </ObjectAnimationUsingKeyFrames>
-                  </Storyboard>
-                </VisualState>
-                <VisualState x:Name="Pressed">
-                  <Storyboard>
-                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="OuterPolygon" Storyboard.TargetProperty="Fill">
-                      <DiscreteObjectKeyFrame KeyTime="0" Value="#AA8432"/>
-                    </ObjectAnimationUsingKeyFrames>
-                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="StarIcon" Storyboard.TargetProperty="Fill">
-                      <DiscreteObjectKeyFrame KeyTime="0" Value="#1A1A1A"/>
-                    </ObjectAnimationUsingKeyFrames>
-                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ButtonText" Storyboard.TargetProperty="Foreground">
-                      <DiscreteObjectKeyFrame KeyTime="0" Value="#1A1A1A"/>
-                    </ObjectAnimationUsingKeyFrames>
-                  </Storyboard>
-                </VisualState>
-              </VisualStateGroup>
-            </VisualStateManager.VisualStateGroups>
-            <Viewbox Style="{StaticResource OuterViewboxStyle}">
-              <Grid Style="{StaticResource InnerGridStyle}">
-                <Polygon x:Name="OuterPolygon" Style="{StaticResource OuterPolygonStyle}" Points="{StaticResource OuterPolygonData}"/>
-                <Polygon x:Name="InnerPolygon" Style="{StaticResource InnerPolygonStyle}" Points="{StaticResource InnerPolygonData}"/>
-              </Grid>
-            </Viewbox>
-            <Grid Style="{StaticResource ContentGridStyle}">
-              <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="Auto"/>
-                <ColumnDefinition Width="Auto"/>
-              </Grid.ColumnDefinitions>
-              <Path x:Name="StarIcon" Style="{StaticResource StarIconStyle}"/>
-              <TextBlock x:Name="ButtonText" Style="{StaticResource ButtonTextStyle}" Text="{TemplateBinding Content}"/>
-            </Grid>
-          </Grid>
-        </ControlTemplate>
-      </Setter.Value>
-    </Setter>
-  </Style>
+    <Style x:Key="ButtonTextStyle" TargetType="TextBlock">
+        <Setter Property="Grid.Column" Value="1"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="FontSize" Value="11"/>
+        <Setter Property="Foreground" Value="#DD000000"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="3,0,0,0"/>
+    </Style>
+
+    <Style TargetType="units:RiotPremiumButton">
+        <Setter Property="Margin" Value="0 10 0 0"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="units:RiotPremiumButton">
+                    <Grid x:Name="RootGrid">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal"/>
+                                <VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="OuterPolygon" Storyboard.TargetProperty="Fill">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <SolidColorBrush>#D6AB4D</SolidColorBrush>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="StarIcon" Storyboard.TargetProperty="Fill">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <SolidColorBrush>#000000</SolidColorBrush>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ButtonText" Storyboard.TargetProperty="Foreground">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <SolidColorBrush>#000000</SolidColorBrush>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="OuterPolygon" Storyboard.TargetProperty="Fill">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <SolidColorBrush>#AA8432</SolidColorBrush>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="StarIcon" Storyboard.TargetProperty="Fill">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <SolidColorBrush>#1A1A1A</SolidColorBrush>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ButtonText" Storyboard.TargetProperty="Foreground">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <SolidColorBrush>#1A1A1A</SolidColorBrush>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Viewbox Style="{StaticResource OuterViewboxStyle}">
+                            <Grid Style="{StaticResource InnerGridStyle}">
+                                <Polygon x:Name="OuterPolygon" Style="{StaticResource OuterPolygonStyle}" Points="{StaticResource OuterPolygonData}"/>
+                                <Polygon x:Name="InnerPolygon" Style="{StaticResource InnerPolygonStyle}" Points="{StaticResource InnerPolygonData}"/>
+                            </Grid>
+                        </Viewbox>
+                        <Grid Style="{StaticResource ContentGridStyle}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <Path x:Name="StarIcon" Style="{StaticResource StarIconStyle}"/>
+                            <TextBlock x:Name="ButtonText" Style="{StaticResource ButtonTextStyle}" Text="{TemplateBinding Content}"/>
+                        </Grid>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>

@@ -14,14 +14,12 @@
                                 <VisualState x:Name="Normal"/>
                                 <VisualState x:Name="MouseOver">
                                     <Storyboard>
-                                        <ColorAnimation Storyboard.TargetName="ContentPresenter" 
-                                                        Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
-                                                        To="#CDFAFA" Duration="0"/>
+                                        <ColorAnimation Storyboard.TargetName="ContentPresenter" Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)" To="#CDFAFA" Duration="0:0:0.2"/>
                                     </Storyboard>
                                 </VisualState>
                             </VisualStateGroup>
                         </VisualStateManager.VisualStateGroups>
-                        <TextBlock x:Name="ContentPresenter" Text="{TemplateBinding Content}"/>
+                        <TextBlock x:Name="ContentPresenter" Foreground="{TemplateBinding Foreground}" Text="{TemplateBinding Content}"/>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>

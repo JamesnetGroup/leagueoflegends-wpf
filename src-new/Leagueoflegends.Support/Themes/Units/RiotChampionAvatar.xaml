@@ -38,7 +38,7 @@
             <VisualStateManager.VisualStateGroups>
               <VisualStateGroup x:Name="CommonStates">
                 <VisualState x:Name="Normal"/>
-                <VisualState x:Name="PointerOver">
+                <VisualState x:Name="MouseOver">
                   <Storyboard>
                     <ColorAnimation Storyboard.TargetName="AvatarEllipse" Storyboard.TargetProperty="(Stroke).(SolidColorBrush.Color)" To="#F0E6D2" Duration="0:0:0.2"/>
                     <ColorAnimation Storyboard.TargetName="LevelBorder" Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" To="#F0E6D2" Duration="0:0:0.2"/>

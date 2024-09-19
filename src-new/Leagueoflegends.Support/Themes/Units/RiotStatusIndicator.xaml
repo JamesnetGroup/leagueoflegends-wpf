@@ -15,7 +15,7 @@
     <Setter Property="Height" Value="16"/>
   </Style>
 
-  <Style x:Key="StatusTextStyle" TargetType="TextBlock">
+  <Style x:Key="StatusTextStyle" TargetType="Label">
     <Setter Property="Grid.Column" Value="1"/>
     <Setter Property="FontSize" Value="14"/>
     <Setter Property="Padding" Value="8 2 2 2"/>
@@ -34,7 +34,7 @@
               <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <Image Style="{StaticResource StatusIconStyle}" Source="{Binding IconType, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource IconTypeToStatusIndicatorConverter}}"/>
-            <TextBlock Style="{StaticResource StatusTextStyle}" Text="{TemplateBinding Value}"/>
+            <Label Style="{StaticResource StatusTextStyle}" Content="{TemplateBinding Value}"/>
           </Grid>
         </ControlTemplate>
       </Setter.Value>

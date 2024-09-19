@@ -8,7 +8,7 @@ public class RiotStoreChampListBoxItem : ListBoxItem
 {
     public static readonly DependencyProperty IsLockedProperty =
         DependencyProperty.Register(nameof(IsLocked), typeof(bool), typeof(RiotStoreChampListBoxItem),
-            new PropertyMetadata(null, OnIsLockedChanged));
+            new PropertyMetadata(false, OnIsLockedChanged));
 
     public bool IsLocked
     {
@@ -40,14 +40,4 @@ public class RiotStoreChampListBoxItem : ListBoxItem
         string stateName = (bool)IsLocked ? "Locked" : "Unlocked";
         VisualStateManager.GoToState(this, stateName, useTransitions);
     }
-
-    //protected override void OnDataContextChanged()
-    //{
-    //    base.OnDataContextChanged();
-
-    //    if (DataContext is StoreChamp viewModel)
-    //    {
-    //        IsLocked = viewModel.IsLocked;
-    //    }
-    //}
 }

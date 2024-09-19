@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:james="clr-namespace:Jamesnet.Windows;assembly=Jamesnet.Windows"
         mc:Ignorable="d"
+        Background="#000000"
         Title="MainWindow">
     <Grid>
         <james:WPFLayer LayerName="MainLayer"/>

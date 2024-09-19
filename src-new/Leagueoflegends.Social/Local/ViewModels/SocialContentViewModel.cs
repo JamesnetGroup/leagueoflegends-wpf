@@ -3,9 +3,9 @@ using Leagueoflegends.Support.Local.Datas;
 using Leagueoflegends.Support.Local.Models;
 namespace Leagueoflegends.Social.Local.ViewModels;
 
-public class SocialContentViewModel : ViewModelBase, IViewLoadable
+public class SocialContentViewModel : ViewModelBase
 {
-    private readonly IFriendDataLoader _friendsLoader;
+    private readonly IFriendDataLoader _friendsData;
     private List<FriendCategory> _friends;
 
     public List<FriendCategory> Friends
@@ -14,18 +14,14 @@ public class SocialContentViewModel : ViewModelBase, IViewLoadable
         set => SetProperty(ref _friends, value);
     }
 
-    public SocialContentViewModel(IFriendDataLoader friendsLoader)
+    public SocialContentViewModel(IFriendDataLoader friendsData)
     {
-        _friendsLoader = friendsLoader;
+        _friendsData = friendsData;
         LoadFriends();
-    }
-
-    public void Loaded()
-    {
     }
 
     private void LoadFriends()
     {
-        Friends = _friendsLoader.LoadFriends();
+        Friends = _friendsData.LoadFriends();
     }
 }

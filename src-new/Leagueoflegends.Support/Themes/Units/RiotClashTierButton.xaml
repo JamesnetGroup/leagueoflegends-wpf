@@ -28,23 +28,39 @@
                         <VisualStateManager.VisualStateGroups>
                             <VisualStateGroup x:Name="CommonStates">
                                 <VisualState x:Name="Normal" />
-                                <VisualState x:Name="PointerOver">
+                                <VisualState x:Name="MouseOver">
                                     <Storyboard>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ButtonBorder" Storyboard.TargetProperty="(Border.Background)">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#B8B4A3" />
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <SolidColorBrush>#B8B4A3</SolidColorBrush>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
                                         </ObjectAnimationUsingKeyFrames>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentText" Storyboard.TargetProperty="(TextBlock.Foreground)">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#1E2328" />
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <SolidColorBrush>#1E2328</SolidColorBrush>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
                                         </ObjectAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
                                 <VisualState x:Name="Pressed">
                                     <Storyboard>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ButtonBorder" Storyboard.TargetProperty="(Border.Background)">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#8E8775" />
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <SolidColorBrush>#8E8775</SolidColorBrush>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
                                         </ObjectAnimationUsingKeyFrames>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentText" Storyboard.TargetProperty="(TextBlock.Foreground)">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#1E2328" />
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <SolidColorBrush>#1E2328</SolidColorBrush>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
                                         </ObjectAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>

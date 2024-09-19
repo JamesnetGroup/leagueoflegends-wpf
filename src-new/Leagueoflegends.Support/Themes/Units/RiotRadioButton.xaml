@@ -80,23 +80,6 @@
                                         </Storyboard>
                                     </VisualState>
                                 </VisualStateGroup>
-                                <VisualStateGroup x:Name="CheckStates">
-                                    <VisualState x:Name="Checked">
-                                        <Storyboard>
-                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="IconPath" Storyboard.TargetProperty="Data">
-                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource FilledDiamondIconData}"/>
-                                            </ObjectAnimationUsingKeyFrames>
-                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="IconPath" Storyboard.TargetProperty="Fill">
-                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource HoverForegroundBrush}"/>
-                                            </ObjectAnimationUsingKeyFrames>
-                                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentTextBlock" Storyboard.TargetProperty="Foreground">
-                                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource HoverForegroundBrush}"/>
-                                            </ObjectAnimationUsingKeyFrames>
-                                        </Storyboard>
-                                    </VisualState>
-                                    <VisualState x:Name="Unchecked"/>
-                                    <VisualState x:Name="Indeterminate"/>
-                                </VisualStateGroup>
                             </VisualStateManager.VisualStateGroups>
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
@@ -104,10 +87,17 @@
                             </Grid.ColumnDefinitions>
                             <Path x:Name="IconPath" Style="{StaticResource IconPathStyle}"/>
                             <TextBlock x:Name="ContentTextBlock" 
-                         Style="{StaticResource ContentTextBlockStyle}" 
-                         Text="{TemplateBinding Content}"/>
+                                       Style="{StaticResource ContentTextBlockStyle}" 
+                                       Text="{TemplateBinding Content}"/>
                         </Grid>
                     </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="IconPath" Property="Data" Value="{StaticResource FilledDiamondIconData}"/>
+                            <Setter TargetName="IconPath" Property="Fill" Value="{StaticResource HoverForegroundBrush}"/>
+                            <Setter TargetName="ContentTextBlock" Property="Foreground" Value="{StaticResource HoverForegroundBrush}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

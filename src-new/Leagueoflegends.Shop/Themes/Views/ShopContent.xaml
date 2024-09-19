@@ -1,0 +1,125 @@
+﻿<ResourceDictionary
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units;assembly=Leagueoflegends.Support"
+  xmlns:views="clr-namespace:Leagueoflegends.Shop.UI.Views">
+
+    <Geometry x:Key="HeaderPathData">M0.35000001,0.65792049 L242.54163,0.65792049 M365.45935,0.48690727 L607.689,0.48690727 M242.08469,0.48069294 L250.7274,9.6305725 M365.65276,0.35000001 L356.7272,9.6604608 M250.39051,9.4891814 L299.01453,9.4891814 M305.01749,9.5403831 L356.91913,9.5403831 M298.62496,9.4651472 L302.02739,13.145463 M305.18564,9.3647624 L301.46767,13.167 M3.9929998,4.5758302 L252.222,4.5541682 M251.8066,4.2413798 L257.1134,9.4346217 M356.279,4.3258302 L604.508,4.3041682 M356.62715,4.0457615 L350.77585,9.4402432</Geometry>
+
+    <ImageSource x:Key="ATypeSaleImageSource">/Leagueoflegends.Support;component/Images/Skins/skin_leesin_11.jpg</ImageSource>
+    <ImageSource x:Key="BTypeSaleImageSource">/Leagueoflegends.Support;component/Images/Skins/skin_corki_18.jpg</ImageSource>
+    <ImageSource x:Key="CTypeSaleImageSource">/Leagueoflegends.Support;component/Images/Skins/skin_janna_05.jpg</ImageSource>
+    <ImageSource x:Key="DTypeSaleImageSource">/Leagueoflegends.Support;component/Images/Skins/skin_gangplank_05.jpg</ImageSource>
+    <ImageSource x:Key="ETypeSaleImageSource">/Leagueoflegends.Support;component/Images/Skins/skin_kogmaw_09.jpg</ImageSource>
+    <ImageSource x:Key="FTypeSaleImageSource">/Leagueoflegends.Support;component/Images/Skins/skin_lux_08.jpg</ImageSource>
+
+    <LinearGradientBrush x:Key="HeaderBorderBrush" StartPoint="0, 0.5" EndPoint="1, 0.5">
+        <GradientStop Color="#4B3D18" Offset="0.25"/>
+        <GradientStop Color="#B3933C" Offset="0.35"/>
+        <GradientStop Color="#534824" Offset="0.5"/>
+        <GradientStop Color="#B3933C" Offset="0.65"/>
+        <GradientStop Color="#4B3D18" Offset="0.75"/>
+    </LinearGradientBrush>
+
+    <Style x:Key="HeaderPathStyle" TargetType="Path">
+        <Setter Property="Grid.Row" Value="1"/>
+        <Setter Property="Data" Value="{StaticResource HeaderPathData}"/>
+        <Setter Property="Stroke" Value="{StaticResource HeaderBorderBrush}"/>
+        <Setter Property="Width" Value="970"/>
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Stretch" Value="Uniform"/>
+    </Style>
+
+    <Style x:Key="HeaderTextStyle" TargetType="TextBlock">
+        <Setter Property="Text" Value="PERSONAL SHOP"/>
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Foreground" Value="#F0E6D2"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0,0,0,-10"/>
+    </Style>
+
+    <Style x:Key="MainGridStyle" TargetType="Grid">
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0,20,0,0"/>
+    </Style>
+
+    <Style x:Key="SaleChampStackStyle" TargetType="StackPanel">
+        <Setter Property="Grid.Row" Value="1"/>
+        <Setter Property="Orientation" Value="Horizontal"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="BottomStackStyle" TargetType="StackPanel">
+        <Setter Property="Grid.Row" Value="2"/>
+        <Setter Property="Margin" Value="0,20,0,10"/>
+    </Style>
+
+    <Style x:Key="DateInfoTextStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="Foreground" Value="#C8AA6E"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="InfoTextStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Foreground" Value="#A09B8C"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+    </Style>
+
+    <Style x:Key="BottomLineStyle" TargetType="Rectangle">
+        <Setter Property="Grid.Row" Value="2"/>
+        <Setter Property="Width" Value="970"/>
+        <Setter Property="Height" Value="1"/>
+        <Setter Property="Fill" Value="#1E2328"/>
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+    </Style>
+
+    <Style x:Key="CheckTextStyle" TargetType="TextBlock">
+        <Setter Property="Grid.Row" Value="3"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Foreground" Value="#A09B8C"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0,10,0,30"/>
+    </Style>
+
+    <Style TargetType="views:ShopContent">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="views:ShopContent">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid Style="{StaticResource MainGridStyle}">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <TextBlock Style="{StaticResource HeaderTextStyle}" Text="PERSONAL SHOP"/>
+                            <Path Style="{StaticResource HeaderPathStyle}"/>
+                        </Grid>
+                        <StackPanel Style="{StaticResource SaleChampStackStyle}">
+                            <units:RiotSaleChampion Discount="15" ImageSource="{StaticResource ATypeSaleImageSource}"/>
+                            <units:RiotSaleChampion Discount="15" ImageSource="{StaticResource BTypeSaleImageSource}"/>
+                            <units:RiotSaleChampion Discount="15" ImageSource="{StaticResource CTypeSaleImageSource}"/>
+                            <units:RiotSaleChampion Discount="15" ImageSource="{StaticResource DTypeSaleImageSource}"/>
+                            <units:RiotSaleChampion Discount="15" ImageSource="{StaticResource ETypeSaleImageSource}"/>
+                            <units:RiotSaleChampion Discount="15" ImageSource="{StaticResource FTypeSaleImageSource}"/>
+                        </StackPanel>
+                        <StackPanel Style="{StaticResource BottomStackStyle}">
+                            <TextBlock Style="{StaticResource DateInfoTextStyle}" Text="End Date: November 9, 02:00 GMT+9" />
+                            <TextBlock Style="{StaticResource InfoTextStyle}" Text="Personalized offers on champions and skins you don't own" />
+                        </StackPanel>
+                        <Rectangle Style="{StaticResource BottomLineStyle}"/>
+                        <TextBlock Style="{StaticResource CheckTextStyle}" Text="Check out special discounts and grab them before they're gone!" />
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

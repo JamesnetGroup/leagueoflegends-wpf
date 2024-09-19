@@ -15,7 +15,7 @@
     <Setter Property="ItemsPanel">
       <Setter.Value>
         <ItemsPanelTemplate>
-          <Grid x:Name="PART_UniformGrid"/>
+          <UniformGrid Columns="2"/>
         </ItemsPanelTemplate>
       </Setter.Value>
     </Setter>

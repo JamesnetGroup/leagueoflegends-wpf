@@ -1,92 +1,113 @@
 ﻿<ResourceDictionary
-  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-  xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units">
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:system="clr-namespace:System;assembly=mscorlib"
+    xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units">
 
-  <Geometry x:Key="SummaryImageSource">/Leagueoflegends.Support;component/Images/worlds_2022.png</Geometry>
-  
-  <LinearGradientBrush x:Key="ImageBorderBrush" StartPoint="0.5,0" EndPoint="0.5,1">
-    <GradientStop Color="#785A28" Offset="0"/>
-    <GradientStop Color="#CBB883" Offset="0.5"/>
-    <GradientStop Color="#463714" Offset="1"/>
-  </LinearGradientBrush>
-  
-  <RadialGradientBrush x:Key="InnerCircleOverlayBrush">
-    <GradientStop Color="#00000000" Offset="0.7"/>
-    <GradientStop Color="#CC000000" Offset="1.0"/>
-  </RadialGradientBrush>
-  
-  <Style x:Key="CircleBorderStyle" TargetType="Border">
-    <Setter Property="Width" Value="158"/>
-    <Setter Property="Height" Value="158"/>
-    <Setter Property="CornerRadius" Value="300"/>
-    <Setter Property="Background" Value="Transparent"/>
-    <Setter Property="BorderBrush" Value="{StaticResource ImageBorderBrush}"/>
-    <Setter Property="BorderThickness" Value="2.5"/>
-    <Setter Property="Margin" Value="0 14 0 0"/>
-  </Style>
-  
-  <Style x:Key="InnerCircleBorderStyle" TargetType="Border">
-    <Setter Property="Margin" Value="8"/>
-    <Setter Property="BorderBrush" Value="{StaticResource ImageBorderBrush}"/>
-    <Setter Property="BorderThickness" Value="1.5"/>
-    <Setter Property="CornerRadius" Value="300"/>
-  </Style>
-  
-  <Style x:Key="OverlayBorderStyle" TargetType="Border">
-    <Setter Property="BorderThickness" Value="1"/>
-    <Setter Property="BorderBrush" Value="#AA000000"/>
-    <Setter Property="Margin" Value="1"/>
-    <Setter Property="Background" Value="{StaticResource InnerCircleOverlayBrush}"/>
-    <Setter Property="CornerRadius" Value="300"/>
-  </Style>
-  
-  <Style TargetType="units:RiotClashEmblem">
-    <Setter Property="Template">
-      <Setter.Value>
-        <ControlTemplate TargetType="units:RiotClashEmblem">
-          <Grid x:Name="RootGrid" Background="Transparent">
-            <!--<VisualStateManager.VisualStateGroups>
-              <VisualStateGroup x:Name="CommonStates">
-                <VisualState x:Name="Normal"/>
-                <VisualState x:Name="PointerOver">
-                  <Storyboard>
-                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="OuterBorder" Storyboard.TargetProperty="BorderBrush">
-                      <DiscreteObjectKeyFrame KeyTime="0" Value="#CBB883"/>
-                    </ObjectAnimationUsingKeyFrames>
-                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="InnerBorder" Storyboard.TargetProperty="BorderBrush">
-                      <DiscreteObjectKeyFrame KeyTime="0" Value="#CBB883"/>
-                    </ObjectAnimationUsingKeyFrames>
-                  </Storyboard>
-                </VisualState>
-                <VisualState x:Name="Pressed">
-                  <Storyboard>
-                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="OuterBorder" Storyboard.TargetProperty="BorderBrush">
-                      <DiscreteObjectKeyFrame KeyTime="0" Value="#785A28"/>
-                    </ObjectAnimationUsingKeyFrames>
-                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="InnerBorder" Storyboard.TargetProperty="BorderBrush">
-                      <DiscreteObjectKeyFrame KeyTime="0" Value="#785A28"/>
-                    </ObjectAnimationUsingKeyFrames>
-                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="OverlayBorder" Storyboard.TargetProperty="Opacity">
-                      <DiscreteObjectKeyFrame KeyTime="0" Value="0.7"/>
-                    </ObjectAnimationUsingKeyFrames>
-                  </Storyboard>
-                </VisualState>
-              </VisualStateGroup>
-            </VisualStateManager.VisualStateGroups>-->
-            <Border x:Name="OuterBorder" Style="{StaticResource CircleBorderStyle}">
-              <Grid>
-                <Border x:Name="InnerBorder" Style="{StaticResource InnerCircleBorderStyle}">
-                  <Border.Background>
-                    <ImageBrush ImageSource="{StaticResource SummaryImageSource}" Stretch="UniformToFill"/>
-                  </Border.Background>
-                </Border>
-                <Border x:Name="OverlayBorder" Style="{StaticResource OverlayBorderStyle}"/>
-              </Grid>
-            </Border>
-          </Grid>
-        </ControlTemplate>
-      </Setter.Value>
-    </Setter>
-  </Style>
+    <ImageSource x:Key="SummaryImageSource">/Leagueoflegends.Support;component/Images/worlds_2022.png</ImageSource>
+
+    <LinearGradientBrush x:Key="ImageBorderBrush" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#785A28" Offset="0"/>
+        <GradientStop Color="#CBB883" Offset="0.5"/>
+        <GradientStop Color="#463714" Offset="1"/>
+    </LinearGradientBrush>
+
+    <RadialGradientBrush x:Key="InnerCircleOverlayBrush">
+        <GradientStop Color="#00000000" Offset="0.7"/>
+        <GradientStop Color="#CC000000" Offset="1.0"/>
+    </RadialGradientBrush>
+
+    <Style x:Key="CircleBorderStyle" TargetType="Border">
+        <Setter Property="Width" Value="158"/>
+        <Setter Property="Height" Value="158"/>
+        <Setter Property="CornerRadius" Value="300"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="BorderBrush" Value="{StaticResource ImageBorderBrush}"/>
+        <Setter Property="BorderThickness" Value="2.5"/>
+        <Setter Property="Margin" Value="0 14 0 0"/>
+    </Style>
+
+    <Style x:Key="InnerCircleBorderStyle" TargetType="Border">
+        <Setter Property="Margin" Value="8"/>
+        <Setter Property="BorderBrush" Value="{StaticResource ImageBorderBrush}"/>
+        <Setter Property="BorderThickness" Value="1.5"/>
+        <Setter Property="CornerRadius" Value="300"/>
+    </Style>
+
+    <Style x:Key="OverlayBorderStyle" TargetType="Border">
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="#AA000000"/>
+        <Setter Property="Margin" Value="1"/>
+        <Setter Property="Background" Value="{StaticResource InnerCircleOverlayBrush}"/>
+        <Setter Property="CornerRadius" Value="300"/>
+    </Style>
+
+    <Style TargetType="units:RiotClashEmblem">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="units:RiotClashEmblem">
+                    <Grid x:Name="RootGrid" Background="Transparent">
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal"/>
+                                <VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="OuterBorder" Storyboard.TargetProperty="BorderBrush">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <SolidColorBrush>#CBB883</SolidColorBrush>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="InnerBorder" Storyboard.TargetProperty="BorderBrush">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <SolidColorBrush>#CBB883</SolidColorBrush>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="OuterBorder" Storyboard.TargetProperty="BorderBrush">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <SolidColorBrush>#785A28</SolidColorBrush>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="InnerBorder" Storyboard.TargetProperty="BorderBrush">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <SolidColorBrush>#785A28</SolidColorBrush>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="OverlayBorder" Storyboard.TargetProperty="Opacity">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <system:Double>0.7</system:Double>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Border x:Name="OuterBorder" Style="{StaticResource CircleBorderStyle}">
+                            <Grid>
+                                <Border x:Name="InnerBorder" Style="{StaticResource InnerCircleBorderStyle}">
+                                    <Border.Background>
+                                        <ImageBrush ImageSource="{StaticResource SummaryImageSource}" Stretch="UniformToFill"/>
+                                    </Border.Background>
+                                </Border>
+                                <Border x:Name="OverlayBorder" Style="{StaticResource OverlayBorderStyle}"/>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>

@@ -1,0 +1,133 @@
+﻿<ResourceDictionary
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:cnvts="clr-namespace:Leagueoflegends.Support.Local.Converters;assembly=Leagueoflegends.Support"
+  xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units;assembly=Leagueoflegends.Support"
+  xmlns:views="clr-namespace:Leagueoflegends.Store.UI.Views">
+
+    <cnvts:BooleanToInverseConverter x:Key="BooleanToInverseConverter"/>
+
+    <Style x:Key="SliderStyle" TargetType="units:RiotSlider">
+        <Setter Property="Margin" Value="0 4 0 4"/>
+    </Style>
+
+    <Style x:Key="InfoTextStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Foreground" Value="#A09B8C"/>
+    </Style>
+
+    <Style x:Key="ColumnGridStyle" TargetType="Grid">
+        <!--<Setter Property="ColumnSpacing" Value="10"/>-->
+        <Setter Property="Margin" Value="0 0 0 6"/>
+    </Style>
+
+
+    <Style TargetType="views:VolumeContent">
+        <Setter Property="Margin" Value="0 0 30 0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="views:VolumeContent">
+                    <StackPanel>
+                        <TextBlock Style="{StaticResource InfoTextStyle}">
+                            <Run Text="Master Volume:"/>
+                            <Run Text="{Binding ElementName=MasterVolumeSlider, Path=Value, Mode=OneWay}"/>
+                        </TextBlock>
+                        <Grid Style="{StaticResource ColumnGridStyle}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <units:RiotSlider x:Name="MasterVolumeSlider" Style="{StaticResource SliderStyle}" Value="90"
+                                              IsEnabled="{Binding ElementName=MasterVolume, Path=IsChecked, Converter={StaticResource BooleanToInverseConverter}}"/>
+                            <units:RiotMuteSwitch x:Name="MasterVolume" Grid.Column="1"/>
+                        </Grid>
+
+                        <TextBlock Style="{StaticResource InfoTextStyle}">
+                            <Run Text="Music Volume:"/>
+                            <Run Text="{Binding ElementName=MusicVolumeSlider, Path=Value, Mode=OneWay}"/>
+                        </TextBlock>
+                        <Grid Style="{StaticResource ColumnGridStyle}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <units:RiotSlider x:Name="MusicVolumeSlider" Style="{StaticResource SliderStyle}" Value="70"
+                                              IsEnabled="{Binding ElementName=MusicVolume, Path=IsChecked, Converter={StaticResource BooleanToInverseConverter}}"/>
+                            <units:RiotMuteSwitch x:Name="MusicVolume" Grid.Column="1"/>
+                        </Grid>
+
+                        <TextBlock Style="{StaticResource InfoTextStyle}">
+                            <Run Text="Announcer Volume:"/>
+                            <Run Text="{Binding ElementName=AnnouncerVolumeSlider, Path=Value, Mode=OneWay}"/>
+                        </TextBlock>
+                        <Grid Style="{StaticResource ColumnGridStyle}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <units:RiotSlider x:Name="AnnouncerVolumeSlider" Style="{StaticResource SliderStyle}" Value="70"
+                                              IsEnabled="{Binding ElementName=AnnouncerVolume, Path=IsChecked, Converter={StaticResource BooleanToInverseConverter}}"/>
+                            <units:RiotMuteSwitch x:Name="AnnouncerVolume" Grid.Column="1"/>
+                        </Grid>
+
+                        <TextBlock Style="{StaticResource InfoTextStyle}">
+                            <Run Text="SFX Volume:"/>
+                            <Run Text="{Binding ElementName=SfxVolumeSlider, Path=Value, Mode=OneWay}"/>
+                        </TextBlock>
+                        <Grid Style="{StaticResource ColumnGridStyle}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <units:RiotSlider x:Name="SfxVolumeSlider" Style="{StaticResource SliderStyle}" Value="85"
+                                              IsEnabled="{Binding ElementName=SfxVolume, Path=IsChecked, Converter={StaticResource BooleanToInverseConverter}}"/>
+                            <units:RiotMuteSwitch x:Name="SfxVolume" Grid.Column="1"/>
+                        </Grid>
+
+                        <TextBlock Style="{StaticResource InfoTextStyle}">
+                            <Run Text="Ambient FX Volume:"/>
+                            <Run Text="{Binding ElementName=AmbientFxVolumeSlider, Path=Value, Mode=OneWay}"/>
+                        </TextBlock>
+                        <Grid Style="{StaticResource ColumnGridStyle}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <units:RiotSlider x:Name="AmbientFxVolumeSlider" Style="{StaticResource SliderStyle}" Value="85"
+                                              IsEnabled="{Binding ElementName=AmbientFxVolume, Path=IsChecked, Converter={StaticResource BooleanToInverseConverter}}"/>
+                            <units:RiotMuteSwitch x:Name="AmbientFxVolume" Grid.Column="1" IsChecked="True"/>
+                        </Grid>
+
+                        <TextBlock Style="{StaticResource InfoTextStyle}">
+                            <Run Text="Dialog Volume:"/>
+                            <Run Text="{Binding ElementName=DialogVolumeSlider, Path=Value, Mode=OneWay}"/>
+                        </TextBlock>
+                        <Grid Style="{StaticResource ColumnGridStyle}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <units:RiotSlider x:Name="DialogVolumeSlider" Style="{StaticResource SliderStyle}" Value="45"
+                                              IsEnabled="{Binding ElementName=DialogVolume, Path=IsChecked, Converter={StaticResource BooleanToInverseConverter}}"/>
+                            <units:RiotMuteSwitch x:Name="DialogVolume" Grid.Column="1" IsChecked="True"/>
+                        </Grid>
+
+                        <TextBlock Style="{StaticResource InfoTextStyle}">
+                            <Run Text="Ping Volume:"/>
+                            <Run Text="{Binding ElementName=PingVolumeSlider, Path=Value, Mode=OneWay}"/>
+                        </TextBlock>
+                        <Grid Style="{StaticResource ColumnGridStyle}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                            <units:RiotSlider x:Name="PingVolumeSlider" Style="{StaticResource SliderStyle}" Value="45"
+                                              IsEnabled="{Binding ElementName=PingVolume, Path=IsChecked, Converter={StaticResource BooleanToInverseConverter}}"/>
+                            <units:RiotMuteSwitch x:Name="PingVolume" Grid.Column="1" IsChecked="True"/>
+                        </Grid>
+                    </StackPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

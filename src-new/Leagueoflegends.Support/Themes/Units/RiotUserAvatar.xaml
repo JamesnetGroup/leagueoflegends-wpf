@@ -5,117 +5,109 @@
     xmlns:cnvts="clr-namespace:Leagueoflegends.Support.Local.Converters"
     xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units">
 
-  <Geometry x:Key="LabelIconData">M16.540789,9.5129013E-05 L16.540789,0.019199848 16.551642,0.0083463192 20.144328,4.9928575 16.551037,9.978035 16.54089,9.9678879 16.54089,9.9752855 3.6029096,9.9856553 3.6029112,9.9665513 3.5920568,9.9774055 0,4.9935226 3.5933933,0.0084471703 3.6035385,0.018592358 3.6035388,0.011195183 z</Geometry>
+    <Geometry x:Key="LabelIconData">M16.540789,9.5129013E-05 L16.540789,0.019199848 16.551642,0.0083463192 20.144328,4.9928575 16.551037,9.978035 16.54089,9.9678879 16.54089,9.9752855 3.6029096,9.9856553 3.6029112,9.9665513 3.5920568,9.9774055 0,4.9935226 3.5933933,0.0084471703 3.6035385,0.018592358 3.6035388,0.011195183 z</Geometry>
     <ImageSource x:Key="DefaultProfileImageSource">/Leagueoflegends.Support;component/Images/profile-default.png</ImageSource>
-  
-  <LinearGradientBrush x:Key="ImageBorder" StartPoint="0.5, 0" EndPoint="0.5, 1">
-    <GradientStop Color="#C5A668" Offset="0"/>
-    <GradientStop Color="#A47D30" Offset="0.25"/>
-    <GradientStop Color="#8D6D32" Offset="0.75"/>
-    <GradientStop Color="#614b24" Offset="1"/>
-  </LinearGradientBrush>
 
-  <LinearGradientBrush x:Key="ImageBorderHover" StartPoint="0.5, 0" EndPoint="0.5, 1">
-    <GradientStop Color="#FFE57B" Offset="0"/>
-    <GradientStop Color="#E1AC48" Offset="0.5"/>
-    <GradientStop Color="#94723A" Offset="1"/>
-  </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ImageBorder" StartPoint="0.5, 0" EndPoint="0.5, 1">
+        <GradientStop Color="#C5A668" Offset="0"/>
+        <GradientStop Color="#A47D30" Offset="0.25"/>
+        <GradientStop Color="#8D6D32" Offset="0.75"/>
+        <GradientStop Color="#614b24" Offset="1"/>
+    </LinearGradientBrush>
 
-  <LinearGradientBrush x:Key="LabelGeometryBorder" StartPoint="0.5, 0" EndPoint="0.5, 1">
-    <GradientStop Color="#BDA166" Offset="0"/>
-    <GradientStop Color="#987430" Offset="0.5"/>
-    <GradientStop Color="#6d5228" Offset="1"/>
-  </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ImageBorderHover" StartPoint="0.5, 0" EndPoint="0.5, 1">
+        <GradientStop Color="#FFE57B" Offset="0"/>
+        <GradientStop Color="#E1AC48" Offset="0.5"/>
+        <GradientStop Color="#94723A" Offset="1"/>
+    </LinearGradientBrush>
 
-  <LinearGradientBrush x:Key="LabelGeometryFill" StartPoint="0.5, 0" EndPoint="0.5, 1">
-    <GradientStop Color="#191d22" Offset="0"/>
-    <GradientStop Color="#1e2328" Offset="0.5"/>
-    <GradientStop Color="#0c131a" Offset="1"/>
-  </LinearGradientBrush>
+    <LinearGradientBrush x:Key="LabelGeometryBorder" StartPoint="0.5, 0" EndPoint="0.5, 1">
+        <GradientStop Color="#BDA166" Offset="0"/>
+        <GradientStop Color="#987430" Offset="0.5"/>
+        <GradientStop Color="#6d5228" Offset="1"/>
+    </LinearGradientBrush>
 
-  <Style x:Key="IconLabelStyle" TargetType="Path">
-    <Setter Property="Data" Value="{StaticResource LabelIconData}"/>
-    <Setter Property="HorizontalAlignment" Value="Center"/>
-    <Setter Property="VerticalAlignment" Value="Center"/>
-    <Setter Property="Fill" Value="{StaticResource LabelGeometryFill}"/>
-    <Setter Property="Stroke" Value="{StaticResource LabelGeometryBorder}"/>
-    <Setter Property="StrokeThickness" Value="1"/>
-    <Setter Property="StrokeLineJoin" Value="Round"/>
-    <Setter Property="StrokeDashCap" Value="Flat"/>
-    <Setter Property="StrokeDashArray" Value="1 0"/>
-    <Setter Property="StrokeMiterLimit" Value="10"/>
-    <Setter Property="Stretch" Value="Uniform"/>
-    <Setter Property="Width" Value="40"/>
-    <Setter Property="Height" Value="20"/>
-  </Style>
+    <LinearGradientBrush x:Key="LabelGeometryFill" StartPoint="0.5, 0" EndPoint="0.5, 1">
+        <GradientStop Color="#191d22" Offset="0"/>
+        <GradientStop Color="#1e2328" Offset="0.5"/>
+        <GradientStop Color="#0c131a" Offset="1"/>
+    </LinearGradientBrush>
 
-  <Style x:Key="LabelTextStyle" TargetType="TextBlock">
-    <Setter Property="Foreground" Value="#A09B8C"/>
-    <Setter Property="FontWeight" Value="Bold"/>
-    <Setter Property="Canvas.ZIndex" Value="1"/>
-    <Setter Property="Margin" Value="0 0 0 1.5"/>
-    <Setter Property="HorizontalAlignment" Value="Center"/>
-    <Setter Property="VerticalAlignment" Value="Center"/>
-  </Style>
+    <Style x:Key="IconLabelStyle" TargetType="Path">
+        <Setter Property="Data" Value="{StaticResource LabelIconData}"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Fill" Value="{StaticResource LabelGeometryFill}"/>
+        <Setter Property="Stroke" Value="{StaticResource LabelGeometryBorder}"/>
+        <Setter Property="StrokeThickness" Value="1"/>
+        <Setter Property="StrokeLineJoin" Value="Round"/>
+        <Setter Property="StrokeDashCap" Value="Flat"/>
+        <Setter Property="StrokeDashArray" Value="1 0"/>
+        <Setter Property="StrokeMiterLimit" Value="10"/>
+        <Setter Property="Stretch" Value="Uniform"/>
+        <Setter Property="Width" Value="40"/>
+        <Setter Property="Height" Value="20"/>
+    </Style>
 
-  <Style x:Key="ControlLabelStyle" TargetType="Control">
-    <Setter Property="VerticalAlignment" Value="Bottom"/>
-    <Setter Property="Template">
-      <Setter.Value>
-        <ControlTemplate TargetType="Control">
-          <Grid>
-            <Path x:Name="path" Style="{StaticResource IconLabelStyle}"/>
-            <TextBlock Text="123" Style="{StaticResource LabelTextStyle}"/>
-          </Grid>
-        </ControlTemplate>
-      </Setter.Value>
-    </Setter>
-  </Style>
+    <Style x:Key="LabelTextStyle" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="#A09B8C"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Canvas.ZIndex" Value="1"/>
+        <Setter Property="Margin" Value="0 0 0 1.5"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
 
-  <Style x:Key="OuterBorderStyle" TargetType="Border">
-    <Setter Property="HorizontalAlignment" Value="Center"/>
-    <Setter Property="VerticalAlignment" Value="Top"/>
-    <Setter Property="BorderThickness" Value="1"/>
-    <Setter Property="BorderBrush" Value="#010A13"/>
-    <Setter Property="Background" Value="{StaticResource ImageBorder}"/>
-    <Setter Property="Width" Value="60"/>
-    <Setter Property="Height" Value="60"/>
-    <Setter Property="CornerRadius" Value="60"/>
-  </Style>
+    <Style x:Key="ControlLabelStyle" TargetType="Control">
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Control">
+                    <Grid>
+                        <Path x:Name="path" Style="{StaticResource IconLabelStyle}"/>
+                        <TextBlock Text="123" Style="{StaticResource LabelTextStyle}"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
-  <Style x:Key="MiddleBorderStyle" TargetType="Border">
-    <Setter Property="Margin" Value="2"/>
-    <Setter Property="Background" Value="#0A323C"/>
-    <Setter Property="CornerRadius" Value="60"/>
-  </Style>
+    <Style x:Key="OuterBorderStyle" TargetType="Border">
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="BorderThickness" Value="1"/>
+        <Setter Property="BorderBrush" Value="#010A13"/>
+        <Setter Property="Background" Value="{StaticResource ImageBorder}"/>
+        <Setter Property="Width" Value="60"/>
+        <Setter Property="Height" Value="60"/>
+        <Setter Property="CornerRadius" Value="60"/>
+    </Style>
 
-  <Style x:Key="InnerBorderStyle" TargetType="Border">
-    <Setter Property="Margin" Value="4"/>
-    <Setter Property="BorderThickness" Value="2"/>
-    <Setter Property="BorderBrush" Value="{StaticResource ImageBorder}"/>
-    <Setter Property="Background" Value="#01070D"/>
-    <Setter Property="CornerRadius" Value="50"/>
-  </Style>
+    <Style x:Key="MiddleBorderStyle" TargetType="Border">
+        <Setter Property="Margin" Value="2"/>
+        <Setter Property="Background" Value="#0A323C"/>
+        <Setter Property="CornerRadius" Value="60"/>
+    </Style>
 
-  <Style TargetType="units:RiotUserAvatar">
-    <Setter Property="Width" Value="60"/>
-    <Setter Property="Height" Value="60"/>
-    <Setter Property="Template">
-      <Setter.Value>
-        <ControlTemplate TargetType="units:RiotUserAvatar">
-          <Grid>
-            <Border x:Name="border1" Style="{StaticResource OuterBorderStyle}">
-              <Border x:Name="border2" Style="{StaticResource MiddleBorderStyle}">
-                <Border x:Name="border3" Style="{StaticResource InnerBorderStyle}">
-                  <Image Source="{StaticResource DefaultProfileImageSource}"/>
-                </Border>
-              </Border>
-            </Border>
-            <Control Style="{StaticResource ControlLabelStyle}"/>
+    <Style x:Key="InnerBorderStyle" TargetType="Border">
+        <Setter Property="Margin" Value="4"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="BorderBrush" Value="{StaticResource ImageBorder}"/>
+        <Setter Property="Background" Value="#01070D"/>
+        <Setter Property="CornerRadius" Value="50"/>
+    </Style>
+
+    <Style TargetType="units:RiotUserAvatar">
+        <Setter Property="Width" Value="60"/>
+        <Setter Property="Height" Value="60"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="units:RiotUserAvatar">
+                    <Grid>
                         <VisualStateManager.VisualStateGroups>
                             <VisualStateGroup x:Name="CommonStates">
                                 <VisualState x:Name="Normal"/>
-                                <VisualState x:Name="PointerOver">
+                                <VisualState x:Name="MouseOver">
                                     <Storyboard>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="border1" Storyboard.TargetProperty="Background">
                                             <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ImageBorderHover}"/>
@@ -125,11 +117,22 @@
                                         </ObjectAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
+                                <VisualState x:Name="Pressed"/>
                             </VisualStateGroup>
                         </VisualStateManager.VisualStateGroups>
+                        <Border x:Name="border1" Style="{StaticResource OuterBorderStyle}">
+                            <Border x:Name="border2" Style="{StaticResource MiddleBorderStyle}">
+                                <Border x:Name="border3" Style="{StaticResource InnerBorderStyle}">
+                                    <Border.Background>
+                                        <ImageBrush ImageSource="{StaticResource DefaultProfileImageSource}"/>
+                                    </Border.Background>
+                                </Border>
+                            </Border>
+                        </Border>
+                        <Control Style="{StaticResource ControlLabelStyle}"/>
                     </Grid>
-        </ControlTemplate>
-      </Setter.Value>
-    </Setter>
-  </Style>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>

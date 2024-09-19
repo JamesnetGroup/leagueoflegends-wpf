@@ -57,7 +57,6 @@
         <Setter Property="BorderBrush" Value="{StaticResource DefaultBorderBrush}"/>
         <Setter Property="Background" Value="{StaticResource UnlockedBackgroundBrush}"/>
         <Setter Property="Margin" Value="5"/>
-        <Setter Property="CornerRadius" Value="8"/>
     </Style>
 
     <Style x:Key="ChampImageStyle" TargetType="Image">
@@ -125,17 +124,39 @@
 
 
     <Style TargetType="units:RiotStoreChampListBoxItem">
+        <Setter Property="IsLocked" Value="{Binding IsLocked}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="units:RiotStoreChampListBoxItem">
                     <Border x:Name="RootBorder" Style="{StaticResource ChampItemBorderStyle}">
-                        <!--<VisualStateManager.VisualStateGroups>
+                        <VisualStateManager.VisualStateGroups>
                             <VisualStateGroup x:Name="CommonStates">
                                 <VisualState x:Name="Normal" />
                                 <VisualState x:Name="MouseOver">
                                     <Storyboard>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootBorder" Storyboard.TargetProperty="BorderBrush">
                                             <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource HighlightBorderBrush}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootBorder" Storyboard.TargetProperty="BorderThickness">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Thickness>1</Thickness>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BorderOverlay" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="LockIcon" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
                                         </ObjectAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
@@ -152,29 +173,25 @@
                                             <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource HighlightBorderBrush}"/>
                                         </ObjectAnimationUsingKeyFrames>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootBorder" Storyboard.TargetProperty="BorderThickness">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="1"/>
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Thickness>1</Thickness>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
                                         </ObjectAnimationUsingKeyFrames>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BorderOverlay" Storyboard.TargetProperty="Opacity">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="1"/>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BorderOverlay" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
                                         </ObjectAnimationUsingKeyFrames>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="LockIcon" Storyboard.TargetProperty="Opacity">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="1"/>
-                                        </ObjectAnimationUsingKeyFrames>
-                                    </Storyboard>
-                                </VisualState>
-                                <VisualState x:Name="SelectedMouseOver">
-                                    <Storyboard>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootBorder" Storyboard.TargetProperty="BorderBrush">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource HighlightBorderBrush}"/>
-                                        </ObjectAnimationUsingKeyFrames>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootBorder" Storyboard.TargetProperty="BorderThickness">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="1"/>
-                                        </ObjectAnimationUsingKeyFrames>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="BorderOverlay" Storyboard.TargetProperty="Opacity">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="1"/>
-                                        </ObjectAnimationUsingKeyFrames>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="LockIcon" Storyboard.TargetProperty="Opacity">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="1"/>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="LockIcon" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
                                         </ObjectAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
@@ -197,7 +214,7 @@
                                     </Storyboard>
                                 </VisualState>
                             </VisualStateGroup>
-                        </VisualStateManager.VisualStateGroups>-->
+                        </VisualStateManager.VisualStateGroups>
                         <Grid>
                             <Image Style="{StaticResource ChampImageStyle}" Source="{Binding ImageUrl}"/>
                             <Border x:Name="BorderOverlay" Background="{StaticResource SelectedBackgroundBrush}"/>

@@ -28,7 +28,7 @@
             <VisualStateManager.VisualStateGroups>
               <VisualStateGroup x:Name="CommonStates">
                 <VisualState x:Name="Normal"/>
-                <VisualState x:Name="PointerOver">
+                <VisualState x:Name="MouseOver">
                   <Storyboard>
                     <DoubleAnimation Storyboard.TargetName="RootGrid" Storyboard.TargetProperty="Opacity" To="0.8" Duration="0:0:0.1"/>
                   </Storyboard>

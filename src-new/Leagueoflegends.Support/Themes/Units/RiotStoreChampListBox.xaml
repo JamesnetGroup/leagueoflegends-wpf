@@ -8,7 +8,7 @@
     <Setter Property="Template">
       <Setter.Value>
         <ControlTemplate TargetType="units:RiotStoreChampListBox">
-          <ScrollViewer x:Name="ScrollViewer" HorizontalScrollBarVisibility="Disabled">
+          <ScrollViewer x:Name="ScrollViewer" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Hidden">
             <ItemsPresenter/>
           </ScrollViewer>
         </ControlTemplate>

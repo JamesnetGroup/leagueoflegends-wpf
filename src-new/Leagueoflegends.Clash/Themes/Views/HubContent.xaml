@@ -1,0 +1,34 @@
+﻿<ResourceDictionary
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units;assembly=Leagueoflegends.Support"
+      xmlns:cnvts="clr-namespace:Leagueoflegends.Clash.Local.Converters"
+      xmlns:views="clr-namespace:Leagueoflegends.Clash.UI.Views">
+
+    <cnvts:ShowMenuConverter x:Key="ShowMenuConverter"/>
+
+    <Style TargetType="views:HubContent">
+        <Setter Property="Margin" Value="0 60 0 0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="views:HubContent">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <units:RiotHubSummary/>
+                        <Grid Grid.Column="1" Margin="30">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <units:RiotTabMenu ItemsSource="{Binding TabMenus}" SelectedItem="{Binding CurrentTabMenu, Mode=TwoWay}"/>
+                            <units:RiotScheduleListBox Grid.Row="1" ItemsSource="{Binding Schedules}" Visibility="{Binding CurrentTabMenu, Converter={StaticResource ShowMenuConverter}, ConverterParameter=SCHEDULE}"/>
+                        </Grid>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

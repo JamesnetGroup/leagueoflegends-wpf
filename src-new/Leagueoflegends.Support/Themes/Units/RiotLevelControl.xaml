@@ -3,7 +3,7 @@
   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
   xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units">
 
-  <Geometry x:Key="BarPolygonData">0,0 150,0 170,25 300,25 300,60 0,60 0,0</Geometry>
+  <PointCollection x:Key="BarPolygonData">0,0 150,0 170,25 300,25 300,60 0,60 0,0</PointCollection>
   
   <LinearGradientBrush x:Key="LevelBackgroundBrush" StartPoint="0, 0.5" EndPoint="1, 0.5">
     <GradientStop Color="#FF000000" Offset="0"/>

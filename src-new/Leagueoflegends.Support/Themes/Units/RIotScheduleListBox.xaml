@@ -4,197 +4,176 @@
   xmlns:cnvts="clr-namespace:Leagueoflegends.Support.Local.Converters"
   xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units">
 
-  <Geometry x:Key="TrophyPathData">M18 2C17.1 2 16 3 16 4H8C8 3 6.9 2 6 2H2V11C2 12 3 13 4 13H6.2C6.6 15 7.9 16.7 11 17V19.08C8 19.54 8 22 8 22H16C16 22 16 19.54 13 19.08V17C16.1 16.7 17.4 15 17.8 13H20C21 13 22 12 22 11V2H18M6 11H4V4H6V11M20 11H18V4H20V11Z</Geometry>
+    <Geometry x:Key="TrophyPathData">M18 2C17.1 2 16 3 16 4H8C8 3 6.9 2 6 2H2V11C2 12 3 13 4 13H6.2C6.6 15 7.9 16.7 11 17V19.08C8 19.54 8 22 8 22H16C16 22 16 19.54 13 19.08V17C16.1 16.7 17.4 15 17.8 13H20C21 13 22 12 22 11V2H18M6 11H4V4H6V11M20 11H18V4H20V11Z</Geometry>
 
-  <cnvts:ScheduleDateConverter x:Key="ScheduleDateConverter"/>
-  <cnvts:ScheduleDayConverter x:Key="ScheduleDayConverter"/>
+    <cnvts:ScheduleDateConverter x:Key="ScheduleDateConverter"/>
+    <cnvts:ScheduleDayConverter x:Key="ScheduleDayConverter"/>
 
-  <Style x:Key="ScheduleButtonStyle" TargetType="units:RiotButton">
-    <Setter Property="Grid.Column" Value="2"/>
-    <Setter Property="Content" Value="VIEW SCHEDULE"/>
-    <Setter Property="Width" Value="150"/>
-    <Setter Property="FontSize" Value="13"/>
-    <Setter Property="HorizontalAlignment" Value="Right"/>
-    <Setter Property="VerticalAlignment" Value="Center"/>
-  </Style>
+    <Style x:Key="ScheduleButtonStyle" TargetType="units:RiotButton">
+        <Setter Property="Grid.Column" Value="2"/>
+        <Setter Property="Content" Value="VIEW SCHEDULE"/>
+        <Setter Property="Width" Value="150"/>
+        <Setter Property="FontSize" Value="13"/>
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
 
-  <Style x:Key="TrophyPath" TargetType="Path">
-    <Setter Property="Data" Value="{StaticResource TrophyPathData}"/>
-    <Setter Property="Fill" Value="#C89B3C"/>
-    <Setter Property="Width" Value="45"/>
-    <Setter Property="Height" Value="45"/>
-    <Setter Property="Stretch" Value="Uniform"/>
-    <Setter Property="VerticalAlignment" Value="Center"/>
-    <Setter Property="Margin" Value="0 0 32 0"/>
-  </Style>
+    <Style x:Key="TrophyPath" TargetType="Path">
+        <Setter Property="Data" Value="{StaticResource TrophyPathData}"/>
+        <Setter Property="Fill" Value="#C89B3C"/>
+        <Setter Property="Width" Value="45"/>
+        <Setter Property="Height" Value="45"/>
+        <Setter Property="Stretch" Value="Uniform"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0 0 32 0"/>
+    </Style>
 
-  <Style x:Key="DateText" TargetType="TextBlock">
-    <Setter Property="Foreground" Value="#44FFFFFF"/>
-    <Setter Property="FontWeight" Value="Bold"/>
-    <Setter Property="FontSize" Value="14"/>
-  </Style>
+    <Style x:Key="DateText" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="#44FFFFFF"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="FontSize" Value="14"/>
+    </Style>
 
-  <Style x:Key="NameText" TargetType="TextBlock">
-    <Setter Property="Foreground" Value="#99FFFFFF"/>
-    <Setter Property="FontWeight" Value="Bold"/>
-    <Setter Property="FontSize" Value="18"/>
-  </Style>
+    <Style x:Key="NameText" TargetType="TextBlock">
+        <Setter Property="Foreground" Value="#99FFFFFF"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="FontSize" Value="18"/>
+    </Style>
 
-  <Style x:Key="ContentStackPanel" TargetType="StackPanel">
-    <Setter Property="VerticalAlignment" Value="Center"/>
-    <Setter Property="Grid.Column" Value="1"/>
-  </Style>
+    <Style x:Key="ContentStackPanel" TargetType="StackPanel">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Grid.Column" Value="1"/>
+    </Style>
 
-  <Style x:Key="DateStackPanel" TargetType="StackPanel">
-    <Setter Property="Orientation" Value="Horizontal"/>
-  </Style>
+    <Style x:Key="DateStackPanel" TargetType="StackPanel">
+        <Setter Property="Orientation" Value="Horizontal"/>
+    </Style>
 
-  <Style x:Key="ContentBorderStyle" TargetType="Border">
-    <Setter Property="Padding" Value="35 20 35 20"/>
-    <Setter Property="BorderThickness" Value="0 0 0 2"/>
-  </Style>
+    <Style x:Key="ContentBorderStyle" TargetType="Border">
+        <Setter Property="Padding" Value="35 20 35 20"/>
+        <Setter Property="BorderThickness" Value="0 0 0 2"/>
+    </Style>
 
-  <Style x:Key="ScheduleScrollViewerStyle" TargetType="ScrollViewer">
-    <Setter Property="VerticalScrollBarVisibility" Value="Auto"/>
-    <Setter Property="HorizontalScrollBarVisibility" Value="Disabled"/>
-  </Style>
+    <Style x:Key="ScheduleScrollViewerStyle" TargetType="ScrollViewer">
+        <Setter Property="VerticalScrollBarVisibility" Value="Auto"/>
+        <Setter Property="HorizontalScrollBarVisibility" Value="Disabled"/>
+    </Style>
 
-  <Style TargetType="units:RiotScheduleListBoxItem">
-    <Setter Property="Template">
-      <Setter.Value>
-        <ControlTemplate TargetType="units:RiotScheduleListBoxItem">
-          <Grid x:Name="RootGrid" Background="Transparent">
+    <Style TargetType="units:RiotScheduleListBoxItem">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="units:RiotScheduleListBoxItem">
+                    <Grid x:Name="RootGrid" Background="Transparent">
                         <VisualStateManager.VisualStateGroups>
                             <VisualStateGroup x:Name="CommonStates">
                                 <VisualState x:Name="Normal" />
-                                <VisualState x:Name="PointerOver">
+                                <VisualState x:Name="MouseOver">
                                     <Storyboard>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid" Storyboard.TargetProperty="Background">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#3316232C" />
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <SolidColorBrush>#3316232C</SolidColorBrush>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
                                         </ObjectAnimationUsingKeyFrames>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="NameTextBlock" Storyboard.TargetProperty="Foreground">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#FFFFFF" />
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <SolidColorBrush>#FFFFFF</SolidColorBrush>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
                                         </ObjectAnimationUsingKeyFrames>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentBorder" Storyboard.TargetProperty="BorderThickness">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="0,0,0,2" />
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Thickness>0,0,0,2</Thickness>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
                                         </ObjectAnimationUsingKeyFrames>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="TrophyPathIcon" Storyboard.TargetProperty="Fill">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#E4B23B" />
-                                        </ObjectAnimationUsingKeyFrames>
-                                    </Storyboard>
-                                </VisualState>
-                                <VisualState x:Name="Pressed">
-                                    <Storyboard>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid" Storyboard.TargetProperty="Background">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#5516232C" />
-                                        </ObjectAnimationUsingKeyFrames>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="NameTextBlock" Storyboard.TargetProperty="Foreground">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#FFFFFF" />
-                                        </ObjectAnimationUsingKeyFrames>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentBorder" Storyboard.TargetProperty="BorderBrush">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#C89B3C" />
-                                        </ObjectAnimationUsingKeyFrames>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentBorder" Storyboard.TargetProperty="BorderThickness">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="0,0,0,2" />
-                                        </ObjectAnimationUsingKeyFrames>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="TrophyPathIcon" Storyboard.TargetProperty="Fill">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#F0CC7D" />
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <SolidColorBrush>#E4B23B</SolidColorBrush>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
                                         </ObjectAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
                                 <VisualState x:Name="Selected">
                                     <Storyboard>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid" Storyboard.TargetProperty="Background">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#4416232C" />
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <SolidColorBrush>#4416232C</SolidColorBrush>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
                                         </ObjectAnimationUsingKeyFrames>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="NameTextBlock" Storyboard.TargetProperty="Foreground">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#FFFFFF" />
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <SolidColorBrush>#FFFFFF</SolidColorBrush>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
                                         </ObjectAnimationUsingKeyFrames>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentBorder" Storyboard.TargetProperty="BorderBrush">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#C89B3C" />
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <SolidColorBrush>#C89B3C</SolidColorBrush>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
                                         </ObjectAnimationUsingKeyFrames>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentBorder" Storyboard.TargetProperty="BorderThickness">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="0,0,0,2" />
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Thickness>0,0,0,2</Thickness>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
                                         </ObjectAnimationUsingKeyFrames>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="TrophyPathIcon" Storyboard.TargetProperty="Fill">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#F0CC7D" />
-                                        </ObjectAnimationUsingKeyFrames>
-                                    </Storyboard>
-                                </VisualState>
-                                <VisualState x:Name="SelectedUnfocused">
-                                    <Storyboard>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid" Storyboard.TargetProperty="Background">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#3316232C" />
-                                        </ObjectAnimationUsingKeyFrames>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="NameTextBlock" Storyboard.TargetProperty="Foreground">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#F0E6D2" />
-                                        </ObjectAnimationUsingKeyFrames>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentBorder" Storyboard.TargetProperty="BorderBrush">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#785A28" />
-                                        </ObjectAnimationUsingKeyFrames>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentBorder" Storyboard.TargetProperty="BorderThickness">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="0,0,0,2" />
-                                        </ObjectAnimationUsingKeyFrames>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="TrophyPathIcon" Storyboard.TargetProperty="Fill">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#D6A545" />
-                                        </ObjectAnimationUsingKeyFrames>
-                                    </Storyboard>
-                                </VisualState>
-                                <VisualState x:Name="PointerOverSelected">
-                                    <Storyboard>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="RootGrid" Storyboard.TargetProperty="Background">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#5516232C" />
-                                        </ObjectAnimationUsingKeyFrames>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="NameTextBlock" Storyboard.TargetProperty="Foreground">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#FFFFFF" />
-                                        </ObjectAnimationUsingKeyFrames>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentBorder" Storyboard.TargetProperty="BorderBrush">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#C89B3C" />
-                                        </ObjectAnimationUsingKeyFrames>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ContentBorder" Storyboard.TargetProperty="BorderThickness">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="0,0,0,2" />
-                                        </ObjectAnimationUsingKeyFrames>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="TrophyPathIcon" Storyboard.TargetProperty="Fill">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#F0CC7D" />
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <SolidColorBrush>#F0CC7D</SolidColorBrush>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
                                         </ObjectAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
                             </VisualStateGroup>
                         </VisualStateManager.VisualStateGroups>
                         <Border x:Name="ContentBorder" Style="{StaticResource ContentBorderStyle}">
-              <Grid>
-                <Grid.ColumnDefinitions>
-                  <ColumnDefinition Width="Auto"/>
-                  <ColumnDefinition Width="Auto"/>
-                  <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <Path x:Name="TrophyPathIcon" Style="{StaticResource TrophyPath}"/>
-                <StackPanel Style="{StaticResource ContentStackPanel}">
-                  <TextBlock x:Name="NameTextBlock" Style="{StaticResource NameText}">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <Path x:Name="TrophyPathIcon" Style="{StaticResource TrophyPath}"/>
+                                <StackPanel Style="{StaticResource ContentStackPanel}">
+                                    <TextBlock x:Name="NameTextBlock" Style="{StaticResource NameText}">
                         <Run Text="{Binding Title}"/>
                         <Run Text=" ◇ "/>
                         <Run Text="{Binding Day, Converter={StaticResource ScheduleDayConverter}}"/>
-                  </TextBlock>
-                  <TextBlock Style="{StaticResource DateText}" Text="{Binding Timestamp, Converter={StaticResource ScheduleDateConverter}}"/>
-                </StackPanel>
-                <units:RiotButton Style="{StaticResource ScheduleButtonStyle}"/>
-              </Grid>
-            </Border>
-          </Grid>
-        </ControlTemplate>
-      </Setter.Value>
-    </Setter>
-  </Style>
+                                    </TextBlock>
+                                    <TextBlock Style="{StaticResource DateText}" Text="{Binding Timestamp, Converter={StaticResource ScheduleDateConverter}}"/>
+                                </StackPanel>
+                                <units:RiotButton Style="{StaticResource ScheduleButtonStyle}"/>
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
-  <Style TargetType="units:RiotScheduleListBox">
-    <Setter Property="Template">
-      <Setter.Value>
-        <ControlTemplate TargetType="units:RiotScheduleListBox">
-          <ScrollViewer Style="{StaticResource ScheduleScrollViewerStyle}">
-            <ItemsPresenter/>
-          </ScrollViewer>
-        </ControlTemplate>
-      </Setter.Value>
-    </Setter>
-  </Style>
+    <Style TargetType="units:RiotScheduleListBox">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="units:RiotScheduleListBox">
+                    <ScrollViewer Style="{StaticResource ScheduleScrollViewerStyle}">
+                        <ItemsPresenter/>
+                    </ScrollViewer>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>

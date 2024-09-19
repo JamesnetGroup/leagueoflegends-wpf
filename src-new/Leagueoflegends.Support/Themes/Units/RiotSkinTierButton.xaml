@@ -29,7 +29,7 @@
             <VisualStateManager.VisualStateGroups>
               <VisualStateGroup x:Name="CommonStates">
                 <VisualState x:Name="Normal"/>
-                <VisualState x:Name="PointerOver">
+                <VisualState x:Name="MouseOver">
                   <Storyboard>
                     <DoubleAnimation Storyboard.TargetName="ButtonScale" Storyboard.TargetProperty="ScaleX" To="1.1" Duration="0:0:0.1"/>
                     <DoubleAnimation Storyboard.TargetName="ButtonScale" Storyboard.TargetProperty="ScaleY" To="1.1" Duration="0:0:0.1"/>

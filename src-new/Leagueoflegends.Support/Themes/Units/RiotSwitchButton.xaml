@@ -3,155 +3,159 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units">
 
-  <Geometry x:Key="CheckIconData">M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z</Geometry>
-  <Geometry x:Key="UseIconData">M16,13C15.71,13 15.38,13 15.03,13.05C16.19,13.89 17,15 17,16.5V19H23V16.5C23,14.17 18.33,13 16,13M8,13C5.67,13 1,14.17 1,16.5V19H15V16.5C15,14.17 10.33,13 8,13M8,11A3,3 0 0,0 11,8A3,3 0 0,0 8,5A3,3 0 0,0 5,8A3,3 0 0,0 8,11M16,11A3,3 0 0,0 19,8A3,3 0 0,0 16,5A3,3 0 0,0 13,8A3,3 0 0,0 16,11Z</Geometry>
-  
-  <LinearGradientBrush x:Key="ToggleBorderBrush" StartPoint="0.5,0" EndPoint="0.5,1">
-    <GradientStop Color="#9F8449" Offset="0"/>
-    <GradientStop Color="#7D612B" Offset="0.5"/>
-    <GradientStop Color="#5D4828" Offset="1"/>
-  </LinearGradientBrush>
+    <Geometry x:Key="CheckIconData">M9,20.42L2.79,14.21L5.62,11.38L9,14.77L18.88,4.88L21.71,7.71L9,20.42Z</Geometry>
+    <Geometry x:Key="UseIconData">M16,13C15.71,13 15.38,13 15.03,13.05C16.19,13.89 17,15 17,16.5V19H23V16.5C23,14.17 18.33,13 16,13M8,13C5.67,13 1,14.17 1,16.5V19H15V16.5C15,14.17 10.33,13 8,13M8,11A3,3 0 0,0 11,8A3,3 0 0,0 8,5A3,3 0 0,0 5,8A3,3 0 0,0 8,11M16,11A3,3 0 0,0 19,8A3,3 0 0,0 16,5A3,3 0 0,0 13,8A3,3 0 0,0 16,11Z</Geometry>
 
-  <LinearGradientBrush x:Key="ToggleOffBackgroundBrush" StartPoint="0,0.5" EndPoint="1,0.5">
-    <GradientStop Color="#22404B" Offset="0"/>
-    <GradientStop Color="#20313A" Offset="0.5"/>
-    <GradientStop Color="#1F2D34" Offset="1"/>
-  </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ToggleBorderBrush" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#9F8449" Offset="0"/>
+        <GradientStop Color="#7D612B" Offset="0.5"/>
+        <GradientStop Color="#5D4828" Offset="1"/>
+    </LinearGradientBrush>
 
-  <LinearGradientBrush x:Key="ToggleOnBackgroundBrush" StartPoint="0,0.5" EndPoint="1,0.5">
-    <GradientStop Color="#2C5138" Offset="0"/>
-    <GradientStop Color="#327E3F" Offset="0.3"/>
-    <GradientStop Color="#349C44" Offset="0.5"/>
-    <GradientStop Color="#349C44" Offset="1"/>
-  </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ToggleOffBackgroundBrush" StartPoint="0,0.5" EndPoint="1,0.5">
+        <GradientStop Color="#22404B" Offset="0"/>
+        <GradientStop Color="#20313A" Offset="0.5"/>
+        <GradientStop Color="#1F2D34" Offset="1"/>
+    </LinearGradientBrush>
 
-  <LinearGradientBrush x:Key="ThumbBorderBrush" StartPoint="0.5,0" EndPoint="0.5,1">
-    <GradientStop Color="#B79858" Offset="0"/>
-    <GradientStop Color="#93712F" Offset="0.5"/>
-    <GradientStop Color="#664D27" Offset="1"/>
-  </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ToggleOnBackgroundBrush" StartPoint="0,0.5" EndPoint="1,0.5">
+        <GradientStop Color="#2C5138" Offset="0"/>
+        <GradientStop Color="#327E3F" Offset="0.3"/>
+        <GradientStop Color="#349C44" Offset="0.5"/>
+        <GradientStop Color="#349C44" Offset="1"/>
+    </LinearGradientBrush>
 
-  <LinearGradientBrush x:Key="ThumbBorderBrushOver" StartPoint="0.5,0" EndPoint="0.5,1">
-    <GradientStop Color="#EDE2CD" Offset="0"/>
-    <GradientStop Color="#D2B67C" Offset="0.5"/>
-    <GradientStop Color="#C3973D" Offset="1"/>
-  </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ThumbBorderBrush" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#B79858" Offset="0"/>
+        <GradientStop Color="#93712F" Offset="0.5"/>
+        <GradientStop Color="#664D27" Offset="1"/>
+    </LinearGradientBrush>
 
-  <Style x:Key="SwitchTrackStyle" TargetType="Border">
-    <Setter Property="Background" Value="{StaticResource ToggleOffBackgroundBrush}"/>
-    <Setter Property="BorderBrush" Value="{StaticResource ToggleBorderBrush}"/>
-    <Setter Property="Width" Value="38"/>
-    <Setter Property="Height" Value="20"/>
-    <Setter Property="CornerRadius" Value="8"/>
-    <Setter Property="BorderThickness" Value="2"/>
-    <Setter Property="UseLayoutRounding" Value="True"/>
-  </Style>
+    <LinearGradientBrush x:Key="ThumbBorderBrushOver" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="#EDE2CD" Offset="0"/>
+        <GradientStop Color="#D2B67C" Offset="0.5"/>
+        <GradientStop Color="#C3973D" Offset="1"/>
+    </LinearGradientBrush>
 
-  <Style x:Key="SwitchThumbStyle" TargetType="Border">
-    <Setter Property="BorderBrush" Value="{StaticResource ThumbBorderBrush}"/>
-    <Setter Property="Background" Value="#1E2328"/>
-    <Setter Property="Width" Value="26"/>
-    <Setter Property="Height" Value="26"/>
-    <Setter Property="BorderThickness" Value="2"/>
-    <Setter Property="CornerRadius" Value="20"/>
-    <Setter Property="HorizontalAlignment" Value="Left"/>
-    <Setter Property="VerticalAlignment" Value="Center"/>
-    <Setter Property="Margin" Value="-8 0 0 0"/>
-    <Setter Property="UseLayoutRounding" Value="True"/>
-  </Style>
+    <Style x:Key="SwitchTrackStyle" TargetType="Border">
+        <Setter Property="Background" Value="{StaticResource ToggleOffBackgroundBrush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource ToggleBorderBrush}"/>
+        <Setter Property="Width" Value="38"/>
+        <Setter Property="Height" Value="20"/>
+        <Setter Property="CornerRadius" Value="8"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="UseLayoutRounding" Value="True"/>
+    </Style>
 
-  <Style x:Key="CheckPathStyle" TargetType="Path">
-    <Setter Property="Data" Value="{StaticResource CheckIconData}"/>
-    <Setter Property="Width" Value="9"/>
-    <Setter Property="Height" Value="9"/>
-    <Setter Property="Fill" Value="#20432A"/>
-    <Setter Property="Stretch" Value="Uniform"/>
-    <Setter Property="HorizontalAlignment" Value="Left"/>
-    <Setter Property="Margin" Value="6 0 0 0"/>
-  </Style>
+    <Style x:Key="SwitchThumbStyle" TargetType="Border">
+        <Setter Property="BorderBrush" Value="{StaticResource ThumbBorderBrush}"/>
+        <Setter Property="Background" Value="#1E2328"/>
+        <Setter Property="Width" Value="26"/>
+        <Setter Property="Height" Value="26"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="CornerRadius" Value="20"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="-8 0 0 0"/>
+        <Setter Property="UseLayoutRounding" Value="True"/>
+    </Style>
 
-  <Style x:Key="UsePathStyle" TargetType="Path">
-    <Setter Property="Data" Value="{StaticResource UseIconData}"/>
-    <Setter Property="Fill" Value="#CDBE91"/>
-    <Setter Property="Width" Value="15"/>
-    <Setter Property="Height" Value="15"/>
-    <Setter Property="HorizontalAlignment" Value="Center"/>
-    <Setter Property="Stretch" Value="Uniform"/>
-  </Style>
+    <Style x:Key="CheckPathStyle" TargetType="Path">
+        <Setter Property="Data" Value="{StaticResource CheckIconData}"/>
+        <Setter Property="Width" Value="9"/>
+        <Setter Property="Height" Value="9"/>
+        <Setter Property="Fill" Value="#20432A"/>
+        <Setter Property="Stretch" Value="Uniform"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="Margin" Value="6 0 0 0"/>
+    </Style>
 
-  <Style x:Key="ContentStyle" TargetType="ContentPresenter">
-    <Setter Property="Grid.Column" Value="1"/>
-    <Setter Property="Margin" Value="4 0 0 0"/>
-  </Style>
+    <Style x:Key="UsePathStyle" TargetType="Path">
+        <Setter Property="Data" Value="{StaticResource UseIconData}"/>
+        <Setter Property="Fill" Value="#CDBE91"/>
+        <Setter Property="Width" Value="15"/>
+        <Setter Property="Height" Value="15"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Stretch" Value="Uniform"/>
+    </Style>
 
-  <Style TargetType="units:RiotSwitchButton">
-    <Setter Property="Margin" Value="16 2 0 0"/>
-    <Setter Property="VerticalAlignment" Value="Center"/>
-    <Setter Property="HorizontalAlignment" Value="Center"/>
-    <Setter Property="Template">
-      <Setter.Value>
-        <ControlTemplate TargetType="units:RiotSwitchButton">
-          <Grid>
-            <VisualStateManager.VisualStateGroups>
-              <VisualStateGroup x:Name="CommonStates">
-                <VisualState x:Name="Normal"/>
-                <VisualState x:Name="PointerOver">
-                  <Storyboard>
-                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Thumb" Storyboard.TargetProperty="BorderBrush">
-                      <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ThumbBorderBrushOver}"/>
-                    </ObjectAnimationUsingKeyFrames>
-                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ThumbIcon" Storyboard.TargetProperty="Fill">
-                      <DiscreteObjectKeyFrame KeyTime="0" Value="#F0E6D2"/>
-                    </ObjectAnimationUsingKeyFrames>
-                  </Storyboard>
-                </VisualState>
-              </VisualStateGroup>
-              <VisualStateGroup x:Name="CheckStates">
-                <VisualState x:Name="Checked">
-                  <Storyboard>
-                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SwitchTrack" Storyboard.TargetProperty="Background">
-                      <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ToggleOnBackgroundBrush}"/>
-                    </ObjectAnimationUsingKeyFrames>
-                    <DoubleAnimation Storyboard.TargetName="Thumb" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.X)" To="30" Duration="0:0:0.6">
-                      <DoubleAnimation.EasingFunction>
-                        <QuadraticEase EasingMode="EaseInOut"/>
-                      </DoubleAnimation.EasingFunction>
-                    </DoubleAnimation>
-                  </Storyboard>
-                </VisualState>
-                <VisualState x:Name="Unchecked">
-                  <Storyboard>
-                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SwitchTrack" Storyboard.TargetProperty="Background">
-                      <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ToggleOffBackgroundBrush}"/>
-                    </ObjectAnimationUsingKeyFrames>
-                    <DoubleAnimation Storyboard.TargetName="Thumb" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.X)" To="0" Duration="0:0:0.6">
-                      <DoubleAnimation.EasingFunction>
-                        <QuadraticEase EasingMode="EaseInOut"/>
-                      </DoubleAnimation.EasingFunction>
-                    </DoubleAnimation>
-                  </Storyboard>
-                </VisualState>
-              </VisualStateGroup>
-            </VisualStateManager.VisualStateGroups>
-            <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="Auto"/>
-              <ColumnDefinition Width="Auto"/>
-            </Grid.ColumnDefinitions>
-            <Border x:Name="SwitchTrack" Style="{StaticResource SwitchTrackStyle}">
-              <Path x:Name="CheckIcon" Style="{StaticResource CheckPathStyle}"/>
-            </Border>
-            <Border x:Name="Thumb" Style="{StaticResource SwitchThumbStyle}">
-              <Path x:Name="ThumbIcon" Style="{StaticResource UsePathStyle}"/>
-              <Border.RenderTransform>
-                <TransformGroup>
-                  <TranslateTransform X="0" Y="0"/>
-                </TransformGroup>
-              </Border.RenderTransform>
-            </Border>
-            <ContentPresenter Style="{StaticResource ContentStyle}"/>
-          </Grid>
-        </ControlTemplate>
-      </Setter.Value>
-    </Setter>
-  </Style>
+    <Style x:Key="ContentStyle" TargetType="ContentPresenter">
+        <Setter Property="Grid.Column" Value="1"/>
+        <Setter Property="Margin" Value="4 0 0 0"/>
+    </Style>
+
+    <Style TargetType="units:RiotSwitchButton">
+        <Setter Property="Margin" Value="16 2 0 0"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="units:RiotSwitchButton">
+                    <Grid>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal"/>
+                                <VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="Thumb" Storyboard.TargetProperty="BorderBrush">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ThumbBorderBrushOver}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ThumbIcon" Storyboard.TargetProperty="Fill">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <SolidColorBrush>#F0E6D2</SolidColorBrush>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="CheckStates">
+                                <VisualState x:Name="Checked">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SwitchTrack" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ToggleOnBackgroundBrush}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <DoubleAnimation Storyboard.TargetName="Thumb" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.X)" To="30" Duration="0:0:0.6">
+                                            <DoubleAnimation.EasingFunction>
+                                                <QuadraticEase EasingMode="EaseInOut"/>
+                                            </DoubleAnimation.EasingFunction>
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Unchecked">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SwitchTrack" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ToggleOffBackgroundBrush}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <DoubleAnimation Storyboard.TargetName="Thumb" Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.X)" To="0" Duration="0:0:0.6">
+                                            <DoubleAnimation.EasingFunction>
+                                                <QuadraticEase EasingMode="EaseInOut"/>
+                                            </DoubleAnimation.EasingFunction>
+                                        </DoubleAnimation>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Border x:Name="SwitchTrack" Style="{StaticResource SwitchTrackStyle}">
+                            <Path x:Name="CheckIcon" Style="{StaticResource CheckPathStyle}"/>
+                        </Border>
+                        <Border x:Name="Thumb" Style="{StaticResource SwitchThumbStyle}">
+                            <Path x:Name="ThumbIcon" Style="{StaticResource UsePathStyle}"/>
+                            <Border.RenderTransform>
+                                <TransformGroup>
+                                    <TranslateTransform X="0" Y="0"/>
+                                </TransformGroup>
+                            </Border.RenderTransform>
+                        </Border>
+                        <ContentPresenter Style="{StaticResource ContentStyle}"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>

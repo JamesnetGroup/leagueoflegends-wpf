@@ -16,7 +16,7 @@
         <ControlTemplate TargetType="units:RiotStageListBox">
           <Grid Background="{TemplateBinding Background}">
             <ScrollViewer Style="{StaticResource ScrollViewerStyle}">
-              <ItemsPresenter/>
+              <ItemsPresenter Margin="0 0 0 -15"/>
             </ScrollViewer>
           </Grid>
         </ControlTemplate>

@@ -10,9 +10,9 @@
     <Geometry x:Key="StoreIconData">M20 4H4A2 2 0 0 0 2 6V18A2 2 0 0 0 4 20H20A2 2 0 0 0 22 18V6A2 2 0 0 0 20 4M20 11H4V8H20M7 22H9V24H7V22M11 22H13V24H11V22M15 22H17V24H15Z</Geometry>
     <Geometry x:Key="ArrowIconData">M0,0 L3,0 L15,12 L27,0 L30,0 L15,15 L0,0 Z M10,0 L12,0 L15,3 L18,0 L20,0 L15,5 L10,0 Z</Geometry>
 
-    <LinearGradientBrush x:Key="CheckedBackground" EndPoint="0.5,1" StartPoint="0.5,0">
-        <GradientStop Color="#00000000" Offset="0"/>
-        <GradientStop Color="#108B6811" Offset="0.5"/>
+    <LinearGradientBrush x:Key="CheckedBackgroundBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="Transparent" Offset="0"/>
+        <GradientStop Color="#008B6811" Offset="0.5"/>
         <GradientStop Color="#228B6811" Offset="0.75"/>
         <GradientStop Color="#448B6811" Offset="1"/>
     </LinearGradientBrush>
@@ -22,19 +22,14 @@
         <GradientStop Color="#FFBD9139" Offset="1"/>
     </LinearGradientBrush>
 
-    <SolidColorBrush x:Key="TransparentBrush" Color="Transparent"/>
-    <SolidColorBrush x:Key="WhiteBrush" Color="#FFFFFF"/>
-    <SolidColorBrush x:Key="IconNormalBrush" Color="#CDBE91"/>
-    <SolidColorBrush x:Key="IconPressedBrush" Color="#FFFCF1DC"/>
-
     <Style x:Key="MenuPathStyle" TargetType="Path">
-        <Setter Property="Fill" Value="{StaticResource IconNormalBrush}"/>
+        <Setter Property="Fill" Value="#CDBE91"/>
         <Setter Property="Stretch" Value="Uniform"/>
         <Setter Property="Width" Value="24"/>
         <Setter Property="Height" Value="24"/>
     </Style>
 
-    <Style x:Key="SelectionPathStyle" TargetType="Path">
+    <Style x:Key="ArrowPathStyle" TargetType="Path">
         <Setter Property="Data" Value="{StaticResource ArrowIconData}"/>
         <Setter Property="Fill" Value="{StaticResource ArrowFillBrush}"/>
         <Setter Property="Stretch" Value="Uniform"/>
@@ -55,23 +50,27 @@
             <Setter.Value>
                 <ControlTemplate TargetType="units:RiotMainIconMenu">
                     <Grid>
-                        <!--<VisualStateManager.VisualStateGroups>
+                        <VisualStateManager.VisualStateGroups>
                             <VisualStateGroup x:Name="CommonStates">
                                 <VisualState x:Name="Normal"/>
-                                <VisualState x:Name="PointerOver">
+                                <VisualState x:Name="MouseOver">
                                     <Storyboard>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PointerOverRect" Storyboard.TargetProperty="Fill">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource CheckedBackground}"/>
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource CheckedBackgroundBrush}"/>
                                         </ObjectAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
                                 <VisualState x:Name="Pressed">
                                     <Storyboard>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PointerOverRect" Storyboard.TargetProperty="Fill">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource CheckedBackground}"/>
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource CheckedBackgroundBrush}"/>
                                         </ObjectAnimationUsingKeyFrames>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="IconPath" Storyboard.TargetProperty="Fill">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource IconPressedBrush}"/>
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <SolidColorBrush Color="#FFFCF1DC"/>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
                                         </ObjectAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
@@ -81,29 +80,53 @@
                                 <VisualState x:Name="Checked">
                                     <Storyboard>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="PointerOverRect" Storyboard.TargetProperty="Fill">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource TransparentBrush}"/>
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <SolidColorBrush Color="Transparent"/>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
                                         </ObjectAnimationUsingKeyFrames>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="CheckedRect" Storyboard.TargetProperty="Fill">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource CheckedBackground}"/>
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource CheckedBackgroundBrush}"/>
                                         </ObjectAnimationUsingKeyFrames>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="IconPath" Storyboard.TargetProperty="Fill">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource WhiteBrush}"/>
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <SolidColorBrush Color="#FFFFFF"/>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
                                         </ObjectAnimationUsingKeyFrames>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SelectionPath" Storyboard.TargetProperty="Opacity">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="1"/>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ArrowPath" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Visible</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
                                         </ObjectAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
                                 <VisualState x:Name="Unchecked">
                                     <Storyboard>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="CheckedRect" Storyboard.TargetProperty="Fill">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource TransparentBrush}"/>
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <SolidColorBrush Color="Transparent"/>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
                                         </ObjectAnimationUsingKeyFrames>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="IconPath" Storyboard.TargetProperty="Fill">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource IconNormalBrush}"/>
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <SolidColorBrush Color="#CDBE91"/>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
                                         </ObjectAnimationUsingKeyFrames>
-                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="SelectionPath" Storyboard.TargetProperty="Opacity">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="0"/>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ArrowPath" Storyboard.TargetProperty="Visibility">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <Visibility>Collapsed</Visibility>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
                                         </ObjectAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
@@ -145,10 +168,10 @@
                                     </Storyboard>
                                 </VisualState>
                             </VisualStateGroup>
-                        </VisualStateManager.VisualStateGroups>-->
+                        </VisualStateManager.VisualStateGroups>
                         <Rectangle x:Name="CheckedRect" Fill="Transparent"/>
                         <Rectangle x:Name="PointerOverRect" Fill="Transparent"/>
-                        <Path x:Name="SelectionPath" Style="{StaticResource SelectionPathStyle}"/>
+                        <Path x:Name="ArrowPath" Style="{StaticResource ArrowPathStyle}"/>
                         <Path x:Name="IconPath"
                               Style="{StaticResource MenuPathStyle}"
                               HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"

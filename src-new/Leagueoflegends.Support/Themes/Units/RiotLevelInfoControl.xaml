@@ -28,7 +28,7 @@
     <Setter Property="FontWeight" Value="Bold"/>
     <Setter Property="Foreground" Value="#A09B8C"/>
     <Setter Property="Padding" Value="0 3 0 0"/>
-    <Setter Property="TextWrapping" Value="WrapWholeWords"/>
+    <Setter Property="TextWrapping" Value="WrapWithOverflow"/>
   </Style>
 
   <Style TargetType="units:RiotLevelInfoControl">

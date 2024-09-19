@@ -10,67 +10,71 @@
     <ImageSource x:Key="BottomPositionImageSource">/Leagueoflegends.Support;component/Images/Positions/bottom.png</ImageSource>
     <ImageSource x:Key="SupportPositionImageSource">/Leagueoflegends.Support;component/Images/Positions/support.png</ImageSource>
 
-  <SolidColorBrush x:Key="ButtonBackgroundBrush" Color="#1E2328"/>
+    <SolidColorBrush x:Key="ButtonBackgroundBrush" Color="#1E2328"/>
 
-  <LinearGradientBrush x:Key="ButtonBorderBrush" StartPoint="0, 0" EndPoint="1, 1">
-    <GradientStop Color="#BE9F63" Offset="0"/>
-    <GradientStop Color="#83662B" Offset="0.5"/>
-    <GradientStop Color="#664C26" Offset="1"/>
-  </LinearGradientBrush>
-  <LinearGradientBrush x:Key="ButtonBorderBrushOver" StartPoint="0, 0" EndPoint="1, 1">
-    <GradientStop Color="#E7DCC6" Offset="0"/>
-    <GradientStop Color="#BDAE85" Offset="0.5"/>
-    <GradientStop Color="#C1953B" Offset="1"/>
-  </LinearGradientBrush>
-  <LinearGradientBrush x:Key="ButtonBackgroundBrushOver" StartPoint="0, 0" EndPoint="1, 1">
-    <GradientStop Color="Red" Offset="0"/>
-    <GradientStop Color="Red" Offset="0.5"/>
-    <GradientStop Color="Red" Offset="1"/>
-  </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ButtonBorderBrush" StartPoint="0, 0" EndPoint="1, 1">
+        <GradientStop Color="#BE9F63" Offset="0"/>
+        <GradientStop Color="#83662B" Offset="0.5"/>
+        <GradientStop Color="#664C26" Offset="1"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ButtonBorderBrushOver" StartPoint="0, 0" EndPoint="1, 1">
+        <GradientStop Color="#E7DCC6" Offset="0"/>
+        <GradientStop Color="#BDAE85" Offset="0.5"/>
+        <GradientStop Color="#C1953B" Offset="1"/>
+    </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ButtonBackgroundBrushOver" StartPoint="0, 0" EndPoint="1, 1">
+        <GradientStop Color="Red" Offset="0"/>
+        <GradientStop Color="Red" Offset="0.5"/>
+        <GradientStop Color="Red" Offset="1"/>
+    </LinearGradientBrush>
 
-  <Style x:Key="PositionButtonBorderStyle" TargetType="Border">
-    <Setter Property="Height" Value="44"/>
-    <Setter Property="Width" Value="44"/>
-    <Setter Property="Background" Value="{StaticResource ButtonBackgroundBrush}"/>
-    <Setter Property="BorderBrush" Value="{StaticResource ButtonBorderBrush}"/>
-    <Setter Property="BorderThickness" Value="2.5"/>
-    <Setter Property="RenderTransformOrigin" Value="0.5, 0.5"/>
-    <Setter Property="RenderTransform">
-      <Setter.Value>
-        <RotateTransform Angle="45"/>
-      </Setter.Value>
-    </Setter>
-  </Style>
+    <Style x:Key="PositionButtonBorderStyle" TargetType="Border">
+        <Setter Property="Height" Value="44"/>
+        <Setter Property="Width" Value="44"/>
+        <Setter Property="Background" Value="{StaticResource ButtonBackgroundBrush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource ButtonBorderBrush}"/>
+        <Setter Property="BorderThickness" Value="2.5"/>
+        <Setter Property="RenderTransformOrigin" Value="0.5, 0.5"/>
+        <Setter Property="RenderTransform">
+            <Setter.Value>
+                <RotateTransform Angle="45"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
-  <Style x:Key="PositionButtonImageStyle" TargetType="Image">
-    <Setter Property="HorizontalAlignment" Value="Center"/>
-    <Setter Property="VerticalAlignment" Value="Center"/>
-    <Setter Property="RenderTransformOrigin" Value="0.5, 0.5"/>
-    <Setter Property="Source" Value="{StaticResource TopPositionImageSource}"/>
-    <Setter Property="Width" Value="26"/>
-    <Setter Property="Height" Value="26"/>
-    <Setter Property="RenderTransform">
-      <Setter.Value>
-        <RotateTransform Angle="-45"/>
-      </Setter.Value>
-    </Setter>
-  </Style>
+    <Style x:Key="PositionButtonImageStyle" TargetType="Image">
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="RenderTransformOrigin" Value="0.5, 0.5"/>
+        <Setter Property="Source" Value="{StaticResource TopPositionImageSource}"/>
+        <Setter Property="Width" Value="26"/>
+        <Setter Property="Height" Value="26"/>
+        <Setter Property="RenderTransform">
+            <Setter.Value>
+                <RotateTransform Angle="-45"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
 
-  <Style TargetType="units:RiotPositionButton">
-    <Setter Property="Template">
-      <Setter.Value>
-        <ControlTemplate TargetType="units:RiotPositionButton">
-          <Border x:Name="border" Style="{StaticResource PositionButtonBorderStyle}">
+    <Style TargetType="units:RiotPositionButton">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="units:RiotPositionButton">
+                    <Border x:Name="border" Style="{StaticResource PositionButtonBorderStyle}">
                         <VisualStateManager.VisualStateGroups>
                             <VisualStateGroup x:Name="CommonStates">
                                 <VisualState x:Name="Normal"/>
-                                <VisualState x:Name="PointerOver">
+                                <VisualState x:Name="MouseOver">
                                     <Storyboard>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="border" Storyboard.TargetProperty="BorderBrush">
                                             <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ButtonBorderBrushOver}"/>
                                         </ObjectAnimationUsingKeyFrames>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="border" Storyboard.TargetProperty="Background">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#333333"/>
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <SolidColorBrush>#333333</SolidColorBrush>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
                                         </ObjectAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
@@ -80,7 +84,11 @@
                                             <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ButtonBorderBrushOver}"/>
                                         </ObjectAnimationUsingKeyFrames>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="border" Storyboard.TargetProperty="Background">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#151515"/>
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <SolidColorBrush>#151515</SolidColorBrush>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
                                         </ObjectAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
@@ -124,9 +132,9 @@
                             </VisualStateGroup>
                         </VisualStateManager.VisualStateGroups>
                         <Image x:Name="icon" Style="{StaticResource PositionButtonImageStyle}"/>
-          </Border>
-        </ControlTemplate>
-      </Setter.Value>
-    </Setter>
-  </Style>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>

@@ -1,0 +1,58 @@
+﻿<ResourceDictionary
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units;assembly=Leagueoflegends.Support"
+  xmlns:views="clr-namespace:Leagueoflegends.Store.UI.Views">
+  
+  <Style x:Key="WindowSizeTextStyle" TargetType="TextBlock">
+    <Setter Property="Margin" Value="0,20,0,10"/>
+    <Setter Property="FontSize" Value="12"/>
+    <Setter Property="Foreground" Value="#A09B8C"/>
+  </Style>
+
+  <Style x:Key="RulesTextStyle" TargetType="TextBlock">
+    <Setter Property="FontSize" Value="12"/>
+    <Setter Property="Foreground" Value="#A09B8C"/>
+  </Style>
+
+  <Style x:Key="ComboBoxStyle" TargetType="units:RiotComboBox">
+    <Setter Property="Width" Value="140"/>
+    <Setter Property="HorizontalAlignment" Value="Left"/>
+  </Style>
+
+  <Style x:Key="TroubleshootingTextStyle" TargetType="TextBlock">
+    <Setter Property="Margin" Value="0,30,0,10"/>
+    <Setter Property="FontSize" Value="12"/>
+    <Setter Property="Foreground" Value="#A09B8C"/>
+  </Style>
+
+  <Style x:Key="RepairButtonStyle" TargetType="units:RiotButton">
+    <Setter Property="Width" Value="140"/>
+    <Setter Property="HorizontalAlignment" Value="Left"/>
+  </Style>
+
+  <Style x:Key="CheckStyle" TargetType="units:RiotCheckBox">
+    <Setter Property="Margin" Value="0 4 0 4"/>
+  </Style>
+  
+  <Style TargetType="views:GeneralContent">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="views:GeneralContent">
+          <StackPanel>
+            <TextBlock Style="{StaticResource RulesTextStyle}" Text="League of Legends Code of Conduct"/>
+            <units:RiotLinkButton Content="View Details ↗"/>
+            <units:RiotCheckBox Style="{StaticResource CheckStyle}" Content="Enable Low Spec Mode" />
+            <units:RiotCheckBox Style="{StaticResource CheckStyle}" Content="Close client during game" />
+            <units:RiotCheckBox Style="{StaticResource CheckStyle}" Content="Automatically send crash reports" />
+            <units:RiotCheckBox Style="{StaticResource CheckStyle}" Content="Enable beginner tooltips and help" />
+            <TextBlock Style="{StaticResource WindowSizeTextStyle}" Text="Window Size"/>
+            <units:RiotComboBox Style="{StaticResource ComboBoxStyle}" ItemsSource="{Binding WindowSizes}" SelectedItem="{Binding CurrentWindowSize}"/>
+            <TextBlock Style="{StaticResource TroubleshootingTextStyle}" Text="Troubleshooting"/>
+            <units:RiotButton Style="{StaticResource RepairButtonStyle}" Content="Start Full Repair"/>
+          </StackPanel>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>

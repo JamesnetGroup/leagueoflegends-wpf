@@ -3,81 +3,81 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units">
 
-  <LinearGradientBrush x:Key="ButtonBorderBrush" StartPoint="0.5, 0" EndPoint="0.5, 1">
-    <GradientStop Color="#BE9F63" Offset="0"/>
-    <GradientStop Color="#83662B" Offset="0.5"/>
-    <GradientStop Color="#664C26" Offset="1"/>
-  </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ButtonBorderBrush" StartPoint="0.5, 0" EndPoint="0.5, 1">
+        <GradientStop Color="#BE9F63" Offset="0"/>
+        <GradientStop Color="#83662B" Offset="0.5"/>
+        <GradientStop Color="#664C26" Offset="1"/>
+    </LinearGradientBrush>
 
-  <LinearGradientBrush x:Key="ButtonBorderBrushOver" StartPoint="0.5, 0" EndPoint="0.5, 1">
-    <GradientStop Color="#E7DCC6" Offset="0"/>
-    <GradientStop Color="#BDAE85" Offset="0.5"/>
-    <GradientStop Color="#C1953B" Offset="1"/>
-  </LinearGradientBrush>
-  
-  <LinearGradientBrush x:Key="ButtonBackgroundBrush" StartPoint="0.5, 0" EndPoint="0.5, 1">
-    <GradientStop Color="#563E1E" Offset="0"/>
-    <GradientStop Color="#46331B" Offset="0.5"/>
-    <GradientStop Color="#332617" Offset="1"/>
-  </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ButtonBorderBrushOver" StartPoint="0.5, 0" EndPoint="0.5, 1">
+        <GradientStop Color="#E7DCC6" Offset="0"/>
+        <GradientStop Color="#BDAE85" Offset="0.5"/>
+        <GradientStop Color="#C1953B" Offset="1"/>
+    </LinearGradientBrush>
 
-  <LinearGradientBrush x:Key="ButtonBackgroundBrushOver" StartPoint="0.5, 0" EndPoint="0.5, 1">
-    <GradientStop Color="#77592B" Offset="0"/>
-    <GradientStop Color="#6D5227" Offset="0.5"/>
-    <GradientStop Color="#4E3B19" Offset="1"/>
-  </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ButtonBackgroundBrush" StartPoint="0.5, 0" EndPoint="0.5, 1">
+        <GradientStop Color="#563E1E" Offset="0"/>
+        <GradientStop Color="#46331B" Offset="0.5"/>
+        <GradientStop Color="#332617" Offset="1"/>
+    </LinearGradientBrush>
 
-  <LinearGradientBrush x:Key="ButtonBorderBrushPressed" StartPoint="0.5, 0" EndPoint="0.5, 1">
-    <GradientStop Color="#A1834A" Offset="0"/>
-    <GradientStop Color="#6E522D" Offset="0.5"/>
-    <GradientStop Color="#3F2F1B" Offset="1"/>
-  </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ButtonBackgroundBrushOver" StartPoint="0.5, 0" EndPoint="0.5, 1">
+        <GradientStop Color="#77592B" Offset="0"/>
+        <GradientStop Color="#6D5227" Offset="0.5"/>
+        <GradientStop Color="#4E3B19" Offset="1"/>
+    </LinearGradientBrush>
 
-  <LinearGradientBrush x:Key="ButtonBackgroundBrushPressed" StartPoint="0.5, 0" EndPoint="0.5, 1">
-    <GradientStop Color="#563E1E" Offset="0"/>
-    <GradientStop Color="#46331B" Offset="0.5"/>
-    <GradientStop Color="#332617" Offset="1"/>
-  </LinearGradientBrush>
+    <LinearGradientBrush x:Key="ButtonBorderBrushPressed" StartPoint="0.5, 0" EndPoint="0.5, 1">
+        <GradientStop Color="#A1834A" Offset="0"/>
+        <GradientStop Color="#6E522D" Offset="0.5"/>
+        <GradientStop Color="#3F2F1B" Offset="1"/>
+    </LinearGradientBrush>
 
-  <Style x:Key="AddIconPathStyle" TargetType="Path">
-    <Setter Property="Data" Value="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"/>
-    <Setter Property="Fill" Value="#CDBE91"/>
-    <Setter Property="Width" Value="9"/>
-    <Setter Property="Height" Value="9"/>
-    <Setter Property="Stretch" Value="Uniform"/>
-    <Setter Property="HorizontalAlignment" Value="Center"/>
-    <Setter Property="VerticalAlignment" Value="Center"/>
-  </Style>
+    <LinearGradientBrush x:Key="ButtonBackgroundBrushPressed" StartPoint="0.5, 0" EndPoint="0.5, 1">
+        <GradientStop Color="#563E1E" Offset="0"/>
+        <GradientStop Color="#46331B" Offset="0.5"/>
+        <GradientStop Color="#332617" Offset="1"/>
+    </LinearGradientBrush>
 
-  <Style x:Key="ArrowIconPathStyle" TargetType="Path">
-    <Setter Property="Data" Value="M14,7L9,12L14,17V7Z"/>
-    <Setter Property="Fill" Value="#9D7931"/>
-    <Setter Property="Width" Value="22"/>
-    <Setter Property="Height" Value="22"/>
-    <Setter Property="Stretch" Value="Uniform"/>
-    <Setter Property="HorizontalAlignment" Value="Right"/>
-    <Setter Property="Margin" Value="0,0,-7,0"/>
-  </Style>
+    <Style x:Key="AddIconPathStyle" TargetType="Path">
+        <Setter Property="Data" Value="M19,13H13V19H11V13H5V11H11V5H13V11H19V13Z"/>
+        <Setter Property="Fill" Value="#CDBE91"/>
+        <Setter Property="Width" Value="9"/>
+        <Setter Property="Height" Value="9"/>
+        <Setter Property="Stretch" Value="Uniform"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
 
-  <Style x:Key="AddTicketButtonBorderStyle" TargetType="Border">
-    <Setter Property="Width" Value="28"/>
-    <Setter Property="Height" Value="28"/>
-    <Setter Property="Background" Value="{StaticResource ButtonBackgroundBrush}"/>
-    <Setter Property="CornerRadius" Value="3,0,0,3"/>
-    <Setter Property="BorderBrush" Value="{StaticResource ButtonBorderBrush}"/>
-    <Setter Property="BorderThickness" Value="2"/>
-  </Style>
+    <Style x:Key="ArrowIconPathStyle" TargetType="Path">
+        <Setter Property="Data" Value="M14,7L9,12L14,17V7Z"/>
+        <Setter Property="Fill" Value="#9D7931"/>
+        <Setter Property="Width" Value="12"/>
+        <Setter Property="Height" Value="12"/>
+        <Setter Property="Stretch" Value="Uniform"/>
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="Margin" Value="0,0,-2,0"/>
+    </Style>
 
-  <Style TargetType="units:RiotTicketAddButton">
-    <Setter Property="HorizontalAlignment" Value="Center"/>
-    <Setter Property="Template">
-      <Setter.Value>
-        <ControlTemplate TargetType="units:RiotTicketAddButton">
-          <Border x:Name="ButtonBorder" Style="{StaticResource AddTicketButtonBorderStyle}">
+    <Style x:Key="AddTicketButtonBorderStyle" TargetType="Border">
+        <Setter Property="Width" Value="28"/>
+        <Setter Property="Height" Value="28"/>
+        <Setter Property="Background" Value="{StaticResource ButtonBackgroundBrush}"/>
+        <Setter Property="CornerRadius" Value="3,0,0,3"/>
+        <Setter Property="BorderBrush" Value="{StaticResource ButtonBorderBrush}"/>
+        <Setter Property="BorderThickness" Value="2"/>
+    </Style>
+
+    <Style TargetType="units:RiotTicketAddButton">
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="units:RiotTicketAddButton">
+                    <Border x:Name="ButtonBorder" Style="{StaticResource AddTicketButtonBorderStyle}">
                         <VisualStateManager.VisualStateGroups>
                             <VisualStateGroup x:Name="CommonStates">
                                 <VisualState x:Name="Normal"/>
-                                <VisualState x:Name="PointerOver">
+                                <VisualState x:Name="MouseOver">
                                     <Storyboard>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ButtonBorder" Storyboard.TargetProperty="BorderBrush">
                                             <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ButtonBorderBrushOver}"/>
@@ -86,10 +86,18 @@
                                             <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ButtonBackgroundBrushOver}"/>
                                         </ObjectAnimationUsingKeyFrames>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="AddIcon" Storyboard.TargetProperty="Fill">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#F0E6D2"/>
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <SolidColorBrush>#F0E6D2</SolidColorBrush>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
                                         </ObjectAnimationUsingKeyFrames>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ArrowIcon" Storyboard.TargetProperty="Fill">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#CDBE91"/>
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <SolidColorBrush>#CDBE91</SolidColorBrush>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
                                         </ObjectAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
@@ -99,25 +107,33 @@
                                             <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ButtonBackgroundBrushPressed}"/>
                                         </ObjectAnimationUsingKeyFrames>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="AddIcon" Storyboard.TargetProperty="Fill">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#A09B8C"/>
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <SolidColorBrush>#A09B8C</SolidColorBrush>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
                                         </ObjectAnimationUsingKeyFrames>
                                         <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ArrowIcon" Storyboard.TargetProperty="Fill">
-                                            <DiscreteObjectKeyFrame KeyTime="0" Value="#A09B8C"/>
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <SolidColorBrush>#A09B8C</SolidColorBrush>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
                                         </ObjectAnimationUsingKeyFrames>
                                     </Storyboard>
                                 </VisualState>
                             </VisualStateGroup>
                         </VisualStateManager.VisualStateGroups>
                         <Grid>
-              <Grid.RenderTransform>
-                <TranslateTransform x:Name="ContentTransform"/>
-              </Grid.RenderTransform>
-              <Path x:Name="AddIcon" Style="{StaticResource AddIconPathStyle}"/>
-              <Path x:Name="ArrowIcon" Style="{StaticResource ArrowIconPathStyle}"/>
-            </Grid>
-          </Border>
-        </ControlTemplate>
-      </Setter.Value>
-    </Setter>
-  </Style>
+                            <Grid.RenderTransform>
+                                <TranslateTransform x:Name="ContentTransform"/>
+                            </Grid.RenderTransform>
+                            <Path x:Name="AddIcon" Style="{StaticResource AddIconPathStyle}"/>
+                            <Path x:Name="ArrowIcon" Style="{StaticResource ArrowIconPathStyle}"/>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>

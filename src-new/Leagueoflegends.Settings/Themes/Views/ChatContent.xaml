@@ -1,0 +1,25 @@
+﻿<ResourceDictionary
+  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units;assembly=Leagueoflegends.Support"
+  xmlns:views="clr-namespace:Leagueoflegends.Store.UI.Views">
+
+  <Style x:Key="CheckStyle" TargetType="units:RiotCheckBox">
+    <Setter Property="Margin" Value="0 4 0 4"/>
+  </Style>
+
+  <Style TargetType="views:ChatContent">
+    <Setter Property="Template">
+      <Setter.Value>
+        <ControlTemplate TargetType="views:ChatContent">
+          <StackPanel>
+            <units:RiotCheckBox Style="{StaticResource CheckStyle}" Content="Use profanity filter" />
+            <units:RiotCheckBox Style="{StaticResource CheckStyle}" Content="Show warning on chat link clicks" />
+            <units:RiotCheckBox Style="{StaticResource CheckStyle}" Content="Show [More] menu" />
+            <units:RiotCheckBox Style="{StaticResource CheckStyle}" Content="Display notifications for new friend requests" />
+          </StackPanel>
+        </ControlTemplate>
+      </Setter.Value>
+    </Setter>
+  </Style>
+</ResourceDictionary>

@@ -62,66 +62,69 @@
     <Setter Property="VerticalAlignment" Value="Bottom" />
   </Style>
 
-  <Style TargetType="units:RiotKeyButton">
-    <Setter Property="Margin" Value="10"/>
-    <Setter Property="HorizontalAlignment" Value="Center" />
-    <Setter Property="Template">
-      <Setter.Value>
-        <ControlTemplate TargetType="units:RiotKeyButton">
-          <Grid>
-            <VisualStateManager.VisualStateGroups>
-              <VisualStateGroup x:Name="CommonStates">
-                <VisualState x:Name="Normal" />
-                <VisualState x:Name="PointerOver">
-                  <Storyboard>
-                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ButtonBorder" Storyboard.TargetProperty="BorderBrush">
-                      <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ButtonBorderOverBrush}"/>
-                    </ObjectAnimationUsingKeyFrames>
-                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ButtonBorder" Storyboard.TargetProperty="Background">
-                      <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ButtonBackgroundOverBrush}"/>
-                    </ObjectAnimationUsingKeyFrames>
-                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="InnerBorder" Storyboard.TargetProperty="BorderBrush">
-                      <DiscreteObjectKeyFrame KeyTime="0" Value="#8E866B"/>
-                    </ObjectAnimationUsingKeyFrames>
-                  </Storyboard>
-                </VisualState>
-                <VisualState x:Name="Pressed">
-                  <Storyboard>
-                    <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ButtonBorder" Storyboard.TargetProperty="BorderBrush">
-                      <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ButtonBorderOverBrush}"/>
-                    </ObjectAnimationUsingKeyFrames>
-                  </Storyboard>
-                </VisualState>
-              </VisualStateGroup>
-                <VisualStateGroup x:Name="IconStates">
-                    <VisualState x:Name="Lightning">
-                        <Storyboard>
-                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="IconPath" Storyboard.TargetProperty="Data">
-                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource LightningIconData}"/>
-                            </ObjectAnimationUsingKeyFrames>
-                        </Storyboard>
-                    </VisualState>
-                    <VisualState x:Name="Mic">
-                        <Storyboard>
-                            <ObjectAnimationUsingKeyFrames Storyboard.TargetName="IconPath" Storyboard.TargetProperty="Data">
-                                <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource MicIconData}"/>
-                            </ObjectAnimationUsingKeyFrames>
-                        </Storyboard>
-                    </VisualState>
-                </VisualStateGroup>
+    <Style TargetType="units:RiotKeyButton">
+        <Setter Property="Margin" Value="10"/>
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="units:RiotKeyButton">
+                    <Grid>
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup x:Name="CommonStates">
+                                <VisualState x:Name="Normal" />
+                                <VisualState x:Name="MouseOver">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ButtonBorder" Storyboard.TargetProperty="BorderBrush">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ButtonBorderOverBrush}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ButtonBorder" Storyboard.TargetProperty="Background">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ButtonBackgroundOverBrush}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="InnerBorder" Storyboard.TargetProperty="BorderBrush">
+                                            <DiscreteObjectKeyFrame KeyTime="0">
+                                                <DiscreteObjectKeyFrame.Value>
+                                                    <SolidColorBrush Color="#8E866B"/>
+                                                </DiscreteObjectKeyFrame.Value>
+                                            </DiscreteObjectKeyFrame>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Pressed">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="ButtonBorder" Storyboard.TargetProperty="BorderBrush">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource ButtonBorderOverBrush}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
+                            <VisualStateGroup x:Name="IconStates">
+                                <VisualState x:Name="Lightning">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="IconPath" Storyboard.TargetProperty="Data">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource LightningIconData}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                                <VisualState x:Name="Mic">
+                                    <Storyboard>
+                                        <ObjectAnimationUsingKeyFrames Storyboard.TargetName="IconPath" Storyboard.TargetProperty="Data">
+                                            <DiscreteObjectKeyFrame KeyTime="0" Value="{StaticResource MicIconData}"/>
+                                        </ObjectAnimationUsingKeyFrames>
+                                    </Storyboard>
+                                </VisualState>
+                            </VisualStateGroup>
                         </VisualStateManager.VisualStateGroups>
 
-            <Border x:Name="ButtonBorder" Style="{StaticResource ButtonBorderStyle}">
-              <Grid>
-                <Border x:Name="InnerBorder" Style="{StaticResource InnerBorderStyle}" />
-                <TextBlock Style="{StaticResource TextBlockStyle}" Text="{TemplateBinding Content}"/>
-                <Path x:Name="IconPath" Style="{StaticResource IconPathStyle}" />
-              </Grid>
-            </Border>
-          </Grid>
-        </ControlTemplate>
-      </Setter.Value>
-    </Setter>
-  </Style>
-
+                        <Border x:Name="ButtonBorder" Style="{StaticResource ButtonBorderStyle}">
+                            <Grid>
+                                <Border x:Name="InnerBorder" Style="{StaticResource InnerBorderStyle}" />
+                                <TextBlock Style="{StaticResource TextBlockStyle}" Text="{TemplateBinding Content}"/>
+                                <Path x:Name="IconPath" Style="{StaticResource IconPathStyle}" />
+                            </Grid>
+                        </Border>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>

@@ -8,7 +8,7 @@
     <Setter Property="Template">
       <Setter.Value>
         <ControlTemplate TargetType="units:RiotChampSkinListBox">
-          <ScrollViewer Margin="0,40,0,15">
+          <ScrollViewer Margin="0,40,0,15" VerticalScrollBarVisibility="Hidden">
             <ItemsPresenter/>
           </ScrollViewer>
         </ControlTemplate>
