@@ -1,31 +1,26 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>net7.0-windows</TargetFramework>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
-	<Nullable>disable</Nullable>
-    <ApplicationIcon>Properties\Lol.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="Properties\Lol.ico" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="DevNcore.UI.Design" Version="1.0.9" />
-    <PackageReference Include="DevNcore.UI.Design.Converter" Version="1.0.9" />
-    <PackageReference Include="DevNcore.UI.Design.Geometry" Version="1.0.9" />
-    <PackageReference Include="DevNcore.UI.Foundation" Version="1.0.9" />
-    <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.110" />
-    <PackageReference Include="XamlDesign.Wpf" Version="1.0.0.22" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Lol.Forms\Lol.Forms.csproj" />
-    <ProjectReference Include="..\Lol.Foundation\Lol.Foundation.csproj" />
-    <ProjectReference Include="..\Lol.Main\Lol.Main.csproj" />
-    <ProjectReference Include="..\Lol.Menus\Lol.Menus.csproj" />
-    <ProjectReference Include="..\Lol.Resources\Lol.Resources.csproj" />
+    <ProjectReference Include="..\Jamesnet.Windows\Jamesnet.Windows.csproj" />
+    <ProjectReference Include="..\Leagueoflegends.Clash\Leagueoflegends.Clash.csproj" />
+    <ProjectReference Include="..\Leagueoflegends.Collection\Leagueoflegends.Collection.csproj" />
+    <ProjectReference Include="..\Leagueoflegends.Home\Leagueoflegends.Home.csproj" />
+    <ProjectReference Include="..\Leagueoflegends.Main\Leagueoflegends.Main.csproj" />
+    <ProjectReference Include="..\Leagueoflegends.Navigate\Leagueoflegends.Navigate.csproj" />
+    <ProjectReference Include="..\Leagueoflegends.Profile\Leagueoflegends.Profile.csproj" />
+    <ProjectReference Include="..\Leagueoflegends.Settings\Leagueoflegends.Settings.csproj" />
+    <ProjectReference Include="..\Leagueoflegends.Shop\Leagueoflegends.Shop.csproj" />
+    <ProjectReference Include="..\Leagueoflegends.Social\Leagueoflegends.Social.csproj" />
+    <ProjectReference Include="..\Leagueoflegends.Store\Leagueoflegends.Store.csproj" />
+    <ProjectReference Include="..\Leagueoflegends.Tft\Leagueoflegends.Tft.csproj" />
   </ItemGroup>
 
 </Project>
