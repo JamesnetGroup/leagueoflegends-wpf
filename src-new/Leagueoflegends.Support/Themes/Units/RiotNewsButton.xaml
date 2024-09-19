@@ -75,11 +75,21 @@
                         <Border x:Name="BorderBrush" Style="{StaticResource MainBorderStyle}">
                             <Image x:Name="Image"
                                    Style="{StaticResource ImageStyle}"
-                                   Source="{TemplateBinding ImageSource}"
+                                    Source="{TemplateBinding ImageSource}"
                                    Height="{TemplateBinding ImageHeight}"/>
                         </Border>
                         <TextBlock Style="{StaticResource TextStyle}" Text="{TemplateBinding Text}"/>
                     </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="BorderBrush" Property="BorderBrush" Value="{StaticResource RiotNewsButtonHoverBorderBrush}" />
+                            <Setter TargetName="Image" Property="Opacity" Value="1" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="BorderBrush" Property="BorderBrush" Value="{StaticResource RiotNewsButtonHoverBorderBrush}" />
+                            <Setter TargetName="Image" Property="Opacity" Value="0.8" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

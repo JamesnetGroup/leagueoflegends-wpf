@@ -1,10 +1,10 @@
 ﻿<ResourceDictionary 
-  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-  xmlns:cnvts="clr-namespace:Leagueoflegends.Support.Local.Converters"
-  xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units">
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cnvts="clr-namespace:Leagueoflegends.Support.Local.Converters"
+    xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units">
 
-  <cnvts:IconTypeToStatusIndicatorConverter x:Key="IconTypeToStatusIndicatorConverter"/>
+    <cnvts:IconTypeToStatusIndicatorConverter x:Key="IconTypeToStatusIndicatorConverter"/>
 
   <Style x:Key="RootGridStyle" TargetType="Grid">
     <Setter Property="Background" Value="Transparent"/>
@@ -24,20 +24,20 @@
   </Style>
 
   <Style TargetType="units:RiotStatusIndicator">
-    <Setter Property="Background" Value="Transparent"/>
-    <Setter Property="Template">
-      <Setter.Value>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Template">
+            <Setter.Value>
         <ControlTemplate TargetType="units:RiotStatusIndicator">
           <Grid Style="{StaticResource RootGridStyle}">
-            <Grid.ColumnDefinitions>
-              <ColumnDefinition Width="Auto"/>
-              <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
             <Image Style="{StaticResource StatusIconStyle}" Source="{Binding IconType, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource IconTypeToStatusIndicatorConverter}}"/>
             <Label Style="{StaticResource StatusTextStyle}" Content="{TemplateBinding Value}"/>
-          </Grid>
-        </ControlTemplate>
-      </Setter.Value>
-    </Setter>
-  </Style>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>

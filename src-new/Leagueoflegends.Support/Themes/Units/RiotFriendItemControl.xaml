@@ -169,6 +169,14 @@
                             </StackPanel>
                         </Grid>
                     </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="OverlayRectangle" Property="Opacity" Value="1"/>
+                            <Setter TargetName="NameText" Property="Foreground" Value="#F0E6D2"/>
+                            <Setter TargetName="StatusText" Property="Foreground" Value="#FFA09B8C"/>
+                            <Setter TargetName="Avatar" Property="BorderBrush" Value="{StaticResource HoverAvatarBorderBrush}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

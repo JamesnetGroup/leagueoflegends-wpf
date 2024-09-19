@@ -1,25 +1,25 @@
 ﻿<ResourceDictionary
-  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-  xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units">
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units">
 
   <Style x:Key="ItemsPresenterStyle" TargetType="StackPanel">
     <Setter Property="Margin" Value="0 4 0 0"/>
   </Style>
 
   <Style TargetType="units:RiotFriendGroupItem">
-    <Setter Property="ItemsBindingPath" Value="Children"/>
-    <Setter Property="Foreground" Value="#A09B8C"/>
-    <Setter Property="FontSize" Value="12"/>
-    <Setter Property="Template">
-      <Setter.Value>
+        <Setter Property="ItemsBindingPath" Value="Children"/>
+        <Setter Property="Foreground" Value="#A09B8C"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Template">
+            <Setter.Value>
         <ControlTemplate TargetType="units:RiotFriendGroupItem">
           <StackPanel Background="Transparent">
             <units:RiotFoldableIcon IsChecked="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Mode=TwoWay, Path=IsExpanded}" Content="{Binding Name}"/>
             <StackPanel x:Name="PART_ItemsPanel" Style="{StaticResource ItemsPresenterStyle}"/>
           </StackPanel>
-        </ControlTemplate>
-      </Setter.Value>
-    </Setter>
-  </Style>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>

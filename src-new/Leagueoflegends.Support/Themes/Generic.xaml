@@ -1,18 +1,18 @@
 ﻿<ResourceDictionary
   xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
   xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-    <ResourceDictionary.MergedDictionaries>
-        <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/VerticalMainMenuSeparator.xaml"/>
-        <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotScrollViewer.xaml"/>
-        <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotWallpaper.xaml"/>
-        <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotStatusIndicator.xaml"/>
-        <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotUserDisplayStatus.xaml"/>
-        <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotUserAvatar.xaml"/>
-        <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotWindowControlButton.xaml"/>
-        <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotIconButton.xaml"/>
+  <ResourceDictionary.MergedDictionaries>
+    <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/VerticalMainMenuSeparator.xaml"/>
+    <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotScrollViewer.xaml"/>
+    <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotWallpaper.xaml"/>
+    <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotStatusIndicator.xaml"/>
+    <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotUserDisplayStatus.xaml"/>
+    <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotUserAvatar.xaml"/>
+    <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotWindowControlButton.xaml"/>
+    <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotIconButton.xaml"/>
         <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotPremiumButton.xaml"/>
         <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotTftNewsButton.xaml"/>
-        <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotNewsButton.xaml"/>
+    <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotNewsButton.xaml"/>
         <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotSwitchButton.xaml"/>
         <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotMuteSwitch.xaml"/>
         <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotCheckBox.xaml"/>
@@ -33,7 +33,7 @@
         <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotLinkButton.xaml"/>
         <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotSlider.xaml"/>
         <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotKeyButton.xaml"/>
-        <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotButton.xaml"/>
+    <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotButton.xaml"/>
         <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotComboBox.xaml"/>
         <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotTextBoxCloseButton.xaml"/>
         <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotTextBox.xaml"/>
@@ -42,26 +42,26 @@
         <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotChampSummary.xaml"/>
         <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotClashEmblem.xaml"/>
         <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotHubSummary.xaml"/>
-        <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotNoticeButton.xaml"/>
+    <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotNoticeButton.xaml"/>
         <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotSaleChampion.xaml"/>
-        <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotPlayButton.xaml"/>
-        <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotFoldableIcon.xaml"/>
+    <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotPlayButton.xaml"/>
+    <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotFoldableIcon.xaml"/>
         <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotHorizontalProgress.xaml"/>
         <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotVerticalProgress.xaml"/>
         <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotLevelControl.xaml"/>
-        <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotFriendItemControl.xaml"/>
-        <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotFriendGroupItem.xaml"/>
-        <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotFriendListBox.xaml"/>
-        <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotMainMenu.xaml"/>
-        <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotMainIconMenu.xaml"/>
+    <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotFriendItemControl.xaml"/>
+    <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotFriendGroupItem.xaml"/>
+    <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotFriendListBox.xaml"/>
+    <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotMainMenu.xaml"/>
+    <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotMainIconMenu.xaml"/>
         <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotChampSkinItemControl.xaml"/>
         <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotChampSkinGroupItem.xaml"/>
         <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotChampSkinListBox.xaml"/>
         <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotChampItemControl.xaml"/>
         <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotChampGroupItem.xaml"/>
         <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotChampListBox.xaml"/>
-        <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotHorizMenuListBoxItem.xaml"/>
-        <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotHorizMenuListBox.xaml"/>
+    <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotHorizMenuListBoxItem.xaml"/>
+    <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotHorizMenuListBox.xaml"/>
         <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotMatchHistoryListBoxItem.xaml"/>
         <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotMatchHistoryListBox.xaml"/>
         <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotSpellListBoxItem.xaml"/>
@@ -77,5 +77,5 @@
         <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotStoreChampListBox.xaml"/>
         <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotPlayedChampListBoxItem.xaml"/>
         <ResourceDictionary Source="/Leagueoflegends.Support;component/Themes/Units/RiotPlayedChampListBox.xaml"/>
-    </ResourceDictionary.MergedDictionaries>
+  </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>

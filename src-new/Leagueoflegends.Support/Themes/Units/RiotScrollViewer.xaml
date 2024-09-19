@@ -60,44 +60,44 @@
     <!--<Setter Property="VerticalScrollMode" Value="Enabled"/>-->
     <!--<Setter Property="ZoomMode" Value="Disabled"/>-->
     <Setter Property="Background" Value="Transparent"/>
-    <Setter Property="Template">
-      <Setter.Value>
+        <Setter Property="Template">
+            <Setter.Value>
         <ControlTemplate TargetType="units:RiotScrollViewer">
-          <Border
-            BorderBrush="{TemplateBinding BorderBrush}"
+                    <Border
+                        BorderBrush="{TemplateBinding BorderBrush}"
             BorderThickness="{TemplateBinding BorderThickness}"
             CornerRadius="{TemplateBinding CornerRadius}">
-            <Grid Background="{TemplateBinding Background}">
-              <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="Auto" />
-              </Grid.ColumnDefinitions>
-              <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-                <RowDefinition Height="Auto" />
-              </Grid.RowDefinitions>
-              <ScrollContentPresenter
+                        <Grid Background="{TemplateBinding Background}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <ScrollContentPresenter
                 x:Name="ScrollContentPresenter"
                 Style="{StaticResource ScrollContentPresenterStyle}"
-                Margin="{TemplateBinding Padding}" />
-              <ScrollBar
+                                Margin="{TemplateBinding Padding}" />
+                            <ScrollBar
                 x:Name="VerticalScrollBar"
                 Style="{StaticResource VerticalScrollBarStyle}"
-                Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"
-                Value="{TemplateBinding VerticalOffset}"
-                ViewportSize="{TemplateBinding ViewportHeight}"
+                                Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"
+                                Value="{TemplateBinding VerticalOffset}"
+                                ViewportSize="{TemplateBinding ViewportHeight}"
                 Maximum="{TemplateBinding ScrollableHeight}"/>
-              <ScrollBar
+                            <ScrollBar
                 x:Name="HorizontalScrollBar"
                 Style="{StaticResource HorizontalScrollBarStyle}"
-                Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}"
-                Value="{TemplateBinding HorizontalOffset}"
-                ViewportSize="{TemplateBinding ViewportWidth}"
+                                Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}"
+                                Value="{TemplateBinding HorizontalOffset}"
+                                ViewportSize="{TemplateBinding ViewportWidth}"
                 Maximum="{TemplateBinding ScrollableWidth}"/>
-            </Grid>
-          </Border>
-        </ControlTemplate>
-      </Setter.Value>
-    </Setter>
-  </Style>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>

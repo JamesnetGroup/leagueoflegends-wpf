@@ -2,10 +2,10 @@ using System.Windows.Controls;
 
 namespace Leagueoflegends.Support.UI.Units;
 
-public class VerticalMainMenuSeparator : Control
-{
-    public VerticalMainMenuSeparator() 
+    public class VerticalMainMenuSeparator : Control
     {
-        DefaultStyleKey = typeof(VerticalMainMenuSeparator);
+        public VerticalMainMenuSeparator() 
+        {
+            DefaultStyleKey = typeof(VerticalMainMenuSeparator);
+        }
     }
-}

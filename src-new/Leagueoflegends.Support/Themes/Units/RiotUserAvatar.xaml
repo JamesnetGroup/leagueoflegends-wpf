@@ -131,6 +131,12 @@
                         </Border>
                         <Control Style="{StaticResource ControlLabelStyle}"/>
                     </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="border1" Property="Background" Value="{StaticResource ImageBorderHover}"/>
+                            <Setter TargetName="border3" Property="BorderBrush" Value="{StaticResource ImageBorderHover}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

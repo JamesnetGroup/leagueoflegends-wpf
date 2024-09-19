@@ -1,7 +1,8 @@
 ﻿<ResourceDictionary
-  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-  xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units">
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:cnvts="clr-namespace:Leagueoflegends.Support.Local.Converters"
+    xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units">
 
     <Geometry x:Key="ProfileIconData">M12,19.2C9.5,19.2 7.29,17.92 6,16C6.03,14 10,12.9 12,12.9C14,12.9 17.97,14 18,16C16.71,17.92 14.5,19.2 12,19.2M12,5A3,3 0 0,1 15,8A3,3 0 0,1 12,11A3,3 0 0,1 9,8A3,3 0 0,1 12,5M12,2A10,10 0 0,0 2,12A10,10 0 0,0 12,22A10,10 0 0,0 22,12C22,6.47 17.5,2 12,2Z</Geometry>
     <Geometry x:Key="CollectionIconData">M14.79,10.62L3.5,21.9L2.1,20.5L13.38,9.21L14.79,10.62M19.27,7.73L19.86,7.14L19.07,6.35L19.71,5.71L18.29,4.29L17.65,4.93L16.86,4.14L16.27,4.73C14.53,3.31 12.57,2.17 10.47,1.37L9.64,3.16C11.39,4.08 13,5.19 14.5,6.5L14,7L17,10L17.5,9.5C18.81,11 19.92,12.61 20.84,14.36L22.63,13.53C21.83,11.43 20.69,9.47 19.27,7.73Z</Geometry>
@@ -178,6 +179,22 @@
                               VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                               Margin="{TemplateBinding Padding}"/>
                     </Grid>
+                    <!--<ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="CheckedRect" Property="Fill" Value="Transparent"/>
+                            <Setter TargetName="PointerOverRect" Property="Fill" Value="{StaticResource CheckedBackground}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="PointerOverRect" Property="Fill" Value="{StaticResource CheckedBackground}"/>
+                            <Setter TargetName="IconPath" Property="Fill" Value="#FFFCF1DC"/>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="PointerOverRect" Property="Fill" Value="Transparent"/>
+                            <Setter TargetName="CheckedRect" Property="Fill" Value="{StaticResource CheckedBackground}"/>
+                            <Setter TargetName="IconPath" Property="Fill" Value="#FFFFFF"/>
+                            <Setter TargetName="ArrowPath" Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>-->
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

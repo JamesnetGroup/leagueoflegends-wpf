@@ -14,7 +14,7 @@ public class RiotWallpaper : Control
     }
 
     public RiotWallpaper()
-    {
+    { 
         DefaultStyleKey = typeof(RiotWallpaper);
     }
 

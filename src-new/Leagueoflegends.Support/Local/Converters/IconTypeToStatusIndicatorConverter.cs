@@ -1,5 +1,6 @@
 using System.Globalization;
 using System.Windows.Data;
+
 namespace Leagueoflegends.Support.Local.Converters;
 
 public class IconTypeToStatusIndicatorConverter : IValueConverter

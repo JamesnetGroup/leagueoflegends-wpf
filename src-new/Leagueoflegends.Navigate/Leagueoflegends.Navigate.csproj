@@ -8,7 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Jamesnet.Windows\Jamesnet.Windows.csproj" />
     <ProjectReference Include="..\Leagueoflegends.Support\Leagueoflegends.Support.csproj" />
   </ItemGroup>
 

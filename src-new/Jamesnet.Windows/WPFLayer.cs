@@ -18,9 +18,18 @@ public class WPFLayer : ContentControl, ILayer
         set => SetValue(LayerNameProperty, value);
     }
 
+    static WPFLayer()
+    {
+        DefaultStyleKeyProperty.OverrideMetadata(typeof(WPFLayer), new FrameworkPropertyMetadata(typeof(WPFLayer)));
+    }
     public WPFLayer()
     {
         Loaded += UnoLayer_Loaded;
+    }
+
+    protected override void OnContentChanged(object oldContent, object newContent)
+    {
+        base.OnContentChanged(oldContent, newContent);
     }
 
     private void UnoLayer_Loaded(object sender, RoutedEventArgs e)
@@ -45,10 +54,17 @@ public class WPFLayer : ContentControl, ILayer
 
     private static void OnLayerNameChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
     {
-        if (d is WPFLayer layer)
+        try
         {
-            layer._isRegistered = false;  // Reset registration status when LayerName changes
-            layer.RegisterToLayerManager();
+            if (d is WPFLayer layer)
+            {
+                layer._isRegistered = false;
+                layer.RegisterToLayerManager();
+            }
+        }
+        catch
+        {
+
         }
     }
 }

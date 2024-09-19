@@ -9,7 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Jamesnet.Core\Jamesnet.Core.csproj" />
     <ProjectReference Include="..\Jamesnet.Windows\Jamesnet.Windows.csproj" />
     <ProjectReference Include="..\Leagueoflegends.Clash\Leagueoflegends.Clash.csproj" />
     <ProjectReference Include="..\Leagueoflegends.Collection\Leagueoflegends.Collection.csproj" />

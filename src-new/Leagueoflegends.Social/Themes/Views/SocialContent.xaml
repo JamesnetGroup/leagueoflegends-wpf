@@ -1,8 +1,8 @@
 ﻿<ResourceDictionary
-  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
   xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units;assembly=Leagueoflegends.Support"
-  xmlns:views="clr-namespace:Leagueoflegends.Social.UI.Views">
+    xmlns:views="clr-namespace:Leagueoflegends.Social.UI.Views">
 
     <Style TargetType="StackPanel" x:Key="SocialButtonsPanel">
         <Setter Property="Orientation" Value="Horizontal"/>
@@ -38,6 +38,7 @@
                         <Grid.RowDefinitions>
                             <RowDefinition Height="Auto"/>
                             <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
                         </Grid.RowDefinitions>
                         <TextBlock Style="{StaticResource SocialHeaderText}"/>
                         <StackPanel Style="{StaticResource SocialButtonsPanel}">

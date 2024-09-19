@@ -15,7 +15,7 @@ public class RiotMainIconMenu : RadioButton
         DependencyProperty.Register("MenuIcon", typeof(string), typeof(RiotMainIconMenu), new PropertyMetadata(null, OnMenuIconChanged));
 
     public RiotMainIconMenu()
-    {
+    { 
         DefaultStyleKey = typeof(RiotMainIconMenu);
     }
 
@@ -31,8 +31,8 @@ public class RiotMainIconMenu : RadioButton
         {
             menu.UpdateVisualState();
         }
-    }
-
+}
+    
     private void UpdateVisualState()
     {
         string stateName = MenuIcon + "Icon";

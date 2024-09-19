@@ -20,6 +20,10 @@ public class SocialContentViewModel : ViewModelBase
         LoadFriends();
     }
 
+    public void Loaded()
+    {
+    }
+
     private void LoadFriends()
     {
         Friends = _friendsData.LoadFriends();

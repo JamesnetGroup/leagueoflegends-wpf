@@ -34,10 +34,10 @@
   </Style>
 
   <Style TargetType="units:RiotUserDisplayStatus">
-    <Setter Property="Template">
-      <Setter.Value>
+        <Setter Property="Template">
+            <Setter.Value>
         <ControlTemplate TargetType="units:RiotUserDisplayStatus">
-          <Grid>
+                    <Grid>
                         <VisualStateManager.VisualStateGroups>
                             <VisualStateGroup x:Name="CommonStates">
                                 <VisualState x:Name="Online"/>
@@ -64,11 +64,19 @@
               <StackPanel Style="{StaticResource StatusStackPanelStyle}">
                 <Ellipse x:Name="PART_StatusIndicator" Style="{StaticResource StatusIndicatorEllipseStyle}"/>
                 <TextBlock x:Name="PART_StatusText" Style="{StaticResource StatusTextBlockStyle}" Text="Online"/>
-              </StackPanel>
-            </StackPanel>
-          </Grid>
-        </ControlTemplate>
-      </Setter.Value>
-    </Setter>
-  </Style>
+                            </StackPanel>
+                        </StackPanel>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsOnline" Value="False">
+                            <Setter TargetName="PART_StatusIndicator" Property="Fill" Value="Transparent"/>
+                            <Setter TargetName="PART_StatusIndicator" Property="Stroke" Value="#9C3213"/>
+                            <Setter TargetName="PART_StatusText" Property="Text" Value="자리 비움"/>
+                            <Setter TargetName="PART_StatusText" Property="Foreground" Value="#A09B8C"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>

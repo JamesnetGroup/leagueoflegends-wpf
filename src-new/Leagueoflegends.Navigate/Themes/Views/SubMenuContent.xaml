@@ -5,13 +5,13 @@
   xmlns:views="clr-namespace:Leagueoflegends.Navigate.UI.Views">
 
   <Style TargetType="views:SubMenuContent">
-    <Setter Property="VerticalAlignment" Value="Top"/>
-    <Setter Property="Template">
-      <Setter.Value>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="Template">
+            <Setter.Value>
         <ControlTemplate TargetType="views:SubMenuContent">
           <units:RiotHorizMenuListBox ItemsSource="{Binding SubMenuItems}" SelectedItem="{Binding SelectedItem, Mode=TwoWay}"/>
-        </ControlTemplate>
-      </Setter.Value>
-    </Setter>
-  </Style>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>

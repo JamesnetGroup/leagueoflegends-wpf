@@ -166,6 +166,18 @@
                             </Grid>
                         </Border>
                     </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="ContentPresenter" Property="TextElement.Foreground" Value="#f0e6d2"/>
+                            <Setter TargetName="BorderElement" Property="BorderBrush" Value="{StaticResource RiotButtonBorderBrushHover}"/>
+                            <Setter TargetName="BorderElement" Property="Background" Value="{StaticResource RiotButtonBackgroundHover}"/>
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter TargetName="ContentPresenter" Property="TextElement.Foreground" Value="#e4caa5"/>
+                            <Setter TargetName="BorderElement" Property="BorderBrush" Value="{StaticResource RiotButtonBorderBrushPressed}"/>
+                            <Setter TargetName="BorderElement" Property="Background" Value="{StaticResource RiotButtonBackgroundPressed}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

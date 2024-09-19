@@ -1,7 +1,7 @@
 ﻿<ResourceDictionary 
-  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-  xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units">
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units">
 
     <Geometry x:Key="NoticeIconData">M10 3H14V14H10V3M10 21V17H14V21H10Z</Geometry>
 
@@ -93,6 +93,12 @@
                             </Border>
                         </Border>
                     </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="OuterBorder" Property="BorderBrush" Value="{StaticResource OuterBorderHoverBrush}"/>
+                            <Setter TargetName="InnerBorder" Property="Background" Value="{StaticResource InnerBackgroundHoverBrush}"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>

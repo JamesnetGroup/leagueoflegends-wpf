@@ -1,21 +1,21 @@
 ﻿<ResourceDictionary
-  xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
   xmlns:cnvts="clr-namespace:Leagueoflegends.Support.Local.Converters"
-  xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units">
+    xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units">
 
   <Style TargetType="units:RiotFriendListBox">
-    <Setter Property="Background" Value="Transparent"/>
-    <Setter Property="Template">
-      <Setter.Value>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Template">
+            <Setter.Value>
         <ControlTemplate TargetType="units:RiotFriendListBox">
-          <Grid Background="{TemplateBinding Background}">
-            <ScrollViewer VerticalScrollBarVisibility="Hidden">
-              <ItemsPresenter/>
-            </ScrollViewer>
-          </Grid>
-        </ControlTemplate>
-      </Setter.Value>
-    </Setter>
-  </Style>
+                    <Grid Background="{TemplateBinding Background}">
+                        <ScrollViewer VerticalScrollBarVisibility="Hidden">
+                            <ItemsPresenter/>
+                        </ScrollViewer>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
 </ResourceDictionary>

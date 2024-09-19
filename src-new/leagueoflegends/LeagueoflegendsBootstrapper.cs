@@ -36,6 +36,8 @@ public class LeagueOfLegendsBootstrapper : AppBootstrapper
         ViewModelMapper.Register<MainContent, MainContentViewModel>();
         ViewModelMapper.Register<OptionContent, OptionContentViewModel>();
         ViewModelMapper.Register<SocialContent, SocialContentViewModel>();
+        ViewModelMapper.Register<OverviewContent, OverviewContentViewModel>();
+        //ViewModelMapper.Register<TftContent, TftContentViewModel>();
         ViewModelMapper.Register<SubMenuContent, SubMenuContentViewModel>();
         ViewModelMapper.Register<OptionMenuContent, OptionMenuContentViewModel>();
 
@@ -92,11 +94,13 @@ public class LeagueOfLegendsBootstrapper : AppBootstrapper
         Container.RegisterSingleton<IView, VolumeContent>("VolumeContent");
 
         IView mainContent = Container.Resolve<MainContent>();
+        IView subNavContent = Container.Resolve<SubMenuContent>();
         IView socialContent = Container.Resolve<SocialContent>();
         IView subMenuContent = Container.Resolve<SubMenuContent>();
         IView optionMenuContent = Container.Resolve<OptionMenuContent>();
 
         Layer.Mapping("MainLayer", mainContent);
+        Layer.Mapping("SubNavLayer", subNavContent);
         Layer.Mapping("SocialLayer", socialContent);
         Layer.Mapping("SubMenuLayer", subMenuContent);
         Layer.Mapping("OptionMenuLayer", optionMenuContent);
