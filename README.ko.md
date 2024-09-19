@@ -10,6 +10,10 @@ WPF를 활용한 리그 오브 레전드 클라이언트의 고품질 재현 프
 [![Forks](https://img.shields.io/github/forks/jamesnetgroup/leagueoflegends-wpf.svg)](https://github.com/jamesnetgroup/leagueoflegends-wpf/network/members)
 [![Issues](https://img.shields.io/github/issues/jamesnetgroup/leagueoflegends-wpf.svg)](https://github.com/jamesnetgroup/leagueoflegends-wpf/issues)
 
+#### 리그오브레전드 XAML-Based 시리즈:
+[리그 오브 레전드 클라이언트 (WPF)](https://github.com/jamesnetgroup/leagueoflegends-wpf)  
+[리그 오브 레전드 클라이언트 (Uno-Platform)](https://github.com/jamesnetgroup/leagueoflegends-uno)
+
 ## 프로젝트 소개
 
 저희는 2008년부터 WPF 기술을 연구하고 경험을 쌓아왔습니다. 그동안 Xamarin, MAUI, Uno-Platform, AvaloniaUI, OpenSilver 등 다양한 XAML 기반의 크로스 플랫폼 기술이 발전해 왔고, 이를 통해 WPF에서 축적한 기술을 크로스 플랫폼으로 확장할 수 있는 가능성이 열렸습니다.
@@ -47,37 +51,37 @@ Jamesnet.Core 프레임워크 라이브러리는 WPF와 Uno에서 동일하게 �
 ## 핵심 기술 스택
 > 레포지터리 안에 프레임워크 소스코드가 모두 포함되어 있습니다.
 
-- **Jamesnet.Core**: .NET Standard 2.0 기반의 크로스 플랫폼 코어 라이브러리
-- **Jamesnet.Windoww**: WPF에 최적화된 윈도우 관리 및 UI 프레임워크
+  - [x] **Jamesnet.Core**: .NET Standard 2.0 기반의 크로스 플랫폼 코어 라이브러리
+  - [x] **Jamesnet.Windoww**: WPF에 최적화된 윈도우 관리 및 UI 프레임워크
 
 이 두 라이브러리는 WPF와 Uno-Platform 모두에서 동일하게 사용 가능하며, 대규모 프로젝트의 아키텍처 설계에 필요한 모든 핵심 기능을 포함하고 있습니다.
 
 ## 주요 기능 및 구현 사항
 
 1. **대규모 프로젝트 아키텍처**
-   - 모듈화 및 분산 시스템 설계
-   - 의존성 주입을 통한 느슨한 결합
-   - 플러그인 기반 확장 가능한 구조
+  - [x] 모듈화 및 분산 시스템 설계
+  - [x] 의존성 주입을 통한 느슨한 결합
+  - [x] 플러그인 기반 확장 가능한 구조
 
-2. **고급 WPF 기술**
-   - 다양한 CustomControl 구현
-   - VisualStateManager를 활용한 복잡한 상태 관리
-   - 데이터 가상화 및 UI 가상화 기술
+3. **고급 WPF 기술**
+  - [x] 다양한 CustomControl 구현
+  - [x] VisualStateManager를 활용한 복잡한 상태 관리
+  - [x] 데이터 가상화 및 UI 가상화 기술
 
-3. **성능 최적화**
-   - 효율적인 리소스 관리 및 메모리 사용
-   - 비동기 프로그래밍 패턴 적용
-   - 렌더링 최적화 기법
+5. **성능 최적화**
+  - [x] 효율적인 리소스 관리 및 메모리 사용
+  - [x] 비동기 프로그래밍 패턴 적용
+  - [x] 렌더링 최적화 기법
 
-4. **UI/UX 디자인**
-   - Geometry Path를 활용한 복잡한 그래픽 구현
-   - 사용자 정의 애니메이션 및 전환 효과
-   - 동적 테마 시스템
+6. **UI/UX 디자인**
+  - [x] Geometry Path를 활용한 복잡한 그래픽 구현
+  - [x] 사용자 정의 애니메이션 및 전환 효과
+  - [x] 동적 테마 시스템
 
-5. **프레임워크 설계**
-   - 이벤트 기반 통신 시스템
-   - 상태 관리 패턴 구현
-   - 확장 가능한 네비게이션 시스템
+7. **프레임워크 설계**
+- [x] 이벤트 기반 통신 시스템
+- [x] 상태 관리 패턴 구현
+- [x] 확장 가능한 네비게이션 시스템
 
 이 프로젝트는 WPF의 강력한 기능을 최대한 활용하면서, Jamesnet.Core와 Jamesnet.Window를 기반으로 한 고급 설계 패턴과 기술들을 포괄적으로 보여줍니다. 대규모 애플리케이션 개발에 필요한 다양한 기술과 패턴들이 실제 적용된 사례를 제공하여, WPF 개발자들에게 풍부한 학습 자료가 될 것입니다.
 
@@ -88,8 +92,9 @@ Jamesnet.Core 프레임워크 라이브러리는 WPF와 Uno에서 동일하게 �
 ## 기술 스택
 - .NET 8.0
 - WPF (Windows Presentation Foundation)
-- Jamesnet.Wpf
-- CommunityToolkit.Mvvm
+- Jamesnet.Core (.NET Standard 2.0)
+- Jamesnet.Windows
+- Jamesnet.Uno
 
 ## 시작하기
 ### 필요 조건
