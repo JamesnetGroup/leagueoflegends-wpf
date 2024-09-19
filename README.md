@@ -12,14 +12,22 @@ A high-fidelity recreation of the League of Legends client using WPF, showcasing
 
 This project is a faithful reproduction of the League of Legends client interface using WPF technology. It demonstrates the capabilities of WPF and the Jamesnet.Wpf framework in creating complex, high-performance user interfaces identical to modern game clients.
 
-<img src="https://github.com/user-attachments/assets/9aa294d7-be6d-48ac-8d81-8d8eeb2d79dd" width="49%"/>
-<img src="https://github.com/user-attachments/assets/ecb3f8e5-829f-4c44-ad1e-db4f61aeed19" width="49%"/>
-<img src="https://github.com/user-attachments/assets/0ec377bc-3242-4dbb-9e8e-d763ca8984e5" width="49%"/>  
-<img src="https://github.com/user-attachments/assets/f7313f69-9255-4509-ba8c-2c1d9bdbc80e" width="49%"/>  
-<img src="https://github.com/user-attachments/assets/2afe65fe-5189-403b-b042-f184f974bbcf" width="49%"/>  
-<img src="https://github.com/user-attachments/assets/57c4f317-68c0-46fa-9e76-b46aeab617d0" width="49%"/>  
-<img src="https://github.com/user-attachments/assets/1db54994-a3bc-469e-9ca8-b537473f3773" width="49%"/> 
-<img src="https://github.com/user-attachments/assets/dc8159c1-dbdd-43ad-865e-6a593882a3b9" width="49%"/> 
+<img src="https://github.com/user-attachments/assets/3bc0d881-577e-4aa2-8802-698169d701a5" width="49%"/>
+<img src="https://github.com/user-attachments/assets/d3b13869-d0f8-457d-90d9-5a637c500b4a" width="49%"/>
+<img src="https://github.com/user-attachments/assets/45920f83-41b9-4924-8e92-86123d15a2a4" width="49%"/>
+<img src="https://github.com/user-attachments/assets/4e41c4af-1a98-48b0-9c44-05ac48f0430e" width="49%"/>
+<img src="https://github.com/user-attachments/assets/78415f9d-732c-4940-881c-beed7a6e9620" width="49%"/>
+<img src="https://github.com/user-attachments/assets/b376f4ed-4ffd-4528-b1cc-6b0483f442e1" width="49%"/>
+<img src="https://github.com/user-attachments/assets/3bc0d881-577e-4aa2-8802-698169d701a5" width="49%"/>
+<img src="https://github.com/user-attachments/assets/0cedb504-2f27-43b8-87ed-34e85f1d7b83" width="49%"/>
+<img src="https://github.com/user-attachments/assets/f5e80933-9d18-47c1-81c6-eb55a680972a" width="49%"/>
+<img src="https://github.com/user-attachments/assets/d8aa51d5-c6e1-4a9a-95f8-e20a7c6f9f91" width="49%"/>
+<img src="https://github.com/user-attachments/assets/c2cc6c22-8345-4333-83a2-61ab08883652" width="49%"/>
+<img src="https://github.com/user-attachments/assets/fd6aa0ca-14c1-4446-b6cb-2617bc15b373" width="49%"/>
+<img src="https://github.com/user-attachments/assets/be84fe63-4fb5-4a6c-a537-9907b88e648b" width="49%"/>
+<img src="https://github.com/user-attachments/assets/24db2d8b-b839-42b2-be8a-2fc6266dad77" width="49%"/>
+<img src="https://github.com/user-attachments/assets/642ccf0d-f2df-4adc-bb87-b1246cbda0b7" width="49%"/>
+<img src="https://github.com/user-attachments/assets/bece2bfd-1bb9-436e-b928-929d3706398c" width="49%"/>
 
 ## Key Features and Implementations
 #### 1. Advanced WPF Techniques
