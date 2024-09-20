@@ -1,0 +1,75 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:units="clr-namespace:Lol.GameRoom.UI.Units"
+                    xmlns:ctrls="clr-namespace:DevNcore.LayoutSupport.Leagueoflegends.Controls;assembly=DevNcore.LayoutSupport.Leagueoflegends">
+    
+    <Style TargetType="{x:Type ctrls:RiotIcon}" x:Key="RIOT.ICON.PLUS">
+        <Setter Property="IconType" Value="Plus"/>
+        <Setter Property="Height" Value="17"/>
+        <Setter Property="Width" Value="17"/>
+        <Setter Property="Fill" Value="#F4D7A9"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0 0 16 0"/>
+    </Style>
+
+    <Style TargetType="{x:Type ctrls:RiotIcon}" x:Key="RIOT.ICON.CLOSE">
+        <Setter Property="IconType" Value="Close"/>
+        <Setter Property="Height" Value="17"/>
+        <Setter Property="Width" Value="17"/>
+        <Setter Property="Fill" Value="#CC9E59"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+    </Style>
+    
+    <Style TargetType="{x:Type ListBoxItem}" x:Key="LBXI.FRIENDS">
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                    <Border Padding="10 4 10 4" Background="{TemplateBinding Background}">
+                        <Grid>
+                            <StackPanel HorizontalAlignment="Left" Orientation="Horizontal">
+                                <ctrls:RiotIcon x:Name="path1" Style="{StaticResource RIOT.ICON.PLUS}"/>
+                                <TextBlock Text="{Binding Name}"
+                                           Foreground="#F4D7A9"
+                                           VerticalAlignment="Center"
+                                           FontSize="14" 
+                                           FontWeight="Bold"/>
+                            </StackPanel>
+                            <ctrls:RiotIcon x:Name="path2" Style="{StaticResource RIOT.ICON.CLOSE}"/>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="path2" Property="Fill" Value="#F4D7A9"/>
+                            <Setter Property="Background" Value="#22F4D7A9"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style TargetType="{x:Type units:FriendList}">
+        <Setter Property="ItemsSource" Value="{Binding Friends}"/>
+        <Setter Property="ItemContainerStyle" Value="{StaticResource LBXI.FRIENDS}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type units:FriendList}">
+                    <ctrls:BasicScroll Margin="0"
+									   ScrollViewer.VerticalScrollBarVisibility="Auto" 
+									   ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                        <ItemsPresenter/>
+                    </ctrls:BasicScroll>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="ItemsPanel">
+            <Setter.Value>
+                <ItemsPanelTemplate>
+                    <StackPanel/>
+                </ItemsPanelTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

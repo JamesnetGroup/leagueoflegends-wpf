@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DevNcore.UI.Design" Version="1.0.5" />
+    <PackageReference Include="DevNcore.UI.Design.Converter" Version="1.0.0" />
+    <PackageReference Include="DevNcore.UI.Design.Geometry" Version="1.0.5" />
+    <PackageReference Include="DevNcore.UI.Foundation" Version="1.0.2" />
+    <PackageReference Include="DevNcore.WPF" Version="1.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\ncore\src\DevNcore.LayoutSupport.Leagueoflegends\DevNcore.LayoutSupport.Leagueoflegends.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,26 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:units="clr-namespace:Lol.Loot.UI.Units">
+
+    <Style TargetType="{x:Type units:LootItems}">
+        <Setter Property="Grid.Column" Value="1"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type units:LootItems}">
+                    <Grid Margin="16 0 0 0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <units:ItemsFilter/>
+                        <units:Materials/>
+                        <Border Grid.Row="2" Padding="0 18 0 0" BorderThickness="0 1 0 0" BorderBrush="#5C461E"/>
+                        <units:ItemsSummary/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

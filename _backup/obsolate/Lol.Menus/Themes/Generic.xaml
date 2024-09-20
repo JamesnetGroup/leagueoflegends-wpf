@@ -1,0 +1,15 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:Lol.Menus">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Lol.Menus;component/Themes/Units/PlayButton.xaml"/>
+        <ResourceDictionary Source="/Lol.Menus;component/Themes/Units/Currency.xaml"/>
+        <ResourceDictionary Source="/Lol.Menus;component/Themes/Units/MainMenu.xaml"/>
+        <ResourceDictionary Source="/Lol.Menus;component/Themes/Units/WindowBar.xaml"/>
+        <ResourceDictionary Source="/Lol.Menus;component/Themes/Units/NoticeButton.xaml"/>
+        <ResourceDictionary Source="/Lol.Menus;component/Themes/Units/Profile.xaml"/>
+        <ResourceDictionary Source="/Lol.Menus;component/Themes/Units/SubMenu.xaml"/>
+        <ResourceDictionary Source="/Lol.Menus;component/Themes/Views/MenuContent.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

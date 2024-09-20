@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Clash\**" />
+    <EmbeddedResource Remove="Clash\**" />
+    <None Remove="Clash\**" />
+    <Page Remove="Clash\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DevNcore.LayoutSupport.Leagueoflegends" Version="1.0.9" />
+    <PackageReference Include="DevNcore.UI.Design" Version="1.0.9" />
+    <PackageReference Include="DevNcore.UI.Design.Converter" Version="1.0.9" />
+    <PackageReference Include="DevNcore.UI.Design.Geometry" Version="1.0.9" />
+    <PackageReference Include="DevNcore.UI.Foundation" Version="1.0.9" />
+    <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.110" />
+    <PackageReference Include="XamlDesign.Wpf" Version="1.0.0.22" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,63 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:units="clr-namespace:Lol.Store.UI.Units"
+					xmlns:ctrls="clr-namespace:DevNcore.LayoutSupport.Leagueoflegends.Controls;assembly=DevNcore.LayoutSupport.Leagueoflegends"
+                    xmlns:commons="clr-namespace:Lol.Store.UI.Commons">
+
+	<Style TargetType="{x:Type ctrls:RiotIcon}" x:Key="ICON.ARROW.UP">
+		<Setter Property="Grid.Column" Value="1"/>
+		<Setter Property="IconType" Value="ArrowUp"/>
+		<Setter Property="Fill" Value="#3A3E40"/>
+		<Setter Property="Width" Value="13"/>
+		<Setter Property="Height" Value="13"/>
+		<Setter Property="Margin" Value="0 0 0 0"/>
+	</Style>
+
+	<Style TargetType="{x:Type ctrls:RiotIcon}" x:Key="ICON.CHECK">
+		<Setter Property="Grid.Column" Value="2"/>
+		<Setter Property="IconType" Value="Check"/>
+		<Setter Property="Fill" Value="#CDBE91"/>
+		<Setter Property="Width" Value="15"/>
+		<Setter Property="Height" Value="15"/>
+		<Setter Property="Margin" Value="0 0 8 0"/>
+		<Setter Property="Visibility" Value="Collapsed"/>
+	</Style>
+
+    <Style TargetType="{x:Type commons:SortComboBoxItem}">
+		<Setter Property="Foreground" Value="#CDBE91"/>
+		<Setter Property="Template">
+			<Setter.Value>
+                <ControlTemplate TargetType="{x:Type commons:SortComboBoxItem}">
+					<Border Background="#FF000000"
+							BorderBrush="#1F2123"
+							BorderThickness="0 0 0 1">
+						<Grid>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition Width="Auto" SharedSizeGroup="COLUMNA"/>
+								<ColumnDefinition Width="*"/>
+								<ColumnDefinition Width="Auto"/>
+							</Grid.ColumnDefinitions>
+                            <TextBlock Text="{Binding RelativeSource={RelativeSource AncestorType=commons:SortComboBoxItem}, Path=Content}"  
+									   Margin="8 8 8 8"/>
+							<ctrls:RiotIcon x:Name="orderby" Style="{StaticResource ICON.ARROW.UP}"/>
+							<ctrls:RiotIcon x:Name="check" Style="{StaticResource ICON.CHECK}"/>
+						</Grid>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="Background" Value="#1E2328"/>
+						</Trigger>
+						<Trigger Property="IsSelected" Value="True">
+							<Setter TargetName="check" Property="Visibility" Value="Visible"/>
+							<Setter TargetName="orderby" Property="Fill" Value="#CDBE91"/>
+						</Trigger>
+						<DataTrigger Binding="{Binding OrderBy}" Value="Down">
+							<Setter TargetName="orderby" Property="IconType" Value="ArrowDown"/>
+						</DataTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+</ResourceDictionary>

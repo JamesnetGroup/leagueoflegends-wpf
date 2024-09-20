@@ -1,0 +1,43 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:units="clr-namespace:Lol.Collection.UI.Units">
+
+    <Style TargetType="{x:Type units:SpellInfo}">
+        <Setter Property="Foreground" Value="#9C9889"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type units:SpellInfo}">
+                    <StackPanel HorizontalAlignment="Left">
+                        <TextBlock Text="{Binding DisplayName}" 
+                                   FontSize="25" 
+                                   FontWeight="Bold" 
+                                   FontFamily="Friz Quadrata Std"
+                                   Foreground="#F0E6D2"/>
+                        <TextBlock Text="{Binding Level, StringFormat={}SUMMONER LEVEL {0}}" 
+                                   FontSize="14" 
+                                   FontWeight="Bold" 
+                                   FontFamily="Friz Quadrata Std"
+                                   Margin="0 1 0 0"/>
+                        <TextBlock Text="{Binding PlayTypeList}" 
+                                   FontSize="12" 
+                                   Margin="0 20 0 0"/>
+                        <TextBlock Text="{Binding Content}" 
+                                   Width="325" 
+                                   FontSize="12" 
+                                   TextWrapping="WrapWithOverflow" 
+                                   Margin="0 15 0 0"/>
+                        <TextBlock x:Name="text"
+                                   Text="{Binding Delay, StringFormat={}Cooldown: {0} seconds}" 
+                                   FontSize="12" 
+                                   Margin="0 14 0 0"/>
+                    </StackPanel>
+                    <ControlTemplate.Triggers>
+                        <DataTrigger Binding="{Binding Delay}" Value="0">
+                            <Setter TargetName="text" Property="Visibility" Value="Collapsed"/>
+                        </DataTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

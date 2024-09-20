@@ -1,0 +1,31 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Lol.Layoutsupport;component/Themes/Controls/LucasComboboxItem.xaml"/>
+        <ResourceDictionary Source="/Lol.Layoutsupport;component/Themes/Controls/LucasCombobox.xaml"/>
+        <ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Controls/BasicScroll.xaml"/>
+		<ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Controls/RiotIcon.xaml"/>
+		<ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Controls/CircleFace.xaml"/>
+		<ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Controls/RiotCheckBox.xaml"/>
+		<ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Controls/RiotComboBox.xaml"/>
+		<ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Controls/RiotComboBoxItem.xaml"/>
+        <ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Controls/RiotButton.xaml"/>
+        <ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Controls/RiotIconButton.xaml"/>
+        <ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Controls/RiotHotKey.xaml"/>
+		<ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Controls/RiotSlider.xaml"/>
+		<ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Controls/RiotVolume.xaml"/>
+		<ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Controls/BasicTooltip.xaml"/>
+		<ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Controls/RiotTextBox.xaml"/>
+        <ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Controls/RiotTooltip.xaml"/>
+        <ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Controls/RiotGameButton.xaml"/>
+        <ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Controls/SkinTierButton.xaml"/>
+        <ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Controls/RiotToggleButton.xaml"/>
+        <ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Controls/Modal.xaml"/>
+		<ResourceDictionary Source="/Lol.LayoutSupport;component/Themes/Controls/MainWindow.xaml"/>
+	</ResourceDictionary.MergedDictionaries>
+
+
+
+    
+</ResourceDictionary>

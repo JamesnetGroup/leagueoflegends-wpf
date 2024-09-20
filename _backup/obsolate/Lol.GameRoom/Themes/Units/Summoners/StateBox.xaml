@@ -1,0 +1,144 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:units="clr-namespace:Lol.GameRoom.UI.Units"
+                    xmlns:ctrls="clr-namespace:DevNcore.LayoutSupport.Leagueoflegends.Controls;assembly=DevNcore.LayoutSupport.Leagueoflegends">
+    
+    <DataTemplate x:Key="LBX.FRIENDS">
+        <units:FriendList/>
+    </DataTemplate>
+    
+    <DataTemplate x:Key="LBX.GUEST">
+        <units:GuestList/>
+    </DataTemplate>
+
+    <Style TargetType="{x:Type ToggleButton}" x:Key="TGL.EXPAND">
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0 0 4 0"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ToggleButton}">
+                    <Border Background="Transparent">
+                        <ctrls:RiotIcon x:Name="path" IconType="EXPAND" Height="26" Width="26" Fill="#9F9A8B"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="path" Property="Fill" Value="#EFE5D1"/>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter TargetName="path" Property="IconType" Value="MenuLeft"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type units:StateBox}">
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type units:StateBox}">
+                    <ControlTemplate.Resources>
+                        <Storyboard x:Key="OnChecking" Storyboard.TargetName="bdBottom">
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.X)">
+                                <SplineDoubleKeyFrame KeyTime="00:00:0.1" Value="-20" />
+                                <SplineDoubleKeyFrame KeyTime="00:00:0.2" Value="20" />
+                                <SplineDoubleKeyFrame KeyTime="00:00:0.3" Value="0" />
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                        <Storyboard x:Key="OnUnchecking" Storyboard.TargetName="bdBottom">
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(TranslateTransform.X)">
+                                <SplineDoubleKeyFrame KeyTime="00:00:0.1" Value="180" />
+                                <SplineDoubleKeyFrame KeyTime="00:00:0.2" Value="140" />
+                                <SplineDoubleKeyFrame KeyTime="00:00:0.3" Value="160" />
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                        <Storyboard x:Key="TOnChecking" Storyboard.TargetName="bdContent">
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Height">
+                                <SplineDoubleKeyFrame KeyTime="00:00:0.15" Value="0" />
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                        <Storyboard x:Key="TOnUnchecking" Storyboard.TargetName="bdContent">
+                            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="Height">
+                                <SplineDoubleKeyFrame KeyTime="00:00:0.15" Value="104" />
+                            </DoubleAnimationUsingKeyFrames>
+                        </Storyboard>
+                    </ControlTemplate.Resources>
+                    <StackPanel>
+                        <Border Width="320"
+                                Height="36"
+                                Background="{TemplateBinding Background}"
+                                BorderThickness="0 0 0 0.5"
+                                BorderBrush="#3C3C41" >
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="*"/>
+                                </Grid.ColumnDefinitions>
+                                <units:StateRadioButton x:Name="radio1"
+                                                        GroupName="radio"
+                                                        Content="추천 현황"
+                                                        IsChecked="True"/>
+                                <Grid Grid.Column="1">
+                                    <units:StateRadioButton x:Name="radio2"
+                                                            GroupName="radio"
+                                                            Content="{Binding GuestCount}" 
+                                                            Tag="guest"/>
+                                    <ToggleButton x:Name="toggle" Style="{StaticResource TGL.EXPAND}"/>
+                                </Grid>
+                                <Border x:Name="bdBottom"
+                                        Height="2.5"
+                                        Background="#775A28"
+                                        Grid.ColumnSpan="2"
+                                        Width="160"
+                                        HorizontalAlignment="Left"
+                                        VerticalAlignment="Bottom">
+                                    <Border.RenderTransform>
+                                        <TransformGroup>
+                                            <TranslateTransform X="0" Y="0"/>
+                                        </TransformGroup>
+                                    </Border.RenderTransform>
+                                </Border>
+                            </Grid>
+                        </Border>
+                        <Border x:Name="bdContent" 
+                                Height="104" 
+                                BorderThickness="0 0 0 1" 
+                                BorderBrush="#775A28" 
+                                Padding="0 2 0 6">
+                            <ContentPresenter x:Name="content" ContentSource="DataContext"/>
+                        </Border>
+                    </StackPanel>
+                    <ControlTemplate.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=radio1, Path=IsChecked}" Value="True">
+                            <Setter TargetName="content" Property="ContentTemplate" Value="{StaticResource LBX.FRIENDS}"/>
+                            <DataTrigger.ExitActions>
+                                <BeginStoryboard Storyboard="{StaticResource OnUnchecking}"/>
+                            </DataTrigger.ExitActions>
+                            <DataTrigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource OnChecking}"/>
+                            </DataTrigger.EnterActions>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=radio2, Path=IsChecked}" Value="True">
+                            <Setter TargetName="content" Property="ContentTemplate" Value="{StaticResource LBX.GUEST}"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=toggle, Path=IsChecked}" Value="True">
+                            <DataTrigger.ExitActions>
+                                <BeginStoryboard Storyboard="{StaticResource TOnUnchecking}"/>
+                            </DataTrigger.ExitActions>
+                            <DataTrigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource TOnChecking}"/>
+                            </DataTrigger.EnterActions>
+                        </DataTrigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#11CCBD90"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

@@ -1,0 +1,40 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="/Lol.Store;component/Themes/Commons/LockButton.xaml"/>
+        <ResourceDictionary Source="/Lol.Store;component/Themes/Commons/TopRightContent.xaml"/>
+        <ResourceDictionary Source="/Lol.Store;component/Themes/Commons/StoreListItem.xaml"/>
+        <ResourceDictionary Source="/Lol.Store;component/Themes/Commons/StoreList.xaml"/>
+        <ResourceDictionary Source="/Lol.Store;component/Themes/Commons/Category.xaml"/>
+        <ResourceDictionary Source="/Lol.Store;component/Themes/Commons/CategoryItem.xaml"/>
+        <ResourceDictionary Source="/Lol.Store;component/Themes/Commons/FilterList.xaml"/>
+        <ResourceDictionary Source="/Lol.Store;component/Themes/Commons/FilterListItem.xaml"/>
+        <ResourceDictionary Source="/Lol.Store;component/Themes/Commons/StoreCheckBox.xaml"/>
+        <ResourceDictionary Source="/Lol.Store;component/Themes/Commons/SortComboBox.xaml"/>
+        <ResourceDictionary Source="/Lol.Store;component/Themes/Commons/SortComboBoxItem.xaml"/>
+        <ResourceDictionary Source="/Lol.Store;component/Themes/Commons/SearchTextBox.xaml"/>
+        <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Home/PopularityInListItem.xaml"/>
+        <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Home/PopularityInList.xaml"/>
+        <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Home/PopularityListItem.xaml"/>
+        <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Home/PopularityList.xaml"/>
+        <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Home/SetListItem.xaml"/>
+        <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Home/SetList.xaml"/>
+        <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Home/NewSkin.xaml"/>
+        <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Home/NewSkinList.xaml"/>
+        <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Champions/ItemMenu.xaml"/>
+        <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Skin/SkinLeftMenu.xaml"/>
+        <ResourceDictionary Source="/Lol.Store;component/Themes/Units/TFT/TFTItemMenu.xaml"/>
+        <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Loot/LootItemMenu.xaml"/>
+        <ResourceDictionary Source="/Lol.Store;component/Themes/Units/Etc/EtcItemMenu.xaml"/>
+        
+        <ResourceDictionary Source="/Lol.Store;component/Themes/Views/ChampionsView.xaml"/>
+        <ResourceDictionary Source="/Lol.Store;component/Themes/Views/HomeView.xaml"/>
+        <ResourceDictionary Source="/Lol.Store;component/Themes/Views/SkinView.xaml"/>
+        <ResourceDictionary Source="/Lol.Store;component/Themes/Views/TFTView.xaml"/>
+        <ResourceDictionary Source="/Lol.Store;component/Themes/Views/LootView.xaml"/>
+        <ResourceDictionary Source="/Lol.Store;component/Themes/Views/EtcView.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+  
+</ResourceDictionary>

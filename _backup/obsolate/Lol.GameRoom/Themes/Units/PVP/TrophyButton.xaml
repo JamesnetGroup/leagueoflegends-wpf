@@ -1,0 +1,52 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:units="clr-namespace:Lol.GameRoom.UI.Units"
+                    xmlns:ctrls="clr-namespace:DevNcore.LayoutSupport.Leagueoflegends.Controls;assembly=DevNcore.LayoutSupport.Leagueoflegends">
+    
+    <LinearGradientBrush x:Key="BTN.BDR" StartPoint="0.5, 0" EndPoint="0.5, 1">
+        <GradientStop Color="#CAAD6F" Offset="0"/>
+        <GradientStop Color="#A48037" Offset="0.5"/>
+        <GradientStop Color="#765A2D" Offset="1"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="BTN.BDR.OVER" StartPoint="0.5, 0" EndPoint="0.5, 1">
+        <GradientStop Color="#F1E8D6" Offset="0"/>
+        <GradientStop Color="#E0C995" Offset="0.5"/>
+        <GradientStop Color="#CEA647" Offset="1"/>
+    </LinearGradientBrush>
+
+    <Style TargetType="{x:Type units:TrophyButton}">
+        <Setter Property="Background" Value="#21272D"/>
+        <Setter Property="BorderBrush" Value="{StaticResource BTN.BDR}"/>
+        <Setter Property="BorderThickness" Value="1 1 1 1"/>
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="Margin" Value="0 8 0 0"/>
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type units:TrophyButton}">
+                    <Border Width="40" 
+                            Height="32" 
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}">
+                        <ctrls:RiotIcon x:Name="path" 
+                                        Width="18" 
+                                        Height="18" 
+                                        IconType="Trophy" 
+                                        Fill="#D3C69C" 
+                                        VerticalAlignment="Center" 
+                                        HorizontalAlignment="Center"/>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="{StaticResource BTN.BDR.OVER}"/>
+                            <Setter TargetName="path" Property="Fill" Value="#F2E9D8"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

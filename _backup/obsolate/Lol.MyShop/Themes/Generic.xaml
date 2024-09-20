@@ -1,0 +1,10 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary Source="/Lol.MyShop;component/Themes/Units/Title.xaml"/>
+		<ResourceDictionary Source="/Lol.MyShop;component/Themes/Units/ShopItem.xaml"/>
+		<ResourceDictionary Source="/Lol.MyShop;component/Themes/Units/EventInfo.xaml"/>
+		<ResourceDictionary Source="/Lol.MyShop;component/Themes/Views/MyShopView.xaml"/>
+	</ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

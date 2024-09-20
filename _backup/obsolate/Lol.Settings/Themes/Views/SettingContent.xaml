@@ -1,0 +1,98 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:ctrls="clr-namespace:DevNcore.LayoutSupport.Leagueoflegends.Controls;assembly=DevNcore.LayoutSupport.Leagueoflegends"
+                    xmlns:units="clr-namespace:Lol.Settings.UI.Units"
+                    xmlns:views="clr-namespace:Lol.Settings.UI.Views"
+                    xmlns:james="clr-namespace:Jamesnet.Wpf.Controls;assembly=Jamesnet.Wpf">
+
+    <LinearGradientBrush x:Key="VIEW.BDR" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#00010A13" Offset="0"/>
+        <GradientStop Color="#010A13" Offset="0.5"/>
+        <GradientStop Color="#010A13" Offset="1"/>
+    </LinearGradientBrush>
+
+    <Style TargetType="{x:Type ctrls:RiotButton}" x:Key="BTN.RESTORE">
+        <Setter Property="Width" Value="150"/>
+        <Setter Property="Content" Value="기본값 복원"/>
+    </Style>
+
+    <Style TargetType="{x:Type ctrls:RiotButton}" x:Key="BTN.DONE">
+        <Setter Property="BorderThickness" Value="2 2 2 2"/>
+        <Setter Property="FontSize" Value="13"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Width" Value="90"/>
+        <Setter Property="Content" Value="완료"/>
+    </Style>
+
+    <Style TargetType="{x:Type views:SettingContent}">
+        <Setter Property="Width" Value="700"/>
+        <Setter Property="Height" Value="600"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type views:SettingContent}">
+                    <Border Background="#010A13"
+                            BorderBrush="#463714"
+                            BorderThickness="2">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="75"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="30"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="175"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <!--CurrentMenu-->
+                            <units:CurrentMenu Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+                            <ctrls:RiotButton Grid.Row="0"
+                                              Grid.Column="1"
+                                              HorizontalAlignment="Right"
+                                              VerticalAlignment="Top"
+                                              Margin="0 20 15 0"
+                                              Style="{StaticResource BTN.RESTORE}"/>
+
+                            <!--MenuList-->
+                            <units:MenuList Grid.Column="0"
+                                            Grid.Row="1" Grid.RowSpan="2"
+                                            Margin=" 0 0 0 30"
+                                            ItemsSource="{Binding SettingMenus }"
+                                            SelectedItem="{Binding CurrentSettingMenu}"/>
+
+                            <Border Grid.Column="0"
+                                    Grid.Row="2"
+                                    Background="{StaticResource VIEW.BDR}"/>
+
+                            <!--CurrentContent-->
+                            <james:JamesRegion Grid.Row="1"
+                                               Grid.Column="1"
+                                               Margin="0 0 0 30"
+                                               RegionName="SettingContentRegion"/>
+
+                            <ctrls:RiotButton Grid.Row="2"
+                                              Grid.Column="0" Grid.ColumnSpan="2"
+                                              HorizontalAlignment="Center"
+                                              VerticalAlignment="Bottom"
+                                              Command="{Binding CompleteCommand}"
+                                              CommandParameter="{Binding RelativeSource={RelativeSource AncestorType=ctrls:Modal}}"
+                                              Style="{StaticResource BTN.DONE}"/>
+
+                            <Border Grid.Row="0"
+                                    Grid.Column="0" Grid.ColumnSpan="2"
+                                    BorderBrush="#22ffffff"
+                                    SnapsToDevicePixels="True"
+                                    UseLayoutRounding="True"
+                                    BorderThickness="0 0 0 0.5"
+                                    Margin="0 0 0 6"
+                                    Width="680"
+                                    HorizontalAlignment="Center"/>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

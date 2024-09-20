@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DevNcore.UI.Foundation" Version="1.0.9" />
+    <PackageReference Include="DevNcore.WPF" Version="1.0.9" />
+    <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.110" />
+    <PackageReference Include="XamlDesign.Wpf" Version="1.0.0.22" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Lol.Database\Lol.Database.csproj" />
+    <ProjectReference Include="..\Lol.Devices\Lol.Devices.csproj" />
+    <ProjectReference Include="..\Lol.Foundation\Lol.Foundation.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\InputMode.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\InputSetting.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Views\AlarmContent.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Views\BlockContent.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Views\ChatContent.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Views\GeneralContent.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Views\SoundContent.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Views\VoiceContent.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+</Project>

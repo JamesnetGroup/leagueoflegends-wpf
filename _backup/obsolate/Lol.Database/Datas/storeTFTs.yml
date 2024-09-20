@@ -1,0 +1,65 @@
+﻿- seq: 0
+  name: 기계와 장치 패스 메가 세트
+  imgSource: Champ,Vi_50
+  rP: 12990
+  bE: 0
+- seq: 1
+  name: 기계와 장치 패스 자매 세트
+  imgSource: Champ,Vi_50
+  rP: 6500
+  bE: 0
+- seq: 2
+  name: 기계와 장치 패스+
+  imgSource: Champ,Thresh_30
+  rP: 1295
+  bE: 0
+- seq: 3
+  name: 기계와 장치 패스 + 세트
+  imgSource: Champ,Yasuo_41
+  rP: 3206
+  bE: 0
+- seq: 4
+  name: 미니 바이 + 펑펑 효과
+  imgSource: Champ,Kaisa_30
+  rP: 1900
+  bE: 0
+- seq: 5
+  name: 미니 에코 + 펑펑 효과
+  imgSource: Champ,Volibear_7
+  rP: 1900
+  bE: 0
+- seq: 6
+  name: 영리한 발명가 알
+  imgSource: Champ,Yasuo_40
+  rP: 490
+  bE: 0
+- seq: 7
+  name: 영리한 발명가 알 10+1개
+  imgSource: Champ,Karma_50
+  rP: 4900
+  bE: 0
+- seq: 8
+  name: 1성 꽥꽥이
+  imgSource: Champ,Thresh_30
+  rP: 750
+  bE: 0
+- seq: 9
+  name: 1성 꿀벌 꽥꽥이
+  imgSource: Champ,Morgana_50
+  rP: 925
+  bE: 0
+- seq: 10
+  name: 1성 꿀벌 말캉이
+  imgSource: Champ,Vex_50
+  rP: 925
+  bE: 0
+- seq: 11
+  name: 1성 리오
+  imgSource: Champ,Yone_50
+  rP: 925
+  bE: 0
+- seq: 12
+  name: 1성 마법공학 말캉이
+  imgSource: Champ,Lillia_3
+  rP: 925
+  bE: 0

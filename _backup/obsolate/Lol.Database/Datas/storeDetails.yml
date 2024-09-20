@@ -1,0 +1,48 @@
+﻿- seq: 1
+  typeSeq: 1
+  name: CHAMPIONS
+- seq: 2
+  typeSeq: 1
+  name: ETERNALS
+- seq: 3
+  typeSeq: 1
+  name: BUNDLES
+- seq: 4
+  typeSeq: 2
+  name: 스킨
+- seq: 5
+  typeSeq: 2
+  name: 크로마
+- seq: 6
+  typeSeq: 2
+  name: 세트
+- seq: 7
+  typeSeq: 3
+  name: 전략가
+- seq: 8
+  typeSeq: 3
+  name: 결투장 스킨
+- seq: 9
+  typeSeq: 3
+  name: 별 파편
+- seq: 10
+  typeSeq: 5
+  name: 감정표현
+- seq: 11
+  typeSeq: 5
+  name: 격전 티켓
+- seq: 12
+  typeSeq: 5
+  name: 와드 스킨
+- seq: 13
+  typeSeq: 5
+  name: 소환사 아이콘
+- seq: 14
+  typeSeq: 5
+  name: 부스트
+- seq: 15
+  typeSeq: 5
+  name: 룬 페이지
+- seq: 16
+  typeSeq: 5
+  name: 세트

@@ -1,0 +1,8 @@
+UNHANDLED EXCEPTIONS FROM PROCESS 10464:
+=====================
+2021-10-06 오전 6:19:18
+System.IO.IOException: 파이프가 끊어졌습니다.
+   위치: System.IO.Pipes.NamedPipeServerStream.CheckConnectOperationsServer()
+   위치: System.IO.Pipes.NamedPipeServerStream.BeginWaitForConnection(AsyncCallback callback, Object state)
+   위치: Microsoft.Build.BackEnd.NodeEndpointOutOfProcBase.PacketPumpProc()
+===================

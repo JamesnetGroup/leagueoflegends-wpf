@@ -1,0 +1,55 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:ctrls="clr-namespace:DevNcore.LayoutSupport.Leagueoflegends.Controls;assembly=DevNcore.LayoutSupport.Leagueoflegends"
+					xmlns:units="clr-namespace:Lol.TeamFight.UI.Units">
+
+	<Style TargetType="{x:Type ctrls:RiotIcon}" x:Key="ICON.TICKET">
+		<Setter Property="Grid.Column" Value="0"/>
+		<Setter Property="IconType" Value="Ticket"/>
+		<Setter Property="Fill" Value="#F0E6D2"/>
+		<Setter Property="Width" Value="45"/>
+		<Setter Property="Height" Value="45"/>
+		<Setter Property="Margin" Value="0 0 5 0"/>
+		<Setter Property="LayoutTransform">
+			<Setter.Value>
+				<RotateTransform Angle="-70"/>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+    <Style TargetType="{x:Type TextBlock}" x:Key="TXB.TITLE">
+        <Setter Property="Grid.Column" Value="1"/>
+        <Setter Property="Text" Value="FATES PASS"/>
+        <Setter Property="FontSize" Value="38"/>
+        <Setter Property="FontFamily" Value="Friz Quadrata Std"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Foreground" Value="#F0E6D2"/>
+        <Setter Property="Margin" Value="-2 15 0 7"/>
+    </Style>
+
+    <Style TargetType="{x:Type Border}" x:Key="BDR.SPLIT">
+        <Setter Property="Grid.ColumnSpan" Value="2"/>
+        <Setter Property="BorderBrush" Value="#BC9D6B"/>
+        <Setter Property="BorderThickness" Value="0 0 0 2"/>
+    </Style>
+	
+	<Style TargetType="{x:Type units:TitleControl}">
+		<Setter Property="Margin" Value="20 30 0 0"/>
+		<Setter Property="HorizontalAlignment" Value="Left"/>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type units:TitleControl}">
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="Auto"/>
+							<ColumnDefinition Width="*"/>
+						</Grid.ColumnDefinitions>
+						<ctrls:RiotIcon Style="{StaticResource ICON.TICKET}"/>
+						<TextBlock Style="{StaticResource TXB.TITLE}"/>
+						<Border Style="{StaticResource BDR.SPLIT}"/>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+</ResourceDictionary>

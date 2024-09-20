@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DevNcore.UI.Design" Version="1.0.9" />
+    <PackageReference Include="DevNcore.UI.Design.Converter" Version="1.0.9" />
+    <PackageReference Include="DevNcore.UI.Design.Geometry" Version="1.0.9" />
+    <PackageReference Include="DevNcore.UI.Foundation" Version="1.0.9" />
+    <PackageReference Include="DevNcore.WPF" Version="1.0.9" />
+    <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.110" />
+    <PackageReference Include="XamlDesign.Wpf" Version="1.0.0.22" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Lol.Database\Lol.Database.csproj" />
+    <ProjectReference Include="..\Lol.Settings.About\Lol.Settings.About.csproj" />
+    <ProjectReference Include="..\Lol.Settings.Client\Lol.Settings.Client.csproj" />
+    <ProjectReference Include="..\Lol.Settings.InGame\Lol.Settings.InGame.csproj" />
+    <ProjectReference Include="..\Lol.Support\Lol.Support.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="UI\Views\SettingContent.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\CurrentContent.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\CurrentMenu.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\MenuList.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Views\EmptyContent.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Views\SettingContent.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+</Project>

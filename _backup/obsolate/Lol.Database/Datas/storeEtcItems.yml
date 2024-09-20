@@ -1,0 +1,65 @@
+﻿- seq: 0
+  name: 2021 월드 챔피언십 챔피언 EDward Gaming
+  imgSource: Champ,Vi_50
+  rP: 350
+  bE: 0
+- seq: 1
+  name: 돈 가방 감정표현
+  imgSource: Champ,Vi_50
+  rP: 0
+  bE: 75000
+- seq: 2
+  name: 총알은 비를 타고 감정표현
+  imgSource: Champ,Thresh_30
+  rP: 0
+  bE: 50000
+- seq: 3
+  name: 시간이 됐군!
+  imgSource: Champ,Yasuo_41
+  rP: 350
+  bE: 0
+- seq: 4
+  name: 지금은 아냐!
+  imgSource: Champ,Kaisa_30
+  rP: 350
+  bE: 0
+- seq: 5
+  name: 감히!
+  imgSource: Champ,Kaisa_30
+  rP: 350
+  bE: 0
+- seq: 6
+  name: 신난다!
+  imgSource: Champ,Volibear_7
+  rP: 350
+  bE: 0
+- seq: 7
+  name: 잡았다!
+  imgSource: Champ,Yasuo_40
+  rP: 350
+  bE: 0
+- seq: 8
+  name: 두두 감정표현
+  imgSource: Champ,Karma_50
+  rP: 350
+  bE: 0
+- seq: 9
+  name: 란 감정표현
+  imgSource: Champ,Thresh_30
+  rP: 350
+  bE: 0
+- seq: 10
+  name: 뾰족이 감정표현
+  imgSource: Champ,Morgana_50
+  rP: 350
+  bE: 0
+- seq: 11
+  name: 삐죽이 감정표현
+  imgSource: Champ,Vex_50
+  rP: 350
+  bE: 0
+- seq: 12
+  name: 골드가 최고야
+  imgSource: Champ,Yone_50
+  rP: 350
+  bE: 0

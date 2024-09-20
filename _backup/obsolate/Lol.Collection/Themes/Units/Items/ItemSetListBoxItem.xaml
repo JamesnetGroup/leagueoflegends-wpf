@@ -1,0 +1,74 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:units="clr-namespace:Lol.Collection.UI.Units"
+                    xmlns:ctrls="clr-namespace:DevNcore.LayoutSupport.Leagueoflegends.Controls;assembly=DevNcore.LayoutSupport.Leagueoflegends">
+
+    <Style TargetType="{x:Type ctrls:CheckBox01}" x:Key="CHK.EXPORT">
+        <Setter Property="Command" Value="{Binding CheckCommand}"/>
+        <Setter Property="Content" Value="{Binding Name}"/>
+        <Setter Property="Foreground" Value="#A09B8C"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Tag" Value="모든 세트를 내보내기 하려면 체크하세요"/>
+        <Setter Property="TooltipPadding" Value="8 8 8 8"/>
+        <Setter Property="ToolTipHorizonOffset" Value="175"/>
+        <Setter Property="ToolTipVerticalOffset" Value="-40"/>
+        <Setter Property="IsChecked" Value="{Binding IsChecked}"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <Style TargetType="{x:Type TextBlock}" x:Key="TXB.CHAMP">
+        <Setter Property="Grid.Column" Value="1"/>
+        <Setter Property="Text" Value="{Binding Champ}"/>
+        <Setter Property="Foreground" Value="#A09B8C"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+    </Style>
+
+    <Style TargetType="{x:Type ctrls:RiotIcon}" x:Key="BTN.MORE">
+        <Setter Property="IconType" Value="More"/>
+        <Setter Property="Margin" Value="0 0 20 0"/>
+        <Setter Property="Width" Value="20"/>
+        <Setter Property="Height" Value="20"/>
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="Fill" Value="#CDBE91"/>
+    </Style>
+    
+    <Style TargetType="{x:Type units:ItemSetListBoxItem}">
+        <Setter Property="Cursor" Value="Hand"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type units:ItemSetListBoxItem}">
+                    <Border x:Name="bd"
+                            Background="Transparent"
+                            BorderThickness="0 0 0 1" 
+                            BorderBrush="#22201C"
+                            Margin="0 0 0 0" 
+                            Padding="8 10 0 10">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <ctrls:CheckBox01 Style="{StaticResource CHK.EXPORT}"/>
+                            <TextBlock Style="{StaticResource TXB.CHAMP}"/>
+                            <Grid Grid.Column="2">
+                                <units:MapListBox />
+                                <ctrls:RiotIcon x:Name="path" 
+                                                Style="{StaticResource BTN.MORE}"/>
+                            </Grid>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter TargetName="bd" Property="Background" Value="#0F171D"/>
+                            <Setter TargetName="path" Property="Fill" Value="#FFEDB5"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

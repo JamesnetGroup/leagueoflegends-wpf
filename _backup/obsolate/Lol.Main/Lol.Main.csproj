@@ -1,0 +1,59 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+	<Nullable>disable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DevNcore.UI.Foundation" Version="1.0.9" />
+    <PackageReference Include="Jamesnet.Wpf" Version="1.0.0.110" />
+    <PackageReference Include="XamlDesign.Wpf" Version="1.0.0.22" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Lol.Clash\Lol.Clash.csproj" />
+    <ProjectReference Include="..\Lol.Collection\Lol.Collection.csproj" />
+    <ProjectReference Include="..\Lol.Data\Lol.Data.csproj" />
+    <ProjectReference Include="..\Lol.Foundation\Lol.Foundation.csproj" />
+    <ProjectReference Include="..\Lol.Friends\Lol.Friends.csproj" />
+    <ProjectReference Include="..\Lol.GameRoom\Lol.GameRoom.csproj" />
+    <ProjectReference Include="..\Lol.Home\Lol.Home.csproj" />
+    <ProjectReference Include="..\Lol.Loot\Lol.Loot.csproj" />
+    <ProjectReference Include="..\Lol.MyShop\Lol.MyShop.csproj" />
+    <ProjectReference Include="..\Lol.Profile\Lol.Profile.csproj" />
+    <ProjectReference Include="..\Lol.Settings\Lol.Settings.csproj" />
+    <ProjectReference Include="..\Lol.Store\Lol.Store.csproj" />
+    <ProjectReference Include="..\Lol.Support\Lol.Support.csproj" />
+    <ProjectReference Include="..\Lol.TeamFight\Lol.TeamFight.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\ChatTool.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\EmptyContent.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\FriendsExpander.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\FriendsList.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\FriendsListItem.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\FriendsSortPopup.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\SocialTool.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+</Project>

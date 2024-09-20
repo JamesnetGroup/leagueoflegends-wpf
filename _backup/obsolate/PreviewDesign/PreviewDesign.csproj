@@ -1,0 +1,41 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DevNcore.LayoutSupport.Leagueoflegends" Version="1.0.9" />
+    <PackageReference Include="DevNcore.UI.Design" Version="1.0.9" />
+    <PackageReference Include="DevNcore.UI.Design.Converter" Version="1.0.9" />
+    <PackageReference Include="DevNcore.UI.Design.Geometry" Version="1.0.9" />
+    <PackageReference Include="DevNcore.UI.Foundation" Version="1.0.9" />
+    <PackageReference Include="DevNcore.WPF" Version="1.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Lol.Clash\Lol.Clash.csproj" />
+    <ProjectReference Include="..\Lol.Collection\Lol.Collection.csproj" />
+    <ProjectReference Include="..\Lol.Database\Lol.Database.csproj" />
+    <ProjectReference Include="..\Lol.Data\Lol.Data.csproj" />
+    <ProjectReference Include="..\Lol.Devices\Lol.Devices.csproj" />
+    <ProjectReference Include="..\Lol.Foundation\Lol.Foundation.csproj" />
+    <ProjectReference Include="..\Lol.Friends\Lol.Friends.csproj" />
+    <ProjectReference Include="..\Lol.GameRoom\Lol.GameRoom.csproj" />
+    <ProjectReference Include="..\Lol.Home\Lol.Home.csproj" />
+    <ProjectReference Include="..\Lol.Loot\Lol.Loot.csproj" />
+    <ProjectReference Include="..\Lol.Main\Lol.Main.csproj" />
+    <ProjectReference Include="..\Lol.MyShop\Lol.MyShop.csproj" />
+    <ProjectReference Include="..\Lol.Profile\Lol.Profile.csproj" />
+    <ProjectReference Include="..\Lol.Resources\Lol.Resources.csproj" />
+    <ProjectReference Include="..\Lol.Settings.About\Lol.Settings.About.csproj" />
+    <ProjectReference Include="..\Lol.Settings.Client\Lol.Settings.Client.csproj" />
+    <ProjectReference Include="..\Lol.Settings.InGame\Lol.Settings.InGame.csproj" />
+    <ProjectReference Include="..\Lol.Settings\Lol.Settings.csproj" />
+    <ProjectReference Include="..\Lol.Store\Lol.Store.csproj" />
+    <ProjectReference Include="..\Lol.TeamFight\Lol.TeamFight.csproj" />
+  </ItemGroup>
+
+</Project>

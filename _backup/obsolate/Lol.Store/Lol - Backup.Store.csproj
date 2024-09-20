@@ -1,0 +1,50 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Update="UI\Views\Champions.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Page Update="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\Category.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\CategoryItem.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\FilterList.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\FilterListItem.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\ItemMenu.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\SearchTextBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\SortComboBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\SortComboBoxItem.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Units\StoreCheckBox.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Views\Champions.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+
+</Project>

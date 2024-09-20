@@ -1,0 +1,44 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:views="clr-namespace:Lol.Clash.UI.Views"
+                    xmlns:units="clr-namespace:Lol.Clash.UI.Units">
+	
+	<LinearGradientBrush x:Key="BDR.TRAN" StartPoint="0.5, 0" EndPoint="0.5, 1">
+		<GradientStop Color="Transparent" Offset="0"/>
+		<GradientStop Color="#9925292F" Offset="0.1"/>
+		<GradientStop Color="#C8BA8E" Offset="0.5"/>
+		<GradientStop Color="#9925292F" Offset="0.9"/>
+		<GradientStop Color="Transparent" Offset="1"/>
+	</LinearGradientBrush>
+	
+	<Style TargetType="{x:Type Border}" x:Key="TRAN.BORDER">
+		<Setter Property="Grid.Column" Value="1"/>
+		<Setter Property="Background" Value="Transparent"/>
+		<Setter Property="BorderBrush" Value="{StaticResource BDR.TRAN}"/>
+		<Setter Property="BorderThickness" Value="0.5 0 0 0"/>
+		<Setter Property="Margin" Value="0 0 0 15"/>
+		<Setter Property="Height" Value="470"/>
+	</Style>
+	
+	<Style TargetType="{x:Type views:HubView}">
+        <Setter Property="Template">
+            <Setter.Value>
+				<ControlTemplate TargetType="{x:Type views:HubView}">
+                    <Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="0.47*"/>
+							<ColumnDefinition Width="*"/>
+						</Grid.ColumnDefinitions>
+						
+						<units:CityCup/>
+						<units:FaqButton/>
+
+						<Border Style="{StaticResource TRAN.BORDER}"/>
+						<units:Manual/>
+                        <units:Schedule/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

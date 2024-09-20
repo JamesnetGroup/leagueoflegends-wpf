@@ -1,0 +1,35 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:james="clr-namespace:Jamesnet.Wpf.Controls;assembly=Jamesnet.Wpf"
+                    xmlns:views="clr-namespace:Lol.Main.UI.Views"
+                    xmlns:units="clr-namespace:Lol.Main.UI.Units">
+    <Style TargetType="{x:Type views:MainContent}">
+        <Setter Property="SnapsToDevicePixels" Value="True"/>
+        <Setter Property="UseLayoutRounding" Value="True"/>
+        <Setter Property="Width" Value="1280"/>
+        <Setter Property="Height" Value="720"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type views:MainContent}">
+                    <Grid>
+                        <units:Wallpaper/>
+                        <Image x:Name="PART_BackgroundImage" Stretch="Fill"/>
+                        <james:JamesGrid Rows="Auto, *" Columns="*">
+                            <james:JamesRegion RegionName="MenuRegion" Panel.ZIndex="10000"/>
+                            <james:JamesGrid Rows="*" Columns="*, 225">
+                                <james:JamesRegion RegionName="ContentsRegion"/>
+                                <james:JamesGrid Rows="Auto, *, Auto" Columns="*" Background="#FF010A13">
+                                    <units:SocialTool/>
+                                    <units:FriendsList/>
+                                    <units:ChatTool/>
+                                </james:JamesGrid>
+                            </james:JamesGrid>
+                        </james:JamesGrid>
+                        <james:JamesRegion RegionName="ModalRegion"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

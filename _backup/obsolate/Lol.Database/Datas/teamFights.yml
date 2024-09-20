@@ -1,0 +1,294 @@
+﻿- seq: 0
+  name: 비취 황제 도깨비
+  level: 1
+  explain: 고귀한 초록색 친구와 함께 제국과 은하를 지배하세요. 패스+로 업그레이드하면 즉시 획득할 수 있습니다.
+  isPremium: true
+  image: lol-goblin.jpg
+  isFree: false
+- seq: 1
+  name: 부탁이야
+  level: 2
+  explain: 살랑꼬리가 원하는 대로 해 줘도 나쁠 거 없잖아요?
+  isPremium: false
+  image: lol-emoji-beg.jpg
+  isFree: true
+- seq: 2
+  name: 1성 커튼 콜
+  level: 3
+  explain: 마지막 한 발로 적을 날려버리세요.
+  isPremium: true
+  image: lol-curtaincall.png
+  isFree: false
+- seq: 3
+  name: 별 파편 30개
+  level: 4
+  explain: 별에서 얻은 이 파편으로 꼬마 전설이를 업그레이드하세요!
+  isPremium: true
+  image: lol-star-item.jpg 
+  isFree: false
+- seq: 4
+  name: 작은 영웅 알
+  level: 5
+  explain: 작은 영웅 꼬마 전설이 아오 신, 배불뚝이, 크릉이 중 하나가 부화할 수 있습니다.
+  isPremium: true
+  image: lol-small-egg.png
+  isFree: false
+- seq: 5
+  name: 1성 칸메이 폭발
+  level: 6
+  explain: 영혼의 불꽃으로 적을 날려버리세요.
+  isPremium: true
+  image: lol-kanmei.png
+  isFree: false
+- seq: 6
+  name: 무작위 감정표현
+  level: 7
+  explain: 무작위 감정표현으로 기분을 나타내 보세요!
+  isPremium: false
+  image: lol-emoji-random.png
+  isFree: true
+- seq: 7
+  name: 별 파편 30개
+  level: 8
+  explain: 별에서 얻은 이 파편으로 꼬마 전설이를 업그레이드하세요!
+  isPremium: true
+  image: lol-star-item.jpg
+  isFree: false
+- seq: 8
+  name: 2성 커튼 콜
+  level: 9
+  explain: 마지막 한 발로 적을 날려버리세요. 유닛들이 함께 발사합니다.
+  isPremium: true
+  image: lol-curtaincall2.png
+  isFree: false
+- seq: 9
+  name: 별 파편 30개
+  level: 10
+  explain: 별에서 얻은 이 파편으로 꼬마 전설이를 업그레이드하세요!
+  isPremium: true
+  image: lol-star-item.jpg
+  isFree: false
+- seq: 10
+  name: 1성 행운의 꿀렁이
+  level: 11
+  explain: 행운과 미소를 가져다주는 황금색 친구입니다. 휘파람을 불면 반응하기도 하죠.
+  isPremium: true
+  image: lol-luckypig.png
+  isFree: false
+- seq: 11
+  name: 꼬마 전설이 알(1~6탄 중 무작위)
+  level: 12
+  explain: 무작위 꼬마 전설이 1~6탄 중 하나가 부화할 수 있습니다.
+  isPremium: false
+  image: lol-legend-egg.png
+  isFree: true
+- seq: 12
+  name: 3성 커튼 콜
+  level: 13
+  explain: 멋진 마지막 한 발로 적을 날려버리세요. 유닛들이 함께 발사합니다.
+  isPremium: true
+  image: lol-curtaincall2.png
+  isFree: false
+- seq: 13
+  name: 별 파편 30개
+  level: 14
+  explain: 별에서 얻은 이 파편으로 꼬마 전설이를 업그레이드하세요!
+  isPremium: true
+  image: lol-star-item.jpg
+  isFree: false
+- seq: 14
+  name: 2성 칸메이 폭발
+  level: 15
+  explain: 영혼의 불꽃으로 적을 날려버리세요. 유닛들이 함께 발사합니다.
+  isPremium: true
+  image: lol-kanmei.png
+  isFree: false
+- seq: 15
+  name: 무작위 감정표현
+  level: 16
+  explain: 무작위 감정표현으로 기분을 나타내 보세요!
+  isPremium: false
+  image: lol-emoji-random.png
+  isFree: true
+- seq: 16
+  name: 별 파편 30개
+  level: 17
+  explain: 별에서 얻은 이 파편으로 꼬마 전설이를 업그레이드하세요!
+  isPremium: true
+  image: lol-star-item.jpg
+  isFree: false
+- seq: 17
+  name: 1성 그림자 낙서
+  level: 18
+  explain: 어두운 물감을 뿌려 적의 품위를 떨어트리세요.
+  isPremium: true
+  image: 
+  isFree: false
+- seq: 18
+  name: 별 파편 30개
+  level: 19
+  explain: 별에서 얻은 이 파편으로 꼬마 전설이를 업그레이드하세요!
+  isPremium: true
+  image: lol-star-item.jpg
+  isFree: false
+- seq: 19
+  name: 여정의 시작 결투장
+  level: 20
+  explain: 출발할 시점을 결정하는 것이 가장 중요할 때도 있습니다.
+  isPremium: true
+  image: 
+  isFree: false
+- seq: 20
+  name: 만세
+  level: 21
+  explain: 멜리스마가 즐거운 비명을 지르고 있습니다.
+  isPremium: false
+  image: 
+  isFree: true
+- seq: 21
+  name: 3성 칸메이 폭발
+  level: 22
+  explain: 영혼의 불꽃으로 적을 날려버리세요. 유닛들이 함께 발사합니다.
+  isPremium: true
+  image: lol-kanmei.png
+  isFree: false
+- seq: 22
+  name: 작은 영웅 알
+  level: 23
+  explain: 작은 영웅 꼬마 전설이 아오 신, 배불뚝이, 크릉이 중 하나가 부화할 수 있습니다.
+  isPremium: true
+  image: lol-small-egg.png
+  isFree: false
+- seq: 23
+  name: 별 파편 30개
+  level: 24
+  explain: 별에서 얻은 이 파편으로 꼬마 전설이를 업그레이드하세요!
+  isPremium: true
+  image: lol-star-item.jpg
+  isFree: false
+- seq: 24
+  name: 2성 그림자 낙서
+  level: 25
+  explain: 어두운 물감을 뿌려 적의 품위를 떨어트리세요. 유닛들이 함께 발사합니다.
+  isPremium: true
+  image: 
+  isFree: false
+- seq: 25
+  name: 꼬마 전설이 알(1~6탄 중 무작위)
+  level: 26
+  explain: 무작위 꼬마 전설이 1~6탄 중 하나가 부화할 수 있습니다.
+  isPremium: false
+  image: lol-legend-egg.png
+  isFree: true
+- seq: 26
+  name: 별 파편 30개
+  level: 27
+  explain: 별에서 얻은 이 파편으로 꼬마 전설이를 업그레이드하세요!
+  isPremium: true
+  image: lol-star-item.jpg
+  isFree: false
+- seq: 27
+  name: 1성 밀려드는 나뭇잎
+  level: 28
+  explain: 나뭇잎의 파도로 적을 날려버리세요.
+  isPremium: true
+  image: 
+  isFree: false
+- seq: 28
+  name: 별 파편 30개
+  level: 29
+  explain: 별에서 얻은 이 파편으로 꼬마 전설이를 업그레이드하세요!
+  isPremium: true
+  image: lol-star-item.jpg
+  isFree: false
+- seq: 29
+  name: 여정의 길 결투장
+  level: 30
+  explain: 같은 미지를 정복하고, 그로부터 성장할 수 있도록 도와줍니다.
+  isPremium: true
+  image: 
+  isFree: false
+- seq: 30
+  name: 무작위 감정표현
+  level: 31
+  explain: 무작위 감정표현으로 기분을 나타내 보세요!
+  isPremium: false
+  image: lol-emoji-random.png
+  isFree: true
+- seq: 31
+  name: 2성 밀려드는 나뭇잎
+  level: 32
+  explain: 나뭇잎의 파도로 적을 날려버리세요. 유닛들이 함께 발사합니다.
+  isPremium: true
+  image: 
+  isFree: false
+- seq: 32
+  name: 별 파편 30개
+  level: 33
+  explain: 별에서 얻은 이 파편으로 꼬마 전설이를 업그레이드하세요!
+  isPremium: true
+  image: lol-star-item.jpg
+  isFree: false
+- seq: 33
+  name: 3성 그림자 낙서
+  level: 34
+  explain: 어두운 물감을 뿌려 적의 품위를 떨어트리세요. 유닛들이 함께 발사합니다.
+  isPremium: true
+  image: 
+  isFree: false
+- seq: 34
+  name: 작은 영웅 알
+  level: 35
+  explain: 작은 영웅 꼬마 전설이 아오 신, 배불뚝이, 크릉이 중 하나가 부화할 수 있습니다.
+  isPremium: true
+  image: lol-small-egg.png
+  isFree: false
+- seq: 35
+  name: 꼬마 전설이 알(1~6탄 중 무작위)
+  level: 36
+  explain: 무작위 꼬마 전설이 1~6탄 중 하나가 부화할 수 있습니다.
+  isPremium: false
+  image: lol-legend-egg.png
+  isFree: true
+- seq: 36
+  name: 별 파편 30개
+  level: 37
+  explain: 별에서 얻은 이 파편으로 꼬마 전설이를 업그레이드하세요!
+  isPremium: true
+  image: lol-star-item.jpg
+  isFree: false
+- seq: 37
+  name: 3성 밀려드는 나뭇잎
+  level: 38
+  explain: 나뭇잎의 파도로 적을 날려버리세요. 유닛들이 함께 발사합니다.
+  isPremium: true
+  image: 
+  isFree: false
+- seq: 38
+  name: 별 파편 30개
+  level: 39
+  explain: 별에서 얻은 이 파편으로 꼬마 전설이를 업그레이드하세요!
+  isPremium: true
+  image: lol-star-item.jpg
+  isFree: false
+- seq: 39
+  name: 2성 행운의 꿀렁이
+  level: 40
+  explain: 행운과 미소를 가져다주는 황금색 친구입니다. 휘파람을 불면 반응하기도 하죠.
+  isPremium: true
+  image: lol-luckypig.png
+  isFree: false
+- seq: 40
+  name: 여정의 끝 결투장
+  level: 41
+  explain: 여정의 끝은 또 다른 시작일 뿐입니다.
+  isPremium: false
+  image: 
+  isFree: true
+- seq: 41
+  name: 넌 이미 죽어 있다
+  level: 42
+  explain: 뭐라고?!
+  isPremium: false
+  image: 
+  isFree: true

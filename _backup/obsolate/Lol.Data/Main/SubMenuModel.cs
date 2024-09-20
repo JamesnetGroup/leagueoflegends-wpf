@@ -1,0 +1,3 @@
+﻿namespace Lol.Data.Main
+{
+}

@@ -1,0 +1,203 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:views="clr-namespace:Lol.GameRoom.UI.Views"
+                    xmlns:units="clr-namespace:Lol.GameRoom.UI.Units"
+                    xmlns:ctrls="clr-namespace:DevNcore.LayoutSupport.Leagueoflegends.Controls;assembly=DevNcore.LayoutSupport.Leagueoflegends">
+
+    <LinearGradientBrush x:Key="GEO.FILL" StartPoint="0.5, 0" EndPoint="0.5, 1">
+        <GradientStop Color="#B28830" Offset="0"/>
+        <GradientStop Color="#A37E30" Offset="0.5"/>
+        <GradientStop Color="#87672B" Offset="1"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="GEO.FILL.OVER" StartPoint="0.5, 0" EndPoint="0.5, 1">
+        <GradientStop Color="#EDE1C9" Offset="0"/>
+        <GradientStop Color="#DBBF84" Offset="0.5"/>
+        <GradientStop Color="#CBA047" Offset="1"/>
+    </LinearGradientBrush>
+
+    <Style TargetType="{x:Type TextBlock}" x:Key="TXB.MODE">
+        <Setter Property="Text" Value="입력 모드"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="Foreground" Value="#F0E6D2"/>
+        <Setter Property="Margin" Value="0 10 0 0"/>
+    </Style>
+
+    <Style TargetType="{x:Type TextBlock}" x:Key="TXB.SUBTITLE">
+        <Setter Property="Foreground" Value="#F0E6D2"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+    </Style>
+    
+    <Style TargetType="{x:Type ctrls:RiotGameButton}" x:Key="BTN.CONFIRM">
+        <Setter Property="Command" Value="{Binding ConfirmCommand}"/>
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="0 0 0 10"/>
+        <Setter Property="Content" Value="확인"/>
+    </Style>
+
+    <Style TargetType="{x:Type RadioButton}" x:Key="IN.RDO">
+        <Setter Property="Foreground" Value="#BEB187"/>
+        <Setter Property="BorderThickness" Value="0"/>
+        <Setter Property="Margin" Value="0 20 0 0"/>
+        <Setter Property="FontSize" Value="12"/>
+        <Setter Property="Content" Value="{Binding InputMode.ItemName}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <ctrls:RiotIcon x:Name="dia" Grid.Column="0" IconType="DiaEmpty" Width="14" Height="14"
+										HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Fill="{StaticResource GEO.FILL}"/>
+                        <TextBlock Grid.Column="1" 
+                                   Margin="5 0 0 0"
+								   Text="{Binding RelativeSource={RelativeSource AncestorType=RadioButton}, Path=Content}"/>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Foreground" Value="#F0E6D2"/>
+                            <Setter TargetName="dia" Property="Fill" Value="{StaticResource GEO.FILL.OVER}"/>
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Foreground" Value="#F0E6D2"/>
+                            <Setter TargetName="dia" Property="IconType" Value="DiaFill"/>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type ListBoxItem}" x:Key="IN.LBXI">
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ListBoxItem}">
+                    <RadioButton Style="{StaticResource IN.RDO}" 
+                                 Content="{Binding ItemName}"
+                                 IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=IsSelected}"/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type ListBox}" x:Key="LBX.GAMETYPE">
+        <Setter Property="ItemContainerStyle" Value="{StaticResource IN.LBXI}"/>
+        <Setter Property="ItemsSource" Value="{Binding CustomGameType}"/>
+        <Setter Property="SelectedValuePath" Value="ItemName"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Margin" Value="0 0 0 20"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ListBox}">
+                    <ItemsPresenter/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="ItemsPanel">
+            <Setter.Value>
+                <ItemsPanelTemplate>
+                    <UniformGrid Columns="3"/>
+                </ItemsPanelTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type ListBox}" x:Key="LBX.SPECTATOR">
+        <Setter Property="ItemContainerStyle" Value="{StaticResource IN.LBXI}"/>
+        <Setter Property="ItemsSource" Value="{Binding SpectatorMode}"/>
+        <Setter Property="SelectedValuePath" Value="ItemName"/>
+        <Setter Property="Background" Value="Transparent"/>
+        <Setter Property="Margin" Value="0 0 0 20"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ListBox}">
+                    <ItemsPresenter/>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="ItemsPanel">
+            <Setter.Value>
+                <ItemsPanelTemplate>
+                    <UniformGrid Columns="3"/>
+                </ItemsPanelTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type ctrls:LucasComboBoxItem}" x:Key="IN.CBXI">
+        <!--<Setter Property="Content" Value="{Binding Count}"/>-->
+    </Style>
+    
+    <Style TargetType="{x:Type ctrls:LucasComboBox}" x:Key="CBX.DEVICE">
+        <Setter Property="Width" Value="300"/>
+        <Setter Property="Height" Value="30"/>
+        <Setter Property="Margin" Value="-190 10 0 20"/>
+        <Setter Property="ItemContainerStyle" Value="{StaticResource IN.CBXI}"/>
+        <!--<Setter Property="Content" Value="{Binding RelativeSource={RelativeSource Self}, Path=SelectedItem.Count}"/>-->
+        <Setter Property="Foreground" Value="#77776E"/>
+    </Style>
+
+    <Style TargetType="{x:Type Border}" x:Key="BDR.SECTION">
+        <Setter Property="BorderThickness" Value="0 1 0 0"/>
+        <Setter Property="BorderBrush" Value="#606F6E"/>
+        <Setter Property="VerticalAlignment" Value="Bottom"/>
+        <Setter Property="Grid.Row" Value="0"/>
+    </Style>
+
+    <Style TargetType="{x:Type views:CreateCustomView}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type views:CreateCustomView}">
+                    <Grid Margin="36 0 36 0">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <units:MapListCustom/>
+                        <Border Style="{StaticResource BDR.SECTION}"/>
+                        <units:TrophyButton/>
+                        <Grid Grid.Row="1" 
+                              Margin="0 25 0 0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"/>
+                                <ColumnDefinition Width="1*"/>
+                            </Grid.ColumnDefinitions>
+                            <StackPanel>
+                                <TextBlock Style="{StaticResource TXB.SUBTITLE}" Text="이름"/>
+                                <ctrls:RiotTextBox x:Name="txtSearch" 
+                                                   MinWidth="300"
+                                                   Height="30"
+                                                   Text="잠시만한다님의 게임"
+                                                   Foreground="#F0E6C6"
+                                                   IconVisibility="Collapsed"
+                                                   Margin="0 10 0 20"/>
+                                <TextBlock Style="{StaticResource TXB.SUBTITLE}" Text="팀 인원 수:"/>
+                                <ctrls:LucasComboBox Style="{StaticResource CBX.DEVICE}" 
+                                                     ItemsSource="{Binding UserCount}"
+                                                     SelectedValue="{Binding CurrentUserCount}"/>
+                                <TextBlock Style="{StaticResource TXB.SUBTITLE}" Text="비밀번호 (선택 사항)"/>
+                                <ctrls:RiotTextBox MinWidth="300"
+                                                   Height="30"
+                                                   IconVisibility="Collapsed"/>
+                            </StackPanel>
+                            <StackPanel Grid.Column="1">
+                                <TextBlock Style="{StaticResource TXB.SUBTITLE}" Text="게임 종류"/>
+                                <ListBox Style="{StaticResource LBX.GAMETYPE}"/>
+                                <TextBlock Style="{StaticResource TXB.SUBTITLE}" Text="관전 허용" Margin=" 0 25 0 0"/>
+                                <ListBox Style="{StaticResource LBX.SPECTATOR}"/>
+                            </StackPanel>
+                        </Grid>
+                        <ctrls:RiotGameButton Style="{StaticResource BTN.CONFIRM}" Grid.RowSpan="2"/>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+</ResourceDictionary>

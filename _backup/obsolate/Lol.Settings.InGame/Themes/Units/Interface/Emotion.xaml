@@ -1,0 +1,54 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+					xmlns:units="clr-namespace:Lol.Settings.InGame.UI.Units"
+					xmlns:ctrls="clr-namespace:DevNcore.LayoutSupport.Leagueoflegends.Controls;assembly=DevNcore.LayoutSupport.Leagueoflegends">
+
+	<Style TargetType="{x:Type TextBlock}" x:Key="TXB.BASE">
+		<Setter Property="FontSize" Value="14"/>
+		<Setter Property="FontWeight" Value="Bold"/>
+		<Setter Property="Foreground" Value="#F0E6D2"/>
+		<Setter Property="Margin" Value="0 25 0 0"/>
+	</Style>
+
+	<Style TargetType="{x:Type ctrls:RiotComboBoxItem}" x:Key="IN.CBXI">
+		<Setter Property="Content" Value="{Binding ItemName}"/>
+	</Style>
+
+	<Style TargetType="{x:Type ctrls:RiotComboBox}" x:Key="CBX.BASE">
+		<Setter Property="Width" Value="200"/>
+		<Setter Property="Height" Value="30"/>
+		<Setter Property="Margin" Value="0 10 0 0"/>
+		<Setter Property="ItemContainerStyle" Value="{StaticResource IN.CBXI}"/>
+		<Setter Property="SelectedValuePath" Value="ItemName"/>
+		<Setter Property="Content" Value="{Binding RelativeSource={RelativeSource Self}, Path=SelectedItem.ItemName}"/>
+	</Style>
+
+	<Style TargetType="{x:Type ctrls:RiotComboBox}" BasedOn="{StaticResource CBX.BASE}" x:Key="CBX.EMOTION">
+		<Setter Property="ItemsSource" Value="{Binding Emotions}"/>
+		<Setter Property="SelectedValue" Value="{Binding Model.Emotion}"/>
+	</Style>
+
+	<Style TargetType="{x:Type ctrls:RiotComboBox}" BasedOn="{StaticResource CBX.BASE}" x:Key="CBX.EMOTION.SIZE">
+		<Setter Property="ItemsSource" Value="{Binding EmotionSizes}"/>
+		<Setter Property="SelectedValue" Value="{Binding Model.EmotionSize}"/>
+	</Style>
+
+	<Style TargetType="{x:Type units:Emotion}">
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type units:Emotion}">
+					<StackPanel>
+						<TextBlock Style="{StaticResource TXB.BASE}" Text="감정표현"/>
+						<ctrls:CheckBox02 Margin="0 10 0 0" Content="적 감정표현 무시 (Ctrl+1~4 제외)" IsChecked="{Binding Model.IgnoreEnemyEmotion}"/>
+
+						<TextBlock Style="{StaticResource TXB.BASE}" Text="감정표현 표시"/>
+						<ctrls:RiotComboBox Style="{StaticResource CBX.EMOTION}"/>
+
+						<TextBlock Style="{StaticResource TXB.BASE}" Text="감정표현 크기"/>
+						<ctrls:RiotComboBox Style="{StaticResource CBX.EMOTION.SIZE}"/>
+					</StackPanel>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+</ResourceDictionary>
