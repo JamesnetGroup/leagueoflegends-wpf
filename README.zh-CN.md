@@ -12,7 +12,8 @@
 
 #### 英雄联盟 XAML-Based 系列：
 [英雄联盟客户端 (WPF)](https://github.com/jamesnetgroup/leagueoflegends-wpf)  
-[英雄联盟客户端 (Uno-Platform)](https://github.com/jamesnetgroup/leagueoflegends-uno)
+[英雄联盟客户端 (Uno-Platform)](https://github.com/jamesnetgroup/leagueoflegends-uno)  
+[英雄联盟客户端 (WinUI 3)](https://github.com/jamesnetgroup/leagueoflegends-winui3)
 
 ## 项目介绍
 
