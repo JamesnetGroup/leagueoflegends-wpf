@@ -12,7 +12,8 @@ This is a high-quality reproduction project of the League of Legends client usin
 
 #### League of Legends XAML-Based Series:
 [League of Legends Client (WPF)](https://github.com/jamesnetgroup/leagueoflegends-wpf)  
-[League of Legends Client (Uno-Platform)](https://github.com/jamesnetgroup/leagueoflegends-uno)
+[League of Legends Client (Uno-Platform)](https://github.com/jamesnetgroup/leagueoflegends-uno)  
+[League of Legends Client (WinUI 3)](https://github.com/jamesnetgroup/leagueoflegends-winui3)
 
 ## Project Introduction
 
