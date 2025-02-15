@@ -21,6 +21,8 @@ WPF를 활용한 리그 오브 레전드 클라이언트의 고품질 재현 프
 
 [리그 오브 레전드 클라이언트 (WPF)](https://github.com/jamesnetgroup/leagueoflegends-wpf)  
 [리그 오브 레전드 클라이언트 (Uno-Platform)](https://github.com/jamesnetgroup/leagueoflegends-uno)  
+[리그 오브 레전드 클라이언트 (OpenSilver)](https://github.com/jamesnetgroup/leagueoflegends-opensilver)  
+[리그 오브 레전드 클라이언트 (UWP)](https://github.com/JamesnetGroup/leagueoflegends-uwp)  
 [리그 오브 레전드 클라이언트 (WinUI 3)](https://github.com/jamesnetgroup/leagueoflegends-winui3)
 
 ## 프로젝트 소개
