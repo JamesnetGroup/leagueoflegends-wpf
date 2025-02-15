@@ -21,6 +21,8 @@ This is a high-quality reproduction project of the League of Legends client usin
 
 [League of Legends Client (WPF)](https://github.com/jamesnetgroup/leagueoflegends-wpf)  
 [League of Legends Client (Uno-Platform)](https://github.com/jamesnetgroup/leagueoflegends-uno)  
+[League of Legends Client (OpenSilver)](https://github.com/jamesnetgroup/leagueoflegends-opensilver)  
+[League of Legends Client (UWP)](https://github.com/JamesnetGroup/leagueoflegends-uwp)  
 [League of Legends Client (WinUI 3)](https://github.com/jamesnetgroup/leagueoflegends-winui3)
 
 ## Project Introduction
