@@ -1,4 +1,4 @@
-using Jamesnet.Core;
+using Jamesnet.Foundation;
 using Leagueoflegends.Main.UI.Views;
 using Leagueoflegends.Social.UI.Views;
 using Leagueoflegends.Tft.UI.Views;
@@ -37,7 +37,6 @@ public class LeagueOfLegendsBootstrapper : AppBootstrapper
         ViewModelMapper.Register<OptionContent, OptionContentViewModel>();
         ViewModelMapper.Register<SocialContent, SocialContentViewModel>();
         ViewModelMapper.Register<OverviewContent, OverviewContentViewModel>();
-        //ViewModelMapper.Register<TftContent, TftContentViewModel>();
         ViewModelMapper.Register<SubMenuContent, SubMenuContentViewModel>();
         ViewModelMapper.Register<OptionMenuContent, OptionMenuContentViewModel>();
 
@@ -53,7 +52,7 @@ public class LeagueOfLegendsBootstrapper : AppBootstrapper
         ViewModelMapper.Register<VoiceContent, VoiceContentViewModel>();
     }
 
-    protected override void RegisterDependencies()
+    protected override void RegisterDependencies(IContainer container)
     {
         Container.RegisterSingleton<IMenuManager, MenuManager>();
 
@@ -92,7 +91,10 @@ public class LeagueOfLegendsBootstrapper : AppBootstrapper
         Container.RegisterSingleton<IView, VoiceContent>("VoiceContent");
         Container.RegisterSingleton<IView, HotKeyContent>("HotKeyContent");
         Container.RegisterSingleton<IView, VolumeContent>("VolumeContent");
+    }
 
+    protected override void SettingsLayer(ILayerManager layer, IContainer container)
+    {
         IView mainContent = Container.Resolve<MainContent>();
         IView subNavContent = Container.Resolve<SubMenuContent>();
         IView socialContent = Container.Resolve<SocialContent>();
@@ -104,10 +106,6 @@ public class LeagueOfLegendsBootstrapper : AppBootstrapper
         Layer.Mapping("SocialLayer", socialContent);
         Layer.Mapping("SubMenuLayer", subMenuContent);
         Layer.Mapping("OptionMenuLayer", optionMenuContent);
-    }
-
-    protected override void OnStartup()
-    {
     }
 }
 

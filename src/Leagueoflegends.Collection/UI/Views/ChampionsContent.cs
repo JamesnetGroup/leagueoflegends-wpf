@@ -1,8 +1,10 @@
-using Jamesnet.Windows;
+using Jamesnet.Foundation;
+using Jamesnet.Platform.WPF;
+using System.Windows.Controls;
 
 namespace Leagueoflegends.Collection.UI.Views;
 
-public class ChampionsContent : WPFView
+public class ChampionsContent : ContentControl, IView
 {
     public ChampionsContent()
     { 

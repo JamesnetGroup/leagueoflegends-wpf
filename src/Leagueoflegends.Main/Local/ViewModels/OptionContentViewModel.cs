@@ -1,4 +1,4 @@
-using Jamesnet.Core;
+using Jamesnet.Foundation;
 using Leagueoflegends.Support.Local.Services;
 using System.Windows.Input;
 

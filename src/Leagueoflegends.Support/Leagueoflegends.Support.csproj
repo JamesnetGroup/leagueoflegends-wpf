@@ -1726,7 +1726,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Jamesnet.Windows\Jamesnet.Windows.csproj" />
+    <ProjectReference Include="..\Jamesnet.Platform.WPF\Jamesnet.Platform.WPF.csproj" />
   </ItemGroup>
 
   <ItemGroup>

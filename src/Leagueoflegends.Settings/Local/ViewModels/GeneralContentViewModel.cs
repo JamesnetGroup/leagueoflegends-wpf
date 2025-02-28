@@ -1,4 +1,4 @@
-using Jamesnet.Core;
+using Jamesnet.Foundation;
 using Leagueoflegends.Support.Local.Datas;
 using Leagueoflegends.Support.Local.Models;
 
@@ -27,7 +27,7 @@ public class GeneralContentViewModel : ViewModelBase, IViewLoadable
         _optionData = optionData;
     }
 
-    public void Loaded()
+    public void Loaded(object view)
     {
         WindowSizes = _optionData.GetByCategory("WindowSize");
         CurrentWindowSize= WindowSizes.FirstOrDefault();

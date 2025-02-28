@@ -1,8 +1,9 @@
-using Jamesnet.Windows;
+using Jamesnet.Foundation;
+using System.Windows.Controls;
 
 namespace Leagueoflegends.Main.UI.Views;
 
-public class MainContent : WPFView
+public class MainContent : ContentControl, IView
 {
     public MainContent()
     { 

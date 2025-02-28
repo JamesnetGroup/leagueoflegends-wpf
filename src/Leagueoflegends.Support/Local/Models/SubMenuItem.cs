@@ -1,4 +1,4 @@
-using Jamesnet.Core;
+using Jamesnet.Foundation;
 
 namespace Leagueoflegends.Support.Local.Models;
 

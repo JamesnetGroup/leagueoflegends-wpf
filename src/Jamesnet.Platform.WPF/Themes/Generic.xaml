@@ -1,7 +1,7 @@
 <ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:local="clr-namespace:Jamesnet.Windows">
+    xmlns:local="clr-namespace:Jamesnet.Platform.WPF">
 
 
     <Style TargetType="{x:Type local:WPFLayer}">

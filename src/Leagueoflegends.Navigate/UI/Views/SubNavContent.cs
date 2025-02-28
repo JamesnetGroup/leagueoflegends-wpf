@@ -1,8 +1,9 @@
-using Jamesnet.Windows;
+using Jamesnet.Foundation;
+using System.Windows.Controls;
 
 namespace Leagueoflegends.Navigate.UI.Views;
 
-public class SubMenuContent : WPFView
+public class SubMenuContent : ContentControl, IView
 {
     public SubMenuContent()
     { 

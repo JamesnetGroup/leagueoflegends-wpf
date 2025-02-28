@@ -1,4 +1,4 @@
-using Jamesnet.Core;
+using Jamesnet.Foundation;
 using Leagueoflegends.Support.Local.Datas;
 using Leagueoflegends.Support.Local.Models;
 using Leagueoflegends.Support.Local.Services;
@@ -14,6 +14,12 @@ public class HubContentViewModel : ViewModelBase
     private List<MenuModel> _tabMenus;
     private List<Schedule> _schedules;
 
+    public List<MenuModel> TabMenus
+    {
+        get => _tabMenus;
+        set => SetProperty(ref _tabMenus, value);
+    }
+
     public MenuModel CurrentTabMenu
     {
         get => _currentTabMenu;
@@ -23,12 +29,6 @@ public class HubContentViewModel : ViewModelBase
     private void CurrentTabMenuChanged()
     {
         Console.WriteLine($"RiotTabMenu Changed: {CurrentTabMenu?.Name}");
-    }
-
-    public List<MenuModel> TabMenus
-    {
-        get => _tabMenus;
-        set => SetProperty(ref _tabMenus, value);
     }
 
     public List<Schedule> Schedules

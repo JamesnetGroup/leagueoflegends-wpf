@@ -1,9 +1,9 @@
-
-using Jamesnet.Windows;
+using Jamesnet.Foundation;
+using System.Windows.Controls;
 
 namespace Leagueoflegends.Main.UI.Views;
 
-public class OptionContent : WPFView
+public class OptionContent : ContentControl, IView
 {
     public OptionContent()
     { 

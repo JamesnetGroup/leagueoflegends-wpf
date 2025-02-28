@@ -1,9 +1,10 @@
 
-using Jamesnet.Windows;
+using Jamesnet.Foundation;
+using System.Windows.Controls;
 
 namespace Leagueoflegends.Home.UI.Views;
 
-public class OverviewContent : WPFView
+public class OverviewContent : ContentControl, IView
 {
     public OverviewContent()
     {

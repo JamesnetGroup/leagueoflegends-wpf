@@ -1,8 +1,9 @@
-using Jamesnet.Windows;
+using Jamesnet.Foundation;
+using System.Windows.Controls;
 
 namespace Leagueoflegends.Store.UI.Views;
 
-public class VoiceContent : WPFView
+public class VoiceContent : ContentControl, IView
 {
     public VoiceContent()
     { 

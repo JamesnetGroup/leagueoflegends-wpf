@@ -2,7 +2,7 @@
 using System.Windows;
 using System.Windows.Controls;
 
-namespace Jamesnet.Windows
+namespace Jamesnet.Platform.WPF
 {
     public class RecursiveControl : ContentControl
     {

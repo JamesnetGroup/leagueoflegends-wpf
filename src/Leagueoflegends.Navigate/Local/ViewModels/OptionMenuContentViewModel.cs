@@ -1,4 +1,4 @@
-using Jamesnet.Core;
+using Jamesnet.Foundation;
 using Leagueoflegends.Support.Local.Services;
 using System.Windows.Input;
 
@@ -21,7 +21,7 @@ public class OptionMenuContentViewModel : ViewModelBase, IViewLoadable
         _menu.NavigateToOption(menuName);
     }
 
-    public void Loaded()
+    public void Loaded(object view)
     {
         _menu.NavigateToOption("General");
     }

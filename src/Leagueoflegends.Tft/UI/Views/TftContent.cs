@@ -1,8 +1,9 @@
-using Jamesnet.Windows;
+using Jamesnet.Foundation;
+using System.Windows.Controls;
 
 namespace Leagueoflegends.Tft.UI.Views;
 
-public class TftContent : WPFView
+public class TftContent : ContentControl, IView
 {
     public TftContent()
     {

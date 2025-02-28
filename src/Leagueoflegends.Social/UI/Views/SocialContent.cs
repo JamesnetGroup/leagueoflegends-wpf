@@ -1,8 +1,9 @@
-using Jamesnet.Windows;
+using Jamesnet.Foundation;
+using System.Windows.Controls;
 
 namespace Leagueoflegends.Social.UI.Views;
 
-public class SocialContent : WPFView
+public class SocialContent : ContentControl, IView
 {
     public SocialContent()
     { 

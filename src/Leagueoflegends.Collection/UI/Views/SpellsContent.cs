@@ -1,8 +1,9 @@
-using Jamesnet.Windows;
+using Jamesnet.Foundation;
+using System.Windows.Controls;
 
 namespace Leagueoflegends.Collection.UI.Views;
 
-public class SpellsContent : WPFView
+public class SpellsContent : ContentControl, IView
 {
     public SpellsContent()
     { 

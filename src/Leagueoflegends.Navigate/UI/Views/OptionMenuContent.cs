@@ -1,8 +1,10 @@
-using Jamesnet.Windows;
+using Jamesnet.Foundation;
+using Jamesnet.Platform.WPF;
+using System.Windows.Controls;
 
 namespace Leagueoflegends.Navigate.UI.Views;
 
-public class OptionMenuContent : WPFView
+public class OptionMenuContent : ContentControl, IView
 {
     public OptionMenuContent()
     { 

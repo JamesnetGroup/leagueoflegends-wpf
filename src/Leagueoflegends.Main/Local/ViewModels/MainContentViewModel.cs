@@ -1,4 +1,4 @@
-using Jamesnet.Core;
+using Jamesnet.Foundation;
 using Leagueoflegends.Support.Local.Services;
 using System.Windows.Input;
 
@@ -36,7 +36,7 @@ public class MainContentViewModel : ViewModelBase, IViewLoadable
         _menu.NavigateToMenu(menuName);
     }
 
-    public void Loaded()
+    public void Loaded(object view)
     {
         SelectMenu("HOME");
     }

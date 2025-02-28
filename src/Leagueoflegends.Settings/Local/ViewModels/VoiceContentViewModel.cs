@@ -1,4 +1,4 @@
-using Jamesnet.Core;
+using Jamesnet.Foundation;
 using Leagueoflegends.Support.Local.Datas;
 using Leagueoflegends.Support.Local.Models;
 using System.Windows.Input;
@@ -45,7 +45,7 @@ public class VoiceContentViewModel : ViewModelBase, IViewLoadable
         SelectedInputMode = InputMode.VoiceActivity;
     }
 
-    public void Loaded()
+    public void Loaded(object view)
     {
         Inputs = _optionData.GetByCategory("AudioInput");
         CurrentInput = Inputs.FirstOrDefault();

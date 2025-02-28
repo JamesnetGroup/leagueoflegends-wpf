@@ -1,8 +1,10 @@
-using Jamesnet.Windows;
+using Jamesnet.Foundation;
+using Jamesnet.Platform.WPF;
+using System.Windows.Controls;
 
 namespace Leagueoflegends.Clash.UI.Views;
 
-public class HubContent : WPFView
+public class HubContent : ContentControl, IView
 {
     public HubContent()
     {
