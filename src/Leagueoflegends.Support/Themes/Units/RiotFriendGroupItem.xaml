@@ -3,22 +3,29 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units">
 
-  <Style x:Key="ItemsPresenterStyle" TargetType="StackPanel">
-    <Setter Property="Margin" Value="0 4 0 0"/>
-  </Style>
+    <Style x:Key="ItemsPresenterStyle" TargetType="StackPanel">
+        <Setter Property="Margin" Value="0 4 0 0"/>
+    </Style>
 
-  <Style TargetType="units:RiotFriendGroupItem">
-        <Setter Property="ItemsBindingPath" Value="Children"/>
+    <Style TargetType="units:RiotFriendGroupItem">
+        <Setter Property="ItemsSource" Value="{Binding Children}"/>
         <Setter Property="Foreground" Value="#A09B8C"/>
         <Setter Property="FontSize" Value="12"/>
         <Setter Property="Template">
             <Setter.Value>
-        <ControlTemplate TargetType="units:RiotFriendGroupItem">
-          <StackPanel Background="Transparent">
-            <units:RiotFoldableIcon IsChecked="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Mode=TwoWay, Path=IsExpanded}" Content="{Binding Name}"/>
-            <StackPanel x:Name="PART_ItemsPanel" Style="{StaticResource ItemsPresenterStyle}"/>
-          </StackPanel>
+                <ControlTemplate TargetType="units:RiotFriendGroupItem">
+                    <StackPanel Background="Transparent">
+                        <units:RiotFoldableIcon IsChecked="{Binding RelativeSource={RelativeSource Mode=TemplatedParent}, Mode=TwoWay, Path=IsExpanded}" Content="{Binding Name}"/>
+                        <ItemsPresenter/>
+                    </StackPanel>
                 </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="ItemsPanel">
+            <Setter.Value>
+                <ItemsPanelTemplate>
+                    <StackPanel Style="{StaticResource ItemsPresenterStyle}"/>
+                </ItemsPanelTemplate>
             </Setter.Value>
         </Setter>
     </Style>

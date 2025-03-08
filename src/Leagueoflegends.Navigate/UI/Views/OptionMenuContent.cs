@@ -1,5 +1,5 @@
 using Jamesnet.Foundation;
-using Jamesnet.Platform.WPF;
+using Jamesnet.Platform.Wpf;
 using System.Windows.Controls;
 
 namespace Leagueoflegends.Navigate.UI.Views;

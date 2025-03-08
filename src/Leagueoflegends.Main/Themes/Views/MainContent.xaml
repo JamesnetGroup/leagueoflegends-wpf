@@ -1,7 +1,7 @@
 ﻿<ResourceDictionary
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:james="clr-namespace:Jamesnet.Platform.WPF;assembly=Jamesnet.Platform.WPF"
+    xmlns:james="clr-namespace:Jamesnet.Platform.Wpf;assembly=Jamesnet.Platform.Wpf"
     xmlns:units="clr-namespace:Leagueoflegends.Support.UI.Units;assembly=Leagueoflegends.Support"
     xmlns:views="clr-namespace:Leagueoflegends.Main.UI.Views">
 

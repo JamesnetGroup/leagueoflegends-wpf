@@ -1,5 +1,4 @@
 using Jamesnet.Foundation;
-using Jamesnet.Platform.WPF;
 using System.Windows.Controls;
 
 namespace Leagueoflegends.Clash.UI.Views;

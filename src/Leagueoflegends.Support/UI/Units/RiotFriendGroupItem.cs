@@ -1,9 +1,9 @@
-using Jamesnet.Platform.WPF;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace Leagueoflegends.Support.UI.Units;
 
-public class RiotFriendGroupItem : RecursiveControl
+public class RiotFriendGroupItem : TreeViewItem
 {
     public RiotFriendGroupItem()
     {

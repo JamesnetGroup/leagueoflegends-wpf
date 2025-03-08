@@ -27,7 +27,7 @@ public class GeneralContentViewModel : ViewModelBase, IViewLoadable
         _optionData = optionData;
     }
 
-    public void Loaded(object view)
+    public void OnLoaded(object view)
     {
         WindowSizes = _optionData.GetByCategory("WindowSize");
         CurrentWindowSize= WindowSizes.FirstOrDefault();

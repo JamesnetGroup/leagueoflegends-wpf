@@ -1726,7 +1726,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Jamesnet.Platform.WPF\Jamesnet.Platform.WPF.csproj" />
+    <PackageReference Include="Jamesnet.Foundation" Version="9.1.0" />
+    <PackageReference Include="Jamesnet.Platform.Wpf" Version="9.1.0" />
   </ItemGroup>
 
   <ItemGroup>

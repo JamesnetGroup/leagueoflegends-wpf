@@ -45,7 +45,7 @@ public class VoiceContentViewModel : ViewModelBase, IViewLoadable
         SelectedInputMode = InputMode.VoiceActivity;
     }
 
-    public void Loaded(object view)
+    public void OnLoaded(object view)
     {
         Inputs = _optionData.GetByCategory("AudioInput");
         CurrentInput = Inputs.FirstOrDefault();

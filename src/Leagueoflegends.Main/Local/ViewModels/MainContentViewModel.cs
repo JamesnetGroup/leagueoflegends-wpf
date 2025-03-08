@@ -36,7 +36,7 @@ public class MainContentViewModel : ViewModelBase, IViewLoadable
         _menu.NavigateToMenu(menuName);
     }
 
-    public void Loaded(object view)
+    public void OnLoaded(object view)
     {
         SelectMenu("HOME");
     }
