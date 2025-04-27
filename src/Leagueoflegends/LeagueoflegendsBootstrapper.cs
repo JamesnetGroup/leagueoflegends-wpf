@@ -31,25 +31,25 @@ namespace Leagueoflegends;
 
 public class LeagueOfLegendsBootstrapper : AppBootstrapper
 {
-    protected override void RegisterViewModels()
+    protected override void RegisterViewModels(IViewModelMapper viewModelMapper)
     {
-        ViewModelMapper.Register<MainContent, MainContentViewModel>();
-        ViewModelMapper.Register<OptionContent, OptionContentViewModel>();
-        ViewModelMapper.Register<SocialContent, SocialContentViewModel>();
-        ViewModelMapper.Register<OverviewContent, OverviewContentViewModel>();
-        ViewModelMapper.Register<SubMenuContent, SubMenuContentViewModel>();
-        ViewModelMapper.Register<OptionMenuContent, OptionMenuContentViewModel>();
+        viewModelMapper.Register<MainContent, MainContentViewModel>();
+        viewModelMapper.Register<OptionContent, OptionContentViewModel>();
+        viewModelMapper.Register<SocialContent, SocialContentViewModel>();
+        viewModelMapper.Register<OverviewContent, OverviewContentViewModel>();
+        viewModelMapper.Register<SubMenuContent, SubMenuContentViewModel>();
+        viewModelMapper.Register<OptionMenuContent, OptionMenuContentViewModel>();
 
-        ViewModelMapper.Register<OverviewContent, OverviewContentViewModel>();
-        ViewModelMapper.Register<ChampionsContent, ChampionsContentViewModel>();
-        ViewModelMapper.Register<SkinsContent, SkinsContentViewModel>();
-        ViewModelMapper.Register<SpellsContent, SpellsContentViewModel>();
-        ViewModelMapper.Register<TftContent, TftContentViewModel>();
-        ViewModelMapper.Register<HistoryContent, HistoryContentViewModel>();
-        ViewModelMapper.Register<HubContent, HubContentViewModel>();
-        ViewModelMapper.Register<StoreChampContent, StoreChampContentViewModel>();
-        ViewModelMapper.Register<GeneralContent, GeneralContentViewModel>();
-        ViewModelMapper.Register<VoiceContent, VoiceContentViewModel>();
+        viewModelMapper.Register<OverviewContent, OverviewContentViewModel>();
+        viewModelMapper.Register<ChampionsContent, ChampionsContentViewModel>();
+        viewModelMapper.Register<SkinsContent, SkinsContentViewModel>();
+        viewModelMapper.Register<SpellsContent, SpellsContentViewModel>();
+        viewModelMapper.Register<TftContent, TftContentViewModel>();
+        viewModelMapper.Register<HistoryContent, HistoryContentViewModel>();
+        viewModelMapper.Register<HubContent, HubContentViewModel>();
+        viewModelMapper.Register<StoreChampContent, StoreChampContentViewModel>();
+        viewModelMapper.Register<GeneralContent, GeneralContentViewModel>();
+        viewModelMapper.Register<VoiceContent, VoiceContentViewModel>();
     }
 
     protected override void RegisterDependencies(IContainer container)
